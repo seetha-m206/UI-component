@@ -1,0 +1,213 @@
+.root {
+  container-type: inline-size;
+  position: relative;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.header {
+  margin-bottom: var(--spacing-3);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: var(--spacing-1) 0 0;
+}
+
+/* Reconstructed track: source markup is a <label> wrapping two text spans
+   (textOn/textOff, toggled via inline `display`) plus a separate <i> knob
+   element. This preview collapses that into one role="switch" button — see
+   README for why — but keeps both text labels present (one hidden via CSS,
+   not `display: none` removal) and a distinct knob element, matching the
+   three-part structure that was actually captured.
+   Exact colors/sizes were NOT captured in the source record for this
+   component (only described in a screenshot as "a standard green
+   pill-switch with a sliding knob", no computed CSS pulled) — these values
+   are a reasonable assumption built from this site's design tokens, not a
+   verified reproduction of Zoho's own pixel values. */
+.switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 104px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font-family: var(--font-family);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.switchOn {
+  background: var(--color-success);
+  justify-content: flex-start;
+}
+
+.switchOff {
+  background: var(--shell-bg);
+  border-color: var(--shell-border);
+  justify-content: flex-end;
+}
+
+.switch:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.switch:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+.switchOn .textOn {
+  display: block;
+  left: var(--spacing-2);
+  color: #fff;
+}
+
+.switchOn .textOff {
+  display: none;
+}
+
+.switchOff .textOff {
+  display: block;
+  right: var(--spacing-2);
+  color: var(--shell-muted-text);
+}
+
+.switchOff .textOn {
+  display: none;
+}
+
+.knob {
+  position: absolute;
+  top: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: left var(--transition-fast);
+}
+
+.switchOn .knob {
+  left: 78px;
+}
+
+.switchOff .knob {
+  left: 3px;
+  border: 1px solid var(--shell-border);
+}
+
+/* Confirm dialog: gates only the Enabled -> Disabled direction, matching
+   the observed asymmetric friction (confirmDisablePerma() opens this;
+   enableFormPerma() runs with no gate at all). The warning copy below is
+   the literal text captured in the source record's Rules & Validation
+   section; the dialog title itself was not literally captured (no title
+   text was recorded, only the body warning) and is a synthesized heading
+   for a usable dialog. */
+.modalOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 24, 33, 0.45);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+  z-index: 10;
+}
+
+.modal {
+  width: 100%;
+  max-width: 320px;
+  background: var(--shell-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-4);
+}
+
+.modalTitle {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+}
+
+.modalMessage {
+  margin: 0 0 var(--spacing-4);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  line-height: 1.5;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+}
+
+.modalButtonSecondary,
+.modalButtonDanger {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.modalButtonSecondary {
+  background: var(--shell-bg);
+  border-color: var(--shell-border);
+  color: var(--shell-text);
+}
+
+.modalButtonDanger {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.modalButtonSecondary:focus-visible,
+.modalButtonDanger:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* Responsive behavior: not observed in the source (no narrow-viewport
+   capture for this component) — stacking the label above the switch and
+   letting the confirm dialog fill the available width are reasonable
+   assumptions for a narrow container, not an observed Zoho breakpoint. */
+@container (max-width: 360px) {
+  .switch {
+    width: 92px;
+  }
+
+  .switchOn .knob {
+    left: 66px;
+  }
+
+  .modal {
+    max-width: none;
+  }
+}

@@ -1,0 +1,36 @@
+.disclaimer {
+  border: 1px solid var(--status-incomplete);
+  background: color-mix(in srgb, var(--status-incomplete) 8%, var(--shell-bg));
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3) var(--spacing-4);
+  color: var(--shell-text);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-4);
+}
+
+.copyRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--spacing-2);
+}
+
+.copyButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  cursor: pointer;
+}
+
+.copyButton:hover {
+  filter: brightness(1.08);
+}
+
+.copyButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}

@@ -1,0 +1,333 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  flex-wrap: wrap;
+}
+
+.heading {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin: 0;
+}
+
+.subHeading {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  margin: 0 0 var(--spacing-3);
+}
+
+/* ---- Period selector (decorative/no-op — see README) ---- */
+
+.periodSelector {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.periodNavButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.periodNavButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.periodNavButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.periodLabel {
+  font-weight: 600;
+  color: var(--shell-text);
+  min-width: 64px;
+  text-align: center;
+}
+
+/* ---- Tabs ---- */
+
+.tabList {
+  display: flex;
+  gap: var(--spacing-1);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.tab {
+  padding: var(--spacing-2) var(--spacing-3);
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+  margin-bottom: -1px;
+}
+
+.tab:hover {
+  color: var(--shell-text);
+}
+
+.tabActive {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+/* ---- Search ---- */
+
+.searchRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchInput {
+  width: 220px;
+  max-width: 100%;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+}
+
+.searchInput:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.noMatch {
+  margin: 0;
+  padding: var(--spacing-4) 0;
+  color: var(--shell-muted-text);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+/* ---- Div-based row/bar table (NOT a <table> — see README) ---- */
+
+.tableWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) minmax(140px, 1.4fr) minmax(140px, 1.4fr);
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-2) 0;
+  border-bottom: 1px solid var(--shell-border);
+}
+
+/* Page Metrics and Drop-off Count only have one metric column each (Page
+   Views / Drop-offs), vs. Field Metrics' two (Clicks / Starts) — collapse
+   the grid to two columns for those single-metric rows. */
+.rowOneMetric {
+  grid-template-columns: minmax(120px, 1fr) minmax(140px, 1.4fr);
+}
+
+.headerRowInner {
+  border-bottom: 1px solid var(--shell-border);
+  padding-bottom: var(--spacing-2);
+}
+
+.colHeaderName,
+.colHeader {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--shell-muted-text);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rowName {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fieldIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  color: var(--shell-muted-text);
+  flex: 0 0 auto;
+}
+
+/* Drop-off Count rows are pink/red-tinted vs. Field Metrics' neutral grey —
+   a color cue for attrition, per the record's Structure section. */
+.dropoffRow {
+  background: rgba(220, 38, 38, 0.04);
+}
+
+/* ---- Info (ⓘ) tooltip ---- */
+
+.infoTooltipWrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.infoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.infoIcon:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.infoTooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: var(--spacing-1);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--shell-text);
+  color: #fff;
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: normal;
+  width: 200px;
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---- Div-based percentage bar (a literal <div> fill with inline width%,
+   NOT the <table>-based bar chart used by analytics-dashboard-kpi-bar-map
+   — see README for the distinction). ---- */
+
+.barCell {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  min-width: 0;
+}
+
+.barTrack {
+  flex: 1 1 auto;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--shell-border);
+  overflow: hidden;
+}
+
+.barFill {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-pill);
+  transition: none;
+}
+
+.fillClicks {
+  background: var(--color-primary);
+}
+
+.fillStarts {
+  background: var(--color-info);
+}
+
+.fillDropoff {
+  background: var(--color-danger);
+}
+
+.barValue {
+  flex: 0 0 auto;
+  min-width: 22px;
+  text-align: right;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-text);
+}
+
+/* ---- Empty state (Page Metrics on a single-page form) ---- */
+
+.emptyState {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-8) 0;
+  color: var(--shell-muted-text);
+}
+
+.emptyText {
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+/* Responsive: not observed in the source (not deep-dived this pass, per
+   the record). Stacking the row grid at narrow widths is a deliberate
+   improvement for this docs site's preview stage, not an observed Zoho
+   breakpoint — same posture as analytics-dashboard-kpi-bar-map's own
+   responsive deviation. */
+@container (max-width: 480px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-1);
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+}

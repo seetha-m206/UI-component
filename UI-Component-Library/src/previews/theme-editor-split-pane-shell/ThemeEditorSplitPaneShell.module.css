@@ -1,0 +1,339 @@
+/* Overall component is responsive via container queries (see the
+   @container rule at the bottom) — but the left config panel's own fixed
+   width is intentional per the source ("no functional resizable divider",
+   415px fixed regardless of viewport), not something to "fix" with fluid
+   resizing. Values below are scaled down from the source's captured
+   415px/90px/325px split to fit a compact preview stage while keeping the
+   same fixed-width-not-flexible spirit. */
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.header {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-3);
+  background: var(--shell-sidebar-bg);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.headerTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.shell {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+/* Fixed 240px (scaled from the source's 415px) — never grows/shrinks with
+   the container, and does not expand back into freed space when a
+   sibling collapses. */
+.configPanel {
+  display: flex;
+  flex: 0 0 240px;
+  width: 240px;
+  overflow: hidden;
+  transition:
+    flex-basis var(--transition-fast),
+    width var(--transition-fast);
+}
+
+.configPanel[data-collapsed='true'] {
+  flex-basis: 0;
+  width: 0;
+  border-right: none;
+}
+
+/* Scaled from the source's 90px icon strip. */
+.tabStrip {
+  flex: 0 0 52px;
+  width: 52px;
+  display: flex;
+  flex-direction: column;
+  background: var(--shell-sidebar-bg);
+  border-right: 1px solid var(--shell-border);
+  overflow-y: auto;
+}
+
+.tabButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-2) var(--spacing-1);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--shell-muted-text);
+  font-family: inherit;
+}
+
+.tabButton:hover {
+  background: var(--shell-border);
+}
+
+.tabButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: -2px;
+}
+
+.tabButtonActive {
+  color: var(--color-primary);
+  background: var(--shell-bg);
+  box-shadow: inset 3px 0 0 var(--color-primary);
+}
+
+.tabIcon {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-sm);
+  background: currentColor;
+  opacity: 0.5;
+}
+
+.tabLabel {
+  font-size: 9px;
+  line-height: 1.2;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* Scaled from the source's 325px detail panel. */
+.detailPanel {
+  flex: 1 1 auto;
+  width: 188px;
+  min-width: 0;
+  padding: var(--spacing-3);
+  overflow-y: auto;
+}
+
+.detailTitle {
+  margin: 0 0 var(--spacing-3);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.controlRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+}
+
+.controlLabel {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.colorSwatch {
+  width: 32px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  background: none;
+}
+
+.colorSwatch:disabled,
+.fontSelect:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.colorSwatch:focus-visible,
+.fontSelect:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.fontSelect {
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  max-width: 120px;
+}
+
+.notImplemented {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+  font-style: italic;
+}
+
+/* Real, always-focusable collapse affordance — corresponds to the
+   source's `#toggleDiv.zf-tb-slide.expandColDiv`. */
+.toggleBtn {
+  flex: 0 0 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-right: 1px solid var(--shell-border);
+  background: var(--shell-sidebar-bg);
+  cursor: pointer;
+  color: var(--shell-muted-text);
+}
+
+.toggleBtn:hover {
+  color: var(--color-primary);
+}
+
+.toggleBtn:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: -2px;
+}
+
+.chevronLeft,
+.chevronRight {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+
+.chevronLeft {
+  transform: rotate(45deg);
+}
+
+.chevronRight {
+  transform: rotate(-135deg);
+}
+
+/* Fixed width, NOT flex: 1 — deliberately does not grow to fill the space
+   freed when the config panel collapses, matching the source finding
+   that "preview iframe area does not resize/reflow to fill the freed
+   space (fixed-width panes, not a real flex/resizable split)". */
+.previewPane {
+  flex: 0 0 360px;
+  width: 360px;
+  min-width: 0;
+  padding: var(--spacing-4);
+  background: var(--shell-sidebar-bg);
+}
+
+.previewLabel {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--shell-muted-text);
+  margin-bottom: var(--spacing-2);
+}
+
+/* The mock form card reads its look from CSS custom properties set on
+   .previewPane above it, not from its own inline style — an intentional
+   echo of the source's finding that `.centerContainer` itself carries no
+   inline style and instead reads var(--form-cont-gradient-start-clr) etc.
+   written onto a shared ancestor (the iframe body). */
+.mockFormCard {
+  background-color: var(--preview-bg, #ffffff);
+  font-family: var(--preview-font-family, inherit);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+  box-shadow: var(--shadow-sm);
+  /* Matches the source's confirmed 0s/none — the value swap is an
+     instant synchronous recalculation, not a CSS transition. */
+  transition: none;
+}
+
+.mockFormTitle {
+  margin: 0 0 var(--spacing-3);
+  font-size: var(--font-size-md);
+  font-family: inherit;
+}
+
+.mockFieldLabel {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+  margin-bottom: var(--spacing-1);
+}
+
+.mockFieldInput {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+}
+
+/* Overall-component responsiveness: at narrow container widths the shell
+   stacks vertically instead of overflowing horizontally. This adapts the
+   OVERALL layout only — it does not make the config panel itself fluid;
+   it still renders at its own fixed width, just on its own row. */
+@container (max-width: 640px) {
+  .shell {
+    flex-direction: column;
+  }
+
+  .configPanel {
+    flex-basis: auto;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--shell-border);
+  }
+
+  .configPanel[data-collapsed='true'] {
+    width: 100%;
+    height: 0;
+    border-bottom: none;
+  }
+
+  .tabStrip {
+    flex-direction: row;
+    flex-basis: auto;
+    width: 100%;
+    height: 44px;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--shell-border);
+  }
+
+  .tabButton {
+    flex: 0 0 auto;
+  }
+
+  .detailPanel {
+    width: 100%;
+  }
+
+  .toggleBtn {
+    flex-basis: 20px;
+    width: 100%;
+    height: 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--shell-border);
+  }
+
+  .previewPane {
+    flex-basis: auto;
+    width: 100%;
+  }
+}

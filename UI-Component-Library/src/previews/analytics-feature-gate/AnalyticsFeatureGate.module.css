@@ -1,0 +1,257 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  position: relative;
+}
+
+.card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+}
+
+/* Underlying "data" grid. In the source this is a div-based grid
+   (`div.zf-NewLevelMetrics`), not a semantic <table> — reproduced the same
+   way here, since re-marking it up as a table would change structure the
+   record didn't ask us to fix (unlike the confirmed aria-checked bug in
+   rating-star-field, this isn't documented as a defect). */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  padding: var(--spacing-6);
+}
+
+/* Captured directly: filter: blur(6px) applied to the content itself, not
+   backdrop-filter — the text underneath is genuinely blurred, not covered
+   by a frosted-glass layer. Transition duration on the blur was not
+   captured (the gate appears/disappears via tab re-render in the source,
+   not its own animation) so this uses a short, unobserved convenience
+   transition — flagged in README. */
+.contentBlurred {
+  filter: blur(6px);
+  user-select: none;
+  transition: filter var(--transition-fast);
+}
+
+.contentHeader,
+.contentRow {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--spacing-4);
+  padding: var(--spacing-2) 0;
+  font-size: var(--font-size-sm);
+}
+
+.contentHeader {
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.contentRow span:not(:first-child),
+.contentHeader span:not(:first-child) {
+  text-align: right;
+  min-width: 4ch;
+}
+
+/* Overlay card. Colors/border/shadow/padding captured directly from the
+   Technical Data section. */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-8);
+  background: rgb(255, 255, 255);
+  border: 0.8px solid rgb(42, 189, 157);
+  border-radius: 20px;
+  box-shadow: rgb(250, 255, 254) 0px 6px 22px 0px;
+}
+
+.lockIcon {
+  width: 34px;
+  height: 34px;
+  fill: rgb(78, 86, 109);
+  margin-bottom: var(--spacing-2);
+}
+
+.overlayTitle {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+
+.overlayDescription {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  max-width: 42ch;
+}
+
+/* Free-toggle CTA: captured exactly (background/color/radius/padding) from
+   the visible "Enable Advanced Metrics" button. */
+.ctaButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  padding: var(--spacing-3) var(--spacing-8);
+  border: none;
+  border-radius: var(--radius-pill);
+  background-color: rgb(36, 166, 138);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.ctaButton:hover:not(:disabled) {
+  background-color: rgb(30, 145, 120);
+}
+
+/* Paywall CTA styling was never observed directly — the real
+   `upgradeAdvBtnElem` is `display:none` in every captured session. This
+   reuses the captured gradient from the sibling upgrade-cta-button preview
+   (same underlying ZFUtil.upgradeAndshowReloadPopup handler), which is a
+   documented cross-reference, not an independently confirmed value for
+   *this* gate — flagged in README. */
+.ctaButtonPaywall {
+  background-color: transparent;
+  background-image: linear-gradient(87.94deg, rgb(116, 104, 236) 0%, rgb(205, 101, 247) 99.65%);
+}
+
+.ctaButtonPaywall:hover:not(:disabled) {
+  background-color: transparent;
+  box-shadow: inset 0 6px 45px rgba(0, 0, 0, 0.18);
+}
+
+.ctaButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ctaButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.ctaStatus {
+  margin: var(--spacing-2) 0 0;
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+/* Confirmation modal. Backdrop color and `transform 0.5s, opacity 0.5s`
+   transition captured directly; implemented here as a mount-in animation
+   since the source drives it via an `activeAnimate` class toggle this
+   preview doesn't reproduce class-for-class. */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(25, 35, 43, 0.85);
+  z-index: 10;
+  animation: gateBackdropIn 0.5s ease;
+}
+
+.modal {
+  width: min(420px, calc(100% - var(--spacing-8)));
+  background: var(--shell-bg);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+  padding: var(--spacing-6);
+  animation: gateModalIn 0.5s ease;
+}
+
+.modalTitle {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+
+.modalBody {
+  margin: 0 0 var(--spacing-4);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+}
+
+.modalCancel,
+.modalEnable {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.modalCancel {
+  background: transparent;
+  border: 1px solid var(--shell-border);
+  color: var(--shell-text);
+}
+
+.modalEnable {
+  border: none;
+  background: rgb(36, 166, 138);
+  color: #fff;
+}
+
+.modalCancel:focus-visible,
+.modalEnable:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+@keyframes gateBackdropIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gateModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive behavior: not observed in the source (Analytics tab was
+   viewed at a single fixed-width in the tested session) — reducing overlay
+   padding and stacking the metric-row numbers more tightly at narrow
+   widths is a reasonable assumption, not an observed Zoho breakpoint. */
+@container (max-width: 480px) {
+  .overlay {
+    padding: var(--spacing-4);
+  }
+
+  .ctaButton {
+    width: 100%;
+  }
+
+  .contentHeader,
+  .contentRow {
+    gap: var(--spacing-2);
+  }
+}

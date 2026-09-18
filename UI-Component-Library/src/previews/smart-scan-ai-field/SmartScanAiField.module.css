@@ -1,0 +1,436 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+/* Visually hidden but still a real, interactable file input (both for
+   real users landing focus on it via the trigger buttons' ref-click, and
+   for tests that upload to it directly) — deliberately NOT
+   `pointer-events: none` or `display: none`, either of which would block
+   genuine interaction. */
+.hiddenFileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Builder mode: "Configure Smart Scan" modal ---- */
+
+.modalHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.heading {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin: 0;
+}
+
+.modalSubtitle {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.modalBody {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--spacing-6);
+  align-items: start;
+}
+
+.leftPane,
+.rightPane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  min-width: 0;
+}
+
+.dropzone {
+  position: relative;
+  border: 1px dashed var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-sidebar-bg);
+  padding: var(--spacing-4);
+}
+
+.dropzoneEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2);
+  text-align: center;
+  padding: var(--spacing-8) var(--spacing-4);
+}
+
+.dropzoneIcon {
+  font-size: 28px;
+  opacity: 0.6;
+}
+
+.dropzoneTitle {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+}
+
+.chooseImageButton,
+.changeImageButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  cursor: pointer;
+}
+
+.chooseImageButton:hover,
+.changeImageButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.chooseImageButton:focus-visible,
+.changeImageButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.selectedImage {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.selectedImageIcon {
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+.selectedImageName {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.extractButton {
+  align-self: flex-start;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  cursor: pointer;
+}
+
+.extractButton:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.extractButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.extractButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.extractedPanel {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3) var(--spacing-4);
+  background: var(--shell-bg);
+}
+
+.extractedHeading {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin: 0 0 var(--spacing-2);
+}
+
+.extractedList {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.extractedRow {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+}
+
+.extractedKey {
+  margin: 0;
+  font-weight: 600;
+  color: var(--shell-muted-text);
+}
+
+.extractedValue {
+  margin: 0;
+  color: var(--shell-text);
+}
+
+.mappingHeading {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin: 0;
+}
+
+.mappingTable {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.mappingHeaderRow,
+.mappingRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2);
+}
+
+.mappingHeaderRow {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--shell-muted-text);
+}
+
+.mappingSelect {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  min-width: 0;
+}
+
+.mappingSelect:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mappingSelect:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.addMappingButton {
+  align-self: flex-start;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  background: transparent;
+  border: none;
+  padding: var(--spacing-1) 0;
+  cursor: pointer;
+}
+
+.addMappingButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.addMappingButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ---- Live mode: canvas/live-form upload control ---- */
+
+.liveControl {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  padding: var(--spacing-3) var(--spacing-4);
+}
+
+.liveEmptyRow,
+.liveThumbnailRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.scanFrameIcon {
+  font-size: 18px;
+  color: var(--shell-muted-text);
+  flex: 0 0 auto;
+}
+
+.chooseFileText {
+  flex: 1 1 auto;
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.chooseFileText:hover {
+  color: var(--shell-text);
+}
+
+.chooseFileText:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.liveIconGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex: 0 0 auto;
+}
+
+.uploadIconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.uploadIconButton:hover {
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-text);
+}
+
+.uploadIconButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.cameraIconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  color: var(--shell-muted-text);
+  opacity: 0.5;
+  cursor: default;
+}
+
+.liveFileName {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.liveFileSize {
+  flex: 0 0 auto;
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+/* ---- Confirmed-bug error dialog ---- */
+
+.errorDialog {
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  background: rgba(220, 38, 38, 0.06);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3) var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.errorTitle {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+}
+
+.errorMessage {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+}
+
+.errorDismissButton {
+  align-self: flex-end;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-danger);
+  background: transparent;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-1) var(--spacing-3);
+  cursor: pointer;
+  margin-top: var(--spacing-1);
+}
+
+.errorDismissButton:hover {
+  background: rgba(220, 38, 38, 0.1);
+}
+
+.errorDismissButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.retainedNote {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+/* Responsive: not observed in the source (builder modal and live-form
+   contexts were both fixed-width in the tested session). Stacking the
+   two-pane modal into one column at narrow container widths is a
+   deliberate improvement for this docs site's preview stage, not an
+   observed Zoho breakpoint. */
+@container (max-width: 560px) {
+  .modalBody {
+    grid-template-columns: 1fr;
+  }
+}

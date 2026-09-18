@@ -1,0 +1,113 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+}
+
+.required {
+  color: var(--color-danger);
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0 0 var(--spacing-3);
+}
+
+.group {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  line-height: 1;
+}
+
+.step:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.step:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.iconWrap {
+  line-height: 0;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Captured directly from Technical Data: same monochrome near-black base
+   color as the Yes/No field's ring (rgba(42,34,43,X)), used here as a FILL
+   color on the SVG icon path rather than a box-shadow ring. Three distinct
+   opacity steps: 0 = unfilled/outline-only, 0.2 = hover preview,
+   0.3 = committed selection — visually distinguishable from each other, not
+   just from the unfilled state. Transition is the exact duration/easing
+   captured on the icon path: fill 0.25s cubic-bezier(0.215, 0.61, 0.355, 1),
+   the same token used for the Yes/No field's box-shadow transition,
+   confirming one shared transition token across Typeform's choice-field
+   family. */
+.symbolFill {
+  fill: rgba(42, 34, 43, 0);
+  stroke: rgba(42, 34, 43, 0.6);
+  stroke-width: 1.5;
+  transition: fill 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Hover-preview run (1..hovered): lighter 0.2-alpha tint, reverts instantly
+   on mouse-out. Takes over the whole group's display while active — see the
+   component's fill-logic comment. */
+.step[data-hovered='true'] .symbolFill {
+  fill: rgba(42, 34, 43, 0.2);
+}
+
+/* Committed selection run (1..value), only rendered when not hovering. */
+.step[data-filled='true'][data-hovered='false'] .symbolFill {
+  fill: rgba(42, 34, 43, 0.3);
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-2) 0 0;
+}
+
+/* Responsive behavior: not captured in the source record (Typeform session
+   was a fixed-width builder/live-form viewport) — shrinking the icons and
+   tightening the gap at narrow widths is a reasonable assumption, not an
+   observed Typeform breakpoint. */
+@container (max-width: 320px) {
+  .group {
+    gap: var(--spacing-2);
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}

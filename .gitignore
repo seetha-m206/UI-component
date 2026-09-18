@@ -1,0 +1,13 @@
+# Local Claude Code runtime state
+.claude/
+
+# Working prompt-backlog files (session scratch, not part of the published research)
+Research-Library/prompt-backlog-zoho-forms-remaining-2.md
+Research-Library/prompt-backlog-zoho-forms-and-typeform.md
+Research-Library/prompt-backlog-typeform-remaining.md
+Research-Library/prompt-backlog-next-batch-2026-09-18.md
+Research-Library/prompt-backlog-design-principles-audit.md
+
+# OS/editor cruft
+.DS_Store
+*.local

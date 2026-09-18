@@ -1,0 +1,36 @@
+.track {
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--shell-border);
+  margin-bottom: var(--spacing-4);
+}
+
+.tab {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.tab:hover {
+  color: var(--shell-text);
+}
+
+.tabActive {
+  color: var(--shell-focus);
+  border-bottom-color: var(--shell-focus);
+}
+
+.panel {
+  padding: var(--spacing-2) 0;
+}

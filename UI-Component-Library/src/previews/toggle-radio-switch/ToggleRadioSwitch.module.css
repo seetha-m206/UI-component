@@ -1,0 +1,116 @@
+.root {
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  font-size: var(--font-size-base);
+}
+
+.optionRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.nativeInput {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: -9999px;
+}
+
+.switchLabel {
+  display: inline-block;
+  width: 42.05px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;
+}
+
+.switchLabel::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background: #fff;
+  border: 1.5px solid rgb(176, 176, 176);
+  box-sizing: border-box;
+}
+
+.switchLabel::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: rgb(36, 166, 138);
+  transform: scale(0);
+  transition: all 0.2s ease;
+}
+
+.nativeInput:checked + .switchLabel::before {
+  border-color: rgb(36, 166, 138);
+}
+
+.nativeInput:checked + .switchLabel::after {
+  transform: scale(1);
+}
+
+.nativeInput:focus-visible + .switchLabel {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.optionText {
+  margin-right: var(--spacing-4);
+  color: var(--shell-muted-text);
+}
+
+.dependentBlock {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s ease,
+    margin-top 0.4s ease;
+}
+
+.dependentBlockOpen {
+  max-height: 120px;
+  opacity: 1;
+  margin-top: var(--spacing-4);
+}
+
+.fieldLabel {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+  margin-bottom: var(--spacing-1);
+}
+
+.required {
+  color: var(--color-danger);
+}
+
+.textInput {
+  width: 100%;
+  max-width: 280px;
+  box-sizing: border-box;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--shell-text);
+}
+
+.textInput:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}

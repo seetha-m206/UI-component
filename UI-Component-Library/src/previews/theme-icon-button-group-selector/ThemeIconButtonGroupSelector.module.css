@@ -1,0 +1,105 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-2);
+}
+
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+
+  /* Captured byte-for-byte identical across every group checked (Form
+     Layout, Container Style, Text Alignment): unselected = faint hairline
+     border, no shadow; selected = teal accent border + soft teal glow;
+     both transition with the same 0.2s linear timing, confirmed as a real
+     CSS transition (not JS-driven). */
+  border: 0.8px solid rgba(255, 255, 255, 0.05);
+  box-shadow: none;
+  transition: 0.2s linear;
+}
+
+.optionSelected {
+  border: 0.8px solid rgb(36, 166, 138);
+  box-shadow: rgb(164, 219, 208) 0px 0px 3px 0px;
+}
+
+.option:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.option:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* Large tile sub-style: ~80x80px image-preview tiles (Form Layout,
+   Container Style, Header Style tabs). Exact px size not captured to the
+   pixel in the record ("~80x80px"), reproduced as a fixed 80px square. */
+.optionTile {
+  width: 80px;
+  height: 80px;
+}
+
+.optionTile .icon {
+  width: 48px;
+  height: 48px;
+}
+
+/* Small icon-only sub-style: ~35x35px compact buttons (Text Alignment tab),
+   no tooltip observed for this variant. */
+.optionIcon {
+  width: 35px;
+  height: 35px;
+}
+
+.optionIcon .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive behavior: not observed in the source (the Theme editor's
+   left-config-panel width was fixed in the tested session) — wrapping the
+   group and slightly shrinking tiles at narrow widths is a reasonable
+   assumption for a config-panel control, not an observed Zoho breakpoint. */
+@container (max-width: 360px) {
+  .optionTile {
+    width: 64px;
+    height: 64px;
+  }
+
+  .optionTile .icon {
+    width: 36px;
+    height: 36px;
+  }
+}

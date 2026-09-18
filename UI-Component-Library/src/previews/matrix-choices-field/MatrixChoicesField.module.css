@@ -1,0 +1,266 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.heading {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin: 0;
+}
+
+.sectionHeading {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  margin: 0 0 var(--spacing-3);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Properties panel (builder-time row/column list editors) ---- */
+
+.propertiesSection {
+  padding: var(--spacing-4);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-sidebar-bg);
+}
+
+.propertiesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-6);
+}
+
+.listLabel {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  margin-bottom: var(--spacing-2);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.listRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+/* Same captured default/focus border treatment used elsewhere in this
+   product's builder text inputs (choices-list-editor). No source-specific
+   values were captured for the Matrix Properties panel itself. */
+.listInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid rgb(228, 229, 234);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0);
+}
+
+.listInput:focus {
+  outline: none;
+  border-color: rgb(36, 166, 138);
+}
+
+.listInput:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.listInput:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.listActions {
+  display: flex;
+  gap: var(--spacing-1);
+  flex: 0 0 auto;
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.iconButton:hover:not(:disabled) {
+  background: var(--shell-border);
+  color: var(--shell-text);
+}
+
+.iconButton:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.icon {
+  width: 13px;
+  height: 13px;
+}
+
+/* ---- Live-form grid (a genuine <table>, per the Technical Data capture) ---- */
+
+.gridSection {
+  overflow-x: auto;
+}
+
+.tableScroll {
+  overflow-x: auto;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.cornerCell,
+.colHeadCell,
+.rowHeadCell,
+.cell {
+  border: 1px solid var(--shell-border);
+  padding: var(--spacing-3);
+}
+
+.cornerCell {
+  background: var(--shell-sidebar-bg);
+}
+
+.colHeadCell {
+  background: var(--shell-sidebar-bg);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.rowHeadCell {
+  background: var(--shell-sidebar-bg);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.cell {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Captured: an 18x18px circular outline (::before) plus a 12px filled teal
+   dot (::after, rgb(46, 183, 159)) that toggles opacity 0 -> 1 on :checked.
+   The real <input type="radio"> stays present but visually hidden
+   (opacity: 0, sized to fill the cell) so it remains a genuine, clickable,
+   keyboard-focusable form control — the visible circle/dot is drawn on a
+   sibling <label> associated to it via htmlFor/id. */
+.radioWrap {
+  position: relative;
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+}
+
+.radioInput {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radioInput:disabled {
+  cursor: not-allowed;
+}
+
+.radioLabel {
+  position: absolute;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.radioLabel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  border: 0.8px solid rgb(204, 214, 224);
+  background: var(--shell-bg);
+}
+
+.radioLabel::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgb(46, 183, 159);
+  opacity: 0;
+  /* Captured: transition-duration is 0s in the source despite a declared
+     `transition: all` — a "declared but inert" pattern. Reproduced here as
+     no transition at all, so selection shows/hides instantly. */
+  transition: none;
+}
+
+.radioInput:checked + .radioLabel::after {
+  opacity: 1;
+}
+
+.radioInput:focus-visible + .radioLabel::before {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* Responsive behavior: not observed in the source (no reflow/breakpoint was
+   documented for either the Properties panel or the live grid). Stacking
+   the two Properties lists, and letting the grid scroll horizontally
+   instead of squeezing cells, are reasonable assumptions for this docs-site
+   preview, not observed Zoho breakpoints. */
+@container (max-width: 640px) {
+  .propertiesGrid {
+    grid-template-columns: 1fr;
+  }
+}

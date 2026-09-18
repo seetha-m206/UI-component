@@ -1,0 +1,106 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  width: 240px;
+  max-width: 100%;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.listItem {
+  margin: 0;
+  padding: 0;
+}
+
+/* Captured directly from Technical Data: active `<a class="select">` gets
+   background rgb(233,246,243) + a 1.6px teal (rgb(36,166,138)) left border;
+   the default state reserves an identical-width *transparent* left border
+   so activating an item never shifts layout. `transition-duration: 0s` was
+   observed on both states — the source performs an instant class-toggle
+   swap, not an animated one, so no transition is declared here either. */
+.link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-left: 1.6px solid rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--shell-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  transition-duration: 0s;
+}
+
+.linkActive {
+  background-color: rgb(233, 246, 243);
+  border-left: 1.6px solid rgb(36, 166, 138);
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+.link:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: -2px;
+}
+
+.icon {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-md);
+  line-height: 1;
+}
+
+.label {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Responsive behavior: not observed in the source record (the settings
+   sidebar was only captured at its normal desktop width) — a reasonable,
+   unverified assumption is applied here: below a narrow container width the
+   list becomes a horizontal, scrollable row instead of a fixed-width
+   vertical column, which is a common pattern for sidebar nav collapsing on
+   small screens but is not an observed Zoho breakpoint. */
+@container (max-width: 480px) {
+  .root {
+    width: 100%;
+  }
+
+  .list {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .link {
+    border-left: none;
+    border-bottom: 1.6px solid rgba(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .linkActive {
+    border-left: none;
+    border-bottom: 1.6px solid rgb(36, 166, 138);
+  }
+}

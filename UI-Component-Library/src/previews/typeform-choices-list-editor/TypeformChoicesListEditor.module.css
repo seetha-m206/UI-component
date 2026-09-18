@@ -1,0 +1,219 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+/* A subtle, low-risk visual for the actively-dragged row — not a
+   confirmed exact value from the source, flagged as an assumption in the
+   README. */
+.row[draggable='true']:active {
+  opacity: 0.85;
+}
+
+/* ---- Drag handle (revealed on hover/focus, to the LEFT of the row) ---- */
+
+.dragHandle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: grab;
+  opacity: 0;
+}
+
+.row:hover .dragHandle,
+.row:focus-within .dragHandle {
+  opacity: 1;
+}
+
+.dragHandle:hover:not(:disabled) {
+  background: var(--shell-border);
+  color: var(--shell-text);
+}
+
+.dragHandle:disabled {
+  cursor: not-allowed;
+}
+
+.dragHandle:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+  opacity: 1;
+}
+
+.dragIcon {
+  width: 10px;
+  height: 14px;
+}
+
+/* ---- Letter badge + text input (badge sits inside the input field) ---- */
+
+.inputWrap {
+  flex: 1 1 auto;
+  min-width: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  position: absolute;
+  left: var(--spacing-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-pill);
+  background: var(--shell-border);
+  color: var(--shell-muted-text);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.input {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--shell-text);
+  padding: var(--spacing-2) var(--spacing-3) var(--spacing-2) 36px;
+  border: 1px solid rgb(228, 229, 234);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgb(36, 166, 138);
+}
+
+.input:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---- Delete icon (revealed on hover/focus, to the right) ---- */
+
+.deleteButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+  opacity: 0;
+}
+
+.row:hover .deleteButton,
+.row:focus-within .deleteButton {
+  opacity: 1;
+}
+
+.deleteButton:hover:not(:disabled) {
+  background: var(--shell-border);
+  color: var(--color-danger);
+}
+
+.deleteButton:disabled {
+  cursor: not-allowed;
+}
+
+.deleteButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+  opacity: 1;
+}
+
+.deleteIcon {
+  width: 10px;
+  height: 10px;
+}
+
+/* ---- Add choice link ---- */
+
+.addLink {
+  margin-top: var(--spacing-2);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  background: transparent;
+  border: none;
+  padding: var(--spacing-1) 0;
+  cursor: pointer;
+}
+
+.addLink:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.addLink:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.addLink:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* Responsive: not observed in the source (the builder canvas was a
+   fixed-width column in the tested session) — forcing the hover-reveal
+   handle/delete icons to be always-visible below this breakpoint (since
+   :hover is not a reliable interaction on touch) is a reasonable
+   assumption, matching the same posture choices-list-editor takes for its
+   own unobserved breakpoint. */
+@container (max-width: 360px) {
+  .dragHandle,
+  .deleteButton {
+    opacity: 1;
+  }
+}

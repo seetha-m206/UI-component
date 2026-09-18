@@ -1,0 +1,242 @@
+.root {
+  container-type: inline-size;
+  position: relative;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0 0 var(--spacing-3);
+}
+
+/* Trigger: source renders the swatch as a <canvas> inside a plain button
+   (`zbutton zcolorbutton`); this reconstruction uses a styled <span> with a
+   CSS background instead of a <canvas> element, since canvas drawing carries
+   no accessible/behavioral difference here and a styled element is simpler
+   to keep in sync with React state. */
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2) var(--spacing-3);
+  cursor: pointer;
+}
+
+.trigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--shell-border);
+  flex: none;
+  /* Checkerboard-free: background-color/background-image is always set
+     inline by the component, so no default fill is needed here. */
+}
+
+.triggerValue {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+/* Popover: source's own popover computed `position: static`, positioned via
+   an ancestor/aria-owns anchoring mechanism that could not be fully traced.
+   This reconstruction uses a conventional absolutely-positioned popover
+   anchored to the trigger instead — same visible placement (below the
+   trigger), simpler and dependency-free positioning strategy. */
+.popover {
+  position: absolute;
+  top: calc(100% + var(--spacing-2));
+  left: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  width: min(320px, 100%);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-4);
+}
+
+.modeGroup {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.modeOption {
+  flex: 1;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--shell-border);
+  background: rgba(0, 0, 0, 0);
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.modeOptionSelected {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.modeOption:focus-visible,
+.stopButton:focus-visible,
+.paletteSwatch:focus-visible,
+.hexInput:focus-visible,
+.angleInput:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.sectionLabel {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--shell-muted-text);
+}
+
+.hexInput {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-base);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  color: var(--shell-text);
+  background: var(--shell-bg);
+}
+
+.hexInput[aria-invalid='true'] {
+  border-color: var(--color-danger);
+}
+
+.stopRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.stopButton {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--shell-border);
+  cursor: pointer;
+  padding: 0;
+}
+
+.stopButtonActive {
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(37, 91, 167, 0.2);
+}
+
+.stopHint {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.angleInput {
+  width: 100%;
+  accent-color: var(--color-primary);
+}
+
+/* Palette grid: 90 real swatches (8x10 Preset + 1x10 Standard rows) were
+   observed but not individually captured; this reconstruction uses a
+   smaller 20-swatch deterministic placeholder set, flagged in the README. */
+.paletteGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: var(--spacing-1);
+}
+
+.paletteSwatch {
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--shell-border);
+  cursor: pointer;
+  padding: 0;
+}
+
+.paletteSwatchSelected {
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(37, 91, 167, 0.25);
+}
+
+.preview {
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--shell-border);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive behavior: not observed in the source (the Themes editor was
+   only captured at a fixed desktop-canvas width) — narrowing the palette
+   grid and letting the popover fill the available width at small container
+   sizes is a reasonable assumption, not an observed Zoho breakpoint. */
+@container (max-width: 420px) {
+  .popover {
+    width: 100%;
+  }
+
+  .paletteGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@container (max-width: 280px) {
+  .paletteGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .modeGroup {
+    flex-direction: column;
+  }
+}

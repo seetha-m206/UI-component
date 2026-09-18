@@ -1,0 +1,22 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+@media (max-width: 991px) {
+  .shell {
+    flex-direction: column;
+  }
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: var(--spacing-18) var(--spacing-20);
+}
+
+@media (max-width: 991px) {
+  .main {
+    padding: var(--spacing-6) var(--spacing-4);
+  }
+}

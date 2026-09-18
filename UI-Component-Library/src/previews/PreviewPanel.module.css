@@ -1,0 +1,32 @@
+.grid {
+  display: grid;
+  gap: var(--spacing-6);
+}
+
+.exampleCard {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+  background: var(--shell-sidebar-bg);
+}
+
+.exampleTitle {
+  margin: 0 0 var(--spacing-1);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--shell-text);
+}
+
+.exampleDesc {
+  margin: 0 0 var(--spacing-3);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.stage {
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-sm);
+}

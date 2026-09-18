@@ -1,0 +1,95 @@
+.notice {
+  border: 1px solid var(--shell-border);
+  background: var(--shell-sidebar-bg);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3) var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-sm);
+}
+
+.noticeText {
+  color: var(--shell-text);
+  margin: 0 0 var(--spacing-1);
+}
+
+.noticeMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2) var(--spacing-4);
+  color: var(--shell-muted-text);
+  font-size: var(--font-size-xs);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.controlGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.controlLabel {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--shell-muted-text);
+}
+
+.controlRow {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  background: var(--shell-bg);
+}
+
+.controlButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-1) var(--spacing-3);
+  cursor: pointer;
+}
+
+.controlButtonActive {
+  background: var(--shell-sidebar-bg);
+  color: var(--color-primary);
+}
+
+.controlButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.stageOuter {
+  display: flex;
+  justify-content: center;
+  background: var(--shell-sidebar-bg);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-8) var(--spacing-4);
+  overflow-x: auto;
+}
+
+.stage {
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  box-sizing: border-box;
+  transition: width 0.15s ease;
+}

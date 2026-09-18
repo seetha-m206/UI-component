@@ -1,0 +1,120 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+}
+
+.required {
+  color: var(--color-danger);
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0 0 var(--spacing-3);
+}
+
+/* Captured: two full-width, STACKED options (not side-by-side like Zoho's
+   yes-no-toggle-field pill pair). */
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+/* Captured directly from Technical Data:
+   - default background: rgba(250,250,250,0.6)
+   - default box-shadow: rgba(42,34,43,0.1) 0 0 0 1px (barely-visible 1px inset outline)
+   - border-radius: 8px
+   - transition: background-color 0.25s, color 0.25s, border-color 0.25s,
+     box-shadow 0.25s, all with cubic-bezier(0.215, 0.61, 0.355, 1) easing.
+   Selection is a ring/outline emphasis only — the background never changes. */
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--shell-text);
+  text-align: left;
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: rgba(250, 250, 250, 0.6);
+  box-shadow: rgba(42, 34, 43, 0.1) 0 0 0 1px;
+  cursor: pointer;
+  transition:
+    background-color 0.25s cubic-bezier(0.215, 0.61, 0.355, 1),
+    color 0.25s cubic-bezier(0.215, 0.61, 0.355, 1),
+    border-color 0.25s cubic-bezier(0.215, 0.61, 0.355, 1),
+    box-shadow 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Captured: selected background does NOT change — only the box-shadow
+   switches to a solid, opaque 2px ring (rgb(42,34,43) 0 0 0 2px) plus a
+   black-ish border color. rgb(42,34,43) is a dark near-black plum, not
+   pure #000 — used verbatim, not approximated as #000. */
+.optionSelected {
+  background: rgba(250, 250, 250, 0.6);
+  border-color: rgb(42, 34, 43);
+  box-shadow: rgb(42, 34, 43) 0 0 0 2px;
+}
+
+.option:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.option:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* Decorative key-hint badge ("Y"/"N") — aria-hidden in markup, matching the
+   source's aria-hidden="true" wrapper around the key letter. Flat boxed
+   square by default; letter-key shortcuts themselves were confirmed NOT to
+   function in the tested render mode, so no keydown handling is wired to
+   this badge (see README). */
+.keyBadge {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  border-radius: 4px;
+  border: 1px solid rgba(42, 34, 43, 0.25);
+  color: var(--shell-muted-text);
+}
+
+.optionLabel {
+  flex: 1 1 auto;
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-2) 0 0;
+}
+
+/* Responsive behavior: not captured in the source record (only the
+   fixed-layout Universal-mode render was traced) — a modest padding/type
+   reduction at narrow widths is a reasonable assumption for a full-width
+   stacked control, not an observed Typeform breakpoint. */
+@container (max-width: 360px) {
+  .option {
+    padding: var(--spacing-2) var(--spacing-3);
+    gap: var(--spacing-2);
+  }
+}

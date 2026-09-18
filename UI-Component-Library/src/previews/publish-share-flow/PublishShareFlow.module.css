@@ -1,0 +1,465 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  position: relative;
+}
+
+/* ---- Three-level master-detail layout ---- */
+
+.layout {
+  display: grid;
+  grid-template-columns: 220px 200px 1fr;
+  min-height: 420px;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--shell-bg);
+}
+
+.methodsNav {
+  border-right: 1px solid var(--shell-border);
+  background: var(--shell-sidebar-bg);
+  padding: var(--spacing-3);
+}
+
+.methodsList,
+.subList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.methodItem,
+.subItem {
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: transparent;
+  color: var(--shell-text);
+  cursor: pointer;
+}
+
+.methodItem:hover,
+.subItem:hover {
+  background: var(--shell-border);
+}
+
+.methodItemActive,
+.subItemActive {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.methodItemActive:hover,
+.subItemActive:hover {
+  background: var(--color-primary);
+}
+
+.methodItem:focus-visible,
+.subItem:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: -2px;
+}
+
+.subItem:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.subNav {
+  border-right: 1px solid var(--shell-border);
+  padding: var(--spacing-3);
+}
+
+.detailPane,
+.detailPaneWide {
+  padding: var(--spacing-6);
+  overflow-y: auto;
+}
+
+.detailPaneWide {
+  grid-column: 2 / -1;
+}
+
+/* ---- Public detail pane ---- */
+
+.publicPane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.paneHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paneHeading {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+}
+
+/* Reconstructed switch: real screenshot showed "a standard green
+   pill-switch with a sliding knob" — no computed CSS captured for this
+   exact control, so colors/sizing follow this site's design tokens rather
+   than a verified pixel reproduction (same caveat as the publish-toggle-
+   switch sibling preview). */
+.enableSwitch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 104px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font-family: var(--font-family);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.enableSwitchOn {
+  background: var(--color-success);
+  justify-content: flex-start;
+}
+
+.enableSwitchOff {
+  background: var(--shell-bg);
+  border-color: var(--shell-border);
+  justify-content: flex-end;
+}
+
+.enableSwitch:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.enableKnob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: left var(--transition-fast);
+}
+
+.enableSwitchOn .enableKnob {
+  left: 78px;
+}
+
+.enableSwitchOff .enableKnob {
+  border: 1px solid var(--shell-border);
+}
+
+.enableSwitchLabel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+.enableSwitchOn .enableSwitchLabel {
+  left: var(--spacing-2);
+  color: #fff;
+}
+
+.enableSwitchOff .enableSwitchLabel {
+  right: var(--spacing-2);
+  color: var(--shell-muted-text);
+}
+
+/* Persistent amber warning shown while sharing is disabled — replaces the
+   (now-closed) confirmation dialog as the ongoing signal that sharing is off. */
+.warningBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+  background: rgba(217, 119, 6, 0.1);
+  border: 1px solid var(--color-warning);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3);
+}
+
+.warningIcon {
+  color: var(--color-warning);
+  flex: none;
+}
+
+.warningText {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+}
+
+.fieldLabel {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+}
+
+.publicOptions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+/* Locked state: every option in this pane visually greyed/desaturated.
+   Controls are also individually `disabled`, so this is decorative on top
+   of genuine inertness, not a substitute for it. */
+.publicOptionsLocked {
+  filter: grayscale(1);
+  opacity: 0.55;
+}
+
+.permalinkRow {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.permalinkInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  color: var(--shell-text);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--shell-sidebar-bg);
+}
+
+.permalinkInput:disabled {
+  color: var(--shell-muted-text);
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.secondaryButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.secondaryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secondaryButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.qrRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+/* Deliberately not a real generated QR code image — see registry evidence
+   string, same scoping precedent as analytics-dashboard-kpi-bar-map's map
+   placeholder. */
+.qrPlaceholder {
+  width: 72px;
+  height: 72px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--shell-border);
+  border-radius: var(--radius-sm);
+  color: var(--shell-muted-text);
+  font-size: var(--font-size-xs);
+  background: var(--shell-sidebar-bg);
+}
+
+/* ---- Embed detail pane ---- */
+
+.embedPane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.embedPaneLocked {
+  filter: grayscale(1);
+  opacity: 0.55;
+}
+
+.embedHint {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.codeBlock {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  color: var(--shell-text);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3);
+  background: var(--shell-sidebar-bg);
+  resize: vertical;
+}
+
+.codeBlock:disabled {
+  color: var(--shell-muted-text);
+  cursor: not-allowed;
+}
+
+/* ---- Placeholder panes (out-of-scope sub-items/methods) ---- */
+
+.placeholderPane {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  border: 1px dashed var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-6);
+  background: var(--shell-sidebar-bg);
+}
+
+.placeholderPaneLocked {
+  filter: grayscale(1);
+  opacity: 0.55;
+}
+
+.placeholderText {
+  margin: 0;
+  max-width: 40ch;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+/* ---- Disable-confirmation dialog ---- */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 24, 33, 0.6);
+  padding: var(--spacing-4);
+}
+
+.confirmDialog {
+  width: min(440px, 100%);
+  background: var(--shell-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-6);
+}
+
+.confirmHeading {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+}
+
+.confirmBody {
+  margin: 0 0 var(--spacing-6);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  line-height: 1.5;
+}
+
+.confirmActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+}
+
+.noButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  cursor: pointer;
+}
+
+.noButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+/* Solid red destructive button — a deliberate, confirmed exception to this
+   product's usual ghost/outline destructive-row styling, specific to this
+   confirmation modal (vs. a menu item like form-overflow-menu's Trash). */
+.yesButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--color-danger);
+  color: #fff;
+  cursor: pointer;
+}
+
+.yesButton:hover {
+  filter: brightness(1.1);
+}
+
+.noButton:focus-visible,
+.yesButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* Responsive: not observed in the source (no narrow-viewport capture for
+   this flow) — stacking the three columns is a reasonable improvement for
+   this docs-site preview, not a verified Zoho breakpoint. */
+@container (max-width: 720px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .methodsNav,
+  .subNav {
+    border-right: none;
+    border-bottom: 1px solid var(--shell-border);
+  }
+
+  .detailPaneWide {
+    grid-column: auto;
+  }
+}

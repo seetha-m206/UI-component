@@ -1,0 +1,586 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+/* ---- Trigger bar ---- */
+
+.triggerBar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--shell-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.decorativeIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex: none;
+  font-size: 14px;
+  color: var(--shell-muted-text);
+  opacity: 0.6;
+}
+
+.triggerInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+  border: none;
+  background: transparent;
+  padding: var(--spacing-1) 0;
+}
+
+.triggerInput:focus {
+  outline: none;
+}
+
+.triggerInput:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.sendButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+.sendButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.sendButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ---- Modal shell ---- */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 24, 33, 0.6);
+  padding: var(--spacing-4);
+}
+
+.modal {
+  width: min(960px, 100%);
+  height: min(640px, 100%);
+  display: flex;
+  flex-direction: column;
+  background: var(--shell-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-4) var(--spacing-6);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.modalHeading {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Neutral/grey outlined pill, per the record: "not the accent purple —
+   a separate status label, not part of the AI branding." */
+.betaBadge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--shell-muted-text);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  padding: 1px var(--spacing-2);
+}
+
+.closeButton {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.modalBody {
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 0;
+}
+
+/* ---- Left pane: conversation ---- */
+
+.conversationPane {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-right: 1px solid var(--shell-border);
+}
+
+.messageList {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4) var(--spacing-6);
+}
+
+.userBubble {
+  align-self: flex-end;
+  max-width: 80%;
+  margin: 0;
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-text);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-sm);
+}
+
+/* Light purple/pink background, per the record's documented AI palette. */
+.aiBubble {
+  align-self: flex-start;
+  max-width: 85%;
+  background: #f4eefb;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3);
+  font-size: var(--font-size-sm);
+}
+
+.aiIntro {
+  margin: 0 0 var(--spacing-2);
+  font-weight: 600;
+}
+
+.checklist {
+  margin: 0 0 var(--spacing-2);
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.checklist li span {
+  color: var(--color-success);
+}
+
+.feedbackRow {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.feedbackButton {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.feedbackButton:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.feedbackButtonActive {
+  border-color: var(--color-primary);
+  background: rgba(36, 91, 167, 0.1);
+}
+
+.feedbackButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.generatingBubble {
+  align-self: flex-start;
+  max-width: 85%;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  background: #f4eefb;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3);
+  font-size: var(--font-size-sm);
+  font-style: italic;
+  color: var(--shell-text);
+}
+
+/* No Lottie asset is available in this repository (see README) — a small
+   CSS spinner stands in for the record's documented sparkle animation. */
+.generatingSpinner {
+  width: 12px;
+  height: 12px;
+  flex: none;
+  border-radius: 50%;
+  border: 2px solid rgba(124, 58, 237, 0.3);
+  border-top-color: #7c3aed;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.followUpRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-6);
+  border-top: 1px solid var(--shell-border);
+}
+
+.followUpInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  background: var(--shell-bg);
+}
+
+.followUpInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.followUpInput:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+/* ---- Right pane: suggested changes / preview ---- */
+
+.previewPane {
+  flex: 1 1 45%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-4) var(--spacing-6);
+  overflow-y: auto;
+  background: var(--shell-sidebar-bg);
+}
+
+/* Radio-button-group toggle, per the record's captured DOM: "Right-pane
+   toggle: <radio> button group." */
+.viewToggle {
+  display: inline-flex;
+  align-self: flex-start;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  padding: 2px;
+  margin-bottom: var(--spacing-4);
+  background: var(--shell-bg);
+}
+
+.viewToggleButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-1) var(--spacing-3);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.viewToggleButtonActive {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.viewToggleButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.previewPlaceholder {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.suggestedChanges {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.suggestedHeading {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin: 0 0 var(--spacing-1);
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3);
+}
+
+.cardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: #fff;
+}
+
+.cardIconWelcome {
+  background: var(--color-primary);
+}
+
+/* Rating fields get a green icon background, per the record. */
+.cardIconRating {
+  background: var(--color-success);
+}
+
+/* Text fields get a blue icon background, per the record. */
+.cardIconText {
+  background: var(--color-info);
+}
+
+.cardTitle {
+  margin: 0 0 2px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.cardNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-right: var(--spacing-2);
+  border-radius: 50%;
+  background: var(--shell-border);
+  color: var(--shell-text);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.cardDescription {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.phoneMockup {
+  width: 220px;
+  margin: var(--spacing-4) auto 0;
+  background: #fff;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-6) var(--spacing-4);
+  text-align: center;
+}
+
+.phoneTitle {
+  font-weight: 600;
+  margin: 0 0 var(--spacing-2);
+}
+
+.phoneDescription {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+  margin: 0 0 var(--spacing-4);
+}
+
+.phoneCta {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--color-primary);
+  color: #fff;
+  cursor: default;
+  width: 100%;
+}
+
+.phoneTimeEstimate {
+  margin: var(--spacing-3) 0 0;
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+/* ---- Footer ---- */
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--spacing-3) var(--spacing-6);
+  border-top: 1px solid var(--shell-border);
+  min-height: 48px;
+  align-items: center;
+}
+
+.createFormButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-5);
+  background: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.createFormButton:hover {
+  filter: brightness(1.2);
+}
+
+.createFormButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ---- Discard confirmation dialog ---- */
+
+.confirmDialog {
+  width: min(420px, 100%);
+  margin: auto;
+  background: var(--shell-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-6);
+}
+
+.confirmHeading {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  margin: 0 0 var(--spacing-2);
+}
+
+.confirmBody {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0 0 var(--spacing-6);
+}
+
+.confirmActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+}
+
+.secondaryButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.discardButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--color-danger);
+  color: #fff;
+  cursor: pointer;
+}
+
+.discardButton:hover {
+  filter: brightness(1.1);
+}
+
+.secondaryButton:focus-visible,
+.discardButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+@container (max-width: 640px) {
+  .modalBody {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .conversationPane {
+    border-right: none;
+    border-bottom: 1px solid var(--shell-border);
+  }
+}

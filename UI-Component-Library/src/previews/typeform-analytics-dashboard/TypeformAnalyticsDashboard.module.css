@@ -1,0 +1,426 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.heading {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin: 0 0 var(--spacing-4);
+}
+
+/* ---- Tabs ---- */
+
+.tabList {
+  display: flex;
+  gap: var(--spacing-2);
+  border-bottom: 1px solid var(--shell-border);
+  margin-bottom: var(--spacing-6);
+}
+
+.tab {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--shell-muted-text);
+  padding: var(--spacing-3) var(--spacing-2);
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: var(--shell-text);
+}
+
+.tabActive {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.panelHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+}
+
+.sectionHeading {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+
+/* ---- Smart Insights paywall ---- */
+
+.paywallPane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-10) var(--spacing-6);
+  border: 1px dashed var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-sidebar-bg);
+}
+
+.diamondBadge {
+  font-size: var(--font-size-lg);
+  color: #a855f7;
+}
+
+.paywallHeading {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+}
+
+.paywallText {
+  margin: 0;
+  max-width: 40ch;
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.upgradeButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-2) var(--spacing-5);
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+  color: #fff;
+  cursor: pointer;
+  margin-top: var(--spacing-2);
+  align-self: center;
+}
+
+.upgradeButton:hover {
+  filter: brightness(1.05);
+}
+
+.upgradeButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ---- Date range control ---- */
+
+.dateRangeWrap {
+  position: relative;
+}
+
+.dateRangeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  cursor: pointer;
+}
+
+.dateRangeButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.dateRangeButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.chevron {
+  font-size: 10px;
+  color: var(--shell-muted-text);
+}
+
+.dateRangeMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  z-index: 10;
+  min-width: 160px;
+  list-style: none;
+  margin: 0;
+  padding: var(--spacing-1);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  box-shadow: var(--shadow-md);
+}
+
+.dateRangeOption {
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: transparent;
+  color: var(--shell-text);
+  cursor: pointer;
+}
+
+.dateRangeOption:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.dateRangeOptionActive {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.dateRangeOption:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: -2px;
+}
+
+/* ---- KPI tiles (real SVG bars — see component comments for the
+   deliberate contrast with the Zoho sibling's <table>-based chart) ---- */
+
+.kpiRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kpiTile {
+  flex: 1 1 150px;
+  min-width: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  padding: var(--spacing-4);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-bg);
+}
+
+.kpiLabel {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  font-weight: 600;
+}
+
+.kpiValue {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.kpiTileChart {
+  width: 100%;
+  height: 40px;
+  margin-top: var(--spacing-1);
+}
+
+.kpiTileAxis {
+  stroke: var(--shell-border);
+  stroke-width: 1;
+}
+
+/* No transition/animation on the bar — the confirmed real finding is
+   values render at final value immediately, with zero load-in motion. */
+.kpiTileBar {
+  fill: var(--color-primary);
+}
+
+/* ---- Drop-off funnel teaser (static, non-live marketing chrome) ---- */
+
+.funnelSection {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+  background: var(--shell-sidebar-bg);
+}
+
+.funnelHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-4);
+}
+
+.funnelCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.funnelCard {
+  flex: 1 1 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+}
+
+.funnelCardLabel {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+  font-weight: 600;
+}
+
+.funnelCardValue {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.funnelCardSub {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+/* ---- Response summary: 3-icon view toggle ---- */
+
+.viewToggle {
+  display: inline-flex;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  padding: 2px;
+  background: var(--shell-bg);
+}
+
+.viewToggleButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 28px;
+  font-size: var(--font-size-sm);
+  border: none;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.viewToggleButtonActive {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.viewToggleButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ---- Response summary: literal table view ---- */
+
+.responseTable {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 480px;
+  font-size: var(--font-size-sm);
+}
+
+.responseTable th,
+.responseTable td {
+  text-align: left;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.responseTable th {
+  color: var(--shell-muted-text);
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ---- Response summary: real SVG bar chart view ---- */
+
+.choiceChart {
+  max-width: 100%;
+  height: auto;
+}
+
+.choiceChartAxis {
+  stroke: var(--shell-border);
+  stroke-width: 1;
+}
+
+.choiceChartBar {
+  fill: var(--color-primary);
+}
+
+.choiceChartLabel {
+  font-size: 11px;
+  fill: var(--shell-muted-text);
+}
+
+.choiceChartValue {
+  font-size: 11px;
+  fill: var(--shell-text);
+  font-weight: 600;
+}
+
+/* ---- Responses (simple placeholder) ---- */
+
+.responsesHint {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.responsesPlaceholderTable {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: var(--font-size-sm);
+}
+
+.responsesPlaceholderTable th,
+.responsesPlaceholderTable td {
+  text-align: left;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.responsesPlaceholderTable th {
+  color: var(--shell-muted-text);
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+@container (max-width: 560px) {
+  .kpiTile {
+    flex-basis: 100%;
+  }
+
+  .panelHeaderRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

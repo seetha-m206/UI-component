@@ -1,0 +1,198 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+}
+
+.required {
+  color: var(--color-danger);
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0 0 var(--spacing-3);
+}
+
+/* Captured from the source (`.emptyFldDragWrap` / subform wrapper):
+   display:block; visibility:visible; opacity:1 — exact computed border/fill
+   values weren't captured this pass, so a conventional dashed panel look is
+   used, consistent with the "Start building!" dropzone description. */
+.subform {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  border: 1px dashed var(--shell-border, #c9ccd1);
+  border-radius: var(--radius-md, 8px);
+  background: var(--shell-surface-muted, rgba(0, 0, 0, 0.02));
+}
+
+.emptyState {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  font-style: italic;
+}
+
+.row {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-3);
+}
+
+.infoIcon {
+  flex: 0 0 auto;
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  line-height: 2.4;
+}
+
+.rowFields {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+}
+
+.fieldWrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  flex: 1 1 160px;
+  min-width: 0;
+}
+
+.fieldLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--shell-muted-text);
+}
+
+.input {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border, #c9ccd1);
+  border-radius: var(--radius-sm, 4px);
+  background: var(--shell-surface, #fff);
+  color: var(--shell-text);
+  width: 100%;
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* Add-row button: 22x22px, display:flex, always rendered (not hover-gated)
+   per Technical Data. Its underlying click behavior was never confirmed to
+   fire in the source — see the component README for the full caveat. */
+.addBtn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--color-primary, #2266ee);
+  border-radius: var(--radius-sm, 4px);
+  background: rgba(0, 0, 0, 0);
+  color: var(--color-primary, #2266ee);
+  cursor: pointer;
+}
+
+.addBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.addBtn:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.addIcon {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.removeBtn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--shell-border, #c9ccd1);
+  border-radius: var(--radius-sm, 4px);
+  background: rgba(0, 0, 0, 0);
+  color: var(--color-danger);
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.removeBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.removeBtn:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.maxNote {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-2) 0 0;
+}
+
+/* Responsive behavior: not observed in the source (both builder-canvas and
+   Preview-mode contexts were fixed-width in the tested session). Stacking
+   each row's fields vertically at narrow widths, and moving the remove
+   button to the end of the stack, is a reasonable assumption for an inline
+   multi-field row, not an observed Zoho breakpoint. A `subformIcnMobileView`
+   element was noticed in the source but not captured in detail — see the
+   record's Recommended Second Pass, item 4. */
+@container (max-width: 480px) {
+  .row {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .rowFields {
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+
+  .removeBtn {
+    align-self: flex-end;
+  }
+}

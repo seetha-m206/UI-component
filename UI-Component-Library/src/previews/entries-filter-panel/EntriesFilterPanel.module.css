@@ -1,0 +1,197 @@
+/* Reconstructed from Zoho Forms' Entries filter panel
+   (div#searchbar.rPorts-SearchPanel-SideBar). The source panel is
+   position:absolute, right:0, width:400px, meant to slide in from the edge
+   of a full app shell. This preview instead renders as a normal in-flow
+   block so it works as a standalone, embeddable component outside that
+   shell — a layout adaptation, not a captured Zoho breakpoint. */
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  max-width: 480px;
+}
+
+.label {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin: 0 0 var(--spacing-3);
+}
+
+.empty {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0 0 var(--spacing-3);
+}
+
+.rowList {
+  list-style: none;
+  margin: 0 0 var(--spacing-3);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) 0;
+}
+
+/* Error row: colors and radius captured directly from Technical Data
+   (class="active search-Error"): background:#FFF6F6;
+   border:0.8px solid #FFC2C2; border-radius:4px; padding:10px 0 6px 12px.
+   The source shows this as a single shared "Invalid search criteria."
+   message plus this per-row highlight, not a per-row error string — both
+   are reproduced faithfully below (see the shared role="alert" message). */
+.rowError {
+  background: #fff6f6;
+  border: 0.8px solid #ffc2c2;
+  border-radius: 4px;
+  padding: 10px 12px 6px;
+}
+
+.select,
+.input {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+  background: var(--shell-surface, #fff);
+  border: 1px solid var(--shell-border, #d5d5d5);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-1) var(--spacing-2);
+  min-width: 0;
+}
+
+.select {
+  flex: 1 1 0;
+}
+
+.input {
+  flex: 1.2 1 0;
+}
+
+.select:disabled,
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.select:focus-visible,
+.input:focus-visible,
+.removeButton:focus-visible,
+.addButton:focus-visible,
+.clearButton:focus-visible,
+.searchButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.removeButton {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  line-height: 1;
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  color: var(--shell-muted-text);
+  background: transparent;
+  border: 1px solid var(--shell-border, #d5d5d5);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.removeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.addButton {
+  display: inline-block;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-focus);
+  background: transparent;
+  border: none;
+  padding: var(--spacing-1) 0;
+  cursor: pointer;
+  margin-bottom: var(--spacing-4);
+}
+
+.addButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+}
+
+.clearButton,
+.searchButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--spacing-1) var(--spacing-4);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.clearButton {
+  background: transparent;
+  color: var(--shell-text);
+  border: 1px solid var(--shell-border, #d5d5d5);
+}
+
+.searchButton {
+  background: var(--shell-focus);
+  color: #fff;
+  border: 1px solid var(--shell-focus);
+}
+
+.clearButton:disabled,
+.searchButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-2) 0 0;
+  text-align: right;
+}
+
+/* Responsive behavior: not observed in the source (the panel's captured
+   width was fixed at 400px in the tested session) — stacking each row's
+   controls vertically at narrow widths is a reasonable assumption for a
+   3-control-plus-remove-button row, not an observed Zoho breakpoint. */
+@container (max-width: 480px) {
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .select,
+  .input {
+    flex-basis: 100%;
+  }
+
+  .removeButton {
+    margin-left: auto;
+  }
+}
+
+@container (max-width: 360px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .clearButton,
+  .searchButton {
+    width: 100%;
+  }
+}

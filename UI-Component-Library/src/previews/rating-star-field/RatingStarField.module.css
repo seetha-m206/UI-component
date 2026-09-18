@@ -1,0 +1,88 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+}
+
+.required {
+  color: var(--color-danger);
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0 0 var(--spacing-3);
+}
+
+.group {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.star {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.star:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.star:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  /* Captured directly: unfilled = transparent fill, gold stroke that never
+     disappears; filled = solid gold fill + matching stroke; a genuine
+     0.3s linear CSS transition on the color change (the only one of the
+     three controls captured so far with a real transition on the fill
+     itself, vs. toggle-radio-switch's transform transition or
+     yes-no-toggle-field's instant class swap). */
+  fill: rgba(0, 0, 0, 0);
+  stroke: rgb(255, 202, 0);
+  stroke-width: 1.5;
+  transition: all 0.3s linear;
+}
+
+.starFilled .icon {
+  fill: rgb(255, 202, 0);
+  stroke: rgb(255, 202, 0);
+}
+
+.count {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: var(--spacing-2) 0 0;
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-1) 0 0;
+}
+
+/* Responsive behavior: not observed in the source (Preview-mode iframe was
+   fixed-width in the tested session) — shrinking the stars slightly at
+   narrow widths is a reasonable assumption, not an observed breakpoint. */
+@container (max-width: 320px) {
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}

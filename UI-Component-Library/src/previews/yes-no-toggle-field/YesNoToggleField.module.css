@@ -1,0 +1,95 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+}
+
+.required {
+  color: var(--color-danger);
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0 0 var(--spacing-3);
+}
+
+.group {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.option {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  padding: var(--spacing-2) var(--spacing-8);
+  border-radius: var(--radius-pill);
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: none;
+  box-shadow: none;
+}
+
+/* Colors captured directly from Technical Data: No = rgb(248,74,77) (red),
+   Yes = rgb(36,166,138) (teal) — the same teal used for the unselected-Yes
+   border/text; Zoho's own capture didn't separately confirm the Yes-selected
+   fill color, so it's assumed symmetric with No's pattern (documented above,
+   not independently verified). */
+.yes {
+  border: 0.8px solid rgb(36, 166, 138);
+  color: rgb(36, 166, 138);
+}
+
+.no {
+  border: 0.8px solid rgb(248, 74, 77);
+  color: rgb(248, 74, 77);
+}
+
+.optionSelected.yes {
+  background: rgb(36, 166, 138);
+  color: #fff;
+}
+
+.optionSelected.no {
+  background: rgb(248, 74, 77);
+  color: #fff;
+}
+
+.option:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.option:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-2) 0 0;
+}
+
+/* Responsive behavior: not captured in the source record (builder canvas /
+   Preview mode were both fixed-width in the tested session) — stacking the
+   pair at narrow widths is a reasonable assumption for a two-pill control,
+   not an observed Zoho breakpoint. */
+@container (max-width: 420px) {
+  .group {
+    flex-direction: column;
+  }
+
+  .option {
+    width: 100%;
+    text-align: center;
+  }
+}

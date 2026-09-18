@@ -1,0 +1,115 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-3);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+/* Grid variant models the New-Form chooser screen (7 cards in a grid); the
+   list variant (default) models the Share sidebar, the only variant with a
+   confirmed selected-state treatment — see CardListSelector.tsx and the
+   README. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-family);
+  cursor: pointer;
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--radius-md, 8px);
+
+  /* Captured directly from the Share sidebar card (Technical Data /
+     Behavior & States): unselected default. No computed-style difference
+     was found between hovered and non-hovered on any of the three source
+     variants, so no :hover rule is declared here. */
+  background: rgb(255, 255, 255);
+  border: 0.8px solid rgb(232, 238, 246);
+  transition:
+    background 0.3s,
+    border-color 0.3s;
+  box-shadow: none;
+}
+
+.cardSelected {
+  /* Captured directly: the one confirmed visual-state mechanism across all
+     three source variants — a `select` class toggle, not :hover. */
+  background: rgb(250, 255, 254);
+  border: 0.8px solid rgb(164, 219, 208);
+}
+
+.card:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.icon {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--shell-muted-text);
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  min-width: 0;
+}
+
+.title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--shell-text);
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+/* Responsive behavior: not observed in the source (both captured contexts
+   were fixed-width) — collapsing the grid variant to a single column at
+   narrow widths is a reasonable assumption for a card grid, not an observed
+   Zoho breakpoint. The list variant is already single-column, so it needs
+   no additional stacking rule. */
+@container (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+}

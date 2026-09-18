@@ -1,0 +1,58 @@
+.file {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--spacing-4);
+}
+
+.file:last-child {
+  margin-bottom: 0;
+}
+
+.fileName {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--shell-sidebar-bg);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.codeBlock {
+  position: relative;
+}
+
+.pre {
+  background: #1e2430;
+  color: #e6e9ef;
+  padding: var(--spacing-4);
+  margin: 0;
+  overflow-x: auto;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+.copyButton {
+  position: absolute;
+  top: var(--spacing-2);
+  right: var(--spacing-2);
+  font-family: var(--font-family);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--shell-text);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-1) var(--spacing-3);
+  cursor: pointer;
+}
+
+.copyButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.copyButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}

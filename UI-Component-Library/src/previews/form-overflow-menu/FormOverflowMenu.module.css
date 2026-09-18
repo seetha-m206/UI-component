@@ -1,0 +1,122 @@
+.root {
+  container-type: inline-size;
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--shell-text);
+  cursor: pointer;
+}
+
+.trigger:hover:not(:disabled) {
+  background: var(--shell-surface-hover, rgba(0, 0, 0, 0.05));
+}
+
+.trigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.dotsIcon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Captured directly from Technical Data: open state is `display:block;
+   opacity:1; box-shadow:none; border-radius:0px; transition-duration:0s` —
+   a hard show/hide, no animated reveal, no shadow or rounding. Positioning
+   (absolute, anchored under the trigger) is a standard menu-button layout
+   not itself part of the captured visual spec, since the source page's own
+   layout context isn't reproduced here. */
+.menu {
+  position: absolute;
+  top: calc(100% + var(--spacing-1));
+  right: 0;
+  z-index: 20;
+  min-width: 200px;
+  margin: 0;
+  padding: var(--spacing-1) 0;
+  list-style: none;
+  background: var(--shell-surface, #fff);
+  border: 1px solid var(--shell-border, rgba(0, 0, 0, 0.12));
+  box-shadow: none;
+  border-radius: 0;
+  transition-duration: 0s;
+}
+
+.dividerGroup {
+  border-top: 1px solid var(--shell-border, rgba(0, 0, 0, 0.12));
+  margin-top: var(--spacing-1);
+  padding-top: var(--spacing-1);
+}
+
+.item {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-4);
+  border: none;
+  background: transparent;
+  color: rgb(34, 34, 34);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  text-align: left;
+  cursor: pointer;
+  transition-duration: 0s;
+}
+
+/* Hover: text color changes to the app's teal accent, background stays
+   transparent, instant (no transition) — captured directly. */
+.item:hover,
+.item:focus-visible {
+  color: rgb(36, 166, 138);
+  background: transparent;
+}
+
+.item:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: -2px;
+}
+
+/* Trash item: red is scoped to the label text itself, not the row
+   background — confirmed via computed style in the source (the <li> stays
+   neutral gray; only the inner label is red). */
+.itemDestructive {
+  color: rgb(237, 81, 98);
+}
+
+.itemDestructive:hover,
+.itemDestructive:focus-visible {
+  color: rgb(237, 81, 98);
+}
+
+/* Responsive behavior: not observed in the source (the automation session
+   didn't capture a narrow-viewport layout for the desktop item set, only
+   the fact that a *separate* mobile item set exists in the same DOM, hidden
+   via CSS). Anchoring the menu to the trigger's left edge instead of right,
+   and letting it grow to the container width, is a reasonable narrow-width
+   assumption, not an observed Zoho breakpoint. */
+@container (max-width: 420px) {
+  .menu {
+    right: auto;
+    left: 0;
+    min-width: min(280px, 100%);
+  }
+}

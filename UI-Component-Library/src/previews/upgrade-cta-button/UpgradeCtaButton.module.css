@@ -1,0 +1,64 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+/* Colors, padding, radius and box-shadow are captured directly from the
+   record's Technical Data section. The source's fixed pixel width/height
+   (165.16px / 42.4px) were the rendered size of the "Upgrade Now" text
+   specifically, not a stated layout constraint — this reconstruction sizes
+   the button from its padding instead, so it stays correct for the
+   long/short synthetic label fixtures below. That's the one deliberate
+   sizing deviation from the literal captured box; every color/shadow/
+   transition value is unchanged. */
+.button {
+  display: inline-block;
+  padding: var(--spacing-3) var(--spacing-8); /* captured: 12px 32px */
+  border: none;
+  border-radius: var(--radius-pill); /* captured: 100px, effectively a pill */
+  background-image: linear-gradient(87.94deg, rgb(116, 104, 236) 0%, rgb(205, 101, 247) 99.65%);
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 15px; /* captured value; doesn't map cleanly to a font-size token */
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: none;
+  /* Captured: transition-duration: 0s in both default and hover computed
+     styles — the hover shadow below is an instant swap, not eased. */
+  transition: none;
+}
+
+/* Captured hover state: gradient background is unchanged; the only visual
+   change is an inset shadow that slightly dims the button. No scale/lift
+   transform was observed. */
+.button:hover:not(:disabled) {
+  box-shadow: inset 0 6px 45px rgba(0, 0, 0, 0.18);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* Disabled state: not observed in the source record ("Disabled state: not
+   observed"). This is a conventional assumption, consistent with how the
+   other reconstructed components in this library treat unobserved disabled
+   styling. */
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive behavior: not observed in the source (the paywall panel was
+   viewed at a single desktop-ish width in the tested session). Stacking to
+   a full-width button at narrow viewports is a reasonable assumption for a
+   single centered CTA, not an observed Zoho breakpoint. */
+@container (max-width: 420px) {
+  .button {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
