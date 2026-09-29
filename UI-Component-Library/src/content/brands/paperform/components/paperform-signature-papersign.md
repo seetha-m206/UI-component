@@ -62,16 +62,18 @@ This ticket covers **two entirely separate systems that happen to share a name a
 - No distinct network endpoint was independently isolated for the Papersign-specific save/send flow this pass — the document editor and mapping UI were traced functionally (via UI state and disclosed error/success copy) rather than via a fetch/XHR interceptor.
 
 ## Competitor Comparisons
-| Capability | Zoho Forms | Typeform | Paperform |
-|---|---|---|---|
-| Native in-form Signature field | none recorded | none recorded | ✔ draw-only canvas, required-field validation, uploads to S3 as an image URL |
-| Type-to-sign option | none recorded | none recorded | ✘ not found in this build — draw only |
-| Dedicated e-signature product | none recorded | none recorded | ✔ **Papersign** — a fully separate app (own editor, own signer/field model, own status pipeline) |
-| Auto-generate signable doc from form's own answers/body | — | — | ✘ — a Papersign document is authored independently; the form's Draft.js body, Custom PDF templates, and `{{key}}` merge picker (PF7) are not available inside Papersign |
-| Map submission answers into signer identity | — | — | ✔ per-signer Name/Email/Phone/Job title dropdowns pull from the form's own questions |
-| Map submission answers into document content | — | — | Partial — only via explicitly-declared Document Variables, not the document prose itself |
-| Sandbox/dry-run send | — | — | ✘ — "Send Test" sends to a real address from the last real submission; there is no non-live test mode |
-| Status visible in Submissions view | — | — | ✘ — status lives only in the separate Papersign dashboard; no cross-link from the submission row |
+| Capability | Zoho Forms | Typeform | Paperform | JotForm |
+|---|---|---|---|---|
+| Native in-form Signature field | none recorded | none recorded | ✔ draw-only canvas, required-field validation, uploads to S3 as an image URL | ✔ confirmed present in the Basic palette's "popular" row ([[jotform]] §3) — draw/type/upload mechanics not yet depth-tested |
+| Type-to-sign option | none recorded | none recorded | ✘ not found in this build — draw only | not yet depth-tested |
+| Dedicated e-signature product | none recorded | none recorded | ✔ **Papersign** — a fully separate app (own editor, own signer/field model, own status pipeline) | ✔ **Jotform Sign** confirmed as a named, separate product (cross-sold via a persistent dashboard sidebar widget with direct Claude/ChatGPT connector buttons) — internal architecture (editor/signer model/status pipeline) not yet depth-tested |
+| Auto-generate signable doc from form's own answers/body | — | — | ✘ — a Papersign document is authored independently; the form's Draft.js body, Custom PDF templates, and `{{key}}` merge picker (PF7) are not available inside Papersign | not yet depth-tested |
+| Map submission answers into signer identity | — | — | ✔ per-signer Name/Email/Phone/Job title dropdowns pull from the form's own questions | not yet depth-tested |
+| Map submission answers into document content | — | — | Partial — only via explicitly-declared Document Variables, not the document prose itself | not yet depth-tested |
+| Sandbox/dry-run send | — | — | ✘ — "Send Test" sends to a real address from the last real submission; there is no non-live test mode | not yet depth-tested |
+| Status visible in Submissions view | — | — | ✘ — status lives only in the separate Papersign dashboard; no cross-link from the submission row | not yet depth-tested |
+
+> **JotForm column is intentionally partial.** [[jotform]]'s own P1 pass explicitly flagged a direct Jotform Sign vs. Papersign comparison as not completed (browser-session access limits, not a scoping choice) — confirmed presence of both a native Signature field and a dedicated Jotform Sign product, everything else in this table left honest as "not yet depth-tested" rather than guessed. A follow-up JotForm pass targeting Jotform Sign specifically would complete this row.
 
 **Candidate "what we should learn" items** for [[zoho-forms]] / [[typeform]]:
 1. **A two-tier signature model** — a cheap, low-friction in-form Signature field for "capture a mark on this response" use cases, separate from a heavyweight, legally-oriented e-signature product (multi-signer order, consent-to-do-business-electronically toggle, certificate of authenticity) for "get a document formally signed" use cases. Worth checking whether either competitor conflates these or only has one.

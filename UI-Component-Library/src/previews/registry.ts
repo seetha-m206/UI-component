@@ -362,6 +362,20 @@ import {
 } from './paperform-tooltip/fixtures';
 import { previewConfig as paperformTooltipConfig } from './paperform-tooltip/preview.config';
 
+import { JotformAppShellDashboard } from './jotform-app-shell-dashboard/JotformAppShellDashboard';
+import {
+  fixtures as jotformAppShellDashboardFixtures,
+  propsSchema as jotformAppShellDashboardPropsSchema,
+} from './jotform-app-shell-dashboard/fixtures';
+import { previewConfig as jotformAppShellDashboardConfig } from './jotform-app-shell-dashboard/preview.config';
+
+import { JotformAppShellBuilder } from './jotform-app-shell-builder/JotformAppShellBuilder';
+import {
+  fixtures as jotformAppShellBuilderFixtures,
+  propsSchema as jotformAppShellBuilderPropsSchema,
+} from './jotform-app-shell-builder/fixtures';
+import { previewConfig as jotformAppShellBuilderConfig } from './jotform-app-shell-builder/preview.config';
+
 import { TypeformFeedbackPatterns } from './typeform-feedback-patterns/TypeformFeedbackPatterns';
 import {
   fixtures as typeformFeedbackPatternsFixtures,
@@ -1384,6 +1398,28 @@ export const previewRegistry: PreviewRegistry = {
     fixtures: paperformTooltipFixtures,
     config: paperformTooltipConfig,
     propsSchema: paperformTooltipPropsSchema,
+  },
+  'jotform-app-shell-dashboard': {
+    type: 'reconstructed',
+    Component: JotformAppShellDashboard,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live, logged-in exploration of app.jotform.com's My Workspace dashboard, fresh account with zero existing forms, via Claude browser extension, 2026-09-29 (P1 companion record). Confirmed and reproduced faithfully: a real docked, non-collapsing left sidebar (All/Shared with me/Assigned to me/Sent/Continue Filling/Team Workspaces) — a stronger navigation surface than Google Forms' own dashboard, which has no docked sidebar at all; a top header carrying the broader product-marketing nav (Templates/Integrations/Products/Support/Enterprise/Pricing) confirmed absent from the builder's own header (see the sibling jotform-app-shell-builder preview); and the confirmed real pattern that selecting a form row's checkbox swaps the toolbar row for a contextual selection action bar rather than opening a separate panel, reproduced exactly via one piece of state. No dedicated page-header chrome was found on the dashboard — reproduced by deliberately not adding an H1 above the list. The '+ CREATE' 6-option chooser and the Products mega-menu are reproduced only as inert triggers, not full flyouts — out of scope for this shell-level pass.",
+    runtimeVerified: false,
+    fixtures: jotformAppShellDashboardFixtures,
+    config: jotformAppShellDashboardConfig,
+    propsSchema: jotformAppShellDashboardPropsSchema,
+  },
+  'jotform-app-shell-builder': {
+    type: 'reconstructed',
+    Component: JotformAppShellBuilder,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live, logged-in exploration of the JotForm form builder (Classic layout) across BUILD/SETTINGS/PUBLISH modes, via Claude browser extension, 2026-09-29 (P1 companion record). Confirmed and reproduced faithfully: a collapsible left field palette; the confirmed real finding that the right pane is a SINGLE shared slot with two mutually-exclusive occupants (an AI Form Copilot card when no field is selected, a field Properties panel when one is) — reproduced via one state variable, not two independently-toggleable panels; and SETTINGS/PUBLISH modes reusing the same top-header + orange mode-tab-bar pattern with their own mode-specific left sub-nav rail rather than a distinct page header, matching the source's own confirmed 'no distinct page-header chrome across any of the three modes' finding — only the form's own editable title serves as a heading anywhere in the shell. Scope: Classic layout's shell only (the source record's own stated scope) — the Classic-vs-Card layout choice itself, in-canvas field drag-reordering, and the 'Preview Form' toggle's actual behavior are not reconstructed.",
+    runtimeVerified: false,
+    fixtures: jotformAppShellBuilderFixtures,
+    config: jotformAppShellBuilderConfig,
+    propsSchema: jotformAppShellBuilderPropsSchema,
   },
   'typeform-feedback-patterns': {
     type: 'reconstructed',

@@ -1,0 +1,271 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--shell-bg);
+}
+
+.root[data-disabled='true'] {
+  opacity: 0.6;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.brand {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  flex: none;
+}
+
+.titleBlock {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleInput {
+  border: none;
+  background: transparent;
+  color: var(--shell-text);
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+}
+
+.autosave {
+  font-size: 11px;
+  color: var(--shell-muted-text);
+}
+
+.topBarActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex: none;
+}
+
+.topBarActions button {
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.modeTabBar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: linear-gradient(90deg, #ff9d5c, #ff7a59);
+}
+
+.modeTab {
+  padding: var(--spacing-1) var(--spacing-3);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+.modeTabActive {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.previewToggle {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #fff;
+  font-size: var(--font-size-xs);
+}
+
+.buildBody {
+  display: flex;
+  min-height: 260px;
+}
+
+.palette {
+  flex: none;
+  border-right: 1px solid var(--shell-border);
+  background: var(--shell-sidebar-bg);
+}
+
+.addElementPill {
+  margin: var(--spacing-3);
+  padding: var(--spacing-1) var(--spacing-3);
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--shell-text);
+  color: var(--shell-bg);
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+}
+
+.paletteHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--shell-muted-text);
+}
+
+.paletteHeader button {
+  border: none;
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.paletteList {
+  width: 160px;
+  list-style: none;
+  margin: 0;
+  padding: 0 var(--spacing-3) var(--spacing-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+}
+
+.canvas {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-4);
+}
+
+.canvasCard {
+  width: 100%;
+  max-width: 320px;
+  padding: var(--spacing-4);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.canvasTitle {
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--spacing-2);
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.fieldActive {
+  border-color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 10%, var(--shell-bg));
+}
+
+.rightPane {
+  flex: none;
+  width: 180px;
+  border-left: 1px solid var(--shell-border);
+  padding: var(--spacing-3);
+}
+
+.rightPaneTitle {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.propTabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.copilotChips {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.copilotChips span {
+  padding: 4px var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  color: var(--shell-muted-text);
+}
+
+.subNavBody {
+  display: flex;
+  min-height: 200px;
+}
+
+.subNavRail {
+  flex: none;
+  width: 180px;
+  border-right: 1px solid var(--shell-border);
+  padding: var(--spacing-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.subNavItem {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+.subNavContent {
+  flex: 1 1 auto;
+  padding: var(--spacing-4);
+  color: var(--shell-muted-text);
+  font-size: var(--font-size-sm);
+}

@@ -57,7 +57,7 @@ status: "in-progress"
 | Zoho Forms | direct | Both use a scrollable, all-fields-visible builder canvas — the closest paradigm match of the three prior competitors researched — but Google Forms adds a native section/page-break primitive with per-answer branching that Zoho's documented canvas does not have (worth confirming against Zoho's own records, flagged as a cross-check). |
 | Typeform | direct | Fundamentally different builder paradigm (isolated question cards on one scrollable canvas vs. one-question-per-screen conversational flow) — though Google Forms' section-paginated *respondent* experience is a partial middle ground between the two. |
 | Paperform | direct | No document/rich-text canvas — question cards are isolated, not embedded in flowing prose. Paperform has native payments/calculation/e-signature/PDF-generation; Google Forms has none of these, but counters with genuinely free pricing, live-linked Sheets export, and Apps Script extensibility that none of the other three products document. |
-| JotForm | direct | Not yet researched in this library. |
+| JotForm | direct | **First-pass record DONE (2026-09-29)**, see `jotform.md`. Confirmed: JotForm's free tier is submission-gated (100/mo, 5 forms) — tighter than Google Forms' genuinely free/uncapped model, which remains the only unconditionally-free product among the five researched so far. Application Layout captured: [[jotform-app-shell-dashboard]], [[jotform-app-shell-builder]], cross-linked into [[google-forms-app-shell]]'s own Competitor Comparisons table. |
 
 ## 5. Customer Reviews
 - **Source(s):** TODO — not yet researched (no G2/Capterra pull performed for this product).
