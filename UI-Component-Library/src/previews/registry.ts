@@ -424,6 +424,186 @@ import {
   propsSchema as semrushAiVisibilityShellPropsSchema,
 } from './semrush-ai-visibility-shell/fixtures';
 import { previewConfig as semrushAiVisibilityShellConfig } from './semrush-ai-visibility-shell/preview.config';
+import { SemrushAiVisibilityLanding } from './semrush-ai-visibility-landing/SemrushAiVisibilityLanding';
+import {
+  fixtures as semrushAiVisibilityLandingFixtures,
+  propsSchema as semrushAiVisibilityLandingPropsSchema,
+} from './semrush-ai-visibility-landing/fixtures';
+import { previewConfig as semrushAiVisibilityLandingConfig } from './semrush-ai-visibility-landing/preview.config';
+import { SemrushSiteAuditProjects } from './semrush-site-audit-projects/SemrushSiteAuditProjects';
+import {
+  fixtures as semrushSiteAuditProjectsFixtures,
+  propsSchema as semrushSiteAuditProjectsPropsSchema,
+} from './semrush-site-audit-projects/fixtures';
+import { previewConfig as semrushSiteAuditProjectsConfig } from './semrush-site-audit-projects/preview.config';
+import { SemrushSiteAuditIssueDetail } from './semrush-site-audit-issue-detail/SemrushSiteAuditIssueDetail';
+import {
+  fixtures as semrushSiteAuditIssueDetailFixtures,
+  propsSchema as semrushSiteAuditIssueDetailPropsSchema,
+} from './semrush-site-audit-issue-detail/fixtures';
+import { previewConfig as semrushSiteAuditIssueDetailConfig } from './semrush-site-audit-issue-detail/preview.config';
+import { SemrushHomeFoldersWorkspace } from './semrush-home-folders-workspace/SemrushHomeFoldersWorkspace';
+import {
+  fixtures as semrushHomeFoldersWorkspaceFixtures,
+  propsSchema as semrushHomeFoldersWorkspacePropsSchema,
+} from './semrush-home-folders-workspace/fixtures';
+import { previewConfig as semrushHomeFoldersWorkspaceConfig } from './semrush-home-folders-workspace/preview.config';
+import { SemrushActionButton } from './semrush-action-button/SemrushActionButton';
+import {
+  fixtures as semrushActionButtonFixtures,
+  propsSchema as semrushActionButtonPropsSchema,
+} from './semrush-action-button/fixtures';
+import { previewConfig as semrushActionButtonConfig } from './semrush-action-button/preview.config';
+import { SemrushSearchClearAction } from './semrush-search-clear-action/SemrushSearchClearAction';
+import {
+  fixtures as semrushSearchClearActionFixtures,
+  propsSchema as semrushSearchClearActionPropsSchema,
+} from './semrush-search-clear-action/fixtures';
+import { previewConfig as semrushSearchClearActionConfig } from './semrush-search-clear-action/preview.config';
+import { SemrushDropdownFilterAction } from './semrush-dropdown-filter-action/SemrushDropdownFilterAction';
+import {
+  fixtures as semrushDropdownFilterActionFixtures,
+  propsSchema as semrushDropdownFilterActionPropsSchema,
+} from './semrush-dropdown-filter-action/fixtures';
+import { previewConfig as semrushDropdownFilterActionConfig } from './semrush-dropdown-filter-action/preview.config';
+import { SemrushContextActionMenu } from './semrush-context-action-menu/SemrushContextActionMenu';
+import {
+  fixtures as semrushContextActionMenuFixtures,
+  propsSchema as semrushContextActionMenuPropsSchema,
+} from './semrush-context-action-menu/fixtures';
+import { previewConfig as semrushContextActionMenuConfig } from './semrush-context-action-menu/preview.config';
+import { SemrushBulkSelectionActionBar } from './semrush-bulk-selection-action-bar/SemrushBulkSelectionActionBar';
+import {
+  fixtures as semrushBulkSelectionActionBarFixtures,
+  propsSchema as semrushBulkSelectionActionBarPropsSchema,
+} from './semrush-bulk-selection-action-bar/fixtures';
+import { previewConfig as semrushBulkSelectionActionBarConfig } from './semrush-bulk-selection-action-bar/preview.config';
+import { SemrushPageSizeControl } from './semrush-page-size-control/SemrushPageSizeControl';
+import {
+  fixtures as semrushPageSizeControlFixtures,
+  propsSchema as semrushPageSizeControlPropsSchema,
+} from './semrush-page-size-control/fixtures';
+import { previewConfig as semrushPageSizeControlConfig } from './semrush-page-size-control/preview.config';
+import { SemrushEntityCreationModal } from './semrush-entity-creation-modal/SemrushEntityCreationModal';
+import {
+  fixtures as semrushEntityCreationModalFixtures,
+  propsSchema as semrushEntityCreationModalPropsSchema,
+} from './semrush-entity-creation-modal/fixtures';
+import { previewConfig as semrushEntityCreationModalConfig } from './semrush-entity-creation-modal/preview.config';
+import { SemrushDisclosurePanel } from './semrush-disclosure-panel/SemrushDisclosurePanel';
+import {
+  fixtures as semrushDisclosurePanelFixtures,
+  propsSchema as semrushDisclosurePanelPropsSchema,
+} from './semrush-disclosure-panel/fixtures';
+import { previewConfig as semrushDisclosurePanelConfig } from './semrush-disclosure-panel/preview.config';
+import { SemrushReportTabs } from './semrush-report-tabs/SemrushReportTabs';
+import {
+  fixtures as semrushReportTabsFixtures,
+  propsSchema as semrushReportTabsPropsSchema,
+} from './semrush-report-tabs/fixtures';
+import { previewConfig as semrushReportTabsConfig } from './semrush-report-tabs/preview.config';
+import { SemrushProjectSelector } from './semrush-project-selector/SemrushProjectSelector';
+import {
+  fixtures as semrushProjectSelectorFixtures,
+  propsSchema as semrushProjectSelectorPropsSchema,
+} from './semrush-project-selector/fixtures';
+import { previewConfig as semrushProjectSelectorConfig } from './semrush-project-selector/preview.config';
+import { SemrushCampaignActionGroup } from './semrush-campaign-action-group/SemrushCampaignActionGroup';
+import {
+  fixtures as semrushCampaignActionGroupFixtures,
+  propsSchema as semrushCampaignActionGroupPropsSchema,
+} from './semrush-campaign-action-group/fixtures';
+import { previewConfig as semrushCampaignActionGroupConfig } from './semrush-campaign-action-group/preview.config';
+import { SemrushAsyncStatusState } from './semrush-async-status-state/SemrushAsyncStatusState';
+import {
+  fixtures as semrushAsyncStatusStateFixtures,
+  propsSchema as semrushAsyncStatusStatePropsSchema,
+} from './semrush-async-status-state/fixtures';
+import { previewConfig as semrushAsyncStatusStateConfig } from './semrush-async-status-state/preview.config';
+import { SemrushEmptyStateRecovery } from './semrush-empty-state-recovery/SemrushEmptyStateRecovery';
+import {
+  fixtures as semrushEmptyStateRecoveryFixtures,
+  propsSchema as semrushEmptyStateRecoveryPropsSchema,
+} from './semrush-empty-state-recovery/fixtures';
+import { previewConfig as semrushEmptyStateRecoveryConfig } from './semrush-empty-state-recovery/preview.config';
+import { SemrushHelpPopover } from './semrush-help-popover/SemrushHelpPopover';
+import {
+  fixtures as semrushHelpPopoverFixtures,
+  propsSchema as semrushHelpPopoverPropsSchema,
+} from './semrush-help-popover/fixtures';
+import { previewConfig as semrushHelpPopoverConfig } from './semrush-help-popover/preview.config';
+import { SemrushUtilityHeaderActions } from './semrush-utility-header-actions/SemrushUtilityHeaderActions';
+import {
+  fixtures as semrushUtilityHeaderActionsFixtures,
+  propsSchema as semrushUtilityHeaderActionsPropsSchema,
+} from './semrush-utility-header-actions/fixtures';
+import { previewConfig as semrushUtilityHeaderActionsConfig } from './semrush-utility-header-actions/preview.config';
+import { SemrushSortControl } from './semrush-sort-control/SemrushSortControl';
+import {
+  fixtures as semrushSortControlFixtures,
+  propsSchema as semrushSortControlPropsSchema,
+} from './semrush-sort-control/fixtures';
+import { previewConfig as semrushSortControlConfig } from './semrush-sort-control/preview.config';
+import { SemrushViewModeToggle } from './semrush-view-mode-toggle/SemrushViewModeToggle';
+import {
+  fixtures as semrushViewModeToggleFixtures,
+  propsSchema as semrushViewModeTogglePropsSchema,
+} from './semrush-view-mode-toggle/fixtures';
+import { previewConfig as semrushViewModeToggleConfig } from './semrush-view-mode-toggle/preview.config';
+import { SemrushCarouselControls } from './semrush-carousel-controls/SemrushCarouselControls';
+import {
+  fixtures as semrushCarouselControlsFixtures,
+  propsSchema as semrushCarouselControlsPropsSchema,
+} from './semrush-carousel-controls/fixtures';
+import { previewConfig as semrushCarouselControlsConfig } from './semrush-carousel-controls/preview.config';
+import { SemrushWarningQuotaDialog } from './semrush-warning-quota-dialog/SemrushWarningQuotaDialog';
+import {
+  fixtures as semrushWarningQuotaDialogFixtures,
+  propsSchema as semrushWarningQuotaDialogPropsSchema,
+} from './semrush-warning-quota-dialog/fixtures';
+import { previewConfig as semrushWarningQuotaDialogConfig } from './semrush-warning-quota-dialog/preview.config';
+import { SemrushResponseDetailModal } from './semrush-response-detail-modal/SemrushResponseDetailModal';
+import {
+  fixtures as semrushResponseDetailModalFixtures,
+  propsSchema as semrushResponseDetailModalPropsSchema,
+} from './semrush-response-detail-modal/fixtures';
+import { previewConfig as semrushResponseDetailModalConfig } from './semrush-response-detail-modal/preview.config';
+import { SemrushToastBanner } from './semrush-toast-banner/SemrushToastBanner';
+import {
+  fixtures as semrushToastBannerFixtures,
+  propsSchema as semrushToastBannerPropsSchema,
+} from './semrush-toast-banner/fixtures';
+import { previewConfig as semrushToastBannerConfig } from './semrush-toast-banner/preview.config';
+import { SemrushDateHistorySelector } from './semrush-date-history-selector/SemrushDateHistorySelector';
+import {
+  fixtures as semrushDateHistorySelectorFixtures,
+  propsSchema as semrushDateHistorySelectorPropsSchema,
+} from './semrush-date-history-selector/fixtures';
+import { previewConfig as semrushDateHistorySelectorConfig } from './semrush-date-history-selector/preview.config';
+import { SemrushCompetitorChips } from './semrush-competitor-chips/SemrushCompetitorChips';
+import {
+  fixtures as semrushCompetitorChipsFixtures,
+  propsSchema as semrushCompetitorChipsPropsSchema,
+} from './semrush-competitor-chips/fixtures';
+import { previewConfig as semrushCompetitorChipsConfig } from './semrush-competitor-chips/preview.config';
+import { SemrushFilterVisibilityControl } from './semrush-filter-visibility-control/SemrushFilterVisibilityControl';
+import {
+  fixtures as semrushFilterVisibilityControlFixtures,
+  propsSchema as semrushFilterVisibilityControlPropsSchema,
+} from './semrush-filter-visibility-control/fixtures';
+import { previewConfig as semrushFilterVisibilityControlConfig } from './semrush-filter-visibility-control/preview.config';
+import { SemrushMetricDistributionSwitch } from './semrush-metric-distribution-switch/SemrushMetricDistributionSwitch';
+import {
+  fixtures as semrushMetricDistributionSwitchFixtures,
+  propsSchema as semrushMetricDistributionSwitchPropsSchema,
+} from './semrush-metric-distribution-switch/fixtures';
+import { previewConfig as semrushMetricDistributionSwitchConfig } from './semrush-metric-distribution-switch/preview.config';
+import { SemrushRowOverflowMenu } from './semrush-row-overflow-menu/SemrushRowOverflowMenu';
+import {
+  fixtures as semrushRowOverflowMenuFixtures,
+  propsSchema as semrushRowOverflowMenuPropsSchema,
+} from './semrush-row-overflow-menu/fixtures';
+import { previewConfig as semrushRowOverflowMenuConfig } from './semrush-row-overflow-menu/preview.config';
 import { SemrushAiVisibilityDashboard } from './semrush-ai-visibility-dashboard/SemrushAiVisibilityDashboard';
 import {
   fixtures as semrushAiVisibilityDashboardFixtures,
@@ -448,6 +628,187 @@ import {
   propsSchema as semrushBrandPerformanceInsightsPropsSchema,
 } from './semrush-brand-performance-insights/fixtures';
 import { previewConfig as semrushBrandPerformanceInsightsConfig } from './semrush-brand-performance-insights/preview.config';
+import { SemrushReportFilterControls } from './semrush-report-filter-controls/SemrushReportFilterControls';
+import {
+  fixtures as semrushReportFilterControlsFixtures,
+  propsSchema as semrushReportFilterControlsPropsSchema,
+} from './semrush-report-filter-controls/fixtures';
+import { previewConfig as semrushReportFilterControlsConfig } from './semrush-report-filter-controls/preview.config';
+import { SemrushEvidenceAnswersDrawer } from './semrush-evidence-answers-drawer/SemrushEvidenceAnswersDrawer';
+import {
+  fixtures as semrushEvidenceAnswersDrawerFixtures,
+  propsSchema as semrushEvidenceAnswersDrawerPropsSchema,
+} from './semrush-evidence-answers-drawer/fixtures';
+import { previewConfig as semrushEvidenceAnswersDrawerConfig } from './semrush-evidence-answers-drawer/preview.config';
+import { SemrushPerceptionAnalysis } from './semrush-perception-analysis/SemrushPerceptionAnalysis';
+import {
+  fixtures as semrushPerceptionAnalysisFixtures,
+  propsSchema as semrushPerceptionAnalysisPropsSchema,
+} from './semrush-perception-analysis/fixtures';
+import { previewConfig as semrushPerceptionAnalysisConfig } from './semrush-perception-analysis/preview.config';
+import { SemrushNarrativeDrivers } from './semrush-narrative-drivers/SemrushNarrativeDrivers';
+import {
+  fixtures as semrushNarrativeDriversFixtures,
+  propsSchema as semrushNarrativeDriversPropsSchema,
+} from './semrush-narrative-drivers/fixtures';
+import { previewConfig as semrushNarrativeDriversConfig } from './semrush-narrative-drivers/preview.config';
+import { SemrushQuestionIntentAnalysis } from './semrush-question-intent-analysis/SemrushQuestionIntentAnalysis';
+import {
+  fixtures as semrushQuestionIntentAnalysisFixtures,
+  propsSchema as semrushQuestionIntentAnalysisPropsSchema,
+} from './semrush-question-intent-analysis/fixtures';
+import { previewConfig as semrushQuestionIntentAnalysisConfig } from './semrush-question-intent-analysis/preview.config';
+import { AhrefsDashboardWorkspace } from './ahrefs-dashboard-workspace/AhrefsDashboardWorkspace';
+import {
+  fixtures as ahrefsDashboardWorkspaceFixtures,
+  propsSchema as ahrefsDashboardWorkspacePropsSchema,
+} from './ahrefs-dashboard-workspace/fixtures';
+import { previewConfig as ahrefsDashboardWorkspaceConfig } from './ahrefs-dashboard-workspace/preview.config';
+import { AhrefsSiteExplorerEntry } from './ahrefs-site-explorer-entry/AhrefsSiteExplorerEntry';
+import {
+  fixtures as ahrefsSiteExplorerEntryFixtures,
+  propsSchema as ahrefsSiteExplorerEntryPropsSchema,
+} from './ahrefs-site-explorer-entry/fixtures';
+import { previewConfig as ahrefsSiteExplorerEntryConfig } from './ahrefs-site-explorer-entry/preview.config';
+import { AhrefsKeywordsExplorerAccessGate } from './ahrefs-keywords-explorer-access-gate/AhrefsKeywordsExplorerAccessGate';
+import {
+  fixtures as ahrefsKeywordsExplorerAccessGateFixtures,
+  propsSchema as ahrefsKeywordsExplorerAccessGatePropsSchema,
+} from './ahrefs-keywords-explorer-access-gate/fixtures';
+import { previewConfig as ahrefsKeywordsExplorerAccessGateConfig } from './ahrefs-keywords-explorer-access-gate/preview.config';
+import { AhrefsContentExplorerAccessGate } from './ahrefs-content-explorer-access-gate/AhrefsContentExplorerAccessGate';
+import {
+  fixtures as ahrefsContentExplorerAccessGateFixtures,
+  propsSchema as ahrefsContentExplorerAccessGatePropsSchema,
+} from './ahrefs-content-explorer-access-gate/fixtures';
+import { previewConfig as ahrefsContentExplorerAccessGateConfig } from './ahrefs-content-explorer-access-gate/preview.config';
+import { AhrefsSiteAuditEmptyState } from './ahrefs-site-audit-empty-state/AhrefsSiteAuditEmptyState';
+import {
+  fixtures as ahrefsSiteAuditEmptyStateFixtures,
+  propsSchema as ahrefsSiteAuditEmptyStatePropsSchema,
+} from './ahrefs-site-audit-empty-state/fixtures';
+import { previewConfig as ahrefsSiteAuditEmptyStateConfig } from './ahrefs-site-audit-empty-state/preview.config';
+import { AhrefsBrandRadarEntry } from './ahrefs-brand-radar-entry/AhrefsBrandRadarEntry';
+import {
+  fixtures as ahrefsBrandRadarEntryFixtures,
+  propsSchema as ahrefsBrandRadarEntryPropsSchema,
+} from './ahrefs-brand-radar-entry/fixtures';
+import { previewConfig as ahrefsBrandRadarEntryConfig } from './ahrefs-brand-radar-entry/preview.config';
+import { AhrefsAiContentHelperEntry } from './ahrefs-ai-content-helper-entry/AhrefsAiContentHelperEntry';
+import {
+  fixtures as ahrefsAiContentHelperEntryFixtures,
+  propsSchema as ahrefsAiContentHelperEntryPropsSchema,
+} from './ahrefs-ai-content-helper-entry/fixtures';
+import { previewConfig as ahrefsAiContentHelperEntryConfig } from './ahrefs-ai-content-helper-entry/preview.config';
+import { AhrefsSmmChannelOnboarding } from './ahrefs-smm-channel-onboarding/AhrefsSmmChannelOnboarding';
+import {
+  fixtures as ahrefsSmmChannelOnboardingFixtures,
+  propsSchema as ahrefsSmmChannelOnboardingPropsSchema,
+} from './ahrefs-smm-channel-onboarding/fixtures';
+import { previewConfig as ahrefsSmmChannelOnboardingConfig } from './ahrefs-smm-channel-onboarding/preview.config';
+import { AhrefsCompetitiveAnalysisAccessGate } from './ahrefs-competitive-analysis-access-gate/AhrefsCompetitiveAnalysisAccessGate';
+import {
+  fixtures as ahrefsCompetitiveAnalysisAccessGateFixtures,
+  propsSchema as ahrefsCompetitiveAnalysisAccessGatePropsSchema,
+} from './ahrefs-competitive-analysis-access-gate/fixtures';
+import { previewConfig as ahrefsCompetitiveAnalysisAccessGateConfig } from './ahrefs-competitive-analysis-access-gate/preview.config';
+import { AhrefsBatchAnalysisAccessGate } from './ahrefs-batch-analysis-access-gate/AhrefsBatchAnalysisAccessGate';
+import {
+  fixtures as ahrefsBatchAnalysisAccessGateFixtures,
+  propsSchema as ahrefsBatchAnalysisAccessGatePropsSchema,
+} from './ahrefs-batch-analysis-access-gate/fixtures';
+import { previewConfig as ahrefsBatchAnalysisAccessGateConfig } from './ahrefs-batch-analysis-access-gate/preview.config';
+import { AhrefsAiContentGraderPlanGate } from './ahrefs-ai-content-grader-plan-gate/AhrefsAiContentGraderPlanGate';
+import {
+  fixtures as ahrefsAiContentGraderPlanGateFixtures,
+  propsSchema as ahrefsAiContentGraderPlanGatePropsSchema,
+} from './ahrefs-ai-content-grader-plan-gate/fixtures';
+import { previewConfig as ahrefsAiContentGraderPlanGateConfig } from './ahrefs-ai-content-grader-plan-gate/preview.config';
+import { AhrefsActionButton } from './ahrefs-action-button/AhrefsActionButton';
+import {
+  fixtures as ahrefsActionButtonFixtures,
+  propsSchema as ahrefsActionButtonPropsSchema,
+} from './ahrefs-action-button/fixtures';
+import { previewConfig as ahrefsActionButtonConfig } from './ahrefs-action-button/preview.config';
+import { AhrefsTargetInputGroup } from './ahrefs-target-input-group/AhrefsTargetInputGroup';
+import {
+  fixtures as ahrefsTargetInputGroupFixtures,
+  propsSchema as ahrefsTargetInputGroupPropsSchema,
+} from './ahrefs-target-input-group/fixtures';
+import { previewConfig as ahrefsTargetInputGroupConfig } from './ahrefs-target-input-group/preview.config';
+import { AhrefsProjectStepper } from './ahrefs-project-stepper/AhrefsProjectStepper';
+import {
+  fixtures as ahrefsProjectStepperFixtures,
+  propsSchema as ahrefsProjectStepperPropsSchema,
+} from './ahrefs-project-stepper/fixtures';
+import { previewConfig as ahrefsProjectStepperConfig } from './ahrefs-project-stepper/preview.config';
+import { AhrefsProjectScopeForm } from './ahrefs-project-scope-form/AhrefsProjectScopeForm';
+import {
+  fixtures as ahrefsProjectScopeFormFixtures,
+  propsSchema as ahrefsProjectScopeFormPropsSchema,
+} from './ahrefs-project-scope-form/fixtures';
+import { previewConfig as ahrefsProjectScopeFormConfig } from './ahrefs-project-scope-form/preview.config';
+import { AhrefsAccessControlUpgradeModal } from './ahrefs-access-control-upgrade-modal/AhrefsAccessControlUpgradeModal';
+import {
+  fixtures as ahrefsAccessControlUpgradeModalFixtures,
+  propsSchema as ahrefsAccessControlUpgradeModalPropsSchema,
+} from './ahrefs-access-control-upgrade-modal/fixtures';
+import { previewConfig as ahrefsAccessControlUpgradeModalConfig } from './ahrefs-access-control-upgrade-modal/preview.config';
+
+import { AhrefsBotAnalyticsEmptyState } from './ahrefs-bot-analytics-empty-state/AhrefsBotAnalyticsEmptyState';
+import {
+  fixtures as ahrefsBotAnalyticsEmptyStateFixtures,
+  propsSchema as ahrefsBotAnalyticsEmptyStatePropsSchema,
+} from './ahrefs-bot-analytics-empty-state/fixtures';
+import { previewConfig as ahrefsBotAnalyticsEmptyStateConfig } from './ahrefs-bot-analytics-empty-state/preview.config';
+import { AhrefsRankTrackerPlanGate } from './ahrefs-rank-tracker-plan-gate/AhrefsRankTrackerPlanGate';
+import {
+  fixtures as ahrefsRankTrackerPlanGateFixtures,
+  propsSchema as ahrefsRankTrackerPlanGatePropsSchema,
+} from './ahrefs-rank-tracker-plan-gate/fixtures';
+import { previewConfig as ahrefsRankTrackerPlanGateConfig } from './ahrefs-rank-tracker-plan-gate/preview.config';
+import { AhrefsPortfolioEmptyState } from './ahrefs-portfolio-empty-state/AhrefsPortfolioEmptyState';
+import {
+  fixtures as ahrefsPortfolioEmptyStateFixtures,
+  propsSchema as ahrefsPortfolioEmptyStatePropsSchema,
+} from './ahrefs-portfolio-empty-state/fixtures';
+import { previewConfig as ahrefsPortfolioEmptyStateConfig } from './ahrefs-portfolio-empty-state/preview.config';
+import { AhrefsReportBuilderEmptyState } from './ahrefs-report-builder-empty-state/AhrefsReportBuilderEmptyState';
+import {
+  fixtures as ahrefsReportBuilderEmptyStateFixtures,
+  propsSchema as ahrefsReportBuilderEmptyStatePropsSchema,
+} from './ahrefs-report-builder-empty-state/fixtures';
+import { previewConfig as ahrefsReportBuilderEmptyStateConfig } from './ahrefs-report-builder-empty-state/preview.config';
+import { AhrefsAlertsWorkspace } from './ahrefs-alerts-workspace/AhrefsAlertsWorkspace';
+import {
+  fixtures as ahrefsAlertsWorkspaceFixtures,
+  propsSchema as ahrefsAlertsWorkspacePropsSchema,
+} from './ahrefs-alerts-workspace/fixtures';
+import { previewConfig as ahrefsAlertsWorkspaceConfig } from './ahrefs-alerts-workspace/preview.config';
+import { AhrefsGbpMonitorAccessGate } from './ahrefs-gbp-monitor-access-gate/AhrefsGbpMonitorAccessGate';
+import {
+  fixtures as ahrefsGbpMonitorAccessGateFixtures,
+  propsSchema as ahrefsGbpMonitorAccessGatePropsSchema,
+} from './ahrefs-gbp-monitor-access-gate/fixtures';
+import { previewConfig as ahrefsGbpMonitorAccessGateConfig } from './ahrefs-gbp-monitor-access-gate/preview.config';
+import { AhrefsRankTable } from './ahrefs-rank-table/AhrefsRankTable';
+import {
+  fixtures as ahrefsRankTableFixtures,
+  propsSchema as ahrefsRankTablePropsSchema,
+} from './ahrefs-rank-table/fixtures';
+import { previewConfig as ahrefsRankTableConfig } from './ahrefs-rank-table/preview.config';
+import { AhrefsAppsDirectoryInfo } from './ahrefs-apps-directory-info/AhrefsAppsDirectoryInfo';
+import {
+  fixtures as ahrefsAppsDirectoryInfoFixtures,
+  propsSchema as ahrefsAppsDirectoryInfoPropsSchema,
+} from './ahrefs-apps-directory-info/fixtures';
+import { previewConfig as ahrefsAppsDirectoryInfoConfig } from './ahrefs-apps-directory-info/preview.config';
+import { AhrefsProjectViewRadioGroup } from './ahrefs-project-view-radio-group/AhrefsProjectViewRadioGroup';
+import {
+  fixtures as ahrefsProjectViewRadioGroupFixtures,
+  propsSchema as ahrefsProjectViewRadioGroupPropsSchema,
+} from './ahrefs-project-view-radio-group/fixtures';
+import { previewConfig as ahrefsProjectViewRadioGroupConfig } from './ahrefs-project-view-radio-group/preview.config';
 
 import type { PreviewRegistry } from './types';
 
@@ -1123,12 +1484,617 @@ export const previewRegistry: PreviewRegistry = {
     config: semrushAiVisibilityShellConfig,
     propsSchema: semrushAiVisibilityShellPropsSchema,
   },
+  'semrush-ai-visibility-landing': {
+    type: 'reconstructed',
+    Component: SemrushAiVisibilityLanding,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush AI Visibility landing-page review, 2026-09-29. Reproduces the domain-entry CTA, last-checked history, benefit and capability cards, coming-soon state, independent multi-open FAQ rows, repeated bottom CTA, and trust strip using synthetic values. Live CTA submission was deliberately not tested.',
+    runtimeVerified: true,
+    fixtures: semrushAiVisibilityLandingFixtures,
+    config: semrushAiVisibilityLandingConfig,
+    propsSchema: semrushAiVisibilityLandingPropsSchema,
+  },
+  'semrush-site-audit-projects': {
+    type: 'reconstructed',
+    Component: SemrushSiteAuditProjects,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Site Audit project-list review, 2026-09-29. Reproduces the two-level shell, project search and no-results state, Last Update sort transition, metric grid, page-limit warning, read-only audit settings menu, creation modal, horizontal overflow, and page-size menu using synthetic projects only. No project, audit, rerun, cancellation, setting change, email, export, or deep-link navigation was submitted.',
+    runtimeVerified: true,
+    fixtures: semrushSiteAuditProjectsFixtures,
+    config: semrushSiteAuditProjectsConfig,
+    propsSchema: semrushSiteAuditProjectsPropsSchema,
+  },
+  'semrush-site-audit-issue-detail': {
+    type: 'reconstructed',
+    Component: SemrushSiteAuditIssueDetail,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Site Audit issue-detail review, 2026-09-29. Reproduces the audit header, issue explanation, remediation disclosure, Issues and Hidden states, synthetic search empty state, advanced filters, row selection, affected-page grid, project selector, and pagination options. Live rerun, export, share, settings, send, exclude, hide, project creation, external navigation, filter submission, and report navigation were deliberately not executed.',
+    runtimeVerified: true,
+    fixtures: semrushSiteAuditIssueDetailFixtures,
+    config: semrushSiteAuditIssueDetailConfig,
+    propsSchema: semrushSiteAuditIssueDetailPropsSchema,
+  },
+  'semrush-home-folders-workspace': {
+    type: 'reconstructed',
+    Component: SemrushHomeFoldersWorkspace,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Home Folders review, 2026-09-29. Reproduces the global analyzer, product rail, recommendation cards, folder search and empty state, ownership and tag filters, collapsible controls, metric cards, transient SEO table loading, seven-column grid, guarded settings menu, create-folder modal, and monitoring card using synthetic values. Share, creation, pinning, deletion, setup, analysis submission, project navigation, and metric navigation were deliberately not executed.',
+    runtimeVerified: true,
+    fixtures: semrushHomeFoldersWorkspaceFixtures,
+    config: semrushHomeFoldersWorkspaceConfig,
+    propsSchema: semrushHomeFoldersWorkspacePropsSchema,
+  },
+  'semrush-action-button': {
+    type: 'reconstructed',
+    Component: SemrushActionButton,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, action hierarchy consolidated from authenticated Semrush Home, AI Visibility, and Site Audit screens, 2026-09-29. Primary, secondary, ghost, icon, guarded-danger, disabled, and clearly synthetic loading/success states are isolated here. No live action is submitted.',
+    runtimeVerified: true,
+    fixtures: semrushActionButtonFixtures,
+    config: semrushActionButtonConfig,
+    propsSchema: semrushActionButtonPropsSchema,
+  },
+  'semrush-search-clear-action': {
+    type: 'reconstructed',
+    Component: SemrushSearchClearAction,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, search, clear, no-results, and recovery behavior consolidated from authenticated Semrush Folders, Site Audit projects, and Site Audit issue detail, 2026-09-29. Uses synthetic values and local state only.',
+    runtimeVerified: true,
+    fixtures: semrushSearchClearActionFixtures,
+    config: semrushSearchClearActionConfig,
+    propsSchema: semrushSearchClearActionPropsSchema,
+  },
+  'semrush-dropdown-filter-action': {
+    type: 'reconstructed',
+    Component: SemrushDropdownFilterAction,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, dropdown filter triggers consolidated from authenticated Semrush Folders ownership and tags controls plus Site Audit advanced filters, 2026-09-29. Filter application remains guarded because live submission was not tested.',
+    runtimeVerified: true,
+    fixtures: semrushDropdownFilterActionFixtures,
+    config: semrushDropdownFilterActionConfig,
+    propsSchema: semrushDropdownFilterActionPropsSchema,
+  },
+  'semrush-context-action-menu': {
+    type: 'reconstructed',
+    Component: SemrushContextActionMenu,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Folders settings menu review, 2026-09-29. Reproduces Share, Pin, Tags, Settings, and Delete as an independent action surface. All selections remain local and are marked needs verification.',
+    runtimeVerified: true,
+    fixtures: semrushContextActionMenuFixtures,
+    config: semrushContextActionMenuConfig,
+    propsSchema: semrushContextActionMenuPropsSchema,
+  },
+  'semrush-bulk-selection-action-bar': {
+    type: 'reconstructed',
+    Component: SemrushBulkSelectionActionBar,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Site Audit issue-detail row selection, 2026-09-29. Reproduces selected-count feedback, Deselect all, and guarded Hide as an independent reusable action bar.',
+    runtimeVerified: true,
+    fixtures: semrushBulkSelectionActionBarFixtures,
+    config: semrushBulkSelectionActionBarConfig,
+    propsSchema: semrushBulkSelectionActionBarPropsSchema,
+  },
+  'semrush-page-size-control': {
+    type: 'reconstructed',
+    Component: SemrushPageSizeControl,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Site Audit project and issue pagination controls, 2026-09-29. Reproduces page status and the observed 10, 20, 50, and 100 rows-per-page options.',
+    runtimeVerified: true,
+    fixtures: semrushPageSizeControlFixtures,
+    config: semrushPageSizeControlConfig,
+    propsSchema: semrushPageSizeControlPropsSchema,
+  },
+  'semrush-entity-creation-modal': {
+    type: 'reconstructed',
+    Component: SemrushEntityCreationModal,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Home Create Folder modal review, 2026-09-29. Reproduces website selection, optional name, share-after-create control, Create, Cancel, and close using fictional suggestions. Creation was not submitted. The error fixture is explicitly synthetic.',
+    runtimeVerified: true,
+    fixtures: semrushEntityCreationModalFixtures,
+    config: semrushEntityCreationModalConfig,
+    propsSchema: semrushEntityCreationModalPropsSchema,
+  },
+  'semrush-disclosure-panel': {
+    type: 'reconstructed',
+    Component: SemrushDisclosurePanel,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, independent disclosure behavior consolidated from the Semrush AI Visibility landing FAQ, AI Visibility recommendation section, and Site Audit How to fix guidance, 2026-09-29. Multiple FAQ items can remain open. No navigation or live mutation is performed.',
+    runtimeVerified: true,
+    fixtures: semrushDisclosurePanelFixtures,
+    config: semrushDisclosurePanelConfig,
+    propsSchema: semrushDisclosurePanelPropsSchema,
+  },
+  'semrush-report-tabs': {
+    type: 'reconstructed',
+    Component: SemrushReportTabs,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, report tab families consolidated from authenticated Semrush Site Audit and AI Visibility screens, 2026-09-29. Selection changes locally while report navigation and request behavior remain marked needs verification.',
+    runtimeVerified: true,
+    fixtures: semrushReportTabsFixtures,
+    config: semrushReportTabsConfig,
+    propsSchema: semrushReportTabsPropsSchema,
+  },
+  'semrush-project-selector': {
+    type: 'reconstructed',
+    Component: SemrushProjectSelector,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Site Audit project selector review, 2026-09-29. Reproduces a compact project list and guarded create-project action with fictional project names only. Live project switching was not executed.',
+    runtimeVerified: true,
+    fixtures: semrushProjectSelectorFixtures,
+    config: semrushProjectSelectorConfig,
+    propsSchema: semrushProjectSelectorPropsSchema,
+  },
+  'semrush-campaign-action-group': {
+    type: 'reconstructed',
+    Component: SemrushCampaignActionGroup,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Site Audit campaign header review, 2026-09-29. Rerun, PDF, Export, Share, and Settings are isolated as a grouped action surface. Every action stops at a local needs-verification status.',
+    runtimeVerified: true,
+    fixtures: semrushCampaignActionGroupFixtures,
+    config: semrushCampaignActionGroupConfig,
+    propsSchema: semrushCampaignActionGroupPropsSchema,
+  },
+  'semrush-async-status-state': {
+    type: 'reconstructed',
+    Component: SemrushAsyncStatusState,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, loading transitions consolidated from authenticated Semrush AI Visibility, Home Folders, and Site Audit screens, 2026-09-29. Loading remains distinct from empty and settled data. The error fixture is explicitly synthetic.',
+    runtimeVerified: true,
+    fixtures: semrushAsyncStatusStateFixtures,
+    config: semrushAsyncStatusStateConfig,
+    propsSchema: semrushAsyncStatusStatePropsSchema,
+  },
+  'semrush-empty-state-recovery': {
+    type: 'reconstructed',
+    Component: SemrushEmptyStateRecovery,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, empty and recovery states consolidated from authenticated Semrush Site Audit search, Hidden issues, and AI Visibility country reports, 2026-09-29. Recovery remains local and uses synthetic values.',
+    runtimeVerified: true,
+    fixtures: semrushEmptyStateRecoveryFixtures,
+    config: semrushEmptyStateRecoveryConfig,
+    propsSchema: semrushEmptyStateRecoveryPropsSchema,
+  },
+  'semrush-help-popover': {
+    type: 'reconstructed',
+    Component: SemrushHelpPopover,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, contextual help consolidated from authenticated Semrush target and update-date controls, 2026-09-29. Target and update-frequency popovers were opened and dismissed. Methodology content is a compact reconstruction of the separately observed methodology dialog.',
+    runtimeVerified: true,
+    fixtures: semrushHelpPopoverFixtures,
+    config: semrushHelpPopoverConfig,
+    propsSchema: semrushHelpPopoverPropsSchema,
+  },
+  'semrush-utility-header-actions': {
+    type: 'reconstructed',
+    Component: SemrushUtilityHeaderActions,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, utility actions consolidated from authenticated Semrush Home and Site Audit headers, 2026-09-29. Feedback, notifications, help, invite, and account affordances were visible but their destinations were not tested. Badge values and menu contents are synthetic.',
+    runtimeVerified: true,
+    fixtures: semrushUtilityHeaderActionsFixtures,
+    config: semrushUtilityHeaderActionsConfig,
+    propsSchema: semrushUtilityHeaderActionsPropsSchema,
+  },
+  'semrush-sort-control': {
+    type: 'reconstructed',
+    Component: SemrushSortControl,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Site Audit Last Update sorting, 2026-09-29. The direction label changed from ascending to descending and row order reversed. This independent fixture uses fictional rows and local state.',
+    runtimeVerified: true,
+    fixtures: semrushSortControlFixtures,
+    config: semrushSortControlConfig,
+    propsSchema: semrushSortControlPropsSchema,
+  },
+  'semrush-view-mode-toggle': {
+    type: 'reconstructed',
+    Component: SemrushViewModeToggle,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Home Folders card and SEO table switch, 2026-09-29. The same folder identities and metrics persisted across both representations. This fixture keeps the collection local and synthetic.',
+    runtimeVerified: true,
+    fixtures: semrushViewModeToggleFixtures,
+    config: semrushViewModeToggleConfig,
+    propsSchema: semrushViewModeTogglePropsSchema,
+  },
+  'semrush-carousel-controls': {
+    type: 'reconstructed',
+    Component: SemrushCarouselControls,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, recommendation cards and forward paging consolidated from authenticated Semrush Home and AI Visibility screens, 2026-09-29. The independent reconstruction adds explicit previous, next, position, and boundary states without external navigation.',
+    runtimeVerified: true,
+    fixtures: semrushCarouselControlsFixtures,
+    config: semrushCarouselControlsConfig,
+    propsSchema: semrushCarouselControlsPropsSchema,
+  },
+  'semrush-warning-quota-dialog': {
+    type: 'reconstructed',
+    Component: SemrushWarningQuotaDialog,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, warning and quota dialogs consolidated from authenticated Semrush Site Audit crawl coverage and AI Visibility tracked-brand limits, 2026-09-29. Target-change warning text came from the observed edit-target modal. Live-impact actions remain disabled.',
+    runtimeVerified: true,
+    fixtures: semrushWarningQuotaDialogFixtures,
+    config: semrushWarningQuotaDialogConfig,
+    propsSchema: semrushWarningQuotaDialogPropsSchema,
+  },
+  'semrush-response-detail-modal': {
+    type: 'reconstructed',
+    Component: SemrushResponseDetailModal,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush AI Visibility full-response overlay, 2026-09-29. The live modal transitioned from loading to prompt metadata, brand tags, answer text, and grouped sources. All fixture content and domains are fictional.',
+    runtimeVerified: true,
+    fixtures: semrushResponseDetailModalFixtures,
+    config: semrushResponseDetailModalConfig,
+    propsSchema: semrushResponseDetailModalPropsSchema,
+  },
+  'semrush-toast-banner': {
+    type: 'reconstructed',
+    Component: SemrushToastBanner,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, feedback patterns consolidated from authenticated Semrush informational notices, crawl-limit feedback, and locally observed successful state changes, 2026-09-29. Success, informational, and warning copy use fictional data. The error and retry path is explicitly synthetic. No live request is issued.',
+    runtimeVerified: true,
+    fixtures: semrushToastBannerFixtures,
+    config: semrushToastBannerConfig,
+    propsSchema: semrushToastBannerPropsSchema,
+  },
+  'semrush-date-history-selector': {
+    type: 'reconstructed',
+    Component: SemrushDateHistorySelector,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush AI Visibility historical update selector, 2026-09-29. The selector distinguishes the current snapshot from historical dates. Dates and availability in this independent fixture are fictional and local-only.',
+    runtimeVerified: true,
+    fixtures: semrushDateHistorySelectorFixtures,
+    config: semrushDateHistorySelectorConfig,
+    propsSchema: semrushDateHistorySelectorPropsSchema,
+  },
+  'semrush-competitor-chips': {
+    type: 'reconstructed',
+    Component: SemrushCompetitorChips,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, competitor chips and owned-domain distinction consolidated from authenticated Semrush Brand Performance and competitor setup screens, 2026-09-29. All names are fictional. Removal and restoration change local state only.',
+    runtimeVerified: true,
+    fixtures: semrushCompetitorChipsFixtures,
+    config: semrushCompetitorChipsConfig,
+    propsSchema: semrushCompetitorChipsPropsSchema,
+  },
+  'semrush-filter-visibility-control': {
+    type: 'reconstructed',
+    Component: SemrushFilterVisibilityControl,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Site Audit Show filters and Hide filters behavior, 2026-09-29. This independent fixture demonstrates retained staged values without applying a live filter request.',
+    runtimeVerified: true,
+    fixtures: semrushFilterVisibilityControlFixtures,
+    config: semrushFilterVisibilityControlConfig,
+    propsSchema: semrushFilterVisibilityControlPropsSchema,
+  },
+  'semrush-metric-distribution-switch': {
+    type: 'reconstructed',
+    Component: SemrushMetricDistributionSwitch,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, analytic metric switching consolidated from authenticated Semrush Brand Performance insight cards, 2026-09-29. The same fictional brand identities persist while the displayed measure changes locally.',
+    runtimeVerified: true,
+    fixtures: semrushMetricDistributionSwitchFixtures,
+    config: semrushMetricDistributionSwitchConfig,
+    propsSchema: semrushMetricDistributionSwitchPropsSchema,
+  },
+  'semrush-row-overflow-menu': {
+    type: 'reconstructed',
+    Component: SemrushRowOverflowMenu,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, row and entity overflow actions consolidated from authenticated Semrush project and folder collections, 2026-09-29. Opening, Escape dismissal, and a fictional local report action are exercised. Rename and Settings remain guarded. Delete remains disabled and needs verification.',
+    runtimeVerified: true,
+    fixtures: semrushRowOverflowMenuFixtures,
+    config: semrushRowOverflowMenuConfig,
+    propsSchema: semrushRowOverflowMenuPropsSchema,
+  },
+  'ahrefs-dashboard-workspace': {
+    type: 'reconstructed',
+    Component: AhrefsDashboardWorkspace,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs empty-dashboard review in the Codex in-app browser, 2026-09-29. Reproduces the global product navigation, synthetic workspace selector, universal target bar, education banner, project collection rail, first-project empty state, tutorial media, product update, and help launcher. All submissions and unverified navigation remain local-only.',
+    runtimeVerified: true,
+    fixtures: ahrefsDashboardWorkspaceFixtures,
+    config: ahrefsDashboardWorkspaceConfig,
+    propsSchema: ahrefsDashboardWorkspacePropsSchema,
+  },
+  'ahrefs-site-explorer-entry': {
+    type: 'reconstructed',
+    Component: AhrefsSiteExplorerEntry,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Site Explorer entry review in the Codex in-app browser, 2026-09-29. Reproduces the global product navigation, dated SERP data-quality notice, centered domain-analysis form, footer, product update, and help launcher. All submissions and unverified navigation remain local-only.',
+    runtimeVerified: true,
+    fixtures: ahrefsSiteExplorerEntryFixtures,
+    config: ahrefsSiteExplorerEntryConfig,
+    propsSchema: ahrefsSiteExplorerEntryPropsSchema,
+  },
+  'ahrefs-keywords-explorer-access-gate': {
+    type: 'reconstructed',
+    Component: AhrefsKeywordsExplorerAccessGate,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Keywords Explorer access-gate review in the Codex in-app browser, 2026-09-29. Reproduces the shared product navigation, centered product promise, pricing CTA, and large tutorial-video surface. Pricing, live media playback, account actions, and full keyword-research runtime were deliberately not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsKeywordsExplorerAccessGateFixtures,
+    config: ahrefsKeywordsExplorerAccessGateConfig,
+    propsSchema: ahrefsKeywordsExplorerAccessGatePropsSchema,
+  },
+  'ahrefs-content-explorer-access-gate': {
+    type: 'reconstructed',
+    Component: AhrefsContentExplorerAccessGate,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Content Explorer access-gate review in the Codex in-app browser, 2026-09-29. Reproduces the shared product navigation, content-research promise, pricing CTA, and tutorial-video surface. Pricing, live media playback, account actions, and the full content-research runtime were deliberately not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsContentExplorerAccessGateFixtures,
+    config: ahrefsContentExplorerAccessGateConfig,
+    propsSchema: ahrefsContentExplorerAccessGatePropsSchema,
+  },
+  'ahrefs-site-audit-empty-state': {
+    type: 'reconstructed',
+    Component: AhrefsSiteAuditEmptyState,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Site Audit empty-state review in the Codex in-app browser, 2026-09-29. Reproduces the shared product navigation, first-project message and CTA, footer, Bot Analytics product update, and help launcher. Project creation, crawling, settings, update navigation, and external destinations were deliberately not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsSiteAuditEmptyStateFixtures,
+    config: ahrefsSiteAuditEmptyStateConfig,
+    propsSchema: ahrefsSiteAuditEmptyStatePropsSchema,
+  },
+  'ahrefs-brand-radar-entry': {
+    type: 'reconstructed',
+    Component: AhrefsBrandRadarEntry,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Brand Radar 2.0 entry review in the Codex in-app browser, 2026-09-29. Reproduces website or manual setup, guarded analysis, demo links, empty reports, and the shared shell. No brand analysis, report save, pricing, quota, or external action was run.',
+    runtimeVerified: true,
+    fixtures: ahrefsBrandRadarEntryFixtures,
+    config: ahrefsBrandRadarEntryConfig,
+    propsSchema: ahrefsBrandRadarEntryPropsSchema,
+  },
+  'ahrefs-ai-content-helper-entry': {
+    type: 'reconstructed',
+    Component: AhrefsAiContentHelperEntry,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs AI Content Helper entry review in the Codex in-app browser, 2026-09-29. Reproduces document inputs, location and brand-kit controls, competitor entry, monthly allowance, section tabs, and first-document state. No document, AI writing, quota, pricing, or external action was run.',
+    runtimeVerified: true,
+    fixtures: ahrefsAiContentHelperEntryFixtures,
+    config: ahrefsAiContentHelperEntryConfig,
+    propsSchema: ahrefsAiContentHelperEntryPropsSchema,
+  },
+  'ahrefs-smm-channel-onboarding': {
+    type: 'reconstructed',
+    Component: AhrefsSmmChannelOnboarding,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Social Media Manager first-channel onboarding review in the Codex in-app browser, 2026-09-29. Reproduces the YouTube Shorts announcement, connection CTA, supported-channel row, illustrative calendar, footer, and help launcher. No social account, OAuth permission, post, feedback, or external action was run.',
+    runtimeVerified: true,
+    fixtures: ahrefsSmmChannelOnboardingFixtures,
+    config: ahrefsSmmChannelOnboardingConfig,
+    propsSchema: ahrefsSmmChannelOnboardingPropsSchema,
+  },
+  'ahrefs-competitive-analysis-access-gate': {
+    type: 'reconstructed',
+    Component: AhrefsCompetitiveAnalysisAccessGate,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs review in the Codex in-app browser, 2026-09-29. Competitive Analysis pricing gate and tutorial report preview. Pricing and live competitor analysis were not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsCompetitiveAnalysisAccessGateFixtures,
+    config: ahrefsCompetitiveAnalysisAccessGateConfig,
+    propsSchema: ahrefsCompetitiveAnalysisAccessGatePropsSchema,
+  },
+  'ahrefs-batch-analysis-access-gate': {
+    type: 'reconstructed',
+    Component: AhrefsBatchAnalysisAccessGate,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs review in the Codex in-app browser, 2026-09-29. Batch Analysis pricing gate and illustrative metrics table. Pricing, target upload, filters, export, quota, and live metrics were not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsBatchAnalysisAccessGateFixtures,
+    config: ahrefsBatchAnalysisAccessGateConfig,
+    propsSchema: ahrefsBatchAnalysisAccessGatePropsSchema,
+  },
+  'ahrefs-ai-content-grader-plan-gate': {
+    type: 'reconstructed',
+    Component: AhrefsAiContentGraderPlanGate,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs review in the Codex in-app browser, 2026-09-29. AI Content Grader experimental Enterprise-only availability state. No grading form, AI processing, entitlement, or pricing flow was exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsAiContentGraderPlanGateFixtures,
+    config: ahrefsAiContentGraderPlanGateConfig,
+    propsSchema: ahrefsAiContentGraderPlanGatePropsSchema,
+  },
+  'ahrefs-action-button': {
+    type: 'reconstructed',
+    Component: AhrefsActionButton,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs review in the Codex in-app browser, 2026-09-29. Independent Ahrefs primary, secondary, ghost, loading, and disabled action treatment reconstructed from authenticated screens. Actions stay local-only.',
+    runtimeVerified: true,
+    fixtures: ahrefsActionButtonFixtures,
+    config: ahrefsActionButtonConfig,
+    propsSchema: ahrefsActionButtonPropsSchema,
+  },
+  'ahrefs-target-input-group': {
+    type: 'reconstructed',
+    Component: AhrefsTargetInputGroup,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs review in the Codex in-app browser, 2026-09-29. Independent Ahrefs protocol, target text input, scope, and submit group reconstructed from Site Explorer and project setup. No live target was submitted.',
+    runtimeVerified: true,
+    fixtures: ahrefsTargetInputGroupFixtures,
+    config: ahrefsTargetInputGroupConfig,
+    propsSchema: ahrefsTargetInputGroupPropsSchema,
+  },
+  'ahrefs-project-stepper': {
+    type: 'reconstructed',
+    Component: AhrefsProjectStepper,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs review in the Codex in-app browser, 2026-09-29. Independent four-step project setup progress control for Scope, Web Analytics, Ownership, and Site Audit. Step changes are local-only.',
+    runtimeVerified: true,
+    fixtures: ahrefsProjectStepperFixtures,
+    config: ahrefsProjectStepperConfig,
+    propsSchema: ahrefsProjectStepperPropsSchema,
+  },
+  'ahrefs-project-scope-form': {
+    type: 'reconstructed',
+    Component: AhrefsProjectScopeForm,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs review in the Codex in-app browser, 2026-09-29. Authenticated project Scope form with target, name, folder, sharing, Boost, Continue, and guarded access modal. No project was created.',
+    runtimeVerified: true,
+    fixtures: ahrefsProjectScopeFormFixtures,
+    config: ahrefsProjectScopeFormConfig,
+    propsSchema: ahrefsProjectScopeFormPropsSchema,
+  },
+  'ahrefs-access-control-upgrade-modal': {
+    type: 'reconstructed',
+    Component: AhrefsAccessControlUpgradeModal,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs review in the Codex in-app browser, 2026-09-29. Independent Enterprise access-control upgrade modal opened from project sharing settings. Pricing and permission changes were not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsAccessControlUpgradeModalFixtures,
+    config: ahrefsAccessControlUpgradeModalConfig,
+    propsSchema: ahrefsAccessControlUpgradeModalPropsSchema,
+  },
+  'ahrefs-bot-analytics-empty-state': {
+    type: 'reconstructed',
+    Component: AhrefsBotAnalyticsEmptyState,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Bot Analytics empty state review in the Codex in-app browser, 2026-09-29. Live account, pricing, quota, provider, export, and persistence actions were not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsBotAnalyticsEmptyStateFixtures,
+    config: ahrefsBotAnalyticsEmptyStateConfig,
+    propsSchema: ahrefsBotAnalyticsEmptyStatePropsSchema,
+  },
+  'ahrefs-rank-tracker-plan-gate': {
+    type: 'reconstructed',
+    Component: AhrefsRankTrackerPlanGate,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Rank Tracker plan gate review in the Codex in-app browser, 2026-09-29. Live account, pricing, quota, provider, export, and persistence actions were not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsRankTrackerPlanGateFixtures,
+    config: ahrefsRankTrackerPlanGateConfig,
+    propsSchema: ahrefsRankTrackerPlanGatePropsSchema,
+  },
+  'ahrefs-portfolio-empty-state': {
+    type: 'reconstructed',
+    Component: AhrefsPortfolioEmptyState,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Portfolio empty state review in the Codex in-app browser, 2026-09-29. Live account, pricing, quota, provider, export, and persistence actions were not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsPortfolioEmptyStateFixtures,
+    config: ahrefsPortfolioEmptyStateConfig,
+    propsSchema: ahrefsPortfolioEmptyStatePropsSchema,
+  },
+  'ahrefs-report-builder-empty-state': {
+    type: 'reconstructed',
+    Component: AhrefsReportBuilderEmptyState,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Report Builder empty state review in the Codex in-app browser, 2026-09-29. Live account, pricing, quota, provider, export, and persistence actions were not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsReportBuilderEmptyStateFixtures,
+    config: ahrefsReportBuilderEmptyStateConfig,
+    propsSchema: ahrefsReportBuilderEmptyStatePropsSchema,
+  },
+  'ahrefs-alerts-workspace': {
+    type: 'reconstructed',
+    Component: AhrefsAlertsWorkspace,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Alerts workspace review in the Codex in-app browser, 2026-09-29. Live account, pricing, quota, provider, export, and persistence actions were not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsAlertsWorkspaceFixtures,
+    config: ahrefsAlertsWorkspaceConfig,
+    propsSchema: ahrefsAlertsWorkspacePropsSchema,
+  },
+  'ahrefs-gbp-monitor-access-gate': {
+    type: 'reconstructed',
+    Component: AhrefsGbpMonitorAccessGate,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs GBP Monitor access gate review in the Codex in-app browser, 2026-09-29. Live account, pricing, quota, provider, export, and persistence actions were not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsGbpMonitorAccessGateFixtures,
+    config: ahrefsGbpMonitorAccessGateConfig,
+    propsSchema: ahrefsGbpMonitorAccessGatePropsSchema,
+  },
+  'ahrefs-rank-table': {
+    type: 'reconstructed',
+    Component: AhrefsRankTable,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Ahrefs Rank table review in the Codex in-app browser, 2026-09-29. Live account, pricing, quota, provider, export, and persistence actions were not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsRankTableFixtures,
+    config: ahrefsRankTableConfig,
+    propsSchema: ahrefsRankTablePropsSchema,
+  },
+  'ahrefs-apps-directory-info': {
+    type: 'reconstructed',
+    Component: AhrefsAppsDirectoryInfo,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Apps directory information review in the Codex in-app browser, 2026-09-29. Live account, pricing, quota, provider, export, and persistence actions were not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsAppsDirectoryInfoFixtures,
+    config: ahrefsAppsDirectoryInfoConfig,
+    propsSchema: ahrefsAppsDirectoryInfoPropsSchema,
+  },
+  'ahrefs-project-view-radio-group': {
+    type: 'reconstructed',
+    Component: AhrefsProjectViewRadioGroup,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Ahrefs Project view radio group review in the Codex in-app browser, 2026-09-29. Live account, pricing, quota, provider, export, and persistence actions were not exercised.',
+    runtimeVerified: true,
+    fixtures: ahrefsProjectViewRadioGroupFixtures,
+    config: ahrefsProjectViewRadioGroupConfig,
+    propsSchema: ahrefsProjectViewRadioGroupPropsSchema,
+  },
   'semrush-ai-visibility-dashboard': {
     type: 'reconstructed',
     Component: SemrushAiVisibilityDashboard,
     label: 'Reconstructed preview',
     evidence:
-      'OBSERVATION, authenticated Semrush Visibility Overview inspection, 2026-09-29. Reproduces the score, metric tabs, reporting ranges, LLM distribution, and localized empty state with synthetic values. Recommendations and the full topic table remain documented but are outside this initial interactive slice.',
+      'OBSERVATION, authenticated one-screen Semrush Visibility Overview interaction review, 2026-09-29. Reproduces metric and range transitions, country and chart empty states, LLM distribution, collapsible recommendations, the How It Works drawer, five topic/source views, prompt rows, and a full-response modal with synthetic values.',
     runtimeVerified: true,
     fixtures: semrushAiVisibilityDashboardFixtures,
     config: semrushAiVisibilityDashboardConfig,
@@ -1139,7 +2105,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: SemrushAiCompetitorSetup,
     label: 'Reconstructed preview',
     evidence:
-      'OBSERVATION, authenticated Semrush Competitor Research inspection, 2026-09-29. Reproduces the owned-domain anchor, four competitor slots, Analyze and Clear actions, and empty state. A real comparison was deliberately not submitted, so results and API behavior remain not observed.',
+      'OBSERVATION, authenticated Semrush Competitor Research inspection, 2026-09-29. Reproduces the owned-domain anchor, four competitor slots, Analyze and Clear actions, empty state, and a clearly synthetic comparison-result fixture. A real comparison was deliberately not submitted, so result values and API behavior remain not observed.',
     runtimeVerified: true,
     fixtures: semrushAiCompetitorSetupFixtures,
     config: semrushAiCompetitorSetupConfig,
@@ -1166,6 +2132,61 @@ export const previewRegistry: PreviewRegistry = {
     fixtures: semrushBrandPerformanceInsightsFixtures,
     config: semrushBrandPerformanceInsightsConfig,
     propsSchema: semrushBrandPerformanceInsightsPropsSchema,
+  },
+  'semrush-report-filter-controls': {
+    type: 'reconstructed',
+    Component: SemrushReportFilterControls,
+    label: 'Reconstructed preview',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated Semrush Brand Performance reports, 2026-09-29. Reproduces the grouped brand selector, target-edit warning, competitor tags, platform and historical-date menus, contextual help, methodology dialog, and quota modal using synthetic values.',
+    fixtures: semrushReportFilterControlsFixtures,
+    config: semrushReportFilterControlsConfig,
+    propsSchema: semrushReportFilterControlsPropsSchema,
+  },
+  'semrush-evidence-answers-drawer': {
+    type: 'reconstructed',
+    Component: SemrushEvidenceAnswersDrawer,
+    label: 'Reconstructed preview',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated Semrush Perception interaction, 2026-09-29. Reproduces the Show answers drawer, scope selector, answer paging, sources, brand mentions, close control and loading-to-content hierarchy. Fixtures are fictional.',
+    fixtures: semrushEvidenceAnswersDrawerFixtures,
+    config: semrushEvidenceAnswersDrawerConfig,
+    propsSchema: semrushEvidenceAnswersDrawerPropsSchema,
+  },
+  'semrush-perception-analysis': {
+    type: 'reconstructed',
+    Component: SemrushPerceptionAnalysis,
+    label: 'Reconstructed preview',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated Semrush Perception report, 2026-09-29. Reproduces chart range and legend controls, AI overview loading, feature heatmap, branded modes, expandable descriptors, pagination and invalid-page status with synthetic data.',
+    fixtures: semrushPerceptionAnalysisFixtures,
+    config: semrushPerceptionAnalysisConfig,
+    propsSchema: semrushPerceptionAnalysisPropsSchema,
+  },
+  'semrush-narrative-drivers': {
+    type: 'reconstructed',
+    Component: SemrushNarrativeDrivers,
+    label: 'Reconstructed preview',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated Semrush Narrative Drivers report, 2026-09-29. Reproduces platform metric tabs, answer/citation modes, filterable expandable question rows, empty state and strategic opportunity cards with synthetic data.',
+    fixtures: semrushNarrativeDriversFixtures,
+    config: semrushNarrativeDriversConfig,
+    propsSchema: semrushNarrativeDriversPropsSchema,
+  },
+  'semrush-question-intent-analysis': {
+    type: 'reconstructed',
+    Component: SemrushQuestionIntentAnalysis,
+    label: 'Reconstructed preview',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated Semrush Questions report, 2026-09-29. Reproduces topic distribution, query intent analysis, topic-level question examples and strategic opportunity hierarchy with synthetic data.',
+    fixtures: semrushQuestionIntentAnalysisFixtures,
+    config: semrushQuestionIntentAnalysisConfig,
+    propsSchema: semrushQuestionIntentAnalysisPropsSchema,
   },
   'toggle-radio-switch': {
     Component: ToggleRadioSwitch,

@@ -1,0 +1,3 @@
+import type { PreviewFixture, PropSchemaField } from '../types'; import type { SemrushFilterVisibilityControlProps } from './SemrushFilterVisibilityControl';
+export const propsSchema: PropSchemaField[] = [{ name: 'initiallyVisible', type: 'boolean', required: false, description: 'Initial advanced-filter visibility.' }, { name: 'disabled', type: 'boolean', required: false, description: 'Disables the toggle and fields.' }];
+export const fixtures: PreviewFixture<SemrushFilterVisibilityControlProps>[] = [{ id: 'hidden', title: 'Filters hidden', props: {} }, { id: 'visible', title: 'Filters visible', props: { initiallyVisible: true } }, { id: 'disabled', title: 'Disabled', props: { initiallyVisible: true, disabled: true } }];

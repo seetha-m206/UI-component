@@ -1,0 +1,3 @@
+import type { PreviewFixture, PropSchemaField } from '../types'; import type { SemrushMetricDistributionSwitchProps } from './SemrushMetricDistributionSwitch';
+export const propsSchema: PropSchemaField[] = [{ name: 'initialMetric', type: "'share' | 'sentiment'", required: false, description: 'Initially displayed measure.' }, { name: 'disabled', type: 'boolean', required: false, description: 'Disables metric switching.' }];
+export const fixtures: PreviewFixture<SemrushMetricDistributionSwitchProps>[] = [{ id: 'share', title: 'Share of voice', props: {} }, { id: 'sentiment', title: 'Sentiment', props: { initialMetric: 'sentiment' } }];

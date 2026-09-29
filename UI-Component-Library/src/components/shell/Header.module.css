@@ -34,6 +34,7 @@
   position: relative;
   flex: 1;
   max-width: 420px;
+  margin-left: var(--spacing-4);
 }
 
 .searchIcon {
@@ -95,4 +96,14 @@
 .themeToggle:hover {
   background: var(--shell-border);
   color: var(--shell-text);
+}
+
+@media (max-width: 640px) {
+  .header {
+    gap: var(--spacing-2);
+  }
+
+  .searchWrap {
+    margin-left: var(--spacing-1);
+  }
 }

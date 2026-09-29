@@ -19,7 +19,7 @@ Report header → shared report filters → owned-domain field → competitor sl
 
 ## Behavior and Actions
 
-Entering at least one competitor enables analysis. Clear removes all competitor selections. The reconstruction converts submission into a local confirmation and never contacts Semrush.
+Entering at least one competitor enables analysis. Clear removes all competitor selections. The reconstruction converts submission into a complete local comparison state with KPI cards and a domain table, and never contacts Semrush.
 
 ## States and Rules
 

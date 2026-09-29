@@ -56,6 +56,7 @@ export function getBrandLabel(brand: string): string {
  * "Other" rather than being silently misgrouped or crashing.
  */
 const PRODUCT_GROUP_MAP: Record<string, string> = {
+  ahrefs: 'SEO & AI Search',
   'google-forms': 'Forms',
   paperform: 'Forms',
   semrush: 'SEO & AI Search',

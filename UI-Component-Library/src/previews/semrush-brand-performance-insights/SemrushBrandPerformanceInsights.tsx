@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import styles from '../semrush-shared.module.css';
 
 export interface SemrushBrandPerformanceInsightsProps {
@@ -104,6 +104,11 @@ export function SemrushBrandPerformanceInsights({
                 B
               </span>
             </div>
+            <div className={styles.legend}>
+              <span>🟠 {brandName}</span>
+              <span>🟣 Orbit</span>
+              <span>🟢 Beacon</span>
+            </div>
           </section>
         </div>
         <div className={styles.grid2} style={{ marginTop: 14 }}>
@@ -128,6 +133,78 @@ export function SemrushBrandPerformanceInsights({
                   <strong>{value}%</strong>
                 </div>
               ))}
+            </div>
+          </section>
+        </div>
+        <section className={styles.card} style={{ marginTop: 14 }}>
+          <div className={styles.sectionHeader}>
+            <div>
+              <h3>Key Business Drivers by Frequency</h3>
+              <span className={styles.subtle}>
+                How often answer engines associate each brand with a buyer priority
+              </span>
+            </div>
+          </div>
+          <div className={styles.driverGrid} role="table" aria-label="Business-driver frequency">
+            {['Business driver', brandName, 'Orbit', 'Beacon'].map((label) => (
+              <strong className={styles.driverCell} role="columnheader" key={label}>
+                {label}
+              </strong>
+            ))}
+            {[
+              ['Ease of implementation', 78, 64, 51],
+              ['Reporting depth', 71, 69, 58],
+              ['Integration coverage', 62, 74, 55],
+              ['Customer support', 67, 49, 72],
+            ].flatMap(([driver, ...scores]) => [
+              <span className={styles.driverCell} role="rowheader" key={`${driver}-label`}>
+                {driver}
+              </span>,
+              ...scores.map((score, index) => (
+                <span
+                  className={`${styles.driverCell} ${styles.driverScore}`}
+                  style={{ '--heat': `${score}%` } as CSSProperties}
+                  role="cell"
+                  key={`${driver}-${index}`}
+                >
+                  {score}%
+                </span>
+              )),
+            ])}
+          </div>
+        </section>
+        <div className={styles.grid2} style={{ marginTop: 14 }}>
+          <section className={styles.card}>
+            <h3>{brandName} vs Orbit</h3>
+            {[
+              ['Share of Voice', '36%', '29%'],
+              ['Positive sentiment', '74%', '68%'],
+              ['Key driver wins', '3', '1'],
+            ].map(([label, left, right]) => (
+              <div className={styles.comparisonRow} key={label}>
+                <div>
+                  <span className={styles.metricLabel}>{label}</span>
+                  <div className={styles.comparisonValue}>{left}</div>
+                </div>
+                <span className={styles.versus}>vs</span>
+                <div style={{ textAlign: 'right' }}>
+                  <span className={styles.metricLabel}>Orbit</span>
+                  <div className={styles.comparisonValue}>{right}</div>
+                </div>
+              </div>
+            ))}
+          </section>
+          <section className={styles.card}>
+            <h3>Driver trend</h3>
+            <p className={styles.subtle}>Frequency across the selected reporting period</p>
+            <div className={styles.miniChart} aria-label="Synthetic business-driver trend">
+              {[32, 45, 41, 58, 64, 60, 76, 72].map((height, index) => (
+                <span key={index} style={{ height: `${height}%` }} />
+              ))}
+            </div>
+            <div className={styles.legend}>
+              <span>Measured frequency</span>
+              <span>AI-generated overview shown separately above</span>
             </div>
           </section>
         </div>

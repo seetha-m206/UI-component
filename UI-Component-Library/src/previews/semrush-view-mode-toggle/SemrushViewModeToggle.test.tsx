@@ -1,0 +1,2 @@
+import { render, screen } from '@testing-library/react'; import userEvent from '@testing-library/user-event'; import { describe, expect, it } from 'vitest'; import { SemrushViewModeToggle } from './SemrushViewModeToggle';
+describe('SemrushViewModeToggle', () => { it('preserves collection identity across views', async () => { render(<SemrushViewModeToggle />); await userEvent.click(screen.getByRole('radio', { name: 'SEO table' })); expect(screen.getByRole('table')).toBeInTheDocument(); expect(screen.getByRole('status')).toHaveTextContent(/same 2 folders/i); }); });

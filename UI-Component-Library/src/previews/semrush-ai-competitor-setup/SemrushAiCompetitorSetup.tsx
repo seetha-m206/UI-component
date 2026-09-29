@@ -75,11 +75,63 @@ export function SemrushAiCompetitorSetup({
         </div>
         <section className={styles.card} style={{ marginTop: 18 }}>
           {submitted ? (
-            <div className={styles.success} role="status">
-              <strong>Comparison ready</strong>
-              <br />
-              Synthetic preview prepared for {competitors.filter(Boolean).length} competitor
-              {competitors.filter(Boolean).length === 1 ? '' : 's'}. No request was sent.
+            <div role="status">
+              <div className={styles.success}>
+                <strong>Comparison ready</strong>
+                <br />
+                Synthetic preview prepared for {competitors.filter(Boolean).length} competitor
+                {competitors.filter(Boolean).length === 1 ? '' : 's'}. No request was sent.
+              </div>
+              <div className={styles.grid3} style={{ marginTop: 14 }}>
+                {[
+                  ['Your AI Visibility', '27%', '+4 pts'],
+                  ['Share of Voice', '36%', 'Rank 1'],
+                  ['Cited Pages', '18', '+5 opportunities'],
+                ].map(([label, value, note]) => (
+                  <article className={styles.card} key={label}>
+                    <div className={styles.metricLabel}>{label}</div>
+                    <div className={styles.metric}>{value}</div>
+                    <span className={styles.subtle}>{note}</span>
+                  </article>
+                ))}
+              </div>
+              <div className={styles.tableWrap} style={{ marginTop: 14 }}>
+                <table className={styles.table}>
+                  <thead>
+                    <tr>
+                      <th>Domain</th>
+                      <th>AI Visibility</th>
+                      <th>Mentions</th>
+                      <th>Citations</th>
+                      <th>Trend</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      [ownDomain, '27%', '24', '38', '+6%'],
+                      ...competitors
+                        .filter(Boolean)
+                        .map((domain, index) => [
+                          domain,
+                          `${22 - index * 4}%`,
+                          `${19 - index * 3}`,
+                          `${30 - index * 5}`,
+                          index === 0 ? '+2%' : '-1%',
+                        ]),
+                    ].map((row) => (
+                      <tr key={row[0]}>
+                        <td>
+                          <strong>{row[0]}</strong>
+                        </td>
+                        <td>{row[1]}</td>
+                        <td>{row[2]}</td>
+                        <td>{row[3]}</td>
+                        <td>{row[4]}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           ) : (
             <div className={styles.empty}>

@@ -1,0 +1,3 @@
+import type { PreviewFixture, PropSchemaField } from '../types'; import type { SemrushRowOverflowMenuProps } from './SemrushRowOverflowMenu';
+export const propsSchema: PropSchemaField[] = [{ name: 'initiallyOpen', type: 'boolean', required: false, description: 'Initial menu visibility.' }, { name: 'disabled', type: 'boolean', required: false, description: 'Disables the trigger.' }];
+export const fixtures: PreviewFixture<SemrushRowOverflowMenuProps>[] = [{ id: 'closed', title: 'Closed', props: {} }, { id: 'open', title: 'Open', props: { initiallyOpen: true } }, { id: 'disabled', title: 'Disabled', props: { disabled: true } }];

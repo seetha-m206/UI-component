@@ -26,6 +26,7 @@ Competitor chips can be removed from the comparison set. Filters change the anal
 - Brand and competitor identities remain visually stable across charts.
 - AI-generated summaries are labeled as such.
 - This reconstruction contains fictional brands and values only.
+- The reconstruction includes the captured business-driver heatmap and a representative pairwise competitor comparison.
 - The observed account’s real brand names and metrics were deliberately excluded.
 
 ## Technical Data

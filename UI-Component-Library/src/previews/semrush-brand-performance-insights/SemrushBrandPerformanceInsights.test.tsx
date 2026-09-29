@@ -8,4 +8,10 @@ describe('SemrushBrandPerformanceInsights', () => {
     await userEvent.click(screen.getByRole('button', { name: 'Remove Orbit' }));
     expect(screen.queryByRole('button', { name: 'Remove Orbit' })).not.toBeInTheDocument();
   });
+
+  it('includes business drivers and pairwise comparison evidence', () => {
+    render(<SemrushBrandPerformanceInsights />);
+    expect(screen.getByRole('table', { name: 'Business-driver frequency' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Northstar vs Orbit' })).toBeInTheDocument();
+  });
 });

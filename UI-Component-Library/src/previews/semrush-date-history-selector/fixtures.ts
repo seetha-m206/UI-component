@@ -1,0 +1,3 @@
+import type { PreviewFixture, PropSchemaField } from '../types'; import type { SemrushDateHistorySelectorProps } from './SemrushDateHistorySelector';
+export const propsSchema: PropSchemaField[] = [{ name: 'initialPeriod', type: "'current' | 'previous' | 'older'", required: false, description: 'Initially selected snapshot.' }, { name: 'disabled', type: 'boolean', required: false, description: 'Disables the selector.' }];
+export const fixtures: PreviewFixture<SemrushDateHistorySelectorProps>[] = [{ id: 'current', title: 'Current update', props: {} }, { id: 'historical', title: 'Historical update', props: { initialPeriod: 'previous' } }, { id: 'disabled', title: 'Disabled', props: { disabled: true } }];

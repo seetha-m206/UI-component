@@ -1,0 +1,11 @@
+import { useState } from 'react';
+import styles from '../semrush-action-primitives.module.css';
+
+export type DropdownFilterVariant = 'ownership' | 'tags-empty' | 'advanced';
+export interface SemrushDropdownFilterActionProps { variant?: DropdownFilterVariant; initiallyOpen?: boolean; disabled?: boolean; }
+export function SemrushDropdownFilterAction({ variant = 'ownership', initiallyOpen = false, disabled = false }: SemrushDropdownFilterActionProps) {
+  const [open, setOpen] = useState(initiallyOpen);
+  const [operator, setOperator] = useState('Include');
+  const label = variant === 'ownership' ? 'Ownership' : variant === 'tags-empty' ? 'Tags' : 'Advanced filters';
+  return <div className={styles.stage}><section className={styles.card} aria-label="Dropdown filter specimen"><h3>Dropdown filter</h3><div className={styles.menuWrap}><button className={styles.trigger} type="button" role="combobox" aria-label={label} aria-expanded={open} disabled={disabled} onClick={() => setOpen((value) => !value)}><span>{label}</span><span>⌄</span></button>{open && variant === 'ownership' && <div className={styles.menu} role="listbox" aria-label="Ownership options"><button type="button" role="option" aria-selected="true">Owned by me</button><button type="button" role="option" aria-selected="false">Shared with me</button></div>}{open && variant === 'tags-empty' && <div className={styles.menu} role="listbox" aria-label="Tag options"><span>No tags here yet</span></div>}{open && variant === 'advanced' && <div className={`${styles.menu} ${styles.filterPanel}`} role="dialog" aria-label="Advanced filters"><div className={styles.filterRow}><select aria-label="Filter operator" value={operator} onChange={(event) => setOperator(event.target.value)}><option>Include</option><option>Exclude</option></select><select aria-label="Filter field" defaultValue="Page URL"><option>Page URL</option></select><input aria-label="Filter value" /></div><div className={styles.row}><button className={styles.ghost} type="button">＋ Add condition</button><button className={`${styles.button} ${styles.secondary}`} type="button" onClick={() => setOpen(false)}>Clear all</button><button className={`${styles.button} ${styles.primary}`} type="button" disabled>Apply · needs verification</button></div></div>}</div></section></div>;
+}
