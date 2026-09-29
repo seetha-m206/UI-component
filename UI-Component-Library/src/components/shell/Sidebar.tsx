@@ -140,12 +140,15 @@ export function Sidebar({ query }: SidebarProps) {
         <p className={styles.emptyState}>No components match “{query}”.</p>
       )}
 
-      {groupedByProductGroup.map(({ groupLabel, brands }) => {
+      {groupedByProductGroup.map(({ groupLabel, brands }, groupIndex) => {
         // While searching, force every matching product group open — a
         // collapsed group would otherwise hide the very results the search
         // found. Otherwise, only the group containing the current page (or
-        // the sole group, while there's only one) opens by default.
-        const groupDefaultOpen = groupLabel === currentProductGroup || groupedByProductGroup.length === 1;
+        // the first group on the overview) opens by default. Keeping one
+        // group open preserves a useful landing state as the library grows
+        // beyond its original Forms-only catalogue.
+        const groupDefaultOpen =
+          groupLabel === currentProductGroup || (!currentProductGroup && groupIndex === 0);
         const groupOpen =
           query.trim() !== ''
             ? true
@@ -188,7 +191,11 @@ export function Sidebar({ query }: SidebarProps) {
                       {brandOpen ? (
                         <ChevronDown size={14} className={styles.brandChevron} aria-hidden="true" />
                       ) : (
-                        <ChevronRight size={14} className={styles.brandChevron} aria-hidden="true" />
+                        <ChevronRight
+                          size={14}
+                          className={styles.brandChevron}
+                          aria-hidden="true"
+                        />
                       )}
                       <Layers size={14} className={styles.brandIcon} aria-hidden="true" />
                       {brandLabel}

@@ -58,6 +58,7 @@ export function getBrandLabel(brand: string): string {
 const PRODUCT_GROUP_MAP: Record<string, string> = {
   'google-forms': 'Forms',
   paperform: 'Forms',
+  semrush: 'SEO & AI Search',
   typeform: 'Forms',
   'zoho-forms': 'Forms',
 };

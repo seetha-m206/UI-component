@@ -418,6 +418,37 @@ import {
 } from './google-forms-responses-view/fixtures';
 import { previewConfig as googleFormsResponsesViewConfig } from './google-forms-responses-view/preview.config';
 
+import { SemrushAiVisibilityShell } from './semrush-ai-visibility-shell/SemrushAiVisibilityShell';
+import {
+  fixtures as semrushAiVisibilityShellFixtures,
+  propsSchema as semrushAiVisibilityShellPropsSchema,
+} from './semrush-ai-visibility-shell/fixtures';
+import { previewConfig as semrushAiVisibilityShellConfig } from './semrush-ai-visibility-shell/preview.config';
+import { SemrushAiVisibilityDashboard } from './semrush-ai-visibility-dashboard/SemrushAiVisibilityDashboard';
+import {
+  fixtures as semrushAiVisibilityDashboardFixtures,
+  propsSchema as semrushAiVisibilityDashboardPropsSchema,
+} from './semrush-ai-visibility-dashboard/fixtures';
+import { previewConfig as semrushAiVisibilityDashboardConfig } from './semrush-ai-visibility-dashboard/preview.config';
+import { SemrushAiCompetitorSetup } from './semrush-ai-competitor-setup/SemrushAiCompetitorSetup';
+import {
+  fixtures as semrushAiCompetitorSetupFixtures,
+  propsSchema as semrushAiCompetitorSetupPropsSchema,
+} from './semrush-ai-competitor-setup/fixtures';
+import { previewConfig as semrushAiCompetitorSetupConfig } from './semrush-ai-competitor-setup/preview.config';
+import { SemrushPromptResearchEntry } from './semrush-prompt-research-entry/SemrushPromptResearchEntry';
+import {
+  fixtures as semrushPromptResearchEntryFixtures,
+  propsSchema as semrushPromptResearchEntryPropsSchema,
+} from './semrush-prompt-research-entry/fixtures';
+import { previewConfig as semrushPromptResearchEntryConfig } from './semrush-prompt-research-entry/preview.config';
+import { SemrushBrandPerformanceInsights } from './semrush-brand-performance-insights/SemrushBrandPerformanceInsights';
+import {
+  fixtures as semrushBrandPerformanceInsightsFixtures,
+  propsSchema as semrushBrandPerformanceInsightsPropsSchema,
+} from './semrush-brand-performance-insights/fixtures';
+import { previewConfig as semrushBrandPerformanceInsightsConfig } from './semrush-brand-performance-insights/preview.config';
+
 import type { PreviewRegistry } from './types';
 
 export const previewRegistry: PreviewRegistry = {
@@ -712,7 +743,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: TypeformAutomationsBuilder,
     label: 'Reconstructed preview',
     evidence:
-      "Captured DOM/Network findings in Technical Data (no authorized Typeform export available). The real product's canvas is React Flow (pan/zoom, general graph model); since the record only ever verified one linear chain topology, this reconstruction renders the chain as a plain vertical block stack joined by SVG connector lines — no graph library added — faithfully reproducing the confirmed mid-chain \"+\"-insertion behavior without overclaiming general graph-editor capability the source never exercised. Per-block removal is a flagged, reasonable addition, not confirmed in the source. See this preview's README for the full scoping rationale.",
+      'Captured DOM/Network findings in Technical Data (no authorized Typeform export available). The real product\'s canvas is React Flow (pan/zoom, general graph model); since the record only ever verified one linear chain topology, this reconstruction renders the chain as a plain vertical block stack joined by SVG connector lines — no graph library added — faithfully reproducing the confirmed mid-chain "+"-insertion behavior without overclaiming general graph-editor capability the source never exercised. Per-block removal is a flagged, reasonable addition, not confirmed in the source. See this preview\'s README for the full scoping rationale.',
     runtimeVerified: false,
     fixtures: typeformAutomationsBuilderFixtures,
     config: typeformAutomationsBuilderConfig,
@@ -723,7 +754,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: ZiaAiFormGenerator,
     label: 'Reconstructed preview',
     evidence:
-      "Reconstructed from Zoho Forms' \"Generate with Zia AI\" modal flow (captured DOM/Action findings in Technical Data; no authorized Zoho export available). Confirmed-real behavior reproduced faithfully: generation is single-shot and stateless — no conversation history is fed into either call — Regenerate performs a full field-list REPLACE rather than an incremental edit, and nothing becomes a real saved form until \"Create Form\" is clicked. This reconstruction's own assumptions, clearly not source-verified: the Content Tone dropdown's exact option labels (Professional/Friendly/Casual), the sample-prompt chip wording, the generated field labels/types/options, and the 4-line generating-ladder copy (the ladder mechanism and 4-step structure are per the task's own spec, not an independent source capture).",
+      'Reconstructed from Zoho Forms\' "Generate with Zia AI" modal flow (captured DOM/Action findings in Technical Data; no authorized Zoho export available). Confirmed-real behavior reproduced faithfully: generation is single-shot and stateless — no conversation history is fed into either call — Regenerate performs a full field-list REPLACE rather than an incremental edit, and nothing becomes a real saved form until "Create Form" is clicked. This reconstruction\'s own assumptions, clearly not source-verified: the Content Tone dropdown\'s exact option labels (Professional/Friendly/Casual), the sample-prompt chip wording, the generated field labels/types/options, and the 4-line generating-ladder copy (the ladder mechanism and 4-step structure are per the task\'s own spec, not an independent source capture).',
     runtimeVerified: false,
     fixtures: ziaAiFormGeneratorFixtures,
     config: ziaAiFormGeneratorConfig,
@@ -767,7 +798,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: NotificationSettingsEditor,
     label: 'Reconstructed preview',
     evidence:
-      "Captured DOM/Actions/Network findings in Technical Data (no authorized Zoho export available). The confirmed no-op \"Field Labels\" popup, explicit-save modal, and chip-level email validation are reproduced faithfully with the record's exact token strings and banner copy. This reconstruction's own assumption: the per-token \"question text\" paired with each merge token is a representative placeholder — the source captured only the token strings themselves, not which literal form-question text was paired with each. No real POST .../notifications/email call is made; Save updates local state and fires a callback only.",
+      'Captured DOM/Actions/Network findings in Technical Data (no authorized Zoho export available). The confirmed no-op "Field Labels" popup, explicit-save modal, and chip-level email validation are reproduced faithfully with the record\'s exact token strings and banner copy. This reconstruction\'s own assumption: the per-token "question text" paired with each merge token is a representative placeholder — the source captured only the token strings themselves, not which literal form-question text was paired with each. No real POST .../notifications/email call is made; Save updates local state and fires a callback only.',
     runtimeVerified: false,
     fixtures: notificationSettingsEditorFixtures,
     config: notificationSettingsEditorConfig,
@@ -778,7 +809,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: CollaboratorPermissionsDialog,
     label: 'Reconstructed preview',
     evidence:
-      "Captured DOM/Actions/Rules findings in Technical Data (no authorized Zoho export available). The autocomplete-restricted Share-With field, its exact client-side error copy, the Groups/All-Users no-dropdown fixed grants, the Super Admin row's structural absence of any action control, and the exact \"no active Admins\" blocking dialog copy are all reproduced faithfully. Two honestly-flagged gaps: Surface B's real Add-User final submit was deliberately never executed in the source (would send a real email/consume a seat), so this reconstruction fires a callback without appending a row rather than inventing the unconfirmed post-submit shape; and Change-Super-Admin's \"an Admin already exists\" branch was never exercised in the source either, so only the confirmed blocking branch is faithfully implemented — the other renders a clearly-labeled placeholder.",
+      'Captured DOM/Actions/Rules findings in Technical Data (no authorized Zoho export available). The autocomplete-restricted Share-With field, its exact client-side error copy, the Groups/All-Users no-dropdown fixed grants, the Super Admin row\'s structural absence of any action control, and the exact "no active Admins" blocking dialog copy are all reproduced faithfully. Two honestly-flagged gaps: Surface B\'s real Add-User final submit was deliberately never executed in the source (would send a real email/consume a seat), so this reconstruction fires a callback without appending a row rather than inventing the unconfirmed post-submit shape; and Change-Super-Admin\'s "an Admin already exists" branch was never exercised in the source either, so only the confirmed blocking branch is faithfully implemented — the other renders a clearly-labeled placeholder.',
     runtimeVerified: false,
     fixtures: collaboratorPermissionsDialogFixtures,
     config: collaboratorPermissionsDialogConfig,
@@ -789,7 +820,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: TwoLineDropdownAndAccordion,
     label: 'Reconstructed preview',
     evidence:
-      "Captured DOM/CSS/JS in Technical Data (no authorized Zoho export available), including the extracted jQuery toggleOfElemCont handler source confirming a genuine height (slideDown/slideUp) animation, content-height-scaled 400–800ms duration, distinct from the opacity-only fade documented elsewhere in this product. This reconstruction substitutes a fixed-duration CSS grid-template-rows transition for that per-pixel-scaled jQuery duration — a different mechanism that preserves the meaningful height-vs-opacity contrast without claiming the exact same timing curve. Keyboard navigation on the dropdown (arrow keys, Enter/Escape) is a standard-combobox assumption, not independently observed beyond mouse-click actions in the source.",
+      'Captured DOM/CSS/JS in Technical Data (no authorized Zoho export available), including the extracted jQuery toggleOfElemCont handler source confirming a genuine height (slideDown/slideUp) animation, content-height-scaled 400–800ms duration, distinct from the opacity-only fade documented elsewhere in this product. This reconstruction substitutes a fixed-duration CSS grid-template-rows transition for that per-pixel-scaled jQuery duration — a different mechanism that preserves the meaningful height-vs-opacity contrast without claiming the exact same timing curve. Keyboard navigation on the dropdown (arrow keys, Enter/Escape) is a standard-combobox assumption, not independently observed beyond mouse-click actions in the source.',
     runtimeVerified: false,
     fixtures: twoLineDropdownAndAccordionFixtures,
     config: twoLineDropdownAndAccordionConfig,
@@ -833,7 +864,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: TypeformFormModePicker,
     label: 'Reconstructed preview',
     evidence:
-      "OBSERVATION, live exploration of Typeform's Form mode dropdown (toolbar + Form settings → General), free-plan account, 2026-09-18. The 4-option picker, the Lead-qualification → \"Review your form\" AI-drafted-rules canvas swap, the confirmed no-data-loss round trip back to Universal, and the paywalled/locked Knowledge-quiz and Match-quiz options are all directly observed. This reconstruction deliberately does NOT add a respondent-layout toggle — the record explicitly refutes the hypothesis that \"Universal mode\" controls respondent rendering; that refutation is structural to this preview, not an assumption.",
+      'OBSERVATION, live exploration of Typeform\'s Form mode dropdown (toolbar + Form settings → General), free-plan account, 2026-09-18. The 4-option picker, the Lead-qualification → "Review your form" AI-drafted-rules canvas swap, the confirmed no-data-loss round trip back to Universal, and the paywalled/locked Knowledge-quiz and Match-quiz options are all directly observed. This reconstruction deliberately does NOT add a respondent-layout toggle — the record explicitly refutes the hypothesis that "Universal mode" controls respondent rendering; that refutation is structural to this preview, not an assumption.',
     runtimeVerified: false,
     fixtures: typeformFormModePickerFixtures,
     config: typeformFormModePickerConfig,
@@ -844,7 +875,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: TypeformScoringOutcomeQuizEditor,
     label: 'Reconstructed preview',
     evidence:
-      "OBSERVATION, live DOM/network inspection, 2026-09-18. Both modals' non-React-Flow DOM shape (0 react-flow-classed elements/canvas vs. 41 on the underlying Logic tab), the shared \"Delete all rules\"/Cancel/Save footer, and the exact toast copy \"Edits are always autosaved.\" are directly observed and reproduced verbatim. No network call is simulated, consistent with the source finding no HTTP mutation. Assumption flagged in code: the \"Choose answers\" chip format (\"<question#> · <value>\", e.g. \"1 · 5\") is inferred to match the record's single captured chip example, not independently confirmed as a general rule.",
+      'OBSERVATION, live DOM/network inspection, 2026-09-18. Both modals\' non-React-Flow DOM shape (0 react-flow-classed elements/canvas vs. 41 on the underlying Logic tab), the shared "Delete all rules"/Cancel/Save footer, and the exact toast copy "Edits are always autosaved." are directly observed and reproduced verbatim. No network call is simulated, consistent with the source finding no HTTP mutation. Assumption flagged in code: the "Choose answers" chip format ("<question#> · <value>", e.g. "1 · 5") is inferred to match the record\'s single captured chip example, not independently confirmed as a general rule.',
     runtimeVerified: false,
     fixtures: typeformScoringOutcomeQuizEditorFixtures,
     config: typeformScoringOutcomeQuizEditorConfig,
@@ -855,7 +886,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: DocumentCanvasEditorShell,
     label: 'Reconstructed preview',
     evidence:
-      "OBSERVATION, live DOM/network inspection, 2026-09-23, corrected 2026-09-23 by the respondent-runtime-guided-vs-standard record's retest (steady ~15s dirty-only autosave interval, not a per-keystroke debounce; a structural edit — insert/reorder/delete a card, insert a break — does NOT arm the save cycle by itself, with one CONFIRMED case of real data loss). This reconstruction deliberately reproduces that bug: a structural change never touches the visible save-status label, only a real text edit does, so \"SAVED DRAFT\" can show while a structural change is genuinely unpersisted. Assumptions, clearly scoped in code comments: a custom block model stands in for Draft.js (not a library reimplementation); drag-reorder is tested via accessible Move up/down controls (entries-kanban-view precedent) alongside a best-effort native HTML5 drag; the \"+\" gutter offers only the 2 confirmed quick-inserts; the left-rail outline, required-asterisk indicator, and the specific arrow-key-into-card keystroke-loss bug are explicitly not reconstructed.",
+      'OBSERVATION, live DOM/network inspection, 2026-09-23, corrected 2026-09-23 by the respondent-runtime-guided-vs-standard record\'s retest (steady ~15s dirty-only autosave interval, not a per-keystroke debounce; a structural edit — insert/reorder/delete a card, insert a break — does NOT arm the save cycle by itself, with one CONFIRMED case of real data loss). This reconstruction deliberately reproduces that bug: a structural change never touches the visible save-status label, only a real text edit does, so "SAVED DRAFT" can show while a structural change is genuinely unpersisted. Assumptions, clearly scoped in code comments: a custom block model stands in for Draft.js (not a library reimplementation); drag-reorder is tested via accessible Move up/down controls (entries-kanban-view precedent) alongside a best-effort native HTML5 drag; the "+" gutter offers only the 2 confirmed quick-inserts; the left-rail outline, required-asterisk indicator, and the specific arrow-key-into-card keystroke-loss bug are explicitly not reconstructed.',
     runtimeVerified: false,
     fixtures: documentCanvasEditorShellFixtures,
     config: documentCanvasEditorShellConfig,
@@ -899,7 +930,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: PaperformPaymentsProductsFields,
     label: 'Reconstructed preview',
     evidence:
-      "OBSERVATION, live DOM/network inspection of the builder and published respondent view, 2026-09-23. No comparison baseline exists anywhere in this library. Confirmed and reproduced faithfully: the read-only/editable Price toggle and the exact minimum-price warning copy; a live running total on the Submit button; a quantity spinner clamped to stock via the exact \"You must select no more than N\" blocking copy; native checkbox-based product selection (a real, confirmed difference from the custom div-radio pattern used by the Yes/No and Rating fields); and, most importantly, that Publish succeeds silently with the normal success toast even though no payment gateway is connected -- a confirmed real safety gap in the source product, deliberately not papered over with a warning this reconstruction would be inventing. The Manage Products modal, Choose Layout modal, and the full Custom Pricing Rules row-builder UI are summarized/simplified rather than exhaustively reconstructed, given their scope; the coupon table and pricing-rule row shown are representative examples, not the exact source data.",
+      'OBSERVATION, live DOM/network inspection of the builder and published respondent view, 2026-09-23. No comparison baseline exists anywhere in this library. Confirmed and reproduced faithfully: the read-only/editable Price toggle and the exact minimum-price warning copy; a live running total on the Submit button; a quantity spinner clamped to stock via the exact "You must select no more than N" blocking copy; native checkbox-based product selection (a real, confirmed difference from the custom div-radio pattern used by the Yes/No and Rating fields); and, most importantly, that Publish succeeds silently with the normal success toast even though no payment gateway is connected -- a confirmed real safety gap in the source product, deliberately not papered over with a warning this reconstruction would be inventing. The Manage Products modal, Choose Layout modal, and the full Custom Pricing Rules row-builder UI are summarized/simplified rather than exhaustively reconstructed, given their scope; the coupon table and pricing-rule row shown are representative examples, not the exact source data.',
     runtimeVerified: false,
     fixtures: paperformPaymentsProductsFieldsFixtures,
     config: paperformPaymentsProductsFieldsConfig,
@@ -910,7 +941,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: PaperformCalculationFieldAiHelper,
     label: 'Reconstructed preview',
     evidence:
-      "OBSERVATION, live DOM/network inspection, 2026-09-23. Confirmed and reproduced faithfully: the CALCULATION/HOW TO USE tab split; a code pane evaluated live against sample field values (not real answers); an AI panel with a Fix action (shown only while the formula has a parse error) and a free-text prompt, both proposing a full-replacement formula with a pre-computed Result that is NOT applied to the code pane until Apply is clicked. The two AI responses this preview can produce are the source record's own verbatim captured exchanges (a real Fix of a stray leading \"/\", and a real \"add a 10% discount over 5\" prompt) -- not generated live, since no AI backend is available in a static preview site; any other prompt gets a clearly-labeled canned fallback rather than a fabricated AI response. The formula evaluator is this reconstruction's own small safe (no eval) arithmetic/IF() interpreter, built only to reproduce the two confirmed real results (152399025 and 137159122.5) -- not a reimplementation of Paperform's real engine, which supports a much larger spreadsheet-style function library documented in HOW TO USE but not executable here. The code pane is a plain textarea, not a Draft.js reimplementation, per this project's established scoping precedent (document-canvas-editor-shell reproduces Draft.js behavior, not the library itself).",
+      'OBSERVATION, live DOM/network inspection, 2026-09-23. Confirmed and reproduced faithfully: the CALCULATION/HOW TO USE tab split; a code pane evaluated live against sample field values (not real answers); an AI panel with a Fix action (shown only while the formula has a parse error) and a free-text prompt, both proposing a full-replacement formula with a pre-computed Result that is NOT applied to the code pane until Apply is clicked. The two AI responses this preview can produce are the source record\'s own verbatim captured exchanges (a real Fix of a stray leading "/", and a real "add a 10% discount over 5" prompt) -- not generated live, since no AI backend is available in a static preview site; any other prompt gets a clearly-labeled canned fallback rather than a fabricated AI response. The formula evaluator is this reconstruction\'s own small safe (no eval) arithmetic/IF() interpreter, built only to reproduce the two confirmed real results (152399025 and 137159122.5) -- not a reimplementation of Paperform\'s real engine, which supports a much larger spreadsheet-style function library documented in HOW TO USE but not executable here. The code pane is a plain textarea, not a Draft.js reimplementation, per this project\'s established scoping precedent (document-canvas-editor-shell reproduces Draft.js behavior, not the library itself).',
     runtimeVerified: false,
     fixtures: paperformCalculationFieldAiHelperFixtures,
     config: paperformCalculationFieldAiHelperConfig,
@@ -921,7 +952,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: PaperformCustomPdfDesigner,
     label: 'Reconstructed preview',
     evidence:
-      "OBSERVATION, live DOM/network inspection, 2026-09-23. Confirmed and reproduced faithfully: this is another Draft.js-style document canvas (same editor family as document-canvas-editor-shell and the Calculation Editor's code pane, not a template-upload tool); the starter template's Summary config block (Public/Private/Custom/Receipt preset, Table/List layout); a genuinely working \"+\" gutter -> Insert answer picker that inserts a real merge chip on click -- the confirmed positive counter-example to Zoho's inert Field Labels popup (notification-settings-editor); the confirmed absence of the \"/\" slash-command menu in this specific Draft.js context, unlike the main form canvas. \"Download sample\" only fires a callback here -- the source record deliberately never clicked the real button either, since it triggers an actual file download, so whether/how a real sample PDF renders remains unconfirmed in both the source and this reconstruction.",
+      'OBSERVATION, live DOM/network inspection, 2026-09-23. Confirmed and reproduced faithfully: this is another Draft.js-style document canvas (same editor family as document-canvas-editor-shell and the Calculation Editor\'s code pane, not a template-upload tool); the starter template\'s Summary config block (Public/Private/Custom/Receipt preset, Table/List layout); a genuinely working "+" gutter -> Insert answer picker that inserts a real merge chip on click -- the confirmed positive counter-example to Zoho\'s inert Field Labels popup (notification-settings-editor); the confirmed absence of the "/" slash-command menu in this specific Draft.js context, unlike the main form canvas. "Download sample" only fires a callback here -- the source record deliberately never clicked the real button either, since it triggers an actual file download, so whether/how a real sample PDF renders remains unconfirmed in both the source and this reconstruction.',
     runtimeVerified: false,
     fixtures: paperformCustomPdfDesignerFixtures,
     config: paperformCustomPdfDesignerConfig,
@@ -998,7 +1029,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: TypeformFeedbackPatterns,
     label: 'Reconstructed preview',
     evidence:
-      "OBSERVATION, live trace on a real Typeform account (admin.typeform.com), directly triggering transient/status UI (copying a link, deleting a form vs. a question, hovering toolbar icons, visiting three zero-data surfaces, cold-reloading the builder), 2026-09-28 (AL2). Confirmed and reproduced faithfully: a stark severity gap in destructive-confirm coverage — whole-form delete opens a real dialog-role modal (title phrased as a question, itemized bulleted consequences, a separate bolded irreversibility line, a genuine red \"Delete\" button, an in-place \"Deleting...\" loading label) confirmed via the accessibility tree, while deleting a single question gives NO modal, NO toast, and NO undo at all, verified twice in the source on both an original and a duplicated question. The confirmed silent failure — a syntactically valid but unreachable webhook URL passes client-side validation, the dialog closes as if successful, and the webhook is never actually persisted, with zero user-facing signal — is reproduced via a hardcoded URL-substring match rather than a real network attempt (no network calls are made by this client-side preview). The success toast (bottom-right, green check, explicit close, confirmed auto-dismiss bracketed to 4-6s via timed screenshots in the source) is reproduced on a fixed timer within that window. The three confirmed-distinct empty states (illustrated+link+single-CTA; text-only+dual-CTA; icon+instructional-heading+single-CTA) are reproduced with the source's own verbatim captured copy.",
+      'OBSERVATION, live trace on a real Typeform account (admin.typeform.com), directly triggering transient/status UI (copying a link, deleting a form vs. a question, hovering toolbar icons, visiting three zero-data surfaces, cold-reloading the builder), 2026-09-28 (AL2). Confirmed and reproduced faithfully: a stark severity gap in destructive-confirm coverage — whole-form delete opens a real dialog-role modal (title phrased as a question, itemized bulleted consequences, a separate bolded irreversibility line, a genuine red "Delete" button, an in-place "Deleting..." loading label) confirmed via the accessibility tree, while deleting a single question gives NO modal, NO toast, and NO undo at all, verified twice in the source on both an original and a duplicated question. The confirmed silent failure — a syntactically valid but unreachable webhook URL passes client-side validation, the dialog closes as if successful, and the webhook is never actually persisted, with zero user-facing signal — is reproduced via a hardcoded URL-substring match rather than a real network attempt (no network calls are made by this client-side preview). The success toast (bottom-right, green check, explicit close, confirmed auto-dismiss bracketed to 4-6s via timed screenshots in the source) is reproduced on a fixed timer within that window. The three confirmed-distinct empty states (illustrated+link+single-CTA; text-only+dual-CTA; icon+instructional-heading+single-CTA) are reproduced with the source\'s own verbatim captured copy.',
     runtimeVerified: false,
     fixtures: typeformFeedbackPatternsFixtures,
     config: typeformFeedbackPatternsConfig,
@@ -1080,6 +1111,61 @@ export const previewRegistry: PreviewRegistry = {
     fixtures: googleFormsResponsesViewFixtures,
     config: googleFormsResponsesViewConfig,
     propsSchema: googleFormsResponsesViewPropsSchema,
+  },
+  'semrush-ai-visibility-shell': {
+    type: 'reconstructed',
+    Component: SemrushAiVisibilityShell,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush AI Toolkit inspection in the Codex in-app browser, 2026-09-29. Reproduces the two-level global and section navigation, persistent report controls, and local workspace switching. Responsive collapse is an explicit approximation. No account data or network actions are included.',
+    runtimeVerified: true,
+    fixtures: semrushAiVisibilityShellFixtures,
+    config: semrushAiVisibilityShellConfig,
+    propsSchema: semrushAiVisibilityShellPropsSchema,
+  },
+  'semrush-ai-visibility-dashboard': {
+    type: 'reconstructed',
+    Component: SemrushAiVisibilityDashboard,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Visibility Overview inspection, 2026-09-29. Reproduces the score, metric tabs, reporting ranges, LLM distribution, and localized empty state with synthetic values. Recommendations and the full topic table remain documented but are outside this initial interactive slice.',
+    runtimeVerified: true,
+    fixtures: semrushAiVisibilityDashboardFixtures,
+    config: semrushAiVisibilityDashboardConfig,
+    propsSchema: semrushAiVisibilityDashboardPropsSchema,
+  },
+  'semrush-ai-competitor-setup': {
+    type: 'reconstructed',
+    Component: SemrushAiCompetitorSetup,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Competitor Research inspection, 2026-09-29. Reproduces the owned-domain anchor, four competitor slots, Analyze and Clear actions, and empty state. A real comparison was deliberately not submitted, so results and API behavior remain not observed.',
+    runtimeVerified: true,
+    fixtures: semrushAiCompetitorSetupFixtures,
+    config: semrushAiCompetitorSetupConfig,
+    propsSchema: semrushAiCompetitorSetupPropsSchema,
+  },
+  'semrush-prompt-research-entry': {
+    type: 'reconstructed',
+    Component: SemrushPromptResearchEntry,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated Semrush Prompt Research entry inspection, 2026-09-29. Reproduces the topic entry, guarded Analyze action, and three explanatory benefits. The preview confirms locally and does not spend quota or send a request.',
+    runtimeVerified: true,
+    fixtures: semrushPromptResearchEntryFixtures,
+    config: semrushPromptResearchEntryConfig,
+    propsSchema: semrushPromptResearchEntryPropsSchema,
+  },
+  'semrush-brand-performance-insights': {
+    type: 'reconstructed',
+    Component: SemrushBrandPerformanceInsights,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, authenticated inspection of an existing Semrush Brand Performance report, 2026-09-29. Reproduces competitor chips, filters, insight-first hierarchy, sentiment versus share-of-voice chart, and summary cards. All names and values are fictional.',
+    runtimeVerified: true,
+    fixtures: semrushBrandPerformanceInsightsFixtures,
+    config: semrushBrandPerformanceInsightsConfig,
+    propsSchema: semrushBrandPerformanceInsightsPropsSchema,
   },
   'toggle-radio-switch': {
     Component: ToggleRadioSwitch,

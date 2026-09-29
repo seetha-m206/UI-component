@@ -147,7 +147,7 @@ describe('Sidebar', () => {
     ).toBeInTheDocument();
   });
 
-  it('nests every current brand under one "Forms" product-category group, open by default since it is the only group', () => {
+  it('nests form-builder brands under "Forms", which is the first group and opens by default', () => {
     render(
       <MemoryRouter>
         <Sidebar query="" />
