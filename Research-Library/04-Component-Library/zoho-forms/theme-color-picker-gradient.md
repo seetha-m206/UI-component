@@ -1,6 +1,6 @@
 ---
 component: "Color Picker Popover + Gradient/Angle Controls"
-ui_category: "Data Input > Color picker"
+ui_category: "Forms > Color picker"
 source_product: "Zoho Forms"
 last_verified: "2026-09-15"
 evidence_state: "source_reviewed"

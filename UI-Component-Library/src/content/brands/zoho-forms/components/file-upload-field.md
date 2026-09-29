@@ -1,6 +1,6 @@
 ---
 component: "File Upload Field"
-ui_category: "Data Input > File upload"
+ui_category: "Forms > File upload"
 source_product: "Zoho Forms"
 last_verified: "2026-09-18"
 evidence_state: "source_reviewed"

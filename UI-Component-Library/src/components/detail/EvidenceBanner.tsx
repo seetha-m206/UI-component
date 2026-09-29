@@ -12,14 +12,37 @@ const EVIDENCE_LABELS: Record<EvidenceState, string> = {
   documentation_corrected: 'Documentation corrected',
 };
 
+type EvidenceTier = 'good' | 'neutral' | 'caution' | 'flag';
+
+const EVIDENCE_TIER: Record<EvidenceState, EvidenceTier> = {
+  documented: 'neutral',
+  source_reviewed: 'good',
+  runtime_verified: 'good',
+  reproduced_offline: 'caution',
+  runtime_pending: 'caution',
+  historical_only: 'caution',
+  open_finding: 'flag',
+  documentation_corrected: 'flag',
+};
+
 interface EvidenceBannerProps {
   evidenceState: EvidenceState;
 }
 
 export function EvidenceBanner({ evidenceState }: EvidenceBannerProps) {
+  const tier = EVIDENCE_TIER[evidenceState];
+  const tierClass: Record<EvidenceTier, string> = {
+    good: styles.tierGood,
+    neutral: '',
+    caution: styles.tierCaution,
+    flag: styles.tierFlag,
+  };
+
   return (
     <div className={styles.banner} role="note">
-      <span className={styles.stateLabel}>{EVIDENCE_LABELS[evidenceState]}</span>
+      <span className={`${styles.stateLabel} ${tierClass[tier]}`}>
+        {EVIDENCE_LABELS[evidenceState]}
+      </span>
       <span className={styles.disclaimer}>
         Documentation reflects a point-in-time capture and does not certify current production
         behavior.

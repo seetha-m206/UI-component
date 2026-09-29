@@ -1,6 +1,6 @@
 ---
 component: "Rating Field (5-Star Selector)"
-ui_category: "Data Input > Form"
+ui_category: "Forms > Form"
 source_product: "Zoho Forms"
 last_verified: "2026-09-15"
 evidence_state: "source_reviewed"
@@ -123,6 +123,8 @@ Index-comparison fill logic (`index < ratingElemCnt`). Re-clicking the current b
 | Competitor | Same component implementation | Strengths | Weaknesses |
 |---|---|---|---|
 | Typeform ([[rating-field]]) | Custom JS-driven, Radix UI headless `RadioGroup` (same primitive as Typeform's Yes/No field), inline `<svg>` icons per option, configurable 1–10 scale and 17-icon picker | Confirmed working hover fill-preview (0.2→0.3 alpha two-stage fill); `aria-checked` correctly flips to `true` on exactly the selected item; configurable scale/icon vs. Zoho's fixed 5-star | No `aria-live` region for selection announcement; scale configurability adds complexity Zoho's fixed 5-star avoids |
+| Paperform ([[paperform-rating-field]]) | Custom React (no headless library), two-stacked-icon opacity cross-fade per star (filled/outline), configurable 1–10 scale and 5 icon choices (Heart/Star/Thumbs up/Users/Custom) | `aria-checked` is correct (flips to exactly the selected star) — resolves the same bug class confirmed broken here; hover-preview confirmed working (`max(hovered, selected)`), resolving what this record left inconclusive | **Completely keyboard-inaccessible** — no tabindex or keydown handlers at all, Tab skips the field entirely; `radiogroup` has no accessible name (`aria-labelledby`/`aria-label` absent) |
+| Google Forms ([[google-forms-rating-field]]) | Icon-swap via a shared external SVG sprite (`::before{content:url(...)}`, cropped/positioned per filled/unfilled class), configurable 3–10 scale and 3 icon choices (star/heart/thumbs-up), `transition-duration: 0s` (instant, no animation) | **Full, confirmed keyboard support** — Tab reaches the group as one stop, Left/Right move+commit with wraparound, Space deselects, Enter is a no-op — the strongest keyboard story of any of the four products compared so far; also the only one with a confirmed working deselect | `aria-checked` flips, but with **non-exclusive "fill" semantics** — every icon from 1 up to the selected value reports `true` simultaneously, a different (not simply "fixed") variant of this record's own bug; zero hover-preview; individual icons carry no reference to the question text at all (worse than an unnamed group — even the options themselves are unnamed) |
 
 ## Best Observed Approach
 - Typeform is the stronger observed implementation on the two specific gaps flagged in this record: it has a confirmed working hover-preview (this component's equivalent was inconclusive and deliberately not reconstructed) and correct `aria-checked` behavior (this component has a confirmed bug where it never flips to `true`). This is a concrete, evidence-backed verdict on those two dimensions specifically, not a general "Typeform is better" claim — Zoho's fixed 5-star scale is simpler for the common case, and Typeform's live-region gap means neither implementation is best-practice-complete on accessibility.

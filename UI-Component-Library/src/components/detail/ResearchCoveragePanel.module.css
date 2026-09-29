@@ -1,0 +1,172 @@
+.panel {
+  width: 252px;
+  flex: none;
+  position: sticky;
+  top: calc(var(--header-height, 56px) + var(--spacing-4));
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-5) var(--spacing-4);
+  border-radius: var(--radius-xl, 16px);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-top: 3px solid var(--color-primary);
+  font-size: var(--font-size-sm);
+}
+
+.panel[data-status='complete'] {
+  border-top-color: var(--status-complete);
+}
+
+.panel[data-status='partial'] {
+  border-top-color: var(--status-partial);
+}
+
+.panel[data-status='incomplete'] {
+  border-top-color: var(--status-incomplete);
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+}
+
+.headerTitle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--shell-muted-text);
+}
+
+.ringRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-2) 0;
+}
+
+.ring {
+  flex: none;
+}
+
+.ringTrack {
+  stroke: var(--shell-border);
+}
+
+.ringFill {
+  stroke: var(--color-primary);
+  transition: stroke-dashoffset var(--transition-fast, 0.2s);
+}
+
+.panel[data-status='complete'] .ringFill {
+  stroke: var(--status-complete);
+}
+
+.panel[data-status='incomplete'] .ringFill {
+  stroke: var(--status-incomplete);
+}
+
+.ringLabel {
+  fill: var(--shell-text);
+  font-size: 15px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family);
+}
+
+.ringCaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ringCaptionValue {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--shell-text);
+}
+
+.ringCaptionText {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.factList {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding-top: var(--spacing-3);
+  border-top: 1px dashed var(--shell-border);
+}
+
+.factRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+}
+
+.factRow dt {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+  flex: none;
+}
+
+.factRow dd {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: var(--shell-text);
+  text-align: right;
+  word-break: break-word;
+}
+
+.captured {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding-top: var(--spacing-3);
+  border-top: 1px dashed var(--shell-border);
+}
+
+.fieldLabel {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--shell-muted-text);
+}
+
+.chipGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--shell-border);
+  color: var(--shell-muted-text);
+  background: transparent;
+}
+
+.chip[data-ready='true'] {
+  border-color: color-mix(in srgb, var(--status-complete) 45%, var(--shell-border));
+  background: color-mix(in srgb, var(--status-complete) 16%, transparent);
+  color: var(--status-complete);
+}
+
+@media (max-width: 991px) {
+  .panel {
+    width: 100%;
+    position: static;
+  }
+}

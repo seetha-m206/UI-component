@@ -1,0 +1,268 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.modeSwitch {
+  display: inline-flex;
+  gap: var(--spacing-1);
+  padding: 3px;
+  margin-bottom: var(--spacing-4);
+  border-radius: var(--radius-pill);
+  background: var(--shell-sidebar-bg);
+  border: 1px solid var(--shell-border);
+}
+
+.modeButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-2) var(--spacing-4);
+  cursor: pointer;
+}
+
+.modeButton:hover:not(:disabled) {
+  color: var(--shell-text);
+}
+
+.modeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.modeButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.modeButtonActive {
+  color: #fff;
+  background: var(--color-primary);
+}
+
+/* ---- Guided mode: sliding one-question-at-a-time window ---- */
+
+.guidedShell {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-bg);
+  overflow: hidden;
+}
+
+/* Confirmed: a thin (4px) top progress bar showing screenIndex/(N-1) as a
+   percentage. */
+.progressTrack {
+  height: 4px;
+  width: 100%;
+  background: var(--shell-border);
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--color-primary);
+  transition: width var(--transition-fast);
+}
+
+.guidedScreen {
+  padding: var(--spacing-8) var(--spacing-6);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.prose {
+  margin: 0 0 var(--spacing-4);
+  font-size: var(--font-size-base);
+  color: var(--shell-muted-text);
+}
+
+.questionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.questionTitle {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.yesNoGroup {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.yesNoButton {
+  flex: 1 1 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--shell-text);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3);
+  cursor: pointer;
+}
+
+.yesNoButton:hover:not(:disabled) {
+  border-color: var(--color-primary);
+}
+
+.yesNoButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.yesNoButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.yesNoButtonSelected {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.textRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.textInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: none;
+  border-bottom: 2px solid var(--shell-border);
+  background: transparent;
+  color: var(--shell-text);
+}
+
+.textInput:focus {
+  outline: none;
+  border-bottom-color: var(--color-primary);
+}
+
+.textInput:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Round -> navigation button; relabels to a checkmark on the last screen
+   (becomes Submit), per the source record. */
+.advanceButton {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+.advanceButton:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.advanceButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.advanceButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.smallIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.submittedPanel {
+  padding: var(--spacing-8) var(--spacing-6);
+  text-align: center;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-success);
+}
+
+/* ---- Standard mode: all questions mounted, normal scroll, one Submit ---- */
+
+.standardShell {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-bg);
+  padding: var(--spacing-6);
+}
+
+.standardList {
+  list-style: none;
+  margin: 0 0 var(--spacing-6);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.standardItem {
+  padding-bottom: var(--spacing-6);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.standardItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.submitButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3) var(--spacing-6);
+  cursor: pointer;
+}
+
+.submitButton:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submitButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+@container (max-width: 480px) {
+  .guidedScreen {
+    padding: var(--spacing-6) var(--spacing-4);
+  }
+
+  .standardShell {
+    padding: var(--spacing-4);
+  }
+}

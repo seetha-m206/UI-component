@@ -6,11 +6,14 @@ import styles from './PreviewPanel.module.css';
 interface PreviewPanelProps {
   entry: PreviewEntry;
   componentName: string;
+  sourceProduct: string;
 }
 
-export function PreviewPanel({ entry, componentName }: PreviewPanelProps) {
+export function PreviewPanel({ entry, componentName, sourceProduct }: PreviewPanelProps) {
   if (entry.type === 'reconstructed') {
-    return <ReconstructedPreviewPanel entry={entry} componentName={componentName} />;
+    return (
+      <ReconstructedPreviewPanel entry={entry} componentName={componentName} sourceProduct={sourceProduct} />
+    );
   }
 
   const { Component, examples } = entry;

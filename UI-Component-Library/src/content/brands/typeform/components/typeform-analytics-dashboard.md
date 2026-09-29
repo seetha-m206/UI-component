@@ -91,3 +91,7 @@ The Results area has **4 tabs**: **Smart Insights** (AI summary, paid), **Form p
 
 ## Sources
 - OBSERVATION: Live exploration of Typeform (admin.typeform.com), free-plan account, form with 8 views / 5 starts / 2 submissions, via Claude browser extension, 2026-09-18. Network requests captured via a fetch/XHR interceptor; DOM polling (80–100ms intervals) used to test for load-in animation.
+
+## Cross-Component Pattern Note
+- **See also [[paperform-submissions-results-view]]:** the opposite results-loading strategy from this record's own "no distinct fetch-results call" finding — Paperform's Submissions app fires a distinct, paginated `GET .../submissions` request on mount (and does so twice, a confirmed duplicate-request bug), rather than inlining results data into the initial page load as Typeform does here.
+- **See also [[google-forms-responses-view]]:** a third, genuinely different results-loading strategy — Google Forms fires distinct on-demand fetches per sub-view (`aggregatestatistics` for Summary, `getresponseclusters` for Question, `getsingleresponse` per response in Individual), none of which are duplicated the way Paperform's editor-panel fetch is, and none of which are inlined at load the way this record's own results are.

@@ -6,6 +6,7 @@ import styles from './ReconstructedPreviewPanel.module.css';
 interface ReconstructedPreviewPanelProps {
   entry: ReconstructedPreviewEntry;
   componentName: string;
+  sourceProduct: string;
 }
 
 interface FixtureStageProps {
@@ -64,6 +65,7 @@ function FixtureStage({
 export function ReconstructedPreviewPanel({
   entry,
   componentName,
+  sourceProduct,
 }: ReconstructedPreviewPanelProps) {
   const { Component, fixtures, config, label, evidence, runtimeVerified } = entry;
   const [fixtureId, setFixtureId] = useState(fixtures[0].id);
@@ -78,8 +80,8 @@ export function ReconstructedPreviewPanel({
     <div>
       <div className={styles.notice} role="note">
         <p className={styles.noticeText}>
-          Reconstructed interactive preview based on documented Zoho Forms behavior. This is not the
-          original Zoho source component.
+          Reconstructed interactive preview based on documented {sourceProduct} behavior. This is not
+          the original {sourceProduct} source component.
         </p>
         <div className={styles.noticeMeta}>
           <span>{label}</span>

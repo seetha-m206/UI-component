@@ -1,0 +1,467 @@
+.root {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.fieldLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.hiddenFileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respondent-facing widget: a dashed-border "Choose File" box with an
+   upload-arrow icon, styled to visually suggest a drop zone — per the
+   record, real native drag-and-drop could not be directly confirmed in the
+   source session, so no onDrop/onDragOver handling is wired here, only the
+   visual affordance. */
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  width: 100%;
+  padding: var(--spacing-8) var(--spacing-4);
+  border: 2px dashed var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-muted-text);
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+
+.dropzone:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.dropzone:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dropzone:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.uploadArrowIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.dropzoneLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+/* Completed-upload row — a static row with no progress bar, matching the
+   record's confirmed finding that small uploads report 100% in a single XHR
+   progress tick, too fast for a determinate progress UI to matter. */
+.fileRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+}
+
+.fileRowError {
+  border-color: var(--color-danger);
+  background: color-mix(in srgb, var(--color-danger) 6%, white);
+}
+
+.entryIcon {
+  display: inline-flex;
+  flex: none;
+  color: var(--shell-muted-text);
+}
+
+.fileIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.entryFileName {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--font-size-sm);
+}
+
+.entryFileSize {
+  flex: none;
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.removeButton {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--shell-muted-text);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.removeButton:hover:not(:disabled) {
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-text);
+}
+
+.removeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.removeButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.chooseAnotherButton {
+  align-self: flex-start;
+  font-family: var(--font-family);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.chooseAnotherButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Exact confirmed error copy pattern: "The following file types are
+   supported: <ext>." */
+.errorText {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
+}
+
+.submitButton {
+  align-self: flex-start;
+  margin-top: var(--spacing-2);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  cursor: pointer;
+}
+
+.submitButton:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submitButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ---- Entries view ---- */
+
+.entriesList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.entryRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+}
+
+/* Hidden-until-hover affordance, directly confirmed in the record: no
+   resting-state indicator signals the cell is interactive. Always mounted,
+   hidden via opacity + pointer-events (not display:none/conditional
+   mounting) so the row stays a single stable DOM node through a
+   hover-then-click interaction; paired with aria-hidden in the component so
+   it's also unreachable to assistive tech until hovered/focused. */
+.hoverIcons {
+  display: flex;
+  gap: var(--spacing-1);
+  margin-left: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Kept as its own standalone rule (not grouped into the :hover/:focus-within
+   selector list below) so it applies reliably even in test/render
+   environments with partial selector support — it's also the rule that
+   matters for the reconstruction's own JS-driven hover tracking. */
+.hoverIconsVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.entryRow:hover .hoverIcons,
+.entryRow:focus-within .hoverIcons {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hoverIconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.hoverIconButton:hover {
+  background: var(--shell-sidebar-bg);
+  color: var(--color-primary);
+}
+
+.hoverIconButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.smallIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---- Lightbox ---- */
+
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 12, 16, 0.85);
+  padding: var(--spacing-6);
+}
+
+.lightboxCard {
+  width: min(640px, 100%);
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--shell-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.lightboxHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.lightboxFileName {
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lightboxHeaderActions {
+  display: flex;
+  gap: var(--spacing-1);
+  flex: none;
+}
+
+.lightboxIconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--shell-text);
+  cursor: pointer;
+}
+
+.lightboxIconButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.lightboxIconButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.lightboxBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-8);
+  background: var(--shell-sidebar-bg);
+  min-height: 220px;
+}
+
+/* No real thumbnail/image exists — the source record itself found only a
+   generic gray file-icon placeholder even for genuine image files. This
+   placeholder scales with the mock zoom control purely for visual
+   demonstration, not a real image render. */
+.lightboxImagePlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2);
+  text-align: center;
+  color: var(--shell-muted-text);
+  font-size: var(--font-size-xs);
+  max-width: 220px;
+  transition: transform 0.15s ease;
+}
+
+.lightboxImagePlaceholder svg {
+  width: 48px;
+  height: 48px;
+}
+
+.lightboxFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-top: 1px solid var(--shell-border);
+}
+
+.zoomControl {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.zoomButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.zoomButton:hover:not(:disabled) {
+  background: var(--shell-sidebar-bg);
+}
+
+.zoomButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.zoomButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.zoomLevel {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+  min-width: 36px;
+  text-align: center;
+}
+
+.filmstrip {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.filmstripThumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  color: var(--shell-muted-text);
+  background: var(--shell-bg);
+}
+
+.filmstripThumb svg {
+  width: 18px;
+  height: 18px;
+}
+
+.filmstripThumbActive {
+  border-color: var(--color-primary);
+}
+
+@container (max-width: 420px) {
+  .lightboxFooter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-3);
+  }
+}

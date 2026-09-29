@@ -1,0 +1,439 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Top-level surface tabs (this reconstruction's own device for
+   switching between the source's two structurally distinct systems —
+   there is no single real-product screen that shows both surfaces
+   together, so this tab bar is a preview-harness convenience, not a
+   captured Zoho control). ---- */
+.surfaceTabs {
+  display: inline-flex;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  padding: 2px;
+  margin-bottom: var(--spacing-4);
+}
+
+.surfaceTab {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-1) var(--spacing-4);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.surfaceTabActive {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.surfaceTab:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.surfacePanel {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+}
+
+.surfaceIntro {
+  margin: 0 0 var(--spacing-4);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+/* ---- Surface A: Share sub-tabs ---- */
+
+.shareSubTabs {
+  display: flex;
+  gap: var(--spacing-1);
+  border-bottom: 1px solid var(--shell-border);
+  margin-bottom: var(--spacing-4);
+}
+
+.shareSubTab {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  background: transparent;
+  color: var(--shell-muted-text);
+  padding: var(--spacing-2) var(--spacing-3);
+  cursor: pointer;
+}
+
+.shareSubTabActive {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.shareSubTab:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: -2px;
+}
+
+.shareForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  align-items: flex-start;
+  max-width: 420px;
+}
+
+.fieldLabel {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  margin-top: var(--spacing-3);
+}
+
+.textInput {
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--shell-bg);
+}
+
+.textInput:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.autocompleteWrap {
+  position: relative;
+  width: 100%;
+}
+
+.suggestionsList {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+  padding: var(--spacing-1);
+  max-height: 200px;
+  overflow-y: auto;
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+}
+
+.suggestionEmpty {
+  padding: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.suggestionOption {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  border: none;
+  background: transparent;
+  padding: var(--spacing-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.suggestionOption:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.suggestionOption:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: -2px;
+}
+
+.checkboxRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  margin: var(--spacing-3) 0;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+}
+
+.fixedPermissionNote {
+  margin: var(--spacing-1) 0;
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+  font-style: italic;
+}
+
+.orgChip {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  background: var(--shell-sidebar-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-1) var(--spacing-4);
+}
+
+.errorText {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-2) 0 0;
+}
+
+.primaryButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-5);
+  background: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+  margin-top: var(--spacing-3);
+}
+
+.primaryButton:hover {
+  filter: brightness(1.1);
+}
+
+.primaryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ---- Surface B ---- */
+
+.userMgmtHeading {
+  margin: 0 0 var(--spacing-4);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+
+.statTiles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.statTile {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3);
+}
+
+.statValue {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.statLabel {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.userToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+}
+
+.filterTabs {
+  display: inline-flex;
+  gap: var(--spacing-1);
+}
+
+.filterTab {
+  font-family: var(--font-family);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-1) var(--spacing-3);
+  background: var(--shell-bg);
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.filterTabActive {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.filterTab:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.userToolbarActions {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.tableEmptyText {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  padding: var(--spacing-4) 0;
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.userTable th {
+  text-align: left;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  padding: var(--spacing-2);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.userTable td {
+  padding: var(--spacing-2);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.roleBadge {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  padding: 2px var(--spacing-3);
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-text);
+}
+
+.roleBadgeSuperAdmin {
+  background: rgba(36, 91, 167, 0.12);
+  color: var(--color-primary);
+}
+
+.rowActionButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  color: var(--shell-muted-text);
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+.rowActionButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ---- Modals (Add User / Change Super Admin guardrail) ---- */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 24, 33, 0.6);
+  padding: var(--spacing-4);
+}
+
+.modal {
+  width: min(420px, 100%);
+  background: var(--shell-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-6);
+}
+
+.modalHeading {
+  margin: 0 0 var(--spacing-3);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+
+.modalBody {
+  margin: 0 0 var(--spacing-4);
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-4);
+}
+
+@container (max-width: 480px) {
+  .statTiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .userToolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,76 @@
+---
+component: "AI Create (form generation from a prompt or an image/PDF)"
+ui_category: "Actions > AI assistant"
+source_product: "Paperform"
+last_verified: "2026-09-23"
+evidence_state: "source_reviewed"
+status: 'complete'
+summary: "AI Create -- confirmed end-to-end via both text-prompt (conversational, up to 2 rounds of clarifying questions) and image/PDF (direct, no clarification) paths. Poll-based, first-party-only. A fourth distinct AI-generation architecture in this library, and a second one within Paperform itself."
+---
+
+# Component: AI Create
+
+Product → Screen → Component → Action → Behavior → States → Rules → Validation → Technical Data → Reference
+
+> **Relationship to [[zia-ai-form-generator]] and [[typeform-ai-chat-to-create]]:** this is the third full-form-generation-from-prompt component documented in this library, and the fourth distinct AI-interaction architecture overall once [[paperform-calculation-field-ai-helper]] (this same product's own Calculation AI helper) is counted alongside it — see Competitor Comparisons and Cross-Component Pattern Note below.
+
+## Location
+- **Product:** Paperform
+- **Screen(s) it appears on:** the AI Create landing page (first screen new accounts land on; also reachable from the dashboard's Create flow) — a prompt textarea, a voice-input option (not tested), and an "Attach a PDF or image" upload option. Both generation paths tested end-to-end this pass and each produced a new, unpublished form in the workspace: `oksoip1n` (text-prompt path, a coffee-shop feedback form) and `lptflo7s` (image path, a gym-membership form).
+
+## Structure
+- **Text-prompt path is conversational, not single-shot** — a genuinely distinct structure from both sibling products: after an initial prompt, Paperform asks up to two rounds of clarifying questions before generating anything.
+  - Round 1 (on the initial prompt "a customer feedback form for a coffee shop, asking about visit frequency, favorite drink, and a 5-star rating"): how visit frequency should be offered, how to pick a drink, what the 5-star rating is for, plus a checklist of optional extra questions.
+  - Round 2: asked for the actual frequency options and drink choices to use, and how to rate service.
+  - Only after both rounds are answered does generation begin.
+- **A generation status/progress state** follows, taking roughly 50 seconds for both the text-prompt and image paths in this test.
+- **A preview screen** follows generation: the generated form mockup plus a "Request changes" text box (not exercised this pass) and a "Continue in the editor" button.
+- **Continue in the editor** opens the normal, fully editable Draft.js document-canvas builder (the same one documented in [[document-canvas-editor-shell]]) — there is no separate AI-only view or read-only intermediate step beyond the one preview screen.
+- **A marketing survey ("How did you first hear about Paperform?")** pops up while a generation job is in progress — an opportunistic, unrelated marketing surface confirmed to appear during the wait, left unanswered this pass.
+
+## Actions
+| Element | User Action | Function | Result | Destination screen/state |
+|---|---|---|---|---|
+| AI Create prompt textarea | Submit a concrete prompt ("a customer feedback form for a coffee shop...") | Starts the conversational clarification flow | Round 1 of clarifying questions appears — **no form is generated yet** | Same screen (clarification) |
+| Clarifying-question answers (both rounds) | Answer, submit | Refines the generation spec | After round 2, generation begins; polling begins (see Technical Data) | Generating state |
+| "Attach a PDF or image" + upload | Upload a real image of a paper gym-membership form | Starts generation directly | **No clarifying questions asked at all** — this path skips straight to generation | Generating state |
+| Generation completes | — | Renders the preview | Preview screen with the generated mockup, a "Request changes" box, and "Continue in the editor" | Preview screen |
+| "Continue in the editor" | Click | Commits the generated form into the real builder | Opens the normal, fully editable document-canvas builder with the generated content already in place | Standard form builder |
+
+## Behavior & States
+- **Text-prompt path result, directly verified against what was actually typed in the clarifying rounds:** the generated form's Multiple Choice questions used the *exact* options supplied in round 2 (Daily / A few times a week / Monthly for visit frequency; Espresso / Flat white / Filter coffee for drink choice) — not generic filler options. It also included two separate star-rating fields (one for the original 5-star request, one for the service-rating question introduced in round 2), a comment box, a heading, intro text, and a coffee-colored theme applied automatically.
+- **Image-path result, directly verified against the source image's actual fields:** all 7 fields from the paper gym-membership form were captured with correct field types, including **Date**, **Phone Number**, and **Signature** — field types not otherwise deep-dived in this library's Paperform captures to date. The generator additionally added section headings, placeholder text, and marked every field as required — embellishments beyond a literal 1:1 transcription of the source image.
+- **The two generation paths have genuinely different interaction models, not just different input methods:** the text-prompt path is conversational (two clarifying rounds before any generation), while the image/PDF path skips straight to generation with no clarifying questions at all.
+- **A real, workspace-visible form was created by each run** (`oksoip1n`, `lptflo7s`) — whether the form object exists as a real workspace entity from the moment generation completes, or only once "Continue in the editor" is clicked, was **not independently disambiguated this pass** (flagged, not guessed at).
+
+## Rules & Validation
+- Neither generated form was published — both remain in draft/unpublished state in the workspace, confirmed genuine test artifacts left in place per this project's practice for non-sensitive test content (consistent with [[document-canvas-editor-shell]]'s own scratch-form precedent).
+- The "Request changes" box on the preview screen was not exercised this pass — its interaction model (a further clarifying round? a direct edit instruction? does it re-run the full generation or patch the existing draft?) is unconfirmed.
+
+## Technical Data
+> OBSERVATION, directly captured via browser network inspection, Claude browser extension session, 2026-09-23.
+
+- **Network — first-party only, confirmed consistent with [[paperform-calculation-field-ai-helper]]'s own finding:** every generation-related request went to `paperform.co`; file uploads for the image path went to Paperform's own S3 storage. No third-party AI vendor host was observable in network traffic for either path.
+- **A genuinely different network mechanism from the Calculation AI helper, despite both being first-party-only:** AI Create is **poll-based** — the browser checks back with the server every 2–3 seconds until the generation job finishes, rather than receiving one immediate synchronous response. [[paperform-calculation-field-ai-helper]]'s AI calls (`/calculations/debug`, `/calculations/update`) each return a single immediate response with no polling. This is a real, confirmed architectural difference between two AI features in the same product, not a capture inconsistency.
+- Exact endpoint paths/payload shapes for the clarifying-question exchange and the poll requests were not captured verbatim this pass (network activity was observed via the browser's own request list rather than a structured fetch/XHR interceptor) — flagged as a second-pass target if endpoint-level detail is needed.
+
+## Competitor Comparisons
+| Aspect | Zoho Forms ([[zia-ai-form-generator]]) | Typeform ([[typeform-ai-chat-to-create]]) | Paperform (this record) |
+|---|---|---|---|
+| Execution model | Single-shot, stateless — one synchronous `PUT /pfmaiformtemplate` per Generate/Regenerate, full-schema replace each time | Iterative, multi-turn — plan → named/ID'd actions → JSON Patch operations against the existing form-draft document | **Conversational pre-generation clarification** (text path only) — up to two rounds of the AI asking clarifying questions *before* any form is generated, then one generation pass; the image path skips this entirely and generates directly |
+| Network pattern | One synchronous request per Generate/Regenerate | An ordered request pipeline (message → plan/actions/start → draft save), event-driven, no polling observed | **Poll-based** — the client checks back every 2–3s until the generation job completes; a fourth distinct network pattern across this library's four AI-generation traces |
+| Input modalities | Text prompt + Content Tone only | Text prompt (+ voice dictation, file-context upload as separate, not-yet-tested options) | **Text prompt and image/PDF upload both tested end-to-end this pass** — the only one of the three where an image-to-form path has been directly verified working, with correct type inference (Date, Phone Number, Signature) |
+| Editability after generation | Only "Create Form" persists a real form; a mid-flow `PUT` persists a template only | Form shell appears in the workspace almost immediately; AI content is staged as suggestions until "Create form" | A preview screen ("Request changes" box, not exercised) → "Continue in the editor" opens the same normal Draft.js builder documented in [[document-canvas-editor-shell]] — no separate AI-only view, matching the "one real builder, no AI-specific editing surface" pattern shared with both siblings |
+| Accuracy against a concrete, verifiable input | Not independently re-verified field-by-field against a specific input in this library | Not independently re-verified field-by-field against a specific input in this library | **Directly verified twice:** the text path's generated options matched the exact values supplied in the clarifying rounds; the image path correctly captured all 7 fields of a real source form with correct types |
+| Unrelated UI surfaced during generation | Not observed | Not observed | **A marketing survey pop-up** ("How did you first hear about Paperform?") appears during the wait — an opportunistic, generation-unrelated UI element not seen in either sibling's capture |
+
+## Best Observed Approach
+- **RECOMMENDATION:** Paperform's conversational pre-generation clarification (text path) is a genuinely distinctive design choice not matched by either sibling — Zia commits to a single-shot guess from one description, and Typeform generates immediately then allows post-hoc multi-turn refinement, but neither *asks the user clarifying questions before generating anything*. This plausibly explains the directly-verified high accuracy of the text-path result (exact option matches from the clarifying answers) — front-loading disambiguation may produce a more accurate first result than either single-shot generation or post-hoc refinement. Set against that: it costs the user two extra interaction rounds before ever seeing a result, versus Zia's and Typeform's immediate-preview approaches. The image-to-form path's confirmed accuracy (correct types for Date/Phone Number/Signature from a real source image) is a genuine differentiator neither sibling has a directly comparable, independently-verified trace for in this library.
+
+## Cross-Component Pattern Note
+1. **A fourth distinct AI-generation architecture now confirmed across this library, and — notably — the second one from this same product:** Paperform's own [[paperform-calculation-field-ai-helper]] (client-held-history/stateless-server, immediate single-response, full-formula-replace with a pre-computed Result) and this AI Create feature (conversational pre-generation clarification, poll-based, full-form generation) are genuinely different architectures within one product, alongside Zia's single-shot/synchronous model and Typeform's plan/actions/JSON-Patch model. Worth remembering: "what AI architecture does Product X use" doesn't have one answer per product if the product ships more than one AI feature — check each one independently.
+2. **The same "one real builder, no AI-only editing surface" pattern holds across all three products' full-form-generation flows** — Zia's "Create Form," Typeform's "Create form," and Paperform's "Continue in the editor" all funnel into the product's own ordinary builder rather than a bespoke AI-result editor, a consistent design convergence worth noting as a likely best-practice baseline across the category.
+3. **A second confirmed instance of an opportunistic, unrelated marketing surface appearing mid-flow in this product** — the "How did you first hear about Paperform?" survey during AI Create's generation wait is a distinct finding from, but the same general pattern as, this product's various plan-upgrade/trial-status nudges seen elsewhere in the builder — worth flagging if a "marketing surface density" observation is ever written up for this product specifically.
+
+## Sources
+- OBSERVATION: Live exploration + network inspection of Paperform's AI Create, via Claude browser extension, 2026-09-23. Tested end-to-end via both entry paths: a text prompt ("a customer feedback form for a coffee shop, asking about visit frequency, favorite drink, and a 5-star rating") through two rounds of clarifying questions to a generated form, and a real throwaway image of a paper gym-membership form. Both runs were carried through to "Continue in the editor," leaving two new, unpublished forms in the workspace (`oksoip1n`, `lptflo7s`) — genuine, non-sensitive test artifacts left in place, consistent with this project's practice. The "Request changes" box and voice-input option were not exercised this pass.

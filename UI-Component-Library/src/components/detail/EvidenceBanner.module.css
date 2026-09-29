@@ -24,6 +24,24 @@
   color: var(--shell-text);
 }
 
+.tierGood {
+  background: color-mix(in srgb, var(--status-complete) 12%, var(--shell-bg));
+  border-color: var(--status-complete);
+  color: var(--status-complete);
+}
+
+.tierCaution {
+  background: color-mix(in srgb, var(--status-partial) 12%, var(--shell-bg));
+  border-color: var(--status-partial);
+  color: var(--status-partial);
+}
+
+.tierFlag {
+  background: color-mix(in srgb, var(--status-incomplete) 12%, var(--shell-bg));
+  border-color: var(--status-incomplete);
+  color: var(--status-incomplete);
+}
+
 .disclaimer {
   color: var(--shell-muted-text);
 }

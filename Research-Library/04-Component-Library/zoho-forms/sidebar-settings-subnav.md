@@ -1,6 +1,6 @@
 ---
 component: "Sidebar Sub-Navigation Link (Settings Menu)"
-ui_category: "Navigation > Sidebar"
+ui_category: "Application Layout > Sidebar"
 source_product: "Zoho Forms"
 last_verified: "2026-09-15"
 evidence_state: "source_reviewed"

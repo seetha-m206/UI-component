@@ -1,6 +1,6 @@
 ---
 component: "Form Mode Picker (\"Universal Mode\")"
-ui_category: "Data Input > Dropdown/Select"
+ui_category: "Forms > Dropdown/Select"
 source_product: "Typeform"
 last_verified: "2026-09-18"
 evidence_state: "source_reviewed"

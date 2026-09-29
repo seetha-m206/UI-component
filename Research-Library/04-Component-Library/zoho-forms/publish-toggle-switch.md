@@ -1,6 +1,6 @@
 ---
 component: "Publish Toggle (Labeled Two-Span Switch)"
-ui_category: "Actions/Controls > Toggle"
+ui_category: "Actions > Toggle"
 source_product: "Zoho Forms"
 last_verified: "2026-09-15"
 evidence_state: "source_reviewed"

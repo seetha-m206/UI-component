@@ -1,6 +1,6 @@
 ---
 component: 'Theme Icon-Button Group Selector (setThemesStyles engine)'
-ui_category: 'Actions/Controls > Button'
+ui_category: 'Actions > Button'
 source_product: 'Zoho Forms'
 last_verified: '2026-09-16'
 evidence_state: 'source_reviewed'

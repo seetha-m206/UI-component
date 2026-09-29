@@ -1,0 +1,177 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  position: relative;
+  min-height: 320px;
+}
+
+.root[data-disabled='true'] {
+  opacity: 0.6;
+}
+
+.panel {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3);
+  background: var(--shell-bg);
+}
+
+.panelTitle {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--shell-muted-text);
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.buttonRow button {
+  padding: var(--spacing-1) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.buttonRow button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.skeletonPanel {
+  margin-top: var(--spacing-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.skeletonBar,
+.skeletonBlock {
+  background: var(--shell-border);
+  border-radius: var(--radius-sm);
+}
+
+.skeletonBar {
+  height: 14px;
+  width: 40%;
+}
+
+.skeletonBlock {
+  height: 80px;
+  width: 100%;
+}
+
+.emptyState {
+  margin-top: var(--spacing-3);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  text-align: center;
+}
+
+.toast {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--spacing-3);
+  background: #1e2430;
+  color: #fff;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal {
+  width: min(380px, 90vw);
+  padding: var(--spacing-4);
+  background: var(--shell-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg, 0 8px 24px rgba(0, 0, 0, 0.2));
+}
+
+.muiStyleModal {
+  border-radius: 4px;
+}
+
+.bespokeModal {
+  border-radius: 9px;
+}
+
+.modal h2 {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-md);
+}
+
+.modal p {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.alertEyebrow {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--shell-muted-text);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+}
+
+.modalActions button {
+  padding: var(--spacing-1) var(--spacing-3);
+  border: none;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.outlinedButton {
+  background: transparent;
+  border: 1px solid var(--shell-border) !important;
+  border-radius: var(--radius-sm);
+  color: var(--shell-text);
+}
+
+.primaryButton {
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-sm);
+}
+
+.pillButtonLight {
+  background: var(--shell-border);
+  color: var(--shell-text);
+  border-radius: var(--radius-pill);
+}
+
+.pillButtonDark {
+  background: var(--shell-text);
+  color: var(--shell-bg);
+  border-radius: var(--radius-pill);
+}

@@ -1,0 +1,187 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  position: relative;
+  min-height: 320px;
+}
+
+.root[data-disabled='true'] {
+  opacity: 0.6;
+}
+
+.panel {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3);
+  background: var(--shell-bg);
+}
+
+.panelTitle {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--shell-muted-text);
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.buttonRow button {
+  padding: var(--spacing-1) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.buttonRow button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.saveStatus {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin-bottom: var(--spacing-2);
+}
+
+.saveStatus[data-save-status='saving'] {
+  color: var(--status-partial);
+}
+
+.saveStatus[data-save-status='saved'] {
+  color: var(--status-complete);
+}
+
+.inlineError {
+  margin-top: var(--spacing-2);
+  color: var(--status-incomplete);
+  font-size: var(--font-size-sm);
+}
+
+.loadingRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin-top: var(--spacing-2);
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--shell-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.emptyState {
+  margin-top: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  text-align: center;
+}
+
+.linkStatus {
+  margin-top: var(--spacing-2);
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.toast {
+  position: absolute;
+  left: var(--spacing-3);
+  bottom: var(--spacing-3);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: #202124;
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.toast button {
+  border: none;
+  background: transparent;
+  color: #fdd663;
+  font-family: inherit;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+.toast button[aria-label='Dismiss notification'] {
+  color: #fff;
+  font-weight: normal;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal {
+  width: min(360px, 90vw);
+  padding: var(--spacing-4);
+  background: var(--shell-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg, 0 8px 24px rgba(0, 0, 0, 0.2));
+}
+
+.modal h2 {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-md);
+}
+
+.modal p {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+}
+
+.modalActions button {
+  padding: var(--spacing-1) var(--spacing-3);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  background: transparent;
+  color: var(--shell-text);
+}
+
+.primaryButton {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+}

@@ -10,4 +10,5 @@ Research-Library/prompt-backlog-design-principles-audit.md
 
 # OS/editor cruft
 .DS_Store
+prompts
 *.local

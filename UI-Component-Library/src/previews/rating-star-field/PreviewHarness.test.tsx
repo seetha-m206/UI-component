@@ -17,7 +17,9 @@ describe('rating-star-field reconstructed Preview harness', () => {
     expect(
       screen.getByText(/Reconstructed interactive preview based on documented Zoho Forms behavior/)
     ).toBeInTheDocument();
-    expect(screen.getByText(/This is not the original Zoho source component/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/This is not the original Zoho Forms source component/)
+    ).toBeInTheDocument();
 
     const previewPanel = screen.getByRole('tabpanel', { name: 'Preview' });
     expect(

@@ -1,6 +1,6 @@
 ---
 component: "Email Notification Settings Editor"
-ui_category: "Account/Settings > Notification settings"
+ui_category: "Notifications > Settings"
 source_product: "Zoho Forms"
 last_verified: "2026-09-18"
 evidence_state: "source_reviewed"
@@ -63,7 +63,7 @@ Product → Screen → Component → Action → Behavior → States → Rules �
 ## Competitor Comparisons
 | Competitor | Same component implementation | Strengths | Weaknesses |
 |---|---|---|---|
-| *(TODO — not yet researched)* | | | |
+| Paperform (see [[paperform-custom-pdf-designer]]) | Same *category* of feature — a merge-field reference for inserting question answers into generated content — but a genuinely different surface (PDF templates, not notification emails) | **Confirmed working click-to-insert** — Paperform's equivalent picker (in its Custom PDF designer) actually inserts a `{{ key }}` token at the caret on click, the direct positive counter-example to this record's confirmed-inert Field Labels popup; Paperform's picker also surfaces system fields (Submitted At, Submission ID, Total Amount), which Zoho's does not appear to for this notification-editor context | Not a true apples-to-apples comparison — no Paperform notification/email editor has been captured yet, so this compares a working picker in one context (PDF) against an inert one in another (email) rather than the same feature twice |
 
 ## Best Observed Approach
 - TODO — needs at least one competitor's equivalent notification-settings editor captured before a comparative judgment can be made. Worth flagging as a candidate weak point regardless of competitor comparison: the "Field Labels" popup presents itself adjacent to a rich-text editor in a way that visually suggests click-to-insert, but is confirmed inert — a real usability gap between affordance and actual behavior.

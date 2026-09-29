@@ -1,6 +1,6 @@
 ---
 component: 'Destructive Confirmation Modal (Two Independently-Built Implementations)'
-ui_category: 'Feedback/State > Confirmation dialog/modal'
+ui_category: 'Feedback > Confirmation dialog/modal'
 source_product: 'Zoho Forms'
 last_verified: '2026-09-16'
 evidence_state: 'source_reviewed'
@@ -13,36 +13,30 @@ summary: 'Trash-delete confirmation vs. the theme-editor exit warning — confir
 Product → Screen → Component → Action → Behavior → States → Rules → Validation → Technical Data → Reference
 
 ## Location
-
 - **Product:** Zoho Forms
 - **Screen(s) it appears on:** Dashboard "⋮" overflow menu → Trash (Modal 1); full-screen Theme editor → close/exit with unsaved changes (Modal 2, see [[theme-editor-split-pane-shell]]).
 
 ## Structure
-
 - **Modal 1 — "Move to Trash?"**: `div.popNewOverlay.activeAnimate#trashPromptDiv` (backdrop) → `div.popNewContainer.alertCont.trashCont#trashPromptDivCont`. Header (`div.popNewHeader.bdrRed`) has a red trash-can icon in a light-red circle with decorative sparkle dots, plus a bold red "Move to Trash?" headline. Body: form name with a document icon, two bullet-point warnings (15-day trash retention; entries/reports becoming inaccessible), a gray info box ("Submitted Entries: N"). Footer (`div.popNewFooter`): No (neutral, left) then Yes (solid red, right). A separate circular "X" close button sits outside the card, top-right.
 - **Modal 2 — "Alert: Changes are not applied..."**: `div.darkdim-div#cancelThemeConfirmDiv` (backdrop) → `div.pWrapper.deleteWrapper.zfCommonBdrRmve#cancelThemeConfirmDivCont`. Header (`div.pHeader`) has a generic warning-triangle SVG icon plus red "Alert" title — no colored icon circle, no decorative dots, no entry-count info box. Body: a single plain sentence. Footer (`div.pFooter`): No (light-gray, left) then Yes (red, right) — same left/right button convention as Modal 1, but plainer `btnCurve` styling.
 - Screenshot: not captured this pass (see Sources — DOM/CSS/JS data pulled programmatically).
 
 ## Actions
-
-| Element                                             | User Action | Function                                                                                                 | Result                                                                          | Destination screen/state       |
-| --------------------------------------------------- | ----------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------ |
-| Modal 1 "No" (`button[elname="trashCloseElm"]`)     | Click       | `ZFForm.manager.hideTrashFormPopUp('#trashPromptDiv')`                                                   | Modal closes, form remains untouched in the "All Forms" list                    | Same screen                    |
-| Modal 1 "Yes" (`#trashbtn`)                         | Click       | Not exercised (destructive)                                                                              | Would move the form to trash                                                    | Not tested                     |
-| Modal 2 "No" (`onclick="cancelCloseCustomTheme()"`) | Click       | `cancelCloseCustomTheme()` — plain jQuery one-liner: `function(){$("#cancelThemeConfirmDiv").fadeOut()}` | Dialog dismissed, theme editor stays open with the unsaved change still visible | Same screen, editor still open |
-| Modal 2 "Yes" (`#confirmCancelThemeBuilder`)        | Click       | `confirmCancelThemeBuilder(true)`                                                                        | Editor closes, returns to Themes tab; unsaved change discarded                  | Themes tab                     |
+| Element | User Action | Function | Result | Destination screen/state |
+|---|---|---|---|---|
+| Modal 1 "No" (`button[elname="trashCloseElm"]`) | Click | `ZFForm.manager.hideTrashFormPopUp('#trashPromptDiv')` | Modal closes, form remains untouched in the "All Forms" list | Same screen |
+| Modal 1 "Yes" (`#trashbtn`) | Click | Not exercised (destructive) | Would move the form to trash | Not tested |
+| Modal 2 "No" (`onclick="cancelCloseCustomTheme()"`) | Click | `cancelCloseCustomTheme()` — plain jQuery one-liner: `function(){$("#cancelThemeConfirmDiv").fadeOut()}` | Dialog dismissed, theme editor stays open with the unsaved change still visible | Same screen, editor still open |
+| Modal 2 "Yes" (`#confirmCancelThemeBuilder`) | Click | `confirmCancelThemeBuilder(true)` | Editor closes, returns to Themes tab; unsaved change discarded | Themes tab |
 
 ## Behavior & States
-
 - Both modals: default closed; opened via their respective trigger; backdrop at 85% opacity dark overlay in both cases.
 - No disabled/loading/error states observed for either modal — both are purely synchronous, client-side confirmation gates.
 
 ## Rules & Validation
-
 - Both modals enforce the same left-No/right-Yes button convention, but are otherwise structurally and behaviorally unrelated (see Technical Data — confirmed two separate implementations, not a shared component).
 
 ## Technical Data
-
 > OBSERVATION, directly captured via browser DOM/JS/network inspection (2026-09-16), Claude browser extension session, ~26 actions, including direct extraction of both modals' close-handler function source and a runtime check confirming `ZFForm` does not exist in the theme editor's execution context.
 
 - **CSS — Modal 1 ("Move to Trash?"):**
@@ -60,19 +54,25 @@ Product → Screen → Component → Action → Behavior → States → Rules �
 - **Network:** Not applicable — both are purely client-side confirmation gates; neither open nor cancel action fires any request.
 
 ## Cross-Component Pattern Note
-
 - **OBSERVATION — verdict: two independently-built modal systems, not one shared component with different skins.** The naming alone hints at this (`popNewOverlay`/`popNewContainer`/`activeAnimate` vs. `pWrapper`/`deleteWrapper`/`darkdim-div`), but the decisive proof is behavioral: different backdrop classes, different transition strategies (scoped CSS transition class vs. blanket `transition: all` closed via imperative jQuery fade), different button/icon markup conventions, and — most conclusively — handlers living in namespaces (`ZFForm.manager.*` vs. bare global functions) that aren't even both reachable from the same page execution context. This breaks the pattern seen in [[theme-icon-button-group-selector]] (a genuinely shared `setThemesStyles()` engine reused across four tabs) — Zoho Forms' modal/dialog layer, at least for these two cases, looks like it accreted from separate feature teams/eras rather than a shared design-system component.
 - **RECOMMENDATION carried forward:** the Export-as-CSV modal (see [[export-filter-copy-utility-controls]]) also uses the `pWrapper` class family — a third data point suggesting `pWrapper` is the older, more widely-reused generic popup convention, while `popNewOverlay`/`popNewContainer` is a newer redesign applied to only some destructive-action dialogs (confirmed here: the Trash-delete confirmation, not the theme-editor exit warning). Worth checking which convention any future destructive-action modal in this product uses, to build out this catalogue rather than assuming either pattern.
+- **2026-09-28 update — "two independently-built modal systems in one product" is now a confirmed cross-product pattern, not a Zoho-specific quirk.** Paperform's own destructive-confirm modals ([[paperform-feedback-toast-alert-empty-loading]], PF14) repeat this exact finding — a genuine MUI `<Dialog>` for submission delete vs. a bespoke unclassed inline-styled `<div>` for form delete, two components that don't share styling or (by strong inference from the class-name/markup evidence) an implementation. Google Forms ([[google-forms-feedback-patterns]], GF10) shows a milder version of the same underlying "accreted rather than designed" symptom: it doesn't have two competing modal components, but it does apply an *inconsistent safety-net policy* across delete actions (confirm+toast for whole-form, confirm-only for whole-section, toast-only-no-confirm for single-question) — see the Best Observed Approach section for why this specific inconsistency is actually the most thoughtful pattern found so far, unlike Zoho's and Paperform's, which read as unintentional drift rather than deliberate design. **This was a 3-for-3 finding across Zoho/Paperform/Google Forms before Typeform's own pass (AL2) landed.** Typeform complicates the pattern in an interesting way: it does **not** have two competing modal *components* the way Zoho and Paperform do — it has one well-built modal (the strongest single implementation in this table, complete with a genuine red danger button and an in-place loading state) applied *inconsistently by severity tier* instead, giving zero feedback of any kind to its lower tier (single-question delete). So the "inconsistency" pattern generalizes across all four products, but takes at least two structurally different forms: competing component implementations (Zoho, Paperform) vs. a single good component applied unevenly (Typeform), with Google Forms sitting in between (one component, a deliberate graduated policy, but still an accessibility gap in its lowest-tier toast). Worth distinguishing these sub-patterns explicitly in any future synthesis rather than treating "inconsistent modal behavior" as one undifferentiated finding.
 
 ## Competitor Comparisons
-
 | Competitor | Same component implementation | Strengths | Weaknesses |
-| ---------- | ----------------------------- | --------- | ---------- |
+|---|---|---|---|
+| Paperform — submission delete ([[paperform-feedback-toast-alert-empty-loading]], PF14) | A genuine MUI `<Dialog>` (`MuiDialog-root`/`MuiModal-root`), titled "Delete Submission," Cancel (outlined) / Ok (filled, `MuiButton-colorPrimary`). | Has a title, unlike Paperform's own form-delete modal. | No destructive/red color cue on "Ok," no icon, no "type to confirm" pattern — same weakness class as both Zoho implementations above. |
+| Paperform — form delete ([[paperform-feedback-toast-alert-empty-loading]], PF14) | A bespoke, unclassed `<div>` with inline styles only (`position: fixed; top: 20%; left: 50%; transform: translateX(-50%); background: white; border-radius: 9px; box-shadow: …; width: 600px; z-index: 100001;`) — no CSS class hooks at all, structurally distinct from Paperform's own submission-delete dialog above. Body text only, no title. | — | **Zero post-confirm feedback** — the row is silently removed with no toast, no banner (contrast: restoring a form DOES toast in the same product) — a weaker safety net than either Zoho implementation, both of which at least return to a stable, unambiguous state on confirm. Confirms Paperform independently repeats this record's own core finding: **two structurally incompatible modal implementations coexist for the same action class, in the same product**, exactly like Zoho's own Modal 1 vs. Modal 2 above. |
+| Google Forms — dashboard form delete ([[google-forms-feedback-patterns]], GF10) | Heading "Move to trash?", two-paragraph body (file-specific consequence + a shared-file collaborator caveat with a "Learn more" link), text "Cancel" / filled "Move to trash." | The only implementation across all three products in this table that pairs the confirmation modal WITH a post-action undo toast ("Moved to trash" + UNDO) — two separate safety nets for one action, stronger than any single Zoho or Paperform implementation captured so far. | Still no destructive/red color cue or icon, matching the weakness shared by every other implementation in this table. |
+| Google Forms — single-question delete (no modal, deliberate contrast) ([[google-forms-feedback-patterns]], GF10) | **No modal at all** — deletes instantly, falls straight to an "Item deleted"/UNDO toast. | Confirms Google Forms' modal-gating rule is **scope-of-consequence-based, not a flat "always confirm destructive actions" rule** — a single question (cheaply undoable) skips the modal entirely, while whole-form and whole-section deletes (bulk consequence) both get one. This is a more deliberate, thought-out threshold than any other product in this table, none of which vary their confirm behavior by consequence scope. | The toast itself (the sole safety net for this specific case) was confirmed to lack `role`/`aria-live` and to never auto-dismiss on any observed timer during that pass — a real accessibility and UX gap for the one case that has no modal backstop. |
+| Typeform — whole-form delete ([[typeform-feedback-patterns]], AL2) | A true `dialog`-role modal, title phrased as a question ("Delete form?"), body interpolating the real form name, a genuine bulleted "This will also:" consequence list, a separate unbulleted irreversibility line, Cancel + a real **red/danger-colored** "Delete" button, an in-place "Deleting..." loading label on the button itself during the async operation. | **The first and only implementation in this table to use a destructive/red color cue on its confirm button** — closing the cross-product gap flagged below for at least this one case. Also the only implementation to show an explicit in-flight loading state on the confirm button itself, rather than the modal just closing or hanging with no feedback. | Still no icon or "type to confirm" pattern. Like Paperform's form-delete, gives no post-confirm toast — the modal alone is the only feedback, unlike Google's modal+toast combo. |
+| Typeform — single-question delete (no modal, sharpest negative finding in this table) ([[typeform-feedback-patterns]], AL2) | **No modal, no toast, no undo of any kind** — deletes instantly and silently, verified twice (an original question and a duplicated copy). | — | The single worst safety-net outcome across every case in this entire table — even Google Forms' equivalent single-question-delete case at least produces a toast with an UNDO action; Typeform's gives literally nothing. |
 
 ## Best Observed Approach
-
-- TODO — needs at least one competitor's equivalent destructive-confirmation modal captured before a comparative judgment can be made.
+- **Google Forms' scope-of-consequence-based modal-gating rule** (confirm for whole-form/whole-section, toast-only for single-question) remains the most thoughtful *overall* policy captured across all four products — it's the only implementation in this table that treats "how much would be lost" as a graduated design input, with an appropriate (if imperfect) safety net at every tier. Its dashboard-level modal is also the only one in this table to pair a confirmation dialog WITH a post-action undo toast, the strongest combined safety net found for any single case.
+- **Typeform's whole-form-delete modal is the single richest INDIVIDUAL confirmation dialog** in this table — itemized consequences, a separate bolded irreversibility line, a real red danger button (the only one in this table), and an in-place "Deleting..." loading state — but its total absence of any safety net for single-question delete is also the single worst individual case in the table, pulling its overall showing down despite the strength of its top tier.
+- **No implementation in this table anywhere (Zoho ×2, Paperform ×2, Google ×2, Typeform's own single-question case) uses a "type to confirm" pattern**, and only Typeform's whole-form modal uses a destructive/red color cue at all — a near-universal gap across every product in this table except that one case.
+- All four products now have at least one destructive-confirm case captured — this table's cross-product coverage is complete for the core comparison, though further cases (bulk/multi-select delete, account-level deletion) remain open for any product.
 
 ## Sources
-
 - OBSERVATION: Live exploration of Zoho Forms (forms.zoho.in), dashboard "⋮" → Trash and the full-screen Theme editor's close-with-unsaved-changes flow, via Claude browser extension, 2026-09-16 (~26 actions, including direct extraction of both close handlers' function source). No destructive action was completed: the form was never actually moved to trash (dismissed via "No"), and the theme edit was discarded via the legitimate exit-without-applying path.

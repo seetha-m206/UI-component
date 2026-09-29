@@ -10,7 +10,7 @@ describe('App', () => {
         <App />
       </MemoryRouter>
     );
-    expect(screen.getByRole('heading', { name: 'UI Component Library' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'UI Library' })).toBeInTheDocument();
     expect(screen.getAllByText(/Zoho Forms/).length).toBeGreaterThan(0);
   });
 

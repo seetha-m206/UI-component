@@ -17,7 +17,9 @@ describe('yes-no-toggle-field reconstructed Preview harness', () => {
     expect(
       screen.getByText(/Reconstructed interactive preview based on documented Zoho Forms behavior/)
     ).toBeInTheDocument();
-    expect(screen.getByText(/This is not the original Zoho source component/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/This is not the original Zoho Forms source component/)
+    ).toBeInTheDocument();
     // No raw source/code inside the Preview tabpanel specifically — the real
     // source legitimately lives in the (separately mounted) Code tabpanel.
     const previewPanel = screen.getByRole('tabpanel', { name: 'Preview' });

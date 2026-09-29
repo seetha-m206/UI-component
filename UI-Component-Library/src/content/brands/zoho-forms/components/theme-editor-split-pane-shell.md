@@ -1,6 +1,6 @@
 ---
 component: 'Theme Editor Shell (Full-Screen Split-Pane Live Preview)'
-ui_category: 'Content Creation > Composer/editor'
+ui_category: 'Application Layout > Split-pane shell'
 source_product: 'Zoho Forms'
 last_verified: '2026-09-16'
 evidence_state: 'source_reviewed'

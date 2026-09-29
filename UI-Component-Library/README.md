@@ -66,7 +66,11 @@ components from a newly-researched product (e.g. once Zoho Social's live explora
      needing a second pass in the source record; `"partial"` if it has open ⚠️ flags but is mostly
      done; `"complete"` otherwise.
    - `summary: "..."` — one sentence, becomes the catalogue-row and sidebar description.
-4. Nothing else. No sidebar/router/catalogue code to edit — `npm run dev` picks it up immediately.
+4. If the new product belongs to a product category already in the sidebar (e.g. another form
+   builder), add one line for its brand slug to `PRODUCT_GROUP_MAP` in `src/utils/loadComponents.ts`
+   so it nests under that same collapsible group (e.g. `"Forms"`) instead of falling into the
+   `"Other"` catch-all group. This is the one manual step — everything else in the sidebar/router/
+   catalogue is derived automatically, `npm run dev` picks up the new content immediately.
 
 ## Adding a single new component to an existing product
 
@@ -94,6 +98,13 @@ Pattern Note, Competitor Comparisons, Best Observed Approach, Sources, plus any 
 `Second-Pass Flags`/`Methodological Note` sections). `ComponentDetailPage.tsx`'s `TAB_MAP` maps these
 headings onto the page's tabs (Overview / Rules / Technical Data / Lessons / Comparisons / Sources) —
 a tab is only rendered when at least one matching section exists, so nothing ever ships an empty tab.
+
+## Design standard
+
+This site's own visual/interaction quality is benchmarked against two references, kept separate on purpose:
+
+- **Centilio UI OS** (`docs-rosy-ten-34.vercel.app`) — the IA/polish reference used for the 2026-09-28 visual pass (dark-mode tokens, collapsible sidebar, top Header, per-category collapse). Its own "Page details" sidebar (Section / Kind / Status / linear progress bar / checklist) inspired the idea behind this site's **Research Coverage panel** on every component page (`src/components/detail/ResearchCoveragePanel.tsx`), but that panel is deliberately named and designed differently — a radial coverage ring plus a wrapped chip grid, not a linear bar and vertical checklist — so the two sites read as distinct systems, not a copy. It tracks this site's own 10-part component-record anatomy (Overview, Rules, Technical Data, Lessons, Comparisons, Sources, Interactive preview, Code, Accessibility, Related components) computed live from real per-record data, not a manually-maintained number.
+- **`/product-suite-design-principles-v1.7-desktop.md`** (repo root) — a much deeper, numbered rulebook (15 core principles, exact component dimensions/spacing/colour mapping, loading/destructive-action/table contracts, a 132-point release-gate checklist) for a *different*, larger product suite. It is the formal standard to check this site against for anything not yet covered by the lighter Centilio pass — button sizing (§3.1), popup/toast dimensions (§3.5–3.6), table toolbar anatomy (§3.13, §4.4), loading-state/skeleton rules (§4.1), and the Section 8 checklist for a full compliance audit. **Not yet fully applied here** — the 2026-09-28/29 passes covered shell/navigation/IA (roughly principles P1/P5) and the Research Coverage tracker; a full pass against the remaining checklist (buttons, tables, toasts, accessibility, performance) is a separate, larger piece of work, not silently assumed done.
 
 ## What's intentionally not implemented (vs. the source spec)
 

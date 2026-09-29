@@ -1,0 +1,252 @@
+.root {
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.surfaceTabs {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.tab {
+  padding: var(--spacing-2) var(--spacing-3);
+  border: none;
+  background: transparent;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tabActive {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.fieldLabel {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+
+.fixedPrice {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--shell-sidebar-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  width: fit-content;
+}
+
+.priceInputWrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  width: fit-content;
+  overflow: hidden;
+}
+
+.prefix {
+  padding: var(--spacing-2) var(--spacing-2) var(--spacing-2) var(--spacing-3);
+  color: var(--shell-muted-text);
+}
+
+.priceInput {
+  border: none;
+  padding: var(--spacing-2) var(--spacing-3) var(--spacing-2) 0;
+  font-size: var(--font-size-base);
+  width: 100px;
+}
+
+.priceInput:focus {
+  outline: none;
+}
+
+.warning {
+  color: var(--color-warning);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--spacing-3);
+}
+
+.productTile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  padding: var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.productTileOn {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.checkbox {
+  position: absolute;
+  top: var(--spacing-2);
+  right: var(--spacing-2);
+}
+
+.productName {
+  font-weight: 600;
+}
+
+.productPrice {
+  font-size: var(--font-size-sm);
+}
+
+.quantityInput {
+  margin-top: var(--spacing-2);
+  width: 60px;
+  padding: var(--spacing-1);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--shell-border);
+  color: var(--shell-text);
+}
+
+.submitButton {
+  align-self: flex-start;
+  padding: var(--spacing-2) var(--spacing-6);
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-success);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal {
+  background: var(--shell-bg);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  max-width: 300px;
+}
+
+.modalOk {
+  align-self: flex-end;
+  padding: var(--spacing-1) var(--spacing-4);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+.configRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+  max-width: 420px;
+}
+
+.configLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.select {
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--shell-border);
+}
+
+.taxInput {
+  width: 80px;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--shell-border);
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+}
+
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.couponTable {
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.couponTable th,
+.couponTable td {
+  border: 1px solid var(--shell-border);
+  padding: var(--spacing-1) var(--spacing-2);
+  text-align: left;
+}
+
+.ruleRow {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--shell-sidebar-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  width: fit-content;
+}
+
+.publishButton {
+  align-self: flex-start;
+  padding: var(--spacing-2) var(--spacing-6);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.publishToast {
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}

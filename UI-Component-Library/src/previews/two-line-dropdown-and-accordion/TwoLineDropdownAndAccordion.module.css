@@ -1,0 +1,198 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+/* ---- Two-line dropdown ---- */
+
+.dropdownSection {
+  max-width: 320px;
+}
+
+.dropdownCaption {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  margin-bottom: var(--spacing-1);
+}
+
+.dropdownWrap {
+  position: relative;
+}
+
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  cursor: pointer;
+}
+
+.dropdownTrigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dropdownTrigger:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.chevron {
+  color: var(--shell-muted-text);
+  font-size: 10px;
+}
+
+.optionsList {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+  padding: var(--spacing-1);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+/* Each option is a genuine title + subtitle wrapper, per the source's
+   captured Select2 templateResult DOM:
+   <li><div>Title</div><span class="sharingTxtDis">Subtitle</span></li> */
+.option {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.option:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+/* Selected-row highlight: light green background + green title text, per
+   the source ("Currently-selected option is highlighted... even before
+   hovering") — this is plain off-the-shelf Select2 default styling per
+   the record, not a bespoke addition. Exact hex was not captured; the
+   success token is used as a faithful stand-in. */
+.optionSelected {
+  background: rgba(22, 163, 74, 0.1);
+}
+
+.optionSelected .optionTitle {
+  color: var(--color-success);
+}
+
+.optionTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-text);
+}
+
+.optionSubtitle {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+/* ---- Accordion ---- */
+
+.accordion {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.accordionItem + .accordionItem {
+  border-top: 1px solid var(--shell-border);
+}
+
+.accordionHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: none;
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-text);
+  padding: var(--spacing-3) var(--spacing-4);
+  cursor: pointer;
+}
+
+.accordionHeaderOpen {
+  background: var(--shell-bg);
+}
+
+.accordionHeader:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: -2px;
+}
+
+.accordionChevron {
+  display: inline-block;
+  font-size: 10px;
+  color: var(--shell-muted-text);
+  transition: transform 300ms ease;
+}
+
+.accordionChevronOpen {
+  transform: rotate(90deg);
+}
+
+/*
+  Genuine HEIGHT-based reveal (grid-template-rows 0fr -> 1fr), matching the
+  source's documented distinction from the opacity-only fadeIn/fadeOut used
+  elsewhere in this product. The source itself uses jQuery slideDown/
+  slideUp with a content-height-scaled duration (400-800ms) rather than a
+  fixed one — this fixed-duration CSS transition is a deliberate, flagged
+  substitution for that (see this component's doc comment), not a literal
+  reproduction of the exact timing curve.
+*/
+.accordionPanel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 350ms ease;
+}
+
+.accordionPanelOpen {
+  grid-template-rows: 1fr;
+}
+
+.accordionPanelInner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.accordionContentText {
+  margin: 0;
+  padding: var(--spacing-4);
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordionPanel {
+    transition: none;
+  }
+}

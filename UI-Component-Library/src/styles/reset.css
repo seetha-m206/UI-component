@@ -15,7 +15,11 @@ body {
   font-size: var(--font-size-base);
   color: var(--shell-text);
   background: var(--shell-bg);
-  line-height: 1.6;
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 a {
@@ -29,6 +33,34 @@ button {
 img,
 svg {
   max-width: 100%;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--shell-focus) 30%, transparent);
+  color: var(--shell-text);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--shell-border-strong);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--shell-muted-text);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--shell-border-strong) transparent;
 }
 
 .skip-link {

@@ -1,0 +1,91 @@
+---
+component: "Signature field + Papersign e-signature hand-off (After Submission)"
+ui_category: "Forms > Form"
+source_product: "Paperform"
+last_verified: "2026-09-24"
+evidence_state: "source_reviewed"
+status: 'complete'
+summary: "Signature field + Papersign e-signature hand-off -- confirmed end-to-end: a plain draw-only in-form field vs. a fully separate Papersign product with its own Draft.js editor. No sandbox/dry-run test mode, and no status feedback loop back into Submissions."
+---
+
+# Component: Signature Field + Papersign E-Signature Hand-Off
+
+Product → Screen → Component → Action → Behavior → States → Rules → Validation → Technical Data → Reference
+
+> **No comparison baseline exists.** Neither [[zoho-forms]] nor [[typeform]] documents an e-signature hand-off feature anywhere in this library. Noted deliberately, consistent with how [[paperform-payments-products-fields]] and [[paperform-custom-pdf-designer]] each treated "no equivalent" as a real finding, not a blank section.
+
+## Location
+- **Product:** Paperform
+- **Screen(s) it appears on:** a form's Signature field type (builder + respondent view); After Submission → Papersign (a hand-off configuration screen); the separate Papersign app at `paperform.co/sign`. Tested on scratch form `xborqzxj` — added "S1 Sign here" (Signature, key `9b3ki`); created and abandoned a new Papersign document ("New Papersign Document," id `6ab562b88ccc92df5b0ba980`) in Draft status.
+
+## Structure
+This ticket covers **two entirely separate systems that happen to share a name and do not share data automatically**:
+1. **The form's own Signature field** — a normal question type, answered inside the form, stored with the submission like any other field.
+2. **Papersign** — a fully separate e-signature product (its own app, its own document editor, its own status pipeline) that a form can hand off to via After Submission → Papersign. It is not the Signature field scaled up, and it doesn't even use the same signing widget.
+
+**Signature field's builder config drawer has no signature-specific options at all** — just Required, two-column layout, visibility logic, and Question ID. No draw/type toggle, no pen-color/line-width option, no "require full name" setting — the plainest config drawer of any field type documented in this library.
+
+**Respondent view (published, guided mode):** a bordered 825×312 `<canvas class="Signature">` with greyed-out placeholder "SIGN HERE" — **draw-only**, no type-to-sign tab or toggle anywhere in the rendered DOM or the builder config.
+
+**Papersign's own document editor** (`paperform.co/sign/<documentId>`) is **another Draft.js-style document canvas** — a full-page editor with its own right-rail (Theme / Signers / Fields / Variables), reached only through a separate three-way start screen (Create in Papersign / Copy an existing document / Upload a PDF) at `paperform.co/sign/new-document`, in its own browser tab.
+
+## Actions
+| Element | User Action | Function | Result | Destination screen/state |
+|---|---|---|---|---|
+| Signature canvas | Draw a stroke | Starts the confirm flow | Footer prompt "CONFIRM SIGNATURE" appears with ↻ (clear/redo) and ✓ (confirm) buttons | Same screen |
+| ✓ confirm button | Click | Uploads the drawn signature | "Signature still uploading" transient message — a real network round trip, not instant; once complete, confirm/clear buttons are replaced by a single pencil (redraw) icon, the required-field error clears, and the Submit button label flips from "Please finish the form — $X" to "Submit — $X" | Same screen |
+| Submit, with nothing drawn | Click | Client-side required-field validation | **Correctly blocked** — "This question is required" shows under the field, Submit becomes "Please finish the form — $20.00." Unlike Price/Products fields elsewhere in this form (PF5, which publish and submit fine with no payment gateway), this field's required-ness is enforced properly before any network round trip starts | Same screen |
+| After Submission → Papersign, no document yet | Click | Opens the document picker | "Choose the document you would like to send" — a dropdown of existing Papersign documents, plus "New document +" | Same screen |
+| "New document +" | Click | Opens Papersign in a new tab | `paperform.co/sign/new-document` — its own three-way start screen (Create in Papersign / Copy an existing document / Upload a PDF), leading through a signer-setup wizard into the document editor | New browser tab |
+| Typing `/` inside the Papersign document canvas | Keypress | Opens Papersign's own slash-menu | FIELDS (Text, Date, Signature, Checkbox, Dropdown) and CONTENT (Heading 1, etc.) — a parallel but separate field-and-block system from the form canvas's own | Same screen |
+| Typing `{{` inside the Papersign document | Keypress | Opens Papersign's own merge autocomplete | PAGE VARIABLES (Page Number, Page Count) and SIGNER ATTRIBUTES (Name, Company, Job Title, Phone), plus any custom Variables defined in that document's own right-rail. **None of these are the form's question keys** — there is no "insert form answer" picker inside Papersign, unlike the Custom PDF designer's click-to-insert picker ([[paperform-custom-pdf-designer]], PF7) | Same screen |
+| Back on the form's Papersign config, with a document selected | — | Surfaces the mapping step | Per-signer Name/Email/Phone/Job title dropdowns, each offering the form's own question list (only type-appropriate questions shown, but not filtered by field-type name — both text-shaped answers were offered for a Name mapping), plus "Manually enter a value," and a separate Document Variables mapper | Same screen |
+| "Send Test" button | (not clicked) | Would fire a real send | See Rules & Validation — this is exactly where the flow was stopped | — |
+
+## Behavior & States
+- **Papersign requires a genuinely separate document — confirmed, not inferred.** The document is **not auto-populated from the form**: it starts blank ("Type '/' to get started"). The form's questions, its Custom PDF templates, and its `{{ questionKey }}` answer-piping system (used by Calculations in PF6 and Custom PDFs in PF7) are not available inside the Papersign editor.
+- **Inserting a Signature field inside the Papersign document is a *third* signature widget in this ticket** — via `/` → Signature, it inserts an inline chip token (`signature_1`) bound to a specific signer, tracked in the document's own Fields list. This is unrelated to the form's own `S1 Sign here` field — a Papersign document could contain zero, one, or several signature placeholders regardless of whether the source form has a Signature question at all.
+- **Answer to "does it need a separate document, or does it pull from the form?": both, in a specific division of labor.** Papersign requires a genuinely separate document/template with no auto-generation from the form's questions or Draft.js body. But once that document exists, the *recipient metadata* (signer name/email/phone/job title) and any *custom variables* explicitly declared in the document **can** be populated from the triggering submission's answers via the mapping UI. The document's actual prose/legal content is not populated this way — only signer identity fields and explicitly-declared variables.
+- **Storage: the confirmed signature is rasterized and uploaded to S3, not inline SVG/base64.** The submission stores a plain URL string as the answer: `"9b3ki": "https://s3.amazonaws.com/pf-user-files-01/t-553418/uploads/2026-09-24/mq123vh/mp023v6.png"` — the same bucket family used elsewhere in this account (Custom PDF exports, PF7). In the Submissions detail view it renders as an inline image thumbnail with the same copy-icon affordance as every other answer type.
+
+## Rules & Validation
+- **No cross-status link between the two views — confirmed.** The form's Submissions detail view shows the `S1 Sign here` answer exactly like any other field (an inline image thumbnail), with no "pending signature" badge and no link out to Papersign. Papersign has its own, completely separate dashboard at `paperform.co/sign`, with its own status taxonomy (Requires Action / Draft / In Progress / Canceled / Completed / Expired / Rejected). No submission row exposes a Papersign status chip, and no Papersign document row links back to the triggering submission ID. Given the field-mapping UI does read the submission's answers, the *data* connection clearly exists server-side — but the *status* of the resulting document is not surfaced back into Submissions anywhere in this build.
+- **No sandbox/dry-run send mode exists — confirmed, this is the real gate.** "Send Test" is captioned "Click the button below to test this setup with the last submission. You must have submitted the form to be able to test." — this fires a real Papersign send using the last real form submission's actual answers, i.e., whatever email address was captured in that submission's `Q2 Your email` field would receive a genuine sign-request email. "Test" here means "test the mapping configuration with live data," not "simulate without sending." "Finish Setup" (without Send Test) would also leave a standing, persistent automation wired to the live published form — any future real respondent's submission would silently trigger a real Papersign send to whatever email they typed, using the account owner's own address as sender.
+- **Consistent with this project's standing rule against real sends, neither "Send Test" nor "Finish Setup" was clicked** — the flow was cancelled out of, leaving the Papersign automation unconfigured on the form and the Papersign document itself sitting in Draft, never sent, never associated with any signer's actual mailbox action.
+- **The paywall gate, distinct from the real-recipient gate:** Papersign's flow goes all the way to a fully field-mapped, ready-to-fire configuration purely through in-app UI on a Pro trial, with zero payment involved anywhere — a "5 days left of Pro trial / Upgrade now" banner is visible in the Papersign dashboard chrome, but nothing blocked this flow. The only hard stop is the real-recipient requirement.
+
+## Technical Data
+> OBSERVATION, directly captured via browser DOM/network inspection, Claude browser extension session, 2026-09-24.
+
+- Signature field storage: a plain S3 URL string per the answer key, shown above.
+- Papersign document/signer/settings model, per the setup wizard: document name → signers (name/email per signer, account owner prefilled as signer 1) → document settings (verify-email-before-viewing default off, allow-nominate-someone-else, certificate of authenticity, e-consent — all defaulting sensibly except email-verify, which defaults off).
+- No distinct network endpoint was independently isolated for the Papersign-specific save/send flow this pass — the document editor and mapping UI were traced functionally (via UI state and disclosed error/success copy) rather than via a fetch/XHR interceptor.
+
+## Competitor Comparisons
+| Capability | Zoho Forms | Typeform | Paperform |
+|---|---|---|---|
+| Native in-form Signature field | none recorded | none recorded | ✔ draw-only canvas, required-field validation, uploads to S3 as an image URL |
+| Type-to-sign option | none recorded | none recorded | ✘ not found in this build — draw only |
+| Dedicated e-signature product | none recorded | none recorded | ✔ **Papersign** — a fully separate app (own editor, own signer/field model, own status pipeline) |
+| Auto-generate signable doc from form's own answers/body | — | — | ✘ — a Papersign document is authored independently; the form's Draft.js body, Custom PDF templates, and `{{key}}` merge picker (PF7) are not available inside Papersign |
+| Map submission answers into signer identity | — | — | ✔ per-signer Name/Email/Phone/Job title dropdowns pull from the form's own questions |
+| Map submission answers into document content | — | — | Partial — only via explicitly-declared Document Variables, not the document prose itself |
+| Sandbox/dry-run send | — | — | ✘ — "Send Test" sends to a real address from the last real submission; there is no non-live test mode |
+| Status visible in Submissions view | — | — | ✘ — status lives only in the separate Papersign dashboard; no cross-link from the submission row |
+
+**Candidate "what we should learn" items** for [[zoho-forms]] / [[typeform]]:
+1. **A two-tier signature model** — a cheap, low-friction in-form Signature field for "capture a mark on this response" use cases, separate from a heavyweight, legally-oriented e-signature product (multi-signer order, consent-to-do-business-electronically toggle, certificate of authenticity) for "get a document formally signed" use cases. Worth checking whether either competitor conflates these or only has one.
+2. **Anti-pattern:** no dry-run/sandbox test — "Send Test" is a real send using real historical data.
+3. **Anti-pattern:** the automation is a persistent, silent standing rule once "Finish Setup" is clicked — every future real submission fires it, with no visible reminder in the Submissions view, and no status feedback loop back into Submissions after the fact.
+4. **Missing merge picker:** Papersign has its own `{{ }}` variable system but, unlike the Custom PDF designer (PF7), has no click-to-insert picker for the source form's question answers directly into document prose — only into the constrained Signer/Variable mapping fields.
+
+## Best Observed Approach
+- **RECOMMENDATION:** the two-tier model (a lightweight in-form Signature field + a heavyweight separate e-signature product) is a genuinely sound architectural split worth studying, since it matches how real-world signature needs actually vary. Set against that: the **confirmed absence of any sandbox/dry-run test mode** and the **confirmed absence of any status feedback loop back into Submissions** are both real, concrete gaps — any future implementation of a similar hand-off feature should support testing the mapping configuration without a real send, and should surface at minimum a status chip on the triggering submission.
+
+## Cross-Component Pattern Note
+1. **A fourth and fifth confirmed instance of "one Draft.js document living inside its own draft/version model" in this product** — the Papersign document editor is yet another Draft.js-style canvas (after the main form canvas, the Calculation Editor's code pane, and the Custom PDF designer), but this one is genuinely isolated from the form's own document/data model, unlike the Custom PDF designer which at least shares the form's merge-field system.
+2. **A third confirmed instance of "no sandbox/dry-run test, real data used for testing"** in this product, extending the same category already flagged for [[paperform-submissions-results-view]]'s PF9 payment-status finding and [[paperform-question-visibility-logic]]'s silent-dependency-breakage finding — worth treating "does testing X require real, live consequences" as a standing question for any future Paperform automation/integration capture.
+3. **Storage architecture reconfirmed:** the Signature field's S3 URL pattern is consistent with the same bucket family already documented for Custom PDF exports (PF7) — one shared file-storage backend across multiple features.
+
+## Sources
+- OBSERVATION: Live exploration + DOM/network inspection of Paperform, via Claude browser extension, 2026-09-24. Scratch form `xborqzxj`, field "S1 Sign here" (Signature, key `9b3ki`, required). One real test submission exists: `pf12test@example.com`, submission ID `6ab56498bbb46145300e6268`, including a real drawn-and-confirmed signature (stored at the S3 URL above). A Papersign document ("New Papersign Document," id `6ab562b88ccc92df5b0ba980`) exists in Draft status, containing one text line and one Signature field bound to signer 1 — never sent, no configured After Submission automation pointing at it. No real email was sent to any address at any point in this pass.

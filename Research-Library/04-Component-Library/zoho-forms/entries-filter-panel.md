@@ -1,6 +1,6 @@
 ---
 component: "Entries Filter Panel (Inline Query-Criteria Builder)"
-ui_category: "Search & Filter > Filter panel"
+ui_category: "Search and Filtering > Filter panel"
 source_product: "Zoho Forms"
 last_verified: "2026-09-15"
 evidence_state: "source_reviewed"
@@ -103,10 +103,12 @@ Pattern: one JSON object per checked/valid field inside `conditions[]` — multi
 ## Competitor Comparisons
 | Competitor | Same component implementation | Strengths | Weaknesses |
 |---|---|---|---|
-| *(TODO — not yet researched — e.g. Google Forms/Typeform/JotForm response-filtering capability)* | | | |
+| Paperform (see [[paperform-submissions-results-view]]) | **Structurally split, not a direct equivalent.** Paperform's raw Submissions list offers only free-text search + a date-range filter — no field-level criteria builder on the list itself. A real condition-based query builder (question/operator/value, And/Or, nested groups) does exist in the product, but it lives only inside Reports → Segments, where it drives report aggregates rather than filtering which raw rows the list shows. | Paperform's Segments builder does support nested condition groups (And/Or), which this Zoho panel's single flat `criteria.conditions[]` list was never confirmed to support for multi-field combinations. | Paperform gives up datatype-aware operators and client-side pre-validation on the list itself — a user filtering raw submissions by a specific field/operator/value has no equivalent to Zoho's inline per-field Select2 operator dropdown; the closest capability is one screen away and answers a different question (aggregate reporting, not row filtering). |
+| Google Forms (see [[google-forms-responses-view]]) | **No filtering at all — the furthest of the four products from this panel's model.** Confirmed across all three Responses sub-views (Summary/Question/Individual) and the export menu: no date filter, no answer-value filter, no search box, no saved-view/segment concept anywhere in the product. Forms is a display/aggregate layer only. | None on this dimension — Google Forms has nothing to compare favorably against Zoho's query-builder. | Filtering only becomes possible once data reaches the linked Google Sheet or a downloaded CSV — a respondent-data question that Zoho answers in-product (datatype-aware operators, client-side validation) requires leaving Google Forms entirely to answer. |
+| *(TODO — JotForm response-filtering capability not yet researched)* | | | |
 
 ## Best Observed Approach
-- TODO — needs competitor research; internally, this is a well-designed filter (datatype-aware operators, clear client-side validation) — a reasonable "best observed" candidate pending competitor comparison.
+- **RECOMMENDATION:** Of the two directly compared here, Zoho Forms' filter panel is the stronger list-level filtering implementation — true datatype-aware query-building (checkbox → operator → value, with client-side validation before any network call) directly on the Entries list itself, versus Paperform's search-and-date-only list with its real query builder relocated to Reports/Segments and scoped to aggregates rather than raw rows. Still TODO against Google Forms/JotForm.
 
 ## Sources
 - OBSERVATION: Live exploration of Zoho Forms (forms.zoho.in), "All Entries" screen → filter panel, via Claude browser extension, 2026-09-15. DOM/CSS/JS/network data retrieved via the page's own JS context; full request/response payload captured for one valid single-field filter submission.

@@ -1,6 +1,6 @@
 ---
 component: 'Card-List Selector (Icon + Title + Description)'
-ui_category: 'Actions/Controls > Card selector'
+ui_category: 'Actions > Card selector'
 source_product: 'Zoho Forms'
 last_verified: '2026-09-17'
 evidence_state: 'source_reviewed'

@@ -1,0 +1,334 @@
+.root {
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.tabBar {
+  display: flex;
+  gap: var(--spacing-2);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.tab,
+.tabActive {
+  padding: var(--spacing-2) var(--spacing-3);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  border-bottom: 2px solid transparent;
+}
+
+.tabActive {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.toolbar {
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: center;
+}
+
+.search {
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  flex: 1;
+  max-width: 260px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--shell-border);
+  padding: var(--spacing-2) var(--spacing-3);
+  text-align: left;
+}
+
+.emptyRow {
+  color: var(--shell-muted-text);
+  text-align: center;
+}
+
+.secondaryButton {
+  padding: var(--spacing-1) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.primaryButton {
+  align-self: flex-start;
+  padding: var(--spacing-2) var(--spacing-4);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.fetchLog {
+  border: 1px dashed var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3);
+  background: var(--shell-sidebar-bg);
+  font-size: var(--font-size-xs);
+}
+
+.fetchLogLabel {
+  font-weight: 600;
+  color: var(--shell-muted-text);
+}
+
+.fetchLog ul {
+  margin: var(--spacing-1) 0 0;
+  padding-left: var(--spacing-4);
+  font-family: monospace;
+}
+
+.fetchLogBug {
+  color: #c53030;
+}
+
+.submitDemo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.errorBar {
+  background: #fff6f6;
+  border: 1px solid #ffc2c2;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  color: #9b2c2c;
+  font-size: var(--font-size-sm);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.errorMeta {
+  font-family: monospace;
+  font-size: var(--font-size-xs);
+  color: #c53030;
+}
+
+.analyticsNote {
+  background: #fffaf0;
+  border: 1px solid #fbd38d;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  color: #975a16;
+  font-size: var(--font-size-xs);
+  margin: 0;
+}
+
+.banner {
+  background: var(--shell-sidebar-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.expandButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+}
+
+.bugCell {
+  color: #c53030;
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+.confirmedCell {
+  color: #2f855a;
+  font-weight: 600;
+  cursor: help;
+}
+
+.partialDetail {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--spacing-1) var(--spacing-4);
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.detailGrid dt {
+  font-weight: 600;
+  color: var(--shell-muted-text);
+}
+
+.detailGrid dd {
+  margin: 0;
+}
+
+.copyButton {
+  margin-left: var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: 1px var(--spacing-2);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+}
+
+.hint {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0;
+}
+
+.segmentBuilder {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.segmentLabel {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.ruleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding-left: var(--spacing-4);
+}
+
+.ruleRow select,
+.ruleRow input {
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+}
+
+.andOr {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+  min-width: 30px;
+}
+
+.linkButton {
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+.pdfCell {
+  position: relative;
+}
+
+.pdfMenuButton {
+  border: 1px solid var(--shell-border);
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: 2px var(--spacing-2);
+  cursor: pointer;
+}
+
+.pdfMenu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: var(--spacing-1);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(0, 0, 0, 0.1));
+  list-style: none;
+  padding: var(--spacing-1);
+  min-width: 180px;
+  z-index: 5;
+  font-size: var(--font-size-sm);
+}
+
+.pdfMenu li {
+  padding: var(--spacing-1) var(--spacing-2);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.pdfMenu li:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.submissionDetail {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.metaCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--shell-sidebar-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3);
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.chargedCard {
+  background: #fff6f6;
+  border: 1px solid #ffc2c2;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  font-weight: 600;
+  color: #742a2a;
+  cursor: help;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.chargedWarning {
+  font-weight: 400;
+  font-size: var(--font-size-xs);
+  color: #c53030;
+}

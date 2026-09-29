@@ -1,6 +1,6 @@
 ---
 component: "Multiple Choice Editor / Choices List"
-ui_category: "Data Input > Form"
+ui_category: "Forms > Form"
 source_product: "Typeform"
 last_verified: "2026-09-17"
 evidence_state: "source_reviewed"

@@ -45,3 +45,23 @@ export function getBrandLabel(brand: string): string {
     .map((word) => (word ? word[0].toUpperCase() + word.slice(1) : word))
     .join(' ');
 }
+
+/**
+ * Product-category grouping, one level above brand — e.g. every current
+ * brand (Zoho Forms, Typeform, Paperform, Google Forms) is a form builder,
+ * so they all group under "Forms" in the sidebar. This library is expected
+ * to keep growing into more brands (see Research-Library's own product
+ * categories in `00-Framework/category-taxonomy.md` §1), so this map is the
+ * one place to add a new brand's group — a brand left unmapped falls into
+ * "Other" rather than being silently misgrouped or crashing.
+ */
+const PRODUCT_GROUP_MAP: Record<string, string> = {
+  'google-forms': 'Forms',
+  paperform: 'Forms',
+  typeform: 'Forms',
+  'zoho-forms': 'Forms',
+};
+
+export function getProductGroup(brand: string): string {
+  return PRODUCT_GROUP_MAP[brand] ?? 'Other';
+}

@@ -63,8 +63,8 @@
 }
 
 .markdown-body pre {
-  background: #1e2430;
-  color: #e6e9ef;
+  background: var(--code-bg);
+  color: var(--code-text);
   padding: var(--spacing-4);
   border-radius: var(--radius-md);
   overflow-x: auto;

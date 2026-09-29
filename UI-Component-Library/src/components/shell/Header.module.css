@@ -1,0 +1,98 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  height: var(--header-height);
+  flex-shrink: 0;
+  padding: 0 var(--spacing-4);
+  border-bottom: 1px solid var(--shell-border);
+  background: var(--shell-bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.identityLogo {
+  flex-shrink: 0;
+}
+
+.identityName {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--shell-text);
+}
+
+.searchWrap {
+  position: relative;
+  flex: 1;
+  max-width: 420px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--spacing-2);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--shell-muted-text);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-8) var(--spacing-2) 32px;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-text);
+}
+
+.searchInput:focus {
+  border-color: var(--shell-focus);
+  background: var(--shell-bg);
+}
+
+.searchKbd {
+  position: absolute;
+  right: var(--spacing-2);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1px var(--spacing-1);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  color: var(--shell-muted-text);
+  background: var(--shell-bg);
+  pointer-events: none;
+}
+
+.themeToggle {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin-left: auto;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-muted-text);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.themeToggle:hover {
+  background: var(--shell-border);
+  color: var(--shell-text);
+}

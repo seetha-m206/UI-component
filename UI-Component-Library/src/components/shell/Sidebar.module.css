@@ -3,9 +3,9 @@
   flex-shrink: 0;
   background: var(--shell-sidebar-bg);
   border-right: 1px solid var(--shell-border);
-  height: 100vh;
+  height: calc(100vh - var(--header-height));
   position: sticky;
-  top: 0;
+  top: var(--header-height);
   overflow-y: auto;
   padding: var(--spacing-6) var(--spacing-4);
 }
@@ -20,83 +20,142 @@
   }
 }
 
-.identity {
-  display: block;
-  margin-bottom: var(--spacing-6);
-  text-decoration: none;
-}
-
-.identityOrg {
-  font-size: var(--font-size-xs);
-  color: var(--shell-muted-text);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.identityName {
-  font-size: var(--font-size-lg);
-  font-weight: 700;
-  color: var(--shell-text);
-}
-
-.searchWrap {
-  margin-bottom: var(--spacing-4);
-}
-
-.searchInput {
-  width: 100%;
-  padding: var(--spacing-2) var(--spacing-3);
-  border: 1px solid var(--shell-border);
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-sm);
-  background: #fff;
-}
-
-.searchInput:focus {
-  border-color: var(--shell-focus);
-}
-
 .topLink {
   display: block;
+  position: relative;
   padding: var(--spacing-2) var(--spacing-2);
   font-size: var(--font-size-sm);
   border-radius: var(--radius-sm);
   text-decoration: none;
   color: var(--shell-text);
   margin-bottom: 2px;
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 .topLink:hover {
   background: var(--shell-border);
 }
 
-.brandGroup {
+.productGroup {
   margin-top: var(--spacing-4);
   padding-top: var(--spacing-3);
   border-top: 1px solid var(--shell-border);
 }
 
-.brandGroup:first-of-type {
+.productGroup:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.productGroupLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  width: 100%;
+  appearance: none;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--shell-text);
+  padding: var(--spacing-1) var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.productGroupLabel:hover {
+  background: var(--shell-border);
+}
+
+.productGroupChevron {
+  flex-shrink: 0;
+  color: var(--shell-muted-text);
+}
+
+.productGroupIcon {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+.productGroup .brandGroup {
+  margin-top: var(--spacing-2);
+  padding-top: var(--spacing-2);
+  padding-left: var(--spacing-2);
+  border-top: 1px solid var(--shell-border);
+  border-left: 2px solid var(--shell-border);
+}
+
+.productGroup .brandGroup:first-of-type {
   border-top: none;
   padding-top: 0;
 }
 
 .brandLabel {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  width: 100%;
+  appearance: none;
+  border: none;
+  background: none;
   font-size: var(--font-size-sm);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
+  font-family: inherit;
   color: var(--shell-text);
   padding: var(--spacing-1) var(--spacing-2);
   margin-bottom: var(--spacing-1);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast);
 }
 
-.groupLabel {
+.brandLabel:hover {
+  background: var(--shell-border);
+}
+
+.brandChevron {
+  flex-shrink: 0;
+  color: var(--shell-muted-text);
+}
+
+.brandIcon {
+  flex-shrink: 0;
+  color: var(--shell-muted-text);
+}
+
+.categoryLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  width: 100%;
+  appearance: none;
+  border: none;
+  background: none;
+  font-family: inherit;
   font-size: var(--font-size-xs);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--shell-muted-text);
-  margin: var(--spacing-3) var(--spacing-2) var(--spacing-1) var(--spacing-4);
+  padding: var(--spacing-1) var(--spacing-2);
+  margin: var(--spacing-2) 0 var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.categoryLabel:hover {
+  background: var(--shell-border);
+  color: var(--shell-text);
+}
+
+.categoryChevron {
+  flex-shrink: 0;
 }
 
 .categoryGroup .navLink {
@@ -114,6 +173,8 @@
   color: var(--shell-text);
   font-size: var(--font-size-sm);
   margin-bottom: 1px;
+  position: relative;
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 .navLink:hover {
@@ -121,9 +182,20 @@
 }
 
 .navLinkActive {
-  background: color-mix(in srgb, var(--shell-focus) 10%, white);
+  background: color-mix(in srgb, var(--shell-focus) 12%, var(--shell-bg));
   color: var(--shell-focus);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+}
+
+.navLinkActive::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--shell-focus);
 }
 
 .emptyState {

@@ -1,0 +1,82 @@
+import { useEffect, useRef } from 'react';
+import { NavLink } from 'react-router-dom';
+import { Moon, Search, Sun } from 'lucide-react';
+import type { Theme } from '@hooks/useTheme';
+import styles from './Header.module.css';
+
+interface HeaderProps {
+  query: string;
+  onQueryChange: (query: string) => void;
+  theme: Theme;
+  onToggleTheme: () => void;
+}
+
+export function Header({ query, onQueryChange, theme, onToggleTheme }: HeaderProps) {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Global "/" shortcut focuses search, unless the user is already typing
+  // somewhere else — a real, working shortcut, not just a decorative hint.
+  useEffect(() => {
+    function handleGlobalKeyDown(event: KeyboardEvent) {
+      if (event.key !== '/') return;
+      const target = event.target as HTMLElement | null;
+      const isTyping =
+        target instanceof HTMLInputElement ||
+        target instanceof HTMLTextAreaElement ||
+        target?.isContentEditable;
+      if (isTyping) return;
+      event.preventDefault();
+      inputRef.current?.focus();
+    }
+    document.addEventListener('keydown', handleGlobalKeyDown);
+    return () => document.removeEventListener('keydown', handleGlobalKeyDown);
+  }, []);
+
+  function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
+    if (event.key === 'Escape') {
+      onQueryChange('');
+      event.currentTarget.blur();
+    }
+  }
+
+  return (
+    <header className={styles.header}>
+      <NavLink to="/" className={styles.identity}>
+        <img src="/favicon.svg" width={18} height={18} alt="" className={styles.identityLogo} />
+        <div className={styles.identityName}>UI Library</div>
+      </NavLink>
+
+      <div className={styles.searchWrap}>
+        <label htmlFor="component-search" className="sr-only">
+          Search components
+        </label>
+        <Search size={16} className={styles.searchIcon} aria-hidden="true" />
+        <input
+          ref={inputRef}
+          id="component-search"
+          type="search"
+          className={styles.searchInput}
+          placeholder="Search components…"
+          aria-label="Search components"
+          value={query}
+          onChange={(event) => onQueryChange(event.target.value)}
+          onKeyDown={handleKeyDown}
+        />
+        {query === '' && (
+          <kbd className={styles.searchKbd} aria-hidden="true">
+            /
+          </kbd>
+        )}
+      </div>
+
+      <button
+        type="button"
+        className={styles.themeToggle}
+        onClick={onToggleTheme}
+        aria-label="Toggle color theme"
+      >
+        {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+      </button>
+    </header>
+  );
+}

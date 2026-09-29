@@ -1,6 +1,6 @@
 ---
 component: "AI \"Chat to Create\" / \"Ask Typeform AI\" (Copilot)"
-ui_category: "Actions/Controls > AI assistant"
+ui_category: "Actions > AI assistant"
 source_product: "Typeform"
 last_verified: "2026-09-17"
 evidence_state: "source_reviewed"
@@ -77,6 +77,10 @@ Product → Screen → Component → Action → Behavior → States → Rules �
 - Compare AI behavior invoked from the builder (`page_context.page = "builder"`) vs. the dashboard.
 
 ## Competitor Comparisons
+> **See also [[paperform-calculation-field-ai-helper]]** — Paperform's Calculation-field AI assistant adds a third AI-interaction data point (a different domain — formula generation, not whole-form generation — but a directly comparable interaction model): iterative multi-turn like this record's Copilot, but with client-held conversation history resent on every call rather than a server-held `conversationId`; full-replace output like Zia rather than this record's structured JSON Patch operations; and a pre-computed Result value attached to every AI proposal, plus error-grounded repair (sending the actual parser error alongside a fix request) — a pattern not yet confirmed for either Zia or this record. See that record's own 3-way table for the full comparison.
+
+> **See also [[paperform-ai-create]]** — the direct domain match to this record: Paperform's own full-form-generation feature, confirmed 2026-09-23. Unlike this record's plan → actions → JSON Patch model, Paperform's text-prompt path holds up to two rounds of clarifying-question conversation *before* generating a single field, then generates once via a poll-based mechanism (not this record's more immediate, event-driven pipeline). Paperform is also the only one of the three with a directly-verified, working image/PDF-to-form path (correct Date/Phone Number/Signature field-type inference from a real source image) — full comparison table in that record.
+
 **Zoho equivalent now traced — see [[zia-ai-form-generator]]** (Zoho Forms' "AI Forms" / "Zia AI" chooser option, captured 2026-09-18). Zia AI Forms sits at the opposite end of the design spectrum from Typeform's Copilot: a single-shot, stateless generator — one text box, one synchronous `PUT /pfmaiformtemplate` call, full-schema replace on every Generate/Regenerate (no field IDs or prior-turn state carried forward) — with a preview-and-regenerate loop layered on top rather than true multi-turn conversation, versus Typeform's iterative plan → actions → JSON Patch execution model applied against the existing form-draft document across multiple turns. See [[zia-ai-form-generator]]'s own Competitor Comparisons table for the full side-by-side and its Best Observed Approach for the comparative judgment.
 
 | Aspect | Zoho Forms ([[zia-ai-form-generator]]) | Typeform (this trace) |

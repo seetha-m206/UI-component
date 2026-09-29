@@ -1,6 +1,6 @@
 ---
 component: 'Automations Builder (Trigger → Action Chain)'
-ui_category: 'Actions/Controls > Workflow builder'
+ui_category: 'Actions > Workflow builder'
 source_product: 'Typeform'
 last_verified: '2026-09-17'
 evidence_state: 'source_reviewed'

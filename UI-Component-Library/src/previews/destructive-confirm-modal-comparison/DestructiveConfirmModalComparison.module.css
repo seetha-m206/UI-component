@@ -1,0 +1,380 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.triggerRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+}
+
+.triggerButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  cursor: pointer;
+}
+
+.triggerButton:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.triggerButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.triggerButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Modal 1 — "Move to Trash?" (`popNewOverlay.activeAnimate`)
+   Captured: backdrop rgba(25,35,43,0.85); property-scoped transitions
+   (opacity/visibility on backdrop, transform/opacity on card); 8px card
+   radius; no static box-shadow on the card. The `active` class is toggled
+   one tick after mount (see component), reproducing the class-driven
+   "activeAnimate" entrance the source's own class name implies.
+   ============================================================ */
+
+/* Uses opacity only for the pre-active state (not visibility:hidden, even
+   though the source's own computed style does transition visibility
+   alongside opacity) — visibility:hidden would remove this freshly-mounted
+   dialog from the accessibility tree for the one JS tick before the
+   `active` class is applied, which is both a genuine (if brief) a11y risk
+   in a real screen reader and untestable in this reconstruction. Opacity
+   alone still reproduces the observable fade. */
+.trashOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-6);
+  background: rgba(25, 35, 43, 0.85);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.trashOverlayActive {
+  opacity: 1;
+}
+
+.trashCard {
+  position: relative;
+  width: min(460px, 100%);
+  background: var(--shell-bg);
+  border-radius: 8px;
+  padding: var(--spacing-8) var(--spacing-6) var(--spacing-6);
+  transform: scale(0.94) translateY(8px);
+  opacity: 0;
+  transition:
+    transform 0.5s,
+    opacity 0.5s;
+}
+
+.trashCardActive {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.trashCloseButton {
+  position: absolute;
+  top: calc(var(--spacing-6) * -1);
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  cursor: pointer;
+}
+
+.trashCloseButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.trashCloseButton:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.closeIcon {
+  width: 13px;
+  height: 13px;
+}
+
+.trashHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+/* Light-red circle with decorative sparkle dots around it — captured
+   structurally in the source (Structure section); exact dot positions/sizes
+   are a reasonable decorative approximation, not a pixel-measured spec. */
+.trashIconCircle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-danger) 14%, white);
+}
+
+.trashIcon {
+  width: 26px;
+  height: 26px;
+  color: var(--color-danger);
+}
+
+.sparkleDot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-danger) 55%, white);
+  top: -6px;
+  right: 2px;
+}
+
+.sparkleDot2 {
+  top: 8px;
+  right: -8px;
+  width: 3px;
+  height: 3px;
+}
+
+.sparkleDot3 {
+  bottom: -4px;
+  left: -6px;
+  width: 4px;
+  height: 4px;
+}
+
+.trashHeadline {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-danger);
+}
+
+.trashBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.trashFormName {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin: 0;
+  font-weight: 600;
+}
+
+.docIcon {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  color: var(--shell-muted-text);
+}
+
+.trashWarningList {
+  margin: 0;
+  padding-left: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.trashInfoBox {
+  background: var(--shell-sidebar-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.trashFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-6);
+}
+
+.trashNoButton,
+.trashYesButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.trashNoButton {
+  border: 1px solid var(--shell-border);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+}
+
+.trashNoButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.trashYesButton {
+  border: none;
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.trashYesButton:hover {
+  filter: brightness(1.08);
+}
+
+.trashNoButton:focus-visible,
+.trashYesButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Modal 2 — "Alert" theme-editor exit warning (`pWrapper.deleteWrapper`)
+   Captured: computed `transition: all` on both backdrop and card (a
+   generic/inherited shorthand, not a scoped rule) and `transform: none` at
+   rest — no transform-based entrance registered. Reproduced here by
+   deliberately NOT toggling any entrance class: the modal appears at full
+   opacity/scale the instant it mounts, in visible contrast to Modal 1's
+   class-driven fade/scale-in. Card: real box-shadow
+   rgba(0,0,0,0.1) 1px 1px 10px 0px, border-radius 3px — both directly
+   captured and different from Modal 1. No separate close "X" button was
+   observed for this modal (unlike Modal 1) and none is rendered here.
+   ============================================================ */
+
+.exitOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-6);
+  /* Exact backdrop color/opacity wasn't captured for this modal (only the
+     class name `darkdim-div`) — a plain dark scrim is a reasonable
+     assumption, not a confirmed value. */
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.exitCard {
+  width: min(420px, 100%);
+  background: var(--shell-bg);
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 10px 0px;
+  padding: var(--spacing-6);
+  transform: none;
+}
+
+.exitHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+}
+
+.exitIcon {
+  display: inline-flex;
+  color: var(--color-danger);
+}
+
+.warningIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.exitHeadline {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-danger);
+}
+
+.exitBody {
+  font-size: var(--font-size-base);
+  color: var(--shell-text);
+}
+
+.exitBody p {
+  margin: 0;
+}
+
+.exitFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-6);
+}
+
+.exitNoButton,
+.exitYesButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: none;
+}
+
+.exitNoButton {
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-text);
+}
+
+.exitNoButton:hover {
+  filter: brightness(0.97);
+}
+
+.exitYesButton {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.exitYesButton:hover {
+  filter: brightness(1.08);
+}
+
+.exitNoButton:focus-visible,
+.exitYesButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+@container (max-width: 420px) {
+  .triggerRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

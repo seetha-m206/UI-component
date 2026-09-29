@@ -1,6 +1,6 @@
 ---
 component: 'Contacts Module (CRM-lite)'
-ui_category: 'Data Display > Table'
+ui_category: 'Enterprise Tables > Table'
 source_product: 'Typeform'
 last_verified: '2026-09-17'
 evidence_state: 'source_reviewed'

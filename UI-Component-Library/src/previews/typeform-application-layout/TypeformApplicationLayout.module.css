@@ -1,0 +1,366 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--shell-bg);
+  position: relative;
+  padding-bottom: 52px;
+}
+
+.root[data-disabled='true'] {
+  opacity: 0.6;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.usageBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+  padding: var(--spacing-1) var(--spacing-3);
+  background: color-mix(in srgb, var(--status-partial) 15%, var(--shell-bg));
+  color: var(--status-partial);
+  font-size: var(--font-size-xs);
+}
+
+.usageBannerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.linkButton {
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  text-decoration: underline;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  border-radius: var(--radius-pill);
+}
+
+.iconButton:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.topBar,
+.builderTopBar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-bottom: 1px solid var(--shell-border);
+  background: var(--shell-sidebar-bg);
+}
+
+.orgMenu {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  flex: none;
+}
+
+.breadcrumb {
+  font-size: var(--font-size-sm);
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.tabList {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.tab,
+.tabDisabled {
+  padding: var(--spacing-1) var(--spacing-2);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--shell-muted-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.tabDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tabActive {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  background: color-mix(in srgb, var(--color-primary) 12%, var(--shell-bg));
+}
+
+.tabDivider {
+  width: 1px;
+  height: 16px;
+  background: var(--shell-border);
+}
+
+.topBarActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex: none;
+}
+
+.pillButton,
+.shareButton {
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--shell-border);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.body {
+  display: flex;
+  min-height: 220px;
+  position: relative;
+}
+
+.sidebar,
+.pagesRail,
+.settingsPanel,
+.actionsPanel,
+.connectFilters {
+  width: 180px;
+  flex: none;
+  padding: var(--spacing-3);
+  border-right: 1px solid var(--shell-border);
+  overflow-y: auto;
+}
+
+.settingsPanel,
+.actionsPanel {
+  border-right: none;
+  border-left: 1px solid var(--shell-border);
+}
+
+.primaryAction {
+  width: 100%;
+  padding: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--shell-text);
+  color: var(--shell-bg);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.sidebarSearch {
+  width: 100%;
+  padding: var(--spacing-1) var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+}
+
+.sidebarSectionLabel {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--shell-muted-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: var(--spacing-2) 0 var(--spacing-1);
+}
+
+.sidebarItem,
+.pageRailItem {
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+  cursor: default;
+}
+
+.pageRailItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  cursor: grab;
+}
+
+.pageRailItem:hover {
+  background: var(--shell-border);
+}
+
+.quotaMeter {
+  margin-top: var(--spacing-3);
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.mainContent,
+.canvas,
+.connectList {
+  flex: 1 1 auto;
+  padding: var(--spacing-4);
+  min-width: 0;
+}
+
+.pageHeader {
+  margin-bottom: var(--spacing-3);
+}
+
+.pageHeading {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.formCard {
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentCard {
+  width: 100%;
+  max-width: 320px;
+  padding: var(--spacing-5);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: var(--font-size-sm);
+}
+
+.collapseToggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 40px;
+  border: 1px solid var(--shell-border);
+  border-right: none;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-text);
+  cursor: pointer;
+}
+
+.flowCanvas {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  font-size: var(--font-size-sm);
+}
+
+.flowNode {
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+}
+
+.connectList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.integrationCard {
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.aiInput {
+  position: absolute;
+  left: var(--spacing-3);
+  bottom: var(--spacing-3);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  width: 220px;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--shell-border);
+  background: var(--shell-sidebar-bg);
+  box-shadow: var(--shadow-lg, 0 4px 12px rgba(0, 0, 0, 0.12));
+}
+
+.aiInput input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  color: var(--shell-text);
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+}
+
+@container (max-width: 480px) {
+  .sidebar,
+  .pagesRail,
+  .settingsPanel,
+  .actionsPanel,
+  .connectFilters {
+    width: 120px;
+  }
+}

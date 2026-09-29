@@ -1,0 +1,546 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  position: relative;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-bottom: none;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  background: var(--shell-sidebar-bg);
+}
+
+.gutterWrap {
+  position: relative;
+}
+
+.gutterButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  font-size: var(--font-size-md);
+  line-height: 1;
+  color: var(--shell-text);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.gutterButton:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.gutterButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gutterButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.gutterMenu {
+  position: absolute;
+  top: calc(100% + var(--spacing-1));
+  left: 0;
+  z-index: 20;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-1) 0;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-bg);
+  box-shadow: var(--shadow-md);
+}
+
+.gutterMenuItem {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  text-align: left;
+  color: var(--shell-text);
+  background: transparent;
+  border: none;
+  padding: var(--spacing-2) var(--spacing-3);
+  cursor: pointer;
+}
+
+.gutterMenuItem:hover,
+.gutterMenuItem:focus-visible {
+  background: var(--shell-sidebar-bg);
+}
+
+/* Confirmed real 3-state autosave label copy ("SAVE DRAFT" ->
+   "SAVING DRAFT…" -> "SAVED DRAFT"). The `data-structural-change-pending`
+   attribute deliberately carries NO visible styling difference — the
+   source record's finding is that the real product gives the user no
+   visual tell that a structural change is unpersisted while this label
+   reads "SAVED DRAFT". The attribute exists only so this preview's own
+   tests can verify the true internal state. */
+.saveStatus {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--shell-muted-text);
+}
+
+.saveStatus[data-save-status='saving'] {
+  color: var(--color-warning);
+}
+
+.saveStatus[data-save-status='saved'] {
+  color: var(--color-success);
+}
+
+.stage {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+}
+
+.canvas {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding: var(--spacing-4);
+  border: 1px solid var(--shell-border);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  background: var(--shell-bg);
+}
+
+.proseInput {
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--shell-text);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2);
+}
+
+.proseInput::placeholder {
+  color: var(--shell-muted-text);
+}
+
+.proseInput:focus {
+  outline: none;
+  background: var(--shell-sidebar-bg);
+}
+
+.proseInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---- Slash-command search row + dropdown ---- */
+
+.slashSearchRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-sm);
+  background: var(--shell-sidebar-bg);
+}
+
+.slashPrefix {
+  color: var(--shell-muted-text);
+  font-weight: 700;
+}
+
+.slashSearchInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--shell-text);
+  background: transparent;
+  border: none;
+}
+
+.slashSearchInput::placeholder {
+  color: var(--shell-muted-text);
+}
+
+.slashSearchInput:focus {
+  outline: none;
+}
+
+.slashMenu {
+  position: absolute;
+  top: calc(100% + var(--spacing-1));
+  left: 0;
+  z-index: 20;
+  width: 260px;
+  max-height: 280px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: var(--spacing-1) 0;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-bg);
+  box-shadow: var(--shadow-md);
+}
+
+.slashMenuGroupLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--shell-muted-text);
+  padding: var(--spacing-2) var(--spacing-3) var(--spacing-1);
+}
+
+.slashMenuItem {
+  display: block;
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  text-align: left;
+  color: var(--shell-text);
+  background: transparent;
+  border: none;
+  padding: var(--spacing-2) var(--spacing-3);
+  cursor: pointer;
+}
+
+.slashMenuItemHighlighted {
+  background: var(--shell-sidebar-bg);
+}
+
+.slashMenuEmpty {
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+/* ---- Question card: a distinct, non-editable-at-document-level "atomic"
+   block sitting inline among editable prose ---- */
+
+.card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-sidebar-bg);
+}
+
+.cardToolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.dragHandle {
+  flex: 0 0 auto;
+  color: var(--shell-muted-text);
+  cursor: grab;
+  font-size: var(--font-size-base);
+  line-height: 1;
+}
+
+.cardTypeLabel {
+  flex: 1 1 auto;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-primary);
+}
+
+.cardReorderButtons {
+  display: inline-flex;
+  gap: 2px;
+  flex: 0 0 auto;
+}
+
+.cardIconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.cardIconButton:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.cardIconButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.cardIconButton:focus-visible,
+.cardDeleteButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.cardDeleteButton {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  line-height: 1;
+}
+
+.cardDeleteButton:hover:not(:disabled) {
+  background: var(--shell-bg);
+  color: var(--color-danger);
+}
+
+.cardDeleteButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.cardTitleInput {
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--shell-text);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2);
+}
+
+.cardHelpInput {
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2);
+}
+
+.cardTitleInput:focus,
+.cardHelpInput:focus {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.cardTitleInput:disabled,
+.cardHelpInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---- Non-question content/integration inserts: a plain, non-editable
+   placeholder — full behavior out of scope for this pass. ---- */
+
+.placeholderBlock {
+  padding: var(--spacing-3);
+  border: 1px dashed var(--shell-border);
+  border-radius: var(--radius-sm);
+  color: var(--shell-muted-text);
+  font-size: var(--font-size-sm);
+  font-style: italic;
+}
+
+/* ---- Page break divider ---- */
+
+.pageBreak {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) 0;
+}
+
+.pageBreak::before,
+.pageBreak::after {
+  content: '';
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--shell-border);
+}
+
+.pageBreakLabel {
+  flex: 0 0 auto;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--shell-muted-text);
+}
+
+/* ---- Config drawer: opens automatically on slash-menu card insertion ---- */
+
+.configDrawer {
+  flex: 0 0 220px;
+  width: 220px;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-bg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.configDrawerHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3);
+  border-bottom: 1px solid var(--shell-border);
+  background: var(--shell-sidebar-bg);
+}
+
+.configDrawerTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.configDrawerClose {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.configDrawerClose:hover {
+  background: var(--shell-border);
+  color: var(--shell-text);
+}
+
+.configDrawerClose:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.configDrawerNote {
+  margin: 0;
+  padding: var(--spacing-3);
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+/* ---- Delete confirmation modal ---- */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-4);
+  background: rgba(20, 24, 33, 0.4);
+  z-index: 40;
+}
+
+.confirmModal {
+  width: min(360px, 100%);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+  background: var(--shell-bg);
+  box-shadow: var(--shadow-md);
+}
+
+.confirmTitle {
+  margin: 0 0 var(--spacing-4);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+
+.confirmActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+}
+
+.secondaryBtn {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  cursor: pointer;
+}
+
+.secondaryBtn:hover {
+  background: var(--shell-border);
+}
+
+.dangerBtn {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-danger);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  cursor: pointer;
+}
+
+.dangerBtn:hover {
+  filter: brightness(1.05);
+}
+
+.secondaryBtn:focus-visible,
+.dangerBtn:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+@container (max-width: 620px) {
+  .stage {
+    flex-direction: column;
+  }
+
+  .configDrawer {
+    width: 100%;
+    flex-basis: auto;
+  }
+}

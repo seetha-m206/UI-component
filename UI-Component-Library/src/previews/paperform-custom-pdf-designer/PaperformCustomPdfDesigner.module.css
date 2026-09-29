@@ -1,0 +1,220 @@
+.root {
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.pdfTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.pdfTable th,
+.pdfTable td {
+  border: 1px solid var(--shell-border);
+  padding: var(--spacing-2) var(--spacing-3);
+  text-align: left;
+}
+
+.emptyRow {
+  color: var(--shell-muted-text);
+  text-align: center;
+}
+
+.addButton {
+  align-self: flex-start;
+  padding: var(--spacing-2) var(--spacing-4);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.designerHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.backButton {
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.fileNameLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.fileNameInput {
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+}
+
+.canvas {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.canvasHeading {
+  font-size: var(--font-size-lg);
+  margin: 0;
+}
+
+.canvasParagraph {
+  min-height: 1.5em;
+  margin: 0;
+}
+
+.summaryBlock {
+  border: 1px dashed var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  background: var(--shell-sidebar-bg);
+}
+
+.summaryTitle {
+  margin: 0;
+  font-size: var(--font-size-base);
+}
+
+.summaryDesc {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.summaryRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.summaryFieldLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  min-width: 110px;
+}
+
+.select {
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--shell-border);
+}
+
+.radioRow {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.mergeChip {
+  display: inline-block;
+  background: #e9d8fd;
+  color: #553c9a;
+  padding: 2px var(--spacing-2);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-sm);
+  margin-right: var(--spacing-1);
+}
+
+.slashDemo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.slashLabel {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.slashInput {
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  width: 200px;
+}
+
+.gutter {
+  position: relative;
+  align-self: flex-start;
+}
+
+.gutterButton {
+  padding: var(--spacing-1) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+}
+
+.fieldPicker {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: var(--spacing-1);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(0, 0, 0, 0.1));
+  list-style: none;
+  padding: var(--spacing-1);
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 5;
+  min-width: 200px;
+}
+
+.fieldOption {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-1) var(--spacing-2);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+}
+
+.fieldOption:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.downloadSampleButton {
+  align-self: flex-start;
+  padding: var(--spacing-1) var(--spacing-4);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}

@@ -1,6 +1,6 @@
 ---
 component: 'Repeatable Subform (Inline layout)'
-ui_category: 'Data Input > Form'
+ui_category: 'Forms > Form'
 source_product: 'Zoho Forms'
 last_verified: '2026-09-17'
 evidence_state: 'open_finding'

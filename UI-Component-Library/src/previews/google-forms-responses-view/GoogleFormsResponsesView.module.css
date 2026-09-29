@@ -1,0 +1,266 @@
+.root {
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.tabBar {
+  display: flex;
+  gap: var(--spacing-2);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.tab,
+.tabActive {
+  padding: var(--spacing-2) var(--spacing-3);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  border-bottom: 2px solid transparent;
+}
+
+.tabActive {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.hint {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0;
+}
+
+.insightsBlock {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.statTile {
+  flex: 1;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statLabel {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.statValue {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.questionCard {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.questionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.responseCount {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+  cursor: help;
+}
+
+.pieChart {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.pieSlice {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.barChart {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-2);
+  height: 70px;
+}
+
+.bar {
+  width: 20px;
+  background: var(--color-primary);
+  border-radius: 2px 2px 0 0;
+}
+
+.copyChartButton {
+  align-self: flex-start;
+  border: 1px solid var(--shell-border);
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: 2px var(--spacing-2);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+}
+
+.pillList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.pill {
+  background: var(--shell-sidebar-bg);
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: var(--font-size-sm);
+}
+
+.noChartNote {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+  font-style: italic;
+  margin: 0;
+}
+
+.individualHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.navButton,
+.iconButton {
+  border: 1px solid var(--shell-border);
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-1) var(--spacing-2);
+  cursor: pointer;
+}
+
+.navButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.jumpInput {
+  width: 40px;
+  text-align: center;
+  padding: var(--spacing-1);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+}
+
+.gradedForm {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.gradeBadge {
+  align-self: flex-start;
+  background: #f3e8ff;
+  color: #553c9a;
+  border-radius: var(--radius-pill);
+  padding: 2px var(--spacing-3);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.scoreReleased {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+  margin: 0;
+}
+
+.readonlyField {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.readonlyField label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.readonlyValue {
+  padding: var(--spacing-2);
+  background: var(--shell-sidebar-bg);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.blankAnswer {
+  color: var(--shell-muted-text);
+}
+
+.pointsRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+}
+
+.pointsInput {
+  width: 50px;
+  padding: var(--spacing-1);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+}
+
+.feedbackLink {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.feedbackInput {
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+}
+
+.fetchLog {
+  border: 1px dashed var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3);
+  background: var(--shell-sidebar-bg);
+  font-size: var(--font-size-xs);
+}
+
+.fetchLogLabel {
+  font-weight: 600;
+  color: var(--shell-muted-text);
+}
+
+.fetchLog ul {
+  margin: var(--spacing-1) 0 0;
+  padding-left: var(--spacing-4);
+  font-family: monospace;
+}

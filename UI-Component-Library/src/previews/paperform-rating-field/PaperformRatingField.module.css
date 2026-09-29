@@ -1,0 +1,83 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+}
+
+.required {
+  color: var(--color-danger);
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0 0 var(--spacing-3);
+}
+
+.group {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.star {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.star:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.starDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Confirmed: two stacked icons (filled + outline), both currentColor, using
+   the theme's Active color; the filled layer cross-fades in via opacity
+   (0.25s) rather than a fill/stroke color change or clip-path reveal. */
+.icon {
+  position: absolute;
+  inset: 0;
+  width: 28px;
+  height: 28px;
+  margin: auto;
+  color: var(--paperform-active-color, #1b1b1c);
+}
+
+.iconOutline {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.iconFilled {
+  fill: currentColor;
+  stroke: currentColor;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.iconFilledOn {
+  opacity: 1;
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-1) 0 0;
+}

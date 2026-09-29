@@ -208,6 +208,216 @@ import {
 } from './typeform-analytics-dashboard/fixtures';
 import { previewConfig as typeformAnalyticsDashboardConfig } from './typeform-analytics-dashboard/preview.config';
 
+import { BuilderPreviewSettingsTabs } from './builder-preview-settings-tabs/BuilderPreviewSettingsTabs';
+import {
+  fixtures as builderPreviewSettingsTabsFixtures,
+  propsSchema as builderPreviewSettingsTabsPropsSchema,
+} from './builder-preview-settings-tabs/fixtures';
+import { previewConfig as builderPreviewSettingsTabsConfig } from './builder-preview-settings-tabs/preview.config';
+
+import { NotificationSettingsEditor } from './notification-settings-editor/NotificationSettingsEditor';
+import {
+  fixtures as notificationSettingsEditorFixtures,
+  propsSchema as notificationSettingsEditorPropsSchema,
+} from './notification-settings-editor/fixtures';
+import { previewConfig as notificationSettingsEditorConfig } from './notification-settings-editor/preview.config';
+
+import { CollaboratorPermissionsDialog } from './collaborator-permissions-dialog/CollaboratorPermissionsDialog';
+import {
+  fixtures as collaboratorPermissionsDialogFixtures,
+  propsSchema as collaboratorPermissionsDialogPropsSchema,
+} from './collaborator-permissions-dialog/fixtures';
+import { previewConfig as collaboratorPermissionsDialogConfig } from './collaborator-permissions-dialog/preview.config';
+
+import { TwoLineDropdownAndAccordion } from './two-line-dropdown-and-accordion/TwoLineDropdownAndAccordion';
+import {
+  fixtures as twoLineDropdownAndAccordionFixtures,
+  propsSchema as twoLineDropdownAndAccordionPropsSchema,
+} from './two-line-dropdown-and-accordion/fixtures';
+import { previewConfig as twoLineDropdownAndAccordionConfig } from './two-line-dropdown-and-accordion/preview.config';
+
+import { DestructiveConfirmModalComparison } from './destructive-confirm-modal-comparison/DestructiveConfirmModalComparison';
+import {
+  fixtures as destructiveConfirmModalComparisonFixtures,
+  propsSchema as destructiveConfirmModalComparisonPropsSchema,
+} from './destructive-confirm-modal-comparison/fixtures';
+import { previewConfig as destructiveConfirmModalComparisonConfig } from './destructive-confirm-modal-comparison/preview.config';
+
+import { ExportFilterCopyUtilityControls } from './export-filter-copy-utility-controls/ExportFilterCopyUtilityControls';
+import {
+  fixtures as exportFilterCopyUtilityControlsFixtures,
+  propsSchema as exportFilterCopyUtilityControlsPropsSchema,
+} from './export-filter-copy-utility-controls/fixtures';
+import { previewConfig as exportFilterCopyUtilityControlsConfig } from './export-filter-copy-utility-controls/preview.config';
+
+import { FileUploadField } from './file-upload-field/FileUploadField';
+import {
+  fixtures as fileUploadFieldFixtures,
+  propsSchema as fileUploadFieldPropsSchema,
+} from './file-upload-field/fixtures';
+import { previewConfig as fileUploadFieldConfig } from './file-upload-field/preview.config';
+
+import { TypeformFormModePicker } from './typeform-form-mode-picker/TypeformFormModePicker';
+import {
+  fixtures as typeformFormModePickerFixtures,
+  propsSchema as typeformFormModePickerPropsSchema,
+} from './typeform-form-mode-picker/fixtures';
+import { previewConfig as typeformFormModePickerConfig } from './typeform-form-mode-picker/preview.config';
+
+import { TypeformScoringOutcomeQuizEditor } from './typeform-scoring-outcome-quiz-editor/TypeformScoringOutcomeQuizEditor';
+import {
+  fixtures as typeformScoringOutcomeQuizEditorFixtures,
+  propsSchema as typeformScoringOutcomeQuizEditorPropsSchema,
+} from './typeform-scoring-outcome-quiz-editor/fixtures';
+import { previewConfig as typeformScoringOutcomeQuizEditorConfig } from './typeform-scoring-outcome-quiz-editor/preview.config';
+
+import { DocumentCanvasEditorShell } from './document-canvas-editor-shell/DocumentCanvasEditorShell';
+import {
+  fixtures as documentCanvasEditorShellFixtures,
+  propsSchema as documentCanvasEditorShellPropsSchema,
+} from './document-canvas-editor-shell/fixtures';
+import { previewConfig as documentCanvasEditorShellConfig } from './document-canvas-editor-shell/preview.config';
+
+import { RespondentRuntimeGuidedVsStandard } from './respondent-runtime-guided-vs-standard/RespondentRuntimeGuidedVsStandard';
+import {
+  fixtures as respondentRuntimeGuidedVsStandardFixtures,
+  propsSchema as respondentRuntimeGuidedVsStandardPropsSchema,
+} from './respondent-runtime-guided-vs-standard/fixtures';
+import { previewConfig as respondentRuntimeGuidedVsStandardConfig } from './respondent-runtime-guided-vs-standard/preview.config';
+
+import { PaperformYesNoField } from './paperform-yes-no-field/PaperformYesNoField';
+import {
+  fixtures as paperformYesNoFieldFixtures,
+  propsSchema as paperformYesNoFieldPropsSchema,
+} from './paperform-yes-no-field/fixtures';
+import { previewConfig as paperformYesNoFieldConfig } from './paperform-yes-no-field/preview.config';
+
+import { PaperformRatingField } from './paperform-rating-field/PaperformRatingField';
+import {
+  fixtures as paperformRatingFieldFixtures,
+  propsSchema as paperformRatingFieldPropsSchema,
+} from './paperform-rating-field/fixtures';
+import { previewConfig as paperformRatingFieldConfig } from './paperform-rating-field/preview.config';
+
+import { PaperformPaymentsProductsFields } from './paperform-payments-products-fields/PaperformPaymentsProductsFields';
+import {
+  fixtures as paperformPaymentsProductsFieldsFixtures,
+  propsSchema as paperformPaymentsProductsFieldsPropsSchema,
+} from './paperform-payments-products-fields/fixtures';
+import { previewConfig as paperformPaymentsProductsFieldsConfig } from './paperform-payments-products-fields/preview.config';
+
+import { PaperformCalculationFieldAiHelper } from './paperform-calculation-field-ai-helper/PaperformCalculationFieldAiHelper';
+import {
+  fixtures as paperformCalculationFieldAiHelperFixtures,
+  propsSchema as paperformCalculationFieldAiHelperPropsSchema,
+} from './paperform-calculation-field-ai-helper/fixtures';
+import { previewConfig as paperformCalculationFieldAiHelperConfig } from './paperform-calculation-field-ai-helper/preview.config';
+
+import { PaperformCustomPdfDesigner } from './paperform-custom-pdf-designer/PaperformCustomPdfDesigner';
+import {
+  fixtures as paperformCustomPdfDesignerFixtures,
+  propsSchema as paperformCustomPdfDesignerPropsSchema,
+} from './paperform-custom-pdf-designer/fixtures';
+import { previewConfig as paperformCustomPdfDesignerConfig } from './paperform-custom-pdf-designer/preview.config';
+
+import { PaperformSubmissionsResultsView } from './paperform-submissions-results-view/PaperformSubmissionsResultsView';
+import {
+  fixtures as paperformSubmissionsResultsViewFixtures,
+  propsSchema as paperformSubmissionsResultsViewPropsSchema,
+} from './paperform-submissions-results-view/fixtures';
+import { previewConfig as paperformSubmissionsResultsViewConfig } from './paperform-submissions-results-view/preview.config';
+
+import { PaperformQuestionVisibilityLogic } from './paperform-question-visibility-logic/PaperformQuestionVisibilityLogic';
+import {
+  fixtures as paperformQuestionVisibilityLogicFixtures,
+  propsSchema as paperformQuestionVisibilityLogicPropsSchema,
+} from './paperform-question-visibility-logic/fixtures';
+import { previewConfig as paperformQuestionVisibilityLogicConfig } from './paperform-question-visibility-logic/preview.config';
+
+import { PaperformAiCreate } from './paperform-ai-create/PaperformAiCreate';
+import {
+  fixtures as paperformAiCreateFixtures,
+  propsSchema as paperformAiCreatePropsSchema,
+} from './paperform-ai-create/fixtures';
+import { previewConfig as paperformAiCreateConfig } from './paperform-ai-create/preview.config';
+
+import { GoogleFormsFeedbackPatterns } from './google-forms-feedback-patterns/GoogleFormsFeedbackPatterns';
+import {
+  fixtures as googleFormsFeedbackPatternsFixtures,
+  propsSchema as googleFormsFeedbackPatternsPropsSchema,
+} from './google-forms-feedback-patterns/fixtures';
+import { previewConfig as googleFormsFeedbackPatternsConfig } from './google-forms-feedback-patterns/preview.config';
+
+import { PaperformFeedbackToastAlertEmptyLoading } from './paperform-feedback-toast-alert-empty-loading/PaperformFeedbackToastAlertEmptyLoading';
+import {
+  fixtures as paperformFeedbackToastAlertEmptyLoadingFixtures,
+  propsSchema as paperformFeedbackToastAlertEmptyLoadingPropsSchema,
+} from './paperform-feedback-toast-alert-empty-loading/fixtures';
+import { previewConfig as paperformFeedbackToastAlertEmptyLoadingConfig } from './paperform-feedback-toast-alert-empty-loading/preview.config';
+
+import { PaperformTooltip } from './paperform-tooltip/PaperformTooltip';
+import {
+  fixtures as paperformTooltipFixtures,
+  propsSchema as paperformTooltipPropsSchema,
+} from './paperform-tooltip/fixtures';
+import { previewConfig as paperformTooltipConfig } from './paperform-tooltip/preview.config';
+
+import { TypeformFeedbackPatterns } from './typeform-feedback-patterns/TypeformFeedbackPatterns';
+import {
+  fixtures as typeformFeedbackPatternsFixtures,
+  propsSchema as typeformFeedbackPatternsPropsSchema,
+} from './typeform-feedback-patterns/fixtures';
+import { previewConfig as typeformFeedbackPatternsConfig } from './typeform-feedback-patterns/preview.config';
+
+import { TypeformApplicationLayout } from './typeform-application-layout/TypeformApplicationLayout';
+import {
+  fixtures as typeformApplicationLayoutFixtures,
+  propsSchema as typeformApplicationLayoutPropsSchema,
+} from './typeform-application-layout/fixtures';
+import { previewConfig as typeformApplicationLayoutConfig } from './typeform-application-layout/preview.config';
+
+import { GoogleFormsAppShell } from './google-forms-app-shell/GoogleFormsAppShell';
+import {
+  fixtures as googleFormsAppShellFixtures,
+  propsSchema as googleFormsAppShellPropsSchema,
+} from './google-forms-app-shell/fixtures';
+import { previewConfig as googleFormsAppShellConfig } from './google-forms-app-shell/preview.config';
+
+import { GoogleFormsRatingField } from './google-forms-rating-field/GoogleFormsRatingField';
+import {
+  fixtures as googleFormsRatingFieldFixtures,
+  propsSchema as googleFormsRatingFieldPropsSchema,
+} from './google-forms-rating-field/fixtures';
+import { previewConfig as googleFormsRatingFieldConfig } from './google-forms-rating-field/preview.config';
+
+import { GoogleFormsLinearScaleField } from './google-forms-linear-scale-field/GoogleFormsLinearScaleField';
+import {
+  fixtures as googleFormsLinearScaleFieldFixtures,
+  propsSchema as googleFormsLinearScaleFieldPropsSchema,
+} from './google-forms-linear-scale-field/fixtures';
+import { previewConfig as googleFormsLinearScaleFieldConfig } from './google-forms-linear-scale-field/preview.config';
+
+import { GoogleFormsSectionBranching } from './google-forms-section-branching/GoogleFormsSectionBranching';
+import {
+  fixtures as googleFormsSectionBranchingFixtures,
+  propsSchema as googleFormsSectionBranchingPropsSchema,
+} from './google-forms-section-branching/fixtures';
+import { previewConfig as googleFormsSectionBranchingConfig } from './google-forms-section-branching/preview.config';
+
+import { PaperformSignaturePapersign } from './paperform-signature-papersign/PaperformSignaturePapersign';
+import {
+  fixtures as paperformSignaturePapersignFixtures,
+  propsSchema as paperformSignaturePapersignPropsSchema,
+} from './paperform-signature-papersign/fixtures';
+import { previewConfig as paperformSignaturePapersignConfig } from './paperform-signature-papersign/preview.config';
+
+import { GoogleFormsResponsesView } from './google-forms-responses-view/GoogleFormsResponsesView';
+import {
+  fixtures as googleFormsResponsesViewFixtures,
+  propsSchema as googleFormsResponsesViewPropsSchema,
+} from './google-forms-responses-view/fixtures';
+import { previewConfig as googleFormsResponsesViewConfig } from './google-forms-responses-view/preview.config';
+
 import type { PreviewRegistry } from './types';
 
 export const previewRegistry: PreviewRegistry = {
@@ -540,6 +750,336 @@ export const previewRegistry: PreviewRegistry = {
     fixtures: typeformAnalyticsDashboardFixtures,
     config: typeformAnalyticsDashboardConfig,
     propsSchema: typeformAnalyticsDashboardPropsSchema,
+  },
+  'builder-preview-settings-tabs': {
+    type: 'reconstructed',
+    Component: BuilderPreviewSettingsTabs,
+    label: 'Reconstructed preview',
+    evidence:
+      "Captured DOM/Behavior findings in Technical Data (no authorized Zoho export available). Both controls carry zero ARIA attributes in the source — a confirmed accessibility gap reproduced faithfully here (not fixed, unlike some sibling previews), exposed only via a non-ARIA data-active attribute for testability. The left rail's real full-page-reload navigation cannot be reproduced in a SPA preview and is simulated as a visual-only active-item swap; the Preview overlay's own internal device-frame markup is this reconstruction's own reasonable build (not literally captured) but correctly stays enabled and shows the confirmed empty-state copy regardless of field count.",
+    runtimeVerified: false,
+    fixtures: builderPreviewSettingsTabsFixtures,
+    config: builderPreviewSettingsTabsConfig,
+    propsSchema: builderPreviewSettingsTabsPropsSchema,
+  },
+  'notification-settings-editor': {
+    type: 'reconstructed',
+    Component: NotificationSettingsEditor,
+    label: 'Reconstructed preview',
+    evidence:
+      "Captured DOM/Actions/Network findings in Technical Data (no authorized Zoho export available). The confirmed no-op \"Field Labels\" popup, explicit-save modal, and chip-level email validation are reproduced faithfully with the record's exact token strings and banner copy. This reconstruction's own assumption: the per-token \"question text\" paired with each merge token is a representative placeholder — the source captured only the token strings themselves, not which literal form-question text was paired with each. No real POST .../notifications/email call is made; Save updates local state and fires a callback only.",
+    runtimeVerified: false,
+    fixtures: notificationSettingsEditorFixtures,
+    config: notificationSettingsEditorConfig,
+    propsSchema: notificationSettingsEditorPropsSchema,
+  },
+  'collaborator-permissions-dialog': {
+    type: 'reconstructed',
+    Component: CollaboratorPermissionsDialog,
+    label: 'Reconstructed preview',
+    evidence:
+      "Captured DOM/Actions/Rules findings in Technical Data (no authorized Zoho export available). The autocomplete-restricted Share-With field, its exact client-side error copy, the Groups/All-Users no-dropdown fixed grants, the Super Admin row's structural absence of any action control, and the exact \"no active Admins\" blocking dialog copy are all reproduced faithfully. Two honestly-flagged gaps: Surface B's real Add-User final submit was deliberately never executed in the source (would send a real email/consume a seat), so this reconstruction fires a callback without appending a row rather than inventing the unconfirmed post-submit shape; and Change-Super-Admin's \"an Admin already exists\" branch was never exercised in the source either, so only the confirmed blocking branch is faithfully implemented — the other renders a clearly-labeled placeholder.",
+    runtimeVerified: false,
+    fixtures: collaboratorPermissionsDialogFixtures,
+    config: collaboratorPermissionsDialogConfig,
+    propsSchema: collaboratorPermissionsDialogPropsSchema,
+  },
+  'two-line-dropdown-and-accordion': {
+    type: 'reconstructed',
+    Component: TwoLineDropdownAndAccordion,
+    label: 'Reconstructed preview',
+    evidence:
+      "Captured DOM/CSS/JS in Technical Data (no authorized Zoho export available), including the extracted jQuery toggleOfElemCont handler source confirming a genuine height (slideDown/slideUp) animation, content-height-scaled 400–800ms duration, distinct from the opacity-only fade documented elsewhere in this product. This reconstruction substitutes a fixed-duration CSS grid-template-rows transition for that per-pixel-scaled jQuery duration — a different mechanism that preserves the meaningful height-vs-opacity contrast without claiming the exact same timing curve. Keyboard navigation on the dropdown (arrow keys, Enter/Escape) is a standard-combobox assumption, not independently observed beyond mouse-click actions in the source.",
+    runtimeVerified: false,
+    fixtures: twoLineDropdownAndAccordionFixtures,
+    config: twoLineDropdownAndAccordionConfig,
+    propsSchema: twoLineDropdownAndAccordionPropsSchema,
+  },
+  'destructive-confirm-modal-comparison': {
+    type: 'reconstructed',
+    Component: DestructiveConfirmModalComparison,
+    label: 'Reconstructed preview',
+    evidence:
+      "Captured DOM/CSS/JS in Technical Data (no authorized Zoho export available), including both close handlers' function source and a runtime check confirming ZFForm doesn't exist in the theme editor's execution context. The record's central finding — two independently-built modal systems, not a shared component — is reproduced structurally: Modal 1 gets a class-driven opacity/transform entrance (its activeAnimate pattern) while Modal 2 renders instantly with no scoped entrance transition, matching its confirmed generic transition: all; Modal 2's box-shadow/radius values are taken verbatim from the record. Modal 2's exact alert sentence and both modals' decorative icon styling are reasonable assumptions where the record describes structure but not exact wording/pixel values.",
+    runtimeVerified: false,
+    fixtures: destructiveConfirmModalComparisonFixtures,
+    config: destructiveConfirmModalComparisonConfig,
+    propsSchema: destructiveConfirmModalComparisonPropsSchema,
+  },
+  'export-filter-copy-utility-controls': {
+    type: 'reconstructed',
+    Component: ExportFilterCopyUtilityControls,
+    label: 'Reconstructed preview',
+    evidence:
+      "Captured DOM/JS/network in Technical Data (no authorized Zoho export available), including the copy handler's live function source and confirmed zero-network behavior for the Export menu/CSV modal and copy field, vs. a real server round-trip for the status filter (this reconstruction only updates local state — no live network calls ship in this static docs site). The copy button uses navigator.clipboard.writeText instead of the record's confirmed legacy document.execCommand('copy') API — a disclosed substitution, not a claim about the real implementation — while reproducing its exact 600ms-shown + 600ms-fade confirmation timing. The CSV modal's daily-export-limit note wording is a placeholder (the record confirms the note exists but not its exact text), and \"Export as PDF\" is a callback only since its modal structure was never captured.",
+    runtimeVerified: false,
+    fixtures: exportFilterCopyUtilityControlsFixtures,
+    config: exportFilterCopyUtilityControlsConfig,
+    propsSchema: exportFilterCopyUtilityControlsPropsSchema,
+  },
+  'file-upload-field': {
+    type: 'reconstructed',
+    Component: FileUploadField,
+    label: 'Reconstructed preview',
+    evidence:
+      "Captured DOM/network in Technical Data via an injected XHR interceptor (no authorized Zoho export available), including the confirmed upload-before-validation finding and the exact error copy pattern. No fake progress bar is shown (matches the confirmed single-tick, already-100% progress event for small files), and Submit is a genuine no-op while the type error shows, per the record. The Entries-side lightbox's zoom control, filmstrip, and hover-reveal mechanics are reconstructed from the record's structural description only (no screenshot was captured this pass), so exact zoom-step values and the lightbox's visual layout are reasonable assumptions, not confirmed measurements.",
+    runtimeVerified: false,
+    fixtures: fileUploadFieldFixtures,
+    config: fileUploadFieldConfig,
+    propsSchema: fileUploadFieldPropsSchema,
+  },
+  'typeform-form-mode-picker': {
+    type: 'reconstructed',
+    Component: TypeformFormModePicker,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live exploration of Typeform's Form mode dropdown (toolbar + Form settings → General), free-plan account, 2026-09-18. The 4-option picker, the Lead-qualification → \"Review your form\" AI-drafted-rules canvas swap, the confirmed no-data-loss round trip back to Universal, and the paywalled/locked Knowledge-quiz and Match-quiz options are all directly observed. This reconstruction deliberately does NOT add a respondent-layout toggle — the record explicitly refutes the hypothesis that \"Universal mode\" controls respondent rendering; that refutation is structural to this preview, not an assumption.",
+    runtimeVerified: false,
+    fixtures: typeformFormModePickerFixtures,
+    config: typeformFormModePickerConfig,
+    propsSchema: typeformFormModePickerPropsSchema,
+  },
+  'typeform-scoring-outcome-quiz-editor': {
+    type: 'reconstructed',
+    Component: TypeformScoringOutcomeQuizEditor,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live DOM/network inspection, 2026-09-18. Both modals' non-React-Flow DOM shape (0 react-flow-classed elements/canvas vs. 41 on the underlying Logic tab), the shared \"Delete all rules\"/Cancel/Save footer, and the exact toast copy \"Edits are always autosaved.\" are directly observed and reproduced verbatim. No network call is simulated, consistent with the source finding no HTTP mutation. Assumption flagged in code: the \"Choose answers\" chip format (\"<question#> · <value>\", e.g. \"1 · 5\") is inferred to match the record's single captured chip example, not independently confirmed as a general rule.",
+    runtimeVerified: false,
+    fixtures: typeformScoringOutcomeQuizEditorFixtures,
+    config: typeformScoringOutcomeQuizEditorConfig,
+    propsSchema: typeformScoringOutcomeQuizEditorPropsSchema,
+  },
+  'document-canvas-editor-shell': {
+    type: 'reconstructed',
+    Component: DocumentCanvasEditorShell,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live DOM/network inspection, 2026-09-23, corrected 2026-09-23 by the respondent-runtime-guided-vs-standard record's retest (steady ~15s dirty-only autosave interval, not a per-keystroke debounce; a structural edit — insert/reorder/delete a card, insert a break — does NOT arm the save cycle by itself, with one CONFIRMED case of real data loss). This reconstruction deliberately reproduces that bug: a structural change never touches the visible save-status label, only a real text edit does, so \"SAVED DRAFT\" can show while a structural change is genuinely unpersisted. Assumptions, clearly scoped in code comments: a custom block model stands in for Draft.js (not a library reimplementation); drag-reorder is tested via accessible Move up/down controls (entries-kanban-view precedent) alongside a best-effort native HTML5 drag; the \"+\" gutter offers only the 2 confirmed quick-inserts; the left-rail outline, required-asterisk indicator, and the specific arrow-key-into-card keystroke-loss bug are explicitly not reconstructed.",
+    runtimeVerified: false,
+    fixtures: documentCanvasEditorShellFixtures,
+    config: documentCanvasEditorShellConfig,
+    propsSchema: documentCanvasEditorShellPropsSchema,
+  },
+  'respondent-runtime-guided-vs-standard': {
+    type: 'reconstructed',
+    Component: RespondentRuntimeGuidedVsStandard,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live DOM/network inspection of the published form, 2026-09-23. Both modes rendering the same document, the sliding-window/auto-advance/Enter-advance guided behavior, the confirmed screenIndex/(N-1) progress calculation (0%→33%→67%→100%), the confirmed absence of any back-navigation control in guided mode, and standard mode's all-at-once/single-Submit rendering are all directly observed and reproduced. This preview's evidence reflects the corrected save-timing/data-loss understanding also carried in the document-canvas-editor-shell record (not that record's original, superseded claim). The publish-race bug and partial-answer network streaming are documented findings, not simulated here — no network calls are made by this client-side preview.",
+    runtimeVerified: false,
+    fixtures: respondentRuntimeGuidedVsStandardFixtures,
+    config: respondentRuntimeGuidedVsStandardConfig,
+    propsSchema: respondentRuntimeGuidedVsStandardPropsSchema,
+  },
+  'paperform-yes-no-field': {
+    type: 'reconstructed',
+    Component: PaperformYesNoField,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live DOM/React/network inspection, 2026-09-23. No-deselect-once-answered, focus-only arrow keys (no selection change), fixed non-roving tabindex (YES=0/NO=-1 always), and the absence of any Y/N letter shortcut are all confirmed and reproduced faithfully as real product limitations, not bugs to fix. The selected-fill color is wired through a CSS custom property (default matching the tested theme's Active color) rather than hardcoded, structurally representing the confirmed \"follows the theme token\" finding. Deliberate fix, per this project's precedent (rating-star-field): the source's confirmed broken ARIA wiring (a label pointing at a nonexistent id, and a dangling aria-labelledby reference to an unrendered description element) is fixed here via a real, always-rendered label id and a describedby list that only joins ids that actually render — flagged as a deviation, not a silent correction.",
+    runtimeVerified: false,
+    fixtures: paperformYesNoFieldFixtures,
+    config: paperformYesNoFieldConfig,
+    propsSchema: paperformYesNoFieldPropsSchema,
+  },
+  'paperform-rating-field': {
+    type: 'reconstructed',
+    Component: PaperformRatingField,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live DOM/React/network inspection, 2026-09-23. Confirmed and reproduced faithfully as real product behavior: hover preview follows max(hovered, selected) — hovering a star below the committed value shows no change; re-clicking the selected star is a no-op (no deselect); the fill is an opacity cross-fade (0.25s) between a filled and outline icon layer, not a color/clip swap; aria-checked is correctly wired to only the committed value, while a separate data-selected attribute (not reproduced from a literal source attribute name, but representing the confirmed hover-inclusive preview behavior) tracks the hover-inclusive fill. Deliberate fixes, per this project's established precedent (rating-star-field, paperform-yes-no-field): the source is confirmed to have zero keyboard support at all (not focusable, no handlers) and an unnamed radiogroup (no aria-labelledby/aria-label) — both fixed here via a roving tabindex with arrow-key focus movement + Space/Enter to select, and a real aria-labelledby linking the group to its visible label. The maxRating configurability (1-10) and the 5-icon choice (Heart/Star/Thumbs up/Users/Custom) are confirmed builder-config findings; only the Star icon is reconstructed here for scope.",
+    runtimeVerified: false,
+    fixtures: paperformRatingFieldFixtures,
+    config: paperformRatingFieldConfig,
+    propsSchema: paperformRatingFieldPropsSchema,
+  },
+  'paperform-payments-products-fields': {
+    type: 'reconstructed',
+    Component: PaperformPaymentsProductsFields,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live DOM/network inspection of the builder and published respondent view, 2026-09-23. No comparison baseline exists anywhere in this library. Confirmed and reproduced faithfully: the read-only/editable Price toggle and the exact minimum-price warning copy; a live running total on the Submit button; a quantity spinner clamped to stock via the exact \"You must select no more than N\" blocking copy; native checkbox-based product selection (a real, confirmed difference from the custom div-radio pattern used by the Yes/No and Rating fields); and, most importantly, that Publish succeeds silently with the normal success toast even though no payment gateway is connected -- a confirmed real safety gap in the source product, deliberately not papered over with a warning this reconstruction would be inventing. The Manage Products modal, Choose Layout modal, and the full Custom Pricing Rules row-builder UI are summarized/simplified rather than exhaustively reconstructed, given their scope; the coupon table and pricing-rule row shown are representative examples, not the exact source data.",
+    runtimeVerified: false,
+    fixtures: paperformPaymentsProductsFieldsFixtures,
+    config: paperformPaymentsProductsFieldsConfig,
+    propsSchema: paperformPaymentsProductsFieldsPropsSchema,
+  },
+  'paperform-calculation-field-ai-helper': {
+    type: 'reconstructed',
+    Component: PaperformCalculationFieldAiHelper,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live DOM/network inspection, 2026-09-23. Confirmed and reproduced faithfully: the CALCULATION/HOW TO USE tab split; a code pane evaluated live against sample field values (not real answers); an AI panel with a Fix action (shown only while the formula has a parse error) and a free-text prompt, both proposing a full-replacement formula with a pre-computed Result that is NOT applied to the code pane until Apply is clicked. The two AI responses this preview can produce are the source record's own verbatim captured exchanges (a real Fix of a stray leading \"/\", and a real \"add a 10% discount over 5\" prompt) -- not generated live, since no AI backend is available in a static preview site; any other prompt gets a clearly-labeled canned fallback rather than a fabricated AI response. The formula evaluator is this reconstruction's own small safe (no eval) arithmetic/IF() interpreter, built only to reproduce the two confirmed real results (152399025 and 137159122.5) -- not a reimplementation of Paperform's real engine, which supports a much larger spreadsheet-style function library documented in HOW TO USE but not executable here. The code pane is a plain textarea, not a Draft.js reimplementation, per this project's established scoping precedent (document-canvas-editor-shell reproduces Draft.js behavior, not the library itself).",
+    runtimeVerified: false,
+    fixtures: paperformCalculationFieldAiHelperFixtures,
+    config: paperformCalculationFieldAiHelperConfig,
+    propsSchema: paperformCalculationFieldAiHelperPropsSchema,
+  },
+  'paperform-custom-pdf-designer': {
+    type: 'reconstructed',
+    Component: PaperformCustomPdfDesigner,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live DOM/network inspection, 2026-09-23. Confirmed and reproduced faithfully: this is another Draft.js-style document canvas (same editor family as document-canvas-editor-shell and the Calculation Editor's code pane, not a template-upload tool); the starter template's Summary config block (Public/Private/Custom/Receipt preset, Table/List layout); a genuinely working \"+\" gutter -> Insert answer picker that inserts a real merge chip on click -- the confirmed positive counter-example to Zoho's inert Field Labels popup (notification-settings-editor); the confirmed absence of the \"/\" slash-command menu in this specific Draft.js context, unlike the main form canvas. \"Download sample\" only fires a callback here -- the source record deliberately never clicked the real button either, since it triggers an actual file download, so whether/how a real sample PDF renders remains unconfirmed in both the source and this reconstruction.",
+    runtimeVerified: false,
+    fixtures: paperformCustomPdfDesignerFixtures,
+    config: paperformCustomPdfDesignerConfig,
+    propsSchema: paperformCustomPdfDesignerPropsSchema,
+  },
+  'paperform-submissions-results-view': {
+    type: 'reconstructed',
+    Component: PaperformSubmissionsResultsView,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live DOM/network inspection, 2026-09-23, source_reviewed after a same-day PF9 follow-up. The original pass (PF8) was blocked: a real submission failed on Paperform's own account-level guard (owner email unverified, HTTP 400) -- reproduced here as the 'submissions-blocked' fixture (hasCompletedSubmission=false), including the confirmed 'SubmittedForm' analytics event that fires anyway roughly 1s after the rejection. PF9 verified the account owner's email and completed a real submission, confirmed and reproduced faithfully in the default fixture: Total 22.00, Customer '-', no Score column (scoring off), a PDFs menu with the two real confirmed options ('Download PDF summary', 'Submission Results'), and -- the single most important finding -- a 'Total Charged: 22.00' detail card shown with NO unpaid/no-gateway indicator anywhere, even though payment:null was confirmed in the submit payload (no gateway connected); this directly escalates paperform-payments-products-fields' own 'silent publish' finding into a confirmed live data-integrity problem, flagged inline via a warning badge rather than invented UI. The Submissions list fetch fires twice on mount with identical params, confirmed in PF9 to be specific to the editor's Results panel (the full app's own /submissions/table endpoint fires once) -- both endpoints are named correctly in the visible network log rather than collapsed into one generic entry. Export is confirmed CSV-only via a signed-URL click, not fetch/XHR -- reproduced as a toast note, not a real file download. The Partial Submissions detail view's real evaluated Calculation total (21.6, matching 6x4x0.9 from paperform-calculation-field-ai-helper's own confirmed discount formula, reconfirmed again on the completed submission) proving the engine runs on live respondent answers, not just editor sample values; the confirmed 'Last answered: Q1' display bug despite every field being answered; Products shown by SKU rather than name; Products/stock allocation (Test Mug 3/3/0 -> 3/2/1) confirmed to follow a real completed submission even with no payment taken; and the Reports -> Segments tab as the product's only real condition-based query builder (question/operator/value, And/Or), structurally separate from the plain search+date filter on the raw Submissions list -- nested condition groups are described in the source record but simplified to a flat And-chain here given scope.",
+    runtimeVerified: false,
+    fixtures: paperformSubmissionsResultsViewFixtures,
+    config: paperformSubmissionsResultsViewConfig,
+    propsSchema: paperformSubmissionsResultsViewPropsSchema,
+  },
+  'paperform-question-visibility-logic': {
+    type: 'reconstructed',
+    Component: PaperformQuestionVisibilityLogic,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live DOM/network inspection, 2026-09-23 (PF10). No comparison baseline exists -- no Zoho Forms or Typeform conditional-logic component is documented in this library. Confirmed and reproduced faithfully: the visibility toggle opens the rule modal immediately; the condition grammar ([question][operator][value] + And/Or), the same primitive shared with paperform-payments-products-fields' Custom Pricing Rules and paperform-submissions-results-view's Report Segments (nested condition groups are described in the source record but simplified to a flat list here, matching the same scoping precedent used for those two records); Classic mode unmounts/remounts the dependent question from the DOM (not CSS-hidden) and retains its typed value across a hide cycle, per the default-on 'keeps answer when hidden' setting; Guided mode skips the dependent screen entirely and recalculates the progress percentage's denominator, both confirmed via the source record's own live testing. Two confirmed real product defects are deliberately reproduced, not silently fixed: changing the referenced question's type gives no warning and leaves the stale rule in place, and deleting the referenced question via the card gutter's 'Remove' control orphans the rule instantly with no confirmation dialog and no dependency check -- a materially less safe path than the Backspace-delete confirmation already confirmed for the same canvas in document-canvas-editor-shell, cross-linked directly in both records' Cross-Component Pattern Notes.",
+    runtimeVerified: false,
+    fixtures: paperformQuestionVisibilityLogicFixtures,
+    config: paperformQuestionVisibilityLogicConfig,
+    propsSchema: paperformQuestionVisibilityLogicPropsSchema,
+  },
+  'paperform-ai-create': {
+    type: 'reconstructed',
+    Component: PaperformAiCreate,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live network inspection, 2026-09-23 (PF11). Confirmed and reproduced faithfully: the text-prompt path is conversational, not single-shot -- two rounds of AI-asked clarifying questions precede generation (reproduced as two chat-style steps, condensed from the source record's fuller question lists given scope), and the source capture's own generated result used the exact option values supplied in those rounds, reproduced verbatim in the text-path preview fixture; the image/PDF path skips clarification entirely and generates directly, reproduced with the source capture's own confirmed 7-field result (correct Date/Phone Number/Signature type inference) rather than a generic placeholder list; generation is confirmed poll-based (the client checks back every 2-3s in the source, reproduced here as a visible, timestamped poll log at a faster demo cadence, not a single immediate response like paperform-calculation-field-ai-helper's AI calls); an unrelated marketing survey pop-up ('How did you first hear about Paperform?') is confirmed to appear during the wait, reproduced as a dismissible dialog; and 'Continue in the editor' lands in the same normal builder view for both paths, matching the confirmed 'one real builder, no AI-only editing surface' pattern shared with zia-ai-form-generator and typeform-ai-chat-to-create. The 'Request changes' box is rendered but inert, matching that it was never exercised in the source capture -- not invented functionality.",
+    runtimeVerified: false,
+    fixtures: paperformAiCreateFixtures,
+    config: paperformAiCreateConfig,
+    propsSchema: paperformAiCreatePropsSchema,
+  },
+  'google-forms-feedback-patterns': {
+    type: 'reconstructed',
+    Component: GoogleFormsFeedbackPatterns,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live exploration across the form builder, published /viewform, and forms.google.com dashboard, via direct interaction, screenshots, and DOM/ARIA inspection (getComputedStyle, getAttribute('role'/'aria-live'), data-tooltip/aria-label queries), 2026-09-28 (GF10). Confirmed and reproduced faithfully: two distinct, easily-conflated notification mechanisms — a persistent save-status line and a snackbar toast — both confirmed to carry no role/aria-live and, per the source's own direct timing test (on-screen unchanged after 17+ seconds and an in-app tab switch), neither auto-dismisses on any observed timer; reproduced here with no auto-dismiss timer on the toast, matching that finding, rather than a conventional timed toast. The confirmed scope-of-consequence modal-gating rule (single-question delete skips any modal; whole-form and whole-section deletes both open one) is reproduced exactly. The inline required-field error correctly uses role=\"alert\", the one Feedback element in the source confirmed to get accessibility right. \"Unlink form\" is reproduced as genuinely silent, per the confirmed finding of zero feedback for that action. The visual tooltip bubble itself could not be observed in the source (a captured automation limitation, not a confirmed absence) and is not reconstructed — this preview does not attempt to simulate hover-tooltip behavior for Google Forms' icon-only controls.",
+    runtimeVerified: false,
+    fixtures: googleFormsFeedbackPatternsFixtures,
+    config: googleFormsFeedbackPatternsConfig,
+    propsSchema: googleFormsFeedbackPatternsPropsSchema,
+  },
+  'paperform-feedback-toast-alert-empty-loading': {
+    type: 'reconstructed',
+    Component: PaperformFeedbackToastAlertEmptyLoading,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live exploration of Paperform's dashboard, Submissions inbox, Billing, and Submissions detail panel, via DOM/computed-style inspection, 2026-09-28 (PF14). Confirmed and reproduced faithfully: exactly one toast component (PFToast — full-width, bottom-anchored, no close button, auto-dismissing after a few seconds, confirmed via its captured post-dismiss computed style of bottom:-100px/opacity:0) reserved for success/status confirmations only — no error-toast path exists, confirmed by two separate invalid-input tests in the source producing inline messaging instead, neither reproduced as a toast option here. The two destructive-confirm modals are reproduced as visibly, structurally different components matching the source's DOM evidence: a titled MUI-style dialog (submission delete) vs. a title-less bespoke pill-button dialog (form delete) — and the confirmed real asymmetry that form-delete gives ZERO post-confirm feedback while form-restore DOES toast is reproduced deliberately, not smoothed over. The Alert/upsell modal (icon-eyebrow + headline + two asymmetric CTAs) and the skeleton-block loading state (submission detail panel) are both reproduced as the source described them.",
+    runtimeVerified: false,
+    fixtures: paperformFeedbackToastAlertEmptyLoadingFixtures,
+    config: paperformFeedbackToastAlertEmptyLoadingConfig,
+    propsSchema: paperformFeedbackToastAlertEmptyLoadingPropsSchema,
+  },
+  'paperform-tooltip': {
+    type: 'reconstructed',
+    Component: PaperformTooltip,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live exploration of two icon-only info affordances in Paperform's document-canvas builder config drawer, via zoomed-screenshot hover targeting (tested twice per icon) and DOM inspection confirming a MuiPopover-paper element (not MuiTooltip), 2026-09-28 (PF14). Confirmed and reproduced faithfully: hovering either icon triggers nothing at all — no tooltip appears on hover in this reconstruction either, matching the source's confirmed (not merely unobserved) absence of a hover-reveal interaction; clicking opens a click-anchored popover with the source's own verbatim captured copy for both icons, dismissed by a document-level click-away listener rather than a hover-out or timeout, matching MUI Popover's default dismiss behavior.",
+    runtimeVerified: false,
+    fixtures: paperformTooltipFixtures,
+    config: paperformTooltipConfig,
+    propsSchema: paperformTooltipPropsSchema,
+  },
+  'typeform-feedback-patterns': {
+    type: 'reconstructed',
+    Component: TypeformFeedbackPatterns,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live trace on a real Typeform account (admin.typeform.com), directly triggering transient/status UI (copying a link, deleting a form vs. a question, hovering toolbar icons, visiting three zero-data surfaces, cold-reloading the builder), 2026-09-28 (AL2). Confirmed and reproduced faithfully: a stark severity gap in destructive-confirm coverage — whole-form delete opens a real dialog-role modal (title phrased as a question, itemized bulleted consequences, a separate bolded irreversibility line, a genuine red \"Delete\" button, an in-place \"Deleting...\" loading label) confirmed via the accessibility tree, while deleting a single question gives NO modal, NO toast, and NO undo at all, verified twice in the source on both an original and a duplicated question. The confirmed silent failure — a syntactically valid but unreachable webhook URL passes client-side validation, the dialog closes as if successful, and the webhook is never actually persisted, with zero user-facing signal — is reproduced via a hardcoded URL-substring match rather than a real network attempt (no network calls are made by this client-side preview). The success toast (bottom-right, green check, explicit close, confirmed auto-dismiss bracketed to 4-6s via timed screenshots in the source) is reproduced on a fixed timer within that window. The three confirmed-distinct empty states (illustrated+link+single-CTA; text-only+dual-CTA; icon+instructional-heading+single-CTA) are reproduced with the source's own verbatim captured copy.",
+    runtimeVerified: false,
+    fixtures: typeformFeedbackPatternsFixtures,
+    config: typeformFeedbackPatternsConfig,
+    propsSchema: typeformFeedbackPatternsPropsSchema,
+  },
+  'typeform-application-layout': {
+    type: 'reconstructed',
+    Component: TypeformApplicationLayout,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live trace on a real Typeform account (admin.typeform.com), navigating all five workspace tabs and all three form-builder tabs, inspecting the DOM/accessibility tree at each stop and testing collapse/expand and drag-reorder affordances directly, 2026-09-28 (AL1). Confirmed and reproduced faithfully: NO single persistent sidebar — each of Forms/Contacts/Automations (reconstructed here; Insights and Research Flow are noted as an open gap and left as inert labels) renders a genuinely different sidebar, reproduced with real content swaps rather than one shared component restyled; the builder's Content/Workflow/Connect tabs each define a structurally distinct main-content shell (a Pages outline rail + re-rendering canvas + settings panel, vs. a flow-diagram canvas with a fixed Actions panel and no left rail, vs. a filterable integration list with no left rail); the confirmed real finding that the 'Hide question panel' toggle collapses the RIGHT settings panel, not the left Pages rail; and the confirmed naming correction that the builder's single top-bar action is 'Share,' not an assumed 'Publish.' The floating 'Ask Typeform AI' / 'Chat to create' input is reproduced as the one element persisting across every shell and tab tested — the source's own strongest 'most persistent element' finding. The Pages rail's confirmed full keyboard-accessible drag-reorder (space bar to pick up, arrow keys to move, per an explicit screen-reader hint in the source) is represented here only as a native `draggable` attribute on each row, not a full keyboard-reorder implementation — out of scope for this structural/shell pass, consistent with how document-canvas-editor-shell scoped its own drag-and-drop reconstruction. The AI generation modal itself, Insights, and Research Flow are not reconstructed — see [[typeform-ai-chat-to-create]] for the modal.",
+    runtimeVerified: false,
+    fixtures: typeformApplicationLayoutFixtures,
+    config: typeformApplicationLayoutConfig,
+    propsSchema: typeformApplicationLayoutPropsSchema,
+  },
+  'google-forms-app-shell': {
+    type: 'reconstructed',
+    Component: GoogleFormsAppShell,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live, logged-in exploration of the forms.google.com dashboard and the form builder via injected JavaScript (getComputedStyle/getBoundingClientRect) and the accessibility-tree dump (read_page), 2026-09-28 (GF9). Confirmed and reproduced faithfully: no single persistent top bar shared across screens (only the brand icon and account avatar carry over — reproduced by rendering two genuinely distinct header markups per screen, not one shared shell component); no docked sidebar on the dashboard, only a hamburger-triggered fixed-position overlay drawer (280px, confirmed via computed style) that floats over the content and closes on Escape/outside-click; the builder's 2-row sticky header plus a conditional row-3 unpublished banner; and — the centerpiece finding — 'Total points: 0' is confirmed NOT tab-conditional, staying visible identically across Questions/Responses/Settings, reproduced here as always-rendered regardless of active tab (a real, if minor, inconsistency in the source). The sticky-header-over-independently-scrolling-canvas structure (confirmed in the source by a direct scroll test, not inferred from CSS) is reproduced with a real internal scroll container. The response-count badge (5) and 'X responses' heading text reuse the source's own captured values. Template gallery, Preview/Theme/Share dialogs, and the Responses tab's Summary/Question/Individual sub-tabs (already covered by google-forms-responses-view) are out of scope for this structural/shell pass and are not reconstructed.",
+    runtimeVerified: false,
+    fixtures: googleFormsAppShellFixtures,
+    config: googleFormsAppShellConfig,
+    propsSchema: googleFormsAppShellPropsSchema,
+  },
+  'google-forms-rating-field': {
+    type: 'reconstructed',
+    Component: GoogleFormsRatingField,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live DOM/ARIA/CSS inspection via injected JavaScript while driving real mouse/keyboard input on the live /viewform page, 2026-09-24 (no authorized Google export available). Confirmed-real behavior reproduced faithfully, not fixed: NO hover-preview-fill exists at all (confirmed two ways in the source — hovering never changes any icon's fill state, only a faint generic highlight appears), a genuine fourth distinct aria-checked pattern where clicking icon N marks icons 1..N aria-checked=true simultaneously (non-exclusive 'fill' semantics on a role=\"radio\" set, not classic single-exclusive-radio), clicking the already-selected icon deselects everything and toggles a 'Clear selection' text link (the only one of the four library rating fields with a confirmed working deselect, on both click and Space), Left/Right arrow keys commit the value immediately with wraparound (no separate confirm step, unlike this project's paperform-rating-field sibling which only moves focus on arrow keys), Enter is a confirmed no-op, and there is NO role=\"radiogroup\" and no group-level accessible name anywhere — each icon's own aria-label is just the bare number, not tied to the question text, arguably a step worse than paperform-rating-field's merely-unnamed-group gap. Per the source record's own finding, this deliberately follows the SAME precedent paperform-rating-field itself set (document, don't silently fix, an unnamed group) rather than the accessibility-fix precedent used by some other sibling previews. The fill visual is a simplified filled/outline icon swap with transition:none (confirmed transition-duration:0s in the source, which uses a shared SVG-sprite crop mechanism not reproduced literally here). Only the star icon style was CSS/DOM-inspected in the source; heart/thumbs-up icon paths in this preview are this reconstruction's own placeholder artwork, not independently verified to share the same sprite mechanism.",
+    runtimeVerified: false,
+    fixtures: googleFormsRatingFieldFixtures,
+    config: googleFormsRatingFieldConfig,
+    propsSchema: googleFormsRatingFieldPropsSchema,
+  },
+  'google-forms-linear-scale-field': {
+    type: 'reconstructed',
+    Component: GoogleFormsLinearScaleField,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live DOM/ARIA inspection via injected JavaScript while driving real clicks on the live /viewform page, 2026-09-25 (no authorized Google export available). No direct sibling record exists — the comparison in the source is internal, against this product's own Rating field ([[google-forms-rating-field]]), confirmed to be a genuinely separate component (different CSS class, Od2TWd hYsg7c vs. p8oyLd) rather than the same widget skinned two ways. Confirmed-real behavior reproduced faithfully: a genuine role=\"radiogroup\" WITH a correct aria-labelledby resolving to the actual question text (a stark, confirmed contrast with the Rating field's total absence of any group name); selection is exclusive (aria-checked=true on exactly one option, the opposite of Rating's cumulative fill); clicking the already-selected option once is a visual no-op with no deselect. The centerpiece of this preview is the confirmed, reproducible ARIA bug: a SECOND click on the same already-selected option leaves it still visually selected but flips aria-checked to false on every option, including the visually-selected one — re-verified seconds apart in the source with no change, i.e. a permanent stale disagreement, not a momentary render-timing artifact (unlike a separate settling-lag quirk noted for Rating, which always resolved correctly a moment later). This reconstruction models that as two deliberately-separable pieces of state (visual `value` vs. `ariaCheckedValue`) and surfaces the live aria-checked value in a visible debug readout plus a `title` attribute on the stale option, so the bug is directly demonstrable rather than only inferable from markup. Endpoint-only labeling (exactly two, min/max) and the fixed min (0 or 1) / max (2-10) dropdown ranges are reproduced as confirmed; no CSS fill-mechanism detail was independently traced in the source for this component (out of scope there), so the filled-circle styling here is a plain, undocumented assumption, not a captured value.",
+    runtimeVerified: false,
+    fixtures: googleFormsLinearScaleFieldFixtures,
+    config: googleFormsLinearScaleFieldConfig,
+    propsSchema: googleFormsLinearScaleFieldPropsSchema,
+  },
+  'google-forms-section-branching': {
+    type: 'reconstructed',
+    Component: GoogleFormsSectionBranching,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, live logged-in exploration + network diffing of Google Forms via Claude browser extension, 2026-09-25. Confirmed and reproduced faithfully: branching exists at both a per-option destination dropdown (once "Go to section based on answer" is on) and a per-section footer, both offering an identical destination set including earlier/current sections with no loop validation; on the published /viewform, picking "Yes, skip to section 3" performs a real navigation jump straight to Section 3 with Section 2 never rendered at all, reproduced here as Section 2 genuinely never mounting in React state rather than being hidden with CSS; the Back button is skip-aware, returning directly to Section 1 (not Section 2) with the prior answer still shown selected, matching the source record\'s confirmed finding that the back stack respects the branch actually taken; and deleting the referenced Section 3 shows only the generic delete confirmation with no mention of the two rules pointing at it, after which the per-option dropdown silently resets its display value to "Continue to next section" with no error state or broken-reference indicator — reproduced deliberately as a real confirmed anti-pattern, not fixed. Deliberately simplified rather than invented: only the two confirmed options/destinations from the source\'s actual 3-section test tree are modeled (not the full N-section list a real form editor would offer), the exact save-request/network capture (POST .../save, the naLogImpressions/font-getmetadata 404s, the long-lived /bind channel) documented in the source\'s Technical Data section is not reproduced since it is a network trace rather than an interactive UI behavior, and forward/backward loop navigation mid-response is not built since the source record explicitly marks it "not tested end-to-end."',
+    runtimeVerified: false,
+    fixtures: googleFormsSectionBranchingFixtures,
+    config: googleFormsSectionBranchingConfig,
+    propsSchema: googleFormsSectionBranchingPropsSchema,
+  },
+  'paperform-signature-papersign': {
+    type: 'reconstructed',
+    Component: PaperformSignaturePapersign,
+    label: 'Reconstructed preview',
+    evidence:
+      'OBSERVATION, live exploration + DOM/network inspection of Paperform via Claude browser extension, 2026-09-24. No comparison baseline exists — neither Zoho Forms nor Typeform documents an e-signature hand-off feature. Confirmed and reproduced faithfully: the Signature field is draw-only with no type-to-sign toggle anywhere in the builder or rendered DOM; drawing a stroke reveals a "CONFIRM SIGNATURE" footer with clear (↻) and confirm (✓) controls; confirming is a real network round trip (simulated here with a timeout) showing a transient "Signature still uploading" message before settling into a single redraw (pencil) icon, clearing the required-field error and flipping the Submit label from "Please finish the form — $20.00" to "Submit — $20.00"; Submit with nothing drawn is correctly blocked client-side with "This question is required," reproduced exactly since the source explicitly contrasts this with Price/Products fields elsewhere in the same form that publish and submit fine with no gateway; the Papersign hand-off starts with the confirmed empty state and "New document +" button, then the mapping step\'s per-signer Name/Email dropdowns pull from the form\'s own question list, matching the source\'s confirmed finding that recipient metadata (not document prose) is populated this way; and "Send Test" reproduces, as a flagged UI warning rather than a real send, the source\'s confirmed real-send gate quoting its exact captioned copy ("You must have submitted the form to be able to test") plus the explicit "no non-live test mode" finding, alongside a static callout for the confirmed absence of any status feedback loop back into Submissions (no "pending signature" badge, no link out). Deliberately simplified rather than invented: no real canvas/drawing API is wired (a "Simulate: draw a stroke" button stands in, as the task explicitly scoped); the separate Papersign document editor app (its own Draft.js-style canvas, slash-menu, and {{ }} merge-variable autocomplete, reached in a new browser tab per the source) is not reconstructed, only its hand-off configuration surface on the form side; and no real POST/send request is ever fired by the Send Test button, consistent with this project\'s standing rule against real sends already followed in the original research pass.',
+    runtimeVerified: false,
+    fixtures: paperformSignaturePapersignFixtures,
+    config: paperformSignaturePapersignConfig,
+    propsSchema: paperformSignaturePapersignPropsSchema,
+  },
+  'google-forms-responses-view': {
+    type: 'reconstructed',
+    Component: GoogleFormsResponsesView,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live network inspection via read_network_requests while switching tabs, 2026-09-23. Confirmed and reproduced faithfully: Summary, Question, and Individual are three genuinely separate on-demand fetches, not one shared initial load — reproduced as a visible, accumulating network log naming the real confirmed endpoints (aggregatestatistics / getresponseclusters / getsingleresponse) rather than a single generic 'loading' state; the Summary tab's per-question chart type is keyed to the question type (pie for Multiple choice with a Copy chart button, bar for Linear scale, a plain scrollable pill list for Short answer with explicitly no Copy chart button); the confirmed per-question-answered (not per-respondent-total) count quirk is reproduced exactly as captured in the source's own accidental test -- the Multiple choice question shows 4 responses while Feedback/Satisfaction show 2, since one fixture respondent predates those questions; and the Individual tab's read-only rendered response reuses the graded-response layout (a points badge, a jump-to-N field, prev/next paging, a per-question points-override input, and an 'Add individual feedback' private-comment affordance), with a response that predates a question rendering blank rather than hidden, matching the confirmed source behavior. Filter/search is deliberately absent everywhere in this reconstruction, matching the confirmed real absence in the source product. The linked Google Sheet's own real-time sync mechanism (left genuinely unresolved in the source record) is not reconstructed here at all, since it was never confirmed to work a specific way.",
+    runtimeVerified: false,
+    fixtures: googleFormsResponsesViewFixtures,
+    config: googleFormsResponsesViewConfig,
+    propsSchema: googleFormsResponsesViewPropsSchema,
   },
   'toggle-radio-switch': {
     Component: ToggleRadioSwitch,

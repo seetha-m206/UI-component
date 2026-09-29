@@ -1,6 +1,6 @@
 ---
 component: "Workflow Tab — Scoring / Outcome Quiz Editor"
-ui_category: "Actions/Controls > Workflow builder"
+ui_category: "Actions > Workflow builder"
 source_product: "Typeform"
 last_verified: "2026-09-18"
 evidence_state: "source_reviewed"

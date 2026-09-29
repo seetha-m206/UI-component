@@ -1,6 +1,6 @@
 ---
 component: "Form Mode Picker (\"Universal Mode\")"
-ui_category: "Data Input > Dropdown/Select"
+ui_category: "Forms > Dropdown/Select"
 source_product: "Typeform"
 last_verified: "2026-09-18"
 evidence_state: "source_reviewed"
@@ -49,7 +49,7 @@ Single-question-per-screen is Typeform's **baseline respondent rendering**, not 
 ## Competitor Comparisons
 | Competitor | Same component implementation | Strengths | Weaknesses |
 |---|---|---|---|
-| *(TODO — not yet researched)* | | | |
+| Paperform (see [[respondent-runtime-guided-vs-standard]]) | Paperform's "Form Experience" toggle directly produces Typeform-equivalent one-question-per-screen rendering (Guided mode) as one of two respondent runtimes generated from a single authored document | Paperform's guided mode additionally interleaves authored document prose between questions, which Typeform's question-only model can't do; the mode itself is a per-form choice rather than a fixed product-wide architecture | No back-navigation control was found in Paperform's guided mode (not confirmed either way for Typeform, since it wasn't specifically tested there) |
 
 ## Best Observed Approach
 - TODO — needs a Zoho Forms equivalent (Zoho Forms has no comparable "form mode" preset picker documented in this library; its builder is always the all-fields-visible scrollable canvas per [[sidebar-settings-subnav]] and related records).

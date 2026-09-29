@@ -1,0 +1,107 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  /* Default stand-in for the record's "theme Active color" — overridden
+     inline per-instance via the `activeColor` prop. */
+  --paperform-active-color: #1b1b1c;
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+}
+
+.required {
+  color: var(--color-danger);
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0 0 var(--spacing-3);
+}
+
+/* Captured: two equal-width, SIDE-BY-SIDE raised buttons (330x36px each at
+   a 700px card) inside a role="radiogroup" — reads as a two-segment button
+   bar, not a switch/toggle visual. */
+.group {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+/* Captured verbatim from Technical Data's Behavior & States table:
+   default background rgb(248,248,248), text rgb(51,51,51), shadow
+   0 2px 6px -2px rgba(0,0,0,.5), transition: all 0.1s ease. Uppercase text
+   transform confirmed ("labeled YES and NO (uppercase)"). */
+.option {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(51, 51, 51);
+  background: rgb(248, 248, 248);
+  border: none;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+/* Captured: hover shadow deepens; keyboard focus uses the SAME treatment as
+   hover, with no distinct focus ring (outline: none) — a confirmed
+   accessibility defect in the source (Technical Data, defect #4) that this
+   reconstruction reproduces as-is. Only the confirmed dangling label/id
+   wiring (defects #1-2) is treated as worth fixing here — see the .tsx
+   file's doc comment for why those two get different treatment. */
+.option:hover:not(:disabled),
+.option:focus-visible {
+  box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.8);
+  outline: none;
+}
+
+/* Captured: selected fill uses the theme's Active color (wired via the
+   --paperform-active-color custom property, not a hardcoded hex), white
+   text, and the same deep shadow as hover/focus. */
+.optionSelected {
+  background: var(--paperform-active-color);
+  color: #fff;
+  box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.8);
+}
+
+.optionSelected:hover:not(:disabled),
+.optionSelected:focus-visible {
+  background: var(--paperform-active-color);
+}
+
+.option:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin: var(--spacing-2) 0 0;
+}
+
+/* Responsive behavior not captured in the source (only the fixed 700px
+   card-width render was traced) — stacking at narrow widths is a
+   reasonable assumption for a two-segment bar, not an observed breakpoint. */
+@container (max-width: 320px) {
+  .group {
+    flex-direction: column;
+  }
+
+  .option {
+    width: 100%;
+  }
+}

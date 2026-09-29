@@ -1,6 +1,6 @@
 ---
 component: "Toggle (Custom Radio-Styled Switch)"
-ui_category: "Actions/Controls > Toggle"
+ui_category: "Actions > Toggle"
 source_product: "Zoho Forms"
 last_verified: "2026-09-15"
 evidence_state: "source_reviewed"
@@ -113,6 +113,7 @@ Built on jQuery (`.show()`/`.hide()`/`.fadeIn()`/`.fadeOut()`), not a modern fra
 | Competitor | Same component implementation | Strengths | Weaknesses |
 |---|---|---|---|
 | Typeform ([[yes-no-field]]) | Custom JS-driven, built on Radix UI's headless `RadioGroup` primitive, native `<button role="radio">`, roving tabindex, dual `aria-checked`/`data-state` encoding | Consistent keyboard/ARIA behavior via a headless library rather than a hand-rolled native-radio-hidden-behind-a-label pattern; genuine 0.25s eased transition | Same one-way (no deselect) limitation as this Zoho control's own design; letter-shortcut badges shown but non-functional in the tested mode |
+| Paperform ([[paperform-yes-no-field]]) | Custom JS-driven (React 16.14, hand-rolled, no headless library), `div[role=radio]`×2 in `div[role=radiogroup]`, fixed (non-roving) tabindex | Selected fill follows the theme's Active color token, not hard-coded; a genuine 100ms `all ease` cross-fade transition on background/text/shadow | Same one-way (no deselect) limitation; arrow keys move focus but don't select (not the standard WAI-ARIA radio model Typeform's Radix-based implementation follows); confirmed broken `label for`/`aria-labelledby` wiring — a step below either sibling's ARIA correctness |
 
 ## Best Observed Approach
 - Typeform's Radix-based approach provides stronger baseline keyboard/ARIA guarantees than this control's fully hand-rolled native-radio-hidden-behind-a-label pattern, though both correctly support standard radio semantics on the dimensions actually tested.

@@ -1,0 +1,501 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+  padding: var(--spacing-8) var(--spacing-4);
+  border: 1px dashed var(--shell-border);
+  border-radius: var(--radius-md);
+}
+
+.emptyStateText {
+  margin: 0;
+  font-size: var(--font-size-base);
+  color: var(--shell-muted-text);
+}
+
+.primaryButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-5);
+  background: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+.primaryButton:hover {
+  filter: brightness(1.1);
+}
+
+.secondaryButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ---- Trigger tabs ---- */
+
+.triggerTabs {
+  display: inline-flex;
+  border-bottom: 1px solid var(--shell-border);
+  margin-bottom: var(--spacing-4);
+}
+
+.triggerTab {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--spacing-2) var(--spacing-4);
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.triggerTabActive {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.triggerTab:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: -2px;
+}
+
+.tabPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  align-items: flex-start;
+}
+
+.tabEmptyText {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.templateList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.templateCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3) var(--spacing-4);
+  background: var(--shell-bg);
+}
+
+.templateCardText {
+  min-width: 0;
+}
+
+.templateSubject {
+  margin: 0 0 2px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.templateMeta {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+/* ---- Toggle switch, matching the token-driven pattern used elsewhere in
+   this repo (e.g. typeform-contacts-module's enrichment toggle). ---- */
+.toggleSwitch {
+  flex: none;
+  width: 36px;
+  height: 20px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: var(--shell-border);
+  position: relative;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.toggleSwitchOn {
+  background: var(--color-success);
+}
+
+.toggleThumb {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform var(--transition-fast);
+  transform: translateX(0);
+}
+
+.toggleSwitchOn .toggleThumb {
+  transform: translateX(16px);
+}
+
+.toggleSwitch:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ---- Modal shell ---- */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 24, 33, 0.6);
+  padding: var(--spacing-4);
+}
+
+.modal {
+  width: min(560px, 100%);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--shell-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-4) var(--spacing-6);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.modalHeading {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  margin: 0;
+}
+
+.closeButton {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.modalBody {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: var(--spacing-4) var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.fieldLabel {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  margin-top: var(--spacing-3);
+}
+
+.fieldRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.readOnlyValue {
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+  padding: var(--spacing-2) 0;
+}
+
+.textInput,
+.bodyTextarea {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--shell-bg);
+}
+
+.bodyTextarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: var(--font-family);
+}
+
+.textInput:focus-visible,
+.bodyTextarea:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+/* ---- Recipient chip field ---- */
+
+.chipField {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-1);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-1) var(--spacing-2);
+  background: var(--shell-bg);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  background: var(--shell-sidebar-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  padding: 2px var(--spacing-2);
+}
+
+/* Red banner + invalid-chip styling: the source documents a red "Invalid
+   email address specified" banner; exact chip-level color values were not
+   independently captured, so var(--color-danger) is applied here as a
+   reasonable, token-based stand-in. */
+.chipInvalid {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+  background: rgba(220, 38, 38, 0.08);
+}
+
+.chipRemove {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 1;
+  color: inherit;
+  padding: 0;
+}
+
+.chipInput {
+  flex: 1 1 120px;
+  min-width: 120px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-1);
+}
+
+.chipInput:focus {
+  outline: none;
+}
+
+.errorBanner {
+  color: var(--color-danger);
+  font-size: var(--font-size-xs);
+  margin: var(--spacing-1) 0 0;
+}
+
+/* ---- Body toolbar ---- */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-1);
+  border: 1px solid var(--shell-border);
+  border-bottom: none;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  padding: var(--spacing-1) var(--spacing-2);
+  background: var(--shell-sidebar-bg);
+}
+
+.toolbarButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-xs);
+  border: none;
+  background: transparent;
+  color: var(--shell-muted-text);
+  padding: var(--spacing-1) var(--spacing-2);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.toolbarButtonActive {
+  font-family: var(--font-family);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--color-primary);
+  padding: var(--spacing-1) var(--spacing-2);
+  cursor: pointer;
+}
+
+.toolbarButtonActive:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.popoverAnchor {
+  position: relative;
+  margin-left: auto;
+}
+
+.fieldLabelsPopover {
+  position: absolute;
+  top: calc(100% + var(--spacing-2));
+  right: 0;
+  z-index: 10;
+  width: 280px;
+  max-height: 320px;
+  overflow-y: auto;
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-3);
+}
+
+.popoverHeading {
+  margin: 0 0 var(--spacing-1);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.popoverHint {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.popoverSectionHeading {
+  margin: var(--spacing-2) 0 var(--spacing-1);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--shell-muted-text);
+}
+
+.tokenList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Rendered as a real <button> (not a plain <li>) so the "click does
+  nothing" behavior is genuinely testable rather than merely implied by
+  omission — this deliberately reproduces the source's confirmed
+  affordance-vs-behavior gap ("presents itself... in a way that visually
+  suggests click-to-insert, but is confirmed inert").
+*/
+.tokenRow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+
+.tokenRow:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.tokenRow:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: -2px;
+}
+
+.tokenQuestion {
+  font-size: var(--font-size-xs);
+  color: var(--shell-text);
+}
+
+.tokenValue {
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  color: var(--color-primary);
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3) var(--spacing-6);
+  border-top: 1px solid var(--shell-border);
+}
+
+@container (max-width: 480px) {
+  .modal {
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .fieldLabelsPopover {
+    width: 100%;
+    right: auto;
+    left: 0;
+  }
+}

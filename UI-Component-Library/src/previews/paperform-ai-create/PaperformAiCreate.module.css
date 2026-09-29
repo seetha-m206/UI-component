@@ -1,0 +1,135 @@
+.root {
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.textarea {
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  min-height: 70px;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  resize: vertical;
+}
+
+.landingActions {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.primaryButton {
+  align-self: flex-start;
+  padding: var(--spacing-2) var(--spacing-4);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondaryButton {
+  align-self: flex-start;
+  padding: var(--spacing-2) var(--spacing-4);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.chatBubble {
+  background: #f3e8ff;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3) var(--spacing-4);
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: #553c9a;
+}
+
+.hint {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0;
+}
+
+.pollLog {
+  border: 1px dashed var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3);
+  background: var(--shell-sidebar-bg);
+  font-size: var(--font-size-xs);
+}
+
+.pollLogLabel {
+  font-weight: 600;
+  color: var(--shell-muted-text);
+}
+
+.pollLog ul {
+  margin: var(--spacing-1) 0 0;
+  padding-left: var(--spacing-4);
+  font-family: monospace;
+}
+
+.surveyPopup {
+  position: relative;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3) var(--spacing-6) var(--spacing-3) var(--spacing-3);
+  background: #fffaf0;
+  font-size: var(--font-size-sm);
+}
+
+.surveyClose {
+  position: absolute;
+  top: var(--spacing-2);
+  right: var(--spacing-2);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.previewTitle {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}
+
+.fieldList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.fieldCard {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-sm);
+}
+
+.fieldDetail {
+  color: var(--shell-muted-text);
+  font-size: var(--font-size-xs);
+}

@@ -41,14 +41,23 @@ describe('TypeformAiChatToCreate', () => {
   });
 
   it('submitting a prompt opens the modal, shows the user message, transitions through generating to result, and shows the follow-up message', async () => {
-    // Real timers with a very short, deterministic delay (rather than
+    // Real timers with a short, deterministic delay (rather than
     // vi.useFakeTimers()) — combining fake timers with userEvent's own
     // internal async waits is a well-known deadlock, so this reconstructs
     // "assert on both interim and final states" via a short real delay +
     // findBy* polling instead. generationDelayMs is still the same real,
     // controllable prop the live component uses (see README).
+    //
+    // 100ms, not 20ms: this test asserts the interim "still generating"
+    // state *synchronously* right after the click (line below), before the
+    // timer fires. At 20ms that assertion raced the timer under load and
+    // intermittently failed — userEvent's own click handling plus a
+    // re-render can eat close to that budget on a contended CI/dev machine.
+    // 100ms gives comfortable headroom for the interim assertion while
+    // remaining negligible for total test time; the final-state wait below
+    // already has its own generous explicit timeout independent of this.
     const user = userEvent.setup();
-    render(<TypeformAiChatToCreate {...getFixture('closed')} generationDelayMs={20} />);
+    render(<TypeformAiChatToCreate {...getFixture('closed')} generationDelayMs={100} />);
 
     await user.type(screen.getByRole('textbox', { name: 'Ask Typeform AI' }), 'Build me a form');
     await user.click(screen.getByRole('button', { name: 'Ask Typeform AI' }));
@@ -58,7 +67,18 @@ describe('TypeformAiChatToCreate', () => {
     expect(screen.getByText('Creating a three-question feedback survey.')).toBeInTheDocument();
     expect(screen.queryByText('Created a three-question feedback survey.')).not.toBeInTheDocument();
 
-    expect(await screen.findByText('Created a three-question feedback survey.')).toBeInTheDocument();
+    // A generous explicit timeout here, independent of the component's own
+    // 20ms generationDelayMs: testing-library's findBy* defaults to a 1000ms
+    // poll window, which is tight enough that CPU contention under a full
+    // parallel test-suite run (dozens of files/workers at once) has been
+    // observed to intermittently exceed it, even though this same assertion
+    // is reliable in isolation. Widening the poll window (not the delay
+    // itself) trades a little worst-case test time for eliminating that
+    // load-dependent flake, without masking a real regression — a genuine
+    // break would still fail well before 5s.
+    expect(
+      await screen.findByText('Created a three-question feedback survey.', {}, { timeout: 5000 })
+    ).toBeInTheDocument();
     expect(screen.getByText("Here’s what we did:")).toBeInTheDocument();
     expect(
       screen.getByText('Added. Is there anything else you’d like to include?')
@@ -76,8 +96,11 @@ describe('TypeformAiChatToCreate', () => {
     );
     await user.click(screen.getByRole('button', { name: 'Ask Typeform AI' }));
 
-    // Same canned checklist item regardless of what was typed.
-    expect(await screen.findByText('Created a three-question feedback survey.')).toBeInTheDocument();
+    // Same canned checklist item regardless of what was typed. Explicit
+    // timeout: see the load-contention note on the earlier test.
+    expect(
+      await screen.findByText('Created a three-question feedback survey.', {}, { timeout: 5000 })
+    ).toBeInTheDocument();
     expect(
       screen.getByRole('heading', { name: 'Questions to be set:' })
     ).toBeInTheDocument();
@@ -228,7 +251,7 @@ describe('TypeformAiChatToCreate', () => {
 
     await user.type(screen.getByRole('textbox', { name: 'Ask Typeform AI' }), 'Build a form');
     await user.click(screen.getByRole('button', { name: 'Ask Typeform AI' }));
-    await screen.findByText('Created a three-question feedback survey.');
+    await screen.findByText('Created a three-question feedback survey.', {}, { timeout: 5000 });
     await user.click(screen.getByRole('radio', { name: '▶ Preview' }));
     await user.click(screen.getByRole('button', { name: 'Create form' }));
 

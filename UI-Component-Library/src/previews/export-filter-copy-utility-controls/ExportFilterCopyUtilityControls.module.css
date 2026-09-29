@@ -1,0 +1,374 @@
+.root {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.section {
+  position: relative;
+}
+
+.sectionCaption {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--shell-muted-text);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---- Export menu ---- */
+
+.exportTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-text);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  cursor: pointer;
+}
+
+.exportTrigger:hover:not(:disabled) {
+  background: var(--shell-sidebar-bg);
+}
+
+.exportTrigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.exportTrigger:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* Captured: the export menu toggles via a plain `style="display:block"` —
+   no transition/animation classes — an instant show/hide. */
+.exportMenu {
+  position: absolute;
+  top: calc(100% + var(--spacing-1));
+  left: 0;
+  z-index: 20;
+  min-width: 180px;
+  margin: 0;
+  padding: var(--spacing-1) 0;
+  list-style: none;
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.exportMenuItem {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-4);
+  border: none;
+  background: transparent;
+  color: var(--shell-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  text-align: left;
+  cursor: pointer;
+}
+
+.exportMenuItem:hover,
+.exportMenuItem:focus-visible {
+  background: var(--shell-sidebar-bg);
+}
+
+/* ---- CSV export modal ---- */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 24, 33, 0.6);
+  padding: var(--spacing-6);
+}
+
+/* 875px wide, directly captured in Technical Data. */
+.csvModal {
+  width: min(875px, 100%);
+  max-height: 100%;
+  overflow-y: auto;
+  background: var(--shell-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-8);
+}
+
+.csvModalHeading {
+  margin: 0 0 var(--spacing-4);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.fieldLabel {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--shell-muted-text);
+  margin: 0 0 var(--spacing-2);
+}
+
+.textInput {
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--shell-text);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  margin-bottom: var(--spacing-4);
+}
+
+.textInput:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-4);
+  cursor: pointer;
+}
+
+.csvInfoPanel {
+  background: var(--shell-sidebar-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.csvInfoPanel p {
+  margin: 0;
+}
+
+.csvModalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-6);
+}
+
+.cancelButton,
+.doneButton {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.cancelButton {
+  border: 1px solid var(--shell-border);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+}
+
+.cancelButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.doneButton {
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.doneButton:hover {
+  filter: brightness(1.05);
+}
+
+.cancelButton:focus-visible,
+.doneButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* ---- Status filter ---- */
+
+.statusTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--shell-text);
+  background: transparent;
+  border: none;
+  padding: var(--spacing-1) 0;
+  cursor: pointer;
+}
+
+.statusTrigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.statusTrigger:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.chevronIcon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Captured: `transition: all` in computed style but no animation-name —
+   toggles via display:block/none, an instant show/hide with no observed
+   easing. */
+.statusMenu {
+  position: absolute;
+  top: calc(100% + var(--spacing-1));
+  left: 0;
+  z-index: 20;
+  min-width: 180px;
+  margin: 0;
+  padding: var(--spacing-1) 0;
+  list-style: none;
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.statusMenuItem {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-4);
+  border: none;
+  background: transparent;
+  color: var(--shell-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  text-align: left;
+  cursor: pointer;
+}
+
+.statusMenuItem:hover,
+.statusMenuItem:focus-visible {
+  background: var(--shell-sidebar-bg);
+}
+
+.statusMenuItemSelected {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* ---- Copy-to-clipboard permalink ---- */
+
+.copyFieldRow {
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: stretch;
+}
+
+.copyTextArea {
+  flex: 1 1 auto;
+  resize: none;
+  height: 40px;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  color: var(--shell-text);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-sidebar-bg);
+  cursor: pointer;
+}
+
+.copyTextArea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.copyTextArea:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.copyButton {
+  flex: none;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0 var(--spacing-4);
+  cursor: pointer;
+}
+
+.copyButton:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.copyButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.copyButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+/* Captured directly: font-size:12px; font-weight:500; color:#222; shown for
+   600ms then a 600ms fade (jQuery .show().delay(600).fadeOut(600)) — the
+   "shown"/"fading" classes below reproduce that two-phase timing (see
+   component). */
+.copyConfirmation {
+  display: inline-block;
+  margin-top: var(--spacing-1);
+  font-size: 12px;
+  font-weight: 500;
+  color: #222;
+  opacity: 0;
+}
+
+.copyConfirmationShown {
+  opacity: 1;
+}
+
+.copyConfirmationFading {
+  opacity: 0;
+  transition: opacity 600ms;
+}
+
+@container (max-width: 480px) {
+  .copyFieldRow {
+    flex-direction: column;
+  }
+}

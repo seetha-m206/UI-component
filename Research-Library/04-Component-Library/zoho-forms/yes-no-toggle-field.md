@@ -1,6 +1,6 @@
 ---
 component: "Yes/No Field (Button-Pair Binary Choice)"
-ui_category: "Data Input > Form"
+ui_category: "Forms > Form"
 source_product: "Zoho Forms"
 last_verified: "2026-09-15"
 evidence_state: "source_reviewed"
@@ -100,6 +100,7 @@ Plain jQuery DOM traversal manually replicating what a shared `name` attribute g
 | Competitor | Same component implementation | Strengths | Weaknesses |
 |---|---|---|---|
 | Typeform ([[yes-no-field]]) | Custom JS-driven, built on Radix UI's headless `RadioGroup` primitive (`role="radiogroup"`/`role="radio"`, `data-radix-collection-item`), roving tabindex, `aria-checked`+`data-state` dual-encoded | Consistent keyboard/ARIA plumbing "for free" via Radix; confirmed working arrow-key focus roaming and Space-to-select; 0.25s eased box-shadow-ring transition | No deselect-once-answered (Zoho's own toggle *does* support toggle-off); advertised Y/N letter-shortcut badges didn't function in the tested render mode |
+| Paperform ([[paperform-yes-no-field]]) | Custom JS-driven (React 16.14, no headless library), `role="radiogroup"`/`role="radio"`, but **fixed** (non-roving) tabindex and focus-only arrow keys (don't change selection) | Selected-state color follows the theme's Active token rather than being hard-coded; answers stream to the server via a debounced partial-submission PUT even before final submit | **No deselect-once-answered** (same limitation as this Zoho control avoids but Typeform shares); **confirmed broken ARIA wiring** — `label for` points at a nonexistent id, and `aria-labelledby` references a description id that's never rendered when there's no help text; no Y/N letter shortcut exists at all |
 
 ## Best Observed Approach
 - On engineering foundation (consistent keyboard/ARIA behavior via a headless component library vs. Zoho's fully bespoke, independently-engineered toggle family — at least 4 distinct implementations confirmed across this product), Typeform's approach is stronger. On the specific "can the user clear an answer" UX question, this is a genuine tradeoff, not a clear win: this component deliberately supports toggle-off, which Typeform's Yes/No field does not.

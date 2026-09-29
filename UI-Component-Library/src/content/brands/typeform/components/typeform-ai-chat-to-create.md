@@ -1,9 +1,9 @@
 ---
-component: 'AI "Chat to Create" / "Ask Typeform AI" (Copilot)'
-ui_category: 'Actions/Controls > AI assistant'
-source_product: 'Typeform'
-last_verified: '2026-09-17'
-evidence_state: 'source_reviewed'
+component: "AI \"Chat to Create\" / \"Ask Typeform AI\" (Copilot)"
+ui_category: "Actions > AI assistant"
+source_product: "Typeform"
+last_verified: "2026-09-17"
+evidence_state: "source_reviewed"
 status: 'complete'
 summary: "Natural-language form generation ('Ask Typeform AI' / 'Chat to create') via a plan→actions→JSON-Patch execution model — a prompt produces a complete, contextually-typed form staged for review before commit."
 ---
@@ -13,44 +13,38 @@ summary: "Natural-language form generation ('Ask Typeform AI' / 'Chat to create'
 Product → Screen → Component → Action → Behavior → States → Rules → Validation → Technical Data → Reference
 
 ## Location
-
 - **Product:** Typeform
 - **Screen(s) it appears on:** Two entry points sharing one underlying system — dashboard-level "Ask Typeform AI" input (bottom-left of the workspace/dashboard screen) and builder-level "Chat to create" input (bottom-center of the builder canvas, visible when editing any form).
 
 ## Structure
-
 - Both inputs carry a microphone icon (voice dictation), a "+" button ("Add Files"), a "..." button ("Open menu" / "More options"), and a send-arrow button. Both share the same conversation resource on the backend (same `conversationId`), same AI model, and same response format.
 - Submitting a prompt from either input opens a **full-viewport modal** labeled **"Typeform AI"** with a **"Beta"** badge — a two-pane split layout:
   - **Left pane — Conversation:** a chat-style thread showing the user's message (right-aligned, grey bubble), the AI's response (left-aligned, light purple/pink background), thumbs-up/thumbs-down feedback buttons, a follow-up message ("Added. Is there anything else you'd like to include?"), and a new "Ask Typeform AI" input at the bottom for multi-turn conversation.
   - **Right pane — Preview:** a toggle between **"Suggested changes"** and **"▶ Preview"** tabs.
 - **"Suggested changes" tab:** a structured, card-based list of the generated form elements under the heading "Questions to be set:" — a welcome-screen card (speaker/announcement icon, title + description text) and question cards (type-specific icon on a color-coded background, numbered badge, question title + description). This is a real outline/diff view, not a repeat of the chat text — it shows exactly what will be added, with correct field-type icons matching actual Typeform field types.
 - **"Preview" tab:** a phone-sized mockup (white rounded rectangle, centered) showing the live respondent-facing view of the generated form — welcome screen title, description, a CTA button, and a "⏱ Takes X minutes" placeholder.
-- **"Create form" button:** a prominent dark button, bottom-right of the modal. Applies the AI's suggestions to the actual form and closes the modal. A "Discard form suggestions?" confirmation dialog appears if the chat is closed before clicking Create form — _"If you close the chat, you'll lose any unapplied AI suggestions for this form"_ — confirming suggestions are staged until explicitly committed.
+- **"Create form" button:** a prominent dark button, bottom-right of the modal. Applies the AI's suggestions to the actual form and closes the modal. A "Discard form suggestions?" confirmation dialog appears if the chat is closed before clicking Create form — *"If you close the chat, you'll lose any unapplied AI suggestions for this form"* — confirming suggestions are staged until explicitly committed.
 - **Menu options ("..."):** Extended Thinking (toggle, off by default, paid-plan badge), Connectors (expandable submenu, greyed out in this account), Typeform AI memory, Give feedback, Restart chat.
 
 ## Actions
-
-| Element                                    | User Action     | Function                               | Result                                                                                                         | Destination screen/state             |
-| ------------------------------------------ | --------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| "Ask Typeform AI" / "Chat to create" input | Submit a prompt | `POST .../conversations/{id}/messages` | Typeform AI modal opens; the form shell appears in the workspace list almost immediately (see Action → Result) | Full-viewport AI modal               |
-| "Suggested changes" / "Preview" toggle     | Click           | Client-side tab switch                 | Right pane swaps between the outline/diff view and the phone-mockup live preview                               | Same modal                           |
-| "Create form" button                       | Click           | Applies staged suggestions             | Modal closes; form appears fully populated in the builder with all generated questions visible                 | Dashboard, then builder              |
-| Close chat before "Create form"            | Click close     | Confirmation guard                     | "Discard form suggestions?" dialog appears                                                                     | Same modal (blocked until confirmed) |
+| Element | User Action | Function | Result | Destination screen/state |
+|---|---|---|---|---|
+| "Ask Typeform AI" / "Chat to create" input | Submit a prompt | `POST .../conversations/{id}/messages` | Typeform AI modal opens; the form shell appears in the workspace list almost immediately (see Action → Result) | Full-viewport AI modal |
+| "Suggested changes" / "Preview" toggle | Click | Client-side tab switch | Right pane swaps between the outline/diff view and the phone-mockup live preview | Same modal |
+| "Create form" button | Click | Applies staged suggestions | Modal closes; form appears fully populated in the builder with all generated questions visible | Dashboard, then builder |
+| Close chat before "Create form" | Click close | Confirmation guard | "Discard form suggestions?" dialog appears | Same modal (blocked until confirmed) |
 
 ## Behavior & States
-
 - **Submitting the prompt** immediately opened the modal; the AI response appeared within ~5–7 seconds. During generation, a Lottie sparkle animation played, and the action text was shown in present-continuous tense ("Creating a three-question feedback survey.") before switching to past tense ("Created a three-question feedback survey.") on completion.
 - **The form was created in the backend almost immediately** — a `POST .../conversations/{id}/messages` call sent the prompt, and within seconds the form shell appeared in the workspace list with the title "Customer Feedback Survey." However, the AI-generated content (questions, welcome screen) was staged as suggestions, not yet committed to the live form — "Create form" is what applies them.
 - **Clicking "Create form"** applied all suggestions, closed the modal, returned to the dashboard. The generated form then showed: a Welcome Screen page, then 3 question pages (rating + 2 `deep_dive`), each its own page in the left sidebar. Questions 2 and 3 carried green diamond badges marking them as AI-powered field types.
 - **AI-chosen field types:** the AI automatically selected contextually appropriate field types, not generic defaults — `rating` (5-step star) for a satisfaction question, `deep_dive` (Typeform's AI-enhanced open-ended field type, not standard `long_text`) for open-ended questions. Also auto-generated: a Welcome Screen with title/description/CTA text, the form title itself (derived from the prompt), and form settings (`show_time_to_complete: true`, `show_progress_bar: true`, `progress_bar: "proportion"`, `language: "en"`).
 
 ## Rules & Validation
-
 - Suggestions are staged, not committed, until "Create form" is explicitly clicked — enforced by the discard-confirmation dialog on early close.
 - `extended_thinking` is off by default and carries a paid-plan badge — a gated deeper-reasoning mode, not exercised in this trace.
 
 ## Technical Data
-
 > OBSERVATION, directly captured via a `fetch` interceptor + `read_network_requests`, and DOM inspection, Claude browser extension session, 2026-09-17.
 
 - **DOM:** a standard React dialog/overlay, not a separate page or iframe. Heading: `"Typeform AI Beta"` with `"Beta"` in a separate element. Message structure: `"Your message"` / `"Message from Typeform AI"` containers with explicit sender labeling. AI action list: a real `<list>`/`<listitem>` structure, not styled text. Feedback buttons: `"Mark response as helpful"` / `"Mark response as not helpful"` — accessible labels, not icon-only. Right-pane toggle: `<radio>` button group. The close button is labeled `"Close copilot chat"` — internally, Typeform's AI assistant is called a **"copilot,"** consistent with the `/copilot/` endpoint prefix observed in the network layer. A hidden `<button type="file">` exists alongside the chat input, powering "Add Files." An `<alert>` element is present, presumably for screen-reader announcements of AI responses.
@@ -74,7 +68,6 @@ Product → Screen → Component → Action → Behavior → States → Rules �
 - **CSS/Animation:** loading animation is Lottie-based (`ai_stars.json`, 24×24px, 25fps, 44 frames), playing alongside the present-continuous action text. AI-specific palette: light purple/pink response bubbles, distinct from the user's grey bubbles — consistent with the purple/pink gradient theme used for all AI-related surfaces across Typeform. "Beta" badge: neutral/grey outlined pill, not the accent purple — a separate status label, not part of the AI branding. Type-icon color coding in "Suggested changes": rating fields get a green icon background, text fields blue — matching the builder's own left-sidebar color coding. The phone-sized preview mockup took ~2–3 seconds to load after switching tabs.
 
 ## Recommended Second Pass
-
 - Test the "Add Files" button — accepted file types, influence on AI output, size/count limits.
 - Test "Dictate audio message" — browser speech-to-text vs. a server-side transcription service.
 - Open the "Typeform AI memory" settings page — what preferences are stored, can they be viewed/edited/deleted.
@@ -86,11 +79,14 @@ Product → Screen → Component → Action → Behavior → States → Rules �
 - Compare AI behavior invoked from the builder (`page_context.page = "builder"`) vs. the dashboard.
 
 ## Competitor Comparisons
+> **See also [[paperform-calculation-field-ai-helper]]** — Paperform's Calculation-field AI assistant adds a third AI-interaction data point (a different domain — formula generation, not whole-form generation — but a directly comparable interaction model): iterative multi-turn like this record's Copilot, but with client-held conversation history resent on every call rather than a server-held `conversationId`; full-replace output like Zia rather than this record's structured JSON Patch operations; and a pre-computed Result value attached to every AI proposal, plus error-grounded repair (sending the actual parser error alongside a fix request) — a pattern not yet confirmed for either Zia or this record. See that record's own 3-way table for the full comparison.
+
+> **See also [[paperform-ai-create]]** — the direct domain match to this record: Paperform's own full-form-generation feature, confirmed 2026-09-23. Unlike this record's plan → actions → JSON Patch model, Paperform's text-prompt path holds up to two rounds of clarifying-question conversation *before* generating a single field, then generates once via a poll-based mechanism (not this record's more immediate, event-driven pipeline). Paperform is also the only one of the three with a directly-verified, working image/PDF-to-form path (correct Date/Phone Number/Signature field-type inference from a real source image) — full comparison table in that record.
 
 **Zoho equivalent now traced — see [[zia-ai-form-generator]]** (Zoho Forms' "AI Forms" / "Zia AI" chooser option, captured 2026-09-18). Zia AI Forms sits at the opposite end of the design spectrum from Typeform's Copilot: a single-shot, stateless generator — one text box, one synchronous `PUT /pfmaiformtemplate` call, full-schema replace on every Generate/Regenerate (no field IDs or prior-turn state carried forward) — with a preview-and-regenerate loop layered on top rather than true multi-turn conversation, versus Typeform's iterative plan → actions → JSON Patch execution model applied against the existing form-draft document across multiple turns. See [[zia-ai-form-generator]]'s own Competitor Comparisons table for the full side-by-side and its Best Observed Approach for the comparative judgment.
 
 | Aspect | Zoho Forms ([[zia-ai-form-generator]]) | Typeform (this trace) |
-| --- | --- | --- |
+|---|---|---|
 | AI form generation capability | Full form generation via the "AI Forms" chooser option — one description prompt (+ Content Tone) produces a complete field list and form name in a single `PUT /pfmaiformtemplate` call | Full natural-language form generation via "Ask Typeform AI" (dashboard) / "Chat to create" (builder), producing complete forms with welcome screens, typed questions, and appropriate field types from a single prompt |
 | AI generation UI pattern | Prompt modal (description textarea, Content Tone dropdown, sample-prompt chips) → generating status screen (animated Zia orb + 4-line status ladder) → preview-first screen with a persistent "Regenerate Form" panel; explicit "Create Form" click commits the schema as a real form | Two-pane modal: left = chat thread with multi-turn conversation; right = "Suggested changes" outline + "Preview" phone mockup; suggestions are staged until user clicks "Create form" |
 | AI field type selection | Response includes a `type` per field, but contextual "smartness" of type selection was not independently confirmed — see [[zia-ai-form-generator]] | AI automatically selects contextually appropriate field types (rating for satisfaction, `deep_dive` for open-ended), not just defaulting to generic text fields; `deep_dive` is an AI-enhanced field type unique to Typeform |
@@ -107,5 +103,4 @@ Product → Screen → Component → Action → Behavior → States → Rules �
 | Suggested-changes discard behavior | No discard-confirmation observed — the mid-flow `PUT` persists the schema as a template regardless; only "Create Form" makes it a real form | Closing the chat before applying shows a confirmation dialog ("Discard form suggestions?"), confirming suggestions are staged/uncommitted until "Create form" is clicked |
 
 ## Sources
-
 - OBSERVATION: Live trace on a real Typeform account (admin.typeform.com), via Claude browser extension, 2026-09-17. Tested by submitting an actual AI generation prompt ("Create a customer feedback survey with 3 questions") from the dashboard-level "Ask Typeform AI" input, observing the full generation cycle, capturing network requests via a `fetch` interceptor + `read_network_requests`, and examining the generated form in the builder afterward. Clicked "Create form" to apply the AI's suggestions — the generated form was saved and is visible in the workspace as "Customer Feedback Survey," a real, permanent addition to the account (not reverted; a genuine test artifact left in place, consistent with this project's practice of not deleting successfully-created test content that carries no sensitive data).

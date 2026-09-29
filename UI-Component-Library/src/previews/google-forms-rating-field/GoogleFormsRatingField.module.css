@@ -1,0 +1,97 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+}
+
+.label {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  margin: 0 0 var(--spacing-3);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.icon {
+  position: relative;
+  width: 44px;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: var(--spacing-1);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+/* Confirmed: hover shows only a faint generic highlight, never a preview
+   fill of any icon. */
+.icon:hover {
+  background: var(--shell-hover-bg, rgba(0, 0, 0, 0.04));
+}
+
+.icon:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.iconDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.svg {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  color: var(--shell-muted-text, #5f6368);
+  /* Confirmed: transition-duration: 0s in the source — the swap is
+     instantaneous, not animated. */
+  transition: none;
+}
+
+.svgOutline {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  position: absolute;
+  inset: 0;
+}
+
+.svgFilled {
+  fill: currentColor;
+  stroke: currentColor;
+  opacity: 0;
+  color: var(--color-primary, #1a73e8);
+}
+
+.svgFilledOn {
+  opacity: 1;
+}
+
+.number {
+  margin-top: 2px;
+  font-size: var(--font-size-xs, 11px);
+  color: var(--shell-muted-text);
+}
+
+.clearLink {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: var(--spacing-2);
+  color: var(--color-primary, #1a73e8);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.clearLink:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

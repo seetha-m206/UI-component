@@ -1,6 +1,6 @@
 ---
 component: 'Two-Line-Option Dropdown & Collapsible Accordion Section'
-ui_category: 'Data Input > Dropdown/Select'
+ui_category: 'Forms > Dropdown/Select'
 source_product: 'Zoho Forms'
 last_verified: '2026-09-16'
 evidence_state: 'source_reviewed'

@@ -1,6 +1,6 @@
 ---
 component: 'Deep Insights Blur+Lock Feature Gate'
-ui_category: 'Feedback/State > Empty state'
+ui_category: 'Feedback > Empty state'
 source_product: 'Zoho Forms'
 last_verified: '2026-09-15'
 evidence_state: 'source_reviewed'

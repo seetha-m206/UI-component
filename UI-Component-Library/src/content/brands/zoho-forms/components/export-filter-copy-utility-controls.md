@@ -1,6 +1,6 @@
 ---
 component: 'Dashboard/Entries Utility Controls (Export Menu, Status Filter, Copy-to-Clipboard)'
-ui_category: 'Search & Filter > Filter panel'
+ui_category: 'Search and Filtering > Filter panel'
 source_product: 'Zoho Forms'
 last_verified: '2026-09-16'
 evidence_state: 'source_reviewed'
