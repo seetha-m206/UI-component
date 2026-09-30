@@ -3,6 +3,7 @@ component: Semrush Brand Performance Insights
 ui_category: 'Analytics & Reporting > Brand Performance Insights'
 source_product: Semrush
 last_verified: 2026-09-29
+evidence_state: mixed_observed_reconstructed
 status: complete
 summary: Brand intelligence report combining competitor chips, AI-generated recommendations, sentiment, share of voice, and business-driver analysis.
 ---

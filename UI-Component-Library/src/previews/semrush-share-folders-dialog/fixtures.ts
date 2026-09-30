@@ -1,0 +1,3 @@
+import type { PreviewFixture, PropSchemaField } from '../types'; import type { SemrushShareFoldersDialogProps } from './SemrushShareFoldersDialog';
+export const propsSchema: PropSchemaField[] = [{ name: 'initiallyOpen', type: 'boolean', required: false, description: 'Starts the sharing dialog open or closed.' }, { name: 'initialPermission', type: "'Viewer' | 'Editor'", required: false, description: 'Initial observed permission option.' }];
+export const fixtures: PreviewFixture<SemrushShareFoldersDialogProps>[] = [{ id: 'editor', title: 'Editor', props: {} }, { id: 'viewer', title: 'Viewer', props: { initialPermission: 'Viewer' } }, { id: 'closed', title: 'Closed', props: { initiallyOpen: false } }];

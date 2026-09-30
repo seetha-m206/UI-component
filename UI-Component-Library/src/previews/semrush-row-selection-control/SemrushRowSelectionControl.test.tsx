@@ -1,0 +1,2 @@
+import { render, screen } from '@testing-library/react'; import userEvent from '@testing-library/user-event'; import { describe, expect, it } from 'vitest'; import { SemrushRowSelectionControl } from './SemrushRowSelectionControl';
+describe('SemrushRowSelectionControl', () => { it('updates the selected count', async () => { render(<SemrushRowSelectionControl />); await userEvent.click(screen.getByRole('checkbox', { name: 'Homepage audit' })); expect(screen.getByText('1 selected')).toBeInTheDocument(); }); });

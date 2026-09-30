@@ -3,6 +3,7 @@ component: Semrush AI Visibility Dashboard
 ui_category: 'Analytics & Reporting > AI Visibility Dashboard'
 source_product: Semrush
 last_verified: 2026-09-29
+evidence_state: mixed_observed_reconstructed
 status: complete
 summary: Filterable AI visibility report with a gauge, trend tabs, KPI summaries, LLM distribution, empty states, recommendations, and topic tables.
 ---

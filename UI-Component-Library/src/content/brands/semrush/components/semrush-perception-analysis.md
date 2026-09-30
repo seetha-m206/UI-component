@@ -3,6 +3,7 @@ component: Semrush Perception Analysis
 ui_category: 'Analytics & Reporting > Brand Perception'
 source_product: Semrush
 last_verified: 2026-09-29
+evidence_state: mixed_observed_reconstructed
 status: complete
 summary: Sentiment analysis, feature heatmaps, expandable AI descriptions, and paginated evidence.
 ---
@@ -21,3 +22,7 @@ Insights → competitive perception by platform → favorable sentiment chart �
 ## Evidence boundary
 
 Observed in an authenticated existing report. The preview uses synthetic brands, scores, and descriptions.
+
+## Sources
+
+- Authenticated live application observation, Semrush Perception report, 2026-09-29.

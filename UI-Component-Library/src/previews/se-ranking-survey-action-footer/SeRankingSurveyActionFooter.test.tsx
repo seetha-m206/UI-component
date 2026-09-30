@@ -1,0 +1,2 @@
+import { render, screen } from '@testing-library/react'; import userEvent from '@testing-library/user-event'; import { describe, expect, it } from 'vitest'; import { SeRankingSurveyActionFooter } from './SeRankingSurveyActionFooter';
+describe('SeRankingSurveyActionFooter', () => { it('keeps Skip and Complete guarded', async () => { const user = userEvent.setup(); render(<SeRankingSurveyActionFooter hasSelection />); await user.click(screen.getByRole('button', { name: 'Complete' })); expect(screen.getByRole('status')).toHaveTextContent(/No survey response was sent/i); }); });

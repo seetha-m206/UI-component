@@ -3,6 +3,7 @@ component: Semrush Prompt Research Entry
 ui_category: 'Search & Discovery > Prompt Research Entry'
 source_product: Semrush
 last_verified: 2026-09-29
+evidence_state: mixed_observed_reconstructed
 status: complete
 summary: Focused prompt-research entry screen with a topic combobox, Analyze action, and three explanatory benefit cards.
 ---

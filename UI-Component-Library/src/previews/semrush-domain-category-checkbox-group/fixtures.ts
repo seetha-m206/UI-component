@@ -1,0 +1,3 @@
+import type { PreviewFixture, PropSchemaField } from '../types'; import type { SemrushDomainCategoryCheckboxGroupProps } from './SemrushDomainCategoryCheckboxGroup';
+export const propsSchema: PropSchemaField[] = [{ name: 'initialSelected', type: 'string[]', required: false, description: 'Initially selected fictional categories.' }, { name: 'disabled', type: 'boolean', required: false, description: 'Disables the group.' }];
+export const fixtures: PreviewFixture<SemrushDomainCategoryCheckboxGroupProps>[] = [{ id: 'default', title: 'Default selection', props: {} }, { id: 'empty', title: 'None selected', props: { initialSelected: [] } }, { id: 'disabled', title: 'Disabled · needs verification', props: { disabled: true } }];
