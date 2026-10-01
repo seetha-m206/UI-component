@@ -156,6 +156,16 @@ describe('observed Ubersuggest remaining action behavior', () => {
     fireEvent.click(button('New chat'));
     expect(screen.getByRole('textbox', { name: 'Message' })).toHaveValue('');
   });
+  it('records the report feedback boundary and guards every consequential action', () => {
+    render(<Remaining kind="control-report-header" />);
+    for (const name of ['Export All', 'Settings', 'Send Feedback'])
+      expect(button(name)).toBeVisible();
+    expect(screen.getByRole('button', { name: /Add keywords/ })).toBeVisible();
+    fireEvent.click(button('Send Feedback'));
+    expect(screen.getByText(/one Send Feedback activation produced no visible/i)).toBeVisible();
+    fireEvent.click(button('Export All'));
+    expect(screen.getByText(/Local preview: Export All was not submitted/)).toBeVisible();
+  });
   it('gives modals local Escape dismissal and keyboard focus containment', () => {
     render(<Remaining kind="control-list" />);
     const dialog = screen.getByRole('dialog');

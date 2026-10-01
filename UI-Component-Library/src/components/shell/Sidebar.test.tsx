@@ -19,6 +19,13 @@ function SidebarWithSearch() {
   );
 }
 
+// Catalogue groups now include helpdesk products before Forms. Tests of form
+// brands open their group explicitly instead of relying on Forms sorting first.
+async function openFormsGroup(user: ReturnType<typeof userEvent.setup>) {
+  const button = screen.getByRole('button', { name: /^Forms$/ });
+  if (button.getAttribute('aria-expanded') !== 'true') await user.click(button);
+}
+
 describe('Sidebar', () => {
   it('groups components by product (brand) first, then by UI category within each', async () => {
     const user = userEvent.setup();
@@ -27,6 +34,7 @@ describe('Sidebar', () => {
         <Sidebar query="" />
       </MemoryRouter>
     );
+    await openFormsGroup(user);
 
     const nav = screen.getByRole('navigation', { name: 'Component library navigation' });
     expect(within(nav).getByRole('button', { name: /Zoho Forms/ })).toBeInTheDocument();
@@ -54,12 +62,14 @@ describe('Sidebar', () => {
     ).toHaveAttribute('href', '/typeform/yes-no-field');
   });
 
-  it('brand sections are sorted alphabetically (Typeform before Zoho Forms)', () => {
+  it('brand sections are sorted alphabetically (Typeform before Zoho Forms)', async () => {
+    const user = userEvent.setup();
     render(
       <MemoryRouter>
         <Sidebar query="" />
       </MemoryRouter>
     );
+    await openFormsGroup(user);
     const nav = screen.getByRole('navigation', { name: 'Component library navigation' });
     const text = nav.textContent ?? '';
     expect(text.indexOf('Typeform')).toBeLessThan(text.indexOf('Zoho Forms'));
@@ -72,6 +82,7 @@ describe('Sidebar', () => {
         <Sidebar query="" />
       </MemoryRouter>
     );
+    await openFormsGroup(user);
     const nav = screen.getByRole('navigation', { name: 'Component library navigation' });
     const zohoButton = within(nav).getByRole('button', { name: /Zoho Forms/ });
     expect(zohoButton).toHaveAttribute('aria-expanded', 'false');
@@ -147,12 +158,14 @@ describe('Sidebar', () => {
     ).toBeInTheDocument();
   });
 
-  it('nests form-builder brands under "Forms", which is the first group and opens by default', () => {
+  it('nests form-builder brands under Forms independently of other product groups', async () => {
+    const user = userEvent.setup();
     render(
       <MemoryRouter>
         <Sidebar query="" />
       </MemoryRouter>
     );
+    await openFormsGroup(user);
     const nav = screen.getByRole('navigation', { name: 'Component library navigation' });
     const formsGroup = within(nav).getByRole('button', { name: /^Forms$/ });
     expect(formsGroup).toHaveAttribute('aria-expanded', 'true');
@@ -171,6 +184,7 @@ describe('Sidebar', () => {
         <Sidebar query="" />
       </MemoryRouter>
     );
+    await openFormsGroup(user);
     const nav = screen.getByRole('navigation', { name: 'Component library navigation' });
     const formsGroup = within(nav).getByRole('button', { name: /^Forms$/ });
     expect(formsGroup).toHaveAttribute('aria-expanded', 'true');
@@ -184,6 +198,25 @@ describe('Sidebar', () => {
     expect(within(nav).getByRole('button', { name: /Zoho Forms/ })).toBeInTheDocument();
   });
 
+  it('opens the Freshservice helpdesk group for a Freshservice route', () => {
+    render(
+      <MemoryRouter initialEntries={['/freshservice/freshservice-application-shell']}>
+        <Sidebar query="" />
+      </MemoryRouter>
+    );
+    const nav = screen.getByRole('navigation', { name: 'Component library navigation' });
+    expect(
+      within(nav).getByRole('button', { name: 'Customer Support / Helpdesk' })
+    ).toHaveAttribute('aria-expanded', 'true');
+    expect(within(nav).getByRole('button', { name: 'Freshservice' })).toHaveAttribute(
+      'aria-expanded',
+      'true'
+    );
+    expect(
+      within(nav).getByRole('link', { name: /Freshservice Application Shell/ })
+    ).toHaveAttribute('href', '/freshservice/freshservice-application-shell');
+  });
+
   it('searching auto-expands every matching brand group regardless of collapse state', async () => {
     const user = userEvent.setup();
     render(
@@ -191,6 +224,7 @@ describe('Sidebar', () => {
         <SidebarWithSearch />
       </MemoryRouter>
     );
+    await openFormsGroup(user);
     const nav = screen.getByRole('navigation', { name: 'Component library navigation' });
     expect(within(nav).getByRole('button', { name: /Zoho Forms/ })).toHaveAttribute(
       'aria-expanded',

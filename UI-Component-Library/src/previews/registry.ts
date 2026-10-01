@@ -1,5 +1,9 @@
+import { freshservicePreviews } from './freshservice-shared/registry';
+import { zendeskPreviews } from './zendesk/registry';
+import { writesonicPreviews } from './writesonic-shared/registry';
 import { ubersuggestPreviews } from './ubersuggest-shared/registry';
 import { ubersuggestRemainingPreviews } from './ubersuggest-remaining/registry';
+import { otterlyPreviews } from './otterly/registry';
 import { ToggleRadioSwitch } from './toggle-radio-switch/ToggleRadioSwitch';
 import { YesNoToggleField } from './yes-no-toggle-field/YesNoToggleField';
 import {
@@ -1163,48 +1167,109 @@ import {
 } from './se-ranking-audit-toast/fixtures';
 import { previewConfig as seRankingAuditToastConfig } from './se-ranking-audit-toast/preview.config';
 import { SeRankingKeyMetricsStrip } from './se-ranking-key-metrics-strip/SeRankingKeyMetricsStrip';
-import { fixtures as seRankingKeyMetricsStripFixtures, propsSchema as seRankingKeyMetricsStripPropsSchema } from './se-ranking-key-metrics-strip/fixtures';
+import {
+  fixtures as seRankingKeyMetricsStripFixtures,
+  propsSchema as seRankingKeyMetricsStripPropsSchema,
+} from './se-ranking-key-metrics-strip/fixtures';
 import { previewConfig as seRankingKeyMetricsStripConfig } from './se-ranking-key-metrics-strip/preview.config';
 import { SeRankingAiEngineCards } from './se-ranking-ai-engine-cards/SeRankingAiEngineCards';
-import { fixtures as seRankingAiEngineCardsFixtures, propsSchema as seRankingAiEngineCardsPropsSchema } from './se-ranking-ai-engine-cards/fixtures';
+import {
+  fixtures as seRankingAiEngineCardsFixtures,
+  propsSchema as seRankingAiEngineCardsPropsSchema,
+} from './se-ranking-ai-engine-cards/fixtures';
 import { previewConfig as seRankingAiEngineCardsConfig } from './se-ranking-ai-engine-cards/preview.config';
 import { SeRankingRankingsEmptyState } from './se-ranking-rankings-empty-state/SeRankingRankingsEmptyState';
-import { fixtures as seRankingRankingsEmptyStateFixtures, propsSchema as seRankingRankingsEmptyStatePropsSchema } from './se-ranking-rankings-empty-state/fixtures';
+import {
+  fixtures as seRankingRankingsEmptyStateFixtures,
+  propsSchema as seRankingRankingsEmptyStatePropsSchema,
+} from './se-ranking-rankings-empty-state/fixtures';
 import { previewConfig as seRankingRankingsEmptyStateConfig } from './se-ranking-rankings-empty-state/preview.config';
 import { SeRankingAnnouncementBanner } from './se-ranking-announcement-banner/SeRankingAnnouncementBanner';
-import { fixtures as seRankingAnnouncementBannerFixtures, propsSchema as seRankingAnnouncementBannerPropsSchema } from './se-ranking-announcement-banner/fixtures';
+import {
+  fixtures as seRankingAnnouncementBannerFixtures,
+  propsSchema as seRankingAnnouncementBannerPropsSchema,
+} from './se-ranking-announcement-banner/fixtures';
 import { previewConfig as seRankingAnnouncementBannerConfig } from './se-ranking-announcement-banner/preview.config';
 import { SeRankingFeatureCarousel } from './se-ranking-feature-carousel/SeRankingFeatureCarousel';
-import { fixtures as seRankingFeatureCarouselFixtures, propsSchema as seRankingFeatureCarouselPropsSchema } from './se-ranking-feature-carousel/fixtures';
+import {
+  fixtures as seRankingFeatureCarouselFixtures,
+  propsSchema as seRankingFeatureCarouselPropsSchema,
+} from './se-ranking-feature-carousel/fixtures';
 import { previewConfig as seRankingFeatureCarouselConfig } from './se-ranking-feature-carousel/preview.config';
 import { SeRankingSetupActions } from './se-ranking-setup-actions/SeRankingSetupActions';
-import { fixtures as seRankingSetupActionsFixtures, propsSchema as seRankingSetupActionsPropsSchema } from './se-ranking-setup-actions/fixtures';
+import {
+  fixtures as seRankingSetupActionsFixtures,
+  propsSchema as seRankingSetupActionsPropsSchema,
+} from './se-ranking-setup-actions/fixtures';
 import { previewConfig as seRankingSetupActionsConfig } from './se-ranking-setup-actions/preview.config';
 import { SeRankingProjectPageHeader } from './se-ranking-project-page-header/SeRankingProjectPageHeader';
-import { fixtures as seRankingProjectPageHeaderFixtures, propsSchema as seRankingProjectPageHeaderPropsSchema } from './se-ranking-project-page-header/fixtures';
+import {
+  fixtures as seRankingProjectPageHeaderFixtures,
+  propsSchema as seRankingProjectPageHeaderPropsSchema,
+} from './se-ranking-project-page-header/fixtures';
 import { previewConfig as seRankingProjectPageHeaderConfig } from './se-ranking-project-page-header/preview.config';
 import { SeRankingRankingsFilters } from './se-ranking-rankings-filters/SeRankingRankingsFilters';
-import { fixtures as seRankingRankingsFiltersFixtures, propsSchema as seRankingRankingsFiltersPropsSchema } from './se-ranking-rankings-filters/fixtures';
+import {
+  fixtures as seRankingRankingsFiltersFixtures,
+  propsSchema as seRankingRankingsFiltersPropsSchema,
+} from './se-ranking-rankings-filters/fixtures';
 import { previewConfig as seRankingRankingsFiltersConfig } from './se-ranking-rankings-filters/preview.config';
 import { SeRankingAuditLoadingPanel } from './se-ranking-audit-loading-panel/SeRankingAuditLoadingPanel';
-import { fixtures as seRankingAuditLoadingPanelFixtures, propsSchema as seRankingAuditLoadingPanelPropsSchema } from './se-ranking-audit-loading-panel/fixtures';
+import {
+  fixtures as seRankingAuditLoadingPanelFixtures,
+  propsSchema as seRankingAuditLoadingPanelPropsSchema,
+} from './se-ranking-audit-loading-panel/fixtures';
 import { previewConfig as seRankingAuditLoadingPanelConfig } from './se-ranking-audit-loading-panel/preview.config';
 import { SeRankingAuditHealthScore } from './se-ranking-audit-health-score/SeRankingAuditHealthScore';
-import { fixtures as seRankingAuditHealthScoreFixtures, propsSchema as seRankingAuditHealthScorePropsSchema } from './se-ranking-audit-health-score/fixtures';
+import {
+  fixtures as seRankingAuditHealthScoreFixtures,
+  propsSchema as seRankingAuditHealthScorePropsSchema,
+} from './se-ranking-audit-health-score/fixtures';
 import { previewConfig as seRankingAuditHealthScoreConfig } from './se-ranking-audit-health-score/preview.config';
 import { SeRankingKeywordFileDrop } from './se-ranking-keyword-file-drop/SeRankingKeywordFileDrop';
-import { fixtures as seRankingKeywordFileDropFixtures, propsSchema as seRankingKeywordFileDropPropsSchema } from './se-ranking-keyword-file-drop/fixtures';
+import {
+  fixtures as seRankingKeywordFileDropFixtures,
+  propsSchema as seRankingKeywordFileDropPropsSchema,
+} from './se-ranking-keyword-file-drop/fixtures';
 import { previewConfig as seRankingKeywordFileDropConfig } from './se-ranking-keyword-file-drop/preview.config';
 import { SeRankingSurveyOptionGroup } from './se-ranking-survey-option-group/SeRankingSurveyOptionGroup';
-import { fixtures as seRankingSurveyOptionGroupFixtures, propsSchema as seRankingSurveyOptionGroupPropsSchema } from './se-ranking-survey-option-group/fixtures';
+import {
+  fixtures as seRankingSurveyOptionGroupFixtures,
+  propsSchema as seRankingSurveyOptionGroupPropsSchema,
+} from './se-ranking-survey-option-group/fixtures';
 import { previewConfig as seRankingSurveyOptionGroupConfig } from './se-ranking-survey-option-group/preview.config';
 import { SeRankingSurveyActionFooter } from './se-ranking-survey-action-footer/SeRankingSurveyActionFooter';
-import { fixtures as seRankingSurveyActionFooterFixtures, propsSchema as seRankingSurveyActionFooterPropsSchema } from './se-ranking-survey-action-footer/fixtures';
+import {
+  fixtures as seRankingSurveyActionFooterFixtures,
+  propsSchema as seRankingSurveyActionFooterPropsSchema,
+} from './se-ranking-survey-action-footer/fixtures';
 import { previewConfig as seRankingSurveyActionFooterConfig } from './se-ranking-survey-action-footer/preview.config';
+import { SeRankingAuditIssueReport } from './se-ranking-audit-issue-report/SeRankingAuditIssueReport';
+import {
+  fixtures as seRankingAuditIssueReportFixtures,
+  propsSchema as seRankingAuditIssueReportPropsSchema,
+} from './se-ranking-audit-issue-report/fixtures';
+import { previewConfig as seRankingAuditIssueReportConfig } from './se-ranking-audit-issue-report/preview.config';
+import { SeRankingKeywordAnalysisResult } from './se-ranking-keyword-analysis-result/SeRankingKeywordAnalysisResult';
+import {
+  fixtures as seRankingKeywordAnalysisResultFixtures,
+  propsSchema as seRankingKeywordAnalysisResultPropsSchema,
+} from './se-ranking-keyword-analysis-result/fixtures';
+import { previewConfig as seRankingKeywordAnalysisResultConfig } from './se-ranking-keyword-analysis-result/preview.config';
+import { SeRankingRankingsDetailReport } from './se-ranking-rankings-detail-report/SeRankingRankingsDetailReport';
+import {
+  fixtures as seRankingRankingsDetailReportFixtures,
+  propsSchema as seRankingRankingsDetailReportPropsSchema,
+} from './se-ranking-rankings-detail-report/fixtures';
+import { previewConfig as seRankingRankingsDetailReportConfig } from './se-ranking-rankings-detail-report/preview.config';
 
 import type { PreviewRegistry } from './types';
 
 export const previewRegistry: PreviewRegistry = {
+  ...freshservicePreviews,
+  ...zendeskPreviews,
+  ...writesonicPreviews,
+  ...otterlyPreviews,
   ...ubersuggestPreviews,
   ...ubersuggestRemainingPreviews,
   'yes-no-toggle-field': {
@@ -3357,8 +3422,8 @@ export const previewRegistry: PreviewRegistry = {
     Component: SeRankingApplicationShell,
     label: 'Reconstructed preview',
     evidence:
-      'OBSERVATION, authenticated SE Ranking Project Overview and Keyword Research screens, 2026-09-30. Navigation remains inert locally and unexercised behavior is explicitly marked needs verification.',
-    runtimeVerified: false,
+      'OBSERVATION, authenticated SE Ranking Project Overview, Keyword Research, AI Search, setup, and Rankings screens, 2026-10-01. The account menu and its seven actions were observed open.',
+    runtimeVerified: true,
     fixtures: seRankingApplicationShellFixtures,
     config: seRankingApplicationShellConfig,
     propsSchema: seRankingApplicationShellPropsSchema,
@@ -3390,8 +3455,8 @@ export const previewRegistry: PreviewRegistry = {
     Component: SeRankingKeywordQueryBar,
     label: 'Reconstructed preview',
     evidence:
-      'OBSERVATION, empty SE Ranking keyword query bar, 2026-09-30. Database contents and Analyze outcomes were blocked by the live survey overlay and remain marked needs verification.',
-    runtimeVerified: false,
+      'OBSERVATION, authenticated Keyword Research, 2026-10-01. The searchable country database, India selection, populated query, enabled Analyze, result route, and 1/10 account limit were observed.',
+    runtimeVerified: true,
     fixtures: seRankingKeywordQueryBarFixtures,
     config: seRankingKeywordQueryBarConfig,
     propsSchema: seRankingKeywordQueryBarPropsSchema,
@@ -3422,8 +3487,9 @@ export const previewRegistry: PreviewRegistry = {
     type: 'reconstructed',
     Component: SeRankingKeyMetricsStrip,
     label: 'Reconstructed preview',
-    evidence: 'OBSERVATION, authenticated SE Ranking Project Overview, 2026-09-30. Values are observed. Loading and unavailable fixtures are reconstructed and marked accordingly.',
-    runtimeVerified: false,
+    evidence:
+      'OBSERVATION, authenticated Project Overview, 2026-10-01. Current values and the metric settings panel with five selected and two unselected options were observed.',
+    runtimeVerified: true,
     fixtures: seRankingKeyMetricsStripFixtures,
     config: seRankingKeyMetricsStripConfig,
     propsSchema: seRankingKeyMetricsStripPropsSchema,
@@ -3432,8 +3498,9 @@ export const previewRegistry: PreviewRegistry = {
     type: 'reconstructed',
     Component: SeRankingAiEngineCards,
     label: 'Reconstructed preview',
-    evidence: 'OBSERVATION, authenticated SE Ranking Project Overview, 2026-09-30. The five engine summaries are observed. Selection behavior remains a local reconstruction.',
-    runtimeVerified: false,
+    evidence:
+      'OBSERVATION, authenticated Project Overview and AI Search Overview, 2026-10-01. Current engine values, new-tab drill-down, presence definitions, competitor controls, and topic data were observed.',
+    runtimeVerified: true,
     fixtures: seRankingAiEngineCardsFixtures,
     config: seRankingAiEngineCardsConfig,
     propsSchema: seRankingAiEngineCardsPropsSchema,
@@ -3442,7 +3509,8 @@ export const previewRegistry: PreviewRegistry = {
     type: 'reconstructed',
     Component: SeRankingRankingsEmptyState,
     label: 'Reconstructed preview',
-    evidence: 'OBSERVATION, authenticated SE Ranking Project Overview, 2026-09-30. Add keywords was not exercised and remains guarded locally.',
+    evidence:
+      'OBSERVATION, authenticated SE Ranking Project Overview, 2026-09-30. Add keywords was not exercised and remains guarded locally.',
     runtimeVerified: false,
     fixtures: seRankingRankingsEmptyStateFixtures,
     config: seRankingRankingsEmptyStateConfig,
@@ -3452,7 +3520,8 @@ export const previewRegistry: PreviewRegistry = {
     type: 'reconstructed',
     Component: SeRankingAnnouncementBanner,
     label: 'Reconstructed preview',
-    evidence: 'OBSERVATION, authenticated SE Ranking workshop banner, 2026-09-30. Register was not exercised. Dismiss and restore are local-only fixture states.',
+    evidence:
+      'OBSERVATION, authenticated SE Ranking workshop banner, 2026-09-30. Register was not exercised. Dismiss and restore are local-only fixture states.',
     runtimeVerified: false,
     fixtures: seRankingAnnouncementBannerFixtures,
     config: seRankingAnnouncementBannerConfig,
@@ -3462,8 +3531,9 @@ export const previewRegistry: PreviewRegistry = {
     type: 'reconstructed',
     Component: SeRankingFeatureCarousel,
     label: 'Reconstructed preview',
-    evidence: 'OBSERVATION, authenticated SE Ranking Keyword Research entry, 2026-09-30. Card labels and the first count are observed. Paging behavior is reconstructed.',
-    runtimeVerified: false,
+    evidence:
+      'OBSERVATION, authenticated Keyword Research entry, 2026-10-01. Forward paging was exercised through 1–2, 2–3, and 3–4 of 4, with a bounded end state.',
+    runtimeVerified: true,
     fixtures: seRankingFeatureCarouselFixtures,
     config: seRankingFeatureCarouselConfig,
     propsSchema: seRankingFeatureCarouselPropsSchema,
@@ -3472,46 +3542,122 @@ export const previewRegistry: PreviewRegistry = {
     type: 'reconstructed',
     Component: SeRankingSetupActions,
     label: 'Reconstructed preview',
-    evidence: 'OBSERVATION, authenticated SE Ranking Project Overview, 2026-09-30. Action labels are observed. All setup outcomes remain unexercised and guarded locally.',
-    runtimeVerified: false,
+    evidence:
+      'OBSERVATION, authenticated Project Overview, 2026-10-01. AI setup opened the Search engines screen in a new tab, and the analytics widget exposed Google Analytics, Search Console, and Matomo choices.',
+    runtimeVerified: true,
     fixtures: seRankingSetupActionsFixtures,
     config: seRankingSetupActionsConfig,
     propsSchema: seRankingSetupActionsPropsSchema,
   },
   'se-ranking-project-page-header': {
-    type: 'reconstructed', Component: SeRankingProjectPageHeader, label: 'Reconstructed preview', runtimeVerified: false,
-    evidence: 'OBSERVATION, authenticated SE Ranking Project Overview, 2026-09-30. Header labels are observed. Widgets menu contents are reconstructed and need verification.',
-    fixtures: seRankingProjectPageHeaderFixtures, config: seRankingProjectPageHeaderConfig, propsSchema: seRankingProjectPageHeaderPropsSchema,
+    type: 'reconstructed',
+    Component: SeRankingProjectPageHeader,
+    label: 'Live-evidence reconstruction',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated SE Ranking Project Overview, 2026-10-01. All eleven Widgets controls were observed, Insights was hidden and restored, Content was reordered above Insights with reload persistence, and the original order was restored.',
+    fixtures: seRankingProjectPageHeaderFixtures,
+    config: seRankingProjectPageHeaderConfig,
+    propsSchema: seRankingProjectPageHeaderPropsSchema,
   },
   'se-ranking-rankings-filters': {
-    type: 'reconstructed', Component: SeRankingRankingsFilters, label: 'Reconstructed preview', runtimeVerified: false,
-    evidence: 'OBSERVATION, closed Google and Last 7 days controls in Project Overview, 2026-09-30. Menu contents and selection effects are reconstructed.',
-    fixtures: seRankingRankingsFiltersFixtures, config: seRankingRankingsFiltersConfig, propsSchema: seRankingRankingsFiltersPropsSchema,
+    type: 'reconstructed',
+    Component: SeRankingRankingsFilters,
+    label: 'Live-evidence reconstruction',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated SE Ranking Project Overview, 2026-10-01. Google India EN and all eight date options were observed. Past 7 days produced a loading state, then Past 30 days was restored.',
+    fixtures: seRankingRankingsFiltersFixtures,
+    config: seRankingRankingsFiltersConfig,
+    propsSchema: seRankingRankingsFiltersPropsSchema,
   },
   'se-ranking-audit-loading-panel': {
-    type: 'reconstructed', Component: SeRankingAuditLoadingPanel, label: 'Reconstructed preview', runtimeVerified: false,
-    evidence: 'OBSERVATION, Website Audit loading in authenticated Project Overview, 2026-09-30. Stalled and Retry behavior are synthetic and guarded.',
-    fixtures: seRankingAuditLoadingPanelFixtures, config: seRankingAuditLoadingPanelConfig, propsSchema: seRankingAuditLoadingPanelPropsSchema,
+    type: 'reconstructed',
+    Component: SeRankingAuditLoadingPanel,
+    label: 'Live-evidence reconstruction',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated Website Audit, 2026-10-01. Launch confirmation, active crawl counters, successful completion, and the completed-report Retry boundary were observed. A failure-specific Retry label remains unavailable.',
+    fixtures: seRankingAuditLoadingPanelFixtures,
+    config: seRankingAuditLoadingPanelConfig,
+    propsSchema: seRankingAuditLoadingPanelPropsSchema,
   },
   'se-ranking-audit-health-score': {
-    type: 'reconstructed', Component: SeRankingAuditHealthScore, label: 'Reconstructed preview', runtimeVerified: false,
-    evidence: 'OBSERVATION, Health Score 80 in authenticated SE Ranking, 2026-09-30. Review issues navigation was not exercised and remains guarded.',
-    fixtures: seRankingAuditHealthScoreFixtures, config: seRankingAuditHealthScoreConfig, propsSchema: seRankingAuditHealthScorePropsSchema,
+    type: 'reconstructed',
+    Component: SeRankingAuditHealthScore,
+    label: 'Live-evidence reconstruction',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated Website Audit, 2026-10-01. Health Score 80 Strong, Recommended 90+, 1,600 issues, and View all issues navigation were observed.',
+    fixtures: seRankingAuditHealthScoreFixtures,
+    config: seRankingAuditHealthScoreConfig,
+    propsSchema: seRankingAuditHealthScorePropsSchema,
   },
   'se-ranking-keyword-file-drop': {
-    type: 'reconstructed', Component: SeRankingKeywordFileDrop, label: 'Reconstructed preview', runtimeVerified: false,
-    evidence: 'OBSERVATION, keyword or TXT/CSV prompt in authenticated Keyword Research, 2026-09-30. File selection, parsing, and upload were not exercised.',
-    fixtures: seRankingKeywordFileDropFixtures, config: seRankingKeywordFileDropConfig, propsSchema: seRankingKeywordFileDropPropsSchema,
+    type: 'reconstructed',
+    Component: SeRankingKeywordFileDrop,
+    label: 'Live-evidence reconstruction',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated Rankings import, 2026-10-01. TXT selection, processing, success, the .csv/.txt restriction, and duplicate detection were exercised. Re-entering the tracked keyword produced Duplicates found: 1, and Yes, remove duplicates produced Added keywords: 0 while the limit remained 1/750.',
+    fixtures: seRankingKeywordFileDropFixtures,
+    config: seRankingKeywordFileDropConfig,
+    propsSchema: seRankingKeywordFileDropPropsSchema,
   },
   'se-ranking-survey-option-group': {
-    type: 'reconstructed', Component: SeRankingSurveyOptionGroup, label: 'Reconstructed preview', runtimeVerified: false,
-    evidence: 'OBSERVATION, eleven acquisition-source options in the authenticated survey, 2026-09-30. Selection remains local and provider semantics need verification.',
-    fixtures: seRankingSurveyOptionGroupFixtures, config: seRankingSurveyOptionGroupConfig, propsSchema: seRankingSurveyOptionGroupPropsSchema,
+    type: 'reconstructed',
+    Component: SeRankingSurveyOptionGroup,
+    label: 'Live-evidence reconstruction',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated acquisition survey, 2026-10-01. All eleven options, Other selection, and its conditional answer field were observed live.',
+    fixtures: seRankingSurveyOptionGroupFixtures,
+    config: seRankingSurveyOptionGroupConfig,
+    propsSchema: seRankingSurveyOptionGroupPropsSchema,
   },
   'se-ranking-survey-action-footer': {
-    type: 'reconstructed', Component: SeRankingSurveyActionFooter, label: 'Reconstructed preview', runtimeVerified: false,
-    evidence: 'OBSERVATION, Skip and Complete actions with no response selected, 2026-09-30. Enabled Complete, validation, and submission remain reconstructed and guarded.',
-    fixtures: seRankingSurveyActionFooterFixtures, config: seRankingSurveyActionFooterConfig, propsSchema: seRankingSurveyActionFooterPropsSchema,
+    type: 'reconstructed',
+    Component: SeRankingSurveyActionFooter,
+    label: 'Live-evidence reconstruction',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated acquisition survey, 2026-10-01. Complete dismissed the survey, which remained absent after reload and on a later revisit. Skip persistence cannot be replayed in this account.',
+    fixtures: seRankingSurveyActionFooterFixtures,
+    config: seRankingSurveyActionFooterConfig,
+    propsSchema: seRankingSurveyActionFooterPropsSchema,
+  },
+  'se-ranking-audit-issue-report': {
+    type: 'reconstructed',
+    Component: SeRankingAuditIssueReport,
+    label: 'Live-evidence reconstruction',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated Website Audit Issue Report, 2026-10-01. Current, Fixed, New, All Tracked, and Turned Off scopes, category totals, issue counts, and the subscription gate were observed.',
+    fixtures: seRankingAuditIssueReportFixtures,
+    config: seRankingAuditIssueReportConfig,
+    propsSchema: seRankingAuditIssueReportPropsSchema,
+  },
+  'se-ranking-keyword-analysis-result': {
+    type: 'reconstructed',
+    Component: SeRankingKeywordAnalysisResult,
+    label: 'Live-evidence reconstruction',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated Keyword Research, 2026-10-01. The India database selector, centilio Analyze action, collection-in-progress message, 1/10 limit, report sections, disabled zero-result actions, and final no-results state were observed.',
+    fixtures: seRankingKeywordAnalysisResultFixtures,
+    config: seRankingKeywordAnalysisResultConfig,
+    propsSchema: seRankingKeywordAnalysisResultPropsSchema,
+  },
+  'se-ranking-rankings-detail-report': {
+    type: 'reconstructed',
+    Component: SeRankingRankingsDetailReport,
+    label: 'Live-evidence reconstruction',
+    runtimeVerified: true,
+    evidence:
+      'OBSERVATION, authenticated Rankings detailed report, 2026-10-01. Limits, toolbar actions, position filters, insights, summary metrics, imported keyword row, and the Rankings table guide at step 1 of 5 were observed.',
+    fixtures: seRankingRankingsDetailReportFixtures,
+    config: seRankingRankingsDetailReportConfig,
+    propsSchema: seRankingRankingsDetailReportPropsSchema,
   },
   'toggle-radio-switch': {
     Component: ToggleRadioSwitch,

@@ -2,8 +2,8 @@
 component: SE Ranking audit health score
 ui_category: 'Data Display > Score Indicator'
 source_product: SE Ranking
-last_verified: 2026-09-30
-evidence_state: observed_reconstructed
+last_verified: 2026-10-01
+evidence_state: complete_with_boundaries
 ---
 
 # Component: SE Ranking audit health score
@@ -15,15 +15,16 @@ The completed audit summary emphasizes Health Score 80 and provides Review issue
 ## State Fixtures
 
 - Observed Health Score 80.
-- Synthetic disabled review action.
-- Guarded local review feedback.
+- Observed 80 Strong gauge with recommended 90+ comparison.
+- Observed View all issues navigation to the Issue Report.
 
 ## Evidence Boundary
 
-- **OBSERVED:** Score, label, and Review issues action.
-- **RECONSTRUCTION:** Circular gauge, disabled state, and local feedback.
-- **NOT OBSERVED:** Score calculation, issue destination, ranges, and refresh behavior.
+- **OBSERVED:** Score, Strong rating, recommended comparison, issue totals, View all issues action, and Issue Report destination.
+- **RECONSTRUCTION:** Disabled specimen and local feedback.
+- **NOT OBSERVED:** Score formula and paid affected-URL detail.
 
 ## Sources
 
 - **OBSERVATION:** Authenticated SE Ranking Project Overview and audit-complete notification, 2026-09-30.
+- **OBSERVATION:** Authenticated Website Audit Overview and Issue Report navigation, 2026-10-01.

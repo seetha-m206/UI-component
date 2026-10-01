@@ -2,10 +2,10 @@
 component: SE Ranking acquisition survey dialog
 ui_category: 'Feedback > Survey Dialog'
 source_product: SE Ranking
-last_verified: 2026-09-30
-evidence_state: observed_reconstructed
-status: partial
-summary: Observed acquisition-source survey with eleven options and guarded local Skip, Complete, and close actions.
+last_verified: 2026-10-01
+evidence_state: complete_with_boundaries
+status: complete
+summary: Observed acquisition-source survey with eleven options, Other answer field, Complete dismissal, and reload persistence.
 ---
 
 # Component: SE Ranking acquisition survey dialog
@@ -17,21 +17,21 @@ An account-level overlay asks how the user heard about SE Ranking. Eleven single
 ## State Fixtures
 
 - Observed open dialog with no selection.
-- Reconstructed local selected option.
-- Guarded local Skip and Complete status.
+- Observed Other selection with the conditional answer field.
+- Observed Complete dismissal and absence after reload.
 
 ## Technical View
 
 - The live accessibility tree exposed checkbox roles even though the layout visually appeared single-choice.
 - The reconstruction uses radio controls to reflect the visible single-selection presentation.
-- Complete stays disabled locally until one option is chosen, and neither action submits data.
+- The local reconstruction preserves the observed selection, conditional answer, and completion states without calling SE Ranking.
 
 ## Evidence Boundary
 
-- **OBSERVED:** Dialog copy, option labels, open state, close affordance, Skip, and Complete.
-- **RECONSTRUCTION:** Radio semantics, selected styling, Complete enablement, and local close behavior.
-- **NOT OBSERVED:** Successful dismissal, persisted response, survey submission, and recurrence rules. The live close control did not dismiss in this browser session.
+- **OBSERVED:** Dialog copy, all eleven option labels, Other selection, conditional answer field, Complete action, dismissal, and absence after reload.
+- **RECONSTRUCTION:** Radio semantics and local fixture transitions.
+- **NOT OBSERVED:** Skip persistence, recurrence timing after a completed response, and a distinct success message because completion closed the survey without one.
 
 ## Sources
 
-- **OBSERVATION:** Authenticated SE Ranking acquisition survey overlay, 2026-09-30.
+- **OBSERVATION:** Authenticated SE Ranking acquisition survey overlay and reload check, 2026-10-01.

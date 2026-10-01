@@ -1359,6 +1359,32 @@ function Account({ state, guard }: { state: string; guard: Guard }) {
     </div>
   );
 }
+function ReportHeaderActions({ state, guard }: { state: string; guard: Guard }) {
+  const [feedbackAttempted, setFeedbackAttempted] = useState(state === 'feedback-attempted');
+  return (
+    <section className={s.panel} aria-label="Rank Tracking header actions">
+      <div>
+        <small>Updating Today</small>
+        <h2>Rank Tracking</h2>
+      </div>
+      <div className={s.row}>
+        <Button onClick={() => guard('Export All')}>Export All</Button>
+        <Button onClick={() => guard('Open project settings')}>Settings</Button>
+        <Button onClick={() => setFeedbackAttempted(true)}>Send Feedback</Button>
+        <Button primary onClick={() => guard('Add keywords')}>
+          ＋ Add keywords
+        </Button>
+      </div>
+      {feedbackAttempted && (
+        <p role="status" className={s.muted}>
+          Source observation: one Send Feedback activation produced no visible dialog, menu, or
+          navigation. This records the visible boundary only and does not prove the feedback service
+          is unavailable.
+        </p>
+      )}
+    </section>
+  );
+}
 export function Remaining({ kind, initialState = 'default' }: RemainingProps & { kind: string }) {
   const [notice, setNotice] = useState('');
   const [mobile, setMobile] = useState(false);
@@ -1511,6 +1537,9 @@ export function Remaining({ kind, initialState = 'default' }: RemainingProps & {
         break;
       case 'control-account':
         body = <Account state={initialState} guard={guard} />;
+        break;
+      case 'control-report-header':
+        body = <ReportHeaderActions state={initialState} guard={guard} />;
         break;
       default:
         body = null;

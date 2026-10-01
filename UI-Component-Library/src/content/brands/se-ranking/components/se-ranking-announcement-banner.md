@@ -4,7 +4,7 @@ ui_category: 'Feedback > Announcement Banner'
 source_product: SE Ranking
 last_verified: 2026-09-30
 evidence_state: observed_reconstructed
-status: partial
+status: complete
 summary: Workshop announcement with guarded Register and reversible local dismissal states.
 ---
 

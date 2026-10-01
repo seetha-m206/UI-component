@@ -1,1 +1,8 @@
-import type { PreviewConfig } from '../types'; export const previewConfig: PreviewConfig = { viewports: [{ id: 'desktop', label: 'Desktop', width: 620 }, { id: 'mobile', label: 'Mobile', width: 390 }], toggles: [] };
+import type { PreviewConfig } from '../types';
+export const previewConfig: PreviewConfig = {
+  viewports: [
+    { id: 'desktop', label: 'Desktop', width: 620 },
+    { id: 'mobile', label: 'Mobile', width: 390 },
+  ],
+  toggles: [],
+};

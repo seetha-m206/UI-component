@@ -51,3 +51,17 @@ export const sourceRegistry: Record<string, SourceEntry> = Object.fromEntries(
     { files: [...(tsxById[id] ?? []), ...(tsById[id] ?? []), ...(cssById[id] ?? [])] },
   ])
 );
+
+// Freshservice wrappers share the implementation. Include it in every Code tab.
+const freshserviceShared = sourceRegistry['freshservice-shared'];
+if (freshserviceShared) {
+  for (const [id, entry] of Object.entries(sourceRegistry)) {
+    if (id.startsWith('freshservice-') && id !== 'freshservice-shared') {
+      entry.files.push(
+        ...freshserviceShared.files
+          .filter((file) => file.fileName !== 'registry.ts')
+          .map((file) => ({ ...file, fileName: '../freshservice-shared/' + file.fileName }))
+      );
+    }
+  }
+}

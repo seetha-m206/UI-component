@@ -8,8 +8,8 @@ import { sourceRegistry } from '../sourceRegistry';
 import { getComponent } from '../../utils/loadComponents';
 import { extractLimitations } from '../../utils/evidenceExtraction';
 describe('remaining Ubersuggest scope and evidence consistency', () => {
-  it('contains 32 independent screen and action records', () =>
-    expect(Object.keys(ubersuggestRemainingPreviews)).toHaveLength(32));
+  it('contains 33 independent screen and action records', () =>
+    expect(Object.keys(ubersuggestRemainingPreviews)).toHaveLength(33));
   it.each(Object.keys(ubersuggestRemainingPreviews))(
     '%s is discovered and mirrors canonical evidence',
     (id) => {

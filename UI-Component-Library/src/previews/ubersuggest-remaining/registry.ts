@@ -114,6 +114,9 @@ import { previewConfig as c30 } from '../ubersuggest-upgrade-dialog/preview.conf
 import { UbersuggestAccountMenu as C31 } from '../ubersuggest-account-menu/UbersuggestAccountMenu';
 import { fixtures as f31, propsSchema as p31 } from '../ubersuggest-account-menu/fixtures';
 import { previewConfig as c31 } from '../ubersuggest-account-menu/preview.config';
+import { UbersuggestReportHeaderActions as C32 } from '../ubersuggest-report-header-actions/UbersuggestReportHeaderActions';
+import { fixtures as f32, propsSchema as p32 } from '../ubersuggest-report-header-actions/fixtures';
+import { previewConfig as c32 } from '../ubersuggest-report-header-actions/preview.config';
 export const ubersuggestRemainingPreviews: PreviewRegistry = {
   'ubersuggest-ai-keyword-overview': {
     type: 'reconstructed',
@@ -466,6 +469,17 @@ export const ubersuggestRemainingPreviews: PreviewRegistry = {
     fixtures: f31,
     propsSchema: p31,
     config: c31,
+  },
+  'ubersuggest-report-header-actions': {
+    type: 'reconstructed',
+    Component: C32,
+    label: 'Observed-state reconstruction',
+    evidence:
+      'Observed provider scope with fictional values. Local reconstruction browser verified on 2026-10-01. Provider submissions remain untested under the user instruction.',
+    runtimeVerified: true,
+    fixtures: f32,
+    propsSchema: p32,
+    config: c32,
   },
 };
 const shared = sourceRegistry['ubersuggest-remaining'].files.filter((f) =>

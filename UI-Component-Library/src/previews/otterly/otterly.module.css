@@ -1,0 +1,27 @@
+.frame{font:14px/1.45 system-ui,sans-serif;color:#222;background:#fff;border:1px solid #e5e5e9;border-radius:12px;padding:22px;min-height:280px;max-width:100%;box-sizing:border-box}
+.frame h2{font-size:22px;margin:2px 0 14px}.frame h3{font-size:15px}.frame p{color:#59606b}
+.kicker{color:#be2876;text-transform:uppercase;font-size:11px;letter-spacing:.08em;font-weight:700}
+.frame button,.frame input,.frame textarea,.frame select{font:inherit;border:1px solid #d8d9df;border-radius:6px;background:#fff;padding:7px 10px;color:#222;box-sizing:border-box}
+.frame button{cursor:pointer}.frame button:hover:not(:disabled){border-color:#ce2f81}.frame button:disabled{cursor:not-allowed;opacity:.45}
+.frame input,.frame textarea,.frame select{max-width:100%}.frame label:not(.checkrow){display:grid;gap:5px;margin:10px 0;font-weight:600}
+.frame label:not(.checkrow) input,.frame label:not(.checkrow) textarea,.frame label:not(.checkrow) select{font-weight:400}
+.frame textarea{min-height:90px}.frame small{color:#7d8390}.primary{background:#cd2a7c!important;border-color:#cd2a7c!important;color:white!important}
+.row,.toolbar,.footer{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:12px 0}.row input{flex:1;min-width:120px}.footer{border-top:1px solid #eee;padding-top:12px;justify-content:flex-end}
+.checkrow{display:flex;align-items:center;gap:9px;border-bottom:1px solid #eee;padding:9px 0;font-weight:400}.checkrow input{accent-color:#c92b7b}
+.menuWrap{position:relative}.menu{display:grid;position:absolute;z-index:3;min-width:150px;background:white;border:1px solid #ddd;border-radius:7px;box-shadow:0 8px 20px #0002;padding:5px}
+.menu button{border:0;text-align:left;white-space:nowrap}.notice,.processing{padding:9px 12px;background:#fff1f8;color:#8b275e!important;border-radius:6px}.note{width:100%;font-size:12px}
+.shell{display:grid;grid-template-columns:minmax(150px,220px) 1fr;border:1px solid #eee;min-height:320px}.side{display:grid;align-content:start;gap:4px;background:#faf9fb;border-right:1px solid #eee;padding:12px}.side span{color:#8e929c;font-size:11px;margin-top:14px}.side button{text-align:left;border:0}.active{background:#f9e4f1!important;color:#a82067!important}.main{padding:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.card{display:grid;gap:10px;padding:16px;border:1px solid #e8e8ec;border-radius:8px}.skeleton{height:75px;background:linear-gradient(100deg,#eee,#f8f8f8,#eee);border-radius:5px}
+.tableWrap{max-width:100%;overflow:auto}.tableWrap table{width:100%;border-collapse:collapse;min-width:480px}.tableWrap th,.tableWrap td{padding:10px;border-bottom:1px solid #eee;text-align:left}.tableWrap th{background:#fafafb;color:#666;font-size:12px}
+.empty{border:1px solid #eee;border-radius:8px;padding:25px;text-align:center;background:#fbfbfc}.pill{border:1px solid #e6d4df;border-radius:20px;padding:5px 9px;color:#a62167}
+.chart{display:flex;align-items:end;justify-content:space-around;height:135px;border-left:1px solid #ddd;border-bottom:1px solid #ddd;background:repeating-linear-gradient(to top,#fff,#fff 32px,#eee 33px)}.chart span{display:block;width:20px;background:#d74792;border-radius:4px 4px 0 0;height:55px;overflow:visible;white-space:nowrap;font-size:10px}.chart span:nth-child(2){height:105px;background:#5675c4}.chart span:nth-child(3){height:75px;background:#8cb59a}
+.scatter{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;position:relative;height:225px;border:1px solid #ddd;background:linear-gradient(to right,transparent 49.7%,#ddd 50%,transparent 50.3%),linear-gradient(to bottom,transparent 49.7%,#ddd 50%,transparent 50.3%);text-align:center;color:#9a8490;padding:12px}.scatter b{position:absolute;font-size:12px;color:#333}.pointOne{top:25%;right:18%}.pointTwo{top:30%;right:30%}.pointThree{bottom:12%;left:12%}
+.donut{display:grid;place-content:center;width:145px;height:145px;margin:auto;border-radius:50%;border:25px solid #cc2c7b;text-align:center;font-size:22px;font-weight:700}
+.sourceLayout{display:grid;grid-template-columns:1fr;gap:14px}
+.dateGrid{display:grid;grid-template-columns:130px repeat(2,minmax(150px,1fr));gap:8px;margin:12px 0;overflow:auto}
+.dateGrid>div:first-child{display:grid;align-content:start;gap:4px}.dateGrid>div:first-child button{text-align:left;border:0}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center;font-size:11px}.days span{padding:4px;background:#fbf5f9}
+.dialog{border:1px solid #ddd;border-radius:9px;padding:16px;background:#fff;box-shadow:0 8px 20px #0002;margin:14px 0}
+.dialog .footer:first-child{justify-content:space-between;border-top:0;padding-top:0}
+@media(max-width:600px){.frame{padding:15px}.shell{grid-template-columns:1fr}.side{border-right:0;border-bottom:1px solid #eee}.row input{width:100%;flex:auto}}
+@media(max-width:600px){.dateGrid{grid-template-columns:130px 1fr}}

@@ -1,0 +1,593 @@
+.root {
+  container-type: inline-size;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #12334c;
+  background: #fff;
+  border: 1px solid #dce3e8;
+  border-radius: 12px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.root * {
+  box-sizing: border-box;
+}
+.root h2,
+.root h3,
+.root p {
+  margin: 0;
+}
+.root h2 {
+  font-size: 20px;
+  font-weight: 650;
+}
+.root h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.root p {
+  color: #657780;
+  margin-top: 7px;
+}
+.root small {
+  font-size: 12px;
+  color: #637783;
+}
+.root button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid #dbe3e8;
+  border-radius: 8px;
+  min-height: 32px;
+  padding: 6px 10px;
+  background: #fff;
+  color: #12334c;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+.root button:hover {
+  background: #eef4ff;
+  border-color: #bbcee9;
+}
+.root button:focus-visible,
+.root input:focus-visible,
+.root select:focus-visible,
+.root textarea:focus-visible {
+  outline: 2px solid #276cf0;
+  outline-offset: 3px;
+}
+.root svg {
+  flex-shrink: 0;
+}
+.root input,
+.root select,
+.root textarea {
+  width: 100%;
+  border: 1px solid #cad7df;
+  border-radius: 8px;
+  background: #fff;
+  color: #12334c;
+  min-height: 34px;
+  padding: 7px 10px;
+  font: inherit;
+}
+.root textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.evidenceLabel {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #dfe6ed;
+  background: #f8fafc;
+  color: #546779;
+  font-size: 11px;
+}
+.evidenceLabel span:first-child {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.notice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  background: #f2f6fa;
+  border-top: 1px solid #dce5ed;
+  padding: 12px 16px;
+  font-size: 12px;
+  min-height: 45px;
+}
+.notice button {
+  flex-shrink: 0;
+  min-height: 26px;
+  padding: 3px;
+}
+.trial {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(100deg, #eeebff, #e5f2ff);
+  padding: 12px 16px;
+  font-size: 12px;
+}
+.trial button {
+  font-size: 12px;
+}
+.trial button:first-of-type {
+  background: #12334c;
+  color: white;
+  border-radius: 24px;
+}
+.spacer {
+  flex: 1;
+}
+.progress {
+  width: 48px;
+  height: 4px;
+  background: #e8edf2;
+  border-radius: 3px;
+}
+.shell,
+.sidebarStage {
+  display: flex;
+  align-items: stretch;
+}
+.workspace {
+  min-width: 0;
+  flex: 1;
+  background: #fbfcfd;
+}
+.sidebar {
+  width: 56px;
+  flex-shrink: 0;
+  background: #f4f7fa;
+  border-right: 1px solid #e0e6eb;
+  padding: 12px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sidebarWide {
+  width: 216px;
+}
+.sidebar .brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 30px;
+  padding-left: 9px;
+  font-size: 12px;
+}
+.brand svg {
+  padding: 3px;
+  box-sizing: content-box;
+  border-radius: 9px;
+  background: #2797cd;
+  color: white;
+}
+.sidebar button {
+  border: 0;
+  background: transparent;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 8px 10px;
+  font-size: 12px;
+}
+.sidebar button span {
+  flex: 1;
+}
+.sidebar .selected {
+  background: #e2ecfc;
+  color: #245aab;
+}
+.subnav {
+  padding-left: 27px;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 15px 18px;
+  background: #f7f9fb;
+  border-bottom: 1px solid #e1e7ed;
+}
+.header strong {
+  font-size: 14px;
+}
+.header button {
+  font-size: 12px;
+}
+.search {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  width: 135px;
+}
+.search input {
+  border: 0;
+  background: transparent;
+  min-width: 0;
+  padding: 4px;
+}
+.search kbd {
+  color: #a0adb8;
+}
+.onboarding {
+  padding: 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 18px;
+}
+.onboarding > div {
+  min-width: 0;
+}
+.setup {
+  padding: 22px;
+  background: linear-gradient(115deg, #eeeaff, #e4f2fc);
+  border-radius: 9px;
+  margin-bottom: 20px;
+}
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.counter {
+  margin-left: auto;
+  text-align: right;
+}
+.counter small {
+  display: block;
+  margin-top: 4px;
+}
+.setupSteps {
+  display: flex;
+  gap: 9px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.setupSteps button {
+  border-radius: 22px;
+  font-size: 12px;
+  flex: 1;
+  min-width: 125px;
+}
+.setupSteps svg {
+  color: #7c919b;
+}
+.card {
+  border: 1px solid #e2e8ed;
+  border-radius: 9px;
+  background: #fff;
+}
+.cardHead {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 22px;
+}
+.cardHead svg {
+  margin-top: 4px;
+  color: #718ea3;
+}
+.feature {
+  border-top: 1px solid #e5e9ed;
+}
+.feature h3 button {
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  min-height: 56px;
+  justify-content: flex-start;
+  padding: 16px 20px;
+}
+.feature h3 button span {
+  flex: 1;
+}
+.featureActions {
+  padding: 0 20px 18px;
+}
+.featureActions button {
+  display: flex;
+  border: 0;
+  background: transparent;
+  min-height: 40px;
+  color: #315cb4;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.featureActions svg {
+  color: #8c9ba6;
+}
+.featureActions p {
+  padding: 10px;
+}
+.articles {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e3e9ef;
+  border-radius: 9px;
+  align-self: start;
+  min-width: 0;
+}
+.integration {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start !important;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 12px !important;
+}
+.popoverWrap {
+  position: relative;
+  max-width: 100%;
+}
+.popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 10;
+  min-width: 220px;
+  width: max-content;
+  max-width: min(520px, calc(100vw - 72px));
+  border: 1px solid #d3dee6;
+  border-radius: 9px;
+  background: white;
+  box-shadow: 0 12px 30px #12334c20;
+  padding: 12px;
+}
+.header .popover {
+  left: auto;
+  right: 0;
+}
+.popover p {
+  margin: 4px 0 10px;
+}
+.createGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+  width: 440px;
+  max-width: 100%;
+}
+.createGrid button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 0;
+  padding: 10px;
+  min-height: 66px;
+}
+.createGrid strong {
+  font-size: 13px;
+}
+.createGrid small {
+  font-size: 11px;
+}
+.menuRow {
+  display: flex !important;
+  width: 100%;
+  justify-content: flex-start !important;
+  border: 0 !important;
+}
+.menuStage {
+  padding: 24px;
+  min-height: 580px;
+}
+.headerStage {
+  min-height: 240px;
+}
+.headerStage > .boundary {
+  margin: 20px;
+}
+.navPlaceholder {
+  padding: 30px;
+}
+.boundary {
+  font-size: 12px !important;
+  color: #67788a !important;
+}
+.empty {
+  text-align: center;
+  padding: 46px 24px 40px;
+}
+.emptyIcon {
+  display: inline-flex;
+  background: #eff4ff;
+  color: #4b82be;
+  padding: 22px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.entryCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 32px 0 24px;
+}
+.entryCards button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 130px;
+  padding: 20px;
+}
+.entryCards strong {
+  font-size: 14px;
+}
+.entryCards span {
+  font-size: 12px;
+  color: #718391;
+}
+.entryCards svg {
+  align-self: flex-end;
+  margin-top: auto;
+}
+.root .linkButton {
+  border: 0;
+  background: transparent;
+  color: #315bb0;
+  font-size: 12px;
+  padding: 6px 0;
+}
+.incidentLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 24px;
+  padding: 26px;
+}
+.incidentLayout .articles {
+  background: #fafcfe;
+}
+.incident {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 13px;
+  min-width: 0;
+}
+.root > .field,
+.root > .fieldGrid,
+.root > .articles {
+  margin: 24px;
+}
+.field label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.required {
+  color: #b93b46;
+}
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.editor {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccd9e2;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.editorToolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  background: #f6f9fb;
+  border-bottom: 1px solid #dce4ea;
+  padding: 6px;
+}
+.editorToolbar button {
+  font-size: 11px;
+  min-height: 28px;
+  border: 0;
+  background: transparent;
+  padding: 4px 6px;
+}
+.editor textarea {
+  border: 0;
+  border-radius: 0;
+}
+.editor > .linkButton {
+  align-self: flex-end;
+  margin: 4px 12px;
+}
+.dropzone {
+  display: flex !important;
+  min-height: 96px !important;
+  border: 1px dashed #bbccda !important;
+  flex-direction: column;
+  background: #fafcfe !important;
+}
+.dropzone span {
+  font-size: 12px;
+  color: #728694;
+}
+.formFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  border-top: 1px solid #e5eaf0;
+  padding-top: 18px;
+}
+.root .primary {
+  background: #276cf0;
+  color: white;
+  border-color: #276cf0;
+}
+.root .primary:hover {
+  background: #185bd4;
+}
+@container (max-width:750px) {
+  .onboarding,
+  .incidentLayout {
+    grid-template-columns: 1fr;
+  }
+  .entryCards {
+    grid-template-columns: 1fr;
+  }
+  .header .search {
+    display: none;
+  }
+  .header {
+    gap: 6px;
+  }
+  .sidebarWide {
+    width: 180px;
+  }
+  .sidebarStage .navPlaceholder {
+    padding: 18px;
+  }
+  .trial .spacer {
+    display: none;
+  }
+  .setup {
+    padding: 16px;
+  }
+}
+@media (max-width: 640px) {
+  .onboarding,
+  .incidentLayout {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+  .entryCards,
+  .fieldGrid {
+    grid-template-columns: 1fr;
+  }
+  .createGrid {
+    grid-template-columns: 1fr;
+    width: 270px;
+  }
+  .menuStage {
+    min-height: 1080px;
+  }
+  .evidenceLabel {
+    flex-direction: column;
+  }
+  .header {
+    padding: 12px;
+  }
+  .setupSteps button {
+    min-width: 140px;
+  }
+}

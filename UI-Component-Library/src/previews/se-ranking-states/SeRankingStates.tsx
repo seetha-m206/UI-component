@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import styles from './se-ranking-states.module.css';
 
-export type MetricsState = 'observed' | 'loading' | 'unavailable';
+export type MetricsState = 'observed' | 'settings-open' | 'loading' | 'unavailable';
 
 export function SeRankingKeyMetricsStrip({ initialState = 'observed' }: { initialState?: MetricsState }) {
   const metrics = [
     ['AI Presence', '0.06%'],
-    ['Organic Traffic', '5'],
-    ['Organic Keywords', '516'],
+    ['Organic Traffic', '12'],
+    ['Organic Keywords', '517'],
     ['Referring Domains', '82'],
     ['Search Visibility', '—'],
   ];
@@ -23,32 +23,39 @@ export function SeRankingKeyMetricsStrip({ initialState = 'observed' }: { initia
           </article>
         ))}
       </div>
+      {initialState === 'settings-open' && (
+        <div className={styles.metricSettings} role="menu" aria-label="Metric settings options">
+          {['AI Presence', 'Organic traffic', 'Organic keywords', 'Referring Domains', 'Search Visibility'].map((label) => <label key={label}><input type="checkbox" defaultChecked />{label}</label>)}
+          {['Health Score', 'Backlinks'].map((label) => <label key={label}><input type="checkbox" />{label}</label>)}
+        </div>
+      )}
       {initialState === 'unavailable' && <p className={styles.note}>Synthetic unavailable specimen · needs verification.</p>}
     </section>
   );
 }
 
-export type EngineState = 'observed' | 'selected' | 'no-data';
+export type EngineState = 'observed' | 'detail-open' | 'no-data';
 
 export function SeRankingAiEngineCards({ initialState = 'observed' }: { initialState?: EngineState }) {
   const engines = ['AI Overview', 'AI Mode', 'ChatGPT', 'Gemini', 'Perplexity'];
-  const [selected, setSelected] = useState(initialState === 'selected' ? 'AI Overview' : '');
+  const [selected, setSelected] = useState(initialState === 'detail-open' ? 'AI Overview' : '');
   return (
     <section className={styles.card} aria-label="AI engine presence">
       <header><div><h2>Competitive Research · AI Search</h2><p>Presence across answer engines</p></div></header>
       <div className={styles.engines}>
         {engines.map((engine, index) => {
-          const hasMention = initialState !== 'no-data' && index === 0;
+          const hasCitation = initialState !== 'no-data' && index === 0;
           return (
             <button type="button" key={engine} aria-pressed={selected === engine} onClick={() => setSelected(engine)}>
               <strong>{engine}</strong>
-              <span>{hasMention ? '1 mention' : '0 mentions'}</span>
-              <small>{hasMention ? 'Link presence observed' : 'No data yet'}</small>
+              <span>0 mentions</span>
+              <small>{hasCitation ? '4 link-presence citations' : '0 link presence'}</small>
             </button>
           );
         })}
       </div>
-      <p className={styles.note} role="status">{selected ? `${selected} selected locally. Live detail behavior needs verification.` : 'Select an engine to inspect the local state.'}</p>
+      {selected && <div className={styles.aiDetail}><strong>Overall Presence 0.06%</strong><span>Mention Presence 0%</span><span>Link Presence 0.06%</span><span>Citations 4</span><small>Observed destination: AI Search Overview</small></div>}
+      <p className={styles.note} role="status">{selected ? `${selected} drill-down screen observed in a new tab.` : 'Select an engine to inspect the observed drill-down state.'}</p>
     </section>
   );
 }
@@ -111,18 +118,21 @@ export function SeRankingFeatureCarousel({ initialPage = 0 }: { initialPage?: nu
 
 export type SetupAction = 'AI tracking' | 'Analytics' | 'Keywords';
 
-export function SeRankingSetupActions({ disabled = false }: { disabled?: boolean }) {
+export type SetupState = 'actions' | 'ai-setup' | 'analytics-options';
+export function SeRankingSetupActions({ disabled = false, initialState = 'actions' }: { disabled?: boolean; initialState?: SetupState }) {
   const [status, setStatus] = useState('');
   const actions: Array<[SetupAction, string, string]> = [
     ['AI tracking', 'Track brand visibility across answer engines', 'Set up AI tracking'],
     ['Analytics', 'Connect traffic data to the project overview', 'Connect analytics'],
     ['Keywords', 'Add tracked search terms to Rankings', 'Add keywords'],
   ];
+  if (initialState === 'ai-setup') return <section className={styles.setupScreen} aria-label="AI search engine setup"><header><div><strong>centilio.com</strong><span>Settings</span></div><button type="button">Back to project</button></header><h2>Set up search engines</h2><p>Track website and brand rankings on classic and AI search engines.</p><div className={styles.engineTabs}>{['Google', 'Google AI Overviews', 'Google AI Mode', 'ChatGPT'].map(label => <button type="button" key={label}>{label}</button>)}</div><dl><dt>Country</dt><dd>Canada</dd><dt>Location</dt><dd>Choose location · Optional</dd><dt>Google interface language</dt><dd>English</dd><dt>Brand name</dt><dd>Shared across all search engines</dd></dl><p>99 more search engines available to add</p><table><thead><tr><th>Search engine (1)</th><th>Location</th><th>Language</th></tr></thead><tbody><tr><td>Google India</td><td>India</td><td>EN</td></tr></tbody></table></section>;
   return (
     <section className={styles.setupGrid} aria-label="Setup actions">
       {actions.map(([name, description, label]) => (
         <article key={name}><span aria-hidden="true">＋</span><div><h2>{name}</h2><p>{description}</p></div><button type="button" disabled={disabled} onClick={() => setStatus(`${name} is guarded locally. No provider setup was started.`)}>{label}</button></article>
       ))}
+      {initialState === 'analytics-options' && <div className={styles.analyticsOptions}><strong>Analytics and statistics services</strong><p>Connect services to get detailed website information.</p>{['Connect Google Analytics', 'Connect Google Search Console', 'Connect Matomo Analytics'].map(label => <button type="button" key={label}>{label}</button>)}</div>}
       <p className={styles.note} role="status">{status || 'Local actions. No provider setup is submitted.'}</p>
     </section>
   );

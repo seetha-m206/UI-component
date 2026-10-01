@@ -2,9 +2,9 @@
 component: SE Ranking application shell
 ui_category: 'Application Layout > Product Navigation'
 source_product: SE Ranking
-last_verified: 2026-09-30
-evidence_state: observed_reconstructed
-status: partial
+last_verified: 2026-10-01
+evidence_state: complete_with_boundaries
+status: complete
 summary: Authenticated SE Ranking shell with persistent product rail, task-level top navigation, announcement banner, and account controls.
 ---
 
@@ -19,6 +19,7 @@ The authenticated workspace combines a persistent dark product rail, a blue task
 - Observed authenticated shell with Research active.
 - Observed Projects-active shell from Project Overview.
 - Observed shell with audit-complete notification.
+- Observed open account menu with Settings, Users, White Label, Billing, Bonus Offers, Affiliate Program, and Log Out.
 
 ## Technical View
 
@@ -28,10 +29,10 @@ The authenticated workspace combines a persistent dark product rail, a blue task
 
 ## Evidence Boundary
 
-- **OBSERVED:** Navigation labels, active-item styling, product banner, account initials, and two content contexts.
+- **OBSERVED:** Navigation labels, active-item styling, product banner, account initials, account-menu contents, and multiple content contexts.
 - **RECONSTRUCTION:** Responsive collapse, dimensions, icons, and local hover treatment.
-- **NOT OBSERVED:** Keyboard shortcuts, persisted navigation state, notification counts, and account-menu behavior. These need verification.
+- **NOT OBSERVED:** Keyboard shortcuts, persisted navigation state, and notification counts.
 
 ## Sources
 
-- **OBSERVATION:** Authenticated SE Ranking Project Overview and Keyword Research screens in the Codex in-app browser, 2026-09-30.
+- **OBSERVATION:** Authenticated SE Ranking Project Overview, Keyword Research, AI Search, Search-engine setup, and Rankings screens in the Codex in-app browser, 2026-10-01.

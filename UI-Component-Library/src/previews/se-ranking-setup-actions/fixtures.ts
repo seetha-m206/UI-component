@@ -1,4 +1,4 @@
 import type { PreviewFixture, PropSchemaField } from '../types';
-type Props = { disabled?: boolean };
-export const fixtures: PreviewFixture<Props>[] = [{ id: 'default', title: 'Observed setup actions', props: {} }, { id: 'disabled', title: 'Synthetic disabled actions', props: { disabled: true } }];
-export const propsSchema: PropSchemaField[] = [{ name: 'disabled', type: 'boolean', required: false, description: 'Disables every local setup action.' }];
+type Props = { disabled?: boolean; initialState?: 'actions' | 'ai-setup' | 'analytics-options' };
+export const fixtures: PreviewFixture<Props>[] = [{ id: 'default', title: 'Observed setup actions', props: {} }, { id: 'ai-setup', title: 'Observed AI engine setup screen', props: { initialState: 'ai-setup' } }, { id: 'analytics-options', title: 'Observed analytics connector options', props: { initialState: 'analytics-options' } }, { id: 'disabled', title: 'Synthetic disabled actions', props: { disabled: true } }];
+export const propsSchema: PropSchemaField[] = [{ name: 'initialState', type: "'actions' | 'ai-setup' | 'analytics-options'", required: false, description: 'Selects the action list or an observed setup screen.' }, { name: 'disabled', type: 'boolean', required: false, description: 'Disables every local setup action.' }];

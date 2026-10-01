@@ -3,7 +3,7 @@ component: SE Ranking keyword research entry
 ui_category: 'Research > Keyword Research'
 source_product: SE Ranking
 last_verified: 2026-09-30
-evidence_state: mixed_observed_reconstructed
+evidence_state: complete_with_boundaries
 ---
 
 # Component: SE Ranking keyword research entry
@@ -29,7 +29,8 @@ The entry screen centers a single keyword query bar above educational feature ca
 
 - **OBSERVED:** Heading, supporting copy, empty query prompt, Analyze action, carousel counts, and feature-card labels.
 - **RECONSTRUCTION:** Card illustrations, responsive stacking, disabled specimen, and carousel styling.
-- **NOT OBSERVED:** Query results, file upload, validation, analysis timing, request payloads, and database selection. These need verification.
+- **OBSERVED:** Searchable country database with India selected, `centilio` Analyze transition, loading copy, zero-result report, TXT import success, and `.csv,.txt` input restriction.
+- **NOT OBSERVED:** Raw request payloads, malformed accepted-file content, quota exhaustion, and a non-empty keyword report.
 
 ## Sources
 

@@ -1,0 +1,322 @@
+{
+  "product": "Freshservice",
+  "observed_at": "2026-10-01",
+  "node": "m5",
+  "client": "Codex in-app browser",
+  "scope": "Onboarding, tickets, incident form, sample dashboard, knowledge base, analytics catalogue, admin search and workflow inventory",
+  "product_identity_boundary": "Not Freshdesk. No Freshdesk product behavior was inspected.",
+  "provider_actions": "Read-only navigation, transient search and reversible disclosure inspection. No ticket, article, template, sample data, workflow, invitation, upload, purchase or form submission. No workflow activation or settings save.",
+  "network": "GET /api/_/ticket_filters/new_and_my_open returned 200. Headers, queries and bodies omitted.",
+  "screenshots": [
+    {
+      "file": "admin-search.png",
+      "kind": "provider_observation",
+      "sha256": "95bc6f34e473e09b307a584f07c09eb946e45c4a8c84f89f6ae9dc8b20272de9"
+    },
+    {
+      "file": "analytics-catalogue.png",
+      "kind": "provider_observation",
+      "sha256": "b2293d9e55d3861acb588184a302a00b2472b2f15550f55b6990a95249e1109f"
+    },
+    {
+      "file": "analytics-sort-menu.png",
+      "kind": "provider_observation",
+      "sha256": "d241e16055b6c37f177f44f99d6fe7fb4c8c6babe5f13435deff25ae5bedb11f"
+    },
+    {
+      "file": "article-templates-empty.png",
+      "kind": "provider_observation",
+      "sha256": "2a4c7eaa5b0131048fe9da71ac268fe514d436c2aadb82701aff733e8a4dbfde"
+    },
+    {
+      "file": "create-menu.png",
+      "kind": "provider_observation",
+      "sha256": "23e9d838371b9ea72f0c7c6f0f75a4ba1833c7382f073cc904e026b56903f555"
+    },
+    {
+      "file": "incident-cc-expanded.png",
+      "kind": "provider_observation",
+      "sha256": "978082a487d985c62ff0e5e872e33f6612370f98e2be4af365c5cbb08cac5360"
+    },
+    {
+      "file": "incident-status-options.png",
+      "kind": "provider_observation",
+      "sha256": "f573fff02cbcf1893ffe0f30c84e53c617074c1cb8651a5925186fa9695b3b20"
+    },
+    {
+      "file": "incident-template-empty.png",
+      "kind": "provider_observation",
+      "sha256": "05001b38e008f2e63c25c93832d3aea5f091a90307304ef025fcec0d0b7cd9e8"
+    },
+    {
+      "file": "knowledge-base-empty.png",
+      "kind": "provider_observation",
+      "sha256": "f70fa15eb5d718449d9e05918ba717afe55ad239391e95c82910da1a0a101a6d"
+    },
+    {
+      "file": "my-work-menu.png",
+      "kind": "provider_observation",
+      "sha256": "541694d61c6bac9a310d86b4cc29cf45218da47723d1340d004279e6e2d8e2f6"
+    },
+    {
+      "file": "new-incident-default.png",
+      "kind": "provider_observation",
+      "sha256": "908d9880fe02f107c1cfd246b033b74e8eb46173eb2efaddb23a9e4739e3f8ef"
+    },
+    {
+      "file": "onboarding-default.png",
+      "kind": "provider_observation",
+      "sha256": "5206cc2816f22169ef575226d8a0c66570c6e0a69eb3ec60d0ee35d6a3f6fe6d"
+    },
+    {
+      "file": "onboarding-service-expanded.png",
+      "kind": "provider_observation",
+      "sha256": "83ae5518d7ad7c124f48e3cc6650eb9358765744157578a135b0dae4a5eb7316"
+    },
+    {
+      "file": "sample-dashboard.png",
+      "kind": "provider_observation",
+      "sha256": "0beeb43306f31a7ad2775f19ff74d5db8c1f4e71317c6570059df877f2cee02a"
+    },
+    {
+      "file": "sidebar-expanded.png",
+      "kind": "provider_observation",
+      "sha256": "65fb1eb12996b502b1a4671610e93d434511c57fad71b27cfd4ebbc39d212bae"
+    },
+    {
+      "file": "tickets-empty-after-cancel.png",
+      "kind": "provider_observation",
+      "sha256": "e58f2abb7487eeb740a60f819745a886e596437cc41c6365278e1deb06cec81d"
+    },
+    {
+      "file": "tickets-empty.png",
+      "kind": "provider_observation",
+      "sha256": "b793dd423720f4021cb0035edcb978cd8b0a939017c69e6d7af2c10713655488"
+    },
+    {
+      "file": "workflow-subflows-empty.png",
+      "kind": "provider_observation",
+      "sha256": "aae7c33b2bf1a8272e6e82478bf5562a91d94467103da808997f43237b1fb3dc"
+    }
+  ],
+  "components": [
+    "freshservice-application-shell",
+    "freshservice-sidebar-navigation",
+    "freshservice-global-header",
+    "freshservice-trial-banner",
+    "freshservice-setup-checklist",
+    "freshservice-feature-accordion",
+    "freshservice-create-menu",
+    "freshservice-my-work-menu",
+    "freshservice-ticket-empty-state",
+    "freshservice-new-incident-form",
+    "freshservice-template-picker",
+    "freshservice-cc-disclosure",
+    "freshservice-status-priority-fields",
+    "freshservice-description-editor",
+    "freshservice-related-articles-empty",
+    "freshservice-attachment-zone"
+  ],
+  "local_preview_screenshots": [
+    {
+      "file": "freshservice-application-shell.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "f57d1e01085d2d0cbf5ade9f2836b46e45d655850103e052e44c20f9913419e1"
+    },
+    {
+      "file": "freshservice-attachment-zone.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "41f6d2a83a220b1a761fbdcfbd03875cf504907e6105f922a15ce66b3b3c8707"
+    },
+    {
+      "file": "freshservice-cc-disclosure.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "bebaff41ec2b31cb1e3a86e40ea57b7725a66cd74b8354703621de7be4e5156d"
+    },
+    {
+      "file": "freshservice-create-menu.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "ad755d9b234c2c65462aaa59b9ee8a9cb8c4fdff5bf6502b61be47fba4cb77f1"
+    },
+    {
+      "file": "freshservice-description-editor.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "b0cb3b80e3f076dbf05d5893195e874d5fc7f15a9d35cc08148366d2fabc2dad"
+    },
+    {
+      "file": "freshservice-feature-accordion.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "742acfbf89c0959f01b5e9544e27b62dfb0d322615d1cbf23d768d3e5df409b1"
+    },
+    {
+      "file": "freshservice-global-header.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "a9e35e18263cbc5da50d18b2aa684e940960b4ad9660c8d5f68dd42f2a0b3cc8"
+    },
+    {
+      "file": "freshservice-my-work-menu.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "04e74983bf0b5eca7dcdf136089801aa979458af99679a0837975b23ede96aa6"
+    },
+    {
+      "file": "freshservice-new-incident-form.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "0df2e671bb42bfbdd875c7098f126bd5811664cea4b90c48c33d80ecdc049676"
+    },
+    {
+      "file": "freshservice-related-articles-empty.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "e1c29a18daa542172bb2589a7dd56f4f3c39c764a0c7a136a7f647e78066f1d4"
+    },
+    {
+      "file": "freshservice-setup-checklist.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "7d2e7013fab4b66ba642202756b3728c8e26d796902ae0ba6ba4faa23bb5f129"
+    },
+    {
+      "file": "freshservice-sidebar-navigation.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "24bf43132a079917c64f500e9fb708a9df46a85af5550975a11fcfb9c4e55dd5"
+    },
+    {
+      "file": "freshservice-status-priority-fields.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "1d21d8c6ae7bb90d858790d62f62677110fa70eb61107218329ce72e76e646fa"
+    },
+    {
+      "file": "freshservice-template-picker.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "7e32a22a21a006b384dbaf7882177cdc63ce21ec8101cab50f395fa3ba019382"
+    },
+    {
+      "file": "freshservice-ticket-empty-state.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "f8c9f5d13b700a130e5cd864dedd734a02c0f6808483196b2fd84fe4ce607b46"
+    },
+    {
+      "file": "freshservice-trial-banner.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "ca5569bbae69deab46162878d54a55fa14970877ffc09076ebe1cb0f0c828e03"
+    }
+  ],
+  "updated_at": "2026-10-01T12:20:56.556841+00:00",
+  "component_count": 23,
+  "local_fixtures": [
+    {
+      "file": "freshservice-admin-settings-search.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "ee6290f4a1c2d80a537ba0f772816e9d133162f02f0ee6d241ca38eefc4730cb"
+    },
+    {
+      "file": "freshservice-analytics-catalogue.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "be84c22b2b41b17842eca89e5c29283ce00545b99be09450921470a392971dff"
+    },
+    {
+      "file": "freshservice-application-shell.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "f57d1e01085d2d0cbf5ade9f2836b46e45d655850103e052e44c20f9913419e1"
+    },
+    {
+      "file": "freshservice-article-templates-empty.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "8df7252689f6b4109e6521a77f4a5a7f54920fddaa0fb90f874408cd73ec2fef"
+    },
+    {
+      "file": "freshservice-attachment-zone.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "41f6d2a83a220b1a761fbdcfbd03875cf504907e6105f922a15ce66b3b3c8707"
+    },
+    {
+      "file": "freshservice-cc-disclosure.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "bebaff41ec2b31cb1e3a86e40ea57b7725a66cd74b8354703621de7be4e5156d"
+    },
+    {
+      "file": "freshservice-create-menu.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "ad755d9b234c2c65462aaa59b9ee8a9cb8c4fdff5bf6502b61be47fba4cb77f1"
+    },
+    {
+      "file": "freshservice-description-editor.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "b0cb3b80e3f076dbf05d5893195e874d5fc7f15a9d35cc08148366d2fabc2dad"
+    },
+    {
+      "file": "freshservice-feature-accordion.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "742acfbf89c0959f01b5e9544e27b62dfb0d322615d1cbf23d768d3e5df409b1"
+    },
+    {
+      "file": "freshservice-global-header.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "a9e35e18263cbc5da50d18b2aa684e940960b4ad9660c8d5f68dd42f2a0b3cc8"
+    },
+    {
+      "file": "freshservice-knowledge-workspace.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "1a8696e66ddebedd77fcbb7a35718123da24a7f2450cd2a7781caa64fd62aa4a"
+    },
+    {
+      "file": "freshservice-my-work-menu.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "04e74983bf0b5eca7dcdf136089801aa979458af99679a0837975b23ede96aa6"
+    },
+    {
+      "file": "freshservice-new-incident-form.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "0df2e671bb42bfbdd875c7098f126bd5811664cea4b90c48c33d80ecdc049676"
+    },
+    {
+      "file": "freshservice-related-articles-empty.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "e1c29a18daa542172bb2589a7dd56f4f3c39c764a0c7a136a7f647e78066f1d4"
+    },
+    {
+      "file": "freshservice-report-sort-menu.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "672126e53161b599dba59d5c0665ca3e5511b39b1601e3b3b00a4c93c1f30105"
+    },
+    {
+      "file": "freshservice-sample-dashboard.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "cef332e613a45f720fe7f1f775725ef4ea0e6b4b309192cccc621017162fc7fe"
+    },
+    {
+      "file": "freshservice-setup-checklist.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "7d2e7013fab4b66ba642202756b3728c8e26d796902ae0ba6ba4faa23bb5f129"
+    },
+    {
+      "file": "freshservice-sidebar-navigation.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "24bf43132a079917c64f500e9fb708a9df46a85af5550975a11fcfb9c4e55dd5"
+    },
+    {
+      "file": "freshservice-status-priority-fields.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "1d21d8c6ae7bb90d858790d62f62677110fa70eb61107218329ce72e76e646fa"
+    },
+    {
+      "file": "freshservice-template-picker.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "7e32a22a21a006b384dbaf7882177cdc63ce21ec8101cab50f395fa3ba019382"
+    },
+    {
+      "file": "freshservice-ticket-empty-state.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "f8c9f5d13b700a130e5cd864dedd734a02c0f6808483196b2fd84fe4ce607b46"
+    },
+    {
+      "file": "freshservice-trial-banner.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "ca5569bbae69deab46162878d54a55fa14970877ffc09076ebe1cb0f0c828e03"
+    },
+    {
+      "file": "freshservice-workflow-inventory.png",
+      "kind": "fictional_local_reconstruction",
+      "sha256": "2ef4f2b7067cc7e9b8fb18033c2e8e85df3ae8f3f0289dffbb675807bacfbea0"
+    }
+  ],
+  "limits": "Observed source structure and safe controls only. Sample dashboard image, curated report definitions and inactive workflow affordances do not prove operational results."
+}

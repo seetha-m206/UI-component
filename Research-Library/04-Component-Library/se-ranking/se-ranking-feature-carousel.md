@@ -2,8 +2,8 @@
 component: SE Ranking keyword feature carousel
 ui_category: 'Navigation > Carousel'
 source_product: SE Ranking
-last_verified: 2026-09-30
-evidence_state: mixed_observed_reconstructed
+last_verified: 2026-10-01
+evidence_state: complete_with_boundaries
 ---
 
 # Component: SE Ranking keyword feature carousel
@@ -15,7 +15,7 @@ Paired educational cards explain keyword metrics while previous, next, and count
 ## State Fixtures
 
 - Observed first pair with 1–2 of 4.
-- Reconstructed second pair with 2–3 of 4.
+- Observed forward paging through 2–3 of 4 and 3–4 of 4.
 - Reversible previous and next actions.
 
 ## Actions
@@ -28,7 +28,8 @@ Paired educational cards explain keyword metrics while previous, next, and count
 
 - **OBSERVED:** Four feature labels, carousel arrows, and the 1–2 of 4 indicator.
 - **RECONSTRUCTION:** Paging transition, disabled boundaries, illustrations, and responsive stacking.
-- **NOT OBSERVED:** Live animation, wrapping, swipe behavior, and focus retention.
+- **OBSERVED:** Forward paging, bounded end state, and all three count labels.
+- **NOT OBSERVED:** Swipe behavior and focus retention.
 
 ## Sources
 

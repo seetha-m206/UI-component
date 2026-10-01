@@ -3,7 +3,14 @@ import styles from './se-ranking.module.css';
 
 export type SeRankingView = 'shell' | 'overview' | 'keyword' | 'query' | 'survey' | 'toast';
 export type SeRankingState =
-  'default' | 'dropdown-open' | 'survey-open' | 'toast-open' | 'loading' | 'empty' | 'disabled';
+  | 'default'
+  | 'dropdown-open'
+  | 'account-open'
+  | 'survey-open'
+  | 'toast-open'
+  | 'loading'
+  | 'empty'
+  | 'disabled';
 
 export interface SeRankingProps {
   view?: SeRankingView;
@@ -33,9 +40,9 @@ const topItems = [
   'Competitive Research',
   'Keyword Research',
 ];
-const locations = ['United States', 'United Kingdom', 'Canada', 'Australia'];
+const locations = ['Canada', 'United States of America', 'United Kingdom of Great Britain and Northern Ireland', 'Germany', 'India'];
 
-function AppChrome({ active = 'Research' }: { active?: string }) {
+function AppChrome({ active = 'Research', accountOpen = false }: { active?: string; accountOpen?: boolean }) {
   return (
     <>
       <aside className={styles.rail} aria-label="SE Ranking product navigation">
@@ -74,9 +81,17 @@ function AppChrome({ active = 'Research' }: { active?: string }) {
         <button type="button" aria-label="Notifications">
           ●
         </button>
-        <button type="button" aria-label="Account menu">
+        <button type="button" aria-label="Account menu" aria-expanded={accountOpen}>
           SL
         </button>
+        {accountOpen && (
+          <div className={styles.accountMenu} role="menu" aria-label="Account menu options">
+            <strong>Seetha Lakshmi</strong>
+            {['Settings', 'Users', 'White Label', 'Billing', 'Bonus Offers', 'Affiliate Program', 'Log Out'].map((item) => (
+              <button key={item} type="button" role="menuitem">{item}</button>
+            ))}
+          </div>
+        )}
       </header>
     </>
   );
@@ -128,7 +143,7 @@ function KeywordQueryBar({
           disabled={blocked}
           onClick={() => setOpen((value) => !value)}
         >
-          US <span aria-hidden="true">▾</span>
+          India <span aria-hidden="true">▾</span>
         </button>
         <button
           type="button"
@@ -141,16 +156,16 @@ function KeywordQueryBar({
       </div>
       {open && (
         <div className={styles.locationMenu} role="listbox" aria-label="Keyword database">
-          <p>Local reconstruction · needs verification</p>
+          <p>Observed searchable country database · India selected</p>
           {locations.map((location) => (
             <button
               role="option"
-              aria-selected={location === 'United States'}
+              aria-selected={location === 'India'}
               type="button"
               key={location}
               onClick={() => {
                 setOpen(false);
-                setStatus(`${location} selected locally. Provider behavior needs verification.`);
+                setStatus(`${location} selected in the local evidence fixture.`);
               }}
             >
               {location}
@@ -447,7 +462,7 @@ export function SeRanking({
   return (
     <div className={styles.stage}>
       <PromoBanner />
-      <AppChrome active={view === 'overview' ? 'Projects' : 'Research'} />
+      <AppChrome active={view === 'overview' ? 'Projects' : 'Research'} accountOpen={initialState === 'account-open'} />
       <div className={styles.content}>
         {view === 'overview' ? (
           <OverviewScreen state={initialState} />

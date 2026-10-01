@@ -2,9 +2,9 @@
 component: SE Ranking key metrics strip
 ui_category: 'Data Display > KPI Strip'
 source_product: SE Ranking
-last_verified: 2026-09-30
-evidence_state: mixed_observed_reconstructed
-status: partial
+last_verified: 2026-10-01
+evidence_state: complete_with_boundaries
+status: complete
 summary: Five-cell SEO and AI KPI strip with observed values plus loading and unavailable fixtures.
 ---
 
@@ -16,7 +16,8 @@ Five compact KPI cells summarize AI Presence, Organic Traffic, Organic Keywords,
 
 ## State Fixtures
 
-- Observed values: 0.06%, 5, 516, 82, and an empty Search Visibility value with Add keywords.
+- Observed current values: 0.06%, 12, 517, 82, and 0% Search Visibility.
+- Observed settings menu with five enabled metrics and Health Score plus Backlinks available unchecked.
 - Reconstructed loading skeleton.
 - Synthetic unavailable state marked needs verification.
 
@@ -24,15 +25,15 @@ Five compact KPI cells summarize AI Presence, Organic Traffic, Organic Keywords,
 
 | Element | Action | Result | Evidence boundary |
 | --- | --- | --- | --- |
-| Metric settings | Activate | Not exercised | **NOT OBSERVED** |
-| Add keywords | Activate | Not exercised | **NOT OBSERVED** |
+| Metric settings | Activate | Opened metric visibility and ordering menu | **OBSERVED** |
+| Metric value | Activate | Navigates to the corresponding research, rankings, or backlink report | **OBSERVED destinations** |
 
 ## Evidence Boundary
 
-- **OBSERVED:** Labels, values, order, settings affordance, and Add keywords text.
+- **OBSERVED:** Labels, current values, order, settings menu, selected metrics, unchecked options, and report destinations.
 - **RECONSTRUCTION:** Loading and responsive layout.
-- **NOT OBSERVED:** Formula definitions, refresh behavior, settings panel, and missing-data rules.
+- **NOT OBSERVED:** Formula implementation, refresh timing, and missing-data rules.
 
 ## Sources
 
-- **OBSERVATION:** Authenticated SE Ranking Project Overview for centilio.com, 2026-09-30.
+- **OBSERVATION:** Authenticated SE Ranking Project Overview for centilio.com, 2026-10-01.

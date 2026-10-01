@@ -2,7 +2,7 @@
 component: "Ubersuggest Account Toolbar and Guarded Triggers"
 ui_category: "Application Layout > Account Controls"
 source_product: Ubersuggest
-last_verified: 2026-09-30
+last_verified: 2026-10-01
 evidence_state: source_reviewed
 ---
 
@@ -23,15 +23,15 @@ Usage indicator, credit label, trial button, notification button and profile tri
 
 ## Actions
 
-| Element                                             | User action                                                                 | Function and result                                                                                                                                                              | Evidence                             |
-| --------------------------------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| Captured controls                                   | Safe keyboard activation, resizing, or read-only inspection described below | Affordances inspected only. No notification panel or account menu was opened, because read acknowledgement and mutation behavior were unverified. Every local action is a guard. | OBSERVED only to the stated boundary |
-| Local preview controls                              | Mouse or keyboard interaction                                               | State changes happen in React memory. Consequential actions return a local status, never a provider request.                                                                     | RECONSTRUCTION                       |
-| Submission, external destination or account control | Not exercised in the provider                                               | No result asserted                                                                                                                                                               | NOT OBSERVED                         |
+| Element                                             | User action                                                                 | Function and result                                                                                                                                                                                   | Evidence                             |
+| --------------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| Captured controls                                   | Safe keyboard activation, resizing, or read-only inspection described below | Affordances inspected only. One notification activation produced no visible panel, menu, dialog or navigation. This establishes only a no-visible-transition boundary. Every local action is a guard. | OBSERVED only to the stated boundary |
+| Local preview controls                              | Mouse or keyboard interaction                                               | State changes happen in React memory. Consequential actions return a local status, never a provider request.                                                                                          | RECONSTRUCTION                       |
+| Submission, external destination or account control | Not exercised in the provider                                               | No result asserted                                                                                                                                                                                    | NOT OBSERVED                         |
 
 ## Behavior & States
 
-**OBSERVED:** A usage bar, remaining-credit label, trial action, notification badge and profile trigger were visible in the authenticated header. Actual account values are deliberately excluded from fixtures.
+**OBSERVED:** A usage bar, remaining-credit label, trial action, notification badge and profile trigger were visible in the authenticated header. On 2026-10-01, one notification activation produced no visible panel, menu, dialog or navigation. That observation does not prove the notification surface is absent or broken. Actual account values are deliberately excluded from fixtures.
 
 **RECONSTRUCTION:** The local fixture set is default plus a disabled variant. Opening states reproduce the captured structure, while filled values, static countdowns, artwork, disabled styling and any error or recovery demonstration are synthetic. State selection resets the preview through the library harness.
 
@@ -47,7 +47,7 @@ Usage indicator, credit label, trial button, notification button and profile tri
 
 ## Technical Data
 
-**OBSERVED:** Some provider icon buttons lacked accessible names in the captured tree. The reconstruction explicitly labels Notifications and Account menu and uses 24 fictional credits and A as a fictional avatar.
+**OBSERVED:** Some provider icon buttons lacked accessible names in the captured tree. The notification trigger was identified by its bell icon, and one activation did not expose a visible popover or navigation. The reconstruction explicitly labels Notifications and Account menu and uses 24 fictional credits and A as a fictional avatar.
 
 **RECONSTRUCTION:** React state, scoped CSS module, native buttons and controlled fields implement the local interaction. No provider code, private API, request payload, data store or token was copied. System fonts approximate the observed fonts. Fictional chart primitives replace provider artwork. This is a reusable component model, not an exported provider application.
 
