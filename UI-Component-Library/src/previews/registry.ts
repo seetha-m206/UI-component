@@ -362,6 +362,20 @@ import {
 } from './paperform-tooltip/fixtures';
 import { previewConfig as paperformTooltipConfig } from './paperform-tooltip/preview.config';
 
+import { JotformStarRatingField } from './jotform-star-rating-field/JotformStarRatingField';
+import {
+  fixtures as jotformStarRatingFieldFixtures,
+  propsSchema as jotformStarRatingFieldPropsSchema,
+} from './jotform-star-rating-field/fixtures';
+import { previewConfig as jotformStarRatingFieldConfig } from './jotform-star-rating-field/preview.config';
+
+import { JotformScaleRatingField } from './jotform-scale-rating-field/JotformScaleRatingField';
+import {
+  fixtures as jotformScaleRatingFieldFixtures,
+  propsSchema as jotformScaleRatingFieldPropsSchema,
+} from './jotform-scale-rating-field/fixtures';
+import { previewConfig as jotformScaleRatingFieldConfig } from './jotform-scale-rating-field/preview.config';
+
 import { JotformAppShellDashboard } from './jotform-app-shell-dashboard/JotformAppShellDashboard';
 import {
   fixtures as jotformAppShellDashboardFixtures,
@@ -1398,6 +1412,28 @@ export const previewRegistry: PreviewRegistry = {
     fixtures: paperformTooltipFixtures,
     config: paperformTooltipConfig,
     propsSchema: paperformTooltipPropsSchema,
+  },
+  'jotform-star-rating-field': {
+    type: 'reconstructed',
+    Component: JotformStarRatingField,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live interaction with a test form at form.jotform.com/262714734595062, DOM/ARIA inspection via injected JavaScript, and real pointer/keyboard events via browser automation, 2026-09-30 (JF1, part of this library's first 5-way rating-field comparison). Confirmed and reproduced faithfully: a cumulative 'filled up to N' visual on both hover (a distinct preview state) and commit (a third, visually separate state), paired with a genuinely EXCLUSIVE aria-checked (only the clicked star reports true) — resolving Zoho's rating-star-field's confirmed aria-checked-never-flips bug. Arrow keys commit immediately, no separate activation step. The confirmed real bug is reproduced deliberately, not silently fixed: a mouse click updates aria-checked/the committed value correctly but leaves the roving tabindex on the originally-focusable star, only re-syncing once an arrow key is pressed. Re-clicking the already-selected star is reproduced per the source's own flagged, not-fully-confirmed finding (decrements by one rather than a clean no-op or deselect) — the source record itself flags this as needing manual (non-automated) re-verification, a caveat preserved here rather than asserted as fully settled.",
+    runtimeVerified: false,
+    fixtures: jotformStarRatingFieldFixtures,
+    config: jotformStarRatingFieldConfig,
+    propsSchema: jotformStarRatingFieldPropsSchema,
+  },
+  'jotform-scale-rating-field': {
+    type: 'reconstructed',
+    Component: JotformScaleRatingField,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live interaction with a test form at form.jotform.com/262714734595062, DOM/ARIA inspection via injected JavaScript, and real pointer events via browser automation, 2026-09-30 (JF1, companion to jotform-star-rating-field). Confirmed and reproduced faithfully: genuine NATIVE <input type=\"radio\"> elements (not a custom ARIA widget, unlike this product's own sibling Star Rating field), each with a real <label for> per option, giving correct exclusive selection and keyboard operability for free — the only rating-field implementation across all five products in this comparison set confirmed to use native radio markup. The confirmed accessibility defect is reproduced exactly, not smoothed over: each input also carries an explicit aria-labelledby pointing at the shared question text, which takes accessible-name precedence over the native label per spec — this preview sets both the correct per-option <label for> AND the group-pointing aria-labelledby on every input, so the override is directly demonstrable (all five options resolve to the same accessible name in a role query) rather than only inferable from markup. Selecting an option highlights the whole field block, not just the chosen circle, matching the confirmed panel-highlight behavior.",
+    runtimeVerified: false,
+    fixtures: jotformScaleRatingFieldFixtures,
+    config: jotformScaleRatingFieldConfig,
+    propsSchema: jotformScaleRatingFieldPropsSchema,
   },
   'jotform-app-shell-dashboard': {
     type: 'reconstructed',

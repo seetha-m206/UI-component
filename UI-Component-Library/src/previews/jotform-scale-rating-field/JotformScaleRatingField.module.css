@@ -1,0 +1,79 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.root[data-disabled='true'] {
+  opacity: 0.6;
+}
+
+.root[data-has-selection='true'] {
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.scaleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.endpoint {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.item {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Visually hidden but still focusable/clickable and in the accessibility
+ * tree — the styled label below is the visible circle. Not display:none or
+ * visibility:hidden, which would remove it from the accessible-name/role
+ * computation this record's finding depends on. */
+.radio {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  width: 28px;
+  height: 28px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radioLabel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--shell-border);
+  font-size: var(--font-size-xs);
+  color: var(--shell-text);
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.radio:checked + .radioLabel {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.radio:focus-visible + .radioLabel {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
