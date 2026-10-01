@@ -3,6 +3,7 @@ component: Semrush Narrative Drivers
 ui_category: 'Analytics & Reporting > Narrative Drivers'
 source_product: Semrush
 last_verified: 2026-09-29
+evidence_state: mixed_observed_reconstructed
 status: complete
 summary: Platform visibility, cited-domain evidence, and expandable question-level competitive breakdown.
 ---
@@ -20,3 +21,7 @@ Insights → share of voice by platform → SOV/mentions/average-position tabs �
 ## Evidence boundary
 
 Observed in the authenticated Narrative Drivers report. The reconstruction uses fictional measurements and recommendations.
+
+## Sources
+
+- Authenticated live application observation, Semrush Narrative Drivers report, 2026-09-29.

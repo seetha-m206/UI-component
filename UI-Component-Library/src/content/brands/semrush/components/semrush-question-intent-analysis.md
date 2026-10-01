@@ -3,6 +3,7 @@ component: Semrush Question Intent Analysis
 ui_category: 'Analytics & Reporting > Query Intelligence'
 source_product: Semrush
 last_verified: 2026-09-29
+evidence_state: mixed_observed_reconstructed
 status: complete
 summary: Topic distribution, query-intent breakdown, question examples, and strategy recommendations.
 ---
@@ -20,3 +21,7 @@ Insights → topic distribution → overall query-intent chart → intent by top
 ## Evidence boundary
 
 Observed in the authenticated Questions report. The reconstruction uses synthetic topic labels, percentages, questions, and recommendations.
+
+## Sources
+
+- Authenticated live application observation, Semrush Questions report, 2026-09-29.

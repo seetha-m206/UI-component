@@ -3,6 +3,7 @@ component: Semrush AI Visibility Shell
 ui_category: 'Application Layout > Two-Level Product Navigation'
 source_product: Semrush
 last_verified: 2026-09-29
+evidence_state: mixed_observed_reconstructed
 status: complete
 summary: Two-level Semrush shell combining the global product rail, AI Toolkit navigation, report header, and persistent analysis controls.
 ---

@@ -3,6 +3,7 @@ component: Semrush AI Competitor Setup
 ui_category: "Search & Comparison > Competitor Comparison Setup"
 source_product: Semrush
 last_verified: 2026-09-29
+evidence_state: mixed_observed_reconstructed
 status: complete
 summary: Comparison setup row with one owned domain, four competitor slots, Analyze and Clear actions, and a report empty state.
 ---

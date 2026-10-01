@@ -1,0 +1,2 @@
+import type { PreviewFixture, PropSchemaField } from '../types'; type Props = { stalled?: boolean };
+export const fixtures: PreviewFixture<Props>[] = [{ id: 'loading', title: 'Observed loading state', props: {} }, { id: 'stalled', title: 'Synthetic stalled state', props: { stalled: true } }]; export const propsSchema: PropSchemaField[] = [{ name: 'stalled', type: 'boolean', required: false, description: 'Shows the synthetic long-running state and local Retry action.' }];

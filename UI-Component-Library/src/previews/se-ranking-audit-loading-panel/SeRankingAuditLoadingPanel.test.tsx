@@ -1,0 +1,2 @@
+import { render, screen } from '@testing-library/react'; import userEvent from '@testing-library/user-event'; import { describe, expect, it } from 'vitest'; import { SeRankingAuditLoadingPanel } from './SeRankingAuditLoadingPanel';
+describe('SeRankingAuditLoadingPanel', () => { it('guards synthetic retry', async () => { const user = userEvent.setup(); render(<SeRankingAuditLoadingPanel stalled />); await user.click(screen.getByRole('button', { name: 'Retry' })); expect(screen.getByRole('status')).toHaveTextContent(/No audit request was sent/i); }); });

@@ -1,0 +1,68 @@
+# Ubersuggest extraction index
+
+Observed on 2026-09-30 using the Codex in-app browser on M5. The library now contains **47 records and 153 fixtures**. This continuation adds **20 screen records and 12 action records with 99 fixtures** to the first 15 records and 54 fixtures.
+
+The user selected **observe without submitting**. Every new record is complete only for its named entry, empty, control or access-gate scope. All 47 records retain `source_reviewed` for the provider evidence. New previews show local runtime verification separately. The first 15 records retain their existing partial status and are not silently promoted.
+
+## First pass retained
+
+- [Dashboard Workspace](ubersuggest-dashboard-workspace.md) and [Keyword Discovery Entry](ubersuggest-keyword-discovery-entry.md).
+- Thirteen independent controls cover product and mobile navigation, help, interface language, website entry, offer banner, feature artwork, keyword mode, token input, research locale, guarded search, services menu and account toolbar.
+
+## Added screen and action coverage
+
+| Record | Observed scope | Fixtures | Provider boundary |
+| --- | --- | --- | --- |
+| [Ubersuggest AI Keyword Overview Entry](ubersuggest-ai-keyword-overview.md) | Single-keyword AI research entry with language and location fields. | 3 | No AI Search request was submitted. AI results, metrics and server errors are outside this record. |
+| [Ubersuggest Bulk Analysis Entry](ubersuggest-bulk-analysis.md) | Bulk keyword entry, 50-keyword allowance, locale fields and CSV plan gate. | 4 | Analysis and CSV upload were not submitted. Overflow text is a visible promise, not evidence of server truncation. |
+| [Ubersuggest AI Prompt Ideas Entry](ubersuggest-ai-prompt-ideas.md) | Prompt research query, locale fields and introductory feature panels. | 3 | Generated prompts and responses require a submitted query and remain outside the observed entry scope. |
+| [Ubersuggest Keyword Lists Empty Workspace](ubersuggest-keyword-lists.md) | Settled empty list workspace showing 0/3 and two create-list entry points. | 2 | The transient initial table skeleton is not the settled empty workspace. No list was saved, so list rows, sorting and deletion are unavailable. |
+| [Ubersuggest Site Audit Entry](ubersuggest-site-audit-entry.md) | Domain or exact-URL audit entry and introductory audit illustration. | 2 | Search was not submitted. Crawl progress, audit findings and correction workflows are outside this entry record. |
+| [Ubersuggest Rank Tracking Empty Report](ubersuggest-rank-tracking.md) | Actual empty tracking report with metric cards, empty chart, filters and table controls. | 14 | No tracked keyword exists. No export, copy, update, removal, filter application, date application or tracking submission occurred. Populated table ordering and filtered results are unavailable. |
+| [Ubersuggest Project Setup Boundary](ubersuggest-project-setup.md) | Website-input setup reached from Next Actions and Project Settings without a project. | 3 | Next Actions routes to project setup in this account. No project was created. Non-empty readiness does not establish valid-domain acceptance. |
+| [Ubersuggest Pixel Tracking Plan Gate](ubersuggest-pixel-plan-gate.md) | Enterprise overlay above a blurred provider demonstration report. | 1 | View plans was not activated. Gated sample rows and metrics must never be presented as verified account data. |
+| [Ubersuggest AI Visibility Setup](ubersuggest-ai-visibility-setup.md) | Website, brand and repeatable topic setup with help accordions. | 3 | Search AI was not submitted. Topic removal is a local reconstruction convenience and not claimed as an exercised provider action. Brand rankings remain unavailable. |
+| [Ubersuggest Traffic Overview Entry](ubersuggest-traffic-overview.md) | Domain/URL traffic research entry with a combined locale selector. | 2 | No traffic results or competitor estimates were requested. The preview artwork is illustrative. |
+| [Ubersuggest Keyword Coverage Entry](ubersuggest-keyword-coverage.md) | Keywords by Traffic entry with domain scope and introductory coverage panels. | 3 | Coverage charts, keyword rows and filters require submitted research and were not observed. |
+| [Ubersuggest Top Pages Entry](ubersuggest-top-pages.md) | Competitor domain entry with combined language-country picker. | 1 | Search was not submitted. Top-page rows and visit estimates are unavailable. |
+| [Ubersuggest Content Ideas Entry](ubersuggest-content-ideas.md) | Keyword-based content research entry after client hydration. | 2 | Search was not submitted. Article rankings, social counts and result actions are unavailable. |
+| [Ubersuggest Backlinks Overview Entry](ubersuggest-backlinks-entry.md) | Backlink domain/URL entry with an exclude-subdomains checkbox. | 3 | No backlink request was submitted. No link rows, authority metrics or historical series were verified. |
+| [Ubersuggest Backlink Opportunity Entry](ubersuggest-backlink-opportunity.md) | Own-domain and competitor scope fields, five-token competitor editor and exclusions. | 3 | Search was not submitted. Link intersections and authority data were not requested. |
+| [Ubersuggest Content Studio Project Boundary](ubersuggest-content-studio-boundary.md) | No-project access screen for AI-assisted article drafting. | 1 | The editor is unavailable before project creation. No article was generated and no content was saved. |
+| [Ubersuggest AI Chat Entry](ubersuggest-ai-chat-entry.md) | Empty AI chat with history toggle, suggested prompts and composer. | 2 | Suggested prompts were not activated because they may submit. No response, tool execution or saved conversation is claimed. |
+| [Ubersuggest Integrations Catalogue](ubersuggest-integrations-catalogue.md) | Twelve app, connector and partner cards with linked destinations. | 1 | No external installation, OAuth connection or partner trial occurred. Marketing claims are provider text, not integration runtime proof. |
+| [Ubersuggest Integration Landing Pages](ubersuggest-integration-guides.md) | Related instruction and marketing landings reached from the application. | 5 | The local page chooser is a reconstruction control, not a provider navigation feature. Landing-page claims do not establish a working integration. No install or connection was attempted. |
+| [Ubersuggest MCP Setup Instructions](ubersuggest-mcp-setup.md) | MCP documentation landing with six AI-client setup tabs. | 6 | Code snippets are intentionally summarized in the preview. This is instruction UI research, not evidence that the advertised tools work. |
+| [Ubersuggest Bulk Keyword Editor](ubersuggest-bulk-keyword-editor.md) | Independent control extracted from Ubersuggest Bulk Analysis Entry. | 4 | Analysis and CSV upload were not submitted. Overflow text is a visible promise, not evidence of server truncation. |
+| [Ubersuggest Create List Dialog](ubersuggest-list-create-dialog.md) | Independent control extracted from Ubersuggest Keyword Lists Empty Workspace. | 1 | The transient initial table skeleton is not the settled empty workspace. No list was saved, so list rows, sorting and deletion are unavailable. |
+| [Ubersuggest Domain Scope Selector](ubersuggest-domain-scope-selector.md) | Independent control extracted from Ubersuggest Site Audit Entry. | 3 | Search was not submitted. Crawl progress, audit findings and correction workflows are outside this entry record. |
+| [Ubersuggest Tracking Filter Panels](ubersuggest-tracking-filter-panel.md) | Independent control extracted from Ubersuggest Rank Tracking Empty Report. | 5 | No tracked keyword exists. No export, copy, update, removal, filter application, date application or tracking submission occurred. Populated table ordering and filtered results are unavailable. |
+| [Ubersuggest Tracking Date Picker](ubersuggest-tracking-date-picker.md) | Independent control extracted from Ubersuggest Rank Tracking Empty Report. | 2 | No tracked keyword exists. No export, copy, update, removal, filter application, date application or tracking submission occurred. Populated table ordering and filtered results are unavailable. |
+| [Ubersuggest Tracking Keyword Dialog](ubersuggest-tracking-keyword-dialog.md) | Independent control extracted from Ubersuggest Rank Tracking Empty Report. | 3 | No tracked keyword exists. No export, copy, update, removal, filter application, date application or tracking submission occurred. Populated table ordering and filtered results are unavailable. |
+| [Ubersuggest Tracking Bulk Action Menus](ubersuggest-tracking-bulk-actions.md) | Independent control extracted from Ubersuggest Rank Tracking Empty Report. | 2 | No tracked keyword exists. No export, copy, update, removal, filter application, date application or tracking submission occurred. Populated table ordering and filtered results are unavailable. |
+| [Ubersuggest Visibility Topic Editor](ubersuggest-visibility-topic-editor.md) | Independent control extracted from Ubersuggest AI Visibility Setup. | 2 | Search AI was not submitted. Topic removal is a local reconstruction convenience and not claimed as an exercised provider action. Brand rankings remain unavailable. |
+| [Ubersuggest Competitor Token Editor](ubersuggest-competitor-token-editor.md) | Independent control extracted from Ubersuggest Backlink Opportunity Entry. | 3 | Search was not submitted. Link intersections and authority data were not requested. |
+| [Ubersuggest Integration Client Tabs](ubersuggest-integration-client-tabs.md) | Independent control extracted from Ubersuggest MCP Setup Instructions. | 6 | Code snippets are intentionally summarized in the preview. This is instruction UI research, not evidence that the advertised tools work. |
+| [Ubersuggest Feature Upgrade Dialog](ubersuggest-upgrade-dialog.md) | Independent control extracted from Ubersuggest Bulk Analysis Entry. | 2 | Analysis and CSV upload were not submitted. Overflow text is a visible promise, not evidence of server truncation. |
+| [Ubersuggest Account Navigation Menu](ubersuggest-account-menu.md) | Account dropdown with a fictional identity in the reconstruction. | 2 | No destination, sign-out or setting was activated. Notification contents and account-management forms are outside this control scope. |
+
+## Navigation and access findings
+
+Next Actions and Project Settings reach the website-input project setup boundary. Competitor Analysis reaches the existing no-project dashboard. These destinations are accounted for without inventing additional report screens. Content Studio stops at its no-project boundary. Pixel Tracking exposes an Enterprise plan gate over blurred demonstration data. Its background rows do not establish real account data.
+
+Integration landing pages and MCP client tabs were observed. Their installation and connection outcomes were not exercised. External partner links and commercial account destinations were not followed as product implementation evidence.
+
+## Evidence and verification
+
+Canonical markdown and UI mirrors contain the same research body. Each new record has a wrapper, fixture set and independent route. The shared implementation is included in Code and AI Context. Human View and AI Context explicitly surface the source limitations.
+
+The dated evidence directory is `Internal/scratch-2026-09/ubersuggest/remaining/`. `source-trace.json` maps all 32 records to timestamped source receipts and screenshot hashes. `verification.md` covers 130 passing tests, all 32 desktop routes, all 99 mobile fixtures and targeted real-browser interactions. `acceptance-ledger.json` in the parent directory preserves first-pass requirements and adds continuation evidence.
+
+Provider screenshots remain private session artifacts because account chrome can appear. No provider screenshot is shipped as a fixture. `local-rank-tracking.png` shows the fictional reconstruction and can be shared locally.
+
+## Remaining boundaries
+
+1. Ours: No remaining implementation work within the captured observation-only scope. Provider submission outcomes, populated reports, paid-plan content and backend contracts remain unverified.
+2. Ravi: No action needed for this delivery. A future expansion into submitted workflows would require a new instruction and suitable account access.
+
+This delivery is local only. No commit, push, deployment or integration installation was performed.

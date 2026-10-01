@@ -1,0 +1,3 @@
+import type { PreviewFixture, PropSchemaField } from '../types'; import type { SemrushCampaignScopeRadioGroupProps } from './SemrushCampaignScopeRadioGroup';
+export const propsSchema: PropSchemaField[] = [{ name: 'initialScope', type: 'string', required: false, description: 'Initially selected fictional campaign scope.' }, { name: 'disabled', type: 'boolean', required: false, description: 'Disables every radio option.' }];
+export const fixtures: PreviewFixture<SemrushCampaignScopeRadioGroupProps>[] = [{ id: 'root', title: 'Root domain', props: {} }, { id: 'version', title: 'Version selected', props: { initialScope: 'www' } }, { id: 'disabled', title: 'Disabled · needs verification', props: { disabled: true } }];

@@ -1,0 +1,329 @@
+.stage {
+  min-height: 420px;
+  padding: 48px;
+  display: grid;
+  place-content: center;
+  gap: 18px;
+  color: #17233c;
+  background: linear-gradient(135deg, #f4f7fb, #eaf0f7);
+  font-family: Inter, system-ui, sans-serif;
+}
+.stage button,
+.stage input,
+.stage select {
+  font: inherit;
+}
+.stage button {
+  min-height: 38px;
+  border: 1px solid #b9c5d4;
+  border-radius: 6px;
+  padding: 8px 14px;
+  background: #fff;
+  color: #244363;
+  cursor: pointer;
+}
+.stage button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.stage button:focus-visible,
+.stage input:focus-visible,
+.stage select:focus-visible {
+  outline: 3px solid rgba(31, 111, 235, 0.3);
+  outline-offset: 2px;
+}
+.primary {
+  border-color: #ff6b35 !important;
+  background: #ff6b35 !important;
+  color: #fff !important;
+  font-weight: 700;
+}
+.gateCard,
+.emptyCard,
+.formCard,
+.connectCard,
+.infoCard,
+.guardCard {
+  width: min(680px, calc(100vw - 96px));
+  padding: 32px;
+  border: 1px solid #d7dee8;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(22, 38, 67, 0.08);
+  text-align: center;
+}
+.gateCard h2,
+.emptyCard h2,
+.connectCard h2,
+.infoCard h2,
+.guardCard h2 {
+  margin: 12px 0 8px;
+  font-size: 26px;
+}
+.gateCard p,
+.emptyCard p,
+.connectCard p,
+.infoCard p,
+.guardCard p {
+  color: #66758a;
+}
+.actions,
+.allowanceRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.status {
+  max-width: 680px;
+  margin: 0;
+  padding: 12px 16px;
+  border: 1px solid #f2c57c;
+  border-radius: 6px;
+  background: #fff7e8;
+  color: #704300;
+}
+.icon {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #eef4ff;
+  color: #2167cf;
+  font-size: 24px;
+}
+.demoLinks,
+.eyebrow {
+  margin: 0;
+  color: #68768a;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.linkStack {
+  display: grid;
+  gap: 10px;
+  width: min(560px, calc(100vw - 96px));
+}
+.linkStack button {
+  color: #1767d2;
+  text-align: left;
+  text-decoration: underline;
+}
+.formCard {
+  display: grid;
+  gap: 14px;
+  text-align: left;
+}
+.formCard label,
+.selectField {
+  display: grid;
+  gap: 7px;
+  color: #45566d;
+  font-weight: 650;
+}
+.formCard input,
+.selectField select {
+  min-height: 42px;
+  padding: 8px 11px;
+  border: 1px solid #b9c5d4;
+  border-radius: 6px;
+  background: #fff;
+}
+.helper,
+.selection {
+  margin: 0;
+  color: #66758a;
+}
+.allowanceRow {
+  width: min(860px, calc(100vw - 96px));
+  padding: 24px;
+  border: 1px solid #d7dee8;
+  border-radius: 10px;
+  background: #fff;
+}
+.selectField {
+  width: min(420px, calc(100vw - 96px));
+}
+.banner {
+  position: relative;
+  width: min(860px, calc(100vw - 96px));
+  padding: 20px 54px 20px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid #94b8ed;
+  border-radius: 8px;
+  background: #edf5ff;
+}
+.banner p {
+  margin: 5px 0 0;
+  color: #53677f;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  min-width: 34px;
+  min-height: 34px !important;
+  padding: 4px !important;
+}
+.channels {
+  width: min(760px, calc(100vw - 96px));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
+}
+.channels button[aria-pressed='true'] {
+  border-color: #2167cf;
+  background: #edf5ff;
+  color: #1858ad;
+  font-weight: 700;
+}
+.reportPreview {
+  width: min(760px, calc(100vw - 96px));
+  overflow: hidden;
+  border: 1px solid #cbd5e2;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(22, 38, 67, 0.08);
+}
+.previewToolbar {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #dce3ec;
+}
+.previewToolbar strong {
+  margin-right: auto;
+  color: #ff6b35;
+}
+.previewToolbar i {
+  width: 54px;
+  height: 8px;
+  border-radius: 4px;
+  background: #dce3ec;
+}
+.previewTable {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: #e1e7ef;
+}
+.previewTable span {
+  min-height: 48px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #7a8799;
+}
+.previewTable .highlightCell {
+  background: #fff3dd;
+  color: #8a5700;
+  font-weight: 700;
+}
+.filterStrip {
+  width: min(680px, calc(100vw - 96px));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #fff;
+}
+.filterStrip span {
+  padding: 8px 12px;
+  border: 1px solid #c6d0dc;
+  border-radius: 5px;
+  color: #41546b;
+}
+.calendarPreview {
+  width: min(860px, calc(100vw - 96px));
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border: 1px solid #d7dee8;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+.calendarPreview div {
+  min-height: 150px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-right: 1px solid #e4e9f0;
+}
+.calendarPreview span {
+  padding: 7px;
+  border-radius: 5px;
+  background: #edf5ff;
+  color: #265d9b;
+  font-size: 12px;
+}
+.projectHeader {
+  width: min(760px, calc(100vw - 96px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #fff;
+}
+.wordmark {
+  color: #ff6b35;
+  font-size: 24px;
+  letter-spacing: -0.05em;
+}
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 640px) {
+  .stage {
+    padding: 24px;
+  }
+  .gateCard,
+  .emptyCard,
+  .formCard,
+  .connectCard,
+  .infoCard,
+  .guardCard,
+  .allowanceRow,
+  .banner,
+  .linkStack,
+  .selectField,
+  .channels {
+    width: calc(100vw - 48px);
+  }
+  .reportPreview,
+  .filterStrip,
+  .calendarPreview,
+  .projectHeader {
+    width: calc(100vw - 48px);
+  }
+  .calendarPreview {
+    grid-template-columns: 1fr;
+  }
+  .calendarPreview div {
+    min-height: 72px;
+    border-bottom: 1px solid #e4e9f0;
+  }
+  .banner,
+  .allowanceRow {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

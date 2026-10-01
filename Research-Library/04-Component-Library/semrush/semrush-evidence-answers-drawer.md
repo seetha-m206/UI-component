@@ -3,6 +3,7 @@ component: Semrush Evidence Answers Drawer
 ui_category: 'Overlays > Evidence Drawer'
 source_product: Semrush
 last_verified: 2026-09-29
+evidence_state: mixed_observed_reconstructed
 status: complete
 summary: Answer evidence drawer with scope selection, sources, brand mentions, paging, and loading state.
 ---
@@ -20,3 +21,7 @@ Show answers trigger → right-side modal drawer → heading and count → brand
 ## Evidence boundary
 
 Observed by opening a read-only Show answers interaction in Perception. The reconstruction uses fictional questions, answers, domains, and brands.
+
+## Sources
+
+- Authenticated live application observation, Semrush Perception Show answers drawer, 2026-09-29.
