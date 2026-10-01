@@ -56,13 +56,15 @@ export function getBrandLabel(brand: string): string {
  * "Other" rather than being silently misgrouped or crashing.
  */
 const PRODUCT_GROUP_MAP: Record<string, string> = {
-  ubersuggest: 'SEO & AI Search',
   ahrefs: 'SEO & AI Search',
   'google-forms': 'Forms',
   jotform: 'Forms',
   paperform: 'Forms',
+  'se-ranking': 'SEO & AI Search',
   semrush: 'SEO & AI Search',
+  similarweb: 'SEO & AI Search',
   typeform: 'Forms',
+  ubersuggest: 'SEO & AI Search',
   'zoho-forms': 'Forms',
 };
 
