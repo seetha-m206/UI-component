@@ -23,10 +23,26 @@
 }
 
 .statTile {
+  position: relative;
   padding: var(--spacing-5) var(--spacing-6);
   border: 1px solid var(--shell-border);
   border-radius: var(--radius-lg);
   background: var(--shell-sidebar-bg);
+  overflow: hidden;
+}
+
+.statTile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--shell-focus),
+    color-mix(in srgb, var(--shell-focus) 25%, transparent)
+  );
 }
 
 .statValue {
@@ -34,6 +50,7 @@
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
   color: var(--shell-text);
+  font-variant-numeric: tabular-nums;
 }
 
 .statLabel {
@@ -46,9 +63,10 @@
 }
 
 .groupTitle {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
+  font-weight: var(--font-weight-semibold);
   color: var(--shell-muted-text);
   border-bottom: 1px solid var(--shell-border);
   padding-bottom: var(--spacing-2);
@@ -76,9 +94,13 @@
 }
 
 .card:hover {
-  border-color: var(--shell-border-strong);
+  border-color: color-mix(in srgb, var(--shell-focus) 45%, var(--shell-border));
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+}
+
+.card:hover .cardTitle {
+  color: var(--shell-focus);
 }
 
 .cardIcon {
@@ -95,6 +117,7 @@
 .cardTitle {
   font-weight: var(--font-weight-semibold);
   color: var(--shell-text);
+  transition: color var(--transition-fast);
 }
 
 .cardSummary {

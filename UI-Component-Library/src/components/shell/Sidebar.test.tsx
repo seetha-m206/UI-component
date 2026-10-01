@@ -217,6 +217,20 @@ describe('Sidebar', () => {
     ).toHaveAttribute('href', '/freshservice/freshservice-application-shell');
   });
 
+  it('collapses entirely (inert, data-open=false) when the whole-sidebar toggle closes it', () => {
+    render(
+      <MemoryRouter>
+        <Sidebar query="" open={false} />
+      </MemoryRouter>
+    );
+    // role=navigation is excluded from the a11y tree while inert in some
+    // environments, so query the element directly by its stable id.
+    const nav = document.getElementById('primary-navigation');
+    expect(nav).not.toBeNull();
+    expect(nav).toHaveAttribute('data-open', 'false');
+    expect(nav).toHaveAttribute('inert');
+  });
+
   it('searching auto-expands every matching brand group regardless of collapse state', async () => {
     const user = userEvent.setup();
     render(

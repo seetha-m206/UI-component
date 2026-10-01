@@ -13,9 +13,11 @@ function matches(haystack: string, needle: string): boolean {
 interface SidebarProps {
   /** Owned by Layout and shared with Header's search input, so both stay in sync. */
   query: string;
+  /** Whole-sidebar collapse, toggled from the Header (Centilio-style). Defaults to open. */
+  open?: boolean;
 }
 
-export function Sidebar({ query }: SidebarProps) {
+export function Sidebar({ query, open = true }: SidebarProps) {
   const location = useLocation();
 
   const currentEntry = useMemo(() => {
@@ -125,7 +127,13 @@ export function Sidebar({ query }: SidebarProps) {
   }, [filtered]);
 
   return (
-    <nav className={styles.sidebar} aria-label="Component library navigation">
+    <nav
+      id="primary-navigation"
+      className={styles.sidebar}
+      aria-label="Component library navigation"
+      data-open={open}
+      inert={!open}
+    >
       <NavLink
         to="/"
         end

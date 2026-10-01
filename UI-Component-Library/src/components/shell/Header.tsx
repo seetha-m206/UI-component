@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Moon, Search, Sun } from 'lucide-react';
+import { Moon, PanelLeft, PanelLeftClose, Search, Sun } from 'lucide-react';
 import type { Theme } from '@hooks/useTheme';
 import styles from './Header.module.css';
 
@@ -9,9 +9,18 @@ interface HeaderProps {
   onQueryChange: (query: string) => void;
   theme: Theme;
   onToggleTheme: () => void;
+  sidebarOpen: boolean;
+  onToggleSidebar: () => void;
 }
 
-export function Header({ query, onQueryChange, theme, onToggleTheme }: HeaderProps) {
+export function Header({
+  query,
+  onQueryChange,
+  theme,
+  onToggleTheme,
+  sidebarOpen,
+  onToggleSidebar,
+}: HeaderProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Global "/" shortcut focuses search, unless the user is already typing
@@ -41,6 +50,20 @@ export function Header({ query, onQueryChange, theme, onToggleTheme }: HeaderPro
 
   return (
     <header className={styles.header}>
+      <button
+        type="button"
+        className={styles.sidebarToggle}
+        onClick={onToggleSidebar}
+        aria-label={sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}
+        aria-expanded={sidebarOpen}
+        aria-controls="primary-navigation"
+      >
+        {sidebarOpen ? (
+          <PanelLeftClose size={16} aria-hidden="true" />
+        ) : (
+          <PanelLeft size={16} aria-hidden="true" />
+        )}
+      </button>
       <NavLink to="/" className={styles.identity}>
         <img src="/favicon.svg" width={18} height={18} alt="" className={styles.identityLogo} />
         <div className={styles.identityName}>UI Library</div>

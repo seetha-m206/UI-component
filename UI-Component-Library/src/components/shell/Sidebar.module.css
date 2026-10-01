@@ -7,7 +7,23 @@
   position: sticky;
   top: var(--header-height);
   overflow-y: auto;
+  overflow-x: hidden;
   padding: var(--spacing-6) var(--spacing-4);
+  transition: width 0.25s ease, padding 0.25s ease, border-color 0.25s ease;
+}
+
+.sidebar[data-open='false'] {
+  width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-right-color: transparent;
+  overflow: hidden;
+}
+
+/* Inner content keeps its natural width while the container animates shut,
+   so text doesn't reflow/wrap mid-transition — it slides away instead. */
+.sidebar > * {
+  min-width: calc(var(--sidebar-width) - 2 * var(--spacing-4));
 }
 
 @media (max-width: 991px) {
@@ -17,6 +33,14 @@
     width: 100%;
     border-right: none;
     border-bottom: 1px solid var(--shell-border);
+  }
+
+  .sidebar[data-open='false'] {
+    display: none;
+  }
+
+  .sidebar > * {
+    min-width: 0;
   }
 }
 

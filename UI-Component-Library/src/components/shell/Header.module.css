@@ -1,15 +1,44 @@
 .header {
   display: flex;
   align-items: center;
-  gap: var(--spacing-4);
+  gap: var(--spacing-3);
   height: var(--header-height);
   flex-shrink: 0;
   padding: 0 var(--spacing-4);
   border-bottom: 1px solid var(--shell-border);
-  background: var(--shell-bg);
+  background: color-mix(in srgb, var(--shell-bg) 82%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+.sidebarToggle {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.sidebarToggle:hover {
+  background: var(--shell-border);
+  color: var(--shell-text);
+}
+
+.sidebarToggle:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
 }
 
 .identity {
