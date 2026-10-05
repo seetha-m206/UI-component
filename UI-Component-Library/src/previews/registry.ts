@@ -382,6 +382,13 @@ import {
 } from './jotform-scale-rating-field/fixtures';
 import { previewConfig as jotformScaleRatingFieldConfig } from './jotform-scale-rating-field/preview.config';
 
+import { JotformInputTableField } from './jotform-input-table-field/JotformInputTableField';
+import {
+  fixtures as jotformInputTableFieldFixtures,
+  propsSchema as jotformInputTableFieldPropsSchema,
+} from './jotform-input-table-field/fixtures';
+import { previewConfig as jotformInputTableFieldConfig } from './jotform-input-table-field/preview.config';
+
 import { JotformAppShellDashboard } from './jotform-app-shell-dashboard/JotformAppShellDashboard';
 import {
   fixtures as jotformAppShellDashboardFixtures,
@@ -1865,6 +1872,17 @@ export const previewRegistry: PreviewRegistry = {
     fixtures: jotformScaleRatingFieldFixtures,
     config: jotformScaleRatingFieldConfig,
     propsSchema: jotformScaleRatingFieldPropsSchema,
+  },
+  'jotform-input-table-field': {
+    type: 'reconstructed',
+    Component: JotformInputTableField,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live interaction with a test form at form.jotform.com/262731344959062 (Input Table field added 2026-10-05), both in the Form Builder canvas and on the live published public form, DOM/ARIA inspection via injected JavaScript, and real pointer/keyboard events via browser automation, 2026-10-05 (JF3). Confirmed and reproduced faithfully: a genuine semantic <table> with real <th scope=\"row\"/\"col\"> headers (not a div-grid) and a per-cell aria-label composed from both row and column axes. The confirmed real defect is reproduced deliberately, not smoothed over: every cell gets its own unique `name` rather than one shared per row, so exclusivity here is entirely React-state-managed (matching the source's confirmed 'JavaScript-managed, not native-browser-managed' finding) and no arrow-key row navigation exists, matching the real product. The Required 'every row' validation flow reproduces the confirmed un-scoped error styling (every cell gets the red outline on a blocked submit, not just the incomplete row) and the working 'See Errors' jump-to-first-invalid-row control. The default template reproduces the confirmed real mismatch — every column, including one labeled to imply free text, defaults to the radio input type.",
+    runtimeVerified: false,
+    fixtures: jotformInputTableFieldFixtures,
+    config: jotformInputTableFieldConfig,
+    propsSchema: jotformInputTableFieldPropsSchema,
   },
   'jotform-app-shell-dashboard': {
     type: 'reconstructed',
