@@ -1,0 +1,518 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.root[data-disabled='true'] {
+  opacity: 0.6;
+}
+
+/* Intro / "Describe your form" box */
+
+.introBox {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  padding: var(--spacing-6);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-lg);
+  background: var(--shell-bg);
+  max-width: 560px;
+}
+
+.introTitle {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.introHint {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.introTextarea {
+  min-height: 96px;
+  padding: var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  resize: vertical;
+}
+
+.introTextarea:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.generateButton {
+  align-self: flex-start;
+  appearance: none;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.generateButton:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.generateButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.generateButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.generatingStatus {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+/* Builder layout: canvas + Form Copilot panel */
+
+.builderLayout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--spacing-4);
+  align-items: start;
+}
+
+@container (max-width: 760px) {
+  .builderLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.canvas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-6);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-lg);
+  background: var(--shell-bg);
+  min-height: 240px;
+}
+
+.toast {
+  position: absolute;
+  top: var(--spacing-2);
+  right: var(--spacing-2);
+  background: var(--color-primary);
+  color: #fff;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  box-shadow: var(--shadow-md);
+  z-index: 1;
+}
+
+.formTitle {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.canvasField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding-bottom: var(--spacing-3);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.canvasFieldLabel {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.radioOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.textFieldInput {
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  font-size: var(--font-size-sm);
+  max-width: 320px;
+}
+
+.textFieldInput:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.stars {
+  display: flex;
+  gap: var(--spacing-1);
+}
+
+.star {
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  color: var(--color-warning);
+  cursor: pointer;
+  padding: 0;
+}
+
+.star:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.submitPreviewButton {
+  align-self: flex-start;
+  appearance: none;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  opacity: 0.85;
+  cursor: default;
+}
+
+/* Form Copilot panel */
+
+.copilotPanel {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-lg);
+  background: var(--shell-bg);
+  overflow: hidden;
+  max-height: 560px;
+}
+
+.copilotHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3);
+  border-bottom: 1px solid var(--shell-border);
+  background: var(--shell-sidebar-bg);
+}
+
+.copilotPanel[data-collapsed='true'] .copilotHeader {
+  border-bottom: none;
+}
+
+.copilotHeaderTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.aiTag {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: 0 var(--spacing-1);
+}
+
+.copilotHeaderActions {
+  display: flex;
+  gap: var(--spacing-1);
+}
+
+.iconButton {
+  appearance: none;
+  border: 1px solid var(--shell-border);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  border-radius: var(--radius-sm);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.iconButton:hover {
+  border-color: var(--shell-border-strong);
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.chatThread {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3);
+  max-height: 360px;
+}
+
+.chatTurn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  max-width: 90%;
+}
+
+.chatTurn[data-role='user'] {
+  align-self: flex-end;
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.chatTurn[data-role='assistant'] {
+  align-self: flex-start;
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-text);
+  border: 1px solid var(--shell-border);
+}
+
+.chatTurn[data-undone='true'] {
+  opacity: 0.5;
+}
+
+.chatTurnText {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.undoLink {
+  align-self: flex-start;
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+  text-decoration: underline;
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  padding: 0;
+}
+
+.undoLink:disabled {
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.undoLink:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-2);
+}
+
+.checklistOption {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  cursor: pointer;
+}
+
+.showMoreButton,
+.addQuestionButton {
+  align-self: flex-start;
+  appearance: none;
+  border: 1px solid var(--shell-border);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.addQuestionButton {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.addQuestionButton:disabled {
+  background: var(--shell-border);
+  border-color: var(--shell-border);
+  color: var(--shell-muted-text);
+  cursor: not-allowed;
+}
+
+.showMoreButton:focus-visible,
+.addQuestionButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}
+
+.thinkingIndicator {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.copilotComposer {
+  border-top: 1px solid var(--shell-border);
+  padding: var(--spacing-2);
+}
+
+.composerRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.suggestionsWrapper {
+  position: relative;
+}
+
+.plusButton {
+  appearance: none;
+  border: 1px solid var(--shell-border);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  border-radius: var(--radius-pill);
+  width: 28px;
+  height: 28px;
+  font-size: var(--font-size-md);
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.plusButton:hover {
+  border-color: var(--shell-border-strong);
+}
+
+.plusButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.suggestionsMenu {
+  position: absolute;
+  bottom: calc(100% + var(--spacing-2));
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-2);
+  min-width: 200px;
+  z-index: 2;
+}
+
+.suggestionChip,
+.suggestionChipDisabled {
+  text-align: left;
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--shell-text);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.suggestionChip:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.suggestionChip:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.suggestionChipDisabled {
+  color: var(--shell-muted-text);
+  cursor: not-allowed;
+}
+
+.copilotInput {
+  flex: 1;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  font-size: var(--font-size-sm);
+}
+
+.copilotInput:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 1px;
+}
+
+.sendButton {
+  appearance: none;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.sendButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.sendButton:focus-visible {
+  outline: 2px solid var(--shell-focus);
+  outline-offset: 2px;
+}

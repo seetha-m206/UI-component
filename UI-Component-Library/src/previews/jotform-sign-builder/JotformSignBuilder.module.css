@@ -1,0 +1,561 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--shell-bg);
+  position: relative;
+}
+
+.root[data-disabled='true'] {
+  opacity: 0.6;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-bottom: 1px solid var(--shell-border);
+}
+
+.brand {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  flex: none;
+}
+
+.titleBlock {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.titleText {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topBarActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex: none;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.modeTabBar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: linear-gradient(90deg, #1fa87a, #17b26a);
+}
+
+.modeTab {
+  padding: var(--spacing-1) var(--spacing-3);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+.modeTab:focus-visible,
+.roleBadge:focus-visible,
+.popoverRoleButton:focus-visible,
+.iconButton:focus-visible,
+.addNewRoleButton:focus-visible,
+.sendButton:focus-visible,
+.addRoleConfirm:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.modeTabActive {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.previewToggle {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #fff;
+  font-size: var(--font-size-xs);
+}
+
+.buildBody {
+  display: flex;
+  min-height: 300px;
+}
+
+.palette {
+  flex: none;
+  width: 170px;
+  border-right: 1px solid var(--shell-border);
+  background: var(--shell-sidebar-bg);
+  padding: var(--spacing-2) 0;
+}
+
+.paletteHeader {
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.paletteGroup {
+  padding: var(--spacing-2) var(--spacing-3);
+}
+
+.paletteGroupLabel {
+  display: block;
+  font-size: 10px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--shell-muted-text);
+  margin-bottom: var(--spacing-1);
+  letter-spacing: 0.04em;
+}
+
+.paletteList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+}
+
+.canvas {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-4);
+  overflow: visible;
+}
+
+.document {
+  width: 100%;
+  max-width: 420px;
+  padding: var(--spacing-4);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  background: var(--shell-bg);
+}
+
+.documentTitle {
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  text-align: center;
+}
+
+.documentParagraph {
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.signatureBlock {
+  position: relative;
+  padding: var(--spacing-3);
+  border: 1px dashed var(--shell-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.signatureBlock[data-color='orange'] {
+  border-color: #ff7a59;
+}
+
+.signatureBlock[data-color='purple'] {
+  border-color: #9b5de5;
+}
+
+.signatureBlock[data-color='blue'] {
+  border-color: #2f80ed;
+}
+
+.signatureBlock[data-color='teal'] {
+  border-color: #17b26a;
+}
+
+.signatureRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.signatureLine {
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--shell-border);
+}
+
+.requiredMark {
+  color: #e5484d;
+  font-weight: var(--font-weight-semibold);
+}
+
+.roleBadgeWrap {
+  position: relative;
+}
+
+.roleBadge {
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 4px var(--spacing-2);
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  color: #fff;
+}
+
+.roleBadge[data-color='orange'] {
+  background: #ff7a59;
+}
+
+.roleBadge[data-color='purple'] {
+  background: #9b5de5;
+}
+
+.roleBadge[data-color='blue'] {
+  background: #2f80ed;
+}
+
+.roleBadge[data-color='teal'] {
+  background: #17b26a;
+}
+
+.dateFieldRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.dateFieldLabel {
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+  flex: none;
+}
+
+.dateFieldInput {
+  flex: 1 1 auto;
+  height: 20px;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-sidebar-bg);
+}
+
+.popover {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 220px;
+  padding: var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  background: var(--shell-bg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.popoverTitle {
+  margin: 0 0 var(--spacing-1);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--shell-muted-text);
+}
+
+.popoverList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.popoverItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-1);
+}
+
+.popoverRoleButton {
+  flex: 1 1 auto;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: var(--shell-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  padding: 4px var(--spacing-1);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.popoverRoleButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.popoverItemActions {
+  display: flex;
+  gap: 2px;
+  flex: none;
+}
+
+.iconButton {
+  border: none;
+  background: transparent;
+  color: var(--shell-muted-text);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  padding: 2px 4px;
+  border-radius: var(--radius-sm);
+}
+
+.iconButton:hover {
+  background: var(--shell-sidebar-bg);
+}
+
+.addNewRoleButton {
+  margin-top: var(--spacing-1);
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  text-align: left;
+  cursor: pointer;
+  padding: 4px var(--spacing-1);
+}
+
+.addRoleForm {
+  display: flex;
+  gap: var(--spacing-1);
+  margin-top: var(--spacing-1);
+}
+
+.addRoleInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: 4px var(--spacing-1);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+}
+
+.addRoleConfirm {
+  border: none;
+  border-radius: var(--radius-sm);
+  background: #17b26a;
+  color: #fff;
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+  padding: 4px var(--spacing-2);
+  cursor: pointer;
+}
+
+.subNavBody {
+  display: flex;
+  min-height: 200px;
+}
+
+.subNavRail {
+  flex: none;
+  width: 180px;
+  border-right: 1px solid var(--shell-border);
+  padding: var(--spacing-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.subNavItem {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+.subNavContent {
+  flex: 1 1 auto;
+  padding: var(--spacing-4);
+  color: var(--shell-muted-text);
+  font-size: var(--font-size-sm);
+}
+
+.sendBody {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-4);
+}
+
+.sendPanel {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.sendHeading {
+  margin: 0;
+  font-size: var(--font-size-md);
+}
+
+.signerList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.signerRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+}
+
+.signerRoleLabel {
+  flex: none;
+  padding: 2px var(--spacing-2);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: #fff;
+}
+
+.signerRoleLabel[data-color='orange'] {
+  background: #ff7a59;
+}
+
+.signerRoleLabel[data-color='purple'] {
+  background: #9b5de5;
+}
+
+.signerRoleLabel[data-color='blue'] {
+  background: #2f80ed;
+}
+
+.signerRoleLabel[data-color='teal'] {
+  background: #17b26a;
+}
+
+.signerField {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 120px;
+  min-width: 0;
+}
+
+.signerFieldLabel {
+  font-size: 10px;
+  color: var(--shell-muted-text);
+}
+
+.signerField input {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  padding: 4px var(--spacing-1);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+}
+
+.signingOrderToggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+}
+
+.sendButton {
+  align-self: flex-start;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: #17b26a;
+  color: #fff;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-2) var(--spacing-4);
+  cursor: pointer;
+}
+
+.sendButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.demoDisclaimer {
+  margin: 0;
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-muted-text);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+
+@container (max-width: 560px) {
+  .buildBody {
+    flex-direction: column;
+  }
+
+  .palette {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--shell-border);
+  }
+
+  .signerRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

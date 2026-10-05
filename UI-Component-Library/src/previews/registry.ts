@@ -403,6 +403,62 @@ import {
 } from './jotform-app-shell-builder/fixtures';
 import { previewConfig as jotformAppShellBuilderConfig } from './jotform-app-shell-builder/preview.config';
 
+import { JotformAiFormGeneration } from './jotform-ai-form-generation/JotformAiFormGeneration';
+import {
+  fixtures as jotformAiFormGenerationFixtures,
+  propsSchema as jotformAiFormGenerationPropsSchema,
+} from './jotform-ai-form-generation/fixtures';
+import { previewConfig as jotformAiFormGenerationConfig } from './jotform-ai-form-generation/preview.config';
+
+import { JotformSignBuilder } from './jotform-sign-builder/JotformSignBuilder';
+import {
+  fixtures as jotformSignBuilderFixtures,
+  propsSchema as jotformSignBuilderPropsSchema,
+} from './jotform-sign-builder/fixtures';
+import { previewConfig as jotformSignBuilderConfig } from './jotform-sign-builder/preview.config';
+
+import { JotformTablesInlineEditAndViews } from './jotform-tables-inline-edit-and-views/JotformTablesInlineEditAndViews';
+import {
+  fixtures as jotformTablesInlineEditAndViewsFixtures,
+  propsSchema as jotformTablesInlineEditAndViewsPropsSchema,
+} from './jotform-tables-inline-edit-and-views/fixtures';
+import { previewConfig as jotformTablesInlineEditAndViewsConfig } from './jotform-tables-inline-edit-and-views/preview.config';
+
+import { JotformConditionalLogic } from './jotform-conditional-logic/JotformConditionalLogic';
+import {
+  fixtures as jotformConditionalLogicFixtures,
+  propsSchema as jotformConditionalLogicPropsSchema,
+} from './jotform-conditional-logic/fixtures';
+import { previewConfig as jotformConditionalLogicConfig } from './jotform-conditional-logic/preview.config';
+
+import { JotformSmartPdfForms } from './jotform-smart-pdf-forms/JotformSmartPdfForms';
+import {
+  fixtures as jotformSmartPdfFormsFixtures,
+  propsSchema as jotformSmartPdfFormsPropsSchema,
+} from './jotform-smart-pdf-forms/fixtures';
+import { previewConfig as jotformSmartPdfFormsConfig } from './jotform-smart-pdf-forms/preview.config';
+
+import { JotformAiAgents } from './jotform-ai-agents/JotformAiAgents';
+import {
+  fixtures as jotformAiAgentsFixtures,
+  propsSchema as jotformAiAgentsPropsSchema,
+} from './jotform-ai-agents/fixtures';
+import { previewConfig as jotformAiAgentsConfig } from './jotform-ai-agents/preview.config';
+
+import { JotformWorkflowsWorkflowBuilder } from './jotform-workflows-workflow-builder/JotformWorkflowsWorkflowBuilder';
+import {
+  fixtures as jotformWorkflowsWorkflowBuilderFixtures,
+  propsSchema as jotformWorkflowsWorkflowBuilderPropsSchema,
+} from './jotform-workflows-workflow-builder/fixtures';
+import { previewConfig as jotformWorkflowsWorkflowBuilderConfig } from './jotform-workflows-workflow-builder/preview.config';
+
+import { JotformBoards } from './jotform-boards/JotformBoards';
+import {
+  fixtures as jotformBoardsFixtures,
+  propsSchema as jotformBoardsPropsSchema,
+} from './jotform-boards/fixtures';
+import { previewConfig as jotformBoardsConfig } from './jotform-boards/preview.config';
+
 import { TypeformFeedbackPatterns } from './typeform-feedback-patterns/TypeformFeedbackPatterns';
 import {
   fixtures as typeformFeedbackPatternsFixtures,
@@ -1905,6 +1961,94 @@ export const previewRegistry: PreviewRegistry = {
     fixtures: jotformAppShellBuilderFixtures,
     config: jotformAppShellBuilderConfig,
     propsSchema: jotformAppShellBuilderPropsSchema,
+  },
+  'jotform-ai-form-generation': {
+    type: 'reconstructed',
+    Component: JotformAiFormGeneration,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live testing session against a Coffee Shop Feedback Form, DOM/network inspection via browser automation, 2026-10-05 (JF5). Confirmed and reproduced faithfully: 'Describe your form' generates directly into the builder with no staging/review step; Form Copilot shares the same underlying conversation as the generation prompt, confirmed via the generation turn appearing as the first message in the Copilot's own chat history; free-text edits apply immediately with an on-canvas 'Adding...' toast and a chat reply carrying its own per-turn '↺ Undo' link; the 'Suggest new questions' suggested-action chip inserts a human-in-the-loop checkbox-review step (an 'Add question →' button disabled until ≥1 item is checked) rather than applying directly, a confirmed real nuance not shared by free-text prompts in the same panel. Scope reduction, clearly disclosed: no real AI call is made — generation and edits are produced from small canned/keyword-matched responses, not a live model.",
+    runtimeVerified: false,
+    fixtures: jotformAiFormGenerationFixtures,
+    config: jotformAiFormGenerationConfig,
+    propsSchema: jotformAiFormGenerationPropsSchema,
+  },
+  'jotform-sign-builder': {
+    type: 'reconstructed',
+    Component: JotformSignBuilder,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live testing session building a minimal signable lease document in Jotform Sign, 2026-10-05 (JF6). Confirmed and reproduced faithfully: a green BUILD/SETTINGS/SEND mode-tab bar distinct from Form Builder's orange; a document-local, named signer-role system ('Me' plus custom roles like 'Tenant/Lessee', each independently editable/deletable via an 'Assign field to:' popover); a SEND tab with per-role Name/Email rows and a 'Signing order' toggle (off by default = any order). Deliberate, confirmed-necessary scope reduction: 'Send to Sign' never dispatches anything — it only shows a demo disclaimer — because the source record itself confirmed the real product has no sandbox/dry-run send mode at all, so simulating a real send here would misrepresent that finding.",
+    runtimeVerified: false,
+    fixtures: jotformSignBuilderFixtures,
+    config: jotformSignBuilderConfig,
+    propsSchema: jotformSignBuilderPropsSchema,
+  },
+  'jotform-tables-inline-edit-and-views': {
+    type: 'reconstructed',
+    Component: JotformTablesInlineEditAndViews,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live testing session against 3 real test submissions in Jotform Tables, 2026-10-05 (JF7). Confirmed and reproduced faithfully: Short Text/Email/Single Choice cells are fully inline-editable directly in the grid (click to select, click again to edit); the confirmed real Star Rating grid-cell non-editability is reproduced deliberately as a genuine no-op, not smoothed over — clicking a star in the grid never changes the rating, matching the source's own repeated multi-coordinate retest, while the row-detail 'View' panel DOES let you change it, operating on the same underlying row state the grid reads. Calendar and Boards views both genuinely reflow the same row data (not separate/sample content), with Boards' 'from a field' auto-column-generation matching the confirmed finding. Scope reduction, clearly disclosed: the computed-column demo shows one combined arithmetic path rather than the source's two independent AI-Columns/Formula paths.",
+    runtimeVerified: false,
+    fixtures: jotformTablesInlineEditAndViewsFixtures,
+    config: jotformTablesInlineEditAndViewsConfig,
+    propsSchema: jotformTablesInlineEditAndViewsPropsSchema,
+  },
+  'jotform-conditional-logic': {
+    type: 'reconstructed',
+    Component: JotformConditionalLogic,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live testing session building a field-level conditional-logic rule on the Coffee Shop Feedback Form, 2026-10-05 (JF8). Confirmed and reproduced faithfully: all 9 real action types are rendered verbatim in the Add Condition picker (Show/Hide Field is the one made interactive, per the source's own test scope — the other 8 are genuine disabled buttons for structural fidelity, not omitted); respondent-facing visibility change is an instant CSS display toggle, not an animated reveal, confirmed via the source's own DOM/MutationObserver evidence; a hidden field's value persists across a hide/re-show cycle; deleting a field a condition depends on is unblocked at delete-time but surfaces an explicit, persistent 'MISSING FIELD' / error state afterward, with the dependent field failing open (becoming permanently visible) — the most distinctive confirmed finding in the source record, reproduced exactly including the verbatim error copy.",
+    runtimeVerified: false,
+    fixtures: jotformConditionalLogicFixtures,
+    config: jotformConditionalLogicConfig,
+    propsSchema: jotformConditionalLogicPropsSchema,
+  },
+  'jotform-smart-pdf-forms': {
+    type: 'reconstructed',
+    Component: JotformSmartPdfForms,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live testing session uploading a custom-built test PDF through Smart PDF Forms, 2026-10-05 (JF9). Confirmed and reproduced faithfully: a dark-navy UPLOAD/BUILD/SETTINGS/PUBLISH mode bar distinct from every other Jotform product shell; strong field-type inference (a compound Full Name field correctly split into First/Last sub-inputs, a correctly-typed Email field, genuine date-picker fields); the confirmed real semantic quirk that two independently-labeled checkbox lines get merged into ONE multi-select field rather than staying as two separate booleans, reproduced deliberately rather than 'fixed'; and the standout round-trip-fidelity finding — the split name is correctly re-merged into one line in the output 'Preview PDF', and a signed signature gets an unprompted 'Signed at: {timestamp}' audit stamp. Scope reduction, clearly disclosed: the upload step is fully simulated (a timed pipeline animation followed by a hardcoded fixture result), not real file parsing.",
+    runtimeVerified: false,
+    fixtures: jotformSmartPdfFormsFixtures,
+    config: jotformSmartPdfFormsConfig,
+    propsSchema: jotformSmartPdfFormsPropsSchema,
+  },
+  'jotform-ai-agents': {
+    type: 'reconstructed',
+    Component: JotformAiAgents,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live testing session generating 'Ian: Coffee Club Loyalty Assistant' via Jotform AI Agents, 2026-10-05 (JF10, 3 of 4 — Apps not yet filed). Confirmed and reproduced faithfully: a purple-to-blue BUILD/TRAIN/PUBLISH shell unique among every Jotform product observed in this library; an AI-generated human-persona title/greeting rather than the user's literal prompt text (a naming convention distinct from every other JotForm product tested); TRAIN → FORMS as a real coupling point to existing forms. The standout confirmed finding — the PUBLISH tab's Phone Agent channel showing a real, named price ('starting from just $10/month') alongside a free 'Make a Test Call' path using a shared number + extension, letting the feature be trialed before purchase — is reproduced with a demo-only 'Buy Number' action that never initiates a real charge.",
+    runtimeVerified: false,
+    fixtures: jotformAiAgentsFixtures,
+    config: jotformAiAgentsConfig,
+    propsSchema: jotformAiAgentsPropsSchema,
+  },
+  'jotform-workflows-workflow-builder': {
+    type: 'reconstructed',
+    Component: JotformWorkflowsWorkflowBuilder,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live testing session building a Form-triggered workflow bound to the 'Coffee Club Signup' form, 2026-10-05 (JF10, 2 of 4 — Apps not yet filed). Confirmed and reproduced faithfully: a mandatory 'Start Point' trigger-selection step (Form/Schedule/Integrations/Email/Webhook) gating the rest of the builder, with 'Next' disabled until a trigger is chosen; a vertical flowchart/pipeline canvas distinct from both the flat Conditions rule list and the Form Builder's field palette; a chainable 'Add Element Here' step picker supporting multiple sequential steps. A teal/dark-green BUILD/SETTINGS/PUBLISH mode bar, distinct from every other Jotform product's accent color, per the confirmed per-product color-coding pattern already established across this library's JotForm captures. Scope reduction, clearly disclosed: only the Form trigger type gets a fully interactive config step, matching the source record's own test depth.",
+    runtimeVerified: false,
+    fixtures: jotformWorkflowsWorkflowBuilderFixtures,
+    config: jotformWorkflowsWorkflowBuilderConfig,
+    propsSchema: jotformWorkflowsWorkflowBuilderPropsSchema,
+  },
+  'jotform-boards': {
+    type: 'reconstructed',
+    Component: JotformBoards,
+    label: 'Reconstructed preview',
+    evidence:
+      "OBSERVATION, live testing session directly comparing Jotform Boards opened via '+ CREATE' versus via the Workflow Builder's own mode-switcher, 2026-10-05 (JF10, 4 of 4 — Apps not yet filed). Confirmed and reproduced faithfully, and this IS the record's central finding: the two entry points do NOT produce the same screen — '+ CREATE' yields a generic 'Untitled Board' with 4 conventional Kanban columns (Backlog/Waiting/In Progress/Done) and sample onboarding cards, while the Workflow Builder's mode-switcher auto-provisions a structurally different 'Workflow Board' with exactly one 'Completed' column and a '0 runs' counter — confirmed via distinct board IDs in the source, not just visual impression. This preview makes that structural contrast the visual centerpiece via a toggle between the two states.",
+    runtimeVerified: false,
+    fixtures: jotformBoardsFixtures,
+    config: jotformBoardsConfig,
+    propsSchema: jotformBoardsPropsSchema,
   },
   'typeform-feedback-patterns': {
     type: 'reconstructed',

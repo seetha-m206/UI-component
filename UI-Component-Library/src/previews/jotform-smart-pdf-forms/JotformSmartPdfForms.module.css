@@ -1,0 +1,372 @@
+.root {
+  container-type: inline-size;
+  font-family: var(--font-family);
+  color: var(--shell-text);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--shell-bg);
+}
+
+.root[data-disabled='true'] {
+  opacity: 0.6;
+}
+
+/* Distinct dark-navy gradient — differentiated from Form Builder's own
+   orange mode bar and Jotform Sign's green bar, per the source record. */
+.modeTabBar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: linear-gradient(90deg, #0f1f3d, #1c3a6b);
+}
+
+.modeTab {
+  padding: var(--spacing-1) var(--spacing-3);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+.modeTab:disabled {
+  cursor: not-allowed;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.modeTabActive {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+.body {
+  padding: var(--spacing-4);
+}
+
+.uploadPane {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+}
+
+.uploadHint {
+  margin: 0;
+  color: var(--shell-muted-text);
+  font-size: var(--font-size-sm);
+  max-width: 420px;
+}
+
+.uploadButton {
+  appearance: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: #1c3a6b;
+  color: #fff;
+  padding: var(--spacing-2) var(--spacing-4);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+.uploadButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.pipelineList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.pipelineItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--shell-muted-text);
+}
+
+.pipelineItem[data-done='true'] {
+  color: var(--shell-text);
+}
+
+.pipelineItem[data-current='true'] {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.pipelineCheck {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  border-radius: 50%;
+  border: 1px solid var(--shell-border-strong);
+  font-size: 11px;
+}
+
+.pipelineItem[data-done='true'] .pipelineCheck {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: #fff;
+}
+
+.uploadDone {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.secondaryButton {
+  appearance: none;
+  border: 1px solid var(--shell-border);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-1) var(--spacing-3);
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.secondaryButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.buildPane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  max-width: 420px;
+}
+
+.successBanner {
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-success) 14%, transparent);
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+}
+
+.formTitle {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.fieldGroup {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.fieldGroup legend {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  padding: 0 var(--spacing-1);
+}
+
+.fieldRow {
+  display: flex;
+  gap: var(--spacing-3);
+  flex-wrap: wrap;
+}
+
+.subField,
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  flex: 1 1 140px;
+}
+
+.field input,
+.subField input {
+  padding: var(--spacing-2);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-sm);
+  background: var(--shell-bg);
+  color: var(--shell-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+}
+
+.fieldLabel {
+  font-size: var(--font-size-sm);
+}
+
+.checkboxOption {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+}
+
+.signatureBlock {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.signatureMark {
+  font-family: 'Brush Script MT', cursive;
+  font-size: var(--font-size-lg);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-bottom: 1px solid var(--shell-border-strong);
+}
+
+.signaturePad {
+  appearance: none;
+  width: 100%;
+  border: 1px dashed var(--shell-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--shell-sidebar-bg);
+  color: var(--shell-muted-text);
+  padding: var(--spacing-3);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.signaturePad:disabled {
+  cursor: not-allowed;
+}
+
+.actionsRow {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.previewButton {
+  appearance: none;
+  border: 1px solid #1c3a6b;
+  background: transparent;
+  color: #1c3a6b;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+
+.submitButton {
+  margin-left: auto;
+  appearance: none;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-2) var(--spacing-4);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+
+.previewButton:disabled,
+.submitButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.previewPane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  max-width: 420px;
+}
+
+.previewNotice {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: var(--shell-muted-text);
+}
+
+.previewDocument {
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+  background: var(--shell-sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.previewTitle {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.previewLine {
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.previewSignatureBlock {
+  margin-top: var(--spacing-2);
+  padding-top: var(--spacing-2);
+  border-top: 1px dashed var(--shell-border-strong);
+}
+
+.signatureStamp {
+  margin: var(--spacing-1) 0 0;
+  font-size: var(--font-size-xs);
+  color: var(--color-info);
+}
+
+.settingsPane,
+.publishPane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  max-width: 420px;
+  font-size: var(--font-size-sm);
+}
+
+.settingsHeading {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.settingsRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+@container (max-width: 480px) {
+  .fieldRow {
+    flex-direction: column;
+  }
+
+  .actionsRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .submitButton {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,32 @@
+# Reconstructed preview: JotForm AI Agents (AI Agent Builder)
+
+Source record: `Research-Library/04-Component-Library/jotform/jotform-ai-agents.md` (JF10, 3 of 4, 2026-10-05).
+
+## Evidence priority
+
+Reproduced faithfully from the record's direct live-testing observations (all tagged FACT in the source):
+
+- The "Describe your agent" prompt-first entry point, with no visible from-scratch/template card on the same screen — only the prompt box plus the four documented category chips (Customer support, Recruitment, Appointment, Feedback).
+- The confirmed real two-step generation sequence — "Crafting your perfect agent" (completes with a checkmark) → "Customizing conversations to match your needs" (spinner) — reproduced as two sequential, real, controllable `setTimeout` transitions (`stepDelayMs`, same pattern as `typeform-ai-chat-to-create`'s `generationDelayMs`), not an unbounded async wait.
+- The confirmed real resulting agent: title **"Ian: Coffee Club Loyalty Assistant"** (the AI-generated human-persona-name convention the record calls out as unique to this product), greeting **"Hi, I'm Ian, your AI Agent and Coffee Club Loyalty Assistant. How can I help?"**, and the two quick-reply buttons **"Check rewards"** / **"Learn more"** — all taken verbatim from the record's Structure finding 2. These are canned/fixed regardless of what's typed into the prompt box, exactly mirroring the record's own observation that the AI path produced a fixed persona rather than preserving the user's literal prompt text (the record's explicit point of contrast with Apps/Workflows/Boards).
+- The purple-to-blue gradient mode bar and the BUILD/TRAIN/PUBLISH tab triad — the record calls this combination unique among every JotForm product shell observed in this library.
+- The reduced CHANNELS sidebar on BUILD (Chatbot, Standalone, Instagram, WhatsApp) — the four channels the record confirms were visible before scrolling.
+- TRAIN's left-rail sections (KNOWLEDGE BASE / FORMS / WORKFLOWS) and their confirmed copy: "Connect forms to your agent to use form data" for FORMS, and the WORKFLOWS "NEW" badge with "Create multi-step automations".
+- The record's standout finding, reproduced as the centerpiece of PUBLISH: "Buy an AI Agent Phone Number — Use for calls, starting from just $10/month" alongside a free "Make a Test Call" path using the record's own captured test number (`+1 601 843 6706`) and extension (`01826`), plus the named test voice ("Liam — English, American, Male, Young", with a "Change" option).
+
+## Deliberate simulation — no real AI, no real purchase
+
+Consistent with this codebase's existing precedent (`typeform-ai-chat-to-create`, `paperform-ai-create`, `zia-ai-form-generator`): **the AI generation is simulated**, not a real model call. Submitting any prompt text always produces the same canned agent ("Ian: Coffee Club Loyalty Assistant") after the same two-step timed sequence — no network request is made, and no attempt is made to generate agent content tailored to the literal prompt typed in.
+
+Likewise, **the Phone Agent purchase flow is simulated**. Clicking "Buy Number" never starts a real checkout, charges anything, or calls any payment API — it shows a dismissable-by-rerender demo notice ("Demo only — this would start checkout for a dedicated phone number ($10/month). No real purchase was made.") and fires an optional `onBuyNumber` callback so a host page can react. "Make a Test Call" similarly never places a real call; it shows its own demo notice and fires `onTestCall`.
+
+## Deliberate scope reductions
+
+- **Only KNOWLEDGE BASE, FORMS, and WORKFLOWS are built out on TRAIN.** The record itself flags AI PERSONA, ACTIONS, and TOOLS as not opened this pass ("Second-Pass Flags") — this preview doesn't invent their content, so only the three confirmed sections are selectable.
+- **The CHANNELS sidebar on BUILD is visual-selection-only**, per the task's own scope instruction — clicking a channel highlights it but doesn't change the chat-preview content, matching the record's note that the sidebar wasn't independently tested beyond being visible.
+- **The "Add New Form" picker offers two fixed fixture form names** ("Coffee Club Membership Signup", "Customer Feedback Survey") rather than a real form list — the record confirms the coupling (a real "Add New Form" picker exists and lets you pick an existing form) but never captured the actual list of forms shown; these two names are this reconstruction's own reasonable placeholders, chosen to match the Coffee Club persona and this library's own Jotform fixtures.
+- **KNOWLEDGE BASE's "Add Knowledge" sources (Text/File/Link/Questions & Answer) and "Show more sources" are static/toggle-only** — no file upload or link-adding flow is implemented, since the record only confirms the categories and the toggle's existence, not what's actually added.
+- **The quick-reply canned responses ("You currently have 120 points…", "Coffee Club members earn 1 point per $1 spent…") are this reconstruction's own invented text** — the record confirms the two quick-reply buttons exist and are part of a "working test conversation" with "a pre-populated sample exchange already visible," but never captured the literal response text, only that an exchange existed.
+- **PUBLISH only builds out the Phone Agent section in full**, per the task's explicit scope — the other channels listed in the record (Instagram Agent, WhatsApp Agent, Gmail Agent, AI Chatbot for WordPress, Presentation Agent) are shown as a single static text line for context, not as clickable setup flows (the record itself flags their individual setup/gating as unconfirmed).
+- **"Test Mode" (the persistent top-right toggle noted in Rules & Validation) is not implemented.** The record describes it only at a high level ("letting the builder flip between editing and a live test conversation without leaving the current tab") without capturing its exact visual behavior per tab, and it wasn't in the task's required-behaviors list — inventing a specific implementation risked misrepresenting an under-documented control.
+- This component is **not** `value`/`onChange`-shaped — like `jotform-input-table-field`, it owns its full flow (prompt → generation → BUILD/TRAIN/PUBLISH, channel selection, form picking, Buy Number / Test Call) via internal `useState`, so the generic `ReconstructedPreviewPanel` harness doesn't try to wire external state to it.
