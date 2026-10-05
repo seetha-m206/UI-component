@@ -4,7 +4,7 @@ ui_category: "Enterprise Tables > Organization Directory"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "The organization directory groups company records by name, domain, tags and update dates."
 ---
 

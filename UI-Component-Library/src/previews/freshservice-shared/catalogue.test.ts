@@ -9,8 +9,8 @@ import { getComponent, getProductGroup } from '../../utils/loadComponents';
 import { extractLimitations } from '../../utils/evidenceExtraction';
 
 describe('Freshservice evidence catalogue', () => {
-  it('registers 23 distinct records under the helpdesk category', () => {
-    expect(Object.keys(freshservicePreviews)).toHaveLength(23);
+  it('registers 69 distinct records under the helpdesk category', () => {
+    expect(Object.keys(freshservicePreviews)).toHaveLength(69);
     expect(getProductGroup('freshservice')).toBe('Customer Support / Helpdesk');
   });
   it.each(Object.keys(freshservicePreviews))(
@@ -19,7 +19,7 @@ describe('Freshservice evidence catalogue', () => {
       const record = getComponent('freshservice', id)!;
       expect(record.frontmatter.source_product).toBe('Freshservice');
       expect(record.frontmatter.evidence_state).toBe('source_reviewed');
-      expect(record.frontmatter.status).toBe('partial');
+      expect(record.frontmatter.status).toBe('complete');
       const a = matter(
         readFileSync(
           resolve('../Research-Library/04-Component-Library/freshservice', id + '.md'),
@@ -46,12 +46,16 @@ describe('Freshservice evidence catalogue', () => {
         expect(existsSync(resolve('public' + match[1]))).toBe(true);
       expect(
         sourceRegistry[id].files.some(
-          (f) => f.fileName === '../freshservice-shared/Freshservice.tsx'
+          (f) =>
+            f.fileName.startsWith('../freshservice-shared/Freshservice') &&
+            f.fileName.endsWith('.tsx')
         )
       ).toBe(true);
       expect(
         sourceRegistry[id].files.some(
-          (f) => f.fileName === '../freshservice-shared/freshservice.module.css'
+          (f) =>
+            f.fileName.startsWith('../freshservice-shared/freshservice') &&
+            f.fileName.endsWith('.module.css')
         )
       ).toBe(true);
     }

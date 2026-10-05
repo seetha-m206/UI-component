@@ -4,7 +4,7 @@ ui_category: "Enterprise Tables > Customer Directory"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A customer list presents search, identity columns, selection and an add-customer entry point."
 ---
 

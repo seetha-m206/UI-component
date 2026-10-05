@@ -2,7 +2,7 @@
 
 **OBSERVATION · 2026-10-01:** This first authenticated pass covers Agent Home, the AI-labelled sample ticket, Views, Customers, Organizations, the help center and Knowledge administration. The earlier onboarding knowledge-source form was seen before the user advanced the setup, but is not treated as a fully exercised workflow.
 
-**RECONSTRUCTION:** The local batch contains 20 canonical records, 20 mirrored records, 8 screen compositions and 12 independent controls, with 54 fictional fixtures. They appear under **Customer Support / Helpdesk → Zendesk**. Every record is source_reviewed and partial. Documentation coverage is not the same as complete provider verification.
+**RECONSTRUCTION:** The local batch contains 20 canonical records, 20 mirrored records, 8 screen compositions and 12 independent controls, with 54 fictional fixtures. They appear under **Customer Support / Helpdesk → Zendesk**. Every first-pass record remains source_reviewed with explicit provider limits. Complete now refers to the bounded documentation record and local preview, not every Zendesk behavior.
 
 ## Evidence and behavior
 
@@ -55,3 +55,44 @@ The full shared library suite is not green. Its dated run reported 2204 passing 
 1. Ours: Continue the unobserved provider areas in the coverage inventory.
 2. Shared-library owners: Resolve the Freshservice and SE Ranking regression failures.
 3. Lead: Publication remains outside the authorized scope.
+
+## Deeper screen and action pass · 2026-10-05
+
+**OBSERVATION:** Ten further bounded records cover global search, ticket actions, conversation filters, Events, the ticket resource rail, approval entry, notifications, Auto Assist, and the Admin Center macro inventory and editor. The private source-manifest in Internal/scratch-2026-10/zendesk/evidence/deeper-2026-10-05/ binds each record to an authenticated screenshot and accessibility snapshot hash.
+
+**RECONSTRUCTION:** Ten additional local previews use fictional data. `status: complete` means this bounded record and preview have documented source evidence. `evidence_state: source_reviewed` remains the provider evidence level. No save, submit, delete, macro execution or configuration mutation was claimed.
+
+## Dated local result · 2026-10-05
+
+Ten deeper canonical and mirrored records and ten fictional previews were added. Authenticated source captures and SHA-256 hashes are private in the dated manifest. The ten routes rendered at three library width controls. Twenty focused Zendesk interaction tests passed, TypeScript/Vite build passed, and scoped Oxlint found no errors. The full shared suite passed 2,379 tests in 244 files after concurrent owner changes. This result does not imply provider mutation outcomes or broad Zendesk product coverage.
+
+1. Ours: Continue remaining provider areas named in the coverage inventory.
+2. Lead: Decide any later publication scope.
+
+## Screen-level audit · 2026-10-05
+
+**OBSERVATION:** The authenticated screen audit reconciled the 30 earlier records and added 16 bounded screen records. The Zendesk catalogue now contains 46 canonical records and 46 mirrored records. Every new record links a private accessibility capture and screenshot through the dated source manifest. Raw provider captures remain private.
+
+**RECONSTRUCTION:** Sixteen fictional local previews cover the newly documented screen layouts. The routes rendered from the public catalogue and their screenshots show only fictional tickets, people, channels, plans, agents, apps, themes and checklist values. Each mirrored record uses `status: complete` for the bounded documentation record. Provider evidence remains `source_reviewed`.
+
+| Product area | Verified screen destinations | New bounded records |
+| --- | --- | --- |
+| Support | CC'd, Following, Last 30 days, ticket search results | Agent work queues, ticket search results with Actions, Filters and Manage columns |
+| Knowledge | History, Arrange articles, Customize design, Help center settings | Knowledge history, article arrangement, themes and help center settings |
+| Admin home and Account | Admin home, Subscription | Admin home and account subscription |
+| Admin People | Team members | Team member roster with seat summary, search, filter and actions |
+| Admin Channels and AI | Messaging, AI agents | Messaging channels and AI agent inventory |
+| Admin Workspaces and rules | Agent Workspace, Ticket forms | Workspace status and the ticket-forms destination |
+| Admin Apps and IT | Zendesk Support apps, IT asset management | Support apps destination and IT assets inactive overview |
+| Admin guidance | Launchpad | Plan essentials checklist |
+
+**OBSERVATION:** Community Moderation Activities and User segments were reachable, but their embedded content exposed insufficient semantic labels during this capture. They remain navigation evidence and are not represented as detailed component claims. Procedures and Connections did not produce a new destination in the sampled state, so stale intermediate captures were excluded.
+
+**NOT OBSERVED:** Applying search filters, saving a search, persisting columns, queue item behavior, article reordering, theme publication, settings changes, user or team changes, channel configuration, AI-agent creation, workspace changes, form editing, app installation, IT asset activation, plan changes and checklist completion.
+
+## Dated local result · 2026-10-05 screen audit
+
+The screen audit added 16 source-labelled canonical records, 16 mirrors and 16 fictional interactive previews. The dated private manifest binds 21 provider screenshot and accessibility pairs to those records. Focused interaction tests, scoped Oxlint and the TypeScript/Vite build passed. All 16 catalogue routes rendered locally and full-page fictional screenshots were saved under `UI-Component-Library/public/evidence/zendesk/`.
+
+1. Ours: Run the acceptance gate and retain unavailable provider outcomes as explicit evidence boundaries.
+2. Lead: Decide any later publication scope.

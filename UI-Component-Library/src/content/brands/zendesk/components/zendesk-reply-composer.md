@@ -4,7 +4,7 @@ ui_category: "Content Creation > Reply Composer"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "Reply mode, recipients and rich-text tools share a draft area beneath the conversation."
 ---
 

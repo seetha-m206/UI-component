@@ -4,7 +4,7 @@ ui_category: "Data Display > Contextual Knowledge Suggestions"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A knowledge-panel empty state that explains its subject-field dependency."
 ---
 

@@ -4,7 +4,7 @@ ui_category: "Enterprise Tables > Data Table"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A report catalogue with a Reports and Folders switch, metadata columns and curated entries."
 ---
 

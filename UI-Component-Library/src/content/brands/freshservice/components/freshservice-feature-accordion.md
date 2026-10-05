@@ -4,7 +4,7 @@ ui_category: "Onboarding > Feature Discovery"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "Independent disclosure sections that expose task-oriented getting-started links."
 ---
 

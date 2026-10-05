@@ -4,7 +4,7 @@ ui_category: "Search and Filtering > Sort Menu"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A queue sort menu explains recommended ordering and offers update-time alternatives."
 ---
 

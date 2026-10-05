@@ -1,0 +1,468 @@
+.root {
+  color: #12334c;
+  background: #fff;
+  border: 1px solid #dbe3e8;
+  border-radius: 10px;
+  overflow: hidden;
+  font:
+    14px/1.4 Inter,
+    system-ui,
+    sans-serif;
+  container-type: inline-size;
+}
+.root * {
+  box-sizing: border-box;
+}
+.root button,
+.root input,
+.root select,
+.root textarea {
+  font: inherit;
+}
+.root button {
+  border: 1px solid #d7e0e7;
+  border-radius: 7px;
+  padding: 8px 11px;
+  background: #fff;
+  color: inherit;
+  cursor: pointer;
+}
+.root button:hover {
+  background: #f2f6fa;
+}
+.root button:focus-visible,
+.root input:focus-visible,
+.root select:focus-visible,
+.root textarea:focus-visible {
+  outline: 3px solid #72a2f7;
+  outline-offset: 2px;
+}
+.root button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.root label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.root input,
+.root select,
+.root textarea {
+  width: 100%;
+  border: 1px solid #ccd8e1;
+  border-radius: 7px;
+  padding: 9px;
+  color: #12334c;
+  background: #fff;
+}
+.root textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+.eyebrow {
+  padding: 11px 20px;
+  background: #f5f8fb;
+  color: #657b8c;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #e2e8ed;
+}
+.header > div:first-child {
+  flex: 1;
+}
+.header h2 {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 2px 0;
+  font-size: 19px;
+}
+.header p,
+.header small {
+  margin: 0;
+  color: #607587;
+  font-size: 11px;
+}
+.root .primary {
+  background: #276cf0;
+  border-color: #276cf0;
+  color: #fff;
+}
+.main {
+  padding: 22px;
+}
+.editorGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+}
+.editorGrid .main {
+  display: grid;
+  gap: 16px;
+}
+.metadata {
+  padding: 22px;
+  background: #f8fafc;
+  border-left: 1px solid #e2e8ee;
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+.metadata > button,
+.metadataCard > button {
+  justify-content: space-between;
+  display: flex;
+}
+.attach {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: max-content;
+}
+.attach small {
+  color: #647a8c;
+}
+.focus {
+  min-height: 480px;
+  padding: 30px;
+  display: grid;
+  place-items: center;
+  background: #f6f8fb;
+}
+.aiPrompt,
+.dialog,
+.metadataCard,
+.calendar,
+.exportCard {
+  width: min(620px, 100%);
+  background: #fff;
+  border: 1px solid #dce4ea;
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 12px 30px #12334c18;
+}
+.aiPrompt {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+}
+.aiPrompt label,
+.aiPrompt p,
+.aiPrompt button {
+  grid-column: 2;
+}
+.aiPrompt p,
+.exportCard p {
+  color: #63798a;
+  font-size: 11px;
+}
+.formatWrap {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #dbe4ea;
+  border-radius: 8px;
+  padding: 8px;
+}
+.formatTools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.formatTools button {
+  font-size: 11px;
+  padding: 6px 8px;
+}
+.dialog header,
+.dialog footer,
+.calendar header,
+.exportCard header,
+.filterPanel header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.dialog h2,
+.calendar h2,
+.exportCard h2,
+.filterPanel h2,
+.metadataCard h2 {
+  margin: 0;
+  font-size: 17px;
+}
+.dialog footer {
+  margin-top: 24px;
+  justify-content: flex-end;
+}
+.breadcrumb {
+  padding: 16px 0;
+  color: #5d7283;
+}
+.choiceList {
+  display: grid;
+  gap: 8px;
+}
+.choiceList button {
+  display: flex;
+  justify-content: space-between;
+}
+.choiceList button[aria-pressed='true'] {
+  border-color: #276cf0;
+  background: #edf4ff;
+}
+.emptyFolder {
+  min-height: 100px;
+  display: grid;
+  place-items: center;
+  color: #6b7f8e;
+}
+.metadataCard {
+  display: grid;
+  gap: 16px;
+}
+.week,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  text-align: center;
+}
+.week {
+  margin: 18px 0 8px;
+  color: #607587;
+}
+.days button {
+  aspect-ratio: 1;
+  padding: 0;
+}
+.days button[aria-pressed='true'] {
+  background: #276cf0;
+  color: white;
+}
+.calendar p {
+  text-align: center;
+  color: #607587;
+}
+.drawerStage {
+  min-height: 540px;
+  background: #eef2f6;
+  display: flex;
+  justify-content: flex-end;
+}
+.drawer {
+  width: min(430px, 100%);
+  background: #fff;
+  padding: 24px;
+  box-shadow: -10px 0 30px #12334c18;
+  display: grid;
+  align-content: start;
+  gap: 18px;
+}
+.drawer header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.drawer h2 {
+  margin: 0;
+}
+.canvas {
+  min-height: 500px;
+  padding: 24px;
+  position: relative;
+  overflow: auto;
+  background-color: #fff;
+  background-image: radial-gradient(#d9e1e7 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+.flow {
+  min-width: 850px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 70px;
+}
+.flow > div {
+  padding: 22px;
+  border: 1px solid #d2dde5;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 6px 12px #12334c10;
+}
+.trigger {
+  border-left: 6px solid #50aa8e !important;
+}
+.condition {
+  border-left: 6px solid #e9923e !important;
+}
+.branch {
+  display: grid;
+  gap: 12px;
+  border-left: 6px solid #5d89e8 !important;
+}
+.inactive,
+.curated {
+  background: #fff1df;
+  color: #9a5b17;
+  padding: 3px 7px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+}
+.curated {
+  background: #eaf0ff;
+  color: #4667af;
+}
+.miniMap {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 150px;
+  height: 75px;
+  background: #e8edf1;
+  display: flex;
+  gap: 8px;
+  padding: 14px;
+  align-items: flex-start;
+  border: 1px solid #cfd9e0;
+}
+.miniMap i {
+  width: 25px;
+  height: 8px;
+  background: #71a0e8;
+}
+.filterGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.actions {
+  display: flex;
+  gap: 9px;
+  margin-top: 18px;
+  justify-content: flex-end;
+}
+.noTransactions {
+  min-height: 170px;
+  display: grid;
+  place-items: center;
+  color: #63798a;
+}
+.report {
+  padding: 20px;
+}
+.report nav,
+.exportCard nav {
+  display: flex;
+  gap: 5px;
+  border-bottom: 1px solid #dfe6eb;
+  margin-bottom: 18px;
+}
+.report nav button,
+.exportCard nav button {
+  border: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+}
+.report nav button[aria-current='page'],
+.exportCard nav button[aria-current='page'] {
+  border-bottom-color: #276cf0;
+  color: #276cf0;
+}
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.metricGrid section {
+  min-height: 110px;
+  border: 1px solid #dde5eb;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+}
+.metricGrid h3 {
+  margin: 0 0 18px;
+  font-size: 13px;
+}
+.metricGrid strong {
+  font-size: 28px;
+}
+.metricGrid p {
+  color: #738594;
+}
+.reportFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+.exportCard {
+  display: grid;
+  gap: 16px;
+}
+.exportCard fieldset {
+  display: grid;
+  gap: 10px;
+  border: 0;
+  padding: 0;
+}
+.exportCard fieldset label,
+.exportCard > label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.exportCard input[type='checkbox'] {
+  width: auto;
+}
+.filterPanel {
+  width: min(400px, 100%);
+  min-height: 560px;
+  padding: 22px;
+  margin-left: auto;
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  border-left: 1px solid #dce4ea;
+  box-shadow: -10px 0 30px #12334c12;
+}
+.range {
+  display: grid;
+  grid-template-columns: auto 80px auto;
+  gap: 8px;
+  align-items: center;
+}
+.notice {
+  padding: 13px 20px;
+  border-top: 1px solid #e0e7ec;
+  background: #f7f9fb;
+  font-size: 11px;
+}
+@container (max-width:700px) {
+  .editorGrid {
+    grid-template-columns: 1fr;
+  }
+  .metadata {
+    border-left: 0;
+    border-top: 1px solid #e2e8ee;
+  }
+  .header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .filterGrid,
+  .metricGrid {
+    grid-template-columns: 1fr;
+  }
+  .focus {
+    padding: 14px;
+  }
+}

@@ -4,7 +4,7 @@ ui_category: "Actions > Action Launcher"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A global launcher grouping short action names with explanatory subtitles."
 ---
 

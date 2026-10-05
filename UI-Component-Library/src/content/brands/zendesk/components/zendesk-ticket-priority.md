@@ -4,7 +4,7 @@ ui_category: "Forms > Priority Select"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A priority selector uses a compact combobox with an explicit current value."
 ---
 

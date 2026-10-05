@@ -4,7 +4,7 @@ ui_category: "Application Layout > Self-Service Help Center"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A customer-facing help center organizes search, category cards, promoted articles and community activity."
 ---
 

@@ -4,7 +4,7 @@ ui_category: "Application Layout > Three-Pane Ticket Workspace"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "The ticket workspace keeps editable fields, conversation and customer context in separate panes with a persistent action footer."
 ---
 

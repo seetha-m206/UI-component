@@ -4,7 +4,7 @@ ui_category: "Application Layout > Agent Home"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A personal ticket queue combines filters, ticket cards, setup guidance and workload statistics."
 ---
 

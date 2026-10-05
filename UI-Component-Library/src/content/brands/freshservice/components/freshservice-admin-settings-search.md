@@ -4,7 +4,7 @@ ui_category: "Account/Settings > Settings Layout"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A searchable settings catalogue arranged by administrative category."
 ---
 

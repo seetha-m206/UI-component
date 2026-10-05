@@ -4,7 +4,7 @@ ui_category: "Application Layout > Global Header"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "Page context alongside search, Create, My Work, help, notifications and app controls."
 ---
 

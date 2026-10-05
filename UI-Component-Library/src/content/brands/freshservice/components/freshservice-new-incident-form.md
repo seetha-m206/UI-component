@@ -4,7 +4,7 @@ ui_category: "Application Layout > Record Creation Screen"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "An unsubmitted incident form with requester, description, categorization and related articles."
 ---
 

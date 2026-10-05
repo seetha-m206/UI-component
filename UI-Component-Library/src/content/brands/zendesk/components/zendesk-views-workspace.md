@@ -4,7 +4,7 @@ ui_category: "Enterprise Tables > Saved Ticket Views"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "Saved ticket views pair a navigation list with a selectable ticket table and a filter drawer."
 ---
 
