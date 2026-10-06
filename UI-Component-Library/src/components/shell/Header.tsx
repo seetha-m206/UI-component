@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Moon, PanelLeft, PanelLeftClose, Search, Sun } from 'lucide-react';
+import { History, Moon, PanelLeft, PanelLeftClose, Search, Sun } from 'lucide-react';
 import type { Theme } from '@hooks/useTheme';
+import { getLastUpdated } from '@utils/loadComponents';
 import styles from './Header.module.css';
 
 interface HeaderProps {
@@ -91,6 +92,14 @@ export function Header({
           </kbd>
         )}
       </div>
+
+      <span
+        className={styles.lastUpdated}
+        title="Most recent research capture across the library"
+      >
+        <History size={13} aria-hidden="true" />
+        Updated {getLastUpdated()}
+      </span>
 
       <button
         type="button"

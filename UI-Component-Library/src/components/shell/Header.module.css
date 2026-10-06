@@ -105,6 +105,23 @@
   pointer-events: none;
 }
 
+.lastUpdated {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  margin-left: auto;
+  padding: var(--spacing-1) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--shell-sidebar-bg) 70%, transparent);
+  font-size: var(--font-size-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--shell-muted-text);
+  white-space: nowrap;
+  cursor: default;
+}
+
 .themeToggle {
   flex-shrink: 0;
   display: flex;
@@ -113,7 +130,6 @@
   width: 32px;
   height: 32px;
   padding: 0;
-  margin-left: auto;
   border: 1px solid var(--shell-border);
   border-radius: var(--radius-sm);
   background: var(--shell-bg);
@@ -134,5 +150,16 @@
 
   .searchWrap {
     margin-left: var(--spacing-1);
+  }
+
+  /* Keep the slim header usable on phones — the stamp is informational,
+   * not an action, so it's the first thing to go at narrow widths. The
+   * theme toggle inherits the auto margin so it stays right-aligned. */
+  .lastUpdated {
+    display: none;
+  }
+
+  .themeToggle {
+    margin-left: auto;
   }
 }

@@ -33,8 +33,35 @@ export function getComponent(brand: string, id: string): ComponentEntry | undefi
   return allComponents.find((c) => c.brand === brand && c.id === id);
 }
 
+/**
+ * Display-level canonicalization of UI-category group names. Records are
+ * captured across many sessions (and machines), so trivially-equivalent
+ * spellings of the same group drift apart ("Account / Settings" vs
+ * "Account and Settings", "Analytics/Reporting" vs "Analytics & Reporting").
+ * This folds only unambiguous synonyms for presentation — the records'
+ * own `ui_category` frontmatter is never rewritten (per the standing
+ * "relabel categories, keep leaf names" decision), so Research-Library
+ * stays the untouched source of truth.
+ */
+const GROUP_ALIASES: Record<string, string> = {
+  'Account / Settings': 'Account & Settings',
+  'Account/Settings': 'Account & Settings',
+  'Account and Settings': 'Account & Settings',
+  Analytics: 'Analytics & Reporting',
+  'Analytics/Reporting': 'Analytics & Reporting',
+  'Actions & Controls': 'Actions',
+  'Feedback & Status': 'Feedback',
+  'Feedback and Status': 'Feedback',
+  Filters: 'Filtering',
+  Input: 'Inputs',
+  'Search and Discovery': 'Search & Discovery',
+  'Search and Filtering': 'Search & Filtering',
+  'Filtering & Search': 'Search & Filtering',
+};
+
 export function getGroup(entry: ComponentEntry): string {
-  return entry.frontmatter.ui_category?.split('>')[0]?.trim() || 'Uncategorized';
+  const raw = entry.frontmatter.ui_category?.split('>')[0]?.trim() || 'Uncategorized';
+  return GROUP_ALIASES[raw] ?? raw;
 }
 
 /** Derives a display label from a brand slug (e.g. "zoho-forms" -> "Zoho Forms").
@@ -57,6 +84,7 @@ export function getBrandLabel(brand: string): string {
  */
 const PRODUCT_GROUP_MAP: Record<string, string> = {
   freshservice: 'Customer Support / Helpdesk',
+  'hubspot-service-hub': 'Customer Support / Helpdesk',
   zendesk: 'Customer Support / Helpdesk',
   writesonic: 'SEO & AI Search',
   otterly: 'SEO & AI Search',
@@ -74,4 +102,18 @@ const PRODUCT_GROUP_MAP: Record<string, string> = {
 
 export function getProductGroup(brand: string): string {
   return PRODUCT_GROUP_MAP[brand] ?? 'Other';
+}
+
+/**
+ * The most recent `last_verified` date across every component record —
+ * i.e. when the library's research content was last updated. Dates are
+ * ISO `YYYY-MM-DD` strings, so plain string comparison orders correctly.
+ */
+export function getLastUpdated(): string {
+  let latest = '';
+  for (const entry of allComponents) {
+    const date = entry.frontmatter.last_verified;
+    if (date && date > latest) latest = date;
+  }
+  return latest;
 }
