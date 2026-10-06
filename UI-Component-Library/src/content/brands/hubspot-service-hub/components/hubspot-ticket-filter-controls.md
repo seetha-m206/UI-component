@@ -2,7 +2,7 @@
 component: "HubSpot Ticket Filter Controls"
 ui_category: "Search and Filtering > Filter Panel"
 source_product: "HubSpot Service Hub"
-last_verified: "2026-10-05"
+last_verified: "2026-10-06"
 evidence_state: "source_reviewed"
 status: "partial"
 summary: "Advanced grouped filters, quick-filter operators, priority values and pipeline selector on Tickets views."
@@ -12,7 +12,7 @@ summary: "Advanced grouped filters, quick-filter operators, priority values and 
 
 ## Screen level
 
-- **OBSERVED:** Advanced filters opened All filters with association filtering and grouped AND/OR rules. My open tickets showed “Ticket status is none of All closed”. Unassigned tickets showed Filter (1) without an explicit drawer rule.
+- **OBSERVED:** Advanced filters opened All filters with association filtering and grouped AND/OR rules. My open tickets showed “Ticket status is none of All closed”. Unassigned tickets showed Filter (1), while its Ticket owner quick filter directly exposed value Unassigned with operator “is unknown”.
 - **OBSERVED:** Priority values were Low, Medium, High and Urgent. Create date offered is, equal, before, after, between, more than, less than, known and unknown operators. Pipeline offered All Pipelines and Support Pipeline.
 
 ## Action level
@@ -20,6 +20,7 @@ summary: "Advanced grouped filters, quick-filter operators, priority values and 
 | Control | Observed behavior |
 | --- | --- |
 | Advanced filters | Opened the drawer without changing a rule. |
+| Ticket owner | Opened the Unassigned owner condition without changing it. |
 | Priority and Create date | Opened option lists without applying a value. |
 | Support Pipeline | Opened the pipeline list without changing selection. |
 | Reload | Discarded the transient incomplete filter state. |

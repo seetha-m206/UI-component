@@ -56,6 +56,8 @@ export function getBrandLabel(brand: string): string {
  * "Other" rather than being silently misgrouped or crashing.
  */
 const PRODUCT_GROUP_MAP: Record<string, string> = {
+  'zoho-desk': 'Customer Support / Helpdesk',
+  'salesforce-service-cloud': 'Customer Support / Helpdesk',
   freshservice: 'Customer Support / Helpdesk',
   zendesk: 'Customer Support / Helpdesk',
   writesonic: 'SEO & AI Search',

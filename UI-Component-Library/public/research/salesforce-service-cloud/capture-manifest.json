@@ -1,0 +1,1972 @@
+{
+  "observed_date": "2026-10-06",
+  "updated_at": "2026-10-06T10:26:25.136807+00:00",
+  "product": "Salesforce Lightning Service area (trial workspace)",
+  "edition": "NEEDS VERIFICATION",
+  "public_images": "RECONSTRUCTION: fictional local fixtures only. All 117 are viewport captures. Long content can continue below the image. Earlier 28 first-pass image repairs retain their historical provenance.",
+  "source_receipts": [
+    {
+      "receipt": "captures.json",
+      "sha256": "c7e7b9f8b9f62f48a8f9a530c148d16986529227a8a9e1e88462561b390e5264",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "case-filters.png",
+      "sha256": "c88fce2b57ee7103f9695225c6d55ef02b000038f1b779557b226e5b1932951a",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "case-filters.txt",
+      "sha256": "50f91b0a78fda8ae83964e0f673d1aa759eaebaa4a37779d85ebe4bf21b12abc",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "case-origin-options.png",
+      "sha256": "f5b40768532a0fc85002903a55b2c5f74f0ca155f81657c48bbe9c32a3f5587a",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "case-origin-options.txt",
+      "sha256": "9ec06df95827b5b3af6dacb9131dc590c198018bb3c189d3081a8df77d4ba819",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "case-priority-options.png",
+      "sha256": "82ab69fecb317a5dac357edbe102973ec82ae2983b780d325f7db1fd95320272",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "case-priority-options.txt",
+      "sha256": "52224ec75c99df2ddccca87c77f2fa6d3278e5f124e7c99987631522d2b115be",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "case-status-options.png",
+      "sha256": "1f2114d3e093e0ac61d015a572bb423cfcf3a37b580766ed384798a34014b840",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "case-status-options.txt",
+      "sha256": "bc977f12d4b70cb408b9ed0c1e5883c3682bba7b1eace1cef2ad7f3c265c6f39",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "case-view-picker.png",
+      "sha256": "869eb4d0f69b85685c8f6803823c0fec6343f7b4425be2d53d987221cb3d3019",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "case-view-picker.txt",
+      "sha256": "82bd5eb41bd0fd103d22435d972adfb9bbfdbcf4a2c7d746eac2e60c79723d49",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "cases-baseline.png",
+      "sha256": "2a5a1bef57065594ca732a65a18a02a3cd66fb8742b4297567254d47b79116f6",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "cases-baseline.txt",
+      "sha256": "62fb5be7de28003b0cc49a2e589e00a95054cb0696611a58ac2ac7d24dae8090",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "cases-empty.png",
+      "sha256": "5d0f352d1057bc7d714521545c18ca14fcf0cf535cb27eb10982c95539b0424c",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "cases-empty.txt",
+      "sha256": "462a075ab7209b065197cc50dbe4b62bd1eb9cd07f83115c285efca0457f9dc4",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "contact-lookup.png",
+      "sha256": "3cf2d04a0f97d687963e28d3c3de0c3858db9b7e96e21be1842bb48cd33e1214",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "contact-lookup.txt",
+      "sha256": "7092acbab1897ce1b2293ace2c373f0986a288566d61eecc2c4a5adc0a555fbe",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "display-menu.png",
+      "sha256": "8cd93ec110e729c7a4bb73d94794c0a0a01e3f84ea3db8433adb1a17896cf2bb",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "display-menu.txt",
+      "sha256": "6777ad3d4b597fd8cd89e47110ad3cad8392e33a38d3d994d9b18e6542a83a4a",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "form-styles.json",
+      "sha256": "c406b72c65243e0cf8741609167eadb5a37f2da38f0e2e96f22fd1c57dbafe3d",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "knowledge-list.png",
+      "sha256": "8ff88172880f1ada1d7055bae166c1dd87c9e384f75211f05f3f4a76fd05e7a5",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "knowledge-list.txt",
+      "sha256": "189dfd088208571db0ae8dbcb633713090636748c91f580c8662f4b4742f179f",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "list-view-controls.png",
+      "sha256": "03eee0a13bef6387b44696051ca0aceedbf2617f7ca540a2547940b660d1c171",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "list-view-controls.txt",
+      "sha256": "15d194509cbe840c3883684516b5900e5dfb0038d06b1d1fcaa411a91c480a2e",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "new-case-form.png",
+      "sha256": "e63d510d0aaf4ec7c140d8746587fca497a78ae497d8a274a02698cea30efa0a",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "new-case-form.txt",
+      "sha256": "9fe2e267df523e3ac8cfa8707c7ee1b5ef3d8098638266edf06e76510abfc5c2",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "new-knowledge-form.png",
+      "sha256": "3820785f4821c964b7f5bf94703116a721cacf24264d5e9053e27ef4824b5689",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "new-knowledge-form.txt",
+      "sha256": "94e05c95779f0e53c32279b4a7a962847a10e7994b5cde59c3bc6762623b5751",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "new-quick-text.png",
+      "sha256": "702d5d0c6b93c359ea2180e666ceea8c8019f9bbef90ba4a23aeaaaa77188567",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "new-quick-text.txt",
+      "sha256": "5334233c428dfa7b2168a5bd587a8a2934d5e2c4e84554b2daf9be9ebc9d2af5",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "notifications-empty.png",
+      "sha256": "462b1a5c7ebcc30f0c997127939b598be7697729770e5c94c38518a358eaaab2",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "notifications-empty.txt",
+      "sha256": "b3f9385afd3e49598409608d152851425890b90f3da462b744aa2c43103e5ac8",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "quick-settings.png",
+      "sha256": "ce16644ab4ccb2b396e408a3e84996047458671de437fcdb74f075682364c50e",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "quick-settings.txt",
+      "sha256": "22b33c64858c1c457b41283d8d85d8c88f44a9aabf82fa30f932fa59377be829",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "quick-text-list.png",
+      "sha256": "39c2cf36f9e43d8374926ba0b0cbcebc813a669c07d9fa203d2d698c3b6473a8",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "quick-text-list.txt",
+      "sha256": "372ecde0e7731188817cc30140b0a1d955a75b504a4a0f643494459fc2371255",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "quick-text-merge-options.png",
+      "sha256": "c5a6ab2a3d2dccc36fa642d9af4ea757fedbc1dcaff34ce21356e81f9e96ef90",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "quick-text-merge-options.txt",
+      "sha256": "c3764c8c211353e88228dd455bbed1da15761efe5222885058aff785d8871266",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "returned-cases.png",
+      "sha256": "b2899ad126c56b8293043a9ab2a3d9909efd1ce79540d467fe29e3c0c490d0f2",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "returned-cases.txt",
+      "sha256": "32af2980a3c2a299e2e15ce72298ab96eb37b8dbc2ff7ad7b2dd0b9b711dc092",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "service-cases-default.png",
+      "sha256": "eadff8c5f336c25b83d4a2401f10925be5c5d6900c702c3d4240a5d3f40a1ed9",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "service-cases-default.txt",
+      "sha256": "3fa7f817c31c2e6a1022fcc9c9b96fc543daff3c1f9cb1a7ffce766bccf6ffef",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/account-type-picker.png",
+      "sha256": "cc48ce47853e6fe230d96632b10cb161605801c9c510961972731f96044a3dbd",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/account-type-picker.txt",
+      "sha256": "f5d2a774ed89debde205a901fff939ba432840d38e3e35d6102b30852007c52b",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/accounts-list.png",
+      "sha256": "33ad398a7d0e5324a3c0b95c9a81e1ba7f572c7d58ddecda5bbe0803d21a10d7",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/accounts-list.txt",
+      "sha256": "23c15ae28dcfcf568c6a60f4c78f328f2da731f85a939546686c140d89eda09e",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/agentforce-entry.png",
+      "sha256": "c83c3c3cbee30279d05aa887d1ec03cc19da02ad61257f9f2cd85eb54f9232d7",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/agentforce-entry.txt",
+      "sha256": "3e88bebacb894991ed4649911d9ec791bced8982c038a32bdcb0fed982e6f388",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-browse.png",
+      "sha256": "2bb889942b995ce6f35d3f6b52f35839c509bfe9c750515df560f072293d4a69",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-browse.txt",
+      "sha256": "aef51b7fcff5137153f0d60a7a96ce0e0655fbff4785c71f848779b72bc10e30",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-create-menu.png",
+      "sha256": "770a41591c79e0ac6c56739251f5665816fde4233c243807d034f0dc814df8ca",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-create-menu.txt",
+      "sha256": "208116ee2a18245d0ecf79e76e9651d81f3260c0104286d0b09dfed4444dc6af",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-creator-filter.png",
+      "sha256": "88f1f716f7b488cb1eb29d83f403fbf6c0bf6f58ab357089331506cad64c9c27",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-creator-filter.txt",
+      "sha256": "d71dacd67e423d65e33fc829c48f18ebe248c23dc8f0a929f1db0f3f48f0386d",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-date-filter.png",
+      "sha256": "0ee4693561fa80794346e22b5956d3e06c45e9f3aba1d68ccddcc7c1e050bfa2",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-date-filter.txt",
+      "sha256": "9fd87d461b9efd318382805c34ed287f10fe1e6d7c0fe663fe29652e2e24a0aa",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-home-loaded.png",
+      "sha256": "ad10966422393c478718bdd4477bee340b3f4f296d83988015377536782db878",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-home-loaded.txt",
+      "sha256": "92d8a0d9b4e629dfc9835fea026bdea197ba2e6aa01d5025af7dbf22cbec7223",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-home.png",
+      "sha256": "33f866e44a70c277102181578d433f63320a54fc15c9b33b26ebb1d37915c54d",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-home.txt",
+      "sha256": "3d5b07a99b2d8851a06e7179b99cfcceb071075c30c3b6651dbd09bc3cf08b3c",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-report-actions.png",
+      "sha256": "0fe41d621def11a2ff08bc06a5b4b7ba76507e2a828e54b11d58cde4b2478170",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-report-actions.txt",
+      "sha256": "f9713c8a32becf40bace83ebc13205b8af2bc4cc244902267136776f60d29c81",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-service-collection.png",
+      "sha256": "561447115522d555e5aa70e611a447c2e277f2570ae7490f986d3e399b36074a",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/analytics-service-collection.txt",
+      "sha256": "8ca0426c5dda4e8211f0cd6ab89674fff20c3f5072df9cce910a6da166565ba9",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-action-detail.png",
+      "sha256": "e113c54f14cda95f29f6c16436a43b01d2749f75b6a9f96be7dfc449e91f82fb",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-action-detail.txt",
+      "sha256": "6b6d9ad07054be50e24dbb1adc356960a8dcbbcbbecc89b5186eb94b11104dad",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-action-hub.png",
+      "sha256": "3deb3515aedf7fed459e7f9a156671060d1563bd5a05d643f2160b6f0d5c2d38",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-action-hub.txt",
+      "sha256": "051c815b40d132ee12bad471699b15c8b9455a05d3a28dc7d19323ba303a7272",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-action-parameters.png",
+      "sha256": "56ca40811a8be57bd3df70266b9b34237cb7b1fdce5427b87421bfb78aee971b",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-action-parameters.txt",
+      "sha256": "0bfca65bffe61faea90efcc0c3bbef145ce8b4cc9574b6c0fd06ee7295f0788b",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-action-types.png",
+      "sha256": "9c992e6f50c37f34cff49f6b5f25ca10f15132017842abc5bda18d98276e0a45",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-action-types.txt",
+      "sha256": "751d49510edeef71510136d0c911b436a40274ce6b02318b4daeae7518baabd8",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-flows.png",
+      "sha256": "4c13aeec549df35af911730f55d1a6932b3ce5bf0589eae70e32bdfa70b6cc2e",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-flows.txt",
+      "sha256": "b7333c40800614755124fd6d3e76bd19b6c0e07e49f835919de7ceaa3d95015f",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-home.png",
+      "sha256": "c6b8aa75f03058f71e900ff5371f2021c2969d794662f8285d11e220f6a7cdbf",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-home.txt",
+      "sha256": "a1ecf1a5f467bd31250c00792fa80903d95d787cea4d3b05155fece508e22615",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-monitor-filters.png",
+      "sha256": "7843deb5fa9a6c0dfa7ea2e1e49b59e1efc689dcf3860bc1681ddb82d83ba812",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-monitor-filters.txt",
+      "sha256": "974d2aad42b2f12f2b8b6acf219a0b314c2d55201be2d57f432f57bcc42592b1",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-monitor.png",
+      "sha256": "3c865f1e4b231579c9bdce1c7fec26b78d8b260caf11ba6f06fdbd0a15e5aafa",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/automation-monitor.txt",
+      "sha256": "9b227a613d04bb0e5f6fc7683b3e591fe78c3bf12d9a3ec79203b3dc79581827",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/captures.json",
+      "sha256": "6d4bb057f9f236be247269513e136ab09bf6d9a26eb2d4aedfb72b171b3add13",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/case-report-filters.png",
+      "sha256": "6662d095c94b7454c68cda57cfd75fe17d95f89420d129599bea50610fabab61",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/case-report-filters.txt",
+      "sha256": "21b28d550416fcac3e758a69d7ea732a363775e6e542e005d136c04fbd0a48e3",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/case-report-viewer.png",
+      "sha256": "30e60d857e2d3f77f3926afec32634faef0f79e98f7cdc0fe810282273ee8bd8",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/case-report-viewer.txt",
+      "sha256": "bf7821821e7100f2c2259db2d51bae7199354e179d80b8c84d0fdb3f4f00db3e",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/connector-picker.png",
+      "sha256": "36d07aa967c73b26280dbda75248c493aaa2cfe9496bc97895b18f7c29500ed6",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/connector-picker.txt",
+      "sha256": "1a7a05aa05b2a887ac38b9490338ab36a6752c39a74f3f6bed0b3ff7e1db17ea",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/contact-address-picker.png",
+      "sha256": "db388880db075b7807a83bdecf4367357a52ac2dcfa128625a3f6f46c8846c70",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/contact-address-picker.txt",
+      "sha256": "a76612c73e84560b4b89b068a3110db0a4342c8f2a66930753d8aedadafe6b71",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/contact-salutation.png",
+      "sha256": "7033f85fc9251075d1ba36a7070d7e85eb32b05a03b1106c3e5de44accf06bad",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/contact-salutation.txt",
+      "sha256": "744f76ff0e8819fbbb1716a4832726bbd49c8602e3a62c48186cd79ccb1c6cff",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/contacts-list.png",
+      "sha256": "327357614dd88a365dadb2eea6775da4ed34952e1f0c538919441dc21e1c597a",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/contacts-list.txt",
+      "sha256": "d744e9536f74949845830958780a50e14a4cac43a15fd1446355cabdfc9de3d3",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/dashboard-actions.png",
+      "sha256": "443b8cde0e9b17ea1dc3a5592c8c2d81770f08740580b069c4d00e9bb3579556",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/dashboard-actions.txt",
+      "sha256": "53ee660540bfa0f8a240d30bf1a69b5929ed84ce722296b991ea491c50622fff",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/dashboard-expanded-widget.png",
+      "sha256": "a37239999d2cabe9882b40ee2b71e7745d63e01de5b6c26afc1d4a8d2dc48f7a",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/dashboard-expanded-widget.txt",
+      "sha256": "146665fd80a6007412a5b0f5c9a8b5057e4e0e646ea0548c3bd5c7e961257b84",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/global-search.png",
+      "sha256": "9e99216560b33ec5133d8e51684e5792ecb369b09717ebc0370301940aa3f5c4",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/global-search.txt",
+      "sha256": "b1190a365be699a8dcdba020ce2fb729fe2a74955b8c960b0c8e9b832b60df24",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/guidance-center.png",
+      "sha256": "4899bdaf025ea8726b51c04c4eb63d19097cd3421fc6f04f7779ac684752b00e",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/guidance-center.txt",
+      "sha256": "fd81672e95a2e4013b44337dfe07ca59ae032b401da4e9d341baa6dec8d86541",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/help-menu.png",
+      "sha256": "24d12ff66f8b536a5aabd929e8f6a171dd9eae411c4b39be35a279fb6342c676",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/help-menu.txt",
+      "sha256": "644ed0af5a0fab21530da7af20092f605c4bc0dddaf38d30c474641f4823244e",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/integrations-catalogue.png",
+      "sha256": "fe897d3f67fbd1bb3c6dc675a809d7de5bdefea44208af5e8b84b10aba53ba52",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/integrations-catalogue.txt",
+      "sha256": "0d4b1024b2d3ddede5740d89303917f22339677f3e519692b62f34fd9acb446d",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/messaging-empty.png",
+      "sha256": "c86cd342bab43caf9d9a33b478572f08bfe6245bf4b60f776a53a8db17696f74",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/messaging-empty.txt",
+      "sha256": "4bfa0ca8a3c3765f28d983d0a69e46082983d1f06079553df06a6311716d6135",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/messaging-sessions.png",
+      "sha256": "be0a5dbf2a4192dc26a81e9a0dee3acd7c06b030acd1e45a5046a6cbd3d64b30",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/messaging-sessions.txt",
+      "sha256": "e071d9566302b31365946654b84fae9a6bdec202282df6a96919552b074bbc69",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/messaging-views-loaded.png",
+      "sha256": "0c5127ce0e1148003877fd952f2258a15eef60908f83ec6014ab7aabf3509005",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/messaging-views-loaded.txt",
+      "sha256": "4474047bafe94b4963c308e6b4c3f4b2fd8e4eb45d1166bca5904ded548446d7",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/messaging-views.png",
+      "sha256": "ce284d59d6fd0f88cf7ce62bf6ccb2a4ee0061197992bb4ba4bb6e86e0da1d06",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/messaging-views.txt",
+      "sha256": "d4c5121ea4a2cb31bb1ce0e9ddd842de288e76640ce359a85754636195507622",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/new-account-form.png",
+      "sha256": "84673e7df4dbf1ed4dca3affdaf87ca73c8f892f390fff0943a1c398d61d26ee",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/new-account-form.txt",
+      "sha256": "0ace29e2e749954fa17613965ed982e4c14a741e57219cea306c6d42bfb08a70",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/new-automation-chooser.jpg",
+      "sha256": "50b978c3207aefa248eb03bf3c61db979404995c83080521d20a9a6b1cc4d41b",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/new-automation-chooser.txt",
+      "sha256": "f015e7c01696cf0c0f4e6e4e5e38e4ff171d8c663102fee0831ba005dcad4543",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/new-contact-form-clear.png",
+      "sha256": "502fa721d88dad50cb57b37b476e5bc82fcdfd21d3f85d1662ebd6555ac61f49",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/new-contact-form-clear.txt",
+      "sha256": "9fab4d7898750594edc7b90e4d3c43db3c1ff319cb38ae1b6e11b3d926e38d28",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/new-contact-form.png",
+      "sha256": "d0c5089a0fa6bdbcf251c4bc69e14b8bd54923175a279110bd96ce15105f03e9",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/new-contact-form.txt",
+      "sha256": "46a2b8994a8af212800c5a4960406dd089a5c86188d94f245702e5687bc2069e",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/new-task-composer.png",
+      "sha256": "8626ce94cfd896bd0669600106aef38f1d7fa5b4e0f6e963aa67b175a448dabc",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/new-task-composer.txt",
+      "sha256": "5e63ba3c94ef685f41973585917396563bcc3eeb446d1e849151ea4a45e8676c",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/object-navigation-menu-loaded.png",
+      "sha256": "7b34325464ebc22cdc843a445ab4c76ba45c052eeb531f4219f7112030773910",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/object-navigation-menu-loaded.txt",
+      "sha256": "fdcd84dcb5b033ebc3f98c4ccafe3f661840d1461bdbdab9dd842b98e9089b36",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/object-navigation-menu.png",
+      "sha256": "e82643517dbe12dc0687fbe1c5599c7a94c88f94bae5bf4695b7c77a27301e51",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/object-navigation-menu.txt",
+      "sha256": "5a337018e2cc1f9bdd52455a63d11878023f8c7b2be0c84a656da241cd0ed987",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/open-cases-report.png",
+      "sha256": "845dff69fa9e4b370d21c1a199d2c6b059035f7517c2e1a458e5fb4b374d3dda",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/open-cases-report.txt",
+      "sha256": "8ec4657f841dfa2e6d6c55c429799fc0870f50d8d1e371c7c6b34a805a9bc94f",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/report-type-chooser.png",
+      "sha256": "1c519d6748e3d4d45ee22e062e4227fa36a237a701b30a5371aa92b314d9bb98",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/report-type-chooser.txt",
+      "sha256": "9cc03fa6d57d40bc67ecc65e2a5dff56a1500ca86bad1f97b1cb8b6816958d99",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/service-kpi-dashboard-loaded.png",
+      "sha256": "8df64133a2c25e99e29e8b8c64aef4b9ca6434790933184ec6cd54aa0248b600",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/service-kpi-dashboard-loaded.txt",
+      "sha256": "70e64d8758555982a754352c3d9eeefa322dcb7e7d0cb1b40b727a79caeba69a",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/service-kpi-dashboard.png",
+      "sha256": "02c3aa991f4d24ea6631f681f48279a51054a142851366b71518049591dde45e",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/service-kpi-dashboard.txt",
+      "sha256": "3c9bf2f1a989098bfb4d8f5b6998a97a80d765bdc0f735d94b5792bc2a57fa4b",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/task-date-picker.png",
+      "sha256": "67ffbd906830bb288dc14eb03fe1e19bc48626412a01430e25a406d0660da805",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/task-date-picker.txt",
+      "sha256": "7b65a2f1360aebcf264c833542bf9080e9bd374d42b4e5cbb90f0fb8af85e5d6",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/todo-filter-loaded.png",
+      "sha256": "b16a93c0fb3ca5aadb014b0f11c8fc796dec6d63cde21293273c6436b02a2caf",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/todo-filter-loaded.txt",
+      "sha256": "a772a32a4e7d972171e8e3edfe158eae7653c163af038f511d630b5f729ac7ae",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/todo-filter.png",
+      "sha256": "e00ae1a58830d6eec2a7fbc8a93904c2778ea0c2594927117634a91a3a58cdc0",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/todo-filter.txt",
+      "sha256": "cfbfe13c550f652f2bbb88d86eebde8d609c83e57c8eb6bff0ae42451f4b6508",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/todo-panel.png",
+      "sha256": "42e27f255e497efd1a18a051bf3931f74824580ab0ff6ee088a1ebe6fc4ba828",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/todo-panel.txt",
+      "sha256": "9304d4b4834578ae38e3adfde90ede008ed041dbf551bc0cc54ea0c6b825e238",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/triggered-automation-types.jpg",
+      "sha256": "2a23b51da0b1481f75ef20ccfebb3d5444c1c29f138d4b0c4326a61538af99f7",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "remaining-20261006/provider/triggered-automation-types.txt",
+      "sha256": "e9d6ca7df929aaf3d47897d1797718bacbf213057a9639a7e2e6c7c31463e344",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/add-to-collections-dialog.png",
+      "sha256": "e369e126d5a1129484417d6b18398bd378aa95ab9fe47a1c21a74d4b7c41e85f",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/add-to-collections-dialog.txt",
+      "sha256": "48a465c06599be3ab92880f218d4532f06b5e40db5da6d96a54f3e6be3b92855",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/analytics-asset-details-drawer.png",
+      "sha256": "224c0b6ef6931f09b58e6625678ccf63cb9832a903b7b4a3df29c3a34b379718",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/analytics-asset-details-drawer.txt",
+      "sha256": "3d5201811b59af5da82446f7312995ec220c3c36a9a3e17ee4b5393cfd96e53b",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/analytics-bulk-guidance.png",
+      "sha256": "696562c52da251212fa05449670617a0015058dcdbcc506f9e2c6c89dda10346",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/analytics-bulk-guidance.txt",
+      "sha256": "e3db65c4491d0edda679f6ee5641893a463ad7bc4fd0f011e689a49611d365e4",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/analytics-favorites-screen.png",
+      "sha256": "66466cf38680eee8a8dbcc24fd6fe0ab2a7ff31c64c8e53b9bcaedd88f278aac",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/analytics-favorites-screen.txt",
+      "sha256": "67efbc155f3bbc6aa1fc9ce268158d2a84f9ccbbc80665af5ff9be50c4a18b9f",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/analytics-keyword-results.png",
+      "sha256": "892ac5fc03d26520617f4374e27c487b9e00cb24d63c9c4dfbac45e4e11c2517",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/analytics-keyword-results.txt",
+      "sha256": "a025d547a5685775f011cdccd99844103646d576f79c071200bb80e4c09aeab5",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/bulk-selection-error-toast-live.png",
+      "sha256": "13b6e183d143d7cf1bb2b9aa09ba1ada488105e82a54e3cf5e38fb523400e80b",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/bulk-selection-error-toast-live.txt",
+      "sha256": "722571ca7c136f3f156d180de673a57a047258bcaddd7220b4a8198b91d76f4c",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/bulk-selection-error-toast.png",
+      "sha256": "8cff22862c22327e86f37f595969fec1fff13716fcfa59d8670323540cf489c5",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/bulk-selection-error-toast.txt",
+      "sha256": "096da89c2ae9d18b630b7cfb7fc6ff2b0ccf5b6ced926abf99f92a3a8ec0d9bb",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/captures.json",
+      "sha256": "09b3e84714d3add87fd74bb91ae039e1463e564ce5a822ff365663b94c5896eb",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/case-chart-empty-drawer.png",
+      "sha256": "bffd9f41a040d6969df2249a8aaec1a14d4d2e9635a58a97632f74dd4b150332",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/case-chart-empty-drawer.txt",
+      "sha256": "f3be02e5c275063df794bda5f032aeabe68cd147535571ab7de265dc4c135030",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/case-column-text-menu.png",
+      "sha256": "1f44bba7b7099e99122c4174e21e66f9d171c6e14438bb04b01b365afe94b1bd",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/case-column-text-menu.txt",
+      "sha256": "1273f1d048b9f58dd06d4f802c44c18ca5bce25e8e6527e748ba2df15a270c0d",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/case-filter-editor.png",
+      "sha256": "a3eb939b55f39a367b6aa1b16a1f303c421ffc30e151af26d469ba4cdd8b8f16",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/case-filter-editor.txt",
+      "sha256": "fcad4f43e13606121ca36a050ed527d74e6b4eeb313d35513ab3ca9787435c35",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/case-filter-field-options.png",
+      "sha256": "05d3d0aa91b5b4e838b7a6497475bf38d61d86edd0b4830edee217dbd864419e",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/case-filter-field-options.txt",
+      "sha256": "c047ed4119a0215975771d694671adfadaf0d7373552222f678493156b9b230d",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/case-filter-operator-options.png",
+      "sha256": "884fdee246b22b5945ec806315243a69792530660310b03691838bac7d728d46",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/case-filter-operator-options.txt",
+      "sha256": "63f1bd3d6466620f2648c88cf1d42779eb4385d906141724dc5493489158dcfe",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/case-toolbar-overflow.png",
+      "sha256": "e99e5fc4acff38b4f9b840c279efad4bae43772b6974fd127a3edc35d1a06fb5",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/case-toolbar-overflow.txt",
+      "sha256": "ef4c0cb767cf080725613bd31f15911ebdfa4c0daff38fdbdac59ab6ff734a7e",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/cases-returned-after-actions.png",
+      "sha256": "9b13287f907d058707724b03fe04d96e36b56398284946f3d1d396678004b67b",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/cases-returned-after-actions.txt",
+      "sha256": "086659fe04478371d544f1ad827e97afc1346f7bfca324f3b33401d5eca59bfc",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/clone-list-view-dialog.png",
+      "sha256": "2fbd51960d1714c80f48603c8989106bc5cc054b662f1b1b090b309b77354f0f",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/clone-list-view-dialog.txt",
+      "sha256": "237ba8fe6b377eb42067bab9db32a91eb003500f57de88be21d36aa8b360621a",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/collection-color-picker.png",
+      "sha256": "a427527612e7188507985ce66a36e7ca4cf44e007b7898f8c3e657103468ba3b",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/collection-color-picker.txt",
+      "sha256": "00bdfece2a124e6c6b82cfccedd4e16217763e24cfab3ef923a390535b194241",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/filter-logic-editor.png",
+      "sha256": "4a9b218ab532ae431b7760a00df03662d6c9d7ddbb2ec314ee58d59c53babccf",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/filter-logic-editor.txt",
+      "sha256": "23dc26c32b44c8691078c24c412fd300d82c3c98bbffb4275f7126222d426d7b",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/list-chart-aggregate-options.png",
+      "sha256": "3a871794e77d62e80931a038d4d29e2dfc8dcf8e19c00ca1d68ac256023d445a",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/list-chart-aggregate-options.txt",
+      "sha256": "ea0a642bd990cf9deda86f68acca01474259f5074e07da820aa5766934899f68",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/list-chart-grouping-options.png",
+      "sha256": "477ce71702f5e8dad5389f4ac5bf68345b09910b28a5a0cf1db726f25c0660cb",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/list-chart-grouping-options.txt",
+      "sha256": "1f38f37960da0908c3caf6d4e3a49d7ed193942e48d3ebe8399bc86e930b2076",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/list-chart-type-options.png",
+      "sha256": "bc3cecab17e11f490cbdf3417ca49156bb53452c3edbd616f8d59015374fcedf",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/list-chart-type-options.txt",
+      "sha256": "090f9792cf233894152ed32139faeabf234d43dd467c3507c39ed06c16789d6f",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/list-field-display-dialog.png",
+      "sha256": "d7922cfda1762ef303d2809795a5573fdcb20b1c364326f4e2bbf57eb127ff97",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/list-field-display-dialog.txt",
+      "sha256": "3e9f472d7a37a9e674437419cc903f3fb5ca7d8451ccf8958cc0d946e6d85268",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/list-sharing-dialog.png",
+      "sha256": "567b3e2678bf58010df0c118ce24b30e4f4bf81593c0c5fa02c7f92a693ee99a",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/list-sharing-dialog.txt",
+      "sha256": "1be7f254b926d6c5623372460971ae73acf780b7d4f4257de4cc79ec909076cc",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/manage-collections-dialog.png",
+      "sha256": "2abbc3f0a9f8a6bc2c703daf5cc9a334b3870cc70e5672501f4c1748404f38c1",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/manage-collections-dialog.txt",
+      "sha256": "255fbb77979b83829637afbebeef0ff6fdba98e2e3a6dcd147ff6a8ebee6fb45",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/navigation-item-catalogue.png",
+      "sha256": "99eba09dd5cb524dab6db7a853cebc8235b979fa7056b08f14a9667e51e2991d",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/navigation-item-catalogue.txt",
+      "sha256": "8e99e1604cf6eaf290a43d957890221fd30782ef51902d91cdbe688d265dbdc2",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/new-collection-dialog.png",
+      "sha256": "934fc6fe45dac5be33c47db6163c4a78cb24adc0e53ce8068cbcf705919f74f0",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/new-collection-dialog.txt",
+      "sha256": "7d2c20ef151ad9b618d7f3fb64028e5d0ad1fe410d1edabd9dd944223dca64b3",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/new-list-chart-dialog.png",
+      "sha256": "71bc2dbc84944b00da1fa9d44ad5d0a0deca0e55368941ea6f7b7e55236b61b9",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/new-list-chart-dialog.txt",
+      "sha256": "81db6b1e0d83a5f1eb07783a8ad4d3ccac11d995bb298e6d2a9d10e2bc5b9f24",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/new-list-view-dialog.png",
+      "sha256": "e17166c4b2f580c6d8d708d682c9d74cb2df51b4f0321a438e285aab79cea442",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/new-list-view-dialog.txt",
+      "sha256": "1e8b5fdee014d807d5f4e136bceb64fb00bf255b1f197f41f8430c0e6ab5576d",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/profile-popover.png",
+      "sha256": "179df3a0ccb6d6c29b006fbdff84b990ef8347cf0f8c41c8551ed7a5a96f709a",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/profile-popover.txt",
+      "sha256": "b2d102b4a2cba4ec1614945979f3e8b7942f39f35b1942ea655b09262b13265b",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/rename-list-view-dialog.png",
+      "sha256": "e1079ff678e5acd49bfe0069c9d04fe9aab1bfe6e67992a5d15fe0e9e235f61b",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/rename-list-view-dialog.txt",
+      "sha256": "b979b9e5a96f86662187f6bb731842dad1ee1a4465d483b62c7eb8cd1a3bfd7e",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/report-get-url-dialog.png",
+      "sha256": "816355161f5bc986de48c0e84ceb68685d1177db45c8137402392562c0d7b77f",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/report-get-url-dialog.txt",
+      "sha256": "c9f2f5258a3bbd736ca8e0b3f6ace1d776a3d0a8ce998315b53a8cd848bdb505",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/service-navigation-editor.png",
+      "sha256": "c43c361c96a75c1de1022a4ced66bdde1cbe6297712357d9b330e06229d7ce55",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/service-navigation-editor.txt",
+      "sha256": "ea871c7aafbe0f31198f0a07c80ae1e9970ee7acb8a3e14e007032aec98dfb4c",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/unsaved-filter-actions.png",
+      "sha256": "ff9a17cc7e4338e39391742bf1d9bb3d7137d4c86a6509e7f98a3a2d8c1b1e51",
+      "visibility": "private local source evidence"
+    },
+    {
+      "receipt": "screens-actions-20261006/provider/unsaved-filter-actions.txt",
+      "sha256": "336f6d256a0ce79d4bcab7c36b5468ef318d22e5b92342b8d0de94125e0ef67d",
+      "visibility": "private local source evidence"
+    }
+  ],
+  "fictional_screenshots": [
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-application-shell.png",
+      "sha256": "37631cfb139833959f06c6c2ebb158f4b337b566ddbff3600d122acf37c59677",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-article-visibility.png",
+      "sha256": "5823b036a4b6fbe61e7957e255d30889620d27b8225d1c21a497ced8e6ae313e",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-description.png",
+      "sha256": "b27ad63ea657f25ef8bf88044ebe3e73f4323ab258f4ae8d3238db34670ebbc2",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-filters.png",
+      "sha256": "07cc028b6f060015bdaf8de4af15db8edcbd18623dfb1e86ee237cdcb2d6499e",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-notification-option.png",
+      "sha256": "6a238f14e2f5332e29d77e315ca5bd9457bc857ed511b553efbd8fc2f15d0570",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-origin-picker.png",
+      "sha256": "7260e1d4ab68922188d54a4346e479b5e68abab8243b6f4a7e3ddecee3a14bc4",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-priority-picker.png",
+      "sha256": "8b34ab3e0e71ec7b15684d63ec455d7e82d0f21d8e8c6b7ed5a2ca9faae5290f",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-status-picker.png",
+      "sha256": "e1aa07bc000b7cd50a37d37f0e5c879d58261743baae23b5ce79fc749c6abd8b",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-view-picker.png",
+      "sha256": "5ccb7ddcd95ef2b48476e469442a33483d73a646b7673dd2147bad0e7953101b",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-cases-empty-table.png",
+      "sha256": "fd4a7b89805152a09eedf0a7102b3e6d9812559888ae24330e6883a755dee4e0",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-channel-transfer.png",
+      "sha256": "04f3279ccc50bae65e408fa6f393453dd1248e8673b0e1cd33f7aa6841285742",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-contact-lookup.png",
+      "sha256": "2e54f9bb8aed6e620709acda858aed8d6490b8de86bd653d45a23bb845fe29e1",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-display-menu.png",
+      "sha256": "92fff39c0b9f84a5a9f4e86e29f84115b987f2a530fecfb7ee1baa5b4a22f93e",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-global-header.png",
+      "sha256": "8ee1d904b6b3384db3bca2e34ecff9660bdf4c93c722f9326c64471329dbfca1",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-knowledge-list.png",
+      "sha256": "ff57a7789edabd3c2c1039e66b9b70f47de917247e8a9275a0397ba5efd5afa3",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-list-view-controls.png",
+      "sha256": "1de0b37e22921be6fa594daff857e257a7149941b8583aad210f9a0e9c38dc0a",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-main-content.png",
+      "sha256": "07cc028b6f060015bdaf8de4af15db8edcbd18623dfb1e86ee237cdcb2d6499e",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-merge-field.png",
+      "sha256": "12536b3643bf785398a559ea8f3b5add8998b758c1df5a1baab251579f884810",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-new-case-form.png",
+      "sha256": "bc2075c540e9532f4f5a1f1722b1f0b29be0e6eef62caa4f53343458dc4400ba",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-new-knowledge-form.png",
+      "sha256": "25e11a2de749537ddca2a4db838606bc4e0c193905a0906ff7bad075e4c5e00f",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-notifications.png",
+      "sha256": "c0f9fa100cda91ebe4f72063c62f3846285c9bd20827cfc7a42524e6ab43361e",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-page-header.png",
+      "sha256": "2b7537443b372d420947514632ce46460bdda61f44fce728d3d7dc1280a571c8",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-quick-settings.png",
+      "sha256": "763e075ee9390f7037895909f053434c2c35b77e8bd8fd779b1dbed852cf2bb0",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-quick-text-form.png",
+      "sha256": "28d5cbfc63d18aa10b88d89ff8ee0a6a84b958d84ad58043ff91fe528e4c40ea",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-quick-text-library.png",
+      "sha256": "eadad1e2dbd5ff0268ce292e811e6d56e994e370792a2afc5d764ddea134e15e",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-service-navigation.png",
+      "sha256": "5bbda9d9026c592476ff4b90b80c05cb5f9acfb6aeba7ced0076913cdee10569",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-sidebar.png",
+      "sha256": "ae702af334bb7531b871fe8c7ff523b9c12d6eb4925c41abbaae24fbe40881e3",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-trial-banner.png",
+      "sha256": "9142e1ffdd0ec3a674d2eb745310664226834da3428e909b60051aaab4ed9c04",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction",
+      "repair": "replaces unreliable first-pass full-page capture"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-global-search-panel.png",
+      "sha256": "cf0f36aa0ab245e4a66780fa8e11b30f692ca45e4bb725fc9d5e821015d1053d",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-messaging-session-list.png",
+      "sha256": "aea501857aea4ec58769bd37333314b493f3f6dc3f508ab90fee8559712b7bdb",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-messaging-view-picker.png",
+      "sha256": "fa36e23132e685b422424e5e536cc0e1c1460e2ca945869efa1f8e3bf98f558c",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-workspace.png",
+      "sha256": "a94afddd3c5a2aca4012c66208da551f73551fede762293ff5584aaab7808737",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-recommendations.png",
+      "sha256": "4119155dbd07b1ce106a6e97177dfca788e5bb57de298477f1a43301ee4a7e86",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-recents.png",
+      "sha256": "4654a8bc8a90dc655316141c356398776249756462bd3f16778ae03354cfc605",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-browser.png",
+      "sha256": "c67f8c999da1faa883056bd9ed1ccfd76d884ab794cac55e5934a5f627755f92",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-creator-filter.png",
+      "sha256": "b58492c8539b1dc4303f1ae427a4dcb7826b860dde24d30728b3584720975842",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-date-filter.png",
+      "sha256": "3cd2db2e2560e6bf96bf94190e6fe699abb09ca174491e81804a9e2ca984158d",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-create-menu.png",
+      "sha256": "c1e79c9f8026f29786d3324d771ee35bf577589f411d0a2dc1ba8a83daf1328e",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-report-type-chooser.png",
+      "sha256": "86de4ed40e654cbf076102ffd9e35faa5d63132f5c096f742b234d3c2898c594",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-asset-actions.png",
+      "sha256": "fef7383115cf06db0307db1f268130ef12b72caacd5f7017eb75eff4dda484ec",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-service-collection.png",
+      "sha256": "61c242923c90c796871b142c4f2fc0124661bd89ef955bf9b3256e37c747bf24",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-report-viewer.png",
+      "sha256": "283c78aa2df3920b2c4aba59f611bf3a4cd38787cf9b1bf29900f3ce84e337b4",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-report-filter-drawer.png",
+      "sha256": "a59e34516c05e3b27feb5af5ef678ac743965636b3541bf05da566ee37a85446",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-service-kpi-dashboard.png",
+      "sha256": "8f9d3843bd32bd397e1975f003b874459d2dffb7f2bf43f333dd5795e629a7e2",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-dashboard-expanded-widget.png",
+      "sha256": "83e1945d47e4bceb7f5137f9876711f507a1b160c70779c74be1a304498ae2ad",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-dashboard-actions.png",
+      "sha256": "d42fdd9ae8bc66ed0ec4cf9605838be8843fe685b3497973c1619c774f219213",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-automation-overview.png",
+      "sha256": "e7d30c1edabdb8b3e0a43e4f67ccfe675e45fdd06bf07bbf64de3970ca47c0df",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-flow-inventory.png",
+      "sha256": "1127d29b0aee58d833c194d82e809c814b052cd0b1bb30cc783da7e3c3986422",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-automation-type-chooser.png",
+      "sha256": "f7aedbe10b590e02d04a1a89d58f67cd7a3f7a81fc310590b67933b4a7ce81d5",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-triggered-automation-catalogue.png",
+      "sha256": "32e1a7fd95550e1e7cf10f527ccb4438f6d3a472b55c0c8d75321a6a06f4e506",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-integration-inventory.png",
+      "sha256": "f5d532eb762c0c8cc0d5a31a0a5e5033eb33eadcc6dfe42e43c985e38bc84395",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-connector-catalogue.png",
+      "sha256": "ce3c769ba22967df28eae844080b8fea24232517b8db440cec388162c09111dc",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-flow-monitor.png",
+      "sha256": "e9c65224ea11b944e277fd1a97592f5422a4683e8233fb142eb2035ebb691b8a",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-monitor-filter-drawer.png",
+      "sha256": "fc52ab0adbec972cf8045133fbf61eb6b0e36f8432f0f3baccb6a948e0896cfc",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-action-hub-inventory.png",
+      "sha256": "a04f4046aa9568a75465823f8b54b816d26198f1eb4b5a2fe27bece7db8855a5",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-action-type-filter.png",
+      "sha256": "a55e83bbdadb3e9c832ad3db9a59e43b3bce3d1f24cad315eb1ba978ebcb8f3f",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-action-usage-detail.png",
+      "sha256": "41b7fda36864b7b53ef606067a0d6105c6de0de7e24163fe151805512b0994b2",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-action-parameter-tables.png",
+      "sha256": "0d7e19e05c8aea48c860e97ce66c82fb63407db65e2b529b6a7d4273bbcf8c0f",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-contacts-empty-table.png",
+      "sha256": "be2c420135dfd7433a8901c7ad170886b6270279b9075f4f15d731244a5e22bf",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-new-contact-form.png",
+      "sha256": "c9fec115d461b03edcfdff2d46b02067df52b8f1c30ff4f8a89a71879264abc9",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-contact-salutation-picker.png",
+      "sha256": "e08b69d1133bed7c192be9d9f11e5eb4bdd78da9ee640e54d2cc815e75a8573a",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-contact-mailing-address.png",
+      "sha256": "1b7c8fa12769590c4378189bf4788f6dd97938fc0e58933c94a762460952d25e",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-accounts-empty-table.png",
+      "sha256": "cb081c85db6631d0089f03f37d79b8df79151ee0a4c7f2825c818390aaa0e230",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-new-account-form.png",
+      "sha256": "f577e2753447cdfa5bd24d508149164564c63a23ebc5697667b950833c712dad",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-account-type-picker.png",
+      "sha256": "be2568f84a129a2d4012ba739b8164d3731cfa771aa4117b6bac389f5ebe4a1d",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-account-address-groups.png",
+      "sha256": "7b6cfc943381eeeefb287f10a8d6a522a9804ae9110c2ae3e133c454ff504622",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-todo-utility-panel.png",
+      "sha256": "04bbfc6d56eb27f5e011c9fd9dfea1aae7bf14e5ed7fad90ff7aa3bc027f60d7",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-todo-filter-dialog.png",
+      "sha256": "ac97e5aa8ed7226cb3e2f5eedde466aec481514f5745bec5f5716eb977a6c249",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-new-task-composer.png",
+      "sha256": "e2f97b365ba6c84bb68bbb397fa3a6a470c9486af9861f97adebd8439ca96ce4",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-task-date-picker.png",
+      "sha256": "dd93ad223cf72dfb0f077ff476c814a1e39ed14a6733fa38168d249565c19900",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-object-navigation-menu.png",
+      "sha256": "873e037986d42d6fb50b7a7001ff3b07fac5e67193ec022661efd21ccf835af8",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-guidance-center.png",
+      "sha256": "942a919ddbd33ff9bc68d2061a2b216a02bd35e5eb096978dc74b6734d09384a",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-help-agent-panel.png",
+      "sha256": "0ea32ae530be024a77c2c7e8b9f3e3bd986a45df2bc830c281527ea57c353861",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-agentforce-enable-panel.png",
+      "sha256": "98f041c97884f795067647163cd71f6a5ff4fc1ed656ba91691341760368b288",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-in-app-guidance.png",
+      "sha256": "f5288499f43b39453a3897fc11c060fa2fa0c8456fc5c771372049a424eb896f",
+      "batch": "remaining-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-list-sharing-dialog.png",
+      "sha256": "e67a7c996efad9e20e0c5249c6116bf898ec05fe4df7b3234baa773d28c35261",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-chart-drawer.png",
+      "sha256": "07ff576ea1272007298831f2f102fc8b4e0df18dfadce710c4da4dd89964d822",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-list-chart-form.png",
+      "sha256": "12b1d6492bf2115aa33ba8b438e4904f72f2e6be8bb5517254dc0b45d8c1e1ed",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-filter-editor.png",
+      "sha256": "74014af119591e9740a810e4aa770b3ce5f4a502849a0c41c5e3346ef243dc44",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-filter-draft-actions.png",
+      "sha256": "9a4f3b8d49588494783d553175b5acbbf78f9bec86d67f54f63cb53996d76294",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-filter-logic-editor.png",
+      "sha256": "b4fddc380ab04a5c24259683a746a39502f59ce1a012a32cd332d1c88173354c",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-column-text-menu.png",
+      "sha256": "a5b8748d4e3b51e3a137a316ce8e86314fed5405de7deec8a675fdbde2c1cd46",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-toolbar-overflow.png",
+      "sha256": "2e777ac2ef177c2f4f2b0764d7fdf57c808b66c35c7cef7183d89745e669c305",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-bulk-selection-toast.png",
+      "sha256": "879038b2b265ef91064054bf4ab2579b7a310c11c534f96ee4cdb07f304eae64",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-service-navigation-editor.png",
+      "sha256": "7d64b7d1e2c7719e48348444b5a67552d88b854a1bac3ba4896ac3cd0ec7d05c",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-navigation-item-catalogue.png",
+      "sha256": "7678de1f920cdf6ee377387e6cd761a049506022d5f00bb424fff545c1b7f150",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-favorites-screen.png",
+      "sha256": "000ad98a02ac45143d96e0af5d9b58e433beacd9be538e5cca2efe64057fa42c",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-manage-collections-dialog.png",
+      "sha256": "a62be2fdb9c215b2cdff39e853644d71059c2cf57e4768285a607e0dba345898",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-new-collection-dialog.png",
+      "sha256": "07d158f240c4f5ff8417d6c6721bddd0647bc6898fc9c6d8615b79a91115cb63",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-collection-color-picker.png",
+      "sha256": "379a6a5fa600eeafedd43bb209857212c2b6d85099665130174d50d8f303db7f",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-bulk-guidance.png",
+      "sha256": "7151f0fc62e8a25a8f6abafb42afe52c22275d4c126ac07ebb65cc8f85148377",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-keyword-results.png",
+      "sha256": "4243d12490eb2af51c2365ef19f74c0c34d90f14f231f8a99f76be01f5d370dd",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-add-to-collections-dialog.png",
+      "sha256": "ad7c87e155a991862bdd9631730e29fe2e312a744d2f06bdded923a5b0278a59",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-report-url-dialog.png",
+      "sha256": "d4278879b05b22a82e952a67e525ab78da929e754934dcd7367866dbb00968bb",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-asset-details.png",
+      "sha256": "6912399a8569188681a22ef4519407f95f1750325c5310b1940678ced365015c",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-list-field-display.png",
+      "sha256": "03cb4e009411d917167b2c94fc7b27ad846e0a5a1920957baa82f644c0faea5a",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-new-list-view.png",
+      "sha256": "da559715e3831c524119a93a56286957a5353c760f4b3156d4f537a31f9acfb9",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-clone-list-view.png",
+      "sha256": "3b4eeedf2f394f65c575ddbdce975a87f4926b30e49bd46e381887e1d58e00b6",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-rename-list-view.png",
+      "sha256": "fb018942c4741c8bcf8b70e9db088bdf7f833a6f9aef86bc42d81968a688e213",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-profile-popover.png",
+      "sha256": "aa91be68ff328c1b5fb94f5caec7c9d3d08b6a08c5efe752c468476efe2bee83",
+      "batch": "screens-actions-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-chart-type-picker.png",
+      "sha256": "bae681d0f6445648f9f3a48ade57d927a5be4fa4d77954a025fb4cdce180674a",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-chart-aggregate-picker.png",
+      "sha256": "a4e9477b0b63b160575ce1d95d4d360b4e92802185fd79ebbe5c81f1bde97002",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-chart-grouping-picker.png",
+      "sha256": "7b54df118a327d721ae654bda6035cacca4e87ef6deca1810d9aff313241c15e",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-filter-field-picker.png",
+      "sha256": "148dc866217408b9a6035053bbd3b1984bd3d34563e81f29567f7e3a895ff60d",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-filter-operator-picker.png",
+      "sha256": "0d5dd885acaad90b76eef327d7d18edf3d8a85a326616c381ae71ce468f326b1",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-visible-field-transfer.png",
+      "sha256": "fdab36c796255345f47009fff7b35a509bc81b5475bd09a7515c2a7c3ce6bd07",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-navigation-reorder-item.png",
+      "sha256": "3b8a9d0dbbcbe00995cff15962a68ef2dffc34e2e2eec9891aeb48db4872eff9",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-type-tabs.png",
+      "sha256": "7dd9b407aa8836af1540487e03ff7af100035ee17ad7d825f8ae6c681ae41500",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-report-row.png",
+      "sha256": "b66c73e134485c1677fef5e53057147de26afb5e38999b45381333a9be74b49b",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-analytics-bulk-selector.png",
+      "sha256": "d8b909393bbdfe73805f384de99386e37b87f54e4a66310b13297d0f3b85d0ac",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-collection-display-toggle.png",
+      "sha256": "5cfe28680277cca82a2b9f6aacbde1d0274754a8e82bef43f1584e9c795d3b1a",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-collection-color-swatch.png",
+      "sha256": "5c10fb75524f7c85192ac5b481e532afcbb766b58d6cb669f94f03c83255d6b9",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-report-copy-link.png",
+      "sha256": "d2b73c8d33afcfbd78aaa39e5466e447306b28c6a212b02ec44deecffb3771c8",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-sort-header.png",
+      "sha256": "746288e63e6a231c8c081418ab8ea8959fea3f36399281a523428fae599c69d5",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-column-resize.png",
+      "sha256": "d50466e2ef5953e6406f36a5cc7aaae00154de7d8ca790ab9f500cf81b49a091",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-case-select-all.png",
+      "sha256": "327eefbb04936537c3af6e08cbd877085a4af4f86b5edf0d2052215059d6d42d",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    },
+    {
+      "artifact": "UI-Component-Library/public/research/salesforce-service-cloud/fixtures/salesforce-task-state-controls.png",
+      "sha256": "7c15ef77e68d5798512b1e1a159a2d7d240d5f4a74f4ae037e26ec9bda1c4279",
+      "batch": "individuals-20261006",
+      "capture": "default browser viewport",
+      "classification": "fictional local reconstruction"
+    }
+  ],
+  "component_count": 117,
+  "continuation_added": 47,
+  "screen_action_added": 25,
+  "screen_workflow_groups": 22,
+  "individual_added": 17,
+  "individual_control_sources": [
+    {
+      "component": "salesforce-chart-type-picker",
+      "receipt": "screens-actions-20261006/provider/list-chart-type-options",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-chart-aggregate-picker",
+      "receipt": "screens-actions-20261006/provider/list-chart-aggregate-options",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-chart-grouping-picker",
+      "receipt": "screens-actions-20261006/provider/list-chart-grouping-options",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-filter-field-picker",
+      "receipt": "screens-actions-20261006/provider/case-filter-field-options",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-filter-operator-picker",
+      "receipt": "screens-actions-20261006/provider/case-filter-operator-options",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-visible-field-transfer",
+      "receipt": "screens-actions-20261006/provider/list-field-display-dialog",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-navigation-reorder-item",
+      "receipt": "screens-actions-20261006/provider/service-navigation-editor",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-analytics-type-tabs",
+      "receipt": "screens-actions-20261006/provider/analytics-keyword-results",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-analytics-report-row",
+      "receipt": "screens-actions-20261006/provider/analytics-keyword-results",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-analytics-bulk-selector",
+      "receipt": "screens-actions-20261006/provider/analytics-keyword-results",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-collection-display-toggle",
+      "receipt": "screens-actions-20261006/provider/manage-collections-dialog",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-collection-color-swatch",
+      "receipt": "screens-actions-20261006/provider/collection-color-picker",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-report-copy-link",
+      "receipt": "screens-actions-20261006/provider/report-get-url-dialog",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-case-sort-header",
+      "receipt": "provider/cases-baseline",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-case-column-resize",
+      "receipt": "provider/cases-baseline",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-case-select-all",
+      "receipt": "provider/cases-baseline",
+      "classification": "reused private provider capture"
+    },
+    {
+      "component": "salesforce-task-state-controls",
+      "receipt": "remaining-20261006/provider/new-task-composer",
+      "classification": "reused private provider capture"
+    }
+  ]
+}

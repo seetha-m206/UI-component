@@ -1,0 +1,594 @@
+{
+  "evidence_label": "RECONSTRUCTION",
+  "source_product": "Zoho Desk",
+  "date": "2026-10-06",
+  "privacy": "All fixture record values are fictional. No provider connection.",
+  "components": [
+    {
+      "id": "zoho-desk-application-shell",
+      "observed_states": [
+        "Ticket list",
+        "Blank ticket form",
+        "Ticket detail"
+      ],
+      "fixture": {
+        "workspace": "Northwind Demo",
+        "activeModule": "Tickets",
+        "agent": "Alex Morgan",
+        "screen": "list"
+      },
+      "unverified": "Mobile layout, responsive breakpoints, shell customization and cross-session persistence."
+    },
+    {
+      "id": "zoho-desk-ticket-sidebar",
+      "observed_states": [
+        "Views active",
+        "Filter panel replacing rail"
+      ],
+      "fixture": {
+        "activeItem": "Views",
+        "items": [
+          "HQ",
+          "Team Feeds",
+          "Views",
+          "Agent Queue",
+          "Team Queue",
+          "Tags",
+          "Scheduled Replies"
+        ]
+      },
+      "unverified": "Queue contents, feeds, tag management, scheduled replies and saved sidebar preference."
+    },
+    {
+      "id": "zoho-desk-global-header",
+      "observed_states": [
+        "Normal header",
+        "Quick Action expanded",
+        "Search overlay"
+      ],
+      "fixture": {
+        "modules": [
+          "Tickets",
+          "Knowledge Base",
+          "Community",
+          "Customers",
+          "Analytics",
+          "Activities"
+        ],
+        "workspace": "Northwind Demo",
+        "agentInitials": "AM"
+      },
+      "unverified": "Notifications contents, settings, marketplace, launcher and agent-menu behavior."
+    },
+    {
+      "id": "zoho-desk-main-content-area",
+      "observed_states": [
+        "List composition",
+        "Sectioned form",
+        "Multi-pane detail"
+      ],
+      "fixture": {
+        "listRows": 1,
+        "formSections": [
+          "Ticket Information",
+          "Additional Information",
+          "Add Attachment"
+        ],
+        "detailPanes": [
+          "Queue",
+          "Properties",
+          "Conversation"
+        ]
+      },
+      "unverified": "Resizable divider behavior, narrow viewport adaptation and layout persistence."
+    },
+    {
+      "id": "zoho-desk-ticket-page-header",
+      "observed_states": [
+        "List title and count",
+        "Form breadcrumb and template selector"
+      ],
+      "fixture": {
+        "title": "All Tickets",
+        "count": 1,
+        "breadcrumb": [
+          "Tickets",
+          "Add Ticket"
+        ]
+      },
+      "unverified": "Star changes, Total Count click behavior, information panel and count refresh semantics."
+    },
+    {
+      "id": "zoho-desk-ticket-list-row",
+      "observed_states": [
+        "Populated classic row"
+      ],
+      "fixture": {
+        "ticketId": "#DEMO-1042",
+        "subject": "Demo delivery question",
+        "contact": "Taylor Reed",
+        "account": "Northwind Demo",
+        "created": "09:15 AM",
+        "due": "09 Oct 03:00 PM",
+        "status": "Open",
+        "owner": "Alex Morgan",
+        "threads": 1
+      },
+      "unverified": "Row selection, bulk actions, pagination, inline status updates, owner changes and comment submission."
+    },
+    {
+      "id": "zoho-desk-ticket-view-picker",
+      "observed_states": [
+        "Collapsed",
+        "Starred group expanded",
+        "All views group collapsed"
+      ],
+      "fixture": {
+        "search": "",
+        "starred": [
+          "All Tickets"
+        ],
+        "allViewsExpanded": false,
+        "customViewAction": "guarded"
+      },
+      "unverified": "Full built-in view inventory, search filtering, starring and custom-view creation."
+    },
+    {
+      "id": "zoho-desk-ticket-filter-panel",
+      "observed_states": [
+        "Expanded",
+        "Collapsed",
+        "Status options disclosed",
+        "Created-time presets disclosed"
+      ],
+      "fixture": {
+        "fieldQuery": "",
+        "selectedCriteria": {},
+        "fields": [
+          "Account Name",
+          "Contact Name",
+          "Status",
+          "Product Name",
+          "Ticket Owner",
+          "Created Time",
+          "Due Date",
+          "Priority",
+          "Channel"
+        ]
+      },
+      "unverified": "Applying criteria, chips, combined filtering, reset, saving filters and backend query semantics."
+    },
+    {
+      "id": "zoho-desk-status-filter",
+      "observed_states": [
+        "Unselected",
+        "Options expanded"
+      ],
+      "fixture": {
+        "value": null,
+        "options": [
+          "Open",
+          "On Hold",
+          "Escalated",
+          "Closed"
+        ]
+      },
+      "unverified": "Applied filter results, multi-select semantics and relation to custom statuses."
+    },
+    {
+      "id": "zoho-desk-date-filter-presets",
+      "observed_states": [
+        "Unselected",
+        "Preset menu open"
+      ],
+      "fixture": {
+        "value": null,
+        "presets": [
+          "Today",
+          "Yesterday",
+          "Current Week",
+          "Current Month",
+          "Last 3 days",
+          "Last 7 days",
+          "Last 15 days",
+          "Last 30 days",
+          "Last 3 months",
+          "Custom"
+        ]
+      },
+      "unverified": "Custom-range interface, timezone boundaries, applying presets and date filtering results."
+    },
+    {
+      "id": "zoho-desk-saved-filter-empty",
+      "observed_states": [
+        "Loading observed transiently",
+        "Empty",
+        "Closed"
+      ],
+      "fixture": {
+        "title": "MY SAVED FILTERS",
+        "savedFilters": [],
+        "message": "No saved filters"
+      },
+      "unverified": "Populated saved filters, filter saving, rename, delete and error recovery."
+    },
+    {
+      "id": "zoho-desk-ticket-layout-menu",
+      "observed_states": [
+        "Classic selected",
+        "Menu expanded"
+      ],
+      "fixture": {
+        "selected": "Classic View",
+        "layouts": [
+          "Classic View",
+          "Compact View",
+          "Table View"
+        ],
+        "workModes": [
+          "Status Mode",
+          "Handshake Mode",
+          "Countdown Mode",
+          "Priority Mode"
+        ]
+      },
+      "unverified": "Rendered alternate modes, stored layout preferences and mode-specific behavior."
+    },
+    {
+      "id": "zoho-desk-ticket-sort-menu",
+      "observed_states": [
+        "Recent Thread selected",
+        "Latest First selected",
+        "Menu expanded"
+      ],
+      "fixture": {
+        "field": "Recent Thread",
+        "direction": "Show Latest First",
+        "fields": [
+          "Due Date",
+          "Recent Thread",
+          "Modified Time",
+          "Created Time"
+        ]
+      },
+      "unverified": "Actual reordering, tie-breaking, persistence and server sort parameters."
+    },
+    {
+      "id": "zoho-desk-quick-action-menu",
+      "observed_states": [
+        "Collapsed",
+        "Expanded"
+      ],
+      "fixture": {
+        "query": "",
+        "actions": [
+          "Ticket",
+          "Article",
+          "Topic",
+          "Account",
+          "Contact",
+          "Report",
+          "Dashboard",
+          "Contract",
+          "Call",
+          "Task",
+          "Event",
+          "WhatsApp Message"
+        ],
+        "submitBehavior": "local guard only"
+      },
+      "unverified": "Creating objects, opening each workflow, shortcut execution and search filtering."
+    },
+    {
+      "id": "zoho-desk-global-search",
+      "observed_states": [
+        "Empty focused search",
+        "Scope expanded",
+        "Closed"
+      ],
+      "fixture": {
+        "query": "",
+        "module": "Tickets",
+        "department": "Northwind Demo",
+        "modules": [
+          "All modules",
+          "Tickets",
+          "Knowledge Base",
+          "Accounts",
+          "Contacts",
+          "Activities",
+          "Products"
+        ]
+      },
+      "unverified": "Query submission, results, search errors, advanced search and cross-app navigation."
+    },
+    {
+      "id": "zoho-desk-ticket-form",
+      "observed_states": [
+        "Pristine default",
+        "Editor expanded",
+        "Contact picker open",
+        "Cancelled"
+      ],
+      "fixture": {
+        "contact": null,
+        "subject": "",
+        "description": "",
+        "status": "Open",
+        "priority": "-None-",
+        "language": "-None-",
+        "channel": "Phone",
+        "owner": "Alex Morgan"
+      },
+      "unverified": "Submit validation, success, duplicate detection, autosave, permission-dependent fields and persistence."
+    },
+    {
+      "id": "zoho-desk-template-picker-empty",
+      "observed_states": [
+        "Loading placeholders",
+        "Empty",
+        "Closed"
+      ],
+      "fixture": {
+        "templates": [],
+        "createAction": "guarded"
+      },
+      "unverified": "Template creation, populated template search, selection and field replacement."
+    },
+    {
+      "id": "zoho-desk-description-editor",
+      "observed_states": [
+        "Compact empty field",
+        "Expanded empty editor"
+      ],
+      "fixture": {
+        "text": "",
+        "fontSize": "10",
+        "formattingApplied": false
+      },
+      "unverified": "Formatting effects, sanitization, uploads, plain-text conversion, undo behavior and saved editor output."
+    },
+    {
+      "id": "zoho-desk-editor-insert-menu",
+      "observed_states": [
+        "Expanded",
+        "Closed"
+      ],
+      "fixture": {
+        "commands": [
+          "Insert link",
+          "Remove link",
+          "Insert HTML",
+          "Edit HTML",
+          "Insert table",
+          "Insert horizontal rule",
+          "Insert code",
+          "Insert quote"
+        ],
+        "execution": "guarded"
+      },
+      "unverified": "Command dialogs, HTML handling, inserted markup, sanitization and resulting document state."
+    },
+    {
+      "id": "zoho-desk-priority-select",
+      "observed_states": [
+        "Unset",
+        "Options open"
+      ],
+      "fixture": {
+        "value": "-None-",
+        "options": [
+          "-None-",
+          "High",
+          "Medium",
+          "Low"
+        ]
+      },
+      "unverified": "Priority persistence, color mapping, workflow side effects and validation."
+    },
+    {
+      "id": "zoho-desk-channel-select",
+      "observed_states": [
+        "Phone selected",
+        "Menu open"
+      ],
+      "fixture": {
+        "value": "Phone",
+        "options": [
+          "Phone",
+          "Email",
+          "Web",
+          "Twitter",
+          "Facebook",
+          "Chat",
+          "Forums",
+          "Feedback Widget",
+          "Instagram"
+        ]
+      },
+      "unverified": "Channel integrations, source creation behavior, search filtering and channel-specific fields."
+    },
+    {
+      "id": "zoho-desk-due-date-picker",
+      "observed_states": [
+        "Placeholder",
+        "Picker expanded",
+        "Dismissed unchanged"
+      ],
+      "fixture": {
+        "value": null,
+        "month": "October 2026",
+        "hour": "12",
+        "minute": "00",
+        "period": "PM",
+        "actions": [
+          "Set",
+          "Clear"
+        ]
+      },
+      "unverified": "Date selection, Set/Clear effects, timezone conversion, invalid or past-date rules and deadline persistence."
+    },
+    {
+      "id": "zoho-desk-attachment-upload",
+      "observed_states": [
+        "Empty upload surface"
+      ],
+      "fixture": {
+        "files": [],
+        "displayedMaxSize": "40 MB",
+        "upload": "guarded"
+      },
+      "unverified": "Allowed types, enforcement of the displayed size limit, multiple upload behavior, progress, failure and removal."
+    },
+    {
+      "id": "zoho-desk-contact-context-empty",
+      "observed_states": [
+        "No contact chosen",
+        "Selector overlay open"
+      ],
+      "fixture": {
+        "contact": null,
+        "message": "No Contact chosen",
+        "action": "Choose Contact"
+      },
+      "unverified": "Populated related details, contact creation, switching contact and dependent field updates."
+    },
+    {
+      "id": "zoho-desk-contact-picker",
+      "observed_states": [
+        "Populated selector",
+        "Closed without selection"
+      ],
+      "fixture": {
+        "query": "",
+        "contacts": [
+          {
+            "name": "Taylor Reed",
+            "company": "Northwind Demo",
+            "email": "taylor@example.test",
+            "website": "https://example.test"
+          }
+        ],
+        "selected": null,
+        "alphabet": "ALL ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      },
+      "unverified": "Search results, alphabetical navigation, no-result state, keyboard focus trap and selection effects."
+    },
+    {
+      "id": "zoho-desk-form-action-footer",
+      "observed_states": [
+        "Pristine footer",
+        "Cancelled to list"
+      ],
+      "fixture": {
+        "primary": "Submit",
+        "secondary": "Cancel",
+        "submitBehavior": "blocked locally",
+        "dirty": false
+      },
+      "unverified": "Submission, required-field errors, dirty-form confirmation and pending/disabled submit states."
+    },
+    {
+      "id": "zoho-desk-ticket-detail-workspace",
+      "observed_states": [
+        "Conversation detail",
+        "Attachment tab empty",
+        "Returned to list"
+      ],
+      "fixture": {
+        "ticketId": "#DEMO-1042",
+        "subject": "Demo delivery question",
+        "contact": "Taylor Reed",
+        "body": "Fictional request used only to demonstrate the conversation layout.",
+        "status": "Open"
+      },
+      "unverified": "Reply composer, macros, remote assistance, close-ticket workflow and multi-ticket navigation."
+    },
+    {
+      "id": "zoho-desk-ticket-properties-panel",
+      "observed_states": [
+        "Pristine grouped properties",
+        "Disabled Save and Cancel"
+      ],
+      "fixture": {
+        "contact": "Taylor Reed",
+        "owner": "Alex Morgan",
+        "status": "Open",
+        "priority": "-None-",
+        "tags": [],
+        "dirty": false
+      },
+      "unverified": "Field editing, validation, immediate-save behavior, permissions and persistence."
+    },
+    {
+      "id": "zoho-desk-ticket-detail-tabs",
+      "observed_states": [
+        "Conversation active",
+        "Attachment active"
+      ],
+      "fixture": {
+        "tabs": [
+          "1 Conversation",
+          "Resolution",
+          "Time Entry",
+          "Attachment"
+        ],
+        "selected": "Attachment"
+      },
+      "unverified": "Resolution, time entry, more tabs, keyboard tab navigation and tab state persistence."
+    },
+    {
+      "id": "zoho-desk-reply-action-menu",
+      "observed_states": [
+        "Reply All default",
+        "Options expanded"
+      ],
+      "fixture": {
+        "default": "Reply All",
+        "actions": [
+          "Reply All",
+          "Reply",
+          "Forward"
+        ],
+        "communication": "guarded"
+      },
+      "unverified": "Recipient handling, draft autosave, send validation, forwarding and email delivery."
+    },
+    {
+      "id": "zoho-desk-ticket-action-menu",
+      "observed_states": [
+        "Closed",
+        "Expanded"
+      ],
+      "fixture": {
+        "actions": [
+          "Edit",
+          "Follow",
+          "Mark as Unread",
+          "Mark Spam",
+          "Delete",
+          "Clone"
+        ],
+        "execution": "guarded"
+      },
+      "unverified": "Action dialogs, confirmation, permission checks, deletion recovery, cloning and persistence."
+    },
+    {
+      "id": "zoho-desk-ticket-attachment-empty",
+      "observed_states": [
+        "Loading transiently",
+        "Empty attachment subview"
+      ],
+      "fixture": {
+        "files": [],
+        "message": "No Attachments available",
+        "actions": [
+          "Attach From Cloud",
+          "Browse Files"
+        ],
+        "upload": "guarded"
+      },
+      "unverified": "Cloud connection, native file chooser, uploads, validation, progress, removal and download behavior."
+    }
+  ]
+}

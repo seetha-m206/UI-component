@@ -1,0 +1,434 @@
+.actionStage {
+  min-height: 390px;
+  padding: 24px;
+  background: #fff;
+}
+
+.actionStage > div {
+  margin-top: 8px;
+}
+
+.helpPanel {
+  min-height: 440px;
+  padding: 20px;
+  background: #fff;
+}
+
+.helpPanel > button {
+  display: block;
+  width: 100%;
+  margin: 7px 0;
+  text-align: left;
+}
+
+.helpSearch {
+  display: grid;
+  gap: 6px;
+  margin: 18px 0;
+}
+
+.helpSearch input {
+  border: 1px solid #cbd6e2;
+  border-radius: 18px;
+  padding: 9px 12px;
+}
+
+.breeze {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  min-height: 500px;
+  background: #fff;
+}
+
+.breezeNav {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  padding: 16px;
+  border-right: 1px solid #dfe3eb;
+}
+
+.breezeNav button {
+  border: 0;
+  text-align: left;
+}
+
+.breezeMain {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  padding: 28px;
+}
+
+.suggestionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.suggestionGrid button {
+  min-height: 62px;
+  text-align: left;
+}
+
+.composer {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.composer textarea {
+  min-height: 84px;
+  resize: vertical;
+  border: 1px solid #cbd6e2;
+  border-radius: 10px;
+  padding: 10px;
+  font: inherit;
+}
+
+.composer span {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.callingGate {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  min-height: 440px;
+  padding: 24px;
+  background: #fff;
+  text-align: center;
+}
+
+.callingGate p {
+  max-width: 460px;
+}
+
+.callIcon {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #eaf0f6;
+  color: #007a8c;
+  font-size: 34px;
+}
+
+.compactHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfe3eb;
+  padding-bottom: 10px;
+}
+
+.compactHeader button:first-child {
+  border: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.savedViewMenu {
+  display: grid;
+  gap: 6px;
+  width: min(340px, 100%);
+  margin: 8px 0;
+  border: 1px solid #cbd6e2;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 10px 24px #33475b24;
+}
+
+.savedViewMenu label {
+  display: grid;
+  gap: 5px;
+}
+
+.savedViewMenu input {
+  border: 1px solid #cbd6e2;
+  border-radius: 18px;
+  padding: 8px 11px;
+}
+
+.savedViewMenu button {
+  border: 0;
+  text-align: left;
+}
+
+.navigationGuide {
+  min-height: 440px;
+  padding: 22px;
+  background: #fff;
+}
+
+.guideActions,
+.panelActions,
+.sortRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.videoPlaceholder {
+  display: grid;
+  place-items: center;
+  min-height: 210px;
+  margin: 18px 0;
+  border-radius: 10px;
+  background: #2e3f50;
+  color: #fff;
+  font-size: 42px;
+}
+
+.tip {
+  border-left: 4px solid #00a4bd;
+  padding: 12px;
+  background: #e5f5f8;
+}
+
+.statusPanel {
+  min-height: 520px;
+  padding: 22px;
+  background: #fff;
+}
+
+.statusPanel > label {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.statusPanel > label input,
+.statusPanel textarea {
+  border: 1px solid #cbd6e2;
+  border-radius: 6px;
+  padding: 9px;
+  font: inherit;
+}
+
+.statusPanel textarea {
+  min-height: 70px;
+}
+
+.statusPanel fieldset {
+  margin: 14px 0;
+  border: 1px solid #cbd6e2;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(9, 30px);
+  gap: 8px;
+}
+
+.colorGrid label {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #7c98b6;
+  border-radius: 50%;
+}
+
+.colorGrid input {
+  margin: 0;
+}
+
+.settingsFrame {
+  min-height: 500px;
+  padding: 22px;
+  background: #fff;
+}
+
+.settingsHead,
+.settingsTabs,
+.settingsFilters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.settingsHead {
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.settingsHead h2 {
+  margin: 0;
+}
+
+.settingsTabs {
+  border-bottom: 1px solid #dfe3eb;
+  margin-bottom: 16px;
+}
+
+.settingsTabs button {
+  border: 0;
+  border-radius: 0;
+}
+
+.settingsTabs button:first-child {
+  border-bottom: 3px solid #00a4bd;
+  color: #007a8c;
+  font-weight: 700;
+}
+
+.settingsFilters input,
+.settingsHead input,
+.settingsGrid input {
+  border: 1px solid #cbd6e2;
+  border-radius: 18px;
+  padding: 8px 11px;
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) 2fr;
+  gap: 18px;
+  margin: 16px 0;
+}
+
+.settingsGrid section {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  border: 1px solid #dfe3eb;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.configCard {
+  display: grid;
+  gap: 7px;
+  min-height: 110px;
+  text-align: left;
+}
+
+.configCard span {
+  color: #516f90;
+}
+
+.settingRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid #dfe3eb;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.settingRow span {
+  display: grid;
+  gap: 4px;
+}
+
+.settingRow small {
+  color: #516f90;
+}
+
+.configTable,
+.stageTable {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(110px, 1fr));
+  gap: 1px;
+  margin: 16px 0;
+  border: 1px solid #dfe3eb;
+  background: #dfe3eb;
+}
+
+.configTable > *,
+.stageTable > * {
+  min-height: 44px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 10px;
+  background: #fff;
+  text-align: left;
+}
+
+.configTable > b,
+.stageTable > b {
+  background: #f5f8fa;
+}
+
+.editorShell {
+  min-width: 780px;
+  min-height: 520px;
+  padding: 14px;
+  background: #fff;
+}
+
+.editorToolbar {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dfe3eb;
+}
+
+.editorToolbar div {
+  display: grid;
+  justify-items: center;
+}
+
+.layoutColumns {
+  display: grid;
+  grid-template-columns: 220px minmax(300px, 1fr) 220px;
+  gap: 12px;
+}
+
+.layoutColumns > * {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.editorCard {
+  display: grid;
+  gap: 7px;
+  border: 1px solid #dfe3eb;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+}
+
+.editorCard h3 {
+  margin: 0;
+}
+
+.editorCard small {
+  color: #516f90;
+}
+
+@media (max-width: 700px) {
+  .settingsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .breeze {
+    grid-template-columns: 160px minmax(420px, 1fr);
+  }
+}

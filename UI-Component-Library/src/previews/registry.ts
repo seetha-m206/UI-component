@@ -1,9 +1,12 @@
+import { salesforcePreviews } from './salesforce-service-shared/registry';
 import { freshservicePreviews } from './freshservice-shared/registry';
 import { zendeskPreviews } from './zendesk/registry';
 import { writesonicPreviews } from './writesonic-shared/registry';
 import { ubersuggestPreviews } from './ubersuggest-shared/registry';
 import { ubersuggestRemainingPreviews } from './ubersuggest-remaining/registry';
 import { otterlyPreviews } from './otterly/registry';
+import { hubspotPreviews } from './hubspot-shared/registry';
+import { zohoDeskPreviews } from './zoho-desk-shared/registry';
 import { ToggleRadioSwitch } from './toggle-radio-switch/ToggleRadioSwitch';
 import { YesNoToggleField } from './yes-no-toggle-field/YesNoToggleField';
 import {
@@ -1333,6 +1336,8 @@ export const previewRegistry: PreviewRegistry = {
   ...zendeskPreviews,
   ...writesonicPreviews,
   ...otterlyPreviews,
+  ...hubspotPreviews,
+  ...zohoDeskPreviews,
   ...ubersuggestPreviews,
   ...ubersuggestRemainingPreviews,
   'yes-no-toggle-field': {
@@ -3838,3 +3843,6 @@ export const previewRegistry: PreviewRegistry = {
     ],
   },
 };
+
+// Salesforce-only addition. Preserve all pre-existing registry entries.
+Object.assign(previewRegistry, salesforcePreviews);

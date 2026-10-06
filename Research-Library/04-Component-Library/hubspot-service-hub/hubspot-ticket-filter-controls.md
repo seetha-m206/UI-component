@@ -2,7 +2,7 @@
 component: "HubSpot Ticket Filter Controls"
 ui_category: "Search and Filtering > Filter Panel"
 source_product: "HubSpot Service Hub"
-last_verified: "2026-10-05"
+last_verified: "2026-10-06"
 evidence_state: "source_reviewed"
 ---
 
@@ -20,7 +20,7 @@ evidence_state: "source_reviewed"
 
 - **OBSERVED:** Advanced filters opened a drawer headed All filters. It included “Filter by associated object”, an Add filter action, an AND separator, Advanced filters and Group 1.
 - **OBSERVED:** My open tickets showed the rule “Ticket status is none of All closed”, plus actions to add an AND filter or an OR filter group.
-- **OBSERVED:** Unassigned tickets displayed Filter (1), but its opened advanced-filter drawer showed no explicit stored rule. The system-view condition was therefore not inferred.
+- **OBSERVED:** Unassigned tickets displayed Filter (1). Its advanced-filter drawer showed no explicit stored rule, while the Ticket owner quick-filter disclosure directly showed the value Unassigned with operator “is unknown”.
 - **OBSERVED:** Priority opened operator “is any of” and a searchable value picker with Low, Medium, High and Urgent, each with a short description.
 - **OBSERVED:** Create date exposed operators is, is equal to, is before, is after, is between, is more than, is less than, is known and is unknown.
 - **OBSERVED:** The pipeline selector offered All Pipelines and Support Pipeline, plus a Manage pipelines link that opens a new window.
@@ -30,6 +30,7 @@ evidence_state: "source_reviewed"
 | Element | Safe action | Observed result or boundary |
 | --- | --- | --- |
 | Advanced filters | Activated | Opened the filter drawer. No rule was added, removed or changed. |
+| Ticket owner on Unassigned tickets | Activated | Opened the quick filter and directly exposed value Unassigned with operator “is unknown”. No value was changed. |
 | Priority | Keyboard Space | Opened its operator and value controls. No priority was selected. |
 | Create date operator | Keyboard Space | Opened the operator list. No operator or date was selected. |
 | Support Pipeline | Keyboard Space | Opened All Pipelines, Support Pipeline and Manage pipelines. No selection changed. |
@@ -52,7 +53,7 @@ evidence_state: "source_reviewed"
 
 ## AI Context
 
-- **FACT:** Labels, operators and options were observed without applying a new value.
+- **FACT:** Labels, operators and options were observed without applying a new value. The Unassigned owner condition is direct quick-filter evidence rather than an inference from the view name.
 - **NOT OBSERVED:** The results produced by these filters remain untested.
 
 ## Needs Verification

@@ -4,7 +4,7 @@ Observed October 1 and October 5, 2026 in the authenticated Freshservice Enterpr
 
 ## Coverage
 
-65 canonical records and mirrored UI records cover onboarding, global navigation, the empty ticket collection, an unsubmitted incident form, the sample dashboard boundary, knowledge-base empty views, report and folder catalogues, administration search and workflow inventory, article authoring, subflow creation, workflow logic and execution logs, curated report detail, filters and export settings, plus Problem, Change, Release, Task and Alert screens and controls. Interactive previews use local state and explicitly labelled fixtures.
+69 canonical records and mirrored UI records cover onboarding, global navigation, the empty ticket collection, an unsubmitted incident form, the sample dashboard boundary, knowledge-base empty views, report and folder catalogues, administration search and workflow inventory, article authoring, subflow creation, workflow logic and execution logs, curated report detail, filters and export settings, plus Problem, Change, Release, Task and Alert screens and controls. Interactive previews use local state and explicitly labelled fixtures.
 
 - [[freshservice-application-shell]] — Application Shell
 - [[freshservice-sidebar-navigation]] — Sidebar Navigation
@@ -60,7 +60,7 @@ Observed October 1 and October 5, 2026 in the authenticated Freshservice Enterpr
 
 ## Admin and Knowledge continuation
 
-Fifteen additional bounded records cover roles and role creation, business hours and the unsubmitted calendar form, SLA policies, field management, the Knowledge review rule, empty category and folder states, article filters, Trash tabs, recommended topics and the import dialog. Native screenshots and DOM receipts remain private. Fictional local preview screenshots are linked from each record. No provider setting, role, calendar, article or filter was saved or applied.
+Nineteen additional bounded records cover agent and group directories, roles and role creation, business hours and the unsubmitted calendar form, SLA policies, field management, email notifications, support portals, the Knowledge review rule, empty category and folder states, article filters, Trash tabs, recommended topics and the import dialog. Native screenshots and DOM receipts remain private. Fictional local preview screenshots are linked from each record. No provider setting, role, calendar, portal, notification, article or filter was saved or applied.
 
 - [[freshservice-admin-roles]] — Admin Roles Directory
 - [[freshservice-admin-role-menu]] — Admin New Role Menu
@@ -71,6 +71,10 @@ Fifteen additional bounded records cover roles and role creation, business hours
 - [[freshservice-admin-field-manager]] — Admin Field Manager
 - [[freshservice-admin-ticket-fields]] — Admin Ticket Field Editor
 - [[freshservice-admin-knowledge-settings]] — Admin Knowledge Review Setting
+- [[freshservice-admin-agents]] — Admin Agents Directory
+- [[freshservice-admin-agent-groups]] — Admin Agent Groups
+- [[freshservice-admin-email-notifications]] — Admin Email Notifications
+- [[freshservice-admin-portals]] — Admin Support Portals
 - [[freshservice-knowledge-category]] — Knowledge Category Empty View
 - [[freshservice-knowledge-category-filter]] — Knowledge Category Filter
 - [[freshservice-knowledge-folder]] — Knowledge Drafts Folder
@@ -80,7 +84,7 @@ Fifteen additional bounded records cover roles and role creation, business hours
 
 ## Evidence boundary
 
-All 65 bounded records use the Complete catalogue status. This status means the captured component record is documented. Untested provider outcomes remain labelled NOT OBSERVED in each record. Provider screenshots and local fixture screenshots are separate and hash-indexed in UI-Component-Library/public/research/freshservice/capture-manifest.json. Native full-page screenshots can include blank overflow. DOM receipts supplement clipped regions. Private workflow inventory receipts contain an account member name and remain in Internal/scratch-2026-10/freshservice. The local author is fictional.
+All 69 bounded records use the Complete catalogue status. This status means the captured component record is documented. Untested provider outcomes remain labelled NOT OBSERVED in each record. Provider screenshots and local fixture screenshots are separate and hash-indexed in UI-Component-Library/public/research/freshservice/capture-manifest.json. Native full-page screenshots can include blank overflow. DOM receipts supplement clipped regions. Private workflow inventory receipts contain account-specific data and remain in Internal/scratch-2026-10/freshservice. Public reconstructions use fictional people and groups.
 
 No provider data was created, imported, published or uploaded. No workflow was activated. No setting was saved. No article, subflow, email or report export was submitted. The Sample Dashboard was an image, not exercised metric widgets. Report names were curated definitions, not verified report output. Local sort and form behavior do not establish provider contracts.
 
