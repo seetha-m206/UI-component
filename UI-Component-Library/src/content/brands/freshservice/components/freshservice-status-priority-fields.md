@@ -4,7 +4,7 @@ ui_category: "Forms > Categorical Selectors"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "Incident classifications with visible defaults and inspectable option lists."
 ---
 

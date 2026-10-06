@@ -4,7 +4,7 @@ ui_category: "Feedback > Empty State"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A template catalogue with guidance and repeated entry points in its empty state."
 ---
 

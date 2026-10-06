@@ -4,7 +4,7 @@ ui_category: "Application Layout > Workspace Shell"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A workflow inventory with module navigation, inactive rows and a reusable-subflow empty state."
 ---
 

@@ -4,7 +4,7 @@ ui_category: "Data Display > Ticket Context Panel"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A context rail switches between customer essentials and suggested knowledge beside the conversation."
 ---
 

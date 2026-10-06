@@ -1,0 +1,320 @@
+.zd-screen {
+  font:
+    13px/1.45 system-ui,
+    -apple-system,
+    sans-serif;
+  color: #2f3941;
+  background: #fff;
+  border: 1px solid #d8dcde;
+  border-radius: 8px;
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+  container-type: inline-size;
+}
+.zd-screen * {
+  box-sizing: border-box;
+}
+.zd-screen-label {
+  background: #eef3f4;
+  color: #53636c;
+  padding: 6px 16px;
+  font-size: 11px;
+}
+.zd-screen-top {
+  height: 56px;
+  border-bottom: 1px solid #d8dcde;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 0 18px;
+}
+.zd-screen-top strong {
+  font-size: 17px;
+}
+.zd-screen-spacer {
+  flex: 1;
+}
+.zd-screen button {
+  font: inherit;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #c4c9cc;
+  border-radius: 4px;
+  min-height: 32px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.zd-screen button:hover {
+  background: #f3f5f6;
+}
+.zd-screen button[aria-pressed='true'] {
+  background: #e3f1fa;
+  border-color: #4793bf;
+}
+.zd-screen button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.zd-screen input {
+  font: inherit;
+  border: 1px solid #c4c9cc;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  min-width: 0;
+}
+.zd-screen :focus-visible {
+  outline: 2px solid #1f73b7;
+  outline-offset: 2px;
+}
+.zd-screen-layout {
+  display: grid;
+  grid-template-columns: 48px 230px minmax(0, 1fr);
+  min-height: 590px;
+}
+.zd-screen-rail {
+  border-right: 1px solid #d8dcde;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px 0;
+  font-size: 20px;
+  background: #fafbfb;
+}
+.zd-screen-sidebar {
+  border-right: 1px solid #d8dcde;
+  padding: 22px 14px;
+  min-width: 0;
+}
+.zd-screen-sidebar > strong {
+  font-size: 17px;
+}
+.zd-screen-sidebar h4 {
+  font-size: 12px;
+  color: #687780;
+  margin: 28px 0 8px;
+}
+.zd-screen-sidebar button {
+  border: 0;
+  width: 100%;
+  text-align: left;
+  margin: 2px 0;
+}
+.zd-screen-sidebar p {
+  color: #69777e;
+}
+.zd-screen-main {
+  padding: 28px;
+  min-width: 0;
+  overflow: auto;
+}
+.zd-screen h2 {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+.zd-screen h3 {
+  font-size: 15px;
+  margin: 16px 0 10px;
+}
+.zd-screen-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.zd-screen-heading p {
+  margin: 0;
+}
+.zd-screen-actions {
+  display: flex;
+  gap: 8px;
+  margin: 14px 0;
+  flex-wrap: wrap;
+}
+.zd-screen-search {
+  display: block;
+  max-width: 480px;
+  font-weight: 600;
+}
+.zd-screen-search input {
+  display: block;
+  margin-top: 6px;
+  font-weight: 400;
+}
+.zd-screen-table {
+  overflow: auto;
+  border: 1px solid #d8dcde;
+  border-radius: 4px;
+}
+.zd-screen-table [role='row'] {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(90px, 1fr));
+  min-width: 760px;
+  border-bottom: 1px solid #e1e4e5;
+}
+.zd-screen-table [role='row']:last-child {
+  border-bottom: 0;
+}
+.zd-screen-table [role='row'] > span {
+  padding: 12px;
+}
+.zd-screen-tablehead {
+  font-weight: 600;
+  background: #f6f7f8;
+}
+.zd-screen-main:has([aria-label='Fictional team members']) .zd-screen-table [role='row'] {
+  grid-template-columns: repeat(5, minmax(110px, 1fr));
+  min-width: 620px;
+}
+.zd-screen-admin-table [role='row'] {
+  grid-template-columns: repeat(var(--zd-columns), minmax(110px, 1fr));
+  min-width: 0;
+}
+.zd-screen-empty {
+  text-align: center;
+  margin: 90px auto;
+  color: #59666e;
+}
+.zd-screen-empty > span {
+  font-size: 46px;
+}
+.zd-screen-event,
+.zd-screen-card,
+.zd-screen-setting,
+.zd-screen-theme {
+  border: 1px solid #d8dcde;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 10px 0;
+}
+.zd-screen-event {
+  display: grid;
+  gap: 5px;
+  max-width: 660px;
+}
+.zd-screen-event button {
+  justify-self: start;
+}
+.zd-screen-subtitle,
+.zd-screen-event span {
+  color: #687780;
+}
+.zd-screen-theme {
+  width: min(340px, 100%);
+}
+.zd-screen-theme-art {
+  height: 120px;
+  background: #e7ecee;
+  padding: 22px;
+}
+.zd-screen-theme-art div {
+  height: 12px;
+  background: #fff;
+  margin: 10px;
+  width: 70%;
+}
+.zd-screen-theme-art div:nth-child(2) {
+  width: 46%;
+}
+.zd-screen-setting {
+  max-width: 700px;
+}
+.zd-screen-setting p {
+  color: #687780;
+}
+.zd-screen-notice {
+  padding: 10px;
+  background: #eef7fa;
+  border: 1px solid #c7e4f0;
+  border-radius: 4px;
+}
+.zd-screen-pop {
+  border: 1px solid #d8dcde;
+  background: white;
+  box-shadow: 0 5px 20px #0002;
+  position: absolute;
+  right: 24px;
+  padding: 8px;
+}
+.zd-screen-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
+}
+.zd-screen-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0 !important;
+  background: #1a2026a8 !important;
+  border-radius: 0 !important;
+}
+.zd-screen-drawer {
+  position: relative;
+  background: white;
+  width: min(370px, 90%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: -4px 0 15px #0002;
+}
+.zd-screen-drawer label {
+  display: block;
+}
+.zd-screen-drawer label input {
+  display: block;
+  margin-top: 5px;
+}
+.zd-screen-drawer footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.zd-screen-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #d8dcde;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+.zd-screen-column button {
+  border: 0;
+}
+@container (max-width:700px) {
+  .zd-screen-layout {
+    grid-template-columns: 42px 170px minmax(0, 1fr);
+  }
+  .zd-screen-main {
+    padding: 16px;
+  }
+  .zd-screen-sidebar {
+    padding: 16px 8px;
+  }
+}
+@container (max-width:480px) {
+  .zd-screen-layout {
+    grid-template-columns: 38px minmax(0, 1fr);
+  }
+  .zd-screen-sidebar {
+    grid-column: 2;
+    border-right: 0;
+    border-bottom: 1px solid #d8dcde;
+    max-height: 150px;
+    overflow: auto;
+  }
+  .zd-screen-main {
+    grid-column: 2;
+  }
+  .zd-screen-top {
+    gap: 8px;
+    padding: 0 8px;
+  }
+}

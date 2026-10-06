@@ -4,7 +4,7 @@ ui_category: "Enterprise Tables > Column Visibility"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A checkbox menu lists optional metadata columns for the knowledge table."
 ---
 

@@ -4,7 +4,7 @@ ui_category: "Application Layout > App Shell"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A service desk shell combining the product rail, trial strip, global header and onboarding workspace."
 ---
 

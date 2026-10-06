@@ -4,7 +4,7 @@ ui_category: "Navigation > Personal Work Menu"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A small calendar disclosure reached from the global utility bar."
 ---
 

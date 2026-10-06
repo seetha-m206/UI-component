@@ -4,7 +4,7 @@ ui_category: "Actions > Split Submission Control"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A primary submission action is paired with a separate status-choice menu."
 ---
 

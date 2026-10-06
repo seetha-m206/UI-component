@@ -4,7 +4,7 @@ ui_category: "Search and Filtering > Status Filter"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A count-bearing multi-select status menu narrows the personal ticket queue."
 ---
 

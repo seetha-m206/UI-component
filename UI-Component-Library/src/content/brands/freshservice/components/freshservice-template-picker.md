@@ -4,7 +4,7 @@ ui_category: "Forms > Template Selector"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A form-template disclosure that explains the absence of templates."
 ---
 

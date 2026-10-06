@@ -16,7 +16,7 @@ export const fixtures: PreviewFixture<Omit<MoreProps, 'variant'>>[] = [
 ];
 export const propsSchema: PropSchemaField[] = [
   {
-    name: 'initialView',
+    name: 'initialNotice',
     type: 'string',
     required: false,
     description:

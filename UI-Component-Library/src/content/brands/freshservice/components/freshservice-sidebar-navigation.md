@@ -4,7 +4,7 @@ ui_category: "Application Layout > Primary Navigation"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A compact product rail that reveals text labels and nested ticket navigation."
 ---
 

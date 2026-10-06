@@ -4,7 +4,7 @@ ui_category: "Search and Filtering > Filter Drawer"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A side drawer collects ticket-view constraints before applying them."
 ---
 

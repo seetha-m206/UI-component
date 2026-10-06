@@ -3,6 +3,12 @@ import type { PreviewConfig, PreviewRegistry, PropSchemaField } from '../types';
 import { sourceRegistry } from '../sourceRegistry';
 import { ZendeskPreview, type ZendeskProps } from './Zendesk';
 import { catalogue } from './catalogue';
+import { ZendeskDeepPreview, type DeepProps } from './ZendeskDeep';
+import { deepCatalogue } from './deepCatalogue';
+import { ZendeskScreensPreview, type ScreenProps } from './ZendeskScreens';
+import { screenCatalogue } from './screenCatalogue';
+import screenCssSource from './zendesk-screens.css?raw';
+import deepCssSource from './zendesk-deep.css?raw';
 
 const config: PreviewConfig = {
   viewports: [
@@ -47,7 +53,7 @@ const propsSchema: PropSchemaField[] = [
       'Disable controls locally. This is not a provider permission or disabled-state claim.',
   },
 ];
-export const zendeskPreviews: PreviewRegistry = Object.fromEntries(
+const originalPreviews: PreviewRegistry = Object.fromEntries(
   catalogue.map((item) => [
     item.id,
     {
@@ -64,10 +70,56 @@ export const zendeskPreviews: PreviewRegistry = Object.fromEntries(
     },
   ])
 );
-for (const item of catalogue) {
+export const zendeskPreviews: PreviewRegistry = {
+  ...originalPreviews,
+  ...Object.fromEntries(
+    screenCatalogue.map((item) => [
+      item.id,
+      {
+        type: 'reconstructed' as const,
+        Component: (props: ScreenProps) => createElement(ZendeskScreensPreview, { ...props, kind: item.kind }),
+        label: 'Authenticated screen reviewed · fictional local preview',
+        evidence: '2026-10-05 dated screen audit. Provider navigation and visible structure are observed. Local data and interactions are fictional. No provider save or persistence outcome claimed.',
+        runtimeVerified: true,
+        fixtures: item.fixtures,
+        config,
+        propsSchema,
+      },
+    ])
+  ),
+  ...Object.fromEntries(
+    deepCatalogue.map((item) => [
+      item.id,
+      {
+        type: 'reconstructed' as const,
+        Component: (props: DeepProps) =>
+          createElement(ZendeskDeepPreview, { ...props, kind: item.kind }),
+        label: 'Authenticated screen verified · fictional local preview',
+        evidence:
+          '2026-10-05 authenticated Zendesk screen and action inspection. Local preview interactions are separately verified. No provider save, submit, or persistence outcome claimed.',
+        runtimeVerified: true,
+        fixtures: item.fixtures,
+        config,
+        propsSchema,
+      },
+    ])
+  ),
+};
+for (const item of [...catalogue, ...deepCatalogue, ...screenCatalogue]) {
   sourceRegistry[item.id] = {
     files: (sourceRegistry.zendesk?.files ?? [])
       .filter((f) => f.fileName !== 'registry.ts')
       .map((f) => ({ ...f, fileName: '../zendesk/' + f.fileName })),
   };
+}
+
+for (const item of deepCatalogue) {
+  sourceRegistry[item.id].files.push({
+    fileName: '../zendesk/zendesk-deep.css',
+    code: deepCssSource,
+  });
+}
+
+for (const item of screenCatalogue) {
+  sourceRegistry[item.id].files.push({ fileName: '../zendesk/zendesk-screens.css', code: screenCssSource });
 }

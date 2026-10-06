@@ -4,7 +4,7 @@ ui_category: "Application Layout > Application Shell"
 source_product: "Zendesk"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "Two-level agent navigation keeps the workspace header, icon rail and secondary work list around the current screen."
 ---
 

@@ -4,7 +4,7 @@ ui_category: "Feedback > First-Run Empty State"
 source_product: "Freshservice"
 last_verified: "2026-10-01"
 evidence_state: "source_reviewed"
-status: "partial"
+status: "complete"
 summary: "A first-ticket screen with email, self-service and manual entry options."
 ---
 

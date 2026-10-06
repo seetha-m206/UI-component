@@ -1,0 +1,211 @@
+.zd-deep {
+  font:
+    13px/1.45 system-ui,
+    -apple-system,
+    sans-serif;
+  color: #2f3941;
+  background: #fff;
+  border: 1px solid #d8dcde;
+  border-radius: 8px;
+  min-height: 420px;
+  position: relative;
+  overflow: hidden;
+  container-type: inline-size;
+}
+.zd-deep * {
+  box-sizing: border-box;
+}
+.zd-deep fieldset {
+  border: 0;
+  padding: 24px;
+  min-width: 0;
+}
+.zd-deep button,
+.zd-deep input,
+.zd-deep select,
+.zd-deep textarea {
+  font: inherit;
+}
+.zd-deep button {
+  background: #fff;
+  border: 1px solid #c4c9cc;
+  border-radius: 4px;
+  min-height: 32px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #2f3941;
+}
+.zd-deep button:hover {
+  background: #f2f5f6;
+}
+.zd-deep button[aria-pressed='true'] {
+  background: #e3f1fa;
+  border-color: #3b8fc8;
+}
+.zd-deep button:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+.zd-deep input,
+.zd-deep select,
+.zd-deep textarea {
+  border: 1px solid #bfc6ca;
+  border-radius: 4px;
+  min-height: 32px;
+  padding: 6px 8px;
+  background: #fff;
+  color: #2f3941;
+}
+.zd-deep textarea {
+  min-height: 82px;
+  resize: vertical;
+}
+.zd-deep label {
+  display: grid;
+  gap: 5px;
+  margin: 10px 0;
+}
+.zd-deep h2 {
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+.zd-deep h3 {
+  font-size: 15px;
+  margin: 16px 0 6px;
+}
+.zd-deep p {
+  margin: 10px 0;
+}
+.zd-deep :focus-visible {
+  outline: 2px solid #1f73b7;
+  outline-offset: 2px;
+}
+.zd-flag {
+  padding: 7px 14px;
+  background: #f3f5f6;
+  border-bottom: 1px solid #d8dcde;
+  color: #5d6970;
+  font-size: 11px;
+}
+.zd-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.zd-between {
+  justify-content: space-between;
+}
+.zd-muted,
+.zd-breadcrumb {
+  color: #68737d;
+}
+.zd-breadcrumb {
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.zd-dialog,
+.zd-card,
+.zd-drawer,
+.zd-modal {
+  background: #fff;
+  border: 1px solid #d8dcde;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 10px 0;
+  box-shadow: 0 4px 15px #29323912;
+}
+.zd-dialog {
+  max-width: 720px;
+  margin-inline: auto;
+}
+.zd-dialog input {
+  flex: 1;
+}
+.zd-drawer {
+  max-width: 420px;
+}
+.zd-modal {
+  position: absolute;
+  z-index: 4;
+  top: 18%;
+  left: 20%;
+  right: 20%;
+  box-shadow:
+    0 0 0 999px #15202555,
+    0 12px 32px #15202544;
+}
+.zd-menu {
+  border: 1px solid #d8dcde;
+  border-radius: 5px;
+  padding: 5px;
+  display: grid;
+  gap: 2px;
+  max-width: 280px;
+  box-shadow: 0 5px 16px #29323920;
+  background: #fff;
+  margin: 8px 0;
+}
+.zd-menu button {
+  text-align: left;
+  border: 0;
+}
+.zd-chip {
+  display: inline-flex;
+  background: #e6eff3;
+  border-radius: 20px;
+  padding: 4px 9px;
+}
+.zd-empty {
+  text-align: center;
+  color: #68737d;
+  padding: 50px 16px;
+  border: 1px dashed #d8dcde;
+  border-radius: 6px;
+  margin: 16px 0;
+}
+.zd-rail .zd-empty {
+  text-align: left;
+}
+.zd-form {
+  max-width: 680px;
+}
+.zd-table {
+  border: 1px solid #d8dcde;
+  border-radius: 5px;
+  overflow: auto;
+}
+.zd-table-head,
+.zd-table-row {
+  display: grid;
+  grid-template-columns: minmax(160px, 2fr) repeat(4, minmax(110px, 1fr)) 40px;
+  min-width: 770px;
+  padding: 10px;
+  margin: 0;
+  border-bottom: 1px solid #e5e8ea;
+}
+.zd-table-head {
+  background: #f6f7f8;
+  font-weight: 650;
+}
+.zd-notice {
+  padding: 10px 16px;
+  background: #f1f8fb;
+  border-top: 1px solid #9fc8db;
+}
+@container (max-width:650px) {
+  .zd-deep fieldset {
+    padding: 14px;
+  }
+  .zd-modal {
+    left: 5%;
+    right: 5%;
+  }
+  .zd-row {
+    align-items: stretch;
+  }
+  .zd-row button {
+    white-space: normal;
+  }
+}
