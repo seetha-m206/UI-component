@@ -65,9 +65,14 @@ export function Header({
           <PanelLeft size={16} aria-hidden="true" />
         )}
       </button>
-      <NavLink to="/" className={styles.identity}>
-        <img src="/favicon.svg" width={18} height={18} alt="" className={styles.identityLogo} />
-        <div className={styles.identityName}>UI Library</div>
+      {/* aria-label keeps the link's accessible name stable even while the
+          visible wordmark is collapsed away in icon-only (sidebar-closed)
+          mode — the name must not disappear from the a11y tree. */}
+      <NavLink to="/" className={styles.identity} aria-label="UI Library">
+        <img src="/favicon.svg" width={20} height={20} alt="" className={styles.identityLogo} />
+        <div className={styles.identityName} data-open={sidebarOpen}>
+          UI Library
+        </div>
       </NavLink>
 
       <div className={styles.searchWrap}>

@@ -57,12 +57,25 @@
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   color: var(--shell-text);
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 120px;
+  transition: max-width 0.25s ease, opacity 0.2s ease, margin 0.25s ease;
+}
+
+/* Icon-only brand while the sidebar is collapsed — the wordmark slides
+ * away with the sidebar, leaving just the logo badge. The parent link's
+ * aria-label keeps its accessible name. */
+.identityName[data-open='false'] {
+  max-width: 0;
+  opacity: 0;
+  margin-left: calc(-1 * var(--spacing-2));
 }
 
 .searchWrap {
   position: relative;
   flex: 1;
-  max-width: 420px;
+  max-width: 640px;
   margin-left: var(--spacing-4);
 }
 
