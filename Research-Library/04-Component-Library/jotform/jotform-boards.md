@@ -2,7 +2,7 @@
 component: "Jotform Boards (Kanban task/project board; dual identity as generic board vs. workflow-run tracker)"
 ui_category: "Application Layout > Boards (Kanban Task Board)"
 source_product: "JotForm"
-last_verified: "2026-10-05"
+last_verified: "2026-10-06"
 evidence_state: "source_reviewed"
 ---
 
@@ -12,7 +12,7 @@ Product → Screen → Component → Action → Behavior → States → Rules �
 
 > **Pass ID: JF10 (4 of 4, filed alongside [[jotform-workflows-workflow-builder]] and [[jotform-ai-agents]]).** No specific cross-link target exists for this record — no sibling product in this library currently documents a Kanban/task-board equivalent, so Competitor Comparisons is intentionally empty.
 
-This record resolves part of the JF10 brief: a broad identification pass on Jotform Boards, one of four never-previously-opened products alongside Apps, Workflows, and AI Agents — see [[jotform-workflows-workflow-builder]], [[jotform-ai-agents]] (filed alongside this record) and [[jotform-apps-app-builder]] (referenced throughout the sibling records but **not yet filed**). This record also directly resolves the brief's explicit, specific sub-test for Boards: does opening it from "+ CREATE" vs. from the shared mode-switcher produce the same screen?
+This record resolves part of the JF10 brief: a broad identification pass on Jotform Boards, one of four never-previously-opened products alongside Apps, Workflows, and AI Agents — see [[jotform-workflows-workflow-builder]], [[jotform-ai-agents]] (filed alongside this record) and [[jotform-apps-app-builder]] (now filed 2026-10-06, closing out JF10). This record also directly resolves the brief's explicit, specific sub-test for Boards: does opening it from "+ CREATE" vs. from the shared mode-switcher produce the same screen?
 
 ## Location
 
@@ -43,7 +43,7 @@ Reached two ways, both tested live and directly compared: (1) the dashboard's "+
 
 These are two structurally different board instances, confirmed by distinct board IDs, distinct titles, distinct default column sets, and the presence/absence of a run-count metric. **The answer to the brief's question is no — opening Boards via the mode-switcher from within a workflow does not open the same generic board a user gets from "+ CREATE"; it opens (or creates) a board auto-scoped to monitor that specific workflow's runs.** This also means "Boards," as a mode-switcher destination, is context-sensitive rather than always routing to one canonical "my boards" list the way Tables or Inbox appear to. FACT
 
-**4. Coupling to existing products: dual-natured — a standalone generic product when self-initiated, but tightly and automatically coupled to Workflows when reached from inside one.** FACT As a generic Kanban board (the "+ CREATE" path), Boards functions as a standalone project-management product with its own identity, matching the "Import board" option's framing as a destination for migrating work from competitor tools. But the "Select form" starting option and the Workflow-triggered "Workflow Board" auto-provisioning both demonstrate the same broader pattern seen across this JF10 pass: Boards readily absorbs or mirrors other products' data (form submissions as cards; a workflow's run history as a tracked board) rather than existing in total isolation. This is a different kind of coupling than Apps' embedded-Tables-tab (per the still-unfiled Apps record) or Workflows' trigger/action step types ([[jotform-workflows-workflow-builder]]) — Boards is coupled by being auto-generated as a side effect of using another product, not by embedding that product's UI inside itself. FACT
+**4. Coupling to existing products: dual-natured — a standalone generic product when self-initiated, but tightly and automatically coupled to Workflows when reached from inside one.** FACT As a generic Kanban board (the "+ CREATE" path), Boards functions as a standalone project-management product with its own identity, matching the "Import board" option's framing as a destination for migrating work from competitor tools. But the "Select form" starting option and the Workflow-triggered "Workflow Board" auto-provisioning both demonstrate the same broader pattern seen across this JF10 pass: Boards readily absorbs or mirrors other products' data (form submissions as cards; a workflow's run history as a tracked board) rather than existing in total isolation. This is a different kind of coupling than Apps' embedded-Tables-tab (confirmed in [[jotform-apps-app-builder]], conditional on a Form block being attached) or Workflows' trigger/action step types ([[jotform-workflows-workflow-builder]]) — Boards is coupled by being auto-generated as a side effect of using another product, not by embedding that product's UI inside itself. FACT
 
 **5. Pricing/plan gating: no lock icons or paywall banners encountered in either board's toolbar, columns, or Groups/options menus on this account.** FACT, with the same free-plan caveat noted in the sibling JF10 records. Both the generic "Untitled Board" and the auto-scoped "Workflow Board" rendered fully, with Share, Help, Filter, Groups, and column-management controls all available with no visible gating. As with the other three products in this pass, this is an absence-of-evidence finding only — no attempt was made to create a large number of boards, columns, or cards to probe for a free-plan cap. FACT/OBSERVATION
 
@@ -67,7 +67,7 @@ No competitor record exists yet for this product category in this library (see B
 
 ## Best Observed Approach
 
-The auto-scoped "Workflow Board" run-tracker pattern is the standout finding of this record: rather than making a user manually build a Kanban view to monitor a workflow's execution history, JotForm auto-generates a purpose-fit board (single status column, run counter) the moment a workflow-context user opens Boards. RECOMMENDATION — this is a genuinely clever reuse of a generic product (Boards) as an on-demand, zero-configuration monitoring surface for a different product (Workflows), worth flagging as a notable cross-product integration pattern distinct from (and arguably more elegant than) simply embedding one product's UI inside another's, the approach the still-unfiled Apps record describes for its own DATA tab.
+The auto-scoped "Workflow Board" run-tracker pattern is the standout finding of this record: rather than making a user manually build a Kanban view to monitor a workflow's execution history, JotForm auto-generates a purpose-fit board (single status column, run counter) the moment a workflow-context user opens Boards. RECOMMENDATION — this is a genuinely clever reuse of a generic product (Boards) as an on-demand, zero-configuration monitoring surface for a different product (Workflows), worth flagging as a notable cross-product integration pattern distinct from (and arguably more elegant than) simply embedding one product's UI inside another's, the approach [[jotform-apps-app-builder]] confirms for its own DATA tab.
 
 ## Sources
 

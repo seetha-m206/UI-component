@@ -57,12 +57,25 @@
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   color: var(--shell-text);
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 120px;
+  transition: max-width 0.25s ease, opacity 0.2s ease, margin 0.25s ease;
+}
+
+/* Icon-only brand while the sidebar is collapsed — the wordmark slides
+ * away with the sidebar, leaving just the logo badge. The parent link's
+ * aria-label keeps its accessible name. */
+.identityName[data-open='false'] {
+  max-width: 0;
+  opacity: 0;
+  margin-left: calc(-1 * var(--spacing-2));
 }
 
 .searchWrap {
   position: relative;
   flex: 1;
-  max-width: 420px;
+  max-width: 640px;
   margin-left: var(--spacing-4);
 }
 
@@ -105,6 +118,23 @@
   pointer-events: none;
 }
 
+.lastUpdated {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  margin-left: auto;
+  padding: var(--spacing-1) var(--spacing-3);
+  border: 1px solid var(--shell-border);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--shell-sidebar-bg) 70%, transparent);
+  font-size: var(--font-size-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--shell-muted-text);
+  white-space: nowrap;
+  cursor: default;
+}
+
 .themeToggle {
   flex-shrink: 0;
   display: flex;
@@ -113,7 +143,6 @@
   width: 32px;
   height: 32px;
   padding: 0;
-  margin-left: auto;
   border: 1px solid var(--shell-border);
   border-radius: var(--radius-sm);
   background: var(--shell-bg);
@@ -134,5 +163,16 @@
 
   .searchWrap {
     margin-left: var(--spacing-1);
+  }
+
+  /* Keep the slim header usable on phones — the stamp is informational,
+   * not an action, so it's the first thing to go at narrow widths. The
+   * theme toggle inherits the auto margin so it stays right-aligned. */
+  .lastUpdated {
+    display: none;
+  }
+
+  .themeToggle {
+    margin-left: auto;
   }
 }

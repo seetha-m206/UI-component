@@ -85,6 +85,21 @@ describe('Header', () => {
     expect(onToggleSidebar).toHaveBeenCalledTimes(1);
   });
 
+  it('collapses the brand wordmark to icon-only when the sidebar is closed, keeping the link name', () => {
+    renderHeader({ sidebarOpen: false });
+    // The link's accessible name must survive the visual collapse.
+    const link = screen.getByRole('link', { name: 'UI Library' });
+    expect(link).toHaveAttribute('href', '/');
+    // CSS-modules class names are hashed, so assert the collapse via the
+    // data attribute the stylesheet keys off instead.
+    expect(screen.getByText('UI Library')).toHaveAttribute('data-open', 'false');
+  });
+
+  it('shows the full brand wordmark while the sidebar is open', () => {
+    renderHeader({ sidebarOpen: true });
+    expect(screen.getByText('UI Library')).toHaveAttribute('data-open', 'true');
+  });
+
   it('shows the expand label and collapsed aria state when the sidebar is closed', () => {
     renderHeader({ sidebarOpen: false });
     expect(screen.getByRole('button', { name: 'Expand sidebar' })).toHaveAttribute(

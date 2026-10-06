@@ -60,11 +60,13 @@ export function OverviewPage() {
                 <p className={styles.cardSummary}>{entry.frontmatter.summary}</p>
                 <div className={styles.cardFooter}>
                   <span className={styles.cardBrand}>{entry.frontmatter.source_product}</span>
-                  {entry.frontmatter.status !== 'complete' && (
-                    <span className={`pill pill--${entry.frontmatter.status}`}>
-                      {entry.frontmatter.status}
-                    </span>
-                  )}
+                  {/* Research completeness (`status`) still lives in each
+                      record's frontmatter and on its detail page — the
+                      catalogue card surfaces recency instead, which is the
+                      more useful at-a-glance signal when scanning. */}
+                  <span className={styles.cardUpdated}>
+                    Updated {entry.frontmatter.last_verified}
+                  </span>
                 </div>
               </Link>
             ))}
