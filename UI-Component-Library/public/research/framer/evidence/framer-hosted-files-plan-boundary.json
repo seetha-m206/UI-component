@@ -1,0 +1,67 @@
+{
+  "id": "framer-hosted-files-plan-boundary",
+  "title": "Framer Hosted Files Plan Boundary",
+  "kind": "files",
+  "location": "settings:files",
+  "observed_at": "2026-10-07",
+  "node": "m5",
+  "client": "Codex",
+  "source_origin": "Authenticated Framer in-app browser",
+  "capture_type": "Authored sanitized observation excerpts, not raw provider logs",
+  "observations": [
+    "Files heading with well-known file examples robots.txt, security.txt and llms.txt and fixed URL hosting copy.",
+    "Upgrade plan and Learn more actions. No upload interface exposed in this inspected state."
+  ],
+  "fixtures": [
+    {
+      "id": "default",
+      "title": "OBSERVED structure: default",
+      "props": {
+        "kind": "files",
+        "initialState": "default"
+      }
+    },
+    {
+      "id": "information",
+      "title": "RECONSTRUCTION: information",
+      "props": {
+        "kind": "files",
+        "initialState": "information"
+      }
+    },
+    {
+      "id": "disabled",
+      "title": "RECONSTRUCTION: disabled",
+      "props": {
+        "kind": "files",
+        "initialState": "disabled",
+        "disabled": true
+      }
+    }
+  ],
+  "limitations": [
+    "No upload, content validation, file permissions or published URL was exercised.",
+    "Provider screenshots remain session-only. No durable screenshot file or network trace is attached.",
+    "Local JSX, CSS, state changes and test results are reconstruction evidence, not provider implementation."
+  ],
+  "related": "framer-upgrade-information-cta",
+  "action_trace": [
+    {
+      "element": "Screen navigation",
+      "action": "Click",
+      "result": "Inspected helper text and Upgrade/Learn more labels",
+      "evidence": "OBSERVED"
+    },
+    {
+      "element": "Upgrade, Learn more or toolbar control",
+      "action": "Not activated",
+      "result": "Destination and resulting provider state unverified",
+      "evidence": "NEEDS VERIFICATION"
+    }
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Direct selected sample: files",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

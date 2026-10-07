@@ -1,0 +1,33 @@
+{
+  "component_id": "framer-responsive-preview-controls",
+  "title": "Framer Responsive Preview Controls",
+  "provider": "Framer",
+  "observed_date": "2026-10-07",
+  "capture_method": "Authenticated in-app browser AX/DOM, safe visible action outcomes and session screenshots",
+  "provenance": "Sanitized authored observation excerpts from this chat. These are not raw AX logs or request traces.",
+  "reference_record": "framer-responsive-preview-controls",
+  "observation": {
+    "Location": "\n- **OBSERVED:** Canvas Preview, wide and narrow widths.",
+    "Structure": "\n- **OBSERVED:** Preview replaces editing rails with a top bar holding Back, Reload, Fullscreen, Desktop preset, width and height fields, collaborator avatar, Close preview, Invite, and Publish. The page renders inside an embedded preview module surrounded by a dark workspace.",
+    "Actions": "\n| Element | Observed action and result |\n| --- | --- |\n| Preview | Opens view=preview with width 1088 and height 1000. |\n| Desktop | Opens a menu showing only Desktop and disabled Next/Previous. |\n| Width | Setting 390 and pressing Return visibly narrows the white page to 390px. Restoring 1088 widens it again. |\n| Close preview | Returns to editing canvas. |",
+    "Behavior & States": "\n- **OBSERVED:** Width change affects preview dimensions. It did not create a project breakpoint. The selected project contains one Desktop breakpoint only.\n- **OBSERVED:** Width was restored to 1088 before closing. The blank preview cannot establish responsive content reflow or interactive behavior.",
+    "Technical Data": "\n- **OBSERVED:** Native editable width/height fields and disabled preset menu entries appear in accessibility evidence. Outer URL uses view=preview. The embedded page title is My Framer Site and loads a preview-module.html document on a project-specific framercanvas.com host.\n- **NEEDS VERIFICATION:** Frame resizing implementation, viewport propagation, reload/fullscreen, preview APIs, and content breakpoints.\n### Local implementation and accessibility\n\n- **RECONSTRUCTION / HTML:** Semantic React sections, native buttons, labelled inputs/selects, fieldsets, menus and status regions. No copied Framer source code.\n- **RECONSTRUCTION / CSS:** Scoped dark UI styling and container-responsive layout. Blue accents reflect observed styling but are not a recovered design-token system.\n- **RECONSTRUCTION / JavaScript:** In-memory React state, fixture remounting and local feedback. No external requests or credential handling.\n- **NEEDS VERIFICATION / Network:** No provider request/response trace. Service hostnames visible in original frame URLs are not verified API contracts.\n- **RECONSTRUCTION / Accessibility:** Local controls expose accessible names, selected/expanded state where applicable, disabled fieldsets, aria-labelled menus and live status feedback. Automated behavior tests and browser observations are local evidence.\n- **NEEDS VERIFICATION / Accessibility:** Provider screen-reader behavior, focus management and full WCAG conformance were not independently tested."
+  },
+  "fixture_states": [
+    "default",
+    "narrow",
+    "disabled"
+  ],
+  "preview_route": "/framer/framer-responsive-preview-controls",
+  "screenshot_status": "Provider captures exist in the session only. No durable provider image file is claimed.",
+  "limitations": [
+    "No backend/API contracts captured",
+    "No provider writes or paid outcomes tested",
+    "All preview rendering is fictional local reconstruction"
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Shared provider context only. This component was not independently technically sampled in this pass.",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "component_id": "framer-cms-empty-workspace",
+  "title": "Framer CMS Empty Workspace",
+  "provider": "Framer",
+  "observed_date": "2026-10-07",
+  "capture_method": "Authenticated in-app browser AX/DOM, safe visible action outcomes and session screenshots",
+  "provenance": "Sanitized authored observation excerpts from this chat. These are not raw AX logs or request traces.",
+  "reference_record": "framer-cms-empty-workspace",
+  "observation": {
+    "Location": "\n- **OBSERVED:** CMS mode and insertion Collections.",
+    "Structure": "\n- **OBSERVED:** CMS has Collections, Fields, Plugins tabs, collection-add affordance, central empty guidance, and Agent composer.",
+    "Actions": "\n- **OBSERVED:** CMS mode \u2192 displays Collections empty guidance: Generate a new collection with the Agent, or import and sync external data with plugins. Fields \u2192 shows Title, Slug, Image, Content, Featured in the sidebar.",
+    "Behavior & States": "\n- **OBSERVED:** Preview is disabled in CMS mode. No collection, field, item, plugin, or schema was created.",
+    "Technical Data": "\n- **OBSERVED:** Tabs are buttons. Field entries appear as text in AX. Add CMS collection is a container with an image. Mode navigation removes the canvas node query from the outer URL.\n- **NEEDS VERIFICATION:** Internal JavaScript handlers, network request/response contracts, backend rules, exact timing, and error recovery were not inspected. Rendered DOM/AX observations do not establish those details.\n### Local implementation and accessibility\n\n- **RECONSTRUCTION / HTML:** Semantic React sections, native buttons, labelled inputs/selects, fieldsets, menus and status regions. No copied Framer source code.\n- **RECONSTRUCTION / CSS:** Scoped dark UI styling and container-responsive layout. Blue accents reflect observed styling but are not a recovered design-token system.\n- **RECONSTRUCTION / JavaScript:** In-memory React state, fixture remounting and local feedback. No external requests or credential handling.\n- **NEEDS VERIFICATION / Network:** No provider request/response trace. Service hostnames visible in original frame URLs are not verified API contracts.\n- **RECONSTRUCTION / Accessibility:** Local controls expose accessible names, selected/expanded state where applicable, disabled fieldsets, aria-labelled menus and live status feedback. Automated behavior tests and browser observations are local evidence.\n- **NEEDS VERIFICATION / Accessibility:** Provider screen-reader behavior, focus management and full WCAG conformance were not independently tested.",
+    "Verification Gaps": "\n- **NEEDS VERIFICATION:** Collection editor, item table, rich text, validation, pagination, slug uniqueness, imports, sync, and published CMS routes."
+  },
+  "fixture_states": [
+    "default",
+    "fields"
+  ],
+  "preview_route": "/framer/framer-cms-empty-workspace",
+  "screenshot_status": "Provider captures exist in the session only. No durable provider image file is claimed.",
+  "limitations": [
+    "No backend/API contracts captured",
+    "No provider writes or paid outcomes tested",
+    "All preview rendering is fictional local reconstruction"
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Shared provider context only. This component was not independently technically sampled in this pass.",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

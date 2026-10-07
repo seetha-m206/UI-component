@@ -1,0 +1,813 @@
+.frame {
+  min-height: 520px;
+  overflow: auto;
+  border: 1px solid #d9e0e6;
+  border-radius: 10px;
+  background: #f5f7fa;
+  color: #183247;
+  font:
+    14px/1.4 Inter,
+    Arial,
+    sans-serif;
+}
+.frame * {
+  box-sizing: border-box;
+}
+.frame button,
+.frame input {
+  font: inherit;
+}
+.frame button {
+  cursor: pointer;
+}
+.frame button:focus-visible,
+.frame input:focus-visible {
+  outline: 3px solid #5a8dee;
+  outline-offset: 2px;
+}
+.shell {
+  display: grid;
+  grid-template-columns: 64px minmax(760px, 1fr);
+  grid-template-rows: 58px 1fr;
+  min-height: 560px;
+  background: #fff;
+}
+.rail {
+  grid-row: 1/-1;
+  display: grid;
+  align-content: start;
+  gap: 7px;
+  padding: 8px;
+  background: #12324a;
+}
+.rail button {
+  min-height: 42px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #fff;
+}
+.rail button:hover {
+  background: #315a78;
+}
+.logo {
+  display: grid;
+  place-items: center;
+  height: 42px;
+  border-radius: 50%;
+  background: #f49a3d;
+  color: #fff;
+  font-size: 24px;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #dce3e9;
+  padding: 9px 16px;
+}
+.topbar strong {
+  font-size: 18px;
+}
+.topbar input {
+  margin-left: auto;
+  width: 210px;
+  border: 1px solid #ccd6de;
+  border-radius: 4px;
+  padding: 8px;
+}
+.topbar button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #cbd5dd;
+  border-radius: 5px;
+  background: #fff;
+}
+.trial {
+  margin-left: auto;
+  border-radius: 4px;
+  background: #f7f3eb;
+  padding: 7px 10px;
+}
+.topbar .trial + input {
+  margin-left: 0;
+}
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eff2f4;
+}
+.main {
+  position: relative;
+  min-width: 0;
+  padding: 18px;
+  background: #f5f7fa;
+}
+.setup {
+  margin: -18px -18px 18px;
+  background: #fff;
+  padding: 16px;
+}
+.setup > div:first-child,
+.toolbar,
+.actionbar,
+.dashboardTabs,
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.setup > div:first-child button {
+  margin-left: auto;
+}
+.setupCards,
+.providerGrid,
+.templateGrid,
+.settingsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.setupCards button,
+.providerGrid button,
+.templateGrid button,
+.templateGrid article,
+.settingsGrid button {
+  min-height: 82px;
+  border: 1px solid #dbe3e9;
+  border-radius: 7px;
+  background: #fff;
+  padding: 14px;
+  text-align: left;
+}
+.toolbar {
+  margin-bottom: 12px;
+}
+.toolbar > *:nth-child(2) {
+  margin-left: auto;
+}
+.toolbar button,
+.subtoolbar button,
+.actionbar button,
+.dashboardTabs button,
+.tabs button,
+.segment button {
+  border: 1px solid #ccd6de;
+  border-radius: 4px;
+  background: #fff;
+  padding: 8px 12px;
+}
+.primary {
+  border-color: #173d59 !important;
+  background: #173d59 !important;
+  color: #fff;
+}
+.count {
+  border-radius: 14px;
+  background: #587a94;
+  color: #fff;
+  padding: 3px 8px;
+}
+.subtoolbar {
+  display: flex;
+  gap: 8px;
+  margin: 0 -18px;
+  padding: 10px 18px;
+  background: #eaf0f5;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+.table th,
+.table td {
+  border: 1px solid #e0e6eb;
+  padding: 10px;
+  text-align: left;
+}
+.table th {
+  background: #f8fafb;
+}
+.table button {
+  border: 0;
+  background: transparent;
+  text-align: left;
+}
+.linkButton {
+  color: #2468a2;
+}
+.cellButton {
+  color: inherit;
+}
+.stage {
+  position: relative;
+  min-height: 500px;
+  padding: 24px;
+  background: #f5f7fa;
+}
+.panel {
+  display: grid;
+  gap: 7px;
+  width: min(390px, 100%);
+  margin-left: auto;
+  border: 1px solid #ced9e1;
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 12px 30px #173d5920;
+}
+.panel h2 {
+  margin: 0;
+}
+.panel input,
+.recordBody > input,
+.recordBody .toolbar input {
+  border: 1px solid #b9c8d3;
+  border-radius: 4px;
+  padding: 9px;
+}
+.panel button {
+  border: 0;
+  background: #fff;
+  padding: 8px;
+  text-align: left;
+}
+.panel button:hover {
+  background: #eef4f8;
+}
+.segment {
+  display: flex;
+}
+.segment button[aria-pressed='true'],
+.recordNav button[aria-pressed='true'] {
+  background: #e6f0ff;
+  color: #174f82;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 10px;
+  overflow: auto;
+}
+.column {
+  min-height: 330px;
+  border-left: 1px solid #d6e0e7;
+  background: #eef3f7;
+  padding: 10px;
+}
+.column h3 {
+  margin: 0 0 10px;
+}
+.column h3 span {
+  border-radius: 12px;
+  background: #6689a4;
+  color: #fff;
+  padding: 2px 7px;
+}
+.card {
+  display: grid;
+  width: 100%;
+  gap: 10px;
+  border: 1px solid #d8e0e6;
+  border-radius: 7px;
+  background: #fff;
+  padding: 14px;
+  text-align: left;
+}
+.card strong {
+  font-size: 20px;
+}
+.empty {
+  color: #7c8d99;
+  text-align: center;
+}
+.actionbar {
+  justify-content: flex-end;
+  margin: -18px -18px 12px;
+  padding: 10px 18px;
+  background: #fff;
+}
+.record {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 480px;
+  background: #fff;
+}
+.recordNav {
+  display: grid;
+  align-content: start;
+  gap: 7px;
+  border-right: 1px solid #dde4e9;
+  padding: 16px;
+}
+.recordNav h2,
+.recordNav p {
+  margin: 0;
+}
+.recordNav button {
+  border: 0;
+  border-radius: 4px;
+  background: #fff;
+  padding: 10px;
+  text-align: left;
+}
+.recordBody {
+  padding: 20px;
+}
+.lifecycle {
+  display: flex;
+  margin: 16px 0;
+}
+.lifecycle span {
+  flex: 1;
+  border-right: 2px solid #fff;
+  background: #cde0f7;
+  padding: 10px;
+  text-align: center;
+}
+.summary {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 18px;
+}
+.summary article,
+.summary aside {
+  border: 1px solid #dce4ea;
+  border-radius: 7px;
+  padding: 16px;
+}
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.details div {
+  border-bottom: 1px solid #e3e8ec;
+  padding: 10px;
+}
+.details dt {
+  color: #71818d;
+}
+.details dd {
+  margin: 3px 0;
+}
+.timeline button {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border: 1px solid #dce4ea;
+  background: #fff;
+  padding: 16px;
+}
+.dashboardTabs {
+  margin: -18px -18px 12px;
+  padding: 10px;
+  background: #fff;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.dashboard article {
+  min-height: 110px;
+  border: 1px solid #dbe3e9;
+  border-radius: 8px;
+  background: #fff;
+  padding: 14px;
+}
+.dashboard strong {
+  display: block;
+  margin-top: 16px;
+  color: #2e9c73;
+  font-size: 28px;
+}
+.chart span {
+  display: grid;
+  place-items: center;
+  height: 70px;
+  color: #5789d8;
+  font-size: 48px;
+}
+.sampleBanner {
+  position: absolute;
+  right: 28%;
+  bottom: 24px;
+  border-radius: 24px;
+  background: #34495c;
+  color: #fff;
+  padding: 10px 18px;
+}
+.providerGrid button {
+  text-align: center;
+}
+.hero {
+  text-align: center;
+}
+.sequenceFlow {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 30px 0;
+}
+.sequenceFlow span {
+  border-radius: 20px;
+  background: #edf3fa;
+  padding: 10px;
+}
+.templateGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.templateGrid button,
+.templateGrid article {
+  display: grid;
+  gap: 10px;
+}
+.info {
+  border: 1px solid #c9dcf5;
+  background: #edf5ff;
+  padding: 12px;
+}
+.settingsGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.settingsGrid button {
+  display: grid;
+  gap: 6px;
+}
+.settingsGrid small {
+  color: #6f7f8b;
+}
+.guard {
+  margin-top: 14px;
+  border-left: 4px solid #4b83c5;
+  background: #eaf3ff;
+  padding: 10px 12px;
+  color: #19456d;
+}
+.recordDetail,
+.modalCard,
+.scoring,
+.featurePanel {
+  border: 1px solid #dce4ea;
+  border-radius: 8px;
+  background: #fff;
+  padding: 18px;
+}
+.recordHero,
+.modalCard > header,
+.modalFooter,
+.featureToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.recordHero h2,
+.modalCard h2 {
+  margin: 3px 0;
+}
+.recordHero button,
+.modalCard button,
+.permissionTable button,
+.featurePanel button,
+.boundaryCard button {
+  border: 1px solid #cbd6de;
+  border-radius: 5px;
+  background: #fff;
+  padding: 8px 12px;
+}
+.dropzone {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 130px;
+  margin: 16px 0;
+  border: 2px dashed #8da9bd !important;
+  color: #245f8d;
+}
+.dropzone small,
+.featureToggle small {
+  display: block;
+  color: #71818d;
+}
+.optionCard,
+.automationCard {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  border: 1px solid #d9e3ea;
+  border-radius: 7px;
+  padding: 16px;
+}
+.modalFooter {
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+.permissionTable {
+  width: 100%;
+  margin-top: 16px;
+  border-collapse: collapse;
+  background: #fff;
+}
+.permissionTable th,
+.permissionTable td {
+  border: 1px solid #dce4ea;
+  padding: 10px;
+  text-align: center;
+}
+.permissionTable th:first-child,
+.permissionTable td:first-child {
+  text-align: left;
+}
+.scoreGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.scoreGrid article {
+  min-height: 180px;
+  border: 1px solid #d9e3ea;
+  border-radius: 7px;
+  padding: 16px;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chips button {
+  border: 1px solid #b9cad6;
+  border-radius: 18px;
+  background: #f6f9fb;
+  padding: 6px 10px;
+}
+.automationCard input {
+  width: 72px;
+  margin: 0 6px;
+}
+.betaBanner {
+  border: 1px solid #e6c87b;
+  background: #fff8df;
+  padding: 12px;
+}
+.featurePanel {
+  margin-top: 14px;
+}
+.featureToggle {
+  border-top: 1px solid #e1e7eb;
+  padding: 13px 0;
+}
+.featureToggle input {
+  width: 20px;
+  height: 20px;
+}
+.boundaryCard {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 620px;
+  margin: 70px auto;
+  border: 1px solid #d4dfe7;
+  border-left: 5px solid #5f89aa;
+  border-radius: 8px;
+  background: #fff;
+  padding: 24px;
+}
+.boundaryCard > span {
+  font-size: 32px;
+}
+.boundaryCard h2,
+.boundaryCard p {
+  margin: 4px 0;
+}
+.loading {
+  border-left-color: #6d91c7;
+}
+.unavailable {
+  border-left-color: #c47742;
+}
+.upgrade {
+  border-left-color: #8c67b0;
+}
+.atomicStage {
+  min-height: 430px;
+  padding: 44px;
+  background: #f5f7fa;
+}
+.atomicColumn {
+  width: 270px;
+  min-height: 330px;
+  border-left: 1px solid #ccd8e1;
+  background: #edf2f6;
+  padding: 12px;
+}
+.atomicColumn header,
+.atomicToolbar,
+.atomicFieldGroup header,
+.atomicRow,
+.atomicBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.atomicColumn header span {
+  border-radius: 12px;
+  background: #6989a2;
+  color: #fff;
+  padding: 2px 8px;
+}
+.atomicColumn > button,
+.atomicDealCard {
+  display: grid;
+  width: 100%;
+  gap: 9px;
+  margin-top: 12px;
+  border: 1px solid #d6e0e7;
+  border-radius: 7px;
+  background: #fff;
+  padding: 14px;
+  text-align: left;
+}
+.atomicDealCard {
+  max-width: 320px;
+}
+.atomicDealCard > span {
+  color: #6f7f8b;
+}
+.atomicSkeleton,
+.screenSkeleton {
+  display: grid;
+  gap: 12px;
+  max-width: 720px;
+}
+.atomicSkeleton span,
+.screenSkeleton span,
+.loadingScreen aside span,
+.loadingScreen header span {
+  display: block;
+  height: 22px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #e5eaee, #f7f9fa, #e5eaee);
+  background-size: 200% 100%;
+}
+.atomicSkeleton span:nth-child(2),
+.screenSkeleton span:nth-child(3) {
+  width: 75%;
+}
+.atomicSkeleton span:nth-child(3),
+.screenSkeleton span:nth-child(5) {
+  width: 48%;
+}
+.atomicMenu {
+  display: grid;
+  width: min(390px, 100%);
+  gap: 8px;
+  margin-left: auto;
+  border: 1px solid #ced9e1;
+  background: #fff;
+  padding: 16px;
+}
+.atomicMenu header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.atomicMenu button,
+.atomicToolbar button,
+.atomicPopover button,
+.atomicBanner button,
+.atomicRow button,
+.atomicChip {
+  border: 1px solid #ccd6de;
+  border-radius: 5px;
+  background: #fff;
+  padding: 8px 12px;
+}
+.atomicMenu > button {
+  text-align: left;
+}
+.atomicToolbar {
+  justify-content: flex-start;
+  border: 1px solid #d6e0e7;
+  background: #eaf0f5;
+  padding: 12px;
+}
+.atomicFieldGroup {
+  max-width: 720px;
+  border: 1px solid #dce4ea;
+  background: #fff;
+  padding: 16px;
+}
+.atomicFieldGroup > div {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  border-top: 1px solid #e2e8ec;
+  padding: 12px 0;
+}
+.atomicActivity {
+  max-width: 720px;
+}
+.atomicActivity > button {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 8px;
+  border: 1px solid #dce4ea;
+  background: #fff;
+  padding: 16px;
+}
+.atomicPopover {
+  position: relative;
+  width: 320px;
+}
+.atomicPopover > div {
+  display: grid;
+  gap: 7px;
+  margin-top: 7px;
+  border: 1px solid #ccd8e1;
+  background: #fff;
+  padding: 14px;
+}
+.atomicBanner,
+.atomicRow {
+  max-width: 860px;
+  border: 1px solid #d8e2e9;
+  background: #fff;
+  padding: 14px;
+}
+.atomicBanner {
+  border-left: 5px solid #d4a947;
+}
+.atomicRow label {
+  display: grid;
+  place-items: center;
+  gap: 3px;
+}
+.atomicChip {
+  border-radius: 18px;
+  background: #f6f9fb;
+}
+.loadingScreen {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  grid-template-rows: 58px 1fr;
+  min-height: 520px;
+  background: #f5f7fa;
+}
+.loadingScreen aside {
+  grid-row: 1/-1;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 12px;
+  background: #17384f;
+}
+.loadingScreen aside span {
+  height: 36px;
+  background: #375b72;
+}
+.loadingScreen header {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #dce3e9;
+  background: #fff;
+  padding: 14px;
+}
+.loadingScreen header span:first-child {
+  width: 180px;
+}
+.loadingScreen header span:last-child {
+  width: 120px;
+  margin-left: auto;
+}
+.loadingScreen main {
+  padding: 28px;
+}
+.screenSkeleton {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 24px;
+}
+.screenSkeleton span {
+  width: auto !important;
+  height: 110px;
+}
+@media (max-width: 720px) {
+  .shell {
+    grid-template-columns: 52px minmax(720px, 1fr);
+  }
+  .setupCards,
+  .providerGrid,
+  .dashboard,
+  .settingsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .scoreGrid {
+    grid-template-columns: 1fr;
+  }
+}

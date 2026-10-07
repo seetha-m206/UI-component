@@ -1,0 +1,33 @@
+{
+  "component_id": "framer-analytics-publication-empty-state",
+  "title": "Framer Analytics Publication Empty State",
+  "provider": "Framer",
+  "observed_date": "2026-10-07",
+  "capture_method": "Authenticated in-app browser AX/DOM, safe visible action outcomes and session screenshots",
+  "provenance": "Sanitized authored observation excerpts from this chat. These are not raw AX logs or request traces.",
+  "reference_record": "framer-analytics-publication-empty-state",
+  "observation": {
+    "Location": "\n- **OBSERVED:** Analytics mode in an unpublished project.",
+    "Structure": "\n- **OBSERVED:** Left rail has search, Overview, Funnels and A/B tests with add affordances. Main area says Publish your website to track and view insights. Right rail has analytics-context Agent. Toolbar adds Refresh.",
+    "Actions": "\n- **OBSERVED:** Analytics mode \u2192 displays publication prerequisite and analytics navigation. No funnel or A/B test was created. No publication was performed.",
+    "Behavior & States": "\n- **OBSERVED:** Preview is disabled. Populated analytics, real traffic, and chart behavior were unavailable in the unpublished project.",
+    "Technical Data": "\n- **OBSERVED:** Outer URL uses node=analyticsScope. Refresh is a button. Funnels and A/B tests are sidebar text with named add containers.\n- **NEEDS VERIFICATION:** Internal JavaScript handlers, network request/response contracts, backend rules, exact timing, and error recovery were not inspected. Rendered DOM/AX observations do not establish those details.\n### Local implementation and accessibility\n\n- **RECONSTRUCTION / HTML:** Semantic React sections, native buttons, labelled inputs/selects, fieldsets, menus and status regions. No copied Framer source code.\n- **RECONSTRUCTION / CSS:** Scoped dark UI styling and container-responsive layout. Blue accents reflect observed styling but are not a recovered design-token system.\n- **RECONSTRUCTION / JavaScript:** In-memory React state, fixture remounting and local feedback. No external requests or credential handling.\n- **NEEDS VERIFICATION / Network:** No provider request/response trace. Service hostnames visible in original frame URLs are not verified API contracts.\n- **RECONSTRUCTION / Accessibility:** Local controls expose accessible names, selected/expanded state where applicable, disabled fieldsets, aria-labelled menus and live status feedback. Automated behavior tests and browser observations are local evidence.\n- **NEEDS VERIFICATION / Accessibility:** Provider screen-reader behavior, focus management and full WCAG conformance were not independently tested.",
+    "Verification Gaps": "\n- **NEEDS VERIFICATION:** Traffic ingestion, date filters, attribution, funnels, A/B tests, analytics refresh, billing, and real measurements."
+  },
+  "fixture_states": [
+    "default",
+    "disabled"
+  ],
+  "preview_route": "/framer/framer-analytics-publication-empty-state",
+  "screenshot_status": "Provider captures exist in the session only. No durable provider image file is claimed.",
+  "limitations": [
+    "No backend/API contracts captured",
+    "No provider writes or paid outcomes tested",
+    "All preview rendering is fictional local reconstruction"
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Shared provider context only. This component was not independently technically sampled in this pass.",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

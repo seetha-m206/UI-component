@@ -1,0 +1,34 @@
+{
+  "component_id": "framer-breakpoint-style-inspector",
+  "title": "Framer Breakpoint and Style Inspector",
+  "provider": "Framer",
+  "observed_date": "2026-10-07",
+  "capture_method": "Authenticated in-app browser AX/DOM, safe visible action outcomes and session screenshots",
+  "provenance": "Sanitized authored observation excerpts from this chat. These are not raw AX logs or request traces.",
+  "reference_record": "framer-breakpoint-style-inspector",
+  "observation": {
+    "Location": "\n- **OBSERVED:** Style rail with no selection and selected Desktop breakpoint.",
+    "Structure": "\n- **OBSERVED:** No selection shows Typography base 16 PX and Template entry. Selecting Desktop reveals alignment tools, Template, Breakpoint position X/Y, Width/Height with sizing dropdowns, Layout, Typography, Overlays, Cursor, Effects, Styles, Fill, Overflow, Code overrides.",
+    "Actions": "\n- **OBSERVED:** Style \u2192 displays typography controls. Select Desktop header \u2192 highlights the canvas frame and reveals its property inspector. No property value was changed.",
+    "Behavior & States": "\n- **OBSERVED:** Observed breakpoint width 1200 and height 1000 with Fixed sizing. Width alternatives Relative, Fill, Fit content are disabled. Height additionally exposes disabled Viewport. Fill is FFFFFF, Overflow is Clip with Visible, Hidden, Scroll listed.",
+    "Technical Data": "\n- **OBSERVED:** Property values use editable fields and popup buttons with selected/disabled menu states. Fill is a labelled button with ID fill. Alignment tools are exposed as images in AX.\n- **NEEDS VERIFICATION:** Internal JavaScript handlers, network request/response contracts, backend rules, exact timing, and error recovery were not inspected. Rendered DOM/AX observations do not establish those details.\n### Local implementation and accessibility\n\n- **RECONSTRUCTION / HTML:** Semantic React sections, native buttons, labelled inputs/selects, fieldsets, menus and status regions. No copied Framer source code.\n- **RECONSTRUCTION / CSS:** Scoped dark UI styling and container-responsive layout. Blue accents reflect observed styling but are not a recovered design-token system.\n- **RECONSTRUCTION / JavaScript:** In-memory React state, fixture remounting and local feedback. No external requests or credential handling.\n- **NEEDS VERIFICATION / Network:** No provider request/response trace. Service hostnames visible in original frame URLs are not verified API contracts.\n- **RECONSTRUCTION / Accessibility:** Local controls expose accessible names, selected/expanded state where applicable, disabled fieldsets, aria-labelled menus and live status feedback. Automated behavior tests and browser observations are local evidence.\n- **NEEDS VERIFICATION / Accessibility:** Provider screen-reader behavior, focus management and full WCAG conformance were not independently tested.",
+    "Verification Gaps": "\n- **NEEDS VERIFICATION:** Breakpoint creation, variables, constraints, effect configuration, animation, cursor behavior, code overrides, color changes, and property persistence."
+  },
+  "fixture_states": [
+    "default",
+    "selected",
+    "scroll"
+  ],
+  "preview_route": "/framer/framer-breakpoint-style-inspector",
+  "screenshot_status": "Provider captures exist in the session only. No durable provider image file is claimed.",
+  "limitations": [
+    "No backend/API contracts captured",
+    "No provider writes or paid outcomes tested",
+    "All preview rendering is fictional local reconstruction"
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Shared provider context only. This component was not independently technically sampled in this pass.",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

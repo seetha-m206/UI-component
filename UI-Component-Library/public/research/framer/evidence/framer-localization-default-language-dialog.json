@@ -1,0 +1,33 @@
+{
+  "component_id": "framer-localization-default-language-dialog",
+  "title": "Framer Localization and Default Language Dialog",
+  "provider": "Framer",
+  "observed_date": "2026-10-07",
+  "capture_method": "Authenticated in-app browser AX/DOM, safe visible action outcomes and session screenshots",
+  "provenance": "Sanitized authored observation excerpts from this chat. These are not raw AX logs or request traces.",
+  "reference_record": "framer-localization-default-language-dialog",
+  "observation": {
+    "Location": "\n- **OBSERVED:** Localization mode and Add locale disclosure.",
+    "Structure": "\n- **OBSERVED:** Left rail has Locales, Plugins, word usage progress and Upgrade. Center shows Localization and Add a locale to start localizing your site. Add locale opens Set default language dialog with combo box, helper text, Cancel, Confirm.",
+    "Actions": "\n- **OBSERVED:** Add locale \u2192 opens default-language prerequisite dialog. Expand combo box \u2192 shows language names with codes. Escape \u2192 collapses dropdown. Cancel \u2192 returns to unchanged empty localization workspace.",
+    "Behavior & States": "\n- **OBSERVED:** Confirm is disabled with no language selected. The allowance shown was 0 / 5,000 words. Screenshot captured alphabetical language options including Abkhazian and Afrikaans. No default language or locale was saved.",
+    "Technical Data": "\n- **OBSERVED:** Route gains view=localizations. AX confirms expanded/collapsed combo state but does not enumerate dropdown options, which were visible in screenshot.\n- **NEEDS VERIFICATION:** Internal JavaScript handlers, network request/response contracts, backend rules, exact timing, and error recovery were not inspected. Rendered DOM/AX observations do not establish those details.\n### Local implementation and accessibility\n\n- **RECONSTRUCTION / HTML:** Semantic React sections, native buttons, labelled inputs/selects, fieldsets, menus and status regions. No copied Framer source code.\n- **RECONSTRUCTION / CSS:** Scoped dark UI styling and container-responsive layout. Blue accents reflect observed styling but are not a recovered design-token system.\n- **RECONSTRUCTION / JavaScript:** In-memory React state, fixture remounting and local feedback. No external requests or credential handling.\n- **NEEDS VERIFICATION / Network:** No provider request/response trace. Service hostnames visible in original frame URLs are not verified API contracts.\n- **RECONSTRUCTION / Accessibility:** Local controls expose accessible names, selected/expanded state where applicable, disabled fieldsets, aria-labelled menus and live status feedback. Automated behavior tests and browser observations are local evidence.\n- **NEEDS VERIFICATION / Accessibility:** Provider screen-reader behavior, focus management and full WCAG conformance were not independently tested.",
+    "Verification Gaps": "\n- **NEEDS VERIFICATION:** Translation generation, locale fallback, routing, RTL output, adding locales, validation after selection, and paid allowance."
+  },
+  "fixture_states": [
+    "default",
+    "dialog"
+  ],
+  "preview_route": "/framer/framer-localization-default-language-dialog",
+  "screenshot_status": "Provider captures exist in the session only. No durable provider image file is claimed.",
+  "limitations": [
+    "No backend/API contracts captured",
+    "No provider writes or paid outcomes tested",
+    "All preview rendering is fictional local reconstruction"
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Shared provider context only. This component was not independently technically sampled in this pass.",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

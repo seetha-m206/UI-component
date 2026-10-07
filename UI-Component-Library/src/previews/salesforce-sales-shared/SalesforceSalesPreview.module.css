@@ -1,0 +1,344 @@
+.shell {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  min-height: 620px;
+  background: #fff;
+  color: #181818;
+  font:
+    14px/1.4 system-ui,
+    sans-serif;
+  border: 1px solid #d8dde6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.rail {
+  background: #16325c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 8px;
+}
+.rail strong {
+  font-size: 24px;
+}
+.rail button {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #fff;
+}
+.rail button:hover {
+  background: #29558b;
+}
+.workspace {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+.trial {
+  padding: 7px;
+  text-align: center;
+  background: #b8f0e6;
+  color: #164a45;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.header,
+.tabs,
+.titleRow,
+.actions,
+.footerActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header {
+  padding: 12px 18px;
+  border-bottom: 1px solid #ddd;
+}
+.header b {
+  font-size: 20px;
+}
+.header input {
+  margin-left: auto;
+  min-width: 260px;
+}
+.header button,
+.tabs button,
+.actions button,
+.titleRow button,
+.footerActions button,
+.empty button,
+.sidePanel button,
+.cardGrid button,
+.modal button {
+  border: 1px solid #c9cfd8;
+  background: #fff;
+  border-radius: 5px;
+  padding: 8px 12px;
+  color: #0b5cab;
+}
+.tabs {
+  padding: 0 16px;
+  border-bottom: 1px solid #d8dde6;
+  overflow: auto;
+}
+.tabs button {
+  border: 0;
+  border-radius: 0;
+  padding: 12px 8px;
+  color: #181818;
+  white-space: nowrap;
+}
+.tabs button:first-child {
+  border-bottom: 3px solid #1b96ff;
+  color: #0b5cab;
+}
+.main {
+  position: relative;
+  flex: 1;
+  padding: 22px;
+  overflow: auto;
+  background: #f5f7fa;
+}
+.utility {
+  padding: 8px 16px;
+  border-top: 1px solid #d8dde6;
+  background: #fff;
+  font-weight: 650;
+}
+.titleRow {
+  justify-content: space-between;
+}
+.titleRow h1,
+.titleRow h2 {
+  margin: 2px 0 12px;
+}
+.actions {
+  margin: 8px 0 12px;
+  flex-wrap: wrap;
+}
+.actions input {
+  margin-left: auto;
+  min-width: 210px;
+}
+.active {
+  background: #eef6ff !important;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+.table th {
+  padding: 11px 9px;
+  text-align: left;
+  border: 1px solid #d8dde6;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.empty {
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e2e6ea;
+  border-top: 0;
+  color: #444;
+}
+.notice {
+  position: sticky;
+  bottom: 12px;
+  margin: 12px auto 0;
+  padding: 9px 12px;
+  border-radius: 6px;
+  background: #16325c;
+  color: #fff;
+  max-width: 680px;
+  text-align: center;
+}
+.modal,
+.panel,
+.sidePanel,
+.permission {
+  max-width: 720px;
+  margin: auto;
+  background: #fff;
+  border: 1px solid #d8dde6;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 18px #16325c18;
+}
+.modal fieldset {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 14px 0;
+  border: 1px solid #d8dde6;
+}
+.modal label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.modal input,
+.modal select,
+.header input,
+.actions input {
+  border: 1px solid #aab2bd;
+  border-radius: 4px;
+  padding: 8px;
+}
+.footerActions {
+  justify-content: flex-end;
+}
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 10px;
+  overflow: auto;
+}
+.kanban > div {
+  min-height: 250px;
+  background: #eef1f5;
+  border-top: 4px solid #4bca81;
+  padding: 12px;
+}
+.kanban span,
+.kanban p,
+.cardGrid span,
+.modal small {
+  display: block;
+  color: #5f6b7a;
+  margin-top: 6px;
+}
+.calendar {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 16px;
+}
+.calendar aside,
+.calendar > div {
+  background: #fff;
+  border: 1px solid #d8dde6;
+  padding: 14px;
+}
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(80px, 1fr));
+  min-height: 320px;
+}
+.week > div {
+  border: 1px solid #e3e6e9;
+  padding: 8px;
+}
+.week span {
+  display: block;
+  color: #666;
+  font-size: 11px;
+}
+.cardGrid,
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 12px;
+}
+.cardGrid button,
+.metrics div {
+  min-height: 94px;
+  text-align: left;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #d8dde6;
+  border-radius: 7px;
+}
+.filterBar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.filterBar span {
+  padding: 7px 10px;
+  background: #eef4ff;
+  border-radius: 15px;
+}
+.steps {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  overflow: auto;
+}
+.steps li {
+  min-width: 110px;
+  padding: 8px;
+  border-top: 3px solid #c9cfd8;
+  font-size: 11px;
+}
+.steps .activeStep {
+  border-color: #1b96ff;
+  color: #0b5cab;
+}
+.sidePanel {
+  margin-left: auto;
+  margin-right: 0;
+  max-width: 360px;
+}
+.sidePanel button {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  text-align: left;
+}
+.permission {
+  border-left: 5px solid #ea001e;
+}
+.metrics div {
+  font-size: 18px;
+  font-weight: 700;
+}
+@media (max-width: 640px) {
+  .shell {
+    grid-template-columns: 48px 1fr;
+  }
+  .header input {
+    display: none;
+  }
+  .main {
+    padding: 12px;
+  }
+  .kanban,
+  .cardGrid,
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+  .calendar {
+    grid-template-columns: 1fr;
+  }
+  .modal fieldset {
+    grid-template-columns: 1fr;
+  }
+  .week {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.progress {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0;
+  padding: 12px;
+  background: #eef4ff;
+  border-left: 4px solid #1b96ff;
+}
+.progress span {
+  color: #5f6b7a;
+}

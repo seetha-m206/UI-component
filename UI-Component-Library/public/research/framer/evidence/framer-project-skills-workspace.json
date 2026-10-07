@@ -1,0 +1,74 @@
+{
+  "id": "framer-project-skills-workspace",
+  "title": "Framer Project Skills Workspace",
+  "kind": "skills",
+  "location": "settings:skills",
+  "observed_at": "2026-10-07",
+  "node": "m5",
+  "client": "Codex",
+  "source_origin": "Authenticated Framer in-app browser",
+  "capture_type": "Authored sanitized observation excerpts, not raw provider logs",
+  "observations": [
+    "Skills heading, New button, default skill row with Base instructions that are always applied.",
+    "Default detail has Name, Description, empty Content editor and Link, Bold, Italic, Blockquote, Numbered list, Bulleted list, Code toolbar.",
+    "Name and Description were not settable in the accessibility snapshot. Content showed Write or type @ to add references."
+  ],
+  "fixtures": [
+    {
+      "id": "default",
+      "title": "OBSERVED structure: default",
+      "props": {
+        "kind": "skills",
+        "initialState": "default"
+      }
+    },
+    {
+      "id": "detail",
+      "title": "OBSERVED structure: detail",
+      "props": {
+        "kind": "skills",
+        "initialState": "detail"
+      }
+    },
+    {
+      "id": "disabled",
+      "title": "RECONSTRUCTION: disabled",
+      "props": {
+        "kind": "skills",
+        "initialState": "disabled",
+        "disabled": true
+      }
+    }
+  ],
+  "limitations": [
+    "New skill creation, editing, formatting, references and persistence were not exercised.",
+    "Provider screenshots remain session-only. No durable screenshot file or network trace is attached.",
+    "Local JSX, CSS, state changes and test results are reconstruction evidence, not provider implementation."
+  ],
+  "related": "framer-site-settings-workspace",
+  "action_trace": [
+    {
+      "element": "default skill row",
+      "action": "Click",
+      "result": "Name, Description, Content and formatting controls disclosed",
+      "evidence": "OBSERVED"
+    },
+    {
+      "element": "New",
+      "action": "Not used",
+      "result": "Creation outcome unverified",
+      "evidence": "NEEDS VERIFICATION"
+    },
+    {
+      "element": "Content and toolbar",
+      "action": "Not edited",
+      "result": "Saving, references and formatting outcomes unverified",
+      "evidence": "NEEDS VERIFICATION"
+    }
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Direct selected sample: skill-editor",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

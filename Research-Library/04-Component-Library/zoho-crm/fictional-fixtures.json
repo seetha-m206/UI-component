@@ -1,0 +1,114 @@
+{
+  "workspace": "Northwind Demo",
+  "user": "Alex Morgan",
+  "homeView": "Sales Manager Home",
+  "metrics": [
+    {"label": "My Open Deals", "value": 12},
+    {"label": "My Untouched Deals", "value": 3},
+    {"label": "My Calls Today", "value": 5},
+    {"label": "My Leads", "value": 48}
+  ],
+  "openTasks": [
+    {"subject": "Prepare renewal summary", "dueDate": "2026-10-09", "status": "Not Started", "priority": "High"}
+  ],
+  "emptyMeetingState": {"message": "No meetings found.", "total": 0},
+  "leadsList": {
+    "view": "All Leads",
+    "total": 84,
+    "page": {"from": 1, "to": 30},
+    "columns": ["Lead Name", "Company", "Email", "Phone", "Lead Source", "Lead Owner"],
+    "rows": [
+      {"name": "Avery Chen", "company": "Northwind Demo", "email": "avery@example.invalid", "phone": "+1 555 0100", "source": "Web", "owner": "Morgan Lee"}
+    ]
+  },
+  "leadDetail": {
+    "name": "Avery Chen",
+    "company": "Northwind Demo",
+    "email": "avery@example.invalid",
+    "phone": "+1 555 0100",
+    "owner": "Morgan Lee",
+    "stage": "Qualified",
+    "overviewSections": ["Lead Information", "Address Information", "Description Information"],
+    "relatedLists": ["Notes", "Open Activities", "Closed Activities", "Emails", "Attachments"],
+    "timelineFilter": "All"
+  },
+  "contacts": {
+    "workspace": "Northwind Demo",
+    "visibleRecords": 0,
+    "mode": "onboarding",
+    "guidance": ["Engage through approved channels", "Track interactions in one place"],
+    "channels": ["Call", "Email", "Social"],
+    "actions": ["Create", "Import"]
+  },
+  "accounts": {
+    "workspace": "Northwind Demo",
+    "visibleRecords": 0,
+    "question": "Who are your customers?",
+    "customerTypes": [
+      {"label": "Other businesses", "actions": ["Create", "Import"]},
+      {"label": "End users", "actions": ["Disable module"]}
+    ]
+  },
+  "deals": {
+    "workspace": "Northwind Demo",
+    "visibleRecords": 0,
+    "mode": "onboarding",
+    "guidance": [
+      {"prompt": "Define your sales cycle", "action": "Configure stages"},
+      {"prompt": "Track your sales pipeline", "action": "Create dashboard"}
+    ],
+    "actions": ["Create", "Import"]
+  },
+  "forecasts": {
+    "workspace": "Northwind Demo",
+    "configured": false,
+    "benefits": ["Set sales targets", "Track achievement", "Predict and analyse"],
+    "action": "Configure Now"
+  },
+  "documents": {
+    "workspace": "Northwind Demo",
+    "groups": ["My Folders", "Team Folders"],
+    "embeddedProduct": "Zoho WorkDrive",
+    "files": [],
+    "externalAction": "Open WorkDrive"
+  },
+  "campaigns": {
+    "workspace": "Northwind Demo",
+    "visibleRecords": 0,
+    "mode": "onboarding",
+    "actions": ["Create", "Import"]
+  },
+  "tasks": {
+    "visibleRecords": 0,
+    "actions": ["Create", "Import"],
+    "remindersSupported": true
+  },
+  "meetings": {
+    "visibleRecords": 0,
+    "actions": ["Create", "Import"],
+    "capabilities": ["reminders", "invitees"]
+  },
+  "calls": {
+    "visibleRecords": 0,
+    "paths": ["Telephony integration", "Manual activity"],
+    "actions": ["Log Calls", "Schedule call", "Import"]
+  },
+  "products": {"visibleRecords": 0, "actions": ["Create", "Import"]},
+  "priceBooks": {"visibleRecords": 0, "actions": ["Create", "Import"]},
+  "quotes": {"visibleRecords": 0, "actions": ["Create", "Import"], "financePromotion": true},
+  "salesOrders": {"visibleRecords": 0, "actions": ["Create", "Import"], "financePromotion": true},
+  "purchaseOrders": {"visibleRecords": 0, "actions": ["Create", "Import"], "financePromotion": true},
+  "invoices": {"visibleRecords": 0, "actions": ["Create", "Import"], "financePromotion": true},
+  "vendors": {"visibleRecords": 0, "actions": ["Create", "Import"]},
+  "cases": {"visibleRecords": 0, "actions": ["Create", "Import"]},
+  "solutions": {"visibleRecords": 0, "actions": ["Create", "Import"]},
+  "social": {"connected": false, "action": "Get Started"},
+  "visits": {"provider": "SalesIQ", "connected": false, "action": "Get Started"},
+  "messages": {
+    "view": "All Messages",
+    "visibleRecords": 0,
+    "sort": {"field": "Message Time", "direction": "Descending"},
+    "filters": ["Not Replied", "Replied", "Message Time", "Notifications", "Record Owner", "Replied By"]
+  },
+  "projects": {"connected": false, "benefits": ["Connect", "Track", "Deliver"], "actions": ["Get Started", "Hide tab"]}
+}

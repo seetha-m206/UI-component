@@ -47,7 +47,7 @@ export const hubspotPreviews: PreviewRegistry = Object.fromEntries(entries.map((
   Component: HubspotServicePreview,
   label: 'Authenticated observation reconstructed with fictional local data',
   evidence: 'Authenticated HubSpot Service Hub interface observed 2026-10-05 and 2026-10-06. Fixtures are local-only. Provider creation, import, export, support, assistant execution, calling, marketplace navigation, filter changes, automation, invitations, settings writes, and paid-plan behavior remain unverified.',
-  runtimeVerified: false,
+  runtimeVerified: true,
   fixtures: states.map(([stateId, title, initialState]) => ({ id: stateId, title, props: { variant, ...(initialState ? { initialState } : {}) } })),
   config,
   propsSchema: [

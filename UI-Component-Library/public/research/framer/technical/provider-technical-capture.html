@@ -1,0 +1,1118 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Framer provider technical capture</title><style>body{background:#111;color:#eee;font:15px/1.6 system-ui;max-width:1000px;margin:40px auto;padding:24px}a{color:#8bf}pre{white-space:pre-wrap;overflow-wrap:anywhere}section{border:1px solid #444;padding:20px;margin:20px 0}</style><h1>Framer provider technical capture</h1><p>OBSERVED · 2026-10-07T10:55:40.764677+00:00 · M5 · Codex</p><p>Sanitized samples from the authenticated provider. Separate from fictional preview code.</p><p><a href="provider-technical-capture.json">Structured companion</a> · <a href="inline-css-excerpt.css">Inline CSS excerpt</a></p><section><h2>Capture limits</h2><ul><li>Selected sanitized rendered DOM/CSS samples, not complete raw documents.</li><li>Network metadata only, grouped losslessly by event fields with original sequence numbers retained. Request IDs, headers, cookies, payloads and response bodies deliberately excluded. URLs lose query/hash and identifiers.</li><li>Capture window covers Fill and settings navigation through Performance. Later DOM samples are not all covered by that network window.</li><li>Network requests may be background activity. No per-action causal attribution or server contract is inferred. Two aborted fetches cannot be assigned a cause from these fields.</li><li>No provider JavaScript function source, handler implementation, API payload schema or save outcome recovered.</li><li>Inventory reported 250 scripts, zero exportable stylesheet assets. DOM separately exposed one inline style and one stylesheet link. These are distinct inventory methods, not proof of missing CSS.</li><li>Durable screenshot files remain unavailable through the examined export surfaces. Screenshots remain session-only.</li><li>Performance sample matched no requested control labels and was omitted. Forms and Versions samples cover the global toolbar only.</li></ul></section><section id="fill-popover"><h2>fill-popover</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;Close&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 40,
+    &quot;height&quot;: 50,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(136, 136, 136)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;0px&quot;,
+      &quot;padding&quot;: &quot;0px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Solid&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 46.796875,
+    &quot;height&quot;: 28,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;6px&quot;,
+      &quot;padding&quot;: &quot;0px 4px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Linear gradient&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 46.8046875,
+    &quot;height&quot;: 28,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;6px&quot;,
+      &quot;padding&quot;: &quot;0px 4px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Radial gradient&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 46.796875,
+    &quot;height&quot;: 28,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;6px&quot;,
+      &quot;padding&quot;: &quot;0px 4px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Conic gradient&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 46.8046875,
+    &quot;height&quot;: 28,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;6px&quot;,
+      &quot;padding&quot;: &quot;0px 4px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Image&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 46.796875,
+    &quot;height&quot;: 28,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;6px&quot;,
+      &quot;padding&quot;: &quot;0px 4px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Sample color&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 115,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;New style&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 240,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  }
+]</pre></section><section id="plans-yearly"><h2>plans-yearly</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;Switch to monthly&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 122.265625,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Subscribe&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 208.6640625,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Subscribe&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 207.6640625,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(0, 153, 255)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Request trial&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 207.671875,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  }
+]</pre></section><section id="skills"><h2>skills</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;New&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 45.7578125,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;defaultBase instructions that are always applied&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 356,
+    &quot;height&quot;: 54.796875,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;0px&quot;,
+      &quot;padding&quot;: &quot;12px&quot;
+    }
+  }
+]</pre></section><section id="usage-credits"><h2>usage-credits</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;Bandwidth&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 83.3671875,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Credits&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 62.8125,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  }
+]</pre></section><section id="headers"><h2>headers</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;Add&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 43.1171875,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  }
+]</pre></section><section id="multi-site"><h2>multi-site</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;Add&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 43.1171875,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  }
+]</pre></section><section id="redirects"><h2>redirects</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;Upgrade plan&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 150,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Learn more&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 150,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  }
+]</pre></section><section id="firewall"><h2>firewall</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;Upgrade plan&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 150,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Learn more&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 150,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  }
+]</pre></section><section id="files"><h2>files</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;Upgrade plan&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 150,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Learn more&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 150,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  }
+]</pre></section><section id="forms"><h2>forms</h2><p>Global toolbar sample only. No screen-specific technical completeness claimed</p><pre>[
+  {
+    &quot;label&quot;: &quot;Publish&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 62.125,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(0, 153, 255)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    },
+    &quot;id&quot;: &quot;toolbar-publish-button&quot;
+  }
+]</pre></section><section id="versions"><h2>versions</h2><p>Global toolbar sample only. No screen-specific technical completeness claimed</p><pre>[
+  {
+    &quot;label&quot;: &quot;Publish&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 62.125,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(0, 153, 255)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    },
+    &quot;id&quot;: &quot;toolbar-publish-button&quot;
+  }
+]</pre></section><section id="code"><h2>code</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;Add script&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 150,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Learn more&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 150,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  }
+]</pre></section><section id="domains"><h2>domains</h2><p>Screen CTA sampled only, no domain form or publishing contract captured</p><pre>[
+  {
+    &quot;label&quot;: &quot;Publish&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 150,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  }
+]</pre></section><section id="branches"><h2>branches</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;Back&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 40,
+    &quot;height&quot;: 50,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(136, 136, 136)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;0px&quot;,
+      &quot;padding&quot;: &quot;0px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Close&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 40,
+    &quot;height&quot;: 50,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(136, 136, 136)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;0px&quot;,
+      &quot;padding&quot;: &quot;0px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Upgrade&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 240,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  }
+]</pre></section><section id="skill-editor"><h2>skill-editor</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;Link&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 30,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;5px&quot;,
+      &quot;padding&quot;: &quot;0px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Bold&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 30,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;5px&quot;,
+      &quot;padding&quot;: &quot;0px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Italic&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 30,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;5px&quot;,
+      &quot;padding&quot;: &quot;0px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Blockquote&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 30,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;5px&quot;,
+      &quot;padding&quot;: &quot;0px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Numbered list&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 30,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;5px&quot;,
+      &quot;padding&quot;: &quot;0px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Bulleted list&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 30,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;5px&quot;,
+      &quot;padding&quot;: &quot;0px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Code&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 30,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;5px&quot;,
+      &quot;padding&quot;: &quot;0px&quot;
+    }
+  }
+]</pre></section><section id="usage-period"><h2>usage-period</h2><p>Selected visible DOM controls only, not a complete document</p><pre>[
+  {
+    &quot;label&quot;: &quot;October 2026&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 117.3359375,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px 1px&quot;
+    }
+  }
+]</pre></section><section id="editor-toolbar"><h2>editor-toolbar</h2><p>Selected editor and navigation controls. No canvas DOM or provider handlers recovered</p><pre>[
+  {
+    &quot;label&quot;: &quot;Pages&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 57.8125,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Layers&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 60.765625,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Assets&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 60.484375,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 10px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Canvas&quot;,
+    &quot;tag&quot;: &quot;BUTTON&quot;,
+    &quot;role&quot;: null,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 93.515625,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;13px&quot;,
+      &quot;color&quot;: &quot;rgb(255, 255, 255)&quot;,
+      &quot;background&quot;: &quot;rgb(31, 31, 31)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 8px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Insert&quot;,
+    &quot;tag&quot;: &quot;DIV&quot;,
+    &quot;role&quot;: &quot;button&quot;,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 29.5,
+    &quot;height&quot;: 29.5,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 6px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Layout&quot;,
+    &quot;tag&quot;: &quot;DIV&quot;,
+    &quot;role&quot;: &quot;button&quot;,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 30,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 6px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Text&quot;,
+    &quot;tag&quot;: &quot;DIV&quot;,
+    &quot;role&quot;: &quot;button&quot;,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 29.5,
+    &quot;height&quot;: 29.5,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 6px&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Vector&quot;,
+    &quot;tag&quot;: &quot;DIV&quot;,
+    &quot;role&quot;: &quot;button&quot;,
+    &quot;disabled&quot;: false,
+    &quot;width&quot;: 30,
+    &quot;height&quot;: 30,
+    &quot;css&quot;: {
+      &quot;fontSize&quot;: &quot;12px&quot;,
+      &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;,
+      &quot;background&quot;: &quot;rgba(0, 0, 0, 0)&quot;,
+      &quot;radius&quot;: &quot;8px&quot;,
+      &quot;padding&quot;: &quot;0px 6px&quot;
+    }
+  }
+]</pre></section><section id="markup"><h2>Markup and skill fields</h2><pre>{
+  &quot;markup&quot;: [
+    {
+      &quot;state&quot;: &quot;quick-actions&quot;,
+      &quot;outerHTML&quot;: &quot;&lt;span class=\&quot;r1fyybpx\&quot;&gt;Browse plugins&lt;/span&gt;&quot;,
+      &quot;tag&quot;: &quot;SPAN&quot;,
+      &quot;role&quot;: null,
+      &quot;ancestorTag&quot;: &quot;DIV&quot;,
+      &quot;ancestorRole&quot;: null,
+      &quot;css&quot;: {
+        &quot;fontSize&quot;: &quot;12px&quot;,
+        &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;
+      }
+    },
+    {
+      &quot;state&quot;: &quot;plugins&quot;,
+      &quot;outerHTML&quot;: &quot;&lt;span class=\&quot;r1fyybpx\&quot;&gt;Google Sheets&lt;/span&gt;&quot;,
+      &quot;tag&quot;: &quot;SPAN&quot;,
+      &quot;role&quot;: null,
+      &quot;ancestorTag&quot;: &quot;DIV&quot;,
+      &quot;ancestorRole&quot;: null,
+      &quot;css&quot;: {
+        &quot;fontSize&quot;: &quot;12px&quot;,
+        &quot;color&quot;: &quot;rgb(153, 153, 153)&quot;
+      }
+    }
+  ],
+  &quot;fields&quot;: [
+    {
+      &quot;tag&quot;: &quot;INPUT&quot;,
+      &quot;id&quot;: &quot;skill-title-undefined&quot;,
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;readOnly&quot;: true,
+      &quot;disabled&quot;: false
+    },
+    {
+      &quot;tag&quot;: &quot;TEXTAREA&quot;,
+      &quot;id&quot;: &quot;skill-description-undefined&quot;,
+      &quot;readOnly&quot;: true,
+      &quot;disabled&quot;: false
+    },
+    {
+      &quot;tag&quot;: &quot;DIV&quot;,
+      &quot;contenteditable&quot;: &quot;true&quot;,
+      &quot;readOnly&quot;: false,
+      &quot;disabled&quot;: false
+    }
+  ]
+}</pre></section><section id="network"><h2>Sanitized network metadata · 76 events</h2><pre>[
+  {
+    &quot;event&quot;: &quot;Network.requestWillBeSent&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;url&quot;: &quot;https://api.framer.com/auth/web/access-token&quot;,
+    &quot;status&quot;: null,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      632
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.responseReceived&quot;,
+    &quot;method&quot;: null,
+    &quot;url&quot;: &quot;https://api.framer.com/auth/web/access-token&quot;,
+    &quot;status&quot;: 200,
+    &quot;mime&quot;: &quot;application/json&quot;,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      635
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.requestWillBeSent&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;url&quot;: &quot;https://api.framer.com/web/projects/[redacted-id]/threads/&quot;,
+    &quot;status&quot;: null,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      683
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.responseReceived&quot;,
+    &quot;method&quot;: null,
+    &quot;url&quot;: &quot;https://api.framer.com/web/projects/[redacted-id]/threads/&quot;,
+    &quot;status&quot;: 200,
+    &quot;mime&quot;: &quot;application/json&quot;,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      686
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.requestWillBeSent&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;url&quot;: &quot;https://api.framer.com/web/projects/licenses/settings&quot;,
+    &quot;status&quot;: null,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      710,
+      742
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.responseReceived&quot;,
+    &quot;method&quot;: null,
+    &quot;url&quot;: &quot;https://api.framer.com/web/projects/licenses/settings&quot;,
+    &quot;status&quot;: 200,
+    &quot;mime&quot;: &quot;application/json&quot;,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      745
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.requestWillBeSent&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;url&quot;: &quot;https://api.framer.com/web/v3/teams/[redacted-id]/subscription&quot;,
+    &quot;status&quot;: null,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      711
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.responseReceived&quot;,
+    &quot;method&quot;: null,
+    &quot;url&quot;: &quot;https://api.framer.com/web/v3/teams/[redacted-id]/subscription&quot;,
+    &quot;status&quot;: 200,
+    &quot;mime&quot;: &quot;application/json&quot;,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      739
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.requestWillBeSent&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;url&quot;: &quot;https://api.framer.com/web/v2/projects/[redacted-id]/subscription&quot;,
+    &quot;status&quot;: null,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      712
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.responseReceived&quot;,
+    &quot;method&quot;: null,
+    &quot;url&quot;: &quot;https://api.framer.com/web/v2/projects/[redacted-id]/subscription&quot;,
+    &quot;status&quot;: 200,
+    &quot;mime&quot;: &quot;application/json&quot;,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      727
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.requestWillBeSent&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;url&quot;: &quot;https://api.framer.com/web/teams/[redacted-id]/ai-usage&quot;,
+    &quot;status&quot;: null,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      828,
+      830
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.responseReceived&quot;,
+    &quot;method&quot;: null,
+    &quot;url&quot;: &quot;https://api.framer.com/web/teams/[redacted-id]/ai-usage&quot;,
+    &quot;status&quot;: 200,
+    &quot;mime&quot;: &quot;application/json&quot;,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      844
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.requestWillBeSent&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;url&quot;: &quot;https://api.framer.com/web/v2/teams/[redacted-id]/rewrite-origins&quot;,
+    &quot;status&quot;: null,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      894
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.responseReceived&quot;,
+    &quot;method&quot;: null,
+    &quot;url&quot;: &quot;https://api.framer.com/web/v2/teams/[redacted-id]/rewrite-origins&quot;,
+    &quot;status&quot;: 200,
+    &quot;mime&quot;: &quot;application/json&quot;,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      905
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.requestWillBeSent&quot;,
+    &quot;method&quot;: &quot;OPTIONS&quot;,
+    &quot;url&quot;: &quot;https://api.framer.com/web/v3/teams/[redacted-id]/subscription&quot;,
+    &quot;status&quot;: null,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Other&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      714
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.responseReceived&quot;,
+    &quot;method&quot;: null,
+    &quot;url&quot;: &quot;https://api.framer.com/web/v3/teams/[redacted-id]/subscription&quot;,
+    &quot;status&quot;: 204,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Preflight&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      723
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.loadingFailed&quot;,
+    &quot;method&quot;: null,
+    &quot;url&quot;: &quot;&quot;,
+    &quot;status&quot;: null,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: &quot;net::ERR_ABORTED&quot;,
+    &quot;sequences&quot;: [
+      713,
+      832
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.requestWillBeSent&quot;,
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;url&quot;: &quot;https://events.framer.com/track&quot;,
+    &quot;status&quot;: null,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      647,
+      748,
+      848,
+      876,
+      910,
+      939,
+      968,
+      996,
+      1024
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.responseReceived&quot;,
+    &quot;method&quot;: null,
+    &quot;url&quot;: &quot;https://events.framer.com/track&quot;,
+    &quot;status&quot;: 200,
+    &quot;mime&quot;: &quot;application/json&quot;,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      650,
+      751,
+      851,
+      879,
+      913,
+      943,
+      971,
+      999,
+      1027
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.requestWillBeSent&quot;,
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;url&quot;: &quot;https://o20425.ingest.sentry.io/api/1860728/envelope/&quot;,
+    &quot;status&quot;: null,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      703,
+      704,
+      799,
+      800,
+      821,
+      822,
+      859,
+      860,
+      887,
+      888,
+      920,
+      921,
+      949,
+      950,
+      977,
+      978,
+      1007,
+      1008
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.responseReceived&quot;,
+    &quot;method&quot;: null,
+    &quot;url&quot;: &quot;https://o20425.ingest.sentry.io/api/1860728/envelope/&quot;,
+    &quot;status&quot;: 200,
+    &quot;mime&quot;: &quot;application/json&quot;,
+    &quot;type&quot;: &quot;Fetch&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      732,
+      734,
+      810,
+      811,
+      835,
+      837,
+      870,
+      872,
+      899,
+      902,
+      932,
+      934,
+      959,
+      962,
+      988,
+      989,
+      1018,
+      1020
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.requestWillBeSent&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;url&quot;: &quot;https://app.framerstatic.com/[redacted-id].svg&quot;,
+    &quot;status&quot;: null,
+    &quot;mime&quot;: null,
+    &quot;type&quot;: &quot;Image&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      640
+    ]
+  },
+  {
+    &quot;event&quot;: &quot;Network.responseReceived&quot;,
+    &quot;method&quot;: null,
+    &quot;url&quot;: &quot;https://app.framerstatic.com/[redacted-id].svg&quot;,
+    &quot;status&quot;: 200,
+    &quot;mime&quot;: &quot;image/svg+xml&quot;,
+    &quot;type&quot;: &quot;Image&quot;,
+    &quot;error&quot;: null,
+    &quot;sequences&quot;: [
+      643
+    ]
+  }
+]</pre></section></html>

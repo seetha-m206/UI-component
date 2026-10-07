@@ -1,0 +1,80 @@
+{
+  "id": "framer-plugin-browser-palette",
+  "title": "Framer Plugin Browser Palette",
+  "kind": "plugins",
+  "location": "Quick actions > Browse plugins",
+  "observed_at": "2026-10-07",
+  "node": "m5",
+  "client": "Codex",
+  "source_origin": "Authenticated Framer in-app browser",
+  "capture_type": "Authored sanitized observation excerpts, not raw provider logs",
+  "observations": [
+    "Search field and marketplace Browse plugins entry.",
+    "Featured entries Google Sheets, Dither, CMS Export, Renamer, ASCII, Notion, Search Console, Phosphor, HubSpot, CSV Import, Redirect Sync, Code Versions.",
+    "Fictional unmatched query shows No search results, Create plugins and marketplace fallback. Escape returns to Quick actions, then editor."
+  ],
+  "fixtures": [
+    {
+      "id": "default",
+      "title": "OBSERVED structure: default",
+      "props": {
+        "kind": "plugins",
+        "initialState": "default"
+      }
+    },
+    {
+      "id": "empty",
+      "title": "OBSERVED structure: empty",
+      "props": {
+        "kind": "plugins",
+        "initialState": "empty"
+      }
+    },
+    {
+      "id": "disabled",
+      "title": "RECONSTRUCTION: disabled",
+      "props": {
+        "kind": "plugins",
+        "initialState": "disabled",
+        "disabled": true
+      }
+    }
+  ],
+  "limitations": [
+    "No plugin opened, installed or connected. Compatibility, data transfer and integrations remain unverified.",
+    "Provider screenshots remain session-only. No durable screenshot file or network trace is attached.",
+    "Local JSX, CSS, state changes and test results are reconstruction evidence, not provider implementation."
+  ],
+  "related": "framer-quick-actions-palette",
+  "action_trace": [
+    {
+      "element": "Browse plugins",
+      "action": "Open from Quick actions",
+      "result": "Featured searchable plugin list",
+      "evidence": "OBSERVED"
+    },
+    {
+      "element": "Search",
+      "action": "Type fictional unmatched query",
+      "result": "No search results and Create plugins/marketplace recovery",
+      "evidence": "OBSERVED"
+    },
+    {
+      "element": "Escape",
+      "action": "Press twice across stacked palettes",
+      "result": "Quick actions then editor",
+      "evidence": "OBSERVED"
+    },
+    {
+      "element": "Plugin tile or marketplace",
+      "action": "Not activated",
+      "result": "Installation and marketplace navigation unverified",
+      "evidence": "NEEDS VERIFICATION"
+    }
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Direct selected sample: markup",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

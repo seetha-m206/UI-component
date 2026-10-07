@@ -1,0 +1,67 @@
+{
+  "id": "framer-hosting-summary-row",
+  "title": "Framer Hosting Summary Row",
+  "kind": "row",
+  "location": "Headers > Default row",
+  "observed_at": "2026-10-07",
+  "node": "m5",
+  "client": "Codex",
+  "source_origin": "Authenticated Framer in-app browser",
+  "capture_type": "Authored sanitized observation excerpts, not raw provider logs",
+  "observations": [
+    "Path, Name, Value table header. Default row with 11 headers and 11 values.",
+    "Only summary counts inspected. No header names or value content captured."
+  ],
+  "fixtures": [
+    {
+      "id": "default",
+      "title": "OBSERVED structure: default",
+      "props": {
+        "kind": "row",
+        "initialState": "default"
+      }
+    },
+    {
+      "id": "information",
+      "title": "RECONSTRUCTION: information",
+      "props": {
+        "kind": "row",
+        "initialState": "information"
+      }
+    },
+    {
+      "id": "disabled",
+      "title": "RECONSTRUCTION: disabled",
+      "props": {
+        "kind": "row",
+        "initialState": "disabled",
+        "disabled": true
+      }
+    }
+  ],
+  "limitations": [
+    "Row expansion and editing are unverified. Local information feedback is a simulation.",
+    "Provider screenshots remain session-only. No durable screenshot file or network trace is attached.",
+    "Local JSX, CSS, state changes and test results are reconstruction evidence, not provider implementation."
+  ],
+  "related": "framer-hosting-headers-table",
+  "action_trace": [
+    {
+      "element": "Default summary row",
+      "action": "Inspected",
+      "result": "11 headers and 11 values only",
+      "evidence": "OBSERVED"
+    },
+    {
+      "element": "Expand or edit row",
+      "action": "Not used",
+      "result": "Names, values and editing outcome unverified",
+      "evidence": "NEEDS VERIFICATION"
+    }
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Parent screen Add-control sample only. Default row markup was not technically sampled",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

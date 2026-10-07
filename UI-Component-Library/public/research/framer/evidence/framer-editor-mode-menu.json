@@ -1,0 +1,34 @@
+{
+  "component_id": "framer-editor-mode-menu",
+  "title": "Framer Editor Mode Menu",
+  "provider": "Framer",
+  "observed_date": "2026-10-07",
+  "capture_method": "Authenticated in-app browser AX/DOM, safe visible action outcomes and session screenshots",
+  "provenance": "Sanitized authored observation excerpts from this chat. These are not raw AX logs or request traces.",
+  "reference_record": "framer-editor-application-shell",
+  "observation": {
+    "Location": "\n- **OBSERVED:** Existing blank project in Canvas mode.",
+    "Structure": "\n- **OBSERVED:** A top toolbar contains mode switcher, insertion and drawing tools, project/branch label, collaborator avatar, Preview, Invite, and Publish. Left rail hosts Pages, Layers, Assets. Center is a dark canvas with a white Desktop breakpoint. Right rail toggles Agent and Style. A floating bottom dock exposes select, pan, comment, theme, zoom, and upgrade.",
+    "Actions": "\n- **OBSERVED:** Pages/Layers/Assets \u2192 swap left-rail content. Canvas mode menu \u2192 offers Canvas, CMS, Localization, Analytics, Settings, dashboard, Quick actions, and utility submenus. Disabled items vary with the current mode.",
+    "Behavior & States": "\n- **OBSERVED:** Canvas loaded after a transient Loading\u2026 state. Blank Desktop was shown at 25% canvas zoom. Publish and Invite controls remained visible across modes. Their submission behavior was not tested.",
+    "Technical Data": "\n- **OBSERVED:** Observed outer application root and embedded canvas-sandbox iframe. The iframe host is a project-specific framercanvas.com subdomain. Its visible URL references api.framer.com, events.framer.com, framerusercontent.com, and framer.app service locations. These are URL observations, not verified request contracts.\n- **NEEDS VERIFICATION:** Internal JavaScript handlers, network request/response contracts, backend rules, exact timing, and error recovery were not inspected. Rendered DOM/AX observations do not establish those details.\n### Local implementation and accessibility\n\n- **RECONSTRUCTION / HTML:** Semantic React sections, native buttons, labelled inputs/selects, fieldsets, menus and status regions. No copied Framer source code.\n- **RECONSTRUCTION / CSS:** Scoped dark UI styling and container-responsive layout. Blue accents reflect observed styling but are not a recovered design-token system.\n- **RECONSTRUCTION / JavaScript:** In-memory React state, fixture remounting and local feedback. No external requests or credential handling.\n- **NEEDS VERIFICATION / Network:** No provider request/response trace. Service hostnames visible in original frame URLs are not verified API contracts.\n- **RECONSTRUCTION / Accessibility:** Local controls expose accessible names, selected/expanded state where applicable, disabled fieldsets, aria-labelled menus and live status feedback. Automated behavior tests and browser observations are local evidence.\n- **NEEDS VERIFICATION / Accessibility:** Provider screen-reader behavior, focus management and full WCAG conformance were not independently tested.",
+    "Verification Gaps": "\n- **NEEDS VERIFICATION:** Canvas rendering internals, request bodies, autosave, undo, multiplayer sync, actual publishing, and domain outcomes."
+  },
+  "fixture_states": [
+    "default",
+    "open",
+    "cms"
+  ],
+  "preview_route": "/framer/framer-editor-mode-menu",
+  "screenshot_status": "Provider captures exist in the session only. No durable provider image file is claimed.",
+  "limitations": [
+    "No backend/API contracts captured",
+    "No provider writes or paid outcomes tested",
+    "All preview rendering is fictional local reconstruction"
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Direct selected sample: editor-toolbar",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "framer-site-plan-comparison",
+  "title": "Framer Site Plan Comparison",
+  "kind": "plans",
+  "location": "settings:plans",
+  "observed_at": "2026-10-07",
+  "node": "m5",
+  "client": "Codex",
+  "source_origin": "Authenticated Framer in-app browser",
+  "capture_type": "Authored sanitized observation excerpts, not raw provider logs",
+  "observations": [
+    "Yearly default: Basic CA$14, Pro CA$41 per month billed yearly. Additional editors CA$27 per month.",
+    "Monthly switch: Basic CA$20, Pro CA$60, additional editors CA$40 per month. Restored yearly.",
+    "Basic: 1,000 monthly credits, 2 CMS collections, 50 GB bandwidth, 30 site pages, password protect, localization add-on.",
+    "Pro: everything in Basic, 3,000 credits, 10 CMS collections, 100 GB bandwidth, 150 site pages, Branching, Staging, A/B testing and Advanced hosting add-ons.",
+    "Free custom domain and 2x credits first month display Annual only in monthly view.",
+    "Enterprise Custom, Annual only, custom limits, unlimited editors, uptime guarantee, enterprise security, SOC 2 Type 2, ISO 27001, SCIM, SSO and Request trial."
+  ],
+  "fixtures": [
+    {
+      "id": "default",
+      "title": "OBSERVED structure: default",
+      "props": {
+        "kind": "plans",
+        "initialState": "default"
+      }
+    },
+    {
+      "id": "monthly",
+      "title": "OBSERVED structure: monthly",
+      "props": {
+        "kind": "plans",
+        "initialState": "monthly"
+      }
+    },
+    {
+      "id": "disabled",
+      "title": "RECONSTRUCTION: disabled",
+      "props": {
+        "kind": "plans",
+        "initialState": "disabled",
+        "disabled": true
+      }
+    }
+  ],
+  "limitations": [
+    "No Subscribe or Request trial action used. Prices are a CA$ UI snapshot from 2026-10-07, not a current offer or verified invoice.",
+    "Provider screenshots remain session-only. No durable screenshot file or network trace is attached.",
+    "Local JSX, CSS, state changes and test results are reconstruction evidence, not provider implementation."
+  ],
+  "related": "framer-plan-billing-interval",
+  "action_trace": [
+    {
+      "element": "Switch to monthly",
+      "action": "Click",
+      "result": "Basic CA$20, Pro CA$60, editors CA$40 and Annual only annotations",
+      "evidence": "OBSERVED"
+    },
+    {
+      "element": "Switch to yearly",
+      "action": "Click",
+      "result": "Basic CA$14, Pro CA$41, editors CA$27 restored",
+      "evidence": "OBSERVED"
+    },
+    {
+      "element": "Subscribe or Request trial",
+      "action": "Not used",
+      "result": "Checkout and trial outcome unverified",
+      "evidence": "NEEDS VERIFICATION"
+    }
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Direct selected sample: plans-yearly",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

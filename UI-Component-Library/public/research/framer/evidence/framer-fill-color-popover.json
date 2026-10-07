@@ -1,0 +1,79 @@
+{
+  "id": "framer-fill-color-popover",
+  "title": "Framer Fill Color Popover",
+  "kind": "color",
+  "location": "Selected breakpoint > Fill > FFFFFF",
+  "observed_at": "2026-10-07",
+  "node": "m5",
+  "client": "Codex",
+  "source_origin": "Authenticated Framer in-app browser",
+  "capture_type": "Authored sanitized observation excerpts, not raw provider logs",
+  "observations": [
+    "Fill floating container with Back and Close. Solid, Linear gradient, Radial gradient, Conic gradient and Image mode buttons.",
+    "FFFFFF value, Alpha 100%, HEX format selected with RGB, HSL, HEX and P3 options.",
+    "Sample color and New style actions. Inspected then closed without changing a provider value."
+  ],
+  "fixtures": [
+    {
+      "id": "default",
+      "title": "OBSERVED structure: default",
+      "props": {
+        "kind": "color",
+        "initialState": "default"
+      }
+    },
+    {
+      "id": "gradient",
+      "title": "RECONSTRUCTION: gradient",
+      "props": {
+        "kind": "color",
+        "initialState": "gradient"
+      }
+    },
+    {
+      "id": "closed",
+      "title": "OBSERVED structure: closed",
+      "props": {
+        "kind": "color",
+        "initialState": "closed"
+      }
+    }
+  ],
+  "limitations": [
+    "Gradient selection and all color edits are reconstructed states. Sampling, style saving and project application remain unverified.",
+    "Provider screenshots remain session-only. No durable screenshot file or network trace is attached.",
+    "Local JSX, CSS, state changes and test results are reconstruction evidence, not provider implementation."
+  ],
+  "related": "framer-breakpoint-dimension-field",
+  "action_trace": [
+    {
+      "element": "FFFFFF Fill value",
+      "action": "Click",
+      "result": "Fill picker with modes, value, alpha and formats",
+      "evidence": "OBSERVED"
+    },
+    {
+      "element": "HEX format",
+      "action": "Open",
+      "result": "RGB, HSL, HEX selected and P3 options",
+      "evidence": "OBSERVED"
+    },
+    {
+      "element": "Close",
+      "action": "Click",
+      "result": "Picker dismissed without changing project",
+      "evidence": "OBSERVED"
+    },
+    {
+      "element": "Mode, color, alpha, sampling and New style",
+      "action": "Not changed or activated",
+      "result": "Color application and saved style outcomes unverified",
+      "evidence": "NEEDS VERIFICATION"
+    }
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Direct selected sample: fill-popover",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

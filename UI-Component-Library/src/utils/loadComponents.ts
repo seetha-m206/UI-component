@@ -83,6 +83,13 @@ export function getBrandLabel(brand: string): string {
  * "Other" rather than being silently misgrouped or crashing.
  */
 const PRODUCT_GROUP_MAP: Record<string, string> = {
+  pipedrive: 'CRM & Sales',
+  freshsales: 'CRM & Sales',
+  'salesforce-sales-cloud': 'CRM & Sales',
+  duda: 'Website Builders',
+  framer: 'Website Builders',
+  hostinger: 'Website Builders',
+  wix: 'Website Builders',
   'zoho-desk': 'Customer Support / Helpdesk',
   'salesforce-service-cloud': 'Customer Support / Helpdesk',
   freshservice: 'Customer Support / Helpdesk',

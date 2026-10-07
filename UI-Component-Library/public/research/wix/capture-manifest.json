@@ -1,0 +1,984 @@
+{
+  "generated_at": "2026-10-07T10:28:53Z",
+  "provider": "Wix",
+  "capture_scope": "All registered fictional local Wix preview states",
+  "capture_type": "1600 x 1200 viewport with the Preview panel aligned to the viewport",
+  "provider_screenshot": false,
+  "component_count": 46,
+  "fixture_state_count": 51,
+  "capture_count": 51,
+  "unique_sha256_count": 51,
+  "selection_rule": "The exact registered fixture control was selected before capture. A missing fixture control aborted capture.",
+  "privacy_boundary": "Captures contain fictional local reconstruction data only. They are not authenticated Wix provider screenshots.",
+  "captures": [
+    {
+      "component_id": "wix-dashboard-application-shell",
+      "fixture_id": "default",
+      "fixture_title": "Observed shell",
+      "route": "/wix/wix-dashboard-application-shell",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-dashboard-application-shell--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-dashboard-application-shell--default.jpg",
+      "bytes": 184349,
+      "sha256": "2f8f9f51f00fc74c9cb05f60484f1836233d71aa157581c2d0e1534b66812a02",
+      "rendered_text_sha256": "6397fa7d20dc61652f5ae3913437b8f1e97b3ca656672d1ed4719d1614608293"
+    },
+    {
+      "component_id": "wix-setup-checklist",
+      "fixture_id": "default",
+      "fixture_title": "Observed checklist",
+      "route": "/wix/wix-setup-checklist",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-setup-checklist--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-setup-checklist--default.jpg",
+      "bytes": 195647,
+      "sha256": "94efad219347d31242d4436c3e550650df5f4ca744a8e0034077a6cabc6c9ee1",
+      "rendered_text_sha256": "8d6e5c77a10294e441ce04200f64c1ee430a71403fe6f4f17a305cba58c3193d"
+    },
+    {
+      "component_id": "wix-quick-actions-catalog",
+      "fixture_id": "default",
+      "fixture_title": "Observed catalogue",
+      "route": "/wix/wix-quick-actions-catalog",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-quick-actions-catalog--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-quick-actions-catalog--default.jpg",
+      "bytes": 191716,
+      "sha256": "c6316b91f42c40503f8487b111f49ee69e0d439bea16e0666c75345b0a222749",
+      "rendered_text_sha256": "15cb07d662f9c181d3fbd4bff889cca5feabc2336cd4f0d7c0965ebc0d51a921"
+    },
+    {
+      "component_id": "wix-analytics-highlights",
+      "fixture_id": "default",
+      "fixture_title": "Observed highlights",
+      "route": "/wix/wix-analytics-highlights",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-analytics-highlights--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-analytics-highlights--default.jpg",
+      "bytes": 190148,
+      "sha256": "8bec1ee67e4dae4f88e1708518a5e9d5d473c2e6b5a68caa452357c40e6ba440",
+      "rendered_text_sha256": "b8d8adc7576d0d5024904b2e92780f8403e974ed1701940a4446f39a8d6c238c"
+    },
+    {
+      "component_id": "wix-ai-site-design-entry",
+      "fixture_id": "default",
+      "fixture_title": "Observed entry screen",
+      "route": "/wix/wix-ai-site-design-entry",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-ai-site-design-entry--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-ai-site-design-entry--default.jpg",
+      "bytes": 185212,
+      "sha256": "eb41402dc287d02d70be92d6353fc22b1f8e8d5727d54acb854ad0d205508bca",
+      "rendered_text_sha256": "7241b9efb1706eb15aaaa1b359e4916066b5ca25c3718e9bdce0a5adc5c23241"
+    },
+    {
+      "component_id": "wix-template-gallery-and-responsive-preview",
+      "fixture_id": "default",
+      "fixture_title": "Observed gallery and preview",
+      "route": "/wix/wix-template-gallery-and-responsive-preview",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-template-gallery-and-responsive-preview--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-template-gallery-and-responsive-preview--default.jpg",
+      "bytes": 192982,
+      "sha256": "4dbb1440f5ace0e995f2d0693de8a0af178c03e7e63abbc3c4c1945614d01143",
+      "rendered_text_sha256": "91814fe07973b6397e4ab880f3fd0ed0b712d24a150f1d37964caa4938a376f4"
+    },
+    {
+      "component_id": "wix-realtime-analytics",
+      "fixture_id": "recent",
+      "fixture_title": "Visitors in last 30 minutes",
+      "route": "/wix/wix-realtime-analytics",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-realtime-analytics--recent.jpg",
+      "public_url": "/research/wix/fixtures/wix-realtime-analytics--recent.jpg",
+      "bytes": 185364,
+      "sha256": "6323f565a2bbf64e993b863e8f7a0667ef436a199d45ac895ade9ed26545e31e",
+      "rendered_text_sha256": "5f3d236d08eea5fd7e15111262c732ddfa1a864985fa3aad230f6cc1054186e9"
+    },
+    {
+      "component_id": "wix-realtime-analytics",
+      "fixture_id": "live",
+      "fixture_title": "Live visitors tab",
+      "route": "/wix/wix-realtime-analytics",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-realtime-analytics--live.jpg",
+      "public_url": "/research/wix/fixtures/wix-realtime-analytics--live.jpg",
+      "bytes": 184293,
+      "sha256": "e20a7d4fc39e759fe9ebe35d479462adab4e1dc8c3b287c6fb7d018a61c0a073",
+      "rendered_text_sha256": "e491167437dbfa7c65e07cf1ec6f10da59b1c75f6af1cc6dd22ce1cc51a1ac4b"
+    },
+    {
+      "component_id": "wix-traffic-overview",
+      "fixture_id": "default",
+      "fixture_title": "Observed overview",
+      "route": "/wix/wix-traffic-overview",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-traffic-overview--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-traffic-overview--default.jpg",
+      "bytes": 192045,
+      "sha256": "1005650ca971198f7e1c4bb65e3902344333fa37eff3e216cd86f298ddeeda61",
+      "rendered_text_sha256": "eaf6bbfd39158a47f020a0e66909e896d10ad2ff63e394aa0cc3f44def2910d4"
+    },
+    {
+      "component_id": "wix-traffic-overview",
+      "fixture_id": "date-open",
+      "fixture_title": "Date range open",
+      "route": "/wix/wix-traffic-overview",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-traffic-overview--date-open.jpg",
+      "public_url": "/research/wix/fixtures/wix-traffic-overview--date-open.jpg",
+      "bytes": 210922,
+      "sha256": "d6294fb84df7c28c80b6f31e2404834101094b4c8541c6c252a6c2c800347dca",
+      "rendered_text_sha256": "b902f00f41af3c34ed76ffe9f29aea008fe598c7e06565a737883e9911197f78"
+    },
+    {
+      "component_id": "wix-analytics-date-range",
+      "fixture_id": "open",
+      "fixture_title": "Observed open popover",
+      "route": "/wix/wix-analytics-date-range",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-analytics-date-range--open.jpg",
+      "public_url": "/research/wix/fixtures/wix-analytics-date-range--open.jpg",
+      "bytes": 192215,
+      "sha256": "447eaef0609fed7012e51bf15a7356b48b05070f151b884aa719e5aeb72b34c2",
+      "rendered_text_sha256": "0711f2566b6f6d84d12aed33ec0cbc4a1a82b5f2239741444d419ec07ef2032f"
+    },
+    {
+      "component_id": "wix-seo-geo-overview",
+      "fixture_id": "default",
+      "fixture_title": "Observed overview",
+      "route": "/wix/wix-seo-geo-overview",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-seo-geo-overview--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-seo-geo-overview--default.jpg",
+      "bytes": 198336,
+      "sha256": "c57ce1380df905a9e9463f4798bcb1999bcfe538fe98df34f8a76b6901ca4c7b",
+      "rendered_text_sha256": "a537eeddedf340e25ed1b1d14e258817cf351979e5d4a3ebf9e3452a874c2d4b"
+    },
+    {
+      "component_id": "wix-seo-geo-overview",
+      "fixture_id": "help-open",
+      "fixture_title": "Help menu open",
+      "route": "/wix/wix-seo-geo-overview",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-seo-geo-overview--help-open.jpg",
+      "public_url": "/research/wix/fixtures/wix-seo-geo-overview--help-open.jpg",
+      "bytes": 201355,
+      "sha256": "f8aae2e2ec4572c603efabfe8c36a1607e5e0c328286bae959f9936b846e622b",
+      "rendered_text_sha256": "dfae2e99bbca154e1537ec9605ba3e8a3b15b00f5c0c936fd558af71b4b0e8e3"
+    },
+    {
+      "component_id": "wix-seo-help-menu",
+      "fixture_id": "open",
+      "fixture_title": "Observed menu open",
+      "route": "/wix/wix-seo-help-menu",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-seo-help-menu--open.jpg",
+      "public_url": "/research/wix/fixtures/wix-seo-help-menu--open.jpg",
+      "bytes": 201302,
+      "sha256": "81ff17360944cd264eed2098538885da09c1ae2d22893a35a71f32260412b472",
+      "rendered_text_sha256": "dfae2e99bbca154e1537ec9605ba3e8a3b15b00f5c0c936fd558af71b4b0e8e3"
+    },
+    {
+      "component_id": "wix-contacts-workspace",
+      "fixture_id": "default",
+      "fixture_title": "Fictional contact list",
+      "route": "/wix/wix-contacts-workspace",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-contacts-workspace--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-contacts-workspace--default.jpg",
+      "bytes": 190833,
+      "sha256": "c83868157b8fffe9ee31921a3fdc39c82c92f386b3b1ca5415ccbd47ce69bccf",
+      "rendered_text_sha256": "b3500938b3ad5508b19395a8cb949755c82967e85fa09f297eb81b0393b24995"
+    },
+    {
+      "component_id": "wix-contacts-workspace",
+      "fixture_id": "create-open",
+      "fixture_title": "Create menu open",
+      "route": "/wix/wix-contacts-workspace",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-contacts-workspace--create-open.jpg",
+      "public_url": "/research/wix/fixtures/wix-contacts-workspace--create-open.jpg",
+      "bytes": 193531,
+      "sha256": "5b9c02f4ed24f67e3e2b66de890e9703f887ae9e0d07d790c64a8803d94e755a",
+      "rendered_text_sha256": "6088167ec29dba0337019b4ef3e46d16037d652fab64d4c307078e6057c11101"
+    },
+    {
+      "component_id": "wix-contact-create-menu",
+      "fixture_id": "open",
+      "fixture_title": "Observed action choices",
+      "route": "/wix/wix-contact-create-menu",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-contact-create-menu--open.jpg",
+      "public_url": "/research/wix/fixtures/wix-contact-create-menu--open.jpg",
+      "bytes": 193892,
+      "sha256": "d79f219e6110b516e65b0d484844215ab375a15df328117468c574079bf37d5f",
+      "rendered_text_sha256": "6088167ec29dba0337019b4ef3e46d16037d652fab64d4c307078e6057c11101"
+    },
+    {
+      "component_id": "wix-manage-apps",
+      "fixture_id": "default",
+      "fixture_title": "Observed app list",
+      "route": "/wix/wix-manage-apps",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-manage-apps--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-manage-apps--default.jpg",
+      "bytes": 195357,
+      "sha256": "2e1c86270b722d40bce2ab0dbd4b55bdac8d96623b168e5178ff5c12663dd315",
+      "rendered_text_sha256": "85271a7ee85020dd18b66d51b5c00c180acaabeea3e4ef5325887970af7c9340"
+    },
+    {
+      "component_id": "wix-manage-apps",
+      "fixture_id": "drawer-open",
+      "fixture_title": "App actions open",
+      "route": "/wix/wix-manage-apps",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-manage-apps--drawer-open.jpg",
+      "public_url": "/research/wix/fixtures/wix-manage-apps--drawer-open.jpg",
+      "bytes": 206248,
+      "sha256": "735f5a45515c215c8aa28d69832a4bf6e2408d1b347ae91c5301452db1f40351",
+      "rendered_text_sha256": "bbb12d5bb39ece1aeae1de07ff5a4ce05a4d281e211e22633ae214a96a25574d"
+    },
+    {
+      "component_id": "wix-installed-app-actions-drawer",
+      "fixture_id": "open",
+      "fixture_title": "Observed drawer open",
+      "route": "/wix/wix-installed-app-actions-drawer",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-installed-app-actions-drawer--open.jpg",
+      "public_url": "/research/wix/fixtures/wix-installed-app-actions-drawer--open.jpg",
+      "bytes": 208256,
+      "sha256": "f3be02254b04cc5a61d537f1d05fc489fc023136cf51be7e92cf0f2c231c926c",
+      "rendered_text_sha256": "bbb12d5bb39ece1aeae1de07ff5a4ce05a4d281e211e22633ae214a96a25574d"
+    },
+    {
+      "component_id": "wix-behavior-overview",
+      "fixture_id": "default",
+      "fixture_title": "Observed overview",
+      "route": "/wix/wix-behavior-overview",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-behavior-overview--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-behavior-overview--default.jpg",
+      "bytes": 204098,
+      "sha256": "4b1c63c3a6a95bb14a1f3d73c0712715d80a760e1502f066791d4d3ffe04544d",
+      "rendered_text_sha256": "ff93d8416c2221b8de9efa4e5533adfd55d8fdc871cfc2ea00aae2a503af0e04"
+    },
+    {
+      "component_id": "wix-marketing-overview",
+      "fixture_id": "default",
+      "fixture_title": "Observed overview",
+      "route": "/wix/wix-marketing-overview",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-marketing-overview--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-marketing-overview--default.jpg",
+      "bytes": 216345,
+      "sha256": "123ee9fe6990f2a0ec1d4516217968c14d8541e95dd3003bf52ebba5b7b1256c",
+      "rendered_text_sha256": "c6c9b75885b203225f39c08e641c1906f9a8511f313184b34a5b23d50ab627b6"
+    },
+    {
+      "component_id": "wix-session-recordings-gate",
+      "fixture_id": "default",
+      "fixture_title": "Observed upgrade gate",
+      "route": "/wix/wix-session-recordings-gate",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-session-recordings-gate--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-session-recordings-gate--default.jpg",
+      "bytes": 197215,
+      "sha256": "6260327e59ff8a7af3b67d99bb773d964c9d3a4fb91bca9c0eb9105c5b77eb36",
+      "rendered_text_sha256": "a9f4ca0efd0c848eaeb77cf2a1b133281e1b81f53147839ae8479ddf0e59732f"
+    },
+    {
+      "component_id": "wix-insights-benchmarks",
+      "fixture_id": "default",
+      "fixture_title": "Observed analysis state",
+      "route": "/wix/wix-insights-benchmarks",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-insights-benchmarks--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-insights-benchmarks--default.jpg",
+      "bytes": 180200,
+      "sha256": "3a2dd117c21c0d27ae14154ea04044759972777317883271c2e15a1c64d528f1",
+      "rendered_text_sha256": "39a5e5a4660e51aecc131a40f847f32c9f7460744140a369ae5b7f8b6a928362"
+    },
+    {
+      "component_id": "wix-home-dashboard",
+      "fixture_id": "default",
+      "fixture_title": "Observed dashboard",
+      "route": "/wix/wix-home-dashboard",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-home-dashboard--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-home-dashboard--default.jpg",
+      "bytes": 186627,
+      "sha256": "b7989f99b2032fde3bfe3170ce9eab70f75a63bea34ca80387641f8c19c78225",
+      "rendered_text_sha256": "6397fa7d20dc61652f5ae3913437b8f1e97b3ca656672d1ed4719d1614608293"
+    },
+    {
+      "component_id": "wix-inbox-setup",
+      "fixture_id": "default",
+      "fixture_title": "Observed setup state",
+      "route": "/wix/wix-inbox-setup",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-inbox-setup--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-inbox-setup--default.jpg",
+      "bytes": 178462,
+      "sha256": "ed654aa81cf2618f374ddb9cbb82ae6a23e0b710bffa2475fdf1528c73525072",
+      "rendered_text_sha256": "c10ceba8d25cde52912f608b5ed3d9bcca9afdf6fa420f3703cc961651c2f1f6"
+    },
+    {
+      "component_id": "wix-automations-workspace",
+      "fixture_id": "default",
+      "fixture_title": "Observed workspace",
+      "route": "/wix/wix-automations-workspace",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-automations-workspace--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-automations-workspace--default.jpg",
+      "bytes": 188388,
+      "sha256": "26f540f4c41f46a3c6784cbaebd072b8054c273a0e53aa22947b74247871f344",
+      "rendered_text_sha256": "8c4bcf7570e8f82932ab68039df7115c28e4a76f7b76ce3d805186947c170fd5"
+    },
+    {
+      "component_id": "wix-forms-submissions",
+      "fixture_id": "default",
+      "fixture_title": "Observed workspace",
+      "route": "/wix/wix-forms-submissions",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-forms-submissions--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-forms-submissions--default.jpg",
+      "bytes": 189029,
+      "sha256": "34d4e2c2be913ef867a5e7489000503b85e5fd631a6497d55683bc14c5c26b87",
+      "rendered_text_sha256": "7cab589589d0eda91d7cbaf126210f071fc19c8370982feed2352a1ac2d4c3e4"
+    },
+    {
+      "component_id": "wix-website-overview-and-utility-menus",
+      "fixture_id": "default",
+      "fixture_title": "Observed overview",
+      "route": "/wix/wix-website-overview-and-utility-menus",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-website-overview-and-utility-menus--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-website-overview-and-utility-menus--default.jpg",
+      "bytes": 185770,
+      "sha256": "e8f9647de993471a99c2a3b1bb9b03dc38c518f4206ad6ad60f147653125682c",
+      "rendered_text_sha256": "a093d1c924abdff990dcdddd5b1202f7aba78a84a5d127f6cb040603a1d2785e"
+    },
+    {
+      "component_id": "wix-site-speed-analysis",
+      "fixture_id": "default",
+      "fixture_title": "Observed analysis state",
+      "route": "/wix/wix-site-speed-analysis",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-site-speed-analysis--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-site-speed-analysis--default.jpg",
+      "bytes": 166875,
+      "sha256": "806febe2e3082eadfc9593ccd1248ef7646f58762d3f47a4f83db72f06dd978d",
+      "rendered_text_sha256": "9dd7477e0abc4a7bd347c0f66a3e7094a2d0750405297deec6bf5df4c0e9180b"
+    },
+    {
+      "component_id": "wix-uptime-security-gate",
+      "fixture_id": "default",
+      "fixture_title": "Observed publish gate",
+      "route": "/wix/wix-uptime-security-gate",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-uptime-security-gate--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-uptime-security-gate--default.jpg",
+      "bytes": 169455,
+      "sha256": "24e988777c9d32e47aab7a924f23c0f742f35fc491a52b109197b6203bc7e5bf",
+      "rendered_text_sha256": "ba3a3e96032e1753368521c00ba09dd7903c1bebeb9b442015f48e28fb7a6f31"
+    },
+    {
+      "component_id": "wix-mobile-app-overview",
+      "fixture_id": "default",
+      "fixture_title": "Observed workspace",
+      "route": "/wix/wix-mobile-app-overview",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-mobile-app-overview--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-mobile-app-overview--default.jpg",
+      "bytes": 200179,
+      "sha256": "b80a2d1ff04bef022130ffadec82a89a30bdc43ebf6d27414f0496be5af477f6",
+      "rendered_text_sha256": "7541c7a943ccb5205f8c635f71cd9972ca678b4dcbe63805b97fde8723b514d2"
+    },
+    {
+      "component_id": "wix-symphony-agent-entry",
+      "fixture_id": "default",
+      "fixture_title": "Observed entry screen",
+      "route": "/wix/wix-symphony-agent-entry",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-symphony-agent-entry--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-symphony-agent-entry--default.jpg",
+      "bytes": 195892,
+      "sha256": "42ca2862fa4a5afe0d85785bac7960a23bfb11f314713c16eaa75a49fda857e0",
+      "rendered_text_sha256": "c47c0d1755b8b165daf9824893f76e16dc71d6023c9b084cc2489494c2173c23"
+    },
+    {
+      "component_id": "wix-design-agent-entry",
+      "fixture_id": "default",
+      "fixture_title": "Observed entry screen",
+      "route": "/wix/wix-design-agent-entry",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-design-agent-entry--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-design-agent-entry--default.jpg",
+      "bytes": 188991,
+      "sha256": "dac17d98f97bf28c1d3ad1824dd8f494eb771548f227bdb289ab570b1b8fea33",
+      "rendered_text_sha256": "f9dba1953e40c2d981ac8fc6f92b125559042e492f157fcc5d3c799913960eb4"
+    },
+    {
+      "component_id": "wix-getting-paid-overview",
+      "fixture_id": "default",
+      "fixture_title": "Observed setup screen",
+      "route": "/wix/wix-getting-paid-overview",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-getting-paid-overview--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-getting-paid-overview--default.jpg",
+      "bytes": 190408,
+      "sha256": "b631b892f70f82f5cd37fa59b427262290f96ea92f2e34b23d1bead00d78b207",
+      "rendered_text_sha256": "fb151885fbc081f240b2dd4237328e372371fc2e54642635fd91fc7e32919d2e"
+    },
+    {
+      "component_id": "wix-payments-plan-gate",
+      "fixture_id": "default",
+      "fixture_title": "Observed upgrade gate",
+      "route": "/wix/wix-payments-plan-gate",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-payments-plan-gate--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-payments-plan-gate--default.jpg",
+      "bytes": 174217,
+      "sha256": "f1636cb17f3abe9d96437b8727ada713a53a230b7f48bcd1a1924628c26322c0",
+      "rendered_text_sha256": "bb78dadcd3dee876c0eca32e5d691b1fe94827cf5e45e6f7fdc03eebe19f68ae"
+    },
+    {
+      "component_id": "wix-receipts-empty-state",
+      "fixture_id": "default",
+      "fixture_title": "Observed empty state",
+      "route": "/wix/wix-receipts-empty-state",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-receipts-empty-state--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-receipts-empty-state--default.jpg",
+      "bytes": 174353,
+      "sha256": "3b72f7fa2561fd3f2194d748c9a6af02d64bad5ef594699bf733119d11af8d5e",
+      "rendered_text_sha256": "9993dffaeea431d05a1fb0badf54d2c427d6b2c7bcd2f14c8b8bbb3434d53de9"
+    },
+    {
+      "component_id": "wix-point-of-sale-entry",
+      "fixture_id": "default",
+      "fixture_title": "Observed setup entry",
+      "route": "/wix/wix-point-of-sale-entry",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-point-of-sale-entry--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-point-of-sale-entry--default.jpg",
+      "bytes": 185342,
+      "sha256": "35a55222c607f63724dc75a6838f91a11c273dbee8638fd3e9db1b92eb5ef142",
+      "rendered_text_sha256": "afab93e38fd1065b79e7e37d4571ee29e89cb63894c97aa929918d4bc35adf94"
+    },
+    {
+      "component_id": "wix-settings-and-seo-workspace",
+      "fixture_id": "default",
+      "fixture_title": "Observed settings overview",
+      "route": "/wix/wix-settings-and-seo-workspace",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-settings-and-seo-workspace--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-settings-and-seo-workspace--default.jpg",
+      "bytes": 204603,
+      "sha256": "2f3e4f80d654f2010c736ce5afb129d225e02b47dbc424d796a75e081cfa2337",
+      "rendered_text_sha256": "1db5582e9b62113ca0c6f5a14f2e402c6ed1780a952d3ee19db8a59c13d8f8cd"
+    },
+    {
+      "component_id": "wix-app-market-entry",
+      "fixture_id": "default",
+      "fixture_title": "Observed featured entry",
+      "route": "/wix/wix-app-market-entry",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-app-market-entry--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-app-market-entry--default.jpg",
+      "bytes": 178652,
+      "sha256": "09e139b78e7ff802b956429ee6443f158bfb580f2312d6814f919d904c296c84",
+      "rendered_text_sha256": "4f124007528efeacdb6c953171346d345907b532c4512749fa9454cd690a0606"
+    },
+    {
+      "component_id": "wix-marketing-agent-loading",
+      "fixture_id": "loading",
+      "fixture_title": "Observed bounded loading state",
+      "route": "/wix/wix-marketing-agent-loading",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-marketing-agent-loading--loading.jpg",
+      "public_url": "/research/wix/fixtures/wix-marketing-agent-loading--loading.jpg",
+      "bytes": 180527,
+      "sha256": "ed737557fec5401dfa44b6ac7008250343cd720c7d0b3831aec9dc3034babb36",
+      "rendered_text_sha256": "ab398fa82219c3cb265261ee829f87d4dfa21eef0a71b4bf464dbbe5115fabfa"
+    },
+    {
+      "component_id": "wix-portfolio-projects-loading",
+      "fixture_id": "loading",
+      "fixture_title": "Observed bounded loading state",
+      "route": "/wix/wix-portfolio-projects-loading",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-portfolio-projects-loading--loading.jpg",
+      "public_url": "/research/wix/fixtures/wix-portfolio-projects-loading--loading.jpg",
+      "bytes": 178000,
+      "sha256": "24053844f76a277eb36c5d7a134652e6e6410f77be418bc5a2d5ebe037136b6a",
+      "rendered_text_sha256": "42078d0c2d4ba86bc2ff38a98dcb47b3d18e048fc75fcace5bc54cbd99339c91"
+    },
+    {
+      "component_id": "wix-portfolio-collections-loading",
+      "fixture_id": "loading",
+      "fixture_title": "Observed bounded loading state",
+      "route": "/wix/wix-portfolio-collections-loading",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-portfolio-collections-loading--loading.jpg",
+      "public_url": "/research/wix/fixtures/wix-portfolio-collections-loading--loading.jpg",
+      "bytes": 179527,
+      "sha256": "8ad73d5437cacc072fdf0a6f616f71a5d08b59d3c5f589ce02be529a0c84a751",
+      "rendered_text_sha256": "6d3aba843b9c41faac2aacac95f4a933301c1969307598564f9a3a7289326382"
+    },
+    {
+      "component_id": "wix-portfolio-integrations-loading",
+      "fixture_id": "loading",
+      "fixture_title": "Observed bounded loading state",
+      "route": "/wix/wix-portfolio-integrations-loading",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-portfolio-integrations-loading--loading.jpg",
+      "public_url": "/research/wix/fixtures/wix-portfolio-integrations-loading--loading.jpg",
+      "bytes": 179475,
+      "sha256": "1f9def26e873fd245ed6dab218244cfb07bc95d6af992962c7d1d360795d5556",
+      "rendered_text_sha256": "681dedd6d445ef9f5ad01082b1b61bf142de2e9b70e7899626003d1e67ce0fac"
+    },
+    {
+      "component_id": "wix-logo-brand-loading",
+      "fixture_id": "loading",
+      "fixture_title": "Observed bounded loading state",
+      "route": "/wix/wix-logo-brand-loading",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-logo-brand-loading--loading.jpg",
+      "public_url": "/research/wix/fixtures/wix-logo-brand-loading--loading.jpg",
+      "bytes": 175955,
+      "sha256": "cab32be67e9fcccf4f0cb731e75fcb482d7c4d89c029e87e7e7ce21c28dbfcb1",
+      "rendered_text_sha256": "d1299cf91a2e5e82861957c8f009e53afbc7e10ed5f94cddfe51de5a5054c3dd"
+    },
+    {
+      "component_id": "wix-hopp-loading",
+      "fixture_id": "loading",
+      "fixture_title": "Observed bounded loading state",
+      "route": "/wix/wix-hopp-loading",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-hopp-loading--loading.jpg",
+      "public_url": "/research/wix/fixtures/wix-hopp-loading--loading.jpg",
+      "bytes": 176417,
+      "sha256": "4ec1d8f5b970dd832fff13d84b8f31871b85779e0271bc8ab52b9149f92c1006",
+      "rendered_text_sha256": "a0d2fa67de277eca462ef7a3ba75850fd852b6030bf5b286c534985920442f51"
+    },
+    {
+      "component_id": "wix-all-reports-loading",
+      "fixture_id": "loading",
+      "fixture_title": "Observed bounded loading state",
+      "route": "/wix/wix-all-reports-loading",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-all-reports-loading--loading.jpg",
+      "public_url": "/research/wix/fixtures/wix-all-reports-loading--loading.jpg",
+      "bytes": 179109,
+      "sha256": "93fda66a4a5497dd96496b255df41effe105b59b5a2f44dc42f00427b4699883",
+      "rendered_text_sha256": "07da4f1398b3fc806bfd84faac3a0faabf46d7e2834c0ade204bfffae93b378e"
+    },
+    {
+      "component_id": "wix-sales-overview-loading",
+      "fixture_id": "loading",
+      "fixture_title": "Observed bounded loading state",
+      "route": "/wix/wix-sales-overview-loading",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-sales-overview-loading--loading.jpg",
+      "public_url": "/research/wix/fixtures/wix-sales-overview-loading--loading.jpg",
+      "bytes": 177467,
+      "sha256": "70916d458c7e67217586432ebe70d88fe05949deb6723485f9acd5c2adc7f861",
+      "rendered_text_sha256": "36f9b38dee39a36f43ddd886c1f002619db5f6de721bedab545e70040faf697e"
+    },
+    {
+      "component_id": "wix-catalog-loading",
+      "fixture_id": "loading",
+      "fixture_title": "Observed bounded loading state",
+      "route": "/wix/wix-catalog-loading",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-catalog-loading--loading.jpg",
+      "public_url": "/research/wix/fixtures/wix-catalog-loading--loading.jpg",
+      "bytes": 175692,
+      "sha256": "64d0cf24d0f870c5c43b0b4345d3438534b1c212534057a87e211d492033eb1a",
+      "rendered_text_sha256": "4f0f294fca837ba87d8c5b9c19f060851f6a2dfd00572291e7b7f1348ca694b9"
+    },
+    {
+      "component_id": "wix-pos-checkout-entry",
+      "fixture_id": "default",
+      "fixture_title": "Observed setup entry",
+      "route": "/wix/wix-pos-checkout-entry",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-pos-checkout-entry--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-pos-checkout-entry--default.jpg",
+      "bytes": 183439,
+      "sha256": "0a3fb0cf4338cdff6e6c10997f61f8d340cda95d69915e7ae5d4ae656f813656",
+      "rendered_text_sha256": "b742f183b3fde050c71bb7348bf4a4f60fc6661a2aabd020b19bfc1d032eec4e"
+    },
+    {
+      "component_id": "wix-business-email-domain-gate",
+      "fixture_id": "default",
+      "fixture_title": "Observed domain gate",
+      "route": "/wix/wix-business-email-domain-gate",
+      "capture_type": "local reconstructed preview viewport",
+      "provider_screenshot": false,
+      "selected_state_verified": true,
+      "viewport": {
+        "width": 1600,
+        "height": 1200,
+        "device_scale_factor": 1
+      },
+      "file": "UI-Component-Library/public/research/wix/fixtures/wix-business-email-domain-gate--default.jpg",
+      "public_url": "/research/wix/fixtures/wix-business-email-domain-gate--default.jpg",
+      "bytes": 183546,
+      "sha256": "fc62b54a4b8386c464cc38bbd20d44048801ae9ed59158c4cf879b78dea33bcf",
+      "rendered_text_sha256": "a78ed5186cbe22ae3261e3db02725e3abf123020685f46eaf45765a7d7970445"
+    }
+  ]
+}

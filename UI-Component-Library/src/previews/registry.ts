@@ -1,3 +1,7 @@
+import { framerRemainingPreviews } from './framer-remaining/registry';
+import { dudaPreviews } from './duda-shared/registry';
+import { framerScreenPreviews } from './framer-screens/registry';
+import { framerPrimaryPreviews } from './framer-primary/registry';
 import { salesforcePreviews } from './salesforce-service-shared/registry';
 import { freshservicePreviews } from './freshservice-shared/registry';
 import { zendeskPreviews } from './zendesk/registry';
@@ -6,6 +10,12 @@ import { ubersuggestPreviews } from './ubersuggest-shared/registry';
 import { ubersuggestRemainingPreviews } from './ubersuggest-remaining/registry';
 import { otterlyPreviews } from './otterly/registry';
 import { hubspotPreviews } from './hubspot-shared/registry';
+import { hubspotSuitePreviews } from './hubspot-suite-shared/registry';
+import { pipedrivePreviews } from './pipedrive-shared/registry';
+import { freshsalesPreviews } from './freshsales-shared/registry';
+import { salesforceSalesPreviews } from './salesforce-sales-shared/registry';
+import { wixPreviews } from './wix-shared/registry';
+import { hostingerPreviews } from './hostinger-shared/registry';
 import { zohoDeskPreviews } from './zoho-desk-shared/registry';
 import { ToggleRadioSwitch } from './toggle-radio-switch/ToggleRadioSwitch';
 import { YesNoToggleField } from './yes-no-toggle-field/YesNoToggleField';
@@ -1337,6 +1347,11 @@ export const previewRegistry: PreviewRegistry = {
   ...writesonicPreviews,
   ...otterlyPreviews,
   ...hubspotPreviews,
+  ...hubspotSuitePreviews,
+  ...pipedrivePreviews,
+  ...freshsalesPreviews,
+  ...salesforceSalesPreviews,
+  ...wixPreviews,
   ...zohoDeskPreviews,
   ...ubersuggestPreviews,
   ...ubersuggestRemainingPreviews,
@@ -3846,3 +3861,13 @@ export const previewRegistry: PreviewRegistry = {
 
 // Salesforce-only addition. Preserve all pre-existing registry entries.
 Object.assign(previewRegistry, salesforcePreviews);
+
+Object.assign(previewRegistry, framerPrimaryPreviews);
+
+Object.assign(previewRegistry, hostingerPreviews);
+
+Object.assign(previewRegistry, framerScreenPreviews);
+
+Object.assign(previewRegistry, dudaPreviews);
+
+Object.assign(previewRegistry, framerRemainingPreviews);

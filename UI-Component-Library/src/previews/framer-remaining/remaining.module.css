@@ -1,0 +1,167 @@
+.root {
+  container-type: inline-size;
+  background: #111;
+  color: #eee;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 18px;
+  font:
+    13px/1.5 system-ui,
+    sans-serif;
+  color-scheme: dark;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.root * {
+  box-sizing: border-box;
+}
+.root fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.badge {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: #aaa;
+  border-bottom: 1px solid #333;
+  padding-bottom: 12px;
+}
+.root h2 {
+  font-size: 19px;
+}
+.root h3 {
+  font-size: 14px;
+}
+.root p,
+.root small {
+  color: #aaa;
+}
+.root button,
+.root input,
+.root textarea,
+.root select {
+  background: #232323;
+  color: #eee;
+  border: 1px solid #353535;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font: inherit;
+}
+.root button {
+  cursor: pointer;
+  margin: 3px;
+}
+.root button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.root button[aria-pressed='true'] {
+  border-color: #09f;
+  background: #263440;
+}
+.root :focus-visible {
+  outline: 2px solid #09f;
+  outline-offset: 3px;
+}
+.root label {
+  display: block;
+  min-width: 0;
+  flex: 1;
+}
+.root label input,
+.root textarea,
+.root select {
+  display: block;
+  width: 100%;
+  margin: 7px 0 12px;
+}
+.root textarea {
+  min-height: 95px;
+  resize: vertical;
+}
+.row,
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.toolbar {
+  justify-content: flex-start;
+  margin: 12px 0;
+}
+.panel {
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 14px 0;
+}
+.full {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.cards article {
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 16px;
+}
+.cards strong {
+  font-size: 26px;
+}
+.muted {
+  font-size: 11px;
+}
+.table {
+  overflow: auto;
+}
+.root table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+.root th,
+.root td {
+  border-bottom: 1px solid #333;
+  padding: 12px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.list button {
+  text-align: left;
+}
+.swatch {
+  height: 140px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+.notice {
+  color: #a5d3ff !important;
+  border-top: 1px solid #333;
+  padding-top: 12px;
+}
+@container (max-width:560px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .root .row {
+    gap: 8px;
+  }
+  .row label {
+    flex-basis: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "component_id": "framer-forms-performance-code-settings",
+  "title": "Framer Forms Performance and Code Settings",
+  "provider": "Framer",
+  "observed_date": "2026-10-07",
+  "capture_method": "Authenticated in-app browser AX/DOM, safe visible action outcomes and session screenshots",
+  "provenance": "Sanitized authored observation excerpts from this chat. These are not raw AX logs or request traces.",
+  "reference_record": "framer-forms-performance-code-settings",
+  "observation": {
+    "Location": "\n- **OBSERVED:** Site settings Forms, Performance, Code.",
+    "Structure": "\n- **OBSERVED:** Forms exposes Campaign tracking Upgrade and Google account connection copy. Performance shows font-loading dropdown, third-party-script optimization checkbox, and descriptive automatic optimization entries. Code shows Custom code helper, Add script, Learn more.",
+    "Actions": "\n- **OBSERVED:** Forms \u2192 displays disabled Campaign tracking and Connect Google account. Performance \u2192 shows controls and Image/Font/JavaScript/Network optimization descriptions. Code \u2192 shows empty script manager. Nothing was connected or saved.",
+    "Behavior & States": "\n- **OBSERVED:** Optimization descriptions marked Enabled are provider UI assertions, not measured compression, image conversion, hydration, CDN, or loading-performance evidence.",
+    "Technical Data": "\n- **OBSERVED:** Routes use view=settings:forms, settings:performance, settings:customCode. Campaign tracking is a disabled checkbox. Connect Google account and Add script are buttons.\n- **NEEDS VERIFICATION:** Internal JavaScript handlers, network request/response contracts, backend rules, exact timing, and error recovery were not inspected. Rendered DOM/AX observations do not establish those details.\n### Local implementation and accessibility\n\n- **RECONSTRUCTION / HTML:** Semantic React sections, native buttons, labelled inputs/selects, fieldsets, menus and status regions. No copied Framer source code.\n- **RECONSTRUCTION / CSS:** Scoped dark UI styling and container-responsive layout. Blue accents reflect observed styling but are not a recovered design-token system.\n- **RECONSTRUCTION / JavaScript:** In-memory React state, fixture remounting and local feedback. No external requests or credential handling.\n- **NEEDS VERIFICATION / Network:** No provider request/response trace. Service hostnames visible in original frame URLs are not verified API contracts.\n- **RECONSTRUCTION / Accessibility:** Local controls expose accessible names, selected/expanded state where applicable, disabled fieldsets, aria-labelled menus and live status feedback. Automated behavior tests and browser observations are local evidence.\n- **NEEDS VERIFICATION / Accessibility:** Provider screen-reader behavior, focus management and full WCAG conformance were not independently tested.",
+    "Verification Gaps": "\n- **NEEDS VERIFICATION:** Google OAuth, Sheets delivery, UTM/GCLID capture, script execution, runtime performance, insertion dialog, and save validation."
+  },
+  "fixture_states": [
+    "forms",
+    "performance",
+    "code"
+  ],
+  "preview_route": "/framer/framer-forms-performance-code-settings",
+  "screenshot_status": "Provider captures exist in the session only. No durable provider image file is claimed.",
+  "limitations": [
+    "No backend/API contracts captured",
+    "No provider writes or paid outcomes tested",
+    "All preview rendering is fictional local reconstruction"
+  ],
+  "technical_capture": {
+    "url": "/research/framer/technical/provider-technical-capture.html",
+    "scope": "Direct selected sample: code",
+    "observed_at": "2026-10-07T10:55:40.764677+00:00"
+  }
+}

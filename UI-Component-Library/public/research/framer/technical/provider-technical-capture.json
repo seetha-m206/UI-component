@@ -1,0 +1,1227 @@
+{
+  "observed_at": "2026-10-07T10:55:40.764677+00:00",
+  "node": "m5",
+  "client": "Codex",
+  "source": "Authenticated Framer via installed CUA DOM evaluation and scoped CDP Network observation",
+  "capture_method": "Selected results transcribed into sanitized artifacts. Not an unmodified raw browser dump.",
+  "dom_css_samples": [
+    {
+      "state": "fill-popover",
+      "controls": [
+        {
+          "label": "Close",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 40,
+          "height": 50,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(136, 136, 136)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "0px",
+            "padding": "0px"
+          }
+        },
+        {
+          "label": "Solid",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 46.796875,
+          "height": 28,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "6px",
+            "padding": "0px 4px"
+          }
+        },
+        {
+          "label": "Linear gradient",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 46.8046875,
+          "height": 28,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "6px",
+            "padding": "0px 4px"
+          }
+        },
+        {
+          "label": "Radial gradient",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 46.796875,
+          "height": 28,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "6px",
+            "padding": "0px 4px"
+          }
+        },
+        {
+          "label": "Conic gradient",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 46.8046875,
+          "height": 28,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "6px",
+            "padding": "0px 4px"
+          }
+        },
+        {
+          "label": "Image",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 46.796875,
+          "height": 28,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "6px",
+            "padding": "0px 4px"
+          }
+        },
+        {
+          "label": "Sample color",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 115,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "New style",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 240,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "plans-yearly",
+      "controls": [
+        {
+          "label": "Switch to monthly",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 122.265625,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "Subscribe",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 208.6640625,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "Subscribe",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 207.6640625,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(0, 153, 255)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "Request trial",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 207.671875,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "skills",
+      "controls": [
+        {
+          "label": "New",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 45.7578125,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "defaultBase instructions that are always applied",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 356,
+          "height": 54.796875,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "0px",
+            "padding": "12px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "usage-credits",
+      "controls": [
+        {
+          "label": "Bandwidth",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 83.3671875,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "Credits",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 62.8125,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "headers",
+      "controls": [
+        {
+          "label": "Add",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 43.1171875,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "multi-site",
+      "controls": [
+        {
+          "label": "Add",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 43.1171875,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "redirects",
+      "controls": [
+        {
+          "label": "Upgrade plan",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 150,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "Learn more",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 150,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "firewall",
+      "controls": [
+        {
+          "label": "Upgrade plan",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 150,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "Learn more",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 150,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "files",
+      "controls": [
+        {
+          "label": "Upgrade plan",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 150,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "Learn more",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 150,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "forms",
+      "controls": [
+        {
+          "label": "Publish",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 62.125,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(0, 153, 255)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          },
+          "id": "toolbar-publish-button"
+        }
+      ],
+      "scope": "Global toolbar sample only. No screen-specific technical completeness claimed"
+    },
+    {
+      "state": "versions",
+      "controls": [
+        {
+          "label": "Publish",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 62.125,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(0, 153, 255)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          },
+          "id": "toolbar-publish-button"
+        }
+      ],
+      "scope": "Global toolbar sample only. No screen-specific technical completeness claimed"
+    },
+    {
+      "state": "code",
+      "controls": [
+        {
+          "label": "Add script",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 150,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "Learn more",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 150,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "domains",
+      "controls": [
+        {
+          "label": "Publish",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 150,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        }
+      ],
+      "scope": "Screen CTA sampled only, no domain form or publishing contract captured"
+    },
+    {
+      "state": "branches",
+      "controls": [
+        {
+          "label": "Back",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 40,
+          "height": 50,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(136, 136, 136)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "0px",
+            "padding": "0px"
+          }
+        },
+        {
+          "label": "Close",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 40,
+          "height": 50,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(136, 136, 136)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "0px",
+            "padding": "0px"
+          }
+        },
+        {
+          "label": "Upgrade",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 240,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "skill-editor",
+      "controls": [
+        {
+          "label": "Link",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 30,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "5px",
+            "padding": "0px"
+          }
+        },
+        {
+          "label": "Bold",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 30,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "5px",
+            "padding": "0px"
+          }
+        },
+        {
+          "label": "Italic",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 30,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "5px",
+            "padding": "0px"
+          }
+        },
+        {
+          "label": "Blockquote",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 30,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "5px",
+            "padding": "0px"
+          }
+        },
+        {
+          "label": "Numbered list",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 30,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "5px",
+            "padding": "0px"
+          }
+        },
+        {
+          "label": "Bulleted list",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 30,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "5px",
+            "padding": "0px"
+          }
+        },
+        {
+          "label": "Code",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 30,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "5px",
+            "padding": "0px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "usage-period",
+      "controls": [
+        {
+          "label": "October 2026",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 117.3359375,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px 1px"
+          }
+        }
+      ],
+      "scope": "Selected visible DOM controls only, not a complete document"
+    },
+    {
+      "state": "editor-toolbar",
+      "controls": [
+        {
+          "label": "Pages",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 57.8125,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "Layers",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 60.765625,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "Assets",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 60.484375,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 10px"
+          }
+        },
+        {
+          "label": "Canvas",
+          "tag": "BUTTON",
+          "role": null,
+          "disabled": false,
+          "width": 93.515625,
+          "height": 30,
+          "css": {
+            "fontSize": "13px",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(31, 31, 31)",
+            "radius": "8px",
+            "padding": "0px 8px"
+          }
+        },
+        {
+          "label": "Insert",
+          "tag": "DIV",
+          "role": "button",
+          "disabled": false,
+          "width": 29.5,
+          "height": 29.5,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "8px",
+            "padding": "0px 6px"
+          }
+        },
+        {
+          "label": "Layout",
+          "tag": "DIV",
+          "role": "button",
+          "disabled": false,
+          "width": 30,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "8px",
+            "padding": "0px 6px"
+          }
+        },
+        {
+          "label": "Text",
+          "tag": "DIV",
+          "role": "button",
+          "disabled": false,
+          "width": 29.5,
+          "height": 29.5,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "8px",
+            "padding": "0px 6px"
+          }
+        },
+        {
+          "label": "Vector",
+          "tag": "DIV",
+          "role": "button",
+          "disabled": false,
+          "width": 30,
+          "height": 30,
+          "css": {
+            "fontSize": "12px",
+            "color": "rgb(153, 153, 153)",
+            "background": "rgba(0, 0, 0, 0)",
+            "radius": "8px",
+            "padding": "0px 6px"
+          }
+        }
+      ],
+      "scope": "Selected editor and navigation controls. No canvas DOM or provider handlers recovered"
+    }
+  ],
+  "skill_field_semantics": [
+    {
+      "tag": "INPUT",
+      "id": "skill-title-undefined",
+      "type": "text",
+      "readOnly": true,
+      "disabled": false
+    },
+    {
+      "tag": "TEXTAREA",
+      "id": "skill-description-undefined",
+      "readOnly": true,
+      "disabled": false
+    },
+    {
+      "tag": "DIV",
+      "contenteditable": "true",
+      "readOnly": false,
+      "disabled": false
+    }
+  ],
+  "markup_samples": [
+    {
+      "state": "quick-actions",
+      "outerHTML": "<span class=\"r1fyybpx\">Browse plugins</span>",
+      "tag": "SPAN",
+      "role": null,
+      "ancestorTag": "DIV",
+      "ancestorRole": null,
+      "css": {
+        "fontSize": "12px",
+        "color": "rgb(153, 153, 153)"
+      }
+    },
+    {
+      "state": "plugins",
+      "outerHTML": "<span class=\"r1fyybpx\">Google Sheets</span>",
+      "tag": "SPAN",
+      "role": null,
+      "ancestorTag": "DIV",
+      "ancestorRole": null,
+      "css": {
+        "fontSize": "12px",
+        "color": "rgb(153, 153, 153)"
+      }
+    }
+  ],
+  "network_window": {
+    "cursor_end": 1049,
+    "events": 76,
+    "has_more": false,
+    "truncated": false,
+    "event_groups": [
+      {
+        "event": "Network.requestWillBeSent",
+        "method": "GET",
+        "url": "https://api.framer.com/auth/web/access-token",
+        "status": null,
+        "mime": null,
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          632
+        ]
+      },
+      {
+        "event": "Network.responseReceived",
+        "method": null,
+        "url": "https://api.framer.com/auth/web/access-token",
+        "status": 200,
+        "mime": "application/json",
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          635
+        ]
+      },
+      {
+        "event": "Network.requestWillBeSent",
+        "method": "GET",
+        "url": "https://api.framer.com/web/projects/[redacted-id]/threads/",
+        "status": null,
+        "mime": null,
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          683
+        ]
+      },
+      {
+        "event": "Network.responseReceived",
+        "method": null,
+        "url": "https://api.framer.com/web/projects/[redacted-id]/threads/",
+        "status": 200,
+        "mime": "application/json",
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          686
+        ]
+      },
+      {
+        "event": "Network.requestWillBeSent",
+        "method": "GET",
+        "url": "https://api.framer.com/web/projects/licenses/settings",
+        "status": null,
+        "mime": null,
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          710,
+          742
+        ]
+      },
+      {
+        "event": "Network.responseReceived",
+        "method": null,
+        "url": "https://api.framer.com/web/projects/licenses/settings",
+        "status": 200,
+        "mime": "application/json",
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          745
+        ]
+      },
+      {
+        "event": "Network.requestWillBeSent",
+        "method": "GET",
+        "url": "https://api.framer.com/web/v3/teams/[redacted-id]/subscription",
+        "status": null,
+        "mime": null,
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          711
+        ]
+      },
+      {
+        "event": "Network.responseReceived",
+        "method": null,
+        "url": "https://api.framer.com/web/v3/teams/[redacted-id]/subscription",
+        "status": 200,
+        "mime": "application/json",
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          739
+        ]
+      },
+      {
+        "event": "Network.requestWillBeSent",
+        "method": "GET",
+        "url": "https://api.framer.com/web/v2/projects/[redacted-id]/subscription",
+        "status": null,
+        "mime": null,
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          712
+        ]
+      },
+      {
+        "event": "Network.responseReceived",
+        "method": null,
+        "url": "https://api.framer.com/web/v2/projects/[redacted-id]/subscription",
+        "status": 200,
+        "mime": "application/json",
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          727
+        ]
+      },
+      {
+        "event": "Network.requestWillBeSent",
+        "method": "GET",
+        "url": "https://api.framer.com/web/teams/[redacted-id]/ai-usage",
+        "status": null,
+        "mime": null,
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          828,
+          830
+        ]
+      },
+      {
+        "event": "Network.responseReceived",
+        "method": null,
+        "url": "https://api.framer.com/web/teams/[redacted-id]/ai-usage",
+        "status": 200,
+        "mime": "application/json",
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          844
+        ]
+      },
+      {
+        "event": "Network.requestWillBeSent",
+        "method": "GET",
+        "url": "https://api.framer.com/web/v2/teams/[redacted-id]/rewrite-origins",
+        "status": null,
+        "mime": null,
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          894
+        ]
+      },
+      {
+        "event": "Network.responseReceived",
+        "method": null,
+        "url": "https://api.framer.com/web/v2/teams/[redacted-id]/rewrite-origins",
+        "status": 200,
+        "mime": "application/json",
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          905
+        ]
+      },
+      {
+        "event": "Network.requestWillBeSent",
+        "method": "OPTIONS",
+        "url": "https://api.framer.com/web/v3/teams/[redacted-id]/subscription",
+        "status": null,
+        "mime": null,
+        "type": "Other",
+        "error": null,
+        "sequences": [
+          714
+        ]
+      },
+      {
+        "event": "Network.responseReceived",
+        "method": null,
+        "url": "https://api.framer.com/web/v3/teams/[redacted-id]/subscription",
+        "status": 204,
+        "mime": null,
+        "type": "Preflight",
+        "error": null,
+        "sequences": [
+          723
+        ]
+      },
+      {
+        "event": "Network.loadingFailed",
+        "method": null,
+        "url": "",
+        "status": null,
+        "mime": null,
+        "type": "Fetch",
+        "error": "net::ERR_ABORTED",
+        "sequences": [
+          713,
+          832
+        ]
+      },
+      {
+        "event": "Network.requestWillBeSent",
+        "method": "POST",
+        "url": "https://events.framer.com/track",
+        "status": null,
+        "mime": null,
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          647,
+          748,
+          848,
+          876,
+          910,
+          939,
+          968,
+          996,
+          1024
+        ]
+      },
+      {
+        "event": "Network.responseReceived",
+        "method": null,
+        "url": "https://events.framer.com/track",
+        "status": 200,
+        "mime": "application/json",
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          650,
+          751,
+          851,
+          879,
+          913,
+          943,
+          971,
+          999,
+          1027
+        ]
+      },
+      {
+        "event": "Network.requestWillBeSent",
+        "method": "POST",
+        "url": "https://o20425.ingest.sentry.io/api/1860728/envelope/",
+        "status": null,
+        "mime": null,
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          703,
+          704,
+          799,
+          800,
+          821,
+          822,
+          859,
+          860,
+          887,
+          888,
+          920,
+          921,
+          949,
+          950,
+          977,
+          978,
+          1007,
+          1008
+        ]
+      },
+      {
+        "event": "Network.responseReceived",
+        "method": null,
+        "url": "https://o20425.ingest.sentry.io/api/1860728/envelope/",
+        "status": 200,
+        "mime": "application/json",
+        "type": "Fetch",
+        "error": null,
+        "sequences": [
+          732,
+          734,
+          810,
+          811,
+          835,
+          837,
+          870,
+          872,
+          899,
+          902,
+          932,
+          934,
+          959,
+          962,
+          988,
+          989,
+          1018,
+          1020
+        ]
+      },
+      {
+        "event": "Network.requestWillBeSent",
+        "method": "GET",
+        "url": "https://app.framerstatic.com/[redacted-id].svg",
+        "status": null,
+        "mime": null,
+        "type": "Image",
+        "error": null,
+        "sequences": [
+          640
+        ]
+      },
+      {
+        "event": "Network.responseReceived",
+        "method": null,
+        "url": "https://app.framerstatic.com/[redacted-id].svg",
+        "status": 200,
+        "mime": "image/svg+xml",
+        "type": "Image",
+        "error": null,
+        "sequences": [
+          643
+        ]
+      }
+    ]
+  },
+  "limits": [
+    "Selected sanitized rendered DOM/CSS samples, not complete raw documents.",
+    "Network metadata only, grouped losslessly by event fields with original sequence numbers retained. Request IDs, headers, cookies, payloads and response bodies deliberately excluded. URLs lose query/hash and identifiers.",
+    "Capture window covers Fill and settings navigation through Performance. Later DOM samples are not all covered by that network window.",
+    "Network requests may be background activity. No per-action causal attribution or server contract is inferred. Two aborted fetches cannot be assigned a cause from these fields.",
+    "No provider JavaScript function source, handler implementation, API payload schema or save outcome recovered.",
+    "Inventory reported 250 scripts, zero exportable stylesheet assets. DOM separately exposed one inline style and one stylesheet link. These are distinct inventory methods, not proof of missing CSS.",
+    "Durable screenshot files remain unavailable through the examined export surfaces. Screenshots remain session-only.",
+    "Performance sample matched no requested control labels and was omitted. Forms and Versions samples cover the global toolbar only."
+  ]
+}
