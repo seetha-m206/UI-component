@@ -206,7 +206,7 @@ describe('Sidebar', () => {
     );
     const nav = screen.getByRole('navigation', { name: 'Component library navigation' });
     expect(
-      within(nav).getByRole('button', { name: 'Customer Support / Helpdesk' })
+      within(nav).getByRole('button', { name: 'Support' })
     ).toHaveAttribute('aria-expanded', 'true');
     expect(within(nav).getByRole('button', { name: 'Freshservice' })).toHaveAttribute(
       'aria-expanded',

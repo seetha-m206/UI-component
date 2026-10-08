@@ -1,11 +1,11 @@
 ---
-component: 'Freshsales Role Permission Matrix'
-ui_category: 'Administration > Permission Matrix'
-source_product: 'Freshsales'
-last_verified: '2026-10-07'
-evidence_state: 'source_reviewed'
-status: 'partial'
-summary: 'Authenticated-source Freshsales pattern with fictional local fixtures and provider outcomes left unverified.'
+component: "Freshsales Role Permission Matrix"
+ui_category: "Administration > Permission Matrix"
+source_product: "Freshsales"
+last_verified: "2026-10-07"
+evidence_state: "source_reviewed"
+status: "partial"
+summary: "Authenticated-source Freshsales pattern with fictional local fixtures and provider outcomes left unverified."
 ---
 
 # Freshsales Role Permission Matrix

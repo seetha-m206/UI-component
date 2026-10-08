@@ -27,16 +27,16 @@ export function extractEndpoints(sections: ComponentSection[]): string[] {
 
 /** Sentences already mentioning aria attributes or accessibility findings, wherever they live in the record. */
 export function extractAccessibilityNotes(sections: ComponentSection[]): string[] {
-  const notes: string[] = [];
+  const notes = new Set<string>();
   for (const section of sections) {
     const sentences = section.bodyMarkdown.split(/(?<=[.!?])\s+/);
     for (const sentence of sentences) {
       if (/aria|accessib/i.test(sentence)) {
-        notes.push(sentence.trim());
+        notes.add(sentence.trim());
       }
     }
   }
-  return notes;
+  return Array.from(notes);
 }
 
 const LIMITATION_MARKERS = [

@@ -1,0 +1,389 @@
+{
+  "generated_at": "2026-10-08T11:22:18.213851+00:00",
+  "provider": "Zapier",
+  "capture_scope": "Every registered Zapier fictional local preview",
+  "provider_screenshot": false,
+  "component_count": 29,
+  "capture_count": 29,
+  "unique_sha256_count": 29,
+  "privacy_boundary": "Captures contain fictional local reconstruction data only. They are not authenticated Zapier provider screenshots.",
+  "captures": [
+    {
+      "component_id": "zapier-ai-action-palette",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-ai-action-palette.png",
+      "public_url": "/research/zapier/fixtures/zapier-ai-action-palette.png",
+      "bytes": 221010,
+      "sha256": "edef0628edca9885fb5ca9728c7469284d9815d80790c6f3eaa6c3f8f0289a99",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-ai-category-tabs",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-ai-category-tabs.png",
+      "public_url": "/research/zapier/fixtures/zapier-ai-category-tabs.png",
+      "bytes": 221554,
+      "sha256": "21c122d07d0090892ee4805950b3d6820c400ed5c25a19ab4fda97e188fea520",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-app-connection-boundary",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-app-connection-boundary.png",
+      "public_url": "/research/zapier/fixtures/zapier-app-connection-boundary.png",
+      "bytes": 236066,
+      "sha256": "7a7b1a04f191f8253505fb010d73bd9d7c34c9c4ad3b74a3ee1ebb5b3497e230",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-application-shell",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-application-shell.png",
+      "public_url": "/research/zapier/fixtures/zapier-application-shell.png",
+      "bytes": 249361,
+      "sha256": "ae69ea2b70d7e080355f293e4078fc1cf12e2b2f3c97e3bfcd8c9553b7fde8ea",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-automations-workspace",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-automations-workspace.png",
+      "public_url": "/research/zapier/fixtures/zapier-automations-workspace.png",
+      "bytes": 229211,
+      "sha256": "4c72c4a76fee705089af65dfac5dfffdb55b83ba6ef4cc7cbcab8dfeb1dd6957",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-autoreplay-help",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-autoreplay-help.png",
+      "public_url": "/research/zapier/fixtures/zapier-autoreplay-help.png",
+      "bytes": 232345,
+      "sha256": "928b11bee061f1d0af12cd7a4aee651829fb217ac49be467f491c3994851a6e0",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-connection-management-states",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-connection-management-states.png",
+      "public_url": "/research/zapier/fixtures/zapier-connection-management-states.png",
+      "bytes": 236155,
+      "sha256": "85a0014835c75c5aeabdc496fb685963209ea41eca1618a3a342c564a549bcb0",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-creation-menu",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-creation-menu.png",
+      "public_url": "/research/zapier/fixtures/zapier-creation-menu.png",
+      "bytes": 259173,
+      "sha256": "f95452341573d0d315c542d4a33f0b7d37ca036d65650045901884a89b015b19",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-data-mapping-testing",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-data-mapping-testing.png",
+      "public_url": "/research/zapier/fixtures/zapier-data-mapping-testing.png",
+      "bytes": 222888,
+      "sha256": "cd80f9881ccc7cbef4496ccebf8cd4fc8b288a012424c3db4be27e49333ad449",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-editor-advanced-settings",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-editor-advanced-settings.png",
+      "public_url": "/research/zapier/fixtures/zapier-editor-advanced-settings.png",
+      "bytes": 218977,
+      "sha256": "7194100560137a35dc20dbc31d547b852b18c3ad58cb2b0a9bc17d8220777345",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-editor-change-history",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-editor-change-history.png",
+      "public_url": "/research/zapier/fixtures/zapier-editor-change-history.png",
+      "bytes": 216246,
+      "sha256": "d4d69ccc7aef4e88b09e13230843c5886206cd50b8e4b248a2e962b5156c194c",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-editor-linked-assets",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-editor-linked-assets.png",
+      "public_url": "/research/zapier/fixtures/zapier-editor-linked-assets.png",
+      "bytes": 211485,
+      "sha256": "2102f7e64e34dd28e8008be1386e33065c5abc57ec88c52e1ddc5350d0f6f694",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-editor-notes",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-editor-notes.png",
+      "public_url": "/research/zapier/fixtures/zapier-editor-notes.png",
+      "bytes": 214508,
+      "sha256": "e521371844d93aa90f2cbe0251beaf4c433e078cd97cd518017eb30b70dfe3fb",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-editor-run-test-panel",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-editor-run-test-panel.png",
+      "public_url": "/research/zapier/fixtures/zapier-editor-run-test-panel.png",
+      "bytes": 213262,
+      "sha256": "8a54a09b86a12790aaa875fc0e3e98756f35383301c9b82afb3954d78eed9b87",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-editor-status",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-editor-status.png",
+      "public_url": "/research/zapier/fixtures/zapier-editor-status.png",
+      "bytes": 207197,
+      "sha256": "7504bf355218ab2b069bc32a4d64cd38ba74646d89a69e2da12cd7cf9269a2c7",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-editor-versions",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-editor-versions.png",
+      "public_url": "/research/zapier/fixtures/zapier-editor-versions.png",
+      "bytes": 210168,
+      "sha256": "0873570dd92900879c98df7cd9c874714ec76ea6a2c2698a9d2019365d6d5225",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-flow-controls-approvals",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-flow-controls-approvals.png",
+      "public_url": "/research/zapier/fixtures/zapier-flow-controls-approvals.png",
+      "bytes": 225091,
+      "sha256": "295ecb5f63c3bc3eae2a45d251fa6b3419ef38f091ce9aba9c9cefa393a6f594",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-guided-templates",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-guided-templates.png",
+      "public_url": "/research/zapier/fixtures/zapier-guided-templates.png",
+      "bytes": 225889,
+      "sha256": "c491d725f776f8c333837643fb8d4f09a5330a1c6f39510541517f06628e86a6",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-history-status-filter",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-history-status-filter.png",
+      "public_url": "/research/zapier/fixtures/zapier-history-status-filter.png",
+      "bytes": 234867,
+      "sha256": "e6d0d64e05506abb582680ce8df94b7c7907edeaba90d8e51e5cb8831a86b251",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-home-copilot",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-home-copilot.png",
+      "public_url": "/research/zapier/fixtures/zapier-home-copilot.png",
+      "bytes": 247362,
+      "sha256": "a4bf7434fc5f7c0aee9fb8f343331db0179876b94789bb1d804cc2121250d5b3",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-human-in-loop-ai-actions",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-human-in-loop-ai-actions.png",
+      "public_url": "/research/zapier/fixtures/zapier-human-in-loop-ai-actions.png",
+      "bytes": 217473,
+      "sha256": "13fe8781b9f3dc85bdeb117eb6422855e0dbe54cb388cde97a0cdf4a13202280",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-interactive-onboarding-tour",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-interactive-onboarding-tour.png",
+      "public_url": "/research/zapier/fixtures/zapier-interactive-onboarding-tour.png",
+      "bytes": 240463,
+      "sha256": "6ecc42df93526bf8e9f9cc741147eb91e2f804c9b5814ed1fe7f54e7ff51e5c5",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-settings-catalogue",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-settings-catalogue.png",
+      "public_url": "/research/zapier/fixtures/zapier-settings-catalogue.png",
+      "bytes": 218568,
+      "sha256": "f157fe8d094763211613e639bd2d962bb2620c2c8f7ac93a4f33c1c5f1e01288",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-task-usage-plan-gates",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-task-usage-plan-gates.png",
+      "public_url": "/research/zapier/fixtures/zapier-task-usage-plan-gates.png",
+      "bytes": 230886,
+      "sha256": "0fbdedef30eb4d93e80fd3cacfdbf386972f0743865baf66933dd9f4c995913d",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-template-recommendation-carousel",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-template-recommendation-carousel.png",
+      "public_url": "/research/zapier/fixtures/zapier-template-recommendation-carousel.png",
+      "bytes": 237151,
+      "sha256": "b2093e9324e6b55653bfde6b6575fdb45a0b024a889d635b851b6a14eaca55e1",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-trigger-action-picker",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-trigger-action-picker.png",
+      "public_url": "/research/zapier/fixtures/zapier-trigger-action-picker.png",
+      "bytes": 233183,
+      "sha256": "51e138ad7eed2d04f9a5d1a197f4fe412cbde4ee2a8bd411d2538b69b782d85a",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-usage-empty-report",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-usage-empty-report.png",
+      "public_url": "/research/zapier/fixtures/zapier-usage-empty-report.png",
+      "bytes": 228801,
+      "sha256": "f2ca192df63985579df6b33c0ef91a580e9b1f52cf22dcefd2dec94e302764a1",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-zap-editor-canvas",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-zap-editor-canvas.png",
+      "public_url": "/research/zapier/fixtures/zapier-zap-editor-canvas.png",
+      "bytes": 218795,
+      "sha256": "82d4f8d7d2940d958500f771b86b7be83fc5e5e036ce6dbba5a03ea70d8888b2",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "zapier-zap-history-failures",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/zapier/fixtures/zapier-zap-history-failures.png",
+      "public_url": "/research/zapier/fixtures/zapier-zap-history-failures.png",
+      "bytes": 230461,
+      "sha256": "811b6f56ff7bb29517ca436840b348c7b423e0ae5b1559f52db88f0bed6d46c3",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    }
+  ]
+}

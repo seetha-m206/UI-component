@@ -10,24 +10,33 @@ afterEach(() => cleanup());
 
 describe('HubSpot complete preview registry', () => {
   it('registers every HubSpot catalogue record and exposes source files', () => {
-    const records = allComponents.filter((entry) => entry.brand.startsWith('hubspot-'));
+    const records = allComponents.filter(
+      (entry) => entry.brand.startsWith('hubspot-') && !entry.id.includes('-audit-')
+    );
     expect(records).toHaveLength(101);
     expect(hubspotSuiteIds).toHaveLength(71);
 
     for (const record of records) {
       const preview = previewRegistry[record.id];
       expect(preview, `${record.brand}/${record.id} preview`).toBeDefined();
-      expect(sourceRegistry[record.id]?.files.length, `${record.id} source files`).toBeGreaterThan(0);
+      expect(sourceRegistry[record.id]?.files.length, `${record.id} source files`).toBeGreaterThan(
+        0
+      );
     }
   });
 
   it('gives every new suite record concrete fictional data and multiple states', () => {
     expect(hubspotSuiteRecords).toHaveLength(71);
-    expect(hubspotSuiteRecords.filter((record) => record.brand === 'hubspot-sales-hub')).toHaveLength(15);
+    expect(
+      hubspotSuiteRecords.filter((record) => record.brand === 'hubspot-sales-hub')
+    ).toHaveLength(15);
 
     for (const record of hubspotSuiteRecords) {
       expect(record.fields.length, `${record.id} fields`).toBeGreaterThanOrEqual(2);
-      expect(record.fields.some((field) => /status|state|entitlement/i.test(field.key)), `${record.id} status`).toBe(true);
+      expect(
+        record.fields.some((field) => /status|state|entitlement/i.test(field.key)),
+        `${record.id} status`
+      ).toBe(true);
       const preview = previewRegistry[record.id];
       expect(preview.type).toBe('reconstructed');
       if (preview.type === 'reconstructed') {
@@ -38,7 +47,9 @@ describe('HubSpot complete preview registry', () => {
   });
 
   it('renders every fixture for all 101 HubSpot preview entries', () => {
-    const records = allComponents.filter((entry) => entry.brand.startsWith('hubspot-'));
+    const records = allComponents.filter(
+      (entry) => entry.brand.startsWith('hubspot-') && !entry.id.includes('-audit-')
+    );
     let renderedFixtures = 0;
 
     for (const record of records) {
@@ -46,14 +57,20 @@ describe('HubSpot complete preview registry', () => {
       if (preview.type === 'reconstructed') {
         for (const fixture of preview.fixtures) {
           const { unmount } = render(<preview.Component {...fixture.props} />);
-          expect(document.body.textContent?.trim().length, `${record.id}/${fixture.id}`).toBeGreaterThan(0);
+          expect(
+            document.body.textContent?.trim().length,
+            `${record.id}/${fixture.id}`
+          ).toBeGreaterThan(0);
           renderedFixtures += 1;
           unmount();
         }
       } else {
         for (const example of preview.examples) {
           const { unmount } = render(<preview.Component {...example.props} />);
-          expect(document.body.textContent?.trim().length, `${record.id}/${example.title}`).toBeGreaterThan(0);
+          expect(
+            document.body.textContent?.trim().length,
+            `${record.id}/${example.title}`
+          ).toBeGreaterThan(0);
           renderedFixtures += 1;
           unmount();
         }
@@ -73,8 +90,13 @@ describe('HubSpot complete preview registry', () => {
     await user.click(screen.getByRole('button', { name: 'Create new' }));
     expect(screen.getByRole('status')).toHaveTextContent('was not sent to HubSpot');
 
-    await user.type(screen.getByRole('textbox', { name: 'Filter fictional fixture properties' }), 'no-match-value');
+    await user.type(
+      screen.getByRole('textbox', { name: 'Filter fictional fixture properties' }),
+      'no-match-value'
+    );
     await user.click(screen.getByRole('radio', { name: 'Table' }));
-    expect(screen.getByText('No fictional fixture properties match this search.')).toBeInTheDocument();
+    expect(
+      screen.getByText('No fictional fixture properties match this search.')
+    ).toBeInTheDocument();
   });
 });

@@ -1,0 +1,298 @@
+{
+  "generated_at": "2026-10-08T09:25:04.253473+00:00",
+  "provider": "Tidio",
+  "capture_scope": "Every registered Tidio fictional local preview",
+  "provider_screenshot": false,
+  "component_count": 22,
+  "capture_count": 22,
+  "unique_sha256_count": 22,
+  "privacy_boundary": "Captures contain fictional local reconstruction data only. They are not authenticated Tidio provider screenshots.",
+  "captures": [
+    {
+      "component_id": "tidio-analytics-overview",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-analytics-overview.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-analytics-overview.jpg",
+      "bytes": 79255,
+      "sha256": "dd617ce35a0cb7c2ea1d26b18cf471be0a25014ad505da0145840e74d13fee7c",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-application-shell",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-application-shell.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-application-shell.jpg",
+      "bytes": 81446,
+      "sha256": "7760e171d5d1e25b965f38994bc9d207a316304c5d0de643b66c6872cf4e7343",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-connection-loading-state",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-connection-loading-state.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-connection-loading-state.jpg",
+      "bytes": 70974,
+      "sha256": "ba42999886d961e2ba75c0851c92a6c714915767a8748ee72aaa158ccd924f47",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-customers-live-visitors-boundary",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-customers-live-visitors-boundary.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-customers-live-visitors-boundary.jpg",
+      "bytes": 60536,
+      "sha256": "b5c404658aa8ba69d1b04d86013b3bffb88120b72aafbe609b0f4ba7c9da4c82",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-dashboard-overview",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-dashboard-overview.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-dashboard-overview.jpg",
+      "bytes": 80832,
+      "sha256": "0b62b249b6e1b02bad1a80f408f20d2a9271775b23eef48cdfb675a8177793cc",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-flows-welcome",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-flows-welcome.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-flows-welcome.jpg",
+      "bytes": 78175,
+      "sha256": "9251b46362f5bf1f5609ea29816a50d75570c4e9d04e2d1330b14a000258ce34",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-getting-started-onboarding",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-getting-started-onboarding.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-getting-started-onboarding.jpg",
+      "bytes": 80794,
+      "sha256": "9ecda5c08ca337b61bf5f85201b5f60b0c9aeb1036d76f112946ab7798db24dc",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-help-center-onboarding",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-help-center-onboarding.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-help-center-onboarding.jpg",
+      "bytes": 78603,
+      "sha256": "b74112bca5adad70ae8e5ffa412591802d9029aed54461709a9ae41f1f956dbc",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-inbox-empty-workspace",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-inbox-empty-workspace.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-inbox-empty-workspace.jpg",
+      "bytes": 78004,
+      "sha256": "a5ae99d4e39b3acea5ce8eb378e895d09b89077b66f03ee40af22d6bdb17bbf4",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-integrations-catalogue",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-integrations-catalogue.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-integrations-catalogue.jpg",
+      "bytes": 70734,
+      "sha256": "44babc2a604c090fd564d51d8d78ef86c108eae86e62e3a7c9cc1d794396a8cc",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-lyro-actions-mcps",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-lyro-actions-mcps.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-lyro-actions-mcps.jpg",
+      "bytes": 71808,
+      "sha256": "bc1950590a762a8f59304500fb38f3db47ded88a45d7effd75b1cdb12046f93b",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-lyro-channels",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-lyro-channels.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-lyro-channels.jpg",
+      "bytes": 79823,
+      "sha256": "802d1d9d42c9cf8aa7a1388d234b06ef3e988ffded9fb6b448037dbb0c542667",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-lyro-configure",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-lyro-configure.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-lyro-configure.jpg",
+      "bytes": 79947,
+      "sha256": "dbbb8bae66a0589c5bbdcce89c136148ba0e85c7bfa24550a9f7d82cdba2a9c6",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-lyro-data-sources-empty",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-lyro-data-sources-empty.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-lyro-data-sources-empty.jpg",
+      "bytes": 79353,
+      "sha256": "4a56d7e81a813633a8363f8d74f8041bd10270027652fd9c68d9bc9ba43cabbd",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-lyro-guidance",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-lyro-guidance.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-lyro-guidance.jpg",
+      "bytes": 79789,
+      "sha256": "31886ebbc26dfb6a48f170416e22570b2830960214cd015de2b04444269b941c",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-lyro-handoff",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-lyro-handoff.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-lyro-handoff.jpg",
+      "bytes": 78938,
+      "sha256": "e1de6ea2d7a6d8a1e056e815ca6d2fe567b6b407ca3e34fd04999bde76ac1aab",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-lyro-proactive-roles",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-lyro-proactive-roles.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-lyro-proactive-roles.jpg",
+      "bytes": 78968,
+      "sha256": "6e8497f4e3b4c7981ea78559e6260e97fd56c8336b8b77d7a5cdda75dcef4f4b",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-lyro-procedures-empty",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-lyro-procedures-empty.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-lyro-procedures-empty.jpg",
+      "bytes": 70227,
+      "sha256": "cc99b40ae496c77123da27a2bf22a4268d2c13bb09fe002f2d4bdb229847cef2",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-lyro-setup-checklist",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-lyro-setup-checklist.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-lyro-setup-checklist.jpg",
+      "bytes": 77647,
+      "sha256": "669dbf78f8f6fe6e6de05be699ffdcf708dc9f7c28159c2067784c343d80ba38",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-lyro-suggestions-empty",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-lyro-suggestions-empty.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-lyro-suggestions-empty.jpg",
+      "bytes": 69809,
+      "sha256": "43ee17bbbcbcfd960f0cca773017136ddaa3ace74ce7a02fe9a02d856a2ebbaa",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-provider-action-boundaries",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-provider-action-boundaries.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-provider-action-boundaries.jpg",
+      "bytes": 80760,
+      "sha256": "78efbaa9ee1d5a73306b8c957f07b2256c879a5f486fd634764e72c4ff5bd4e7",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    },
+    {
+      "component_id": "tidio-widget-appearance-editor",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/tidio/fixtures/tidio-widget-appearance-editor.jpg",
+      "public_url": "/research/tidio/fixtures/tidio-widget-appearance-editor.jpg",
+      "bytes": 69764,
+      "sha256": "a868669e7f7f7dfd3d15e44718030a837051d8c517274712b61b39400ad7c853",
+      "viewport": {
+        "width": 1269,
+        "height": 714
+      }
+    }
+  ]
+}

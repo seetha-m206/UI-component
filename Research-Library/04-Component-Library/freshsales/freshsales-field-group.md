@@ -4,6 +4,8 @@ ui_category: "Forms > Read-only Field Group"
 source_product: "Freshsales"
 last_verified: "2026-10-07"
 evidence_state: "source_reviewed"
+status: "partial"
+summary: "Authenticated-source Freshsales pattern with fictional local fixtures and provider outcomes left unverified."
 ---
 
 # Freshsales Field Group

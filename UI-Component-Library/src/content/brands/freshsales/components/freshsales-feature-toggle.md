@@ -1,11 +1,11 @@
 ---
-component: 'Freshsales Feature Toggle'
-ui_category: 'Forms > Feature Toggle'
-source_product: 'Freshsales'
-last_verified: '2026-10-07'
-evidence_state: 'source_reviewed'
-status: 'partial'
-summary: 'Authenticated-source Freshsales pattern with fictional local fixtures and provider outcomes left unverified.'
+component: "Freshsales Feature Toggle"
+ui_category: "Forms > Feature Toggle"
+source_product: "Freshsales"
+last_verified: "2026-10-07"
+evidence_state: "source_reviewed"
+status: "partial"
+summary: "Authenticated-source Freshsales pattern with fictional local fixtures and provider outcomes left unverified."
 ---
 
 # Freshsales Feature Toggle

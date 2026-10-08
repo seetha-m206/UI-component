@@ -11,7 +11,7 @@ import { extractLimitations } from '../../utils/evidenceExtraction';
 describe('Freshservice evidence catalogue', () => {
   it('registers 69 distinct records under the helpdesk category', () => {
     expect(Object.keys(freshservicePreviews)).toHaveLength(69);
-    expect(getProductGroup('freshservice')).toBe('Customer Support / Helpdesk');
+    expect(getProductGroup('freshservice')).toBe('Support');
   });
   it.each(Object.keys(freshservicePreviews))(
     '%s preserves source identity and mirrored evidence',

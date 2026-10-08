@@ -16,8 +16,9 @@ function buildVectorRecord(entry: ComponentEntry) {
         ...frontmatter.ui_category.split('>').map((s) => s.trim()),
         frontmatter.source_product,
         frontmatter.status,
+        frontmatter.component_level,
       ]
-        .filter(Boolean)
+        .filter((tag): tag is string => Boolean(tag))
         .map((tag) => tag.toLowerCase().replace(/\s+/g, '-'))
     )
   );
@@ -31,6 +32,8 @@ function buildVectorRecord(entry: ComponentEntry) {
     status: frontmatter.status,
     evidence_state: frontmatter.evidence_state,
     last_verified: frontmatter.last_verified,
+    parent_workflow: frontmatter.parent_workflow,
+    component_level: frontmatter.component_level,
     related_components: extractCrossLinks(entry),
     embed_text: `${frontmatter.source_product} — ${frontmatter.component} (${frontmatter.ui_category}): ${frontmatter.summary}`,
   };

@@ -1,0 +1,79 @@
+---
+component: "HubSpot Breeze Assistant Panel — Action Component"
+ui_category: "Deep Audit > Action Level"
+source_product: "HubSpot Service Hub"
+last_verified: "2026-10-06"
+evidence_state: "source_reviewed"
+status: "complete"
+summary: "Evidence-backed user actions and guarded outcomes for HubSpot Breeze Assistant Panel. Derived from the authored observation record."
+parent_workflow: "hubspot-breeze-assistant"
+component_level: "action"
+---
+
+# HubSpot Breeze Assistant Panel — Action Component
+
+<!-- GENERATED: hubspot-deep-audit-v1 -->
+
+## Location
+
+- **SOURCE REVIEWED:** Derived from [HubSpot Breeze Assistant Panel](./hubspot-breeze-assistant.md).
+- **COMPONENT LEVEL:** action.
+
+## Structure
+
+- **OBSERVED:** Element | Safe action | Observed result or boundary
+- **OBSERVED:** Open Breeze Assistant | Keyboard Space | Opened the assistant and reduced the available width for Tickets.
+- **OBSERVED:** Close Assistant | Keyboard Space | Closed the assistant and restored the full Tickets workspace.
+- **OBSERVED:** Suggestions, shortcuts, tools, dictation, composer and navigation | Not activated | No prompt, message, tool, recording or artifact was created. Outcomes are NOT OBSERVED.
+
+## Actions
+
+- Element | Safe action | Observed result or boundary
+- Open Breeze Assistant | Keyboard Space | Opened the assistant and reduced the available width for Tickets.
+- Close Assistant | Keyboard Space | Closed the assistant and restored the full Tickets workspace.
+- Suggestions, shortcuts, tools, dictation, composer and navigation | Not activated | No prompt, message, tool, recording or artifact was created. Outcomes are NOT OBSERVED.
+
+## Behavior & States
+
+- **DOCUMENTED:** Independently addressable as hubspot-breeze-assistant-audit-action.
+- **OBSERVED:** Evidence-backed user actions and guarded outcomes for HubSpot Breeze Assistant Panel. Derived from the authored observation record.
+- **GUARD:** All fixture actions change local preview state only.
+
+## Technical Data
+
+### DOM Structure
+
+- **OBSERVED:** OBSERVED: Four shortcut cards were labelled Summarize, Create, How do I and Meetings. The composer showed “Ask Breeze Assistant or @ mention”, an Open tools menu, Start dictation and a disabled Send message. A notice stated that AI-generated content may be inaccurate.
+- **OBSERVED:** OBSERVED / DOM: The assistant loaded in its own widget frame. Navigation and suggestions were buttons. The composer exposed a tools popup, dictation button and disabled send button.
+
+### Network / API
+
+- **OBSERVED:** OBSERVED / DOM: The assistant loaded in its own widget frame. Navigation and suggestions were buttons. The composer exposed a tools popup, dictation button and disabled send button.
+
+## Fictional Local Fixture
+
+~~~yaml
+workflow: "hubspot-breeze-assistant"
+component_level: "action"
+evidence_state: "source_reviewed"
+data_scope: "fictional_local_only"
+status: "documented"
+last_action: "none"
+~~~
+
+## Evidence Boundary
+
+- **SOURCE REVIEWED:** Parent evidence is preserved without upgrading inference to fact.
+- **RECONSTRUCTION:** Fixture values and unobserved states are fictional and local only.
+- **NOT OBSERVED:** Missing request, response, mutation, persistence, permission, billing, and provider outcomes remain unverified.
+
+## Cross-Component Pattern Note
+
+- Parent workflow: hubspot-breeze-assistant.
+- Reusable level: action.
+- Sibling audit records share this parent and differ by component level.
+
+## Sources
+
+- Authored parent record: Research-Library/04-Component-Library/hubspot-service-hub/hubspot-breeze-assistant.md.
+- Generation contract: UI-Component-Library/scripts/generate-hubspot-deep-audit.mjs.

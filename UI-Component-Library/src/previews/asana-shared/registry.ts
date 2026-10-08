@@ -1,0 +1,79 @@
+import type { PreviewConfig, PreviewRegistry } from '../types';
+import { AsanaPreview, type AsanaVariant } from './AsanaPreview';
+
+const config: PreviewConfig = {
+  viewports: [
+    { id: 'desktop', label: 'Desktop', width: 1180 },
+    { id: 'narrow', label: 'Narrow', width: 390 },
+  ],
+  toggles: [{ id: 'disabled', label: 'Fixture', onLabel: 'Disabled', offLabel: 'Enabled' }],
+};
+
+const entries: Array<[string, AsanaVariant, string]> = [
+  ['asana-application-shell', 'application-shell', 'Authenticated application shell'],
+  ['asana-global-create-menu', 'global-create-menu', 'Global creation menu'],
+  ['asana-home-dashboard', 'home-dashboard', 'Home widget dashboard'],
+  ['asana-home-my-tasks-widget', 'home-my-tasks-widget', 'My tasks home widget'],
+  ['asana-home-timeframe-menu', 'home-timeframe-menu', 'Home timeframe selector'],
+  ['asana-home-widget-gallery', 'home-widget-gallery', 'Add widgets drawer'],
+  ['asana-my-tasks-list', 'my-tasks-list', 'My tasks grouped list'],
+  ['asana-my-tasks-view-controls', 'my-tasks-view-controls', 'Filter, sort, group and options controls'],
+  ['asana-projects-directory', 'projects-directory', 'Projects directory'],
+  ['asana-projects-filter-popover', 'projects-filter-popover', 'Projects owner filter'],
+  ['asana-inbox-activity', 'inbox-activity', 'Inbox activity stream'],
+  ['asana-portfolios-preview', 'portfolios-preview', 'Provider-presented portfolio example'],
+  ['asana-project-board', 'project-board', 'Project board'],
+  ['asana-project-view-tabs', 'project-view-tabs', 'Project view tabs'],
+  ['asana-board-toolbar', 'board-toolbar', 'Board toolbar controls'],
+  ['asana-board-task-card', 'board-task-card', 'Board task card'],
+  ['asana-default-view-onboarding', 'default-view-onboarding', 'First-project default-view onboarding'],
+  ['asana-ai-teammates-hub', 'ai-teammates-hub', 'AI Teammates tabs and empty states'],
+  ['asana-workflow-library', 'workflow-library', 'Workflow tools and reusable building blocks'],
+  ['asana-strategy-goals', 'strategy-goals', 'Goals strategy surface'],
+  ['asana-strategy-reporting', 'strategy-reporting', 'Reporting dashboard preview'],
+  ['asana-strategy-resourcing', 'strategy-resourcing', 'Resourcing capacity preview'],
+  ['asana-knowledge-meetings', 'knowledge-meetings', 'Meetings coming-soon surface'],
+  ['asana-knowledge-pages', 'knowledge-pages', 'Pages knowledge surface'],
+  ['asana-people-directory', 'people-directory', 'Sanitized profile and teams surfaces'],
+  ['asana-project-overview', 'project-overview', 'Project overview modules'],
+  ['asana-project-list', 'project-list', 'Project list view'],
+  ['asana-project-timeline', 'project-timeline', 'Project timeline view'],
+  ['asana-project-dashboard', 'project-dashboard', 'Project dashboard widgets'],
+  ['asana-project-calendar', 'project-calendar', 'Project calendar view'],
+  ['asana-dash-assistant', 'dash-assistant', 'Dash assistant entry point'],
+  ['asana-help-center', 'help-center', 'Help and getting-started dialog'],
+  ['asana-settings-dialog', 'settings-dialog', 'Settings categories and feature inventory'],
+  ['asana-project-actions-menu', 'project-actions-menu', 'Project actions menu'],
+  ['asana-project-customize-panel', 'project-customize-panel', 'Project customization categories'],
+  ['asana-new-project-flow', 'new-project-flow', 'Blank project creation flow'],
+  ['asana-project-view-picker', 'project-view-picker', 'Extended project view selection'],
+  ['asana-task-lifecycle', 'task-lifecycle', 'Disposable task lifecycle'],
+  ['asana-project-gantt', 'project-gantt', 'Project Gantt view'],
+  ['asana-project-workload', 'project-workload', 'Project workload view'],
+  ['asana-project-timesheets', 'project-timesheets', 'Project timesheets entitlement state'],
+  ['asana-project-files', 'project-files', 'Project files view'],
+  ['asana-project-messages', 'project-messages', 'Project messages view'],
+  ['asana-project-embed', 'project-embed', 'Project embed catalogue'],
+  ['asana-project-page', 'project-page', 'Project page editor'],
+  ['asana-project-custom-field', 'project-custom-field', 'Project-only custom field'],
+  ['asana-project-form-builder', 'project-form-builder', 'Unpublished project form builder'],
+  ['asana-project-automation-builder', 'project-automation-builder', 'Draft automation builder'],
+  ['asana-global-more-menu', 'global-more-menu', 'Global More menu'],
+];
+
+export const asanaIds = entries.map(([id]) => id);
+
+export const asanaPreviews: PreviewRegistry = Object.fromEntries(entries.map(([id, variant, description]) => [id, {
+  type: 'reconstructed' as const,
+  Component: AsanaPreview,
+  label: 'Authenticated-source reconstruction',
+  runtimeVerified: true,
+  evidence: 'Authenticated Asana observation on 2026-10-08. Workspace and user identity, object IDs, exact provider content, email addresses and screenshots are omitted or fictionalized. A clearly named private disposable project was used to exercise project creation, extended views, task creation, description and due-date editing, section movement, completion, page editing, a project-only field, an unpublished form and the automation builder. No real work item, recipient, invitation, external share, billing action, integration authorization, email delivery or automation publication was submitted.',
+  fixtures: [{ id: 'default', title: description, props: { variant } }],
+  config,
+  propsSchema: [
+    { name: 'variant', type: 'AsanaVariant', required: true, description },
+    { name: 'initialState', type: 'string', required: false, description: 'Reserved for documented fictional states.' },
+    { name: 'disabled', type: 'boolean', required: false, description: 'Marks the local fixture disabled without contacting Asana.' },
+  ],
+}]));

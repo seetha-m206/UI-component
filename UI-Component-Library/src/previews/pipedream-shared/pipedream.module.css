@@ -1,0 +1,719 @@
+.mainFrame {
+  --blue: #3b91e8;
+  --ink: #24313b;
+  --line: #d7dde3;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  min-height: 720px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  color: var(--ink);
+  font:
+    14px/1.45 ui-sans-serif,
+    system-ui,
+    sans-serif;
+}
+.mainSidebar {
+  background: #202324;
+  color: #d8dcdf;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.identity {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.identity > span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background: #35393b;
+}
+.identity div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.identity small {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #92999d;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  background: #181a1b !important;
+  border: 0 !important;
+  color: #aeb4b8 !important;
+}
+.search kbd {
+  background: #303436;
+  border-radius: 5px;
+  padding: 0 7px;
+}
+.eyebrow {
+  margin: 18px 8px 8px;
+  color: #8f969a;
+}
+.mainSidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.mainSidebar button,
+.connectFrame button {
+  font: inherit;
+}
+.mainSidebar nav button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  padding: 9px;
+  border-radius: 5px;
+}
+.mainSidebar nav button:hover,
+.selected {
+  background: #323638 !important;
+  color: white !important;
+}
+.mainSidebar nav em {
+  font-size: 10px;
+  margin-left: 5px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: #4a4e50;
+}
+.planCard {
+  margin-top: auto;
+  border: 1px solid #35393b;
+  border-radius: 6px;
+  padding: 10px;
+  display: grid;
+  gap: 5px;
+  font-size: 12px;
+}
+.planCard strong {
+  font-size: 13px;
+}
+.planCard hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #3c4143;
+}
+.planCard button,
+.primary,
+.pageHeader button,
+.heroCard button,
+.toolbar button {
+  border: 0 !important;
+  background: var(--blue) !important;
+  color: white !important;
+  border-radius: 4px;
+  padding: 9px 13px;
+}
+.mainContent {
+  min-width: 0;
+  position: relative;
+  background: #f6f8fa;
+}
+.retirement {
+  height: 54px;
+  background: #e7f4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-weight: 600;
+}
+.retirement button {
+  border: 0;
+  background: var(--blue);
+  color: white;
+  padding: 9px 16px;
+  border-radius: 3px;
+}
+.page {
+  min-height: 666px;
+  padding: 0 24px;
+  position: relative;
+}
+.pageHeader {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.pageHeader h1 {
+  font-size: 18px;
+  margin: 0 auto 0 0;
+}
+.tableHead,
+.projectRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 10px;
+}
+.tableHead {
+  color: #68747d;
+  text-transform: uppercase;
+  font-size: 11px;
+  border-bottom: 1px solid var(--line);
+}
+.projectRow {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: white;
+  color: var(--ink);
+  text-align: left;
+}
+.projectPage {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  min-height: 666px;
+}
+.projectNav {
+  background: white;
+  border-right: 1px solid var(--line);
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.projectNav button,
+.settingsPage nav button {
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 10px;
+  border-radius: 4px;
+  color: inherit;
+}
+.lightSelected {
+  background: #e6f2fc !important;
+  color: #22689e !important;
+}
+.projectCanvas {
+  padding: 14px 18px;
+  position: relative;
+}
+.projectCanvas > .pageHeader {
+  border: 0;
+}
+.primary {
+  margin: 8px 0;
+}
+.menu {
+  position: absolute;
+  z-index: 5;
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 30px #0002;
+  border-radius: 5px;
+  padding: 5px;
+  display: grid;
+  min-width: 230px;
+}
+.menu button,
+.menu label {
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+  background: white;
+  padding: 10px;
+  text-align: left;
+}
+.menu kbd {
+  color: #7b858d;
+}
+.empty {
+  min-height: 370px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: #79848d;
+}
+.empty b {
+  font-size: 30px;
+}
+.empty h2 {
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.heroCard {
+  margin: 14px 0;
+  padding: 36px 48px;
+  background: linear-gradient(135deg, #edf8ff, #fff);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+.heroCard h1,
+.heroCard h2 {
+  font-size: 28px;
+  max-width: 650px;
+}
+.heroCard p {
+  max-width: 690px;
+  color: #61707b;
+}
+.heroCard button:disabled {
+  background: #e5e8ea !important;
+  color: #7b858d !important;
+}
+.featureGrid,
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.featureGrid article,
+.cardGrid article {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 18px;
+}
+.featureGrid h2,
+.cardGrid h2 {
+  font-size: 16px;
+}
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 0;
+}
+.toolbar input,
+.toolbar button,
+.page input,
+.field input {
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 4px;
+  padding: 9px 12px;
+}
+.filter {
+  position: absolute;
+  right: 24px;
+  top: 120px;
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 30px #0002;
+  padding: 14px;
+  display: grid;
+  gap: 12px;
+  z-index: 3;
+}
+.tabs {
+  display: flex;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+.tabs button {
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+}
+.modal {
+  position: absolute;
+  inset: 140px auto auto 50%;
+  transform: translateX(-50%);
+  width: min(440px, 70%);
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 50px #0003;
+  border-radius: 6px;
+  padding: 22px;
+  z-index: 6;
+}
+.modal footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.info,
+.gate {
+  background: #eaf6ff;
+  border: 1px solid #b8d6ed;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 4px;
+}
+.settingsPage {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  min-height: 666px;
+  background: white;
+}
+.settingsPage > nav {
+  border-right: 1px solid var(--line);
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.settingsContent {
+  padding: 0 28px;
+  position: relative;
+}
+.field {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  max-width: 680px;
+  margin: 18px 0;
+  font-weight: 700;
+}
+.field input {
+  grid-column: 1/2;
+}
+.field button {
+  grid-column: 2/3;
+  grid-row: 2;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 4px;
+}
+.danger {
+  margin-top: 32px;
+  border: 1px solid #efc3c3;
+  background: #fff7f7;
+  padding: 18px;
+  border-radius: 5px;
+}
+.danger button {
+  background: #b73535;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  padding: 9px 13px;
+}
+.cardGrid article span {
+  display: inline-block;
+  background: #efe8ff;
+  color: #65419b;
+  border-radius: 999px;
+  padding: 3px 8px;
+}
+.cardGrid button {
+  margin: 6px 4px 0 0;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 4px;
+  padding: 8px;
+}
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.kpis article {
+  background: #f6f8fa;
+  border: 1px solid var(--line);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.boundary {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #1d252b;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 5px;
+  box-shadow: 0 8px 26px #0003;
+}
+.connectFrame {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  grid-template-rows: 56px minmax(664px, auto);
+  min-height: 720px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #333;
+  background: #171a1b;
+  color: #d6dadd;
+  font:
+    14px/1.45 ui-sans-serif,
+    system-ui,
+    sans-serif;
+}
+.connectFrame > header {
+  grid-column: 1/3;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 14px;
+  border-bottom: 1px solid #323637;
+}
+.connectFrame > header b {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.connectFrame > header i {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #28643f;
+}
+.connectFrame > header small,
+.connectFrame > header em {
+  background: #303435;
+  border-radius: 6px;
+  padding: 3px 7px;
+}
+.connectFrame > header em {
+  margin-left: auto;
+  color: #dbb55b;
+  border: 1px solid #7b6838;
+  background: transparent;
+}
+.connectFrame > header button {
+  background: #202425;
+  color: #d6dadd;
+  border: 1px solid #323637;
+  padding: 8px 12px;
+}
+.connectFrame > aside {
+  padding: 16px 10px;
+  border-right: 1px solid #323637;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.connectFrame aside nav {
+  display: flex;
+  flex-direction: column;
+}
+.connectFrame aside button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  padding: 9px;
+  border-radius: 4px;
+}
+.connectSelected {
+  background: #202425 !important;
+  color: white !important;
+}
+.connectFrame aside a {
+  margin-top: auto;
+  color: #d6dadd;
+  text-decoration: none;
+  padding: 10px;
+}
+.connectFrame > main {
+  min-width: 0;
+  position: relative;
+}
+.connectPage {
+  min-height: 664px;
+  position: relative;
+}
+.connectHero {
+  min-height: 560px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 14px;
+}
+.connectHero h1 {
+  font-size: 28px;
+  margin: 0;
+}
+.connectHero article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+  gap: 12px;
+  background: #202425;
+  border: 1px solid #323637;
+  border-radius: 6px;
+  padding: 18px;
+  min-width: 430px;
+}
+.connectHero button,
+.connectBody button {
+  border: 1px solid #3d4446;
+  background: #252a2b;
+  color: white;
+  border-radius: 4px;
+  padding: 10px;
+}
+.connectHero button:first-of-type,
+.connectBody > .pageHeader button {
+  background: #327c4b;
+}
+.connectSubnav {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #323637;
+  padding: 12px 20px;
+}
+.connectSubnav button {
+  border: 0;
+  background: transparent;
+  color: #aeb5b8;
+  padding: 10px;
+}
+.connectBody {
+  padding: 0 28px;
+  position: relative;
+}
+.connectBody .pageHeader {
+  border-color: #323637;
+}
+.connectBody .field input,
+.connectBody .field button {
+  background: #202425;
+  border-color: #3a4042;
+  color: #e4e7e8;
+}
+.networkRow {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  background: #202425;
+  border: 1px solid #323637;
+  padding: 18px;
+  margin: 18px 0;
+}
+.connectBody .empty {
+  color: #899194;
+}
+.stringFrame {
+  min-height: 690px;
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  background: #111;
+  color: #f1f2f3;
+}
+.stringFrame aside {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  padding: 24px 18px;
+  background: #1b1b1b;
+}
+.stringFrame aside button {
+  background: #438bf5;
+  color: white;
+  border: 0;
+  padding: 10px;
+}
+.stringFrame main {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 14px;
+  padding: 40px;
+}
+.stringFrame h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+.stringFrame textarea {
+  width: min(620px, 90%);
+  min-height: 130px;
+  padding: 18px;
+  color: #f1f2f3;
+  background: #202020;
+  border: 1px solid #454545;
+  border-radius: 10px;
+}
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 760px;
+}
+.pills button {
+  border: 1px solid #555;
+  border-radius: 999px;
+  background: transparent;
+  color: #ccc;
+  padding: 8px 14px;
+}
+.chart {
+  min-height: 150px;
+  margin: 18px 0;
+  border: 1px solid #323637;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #899194;
+  background: linear-gradient(180deg, rgba(76, 138, 255, 0.18), transparent);
+}
+@media (max-width: 720px) {
+  .mainFrame,
+  .connectFrame,
+  .stringFrame {
+    grid-template-columns: 72px minmax(0, 1fr);
+  }
+  .mainSidebar .identity div,
+  .mainSidebar .eyebrow,
+  .mainSidebar nav button:not(.selected),
+  .planCard,
+  .connectFrame > aside small,
+  .connectFrame > aside button:not(.connectSelected),
+  .connectFrame > aside a {
+    display: none;
+  }
+  .connectFrame > header {
+    grid-column: 1/3;
+    overflow: auto;
+  }
+  .projectPage,
+  .settingsPage {
+    grid-template-columns: 92px minmax(0, 1fr);
+  }
+  .projectNav button,
+  .settingsPage nav button {
+    font-size: 11px;
+    padding: 8px 4px;
+  }
+  .featureGrid,
+  .cardGrid,
+  .kpis {
+    grid-template-columns: 1fr;
+  }
+  .tableHead,
+  .projectRow {
+    grid-template-columns: 1.5fr 1fr;
+  }
+  .tableHead > *:nth-child(2),
+  .tableHead > *:nth-child(3),
+  .projectRow > *:nth-child(2),
+  .projectRow > *:nth-child(3) {
+    display: none;
+  }
+  .connectHero article {
+    min-width: 0;
+  }
+  .retirement {
+    font-size: 11px;
+    padding: 0 8px;
+  }
+  .page {
+    padding: 0 12px;
+  }
+}

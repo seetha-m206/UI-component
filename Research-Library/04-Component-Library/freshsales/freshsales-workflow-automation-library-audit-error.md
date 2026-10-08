@@ -1,0 +1,47 @@
+---
+component: "Workflow automation library error component"
+ui_category: "Automation > error"
+source_product: "Freshsales"
+parent_workflow: "Workflow automation library"
+last_verified: "2026-10-08"
+evidence_state: "reconstructed"
+status: "partial"
+summary: "Independent error-level Freshsales audit record with fictional local fixtures and provider outcomes left unverified."
+---
+
+# Workflow automation library error component
+
+## Evidence boundary
+
+- **RECONSTRUCTION:** Error boundary. No user-facing provider error was manufactured or claimed as observed.
+- **RECONSTRUCTION:** The preview uses fictional identities and values and cannot contact Freshsales.
+- **NOT OBSERVED:** Provider writes, persistence, destructive actions, external communications, uploads, AI prompts, billing and permission changes were not exercised.
+
+## DOM structure
+
+- **RECONSTRUCTION:** Template-library heading
+- **RECONSTRUCTION:** Workflow template cards
+- **RECONSTRUCTION:** Create workflow boundary
+
+## User actions
+
+- **BOUNDARY:** Inspect templates
+- **BOUNDARY:** Search locally
+- **BOUNDARY:** Do not create or activate automation
+
+## Network and API
+
+- **OBSERVED:** GET /crm/sales/workflow-automations/templates?{query} -> 200. Request: none. Response: workflow templates and metadata. Trigger: Load workflow library.
+
+## Registered fixture
+
+- **RECONSTRUCTION:** Independent error-level preview with a local interaction boundary.
+- **NEEDS VERIFICATION:** Any consequential provider outcome requires separate authorization and runtime evidence.
+
+## Reusable pattern
+
+- Automation workflow pattern for error-level reuse.
+
+## Sources
+
+- **OBSERVED:** Authenticated, read-only Freshsales audit on 2026-10-08.

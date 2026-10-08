@@ -1,0 +1,132 @@
+{
+  "captured_at": "2026-10-08",
+  "classification": "FICTIONAL LOCAL RECONSTRUCTION",
+  "source": "UI-Component-Library/livechat-capture.html",
+  "fixtures": [
+    {
+      "file": "fixtures/livechat-application-shell.png",
+      "bytes": 183857,
+      "sha256": "084123efec291033653ab8ea1c86ff907b526d52bf39d9427112076892ab2502"
+    },
+    {
+      "file": "fixtures/livechat-apps-marketplace.png",
+      "bytes": 75743,
+      "sha256": "085ed9d7d112f8b244f79e16e784223a25c14eba0fe2a1c891a2efb75d079b7f"
+    },
+    {
+      "file": "fixtures/livechat-archives-empty.png",
+      "bytes": 40054,
+      "sha256": "d3182b5cfb39d1a8989024e2611464c1da7a0b1423925a775c3cb6eb13737287"
+    },
+    {
+      "file": "fixtures/livechat-automate-overview.png",
+      "bytes": 78217,
+      "sha256": "6cb4c00ae0e57c53ee6b8872c9ad7c126e860fbab619228041cf7eab7dda2963"
+    },
+    {
+      "file": "fixtures/livechat-campaigns-list.png",
+      "bytes": 66782,
+      "sha256": "44b045c3c5c06247f0a8f671e85baa69eac2f1ee72bbc9c2734446d2f3fb5b2c"
+    },
+    {
+      "file": "fixtures/livechat-canned-responses-list.png",
+      "bytes": 83202,
+      "sha256": "3e5339b0865580a4754edb4753adda7302919ebb603338ad7426339e20a53e3d"
+    },
+    {
+      "file": "fixtures/livechat-chat-action-menu.png",
+      "bytes": 94121,
+      "sha256": "40f84e5d5afcc8069cfd66b2d401a554c19b9254f77c5745227cd19aff4a643b"
+    },
+    {
+      "file": "fixtures/livechat-developer-invite.png",
+      "bytes": 49752,
+      "sha256": "6c8845528ed7e252dbefed7968f0b24a8f58e2a86bed0329b282e16ad7420bbc"
+    },
+    {
+      "file": "fixtures/livechat-engage-traffic-empty.png",
+      "bytes": 54413,
+      "sha256": "c55924b3b123d2f2d447751104630bc089a09fee420c132b47919477957c990d"
+    },
+    {
+      "file": "fixtures/livechat-global-search.png",
+      "bytes": 54288,
+      "sha256": "1ba1b305af7867553b0f2cb02e0604e2d96047e455efe1737707efc9c2dd1280"
+    },
+    {
+      "file": "fixtures/livechat-goals-empty.png",
+      "bytes": 51174,
+      "sha256": "941313946fbd2b14f7e03ec8c4ce3746f15e49582a41acc128ba441fd6f62aed"
+    },
+    {
+      "file": "fixtures/livechat-helpdesk-boundary.png",
+      "bytes": 145188,
+      "sha256": "1cb7b322621abb2f9d4ffe2f96941b98d72a403bdab2737044934b77dc2e5a55"
+    },
+    {
+      "file": "fixtures/livechat-home-onboarding.png",
+      "bytes": 187248,
+      "sha256": "7d7a0956b07403a72fe90dc43523719a6a6b5687d17e8190c7f8e596ff456474"
+    },
+    {
+      "file": "fixtures/livechat-installation-gate.png",
+      "bytes": 87981,
+      "sha256": "eb049c59b9bdbcada13a164f28a15442c95a8d758ad7f2c64a3309946c17cc3c"
+    },
+    {
+      "file": "fixtures/livechat-integration-accordion.png",
+      "bytes": 28681,
+      "sha256": "2582ea197ad5c12e20fb7ba1a6a4c64bd9a852fdbc6a3cada7235e877b3fcbf2"
+    },
+    {
+      "file": "fixtures/livechat-reports-summary.png",
+      "bytes": 59897,
+      "sha256": "7294b187be1a2bcc67cc571bac9d7a11da3115bccc786ef853558d067ac7b27b"
+    },
+    {
+      "file": "fixtures/livechat-routing-rules-empty.png",
+      "bytes": 58398,
+      "sha256": "8b9a6a11a74e883fca35c33f7def9d57ca156ec2d0272cec8d4d0d4fd33e18a9"
+    },
+    {
+      "file": "fixtures/livechat-sample-chat-workspace.png",
+      "bytes": 80266,
+      "sha256": "9e09d21ec2353a69ee36411bb07bf5eeba1e6fc829712a2b1d16730a8dd03287"
+    },
+    {
+      "file": "fixtures/livechat-settings-catalogue.png",
+      "bytes": 88614,
+      "sha256": "6062a8b377839f709a0cd41c93cbafdb70b21142231c3576ffa581983e64db12"
+    },
+    {
+      "file": "fixtures/livechat-team-directory.png",
+      "bytes": 57950,
+      "sha256": "532573be7a3b1636dcd83abaadd46cebbb02c6f20fea5d74adccf0de46414c13"
+    },
+    {
+      "file": "fixtures/livechat-total-chats-report.png",
+      "bytes": 63213,
+      "sha256": "c2c800d5c63267993750607cd0f287c26b5968163e254904648bc657073d5dd2"
+    },
+    {
+      "file": "fixtures/livechat-trial-banner.png",
+      "bytes": 21586,
+      "sha256": "1a71960c7e3d8a436892ecffbacd0f01decacd19587240520b4ff599dc702bfb"
+    },
+    {
+      "file": "fixtures/livechat-widget-customization.png",
+      "bytes": 67991,
+      "sha256": "b120dd4372aa89bf4ff59f3a209905d74605c53c562a191a1dadd26318dce691"
+    },
+    {
+      "file": "fixtures/livechat-workflows-gallery.png",
+      "bytes": 90105,
+      "sha256": "642a4b719e56739267f254dc5186e303de12d8a17bde4edda70131fe7e862219"
+    },
+    {
+      "file": "fixtures/text-access-blocked.png",
+      "bytes": 39999,
+      "sha256": "b5723618a0d7e2f4635add65c8b1c5e60f3544aba744e2b4332ee38aff707713"
+    }
+  ]
+}

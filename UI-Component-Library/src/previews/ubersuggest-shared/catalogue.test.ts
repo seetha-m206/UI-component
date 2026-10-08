@@ -10,7 +10,7 @@ import { sourceRegistry } from '../sourceRegistry';
 describe('Ubersuggest evidence and catalogue integration', () => {
   it('discovers all fifteen records under the existing SEO group', () => {
     expect(Object.keys(ubersuggestPreviews)).toHaveLength(15);
-    expect(getProductGroup('ubersuggest')).toBe('SEO & AI Search');
+    expect(getProductGroup('ubersuggest')).toBe('SEO');
   });
   it.each(Object.keys(ubersuggestPreviews))(
     '%s has matching canonical evidence and all audience sections',

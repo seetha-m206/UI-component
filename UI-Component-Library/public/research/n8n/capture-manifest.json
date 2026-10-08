@@ -1,0 +1,766 @@
+{
+  "generated_at": "2026-10-08T11:05:41.475172+00:00",
+  "provider": "n8n Cloud",
+  "capture_scope": "Every registered n8n fictional local preview",
+  "provider_screenshot": false,
+  "component_count": 58,
+  "capture_count": 58,
+  "unique_sha256_count": 58,
+  "privacy_boundary": "Captures contain fictional local reconstruction data only. They are not authenticated n8n provider screenshots.",
+  "captures": [
+    {
+      "component_id": "n8n-advanced-workflow-boundary",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-advanced-workflow-boundary.png",
+      "public_url": "/research/n8n/fixtures/n8n-advanced-workflow-boundary.png",
+      "bytes": 234009,
+      "sha256": "ff75f4f876a4a0ef70dcb46dc292ddf513c5a45db077cd86f66a924533fd0d90",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-agents-empty",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-agents-empty.png",
+      "public_url": "/research/n8n/fixtures/n8n-agents-empty.png",
+      "bytes": 240140,
+      "sha256": "534acb697cc68bd7bd9217213b8fa6f01d62b689e30cd6d7a721b30abe342939",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-ai-usage-controls",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-ai-usage-controls.png",
+      "public_url": "/research/n8n/fixtures/n8n-ai-usage-controls.png",
+      "bytes": 241027,
+      "sha256": "9f5f82577501fcd48f7c1ca368bbe007439439cb81f24cf05dbe8c4c38a8b188",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-application-shell",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-application-shell.png",
+      "public_url": "/research/n8n/fixtures/n8n-application-shell.png",
+      "bytes": 240352,
+      "sha256": "4b4ae741a918ceceb1e9e09bb2ced8c1efb29923828fedc06b1a1251af0711e3",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-assistant-onboarding",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-assistant-onboarding.png",
+      "public_url": "/research/n8n/fixtures/n8n-assistant-onboarding.png",
+      "bytes": 235307,
+      "sha256": "ad464cbf73215f08e7fe528d20bee5b5d4ca2c6a2d3096bbe15c76416325ddba",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-assistant-permission-selector",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-assistant-permission-selector.png",
+      "public_url": "/research/n8n/fixtures/n8n-assistant-permission-selector.png",
+      "bytes": 185286,
+      "sha256": "9e8d4283656a20540be6030e3d0a4b77bb6da5bf4fc4e6561a99152bec31db68",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-assistant-prompt-composer",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-assistant-prompt-composer.png",
+      "public_url": "/research/n8n/fixtures/n8n-assistant-prompt-composer.png",
+      "bytes": 185412,
+      "sha256": "f0b08bf20fa2af4b81f8308e9abfa1e6a1ca348ec6151624d85cc282d65aea07",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-assistant-settings",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-assistant-settings.png",
+      "public_url": "/research/n8n/fixtures/n8n-assistant-settings.png",
+      "bytes": 238756,
+      "sha256": "e7b6907fc29679d77e5eb6906373a847e4ab5bfda8d2bba3927fd8000803053e",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-assistant-suggestion-chip",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-assistant-suggestion-chip.png",
+      "public_url": "/research/n8n/fixtures/n8n-assistant-suggestion-chip.png",
+      "bytes": 186890,
+      "sha256": "41ec837f4ca6a22720764a6f6446ce90e27f0b0efb6305d97380f9e3560dc3f6",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-chat-settings",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-chat-settings.png",
+      "public_url": "/research/n8n/fixtures/n8n-chat-settings.png",
+      "bytes": 237738,
+      "sha256": "f169e4b9acb2ec4b176b0c6ebd523883bfb067f40a99fde0ef9721722bccb075",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-cloud-admin-dashboard",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-cloud-admin-dashboard.png",
+      "public_url": "/research/n8n/fixtures/n8n-cloud-admin-dashboard.png",
+      "bytes": 235547,
+      "sha256": "f2f79559285027abbb101bb42008bec233e7005d0d8656591f96ea7d64b19cf8",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-cloud-instance-card",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-cloud-instance-card.png",
+      "public_url": "/research/n8n/fixtures/n8n-cloud-instance-card.png",
+      "bytes": 197519,
+      "sha256": "2d8cce05af0d169ba7c2ebb79839bd0f4f6ef002ee3409f8a16a3115a7af5892",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-community-node-row",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-community-node-row.png",
+      "public_url": "/research/n8n/fixtures/n8n-community-node-row.png",
+      "bytes": 188459,
+      "sha256": "390cd67ef00a17732be5615bbe87c813003f2c70391a87f9762dfa212b29e78b",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-community-nodes-inventory",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-community-nodes-inventory.png",
+      "public_url": "/research/n8n/fixtures/n8n-community-nodes-inventory.png",
+      "bytes": 237145,
+      "sha256": "901c8e95bc6f40c729fe4396f1ff187458579c64dd32e419f189fc855b6084ba",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-context-empty-table",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-context-empty-table.png",
+      "public_url": "/research/n8n/fixtures/n8n-context-empty-table.png",
+      "bytes": 196353,
+      "sha256": "f3b28fb164ae4505d4fcaf9740483db4e170c53fdfee2d71492e9c6cfd2f1836",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-context-preferences",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-context-preferences.png",
+      "public_url": "/research/n8n/fixtures/n8n-context-preferences.png",
+      "bytes": 237780,
+      "sha256": "d9ca9236521523fedc529a9bfd6609459d400444fda36d555c9cc0346704a1fd",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-credentials-empty",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-credentials-empty.png",
+      "public_url": "/research/n8n/fixtures/n8n-credentials-empty.png",
+      "bytes": 240996,
+      "sha256": "4d5c4d35048398c3d21133cb042d9644817dd8398093d2ff19a013f22060f6ef",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-credit-summary-card",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-credit-summary-card.png",
+      "public_url": "/research/n8n/fixtures/n8n-credit-summary-card.png",
+      "bytes": 190339,
+      "sha256": "97639f5997ba7bd7c734324af8c8fce9a218900b004207f2d2e4cf0fd33a543d",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-data-tables-empty",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-data-tables-empty.png",
+      "public_url": "/research/n8n/fixtures/n8n-data-tables-empty.png",
+      "bytes": 241819,
+      "sha256": "a5e4320a4a43d1062ed7e19530e9abe6e4c070768a9ff1a6eb99b8643d456d10",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-enterprise-gate-card",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-enterprise-gate-card.png",
+      "public_url": "/research/n8n/fixtures/n8n-enterprise-gate-card.png",
+      "bytes": 195573,
+      "sha256": "ca389ff7a13e0cd5f089cc8a2a362353831a7a2e84993b5007c1423ad204036b",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-enterprise-plan-gates",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-enterprise-plan-gates.png",
+      "public_url": "/research/n8n/fixtures/n8n-enterprise-plan-gates.png",
+      "bytes": 235522,
+      "sha256": "ab1553ccc8ef32d9057a820e0a757211f9c594a18b3eef48e20bdbf3d3dbac0f",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-executions-empty",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-executions-empty.png",
+      "public_url": "/research/n8n/fixtures/n8n-executions-empty.png",
+      "bytes": 242065,
+      "sha256": "e3db05538dd32a5fb7e8a93b1db6d0eff68ea97ea29b62aefdfd145fcf42043f",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-gateway-credit-upgrade-gate",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-gateway-credit-upgrade-gate.png",
+      "public_url": "/research/n8n/fixtures/n8n-gateway-credit-upgrade-gate.png",
+      "bytes": 241044,
+      "sha256": "7db43031489531c238331be451fa99bf93246105fd944f33bee19a8e9e43b15f",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-gateway-upgrade-modal",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-gateway-upgrade-modal.png",
+      "public_url": "/research/n8n/fixtures/n8n-gateway-upgrade-modal.png",
+      "bytes": 203504,
+      "sha256": "6a479a21f59110322bc6ef6c68cfd118b006529b5a64bde11d842d5857678f92",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-global-create-menu",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-global-create-menu.png",
+      "public_url": "/research/n8n/fixtures/n8n-global-create-menu.png",
+      "bytes": 235925,
+      "sha256": "8d516d727a0968aeff2ee135eb3b0568e843bdd533112074bf65571ef4460bf5",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-insights-chart",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-insights-chart.png",
+      "public_url": "/research/n8n/fixtures/n8n-insights-chart.png",
+      "bytes": 184076,
+      "sha256": "8cb82b534899078f493615a6c0e039dfed9a13cdbb9f5293418712a91428f841",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-insights-dashboard",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-insights-dashboard.png",
+      "public_url": "/research/n8n/fixtures/n8n-insights-dashboard.png",
+      "bytes": 237445,
+      "sha256": "81c10c48da7883b328d3219945bb09c530968c7c56b7adf6d8f2560cd1c1cc99",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-insights-filter-control",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-insights-filter-control.png",
+      "public_url": "/research/n8n/fixtures/n8n-insights-filter-control.png",
+      "bytes": 180203,
+      "sha256": "1865a45d62b4724702892ac8e6bff0a9f246ed9ac7d64ecf3cea6b6a30de70c2",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-insights-metric-card",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-insights-metric-card.png",
+      "public_url": "/research/n8n/fixtures/n8n-insights-metric-card.png",
+      "bytes": 183357,
+      "sha256": "1999bc78282aaef9ab770b1070a0e41a96b89082601aa52cfd3233ae224aac6b",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-insights-workflow-table",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-insights-workflow-table.png",
+      "public_url": "/research/n8n/fixtures/n8n-insights-workflow-table.png",
+      "bytes": 188391,
+      "sha256": "ed32a81013538c80074af9d1b9c62268bae80f6ba1b60f3fddd72326cadfb396",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-instance-mcp-settings",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-instance-mcp-settings.png",
+      "public_url": "/research/n8n/fixtures/n8n-instance-mcp-settings.png",
+      "bytes": 240611,
+      "sha256": "6dcd3c964c717ca9774bf255e535b07d07a87a379c020dfe0d6a38af51784dbf",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-ldap-enterprise-gate",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-ldap-enterprise-gate.png",
+      "public_url": "/research/n8n/fixtures/n8n-ldap-enterprise-gate.png",
+      "bytes": 230302,
+      "sha256": "3487f64fe617c1d5fcb41749a33adda62c5229560582293cbf541095cf8b5c66",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-log-streaming-enterprise-gate",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-log-streaming-enterprise-gate.png",
+      "public_url": "/research/n8n/fixtures/n8n-log-streaming-enterprise-gate.png",
+      "bytes": 236041,
+      "sha256": "a425efd47dd108ca081a5a822759bbc4fd8eb6291c7d3d8073a766629067b367",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-mcp-enable-card",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-mcp-enable-card.png",
+      "public_url": "/research/n8n/fixtures/n8n-mcp-enable-card.png",
+      "bytes": 198113,
+      "sha256": "340fe2f03f7243e2dd4c1280f7622394853b5a778920476f9ac9b3e777ad1bd1",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-migration-issue-card",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-migration-issue-card.png",
+      "public_url": "/research/n8n/fixtures/n8n-migration-issue-card.png",
+      "bytes": 201049,
+      "sha256": "9677b8f258877ecc0673d908bad0f6a4ab3de9d0885cc947899c42efd8a2ad61",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-migration-report",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-migration-report.png",
+      "public_url": "/research/n8n/fixtures/n8n-migration-report.png",
+      "bytes": 238180,
+      "sha256": "00466589ccd7b0e273f5cb3e2619d01d0214e8fec4603e3bf66446a478136429",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-migration-tabs",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-migration-tabs.png",
+      "public_url": "/research/n8n/fixtures/n8n-migration-tabs.png",
+      "bytes": 184291,
+      "sha256": "78ac4b85851952ee66d875689aaeaa9e6514a03f0e746c64580ec46ff97ff9fa",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-onboarding-choice-card",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-onboarding-choice-card.png",
+      "public_url": "/research/n8n/fixtures/n8n-onboarding-choice-card.png",
+      "bytes": 187617,
+      "sha256": "0c0819c43dc77b6eb576726057f69897d64c48407f0fa56738b8a868f0d01578",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-opentelemetry-settings",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-opentelemetry-settings.png",
+      "public_url": "/research/n8n/fixtures/n8n-opentelemetry-settings.png",
+      "bytes": 237446,
+      "sha256": "b4def2c4406753f2b1bc9450a61a99866053e44d128c17cd929484fdb030cbe8",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-otel-field-row",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-otel-field-row.png",
+      "public_url": "/research/n8n/fixtures/n8n-otel-field-row.png",
+      "bytes": 191992,
+      "sha256": "5b3c40f92d73046ccae4dabc103d89cbba23af3383c66c89c9e9b3f70881aaa9",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-otel-trace-option",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-otel-trace-option.png",
+      "public_url": "/research/n8n/fixtures/n8n-otel-trace-option.png",
+      "bytes": 186457,
+      "sha256": "3b774482d36e56feca822731100c8cf94e4d81074db3de86d0be724722b95170",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-overview-onboarding",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-overview-onboarding.png",
+      "public_url": "/research/n8n/fixtures/n8n-overview-onboarding.png",
+      "bytes": 226521,
+      "sha256": "40538bd0b33d5c5e4539af3cf7905e7b68d0a390fafaee08ab568ec84feec622",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-personal-project-tabs",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-personal-project-tabs.png",
+      "public_url": "/research/n8n/fixtures/n8n-personal-project-tabs.png",
+      "bytes": 243039,
+      "sha256": "a019d429536145c56774b0fdeeaa7c0cb2fed78176effbc99dc981bb142ab4d5",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-primary-navigation-rail",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-primary-navigation-rail.png",
+      "public_url": "/research/n8n/fixtures/n8n-primary-navigation-rail.png",
+      "bytes": 183857,
+      "sha256": "1afd449c013564bb9df41f6ee72d7a300ffb19f9861b7184456c63f51675024d",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-project-tab-strip",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-project-tab-strip.png",
+      "public_url": "/research/n8n/fixtures/n8n-project-tab-strip.png",
+      "bytes": 186277,
+      "sha256": "d1fd2e4f0edab2607b2faa737a7853575368ab33e0cd63a87814816d9c9cd5e2",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-resource-empty-card",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-resource-empty-card.png",
+      "public_url": "/research/n8n/fixtures/n8n-resource-empty-card.png",
+      "bytes": 198302,
+      "sha256": "ab26dc35048221c1bffcfb2d96f2c6d91e544db23e3423be030562ce887a1d54",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-security-policies",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-security-policies.png",
+      "public_url": "/research/n8n/fixtures/n8n-security-policies.png",
+      "bytes": 242358,
+      "sha256": "df1333123d4af621a9cfb49549a01eb49b197674d4b8556ffb285e4af54e8628",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-setting-toggle-row",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-setting-toggle-row.png",
+      "public_url": "/research/n8n/fixtures/n8n-setting-toggle-row.png",
+      "bytes": 187751,
+      "sha256": "a23371a2f644210266fa2cd6381b06866830d047943ac3dba878dbad90972199",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-settings-nav-item",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-settings-nav-item.png",
+      "public_url": "/research/n8n/fixtures/n8n-settings-nav-item.png",
+      "bytes": 183464,
+      "sha256": "ba97ebd35e4a0ee65c9c7c00875d8cad6dd0c3a68cbf1d9c40dc1a36ce5a8386",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-settings-navigation",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-settings-navigation.png",
+      "public_url": "/research/n8n/fixtures/n8n-settings-navigation.png",
+      "bytes": 237599,
+      "sha256": "787993124a8f88e1bac454b0f81d48a1cc0d9b5e6012197c3d2fccefddf19f4b",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-settings-sidebar",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-settings-sidebar.png",
+      "public_url": "/research/n8n/fixtures/n8n-settings-sidebar.png",
+      "bytes": 186225,
+      "sha256": "9e91294e69b1968598174bd36c786fe985d2d90d84a674badc1ef67ffc554d3d",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-template-card",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-template-card.png",
+      "public_url": "/research/n8n/fixtures/n8n-template-card.png",
+      "bytes": 186237,
+      "sha256": "9362b28e7b575d09655f6bcc2a4c4933c82b6afdab4aa123d66e4dbf09e2e3b3",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-template-catalogue",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-template-catalogue.png",
+      "public_url": "/research/n8n/fixtures/n8n-template-catalogue.png",
+      "bytes": 231366,
+      "sha256": "9470a139307ced3bf1028c3db3088bef16a037ef9dba59e4372757056ff83427",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-template-search-filter",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-template-search-filter.png",
+      "public_url": "/research/n8n/fixtures/n8n-template-search-filter.png",
+      "bytes": 185083,
+      "sha256": "67c44826e3b85ea8296b45f3ff47fd60d07c767185fc95fd5783a518d664745b",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-trial-usage-banner",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-trial-usage-banner.png",
+      "public_url": "/research/n8n/fixtures/n8n-trial-usage-banner.png",
+      "bytes": 187156,
+      "sha256": "bf88022506c529f6a2e4df69fde8b218671bb1e4a7756588e790b3a95531439a",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-variables-empty",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-variables-empty.png",
+      "public_url": "/research/n8n/fixtures/n8n-variables-empty.png",
+      "bytes": 239756,
+      "sha256": "819e7a4913bafc4f42d3dcfa1f1a9d282310361e191c1de29f36571e5b9f6d09",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-workflow-builder-boundary",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-workflow-builder-boundary.png",
+      "public_url": "/research/n8n/fixtures/n8n-workflow-builder-boundary.png",
+      "bytes": 232323,
+      "sha256": "12bb8daf945f17719bdaaeee6ffdf2462c23c7b351350697b607bd66f05caa94",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "n8n-workflows-empty",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/n8n/fixtures/n8n-workflows-empty.png",
+      "public_url": "/research/n8n/fixtures/n8n-workflows-empty.png",
+      "bytes": 241555,
+      "sha256": "1086f8578e77f47bbd3bf9586a5d8aa14672d463f2b50066867f2876714aea8d",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    }
+  ]
+}

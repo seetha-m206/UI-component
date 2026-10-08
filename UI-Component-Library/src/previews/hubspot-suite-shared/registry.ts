@@ -144,16 +144,22 @@ function parseFixture(raw: string): HubspotFixtureField[] {
     }
     const path = indent.length > 0 && parent ? `${parent}.${key}` : key;
     if (indent.length === 0) parent = '';
-    fields.push({ key: path, label: formatLabel(path), value: rawValue.replace(/^['"]|['"]$/g, '') });
+    fields.push({
+      key: path,
+      label: formatLabel(path),
+      value: rawValue.replace(/^['"]|['"]$/g, ''),
+    });
   }
   return fields;
 }
 
 function salesFixture(id: string): HubspotFixtureField[] {
-  return Object.entries(salesFixtures[id] || {
-    record: 'Northstar fictional record',
-    status: 'local preview',
-  }).map(([key, value]) => ({ key, label: formatLabel(key), value }));
+  return Object.entries(
+    salesFixtures[id] || {
+      record: 'Northstar fictional record',
+      status: 'local preview',
+    }
+  ).map(([key, value]) => ({ key, label: formatLabel(key), value }));
 }
 
 function reconstructBoundary(raw: string) {
@@ -163,7 +169,9 @@ function reconstructBoundary(raw: string) {
 
 function actionLabels(raw: string) {
   const actionSection = section(raw, 'Screen, Actions & States') || section(raw, 'Actions');
-  const labels = Array.from(actionSection.matchAll(/^- \*\*(?:NOT ACTIVATED|OBSERVED|SAFE ACTION):\*\*\s*(.+)$/gm))
+  const labels = Array.from(
+    actionSection.matchAll(/^- \*\*(?:NOT ACTIVATED|OBSERVED|SAFE ACTION):\*\*\s*(.+)$/gm)
+  )
     .flatMap((match) => match[1].split(/,| and /))
     .map((value) => value.replace(/\.$/, '').trim())
     .filter((value) => value.length > 2 && value.length < 72)
@@ -172,13 +180,20 @@ function actionLabels(raw: string) {
 }
 
 function statusFrom(fields: HubspotFixtureField[]) {
-  const status = fields.find((field) => /(^|\.)(status|entitlement|state|tier_status|connection_state|tracking_state)$/.test(field.key))?.value;
+  const status = fields.find((field) =>
+    /(^|\.)(status|entitlement|state|tier_status|connection_state|tracking_state)$/.test(field.key)
+  )?.value;
   return status || 'local fixture';
 }
 
 function parseRecord(path: string, raw: string): HubspotSuiteRecord | null {
   const match = path.match(/\/brands\/(hubspot-[^/]+)\/components\/([^/]+)\.md$/);
-  if (!match || match[1] === 'hubspot-service-hub') return null;
+  if (
+    !match ||
+    match[1] === 'hubspot-service-hub' ||
+    raw.includes('GENERATED: hubspot-deep-audit-v1')
+  )
+    return null;
   const [, brand, id] = match;
   const parsedFields = parseFixture(raw);
   const fields = parsedFields.length ? parsedFields : salesFixture(id);
@@ -188,7 +203,9 @@ function parseRecord(path: string, raw: string): HubspotSuiteRecord | null {
     title: frontmatterValue(raw, 'component') || formatLabel(id),
     category: frontmatterValue(raw, 'ui_category') || 'HubSpot workspace',
     product: frontmatterValue(raw, 'source_product') || 'HubSpot',
-    summary: frontmatterValue(raw, 'summary') || 'Authenticated screen pattern reconstructed with fictional local data.',
+    summary:
+      frontmatterValue(raw, 'summary') ||
+      'Authenticated screen pattern reconstructed with fictional local data.',
     status: statusFrom(fields),
     fields,
     actions: actionLabels(raw),
@@ -226,9 +243,24 @@ export const hubspotSuitePreviews: PreviewRegistry = Object.fromEntries(
       ],
       config,
       propsSchema: [
-        { name: 'record', type: 'HubspotSuiteRecord', required: true, description: 'Fictional screen descriptor derived from the catalogue fixture.' },
-        { name: 'mode', type: 'documented | guarded', required: false, description: 'Selects the documented fixture or its local guarded-action state.' },
-        { name: 'disabled', type: 'boolean', required: false, description: 'Disables all local fixture controls.' },
+        {
+          name: 'record',
+          type: 'HubspotSuiteRecord',
+          required: true,
+          description: 'Fictional screen descriptor derived from the catalogue fixture.',
+        },
+        {
+          name: 'mode',
+          type: 'documented | guarded',
+          required: false,
+          description: 'Selects the documented fixture or its local guarded-action state.',
+        },
+        {
+          name: 'disabled',
+          type: 'boolean',
+          required: false,
+          description: 'Disables all local fixture controls.',
+        },
       ],
     },
   ])

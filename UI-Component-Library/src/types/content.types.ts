@@ -16,6 +16,8 @@ export interface ComponentFrontmatter {
   status: 'complete' | 'partial' | 'incomplete';
   summary: string;
   evidence_state: EvidenceState;
+  parent_workflow?: string;
+  component_level?: string;
 }
 
 export interface ComponentSection {

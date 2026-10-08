@@ -6,6 +6,21 @@ import { salesforceComponents } from './salesforce-service-shared/catalogue';
 import { zohoDeskComponents } from './zoho-desk-shared/catalogue';
 import { hostingerEntries } from './hostinger-shared/registry';
 import { hubspotSuiteIds } from './hubspot-suite-shared/registry';
+import { hubspotDeepAuditIds } from './hubspot-deep-audit/registry';
+import { freshsalesDeepAuditIds } from './freshsales-deep-audit/registry';
+import { freshchatOmniIds } from './freshchat-omni-shared/registry';
+import { livechatIds } from './livechat-shared/registry';
+import { tidioIds } from './tidio-shared/registry';
+import { gorgiasIds } from './gorgias-shared/registry';
+import { pipedreamIds } from './pipedream-shared/registry';
+import { zapierIds } from './zapier-shared/registry';
+import { makeIds } from './make-shared/registry';
+import { n8nIds } from './n8n-shared/registry';
+import { intercomFinAuditIds } from './intercom-fin-deep-audit/registry';
+import { mondayIds } from './monday-shared/registry';
+import { clickupIds } from './clickup-shared/registry';
+import { asanaIds } from './asana-shared/registry';
+import { trelloIds } from './trello-shared/registry';
 // Raw source of every preview component/stylesheet, keyed by the same `id`
 // used in previewRegistry, for the Code tab. Vite's `?raw` import gives us
 // the literal file text, not the compiled module.
@@ -59,6 +74,19 @@ export const sourceRegistry: Record<string, SourceEntry> = Object.fromEntries(
     { files: [...(tsxById[id] ?? []), ...(tsById[id] ?? []), ...(cssById[id] ?? [])] },
   ])
 );
+
+// Asana records share one sanitized fictional reconstruction while every
+// observed screen or action pattern remains independently addressable.
+const asanaShared = sourceRegistry['asana-shared'];
+if (asanaShared) {
+  for (const id of asanaIds) {
+    sourceRegistry[id] = {
+      files: asanaShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../asana-shared/' + file.fileName })),
+    };
+  }
+}
 
 // Freshservice wrappers share the implementation. Include it in every Code tab.
 const freshserviceShared = sourceRegistry['freshservice-shared'];
@@ -128,6 +156,19 @@ if (hubspotSuiteShared) {
       files: hubspotSuiteShared.files
         .filter((file) => file.fileName !== 'registry.ts')
         .map((file) => ({ ...file, fileName: '../hubspot-suite-shared/' + file.fileName })),
+    };
+  }
+}
+
+// Deep-audit records are independent catalogue entries backed by one reusable,
+// evidence-aware renderer and a generated per-record fixture manifest.
+const hubspotDeepAuditShared = sourceRegistry['hubspot-deep-audit'];
+if (hubspotDeepAuditShared) {
+  for (const id of hubspotDeepAuditIds) {
+    sourceRegistry[id] = {
+      files: hubspotDeepAuditShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../hubspot-deep-audit/' + file.fileName })),
     };
   }
 }
@@ -221,6 +262,163 @@ if (freshsalesShared) {
       files: freshsalesShared.files
         .filter((file) => file.fileName !== 'registry.ts')
         .map((file) => ({ ...file, fileName: '../freshsales-shared/' + file.fileName })),
+    };
+  }
+}
+
+// Deep-audit records are independent catalogue entries backed by one reusable,
+// evidence-aware Freshsales renderer and a generated per-record fixture manifest.
+const freshsalesDeepAuditShared = sourceRegistry['freshsales-deep-audit'];
+if (freshsalesDeepAuditShared) {
+  for (const id of freshsalesDeepAuditIds) {
+    sourceRegistry[id] = {
+      files: freshsalesDeepAuditShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../freshsales-deep-audit/' + file.fileName })),
+    };
+  }
+}
+
+// Freshchat and Freshdesk Omni records share one sanitized, fictional renderer.
+const freshchatOmniShared = sourceRegistry['freshchat-omni-shared'];
+if (freshchatOmniShared) {
+  for (const id of freshchatOmniIds) {
+    sourceRegistry[id] = {
+      files: freshchatOmniShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../freshchat-omni-shared/' + file.fileName })),
+    };
+  }
+}
+
+// Intercom and Fin deep-audit records share one sanitized, fictional renderer.
+const intercomFinDeepAuditShared = sourceRegistry['intercom-fin-deep-audit'];
+if (intercomFinDeepAuditShared) {
+  for (const id of intercomFinAuditIds) {
+    sourceRegistry[id] = {
+      files: intercomFinDeepAuditShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../intercom-fin-deep-audit/' + file.fileName })),
+    };
+  }
+}
+
+// LiveChat and Text records share one sanitized, fictional renderer.
+const livechatShared = sourceRegistry['livechat-shared'];
+if (livechatShared) {
+  for (const id of livechatIds) {
+    sourceRegistry[id] = {
+      files: livechatShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../livechat-shared/' + file.fileName })),
+    };
+  }
+}
+
+// Tidio records share one sanitized fictional renderer.
+const tidioShared = sourceRegistry['tidio-shared'];
+if (tidioShared) {
+  for (const id of tidioIds) {
+    sourceRegistry[id] = {
+      files: tidioShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../tidio-shared/' + file.fileName })),
+    };
+  }
+}
+
+// Gorgias records share one sanitized, fictional renderer.
+const gorgiasShared = sourceRegistry['gorgias-shared'];
+if (gorgiasShared) {
+  for (const id of gorgiasIds) {
+    sourceRegistry[id] = {
+      files: gorgiasShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../gorgias-shared/' + file.fileName })),
+    };
+  }
+}
+
+// monday.com records share one sanitized, fictional renderer.
+const mondayShared = sourceRegistry['monday-shared'];
+if (mondayShared) {
+  for (const id of mondayIds) {
+    sourceRegistry[id] = {
+      files: mondayShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../monday-shared/' + file.fileName })),
+    };
+  }
+}
+
+// ClickUp records share one sanitized, fictional renderer.
+const clickupShared = sourceRegistry['clickup-shared'];
+if (clickupShared) {
+  for (const id of clickupIds) {
+    sourceRegistry[id] = {
+      files: clickupShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../clickup-shared/' + file.fileName })),
+    };
+  }
+}
+
+// Trello records share one sanitized fictional reconstruction while every
+// observed screen or action pattern remains independently addressable.
+const trelloShared = sourceRegistry['trello-shared'];
+if (trelloShared) {
+  for (const id of trelloIds) {
+    sourceRegistry[id] = {
+      files: trelloShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../trello-shared/' + file.fileName })),
+    };
+  }
+}
+
+const pipedreamShared = sourceRegistry['pipedream-shared'];
+if (pipedreamShared) {
+  for (const id of pipedreamIds) {
+    sourceRegistry[id] = {
+      files: pipedreamShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../pipedream-shared/' + file.fileName })),
+    };
+  }
+}
+
+// Zapier records share one sanitized, fictional renderer.
+const zapierShared = sourceRegistry['zapier-shared'];
+if (zapierShared) {
+  for (const id of zapierIds) {
+    sourceRegistry[id] = {
+      files: zapierShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../zapier-shared/' + file.fileName })),
+    };
+  }
+}
+
+// Make records share one sanitized, fictional renderer.
+const makeShared = sourceRegistry['make-shared'];
+if (makeShared) {
+  for (const id of makeIds) {
+    sourceRegistry[id] = {
+      files: makeShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../make-shared/' + file.fileName })),
+    };
+  }
+}
+
+// n8n records share one sanitized fictional renderer.
+const n8nShared = sourceRegistry['n8n-shared'];
+if (n8nShared) {
+  for (const id of n8nIds) {
+    sourceRegistry[id] = {
+      files: n8nShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../n8n-shared/' + file.fileName })),
     };
   }
 }

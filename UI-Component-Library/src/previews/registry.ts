@@ -11,12 +11,28 @@ import { ubersuggestRemainingPreviews } from './ubersuggest-remaining/registry';
 import { otterlyPreviews } from './otterly/registry';
 import { hubspotPreviews } from './hubspot-shared/registry';
 import { hubspotSuitePreviews } from './hubspot-suite-shared/registry';
+import { hubspotDeepAuditPreviews } from './hubspot-deep-audit/registry';
 import { pipedrivePreviews } from './pipedrive-shared/registry';
 import { freshsalesPreviews } from './freshsales-shared/registry';
+import { freshsalesDeepAuditPreviews } from './freshsales-deep-audit/registry';
+import { freshchatOmniPreviews } from './freshchat-omni-shared/registry';
+import { intercomFinDeepAuditPreviews } from './intercom-fin-deep-audit/registry';
 import { salesforceSalesPreviews } from './salesforce-sales-shared/registry';
 import { wixPreviews } from './wix-shared/registry';
 import { hostingerPreviews } from './hostinger-shared/registry';
 import { zohoDeskPreviews } from './zoho-desk-shared/registry';
+import { livechatPreviews } from './livechat-shared/registry';
+import { tidioPreviews } from './tidio-shared/registry';
+import { gorgiasPreviews } from './gorgias-shared/registry';
+import { pipedreamPreviews } from './pipedream-shared/registry';
+import { zapierPreviews } from './zapier-shared/registry';
+import { makePreviews } from './make-shared/registry';
+import { activepiecesPreviews } from './activepieces-shared/registry';
+import { n8nPreviews } from './n8n-shared/registry';
+import { mondayPreviews } from './monday-shared/registry';
+import { clickupPreviews } from './clickup-shared/registry';
+import { asanaPreviews } from './asana-shared/registry';
+import { trelloPreviews } from './trello-shared/registry';
 import { ToggleRadioSwitch } from './toggle-radio-switch/ToggleRadioSwitch';
 import { YesNoToggleField } from './yes-no-toggle-field/YesNoToggleField';
 import {
@@ -1348,11 +1364,26 @@ export const previewRegistry: PreviewRegistry = {
   ...otterlyPreviews,
   ...hubspotPreviews,
   ...hubspotSuitePreviews,
+  ...hubspotDeepAuditPreviews,
   ...pipedrivePreviews,
   ...freshsalesPreviews,
+  ...freshchatOmniPreviews,
+  ...freshsalesDeepAuditPreviews,
+  ...intercomFinDeepAuditPreviews,
   ...salesforceSalesPreviews,
   ...wixPreviews,
   ...zohoDeskPreviews,
+  ...livechatPreviews,
+  ...gorgiasPreviews,
+  ...pipedreamPreviews,
+  ...zapierPreviews,
+  ...makePreviews,
+  ...activepiecesPreviews,
+  ...asanaPreviews,
+  ...trelloPreviews,
+  ...n8nPreviews,
+  ...mondayPreviews,
+  ...clickupPreviews,
   ...ubersuggestPreviews,
   ...ubersuggestRemainingPreviews,
   'yes-no-toggle-field': {
@@ -1943,7 +1974,7 @@ export const previewRegistry: PreviewRegistry = {
     Component: JotformScaleRatingField,
     label: 'Reconstructed preview',
     evidence:
-      "OBSERVATION, live interaction with a test form at form.jotform.com/262714734595062, DOM/ARIA inspection via injected JavaScript, and real pointer events via browser automation, 2026-09-30 (JF1, companion to jotform-star-rating-field). Confirmed and reproduced faithfully: genuine NATIVE <input type=\"radio\"> elements (not a custom ARIA widget, unlike this product's own sibling Star Rating field), each with a real <label for> per option, giving correct exclusive selection and keyboard operability for free — the only rating-field implementation across all five products in this comparison set confirmed to use native radio markup. The confirmed accessibility defect is reproduced exactly, not smoothed over: each input also carries an explicit aria-labelledby pointing at the shared question text, which takes accessible-name precedence over the native label per spec — this preview sets both the correct per-option <label for> AND the group-pointing aria-labelledby on every input, so the override is directly demonstrable (all five options resolve to the same accessible name in a role query) rather than only inferable from markup. Selecting an option highlights the whole field block, not just the chosen circle, matching the confirmed panel-highlight behavior.",
+      'OBSERVATION, live interaction with a test form at form.jotform.com/262714734595062, DOM/ARIA inspection via injected JavaScript, and real pointer events via browser automation, 2026-09-30 (JF1, companion to jotform-star-rating-field). Confirmed and reproduced faithfully: genuine NATIVE <input type="radio"> elements (not a custom ARIA widget, unlike this product\'s own sibling Star Rating field), each with a real <label for> per option, giving correct exclusive selection and keyboard operability for free — the only rating-field implementation across all five products in this comparison set confirmed to use native radio markup. The confirmed accessibility defect is reproduced exactly, not smoothed over: each input also carries an explicit aria-labelledby pointing at the shared question text, which takes accessible-name precedence over the native label per spec — this preview sets both the correct per-option <label for> AND the group-pointing aria-labelledby on every input, so the override is directly demonstrable (all five options resolve to the same accessible name in a role query) rather than only inferable from markup. Selecting an option highlights the whole field block, not just the chosen circle, matching the confirmed panel-highlight behavior.',
     runtimeVerified: false,
     fixtures: jotformScaleRatingFieldFixtures,
     config: jotformScaleRatingFieldConfig,
@@ -3871,3 +3902,5 @@ Object.assign(previewRegistry, framerScreenPreviews);
 Object.assign(previewRegistry, dudaPreviews);
 
 Object.assign(previewRegistry, framerRemainingPreviews);
+
+Object.assign(previewRegistry, tidioPreviews);

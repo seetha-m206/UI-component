@@ -1,0 +1,636 @@
+{
+  "generated_at": "2026-10-08T11:08:48.435300+00:00",
+  "provider": "Pipedream",
+  "capture_scope": "Every registered Pipedream fictional local preview",
+  "provider_screenshot": false,
+  "component_count": 48,
+  "capture_count": 48,
+  "unique_sha256_count": 48,
+  "privacy_boundary": "Captures contain fictional local reconstruction data only. They are not authenticated provider screenshots.",
+  "captures": [
+    {
+      "component_id": "pipedream-application-preferences",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-application-preferences.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-application-preferences.png",
+      "bytes": 220870,
+      "sha256": "a2ee4d5070da01302cb7fc608c003ca13945120146ad9228126508a4638eb1d0",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-application-shell",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-application-shell.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-application-shell.png",
+      "bytes": 217262,
+      "sha256": "1c02d9b881e21c5010c0c09fe1168a16f1e2ac4332bb9bca83d302e5c0a60d65",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-authentication-plan-gates",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-authentication-plan-gates.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-authentication-plan-gates.png",
+      "bytes": 224259,
+      "sha256": "b3d9d18684eb6e3dfe60280565afd65abf703c678cc206033e0a3b29e69ab8cc",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-billing-usage",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-billing-usage.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-billing-usage.png",
+      "bytes": 250551,
+      "sha256": "5e5692b6809c5d50211268c181dc48b7067da1e27b3deecb29ed892e2d3a9fbf",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-account-security",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-account-security.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-account-security.png",
+      "bytes": 205414,
+      "sha256": "1c5aa03af83f7b803569529158212d4daa73fef8a2d00b1f78dd678e81b7c8bc",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-api-clients",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-api-clients.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-api-clients.png",
+      "bytes": 207107,
+      "sha256": "d772c1520c278a7543927bfcb797667b0f07e72c1499adc59f8cbdbbfd301936",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-app-configs",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-app-configs.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-app-configs.png",
+      "bytes": 253922,
+      "sha256": "5e141c948d78ed0e898012bb113dfab708243bf45080a228b3175528e703725e",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-billing",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-billing.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-billing.png",
+      "bytes": 202353,
+      "sha256": "cb1cbb201a086e91186e5bc31e60d0c28fcdb68b2c627cdf0a68c93ec81cb93c",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-command-center",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-command-center.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-command-center.png",
+      "bytes": 215831,
+      "sha256": "73d0c438ac20ce472a390d382c9dc28062a9c8da4679eb549b33fd0a8478803b",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-configuration-picker",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-configuration-picker.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-configuration-picker.png",
+      "bytes": 207443,
+      "sha256": "26396d18e30608237cf8f78aa1194b3973ed858fe2530cc4e0479573a4ae5790",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-environment-switcher",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-environment-switcher.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-environment-switcher.png",
+      "bytes": 206739,
+      "sha256": "65f8fe69407fdbdf887ee4af8cc2d4cd5e49db043ea49c02f2fe4af98866f6a4",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-global-accounts",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-global-accounts.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-global-accounts.png",
+      "bytes": 208057,
+      "sha256": "6a85e731ae20c64dab7c95ac859dc7d3cbe96985f2ad5cb34fb9058215518a11",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-global-triggers",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-global-triggers.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-global-triggers.png",
+      "bytes": 210414,
+      "sha256": "c4444cefdf878f9a02a1d3693c55c977554198254dfe3f15a6a1f0d44e21788a",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-global-users",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-global-users.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-global-users.png",
+      "bytes": 206904,
+      "sha256": "e1666159f1aa191391a1114c151901821c8a47de7e3396fad751ba4e26bce36b",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-logs-observability",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-logs-observability.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-logs-observability.png",
+      "bytes": 216232,
+      "sha256": "078b4ea6b413046c169490f1cca78f5ecd0eeabab0902f5a263206435da24e6b",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-networking",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-networking.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-networking.png",
+      "bytes": 216179,
+      "sha256": "8cd25c50054ab69ad399b099cee68b88d220fe2ebc2d511cb2ebbb6f571cc28a",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-overview",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-overview.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-overview.png",
+      "bytes": 219103,
+      "sha256": "e25eff7d0bf850640722dd3afb666e7e0bd44ee6ae55e9ee306135518602bf57",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-project-configuration",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-project-configuration.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-project-configuration.png",
+      "bytes": 210005,
+      "sha256": "3ea96e0d2d1f0ef81161a29e779e59977db49f36ac007c955afefac4b1193065",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-shell",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-shell.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-shell.png",
+      "bytes": 204980,
+      "sha256": "7f98a8c17c5c202d3c2996d52b9011a70470ef3841f4ec3ff40b1211cfaa8288",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-sign-in",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-sign-in.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-sign-in.png",
+      "bytes": 204893,
+      "sha256": "d66fcdb5059188638ec4c0f8496f4812abe87cb00f1aaa3fe5ec4fe5663315ee",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-team",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-team.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-team.png",
+      "bytes": 203552,
+      "sha256": "9353df848829e2df83c6f8e4df8dfc3f5ffb1325636660291310166397eb853c",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-users-onboarding",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-users-onboarding.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-users-onboarding.png",
+      "bytes": 216061,
+      "sha256": "d69a51115658e6cca9f3400e4a91160254a3e56eff7df68b2fe5eb76655e13f3",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-webhooks",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-webhooks.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-webhooks.png",
+      "bytes": 216108,
+      "sha256": "f6797dbe5d2803a8b06e172876476634f1f60fd5e8cfe2e90d8b07c71cd91e60",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-workspace-api-clients",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-workspace-api-clients.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-workspace-api-clients.png",
+      "bytes": 205989,
+      "sha256": "e5814bdfb381be531d7ebdfb65328b4a4a8cdb7ec725bcb73235cf5a46745a3a",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-workspace-general",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-workspace-general.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-workspace-general.png",
+      "bytes": 209900,
+      "sha256": "8393d9820bd78c1f2ddc5c840515e0dd1287e64280a26e951d88cc6cedd5ebc6",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-workspace-networking",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-workspace-networking.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-workspace-networking.png",
+      "bytes": 241554,
+      "sha256": "c47e0edc1dca67a8483c16c23f26c1efd3ed2a2e9efca6674a3e11b5323d0251",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connect-workspace-switcher",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connect-workspace-switcher.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connect-workspace-switcher.png",
+      "bytes": 199311,
+      "sha256": "744092589ec2fe03e5dc008a8f76007d385619611e28b0af1af6b72dd1f063db",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-connected-accounts-onboarding",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-connected-accounts-onboarding.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-connected-accounts-onboarding.png",
+      "bytes": 287693,
+      "sha256": "6ad483b6156f5c32fd1b26526e6aff989b72ec4aa95e9aefb7a6fd025b0b74f8",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-data-store-create-dialog",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-data-store-create-dialog.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-data-store-create-dialog.png",
+      "bytes": 218356,
+      "sha256": "8b9150c82f5f8ce48d5dca0aefcff8ec1ab30146de0d24175d615a249c8f9676",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-data-stores-empty",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-data-stores-empty.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-data-stores-empty.png",
+      "bytes": 206249,
+      "sha256": "db903f9d11785f74ff3596d080b052baca00e57cd5cbe2ec53c8da36f424c100",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-environment-variables",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-environment-variables.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-environment-variables.png",
+      "bytes": 264817,
+      "sha256": "1a6c8e041edeef40fd1d48c8534190fdf4ac59bfac55387a7eaa0e2dbb82c727",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-event-history-plan-gate",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-event-history-plan-gate.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-event-history-plan-gate.png",
+      "bytes": 221238,
+      "sha256": "1d750cf49472293e6a624cccf066619278e99eacfc4e6f980096b6516268a0fc",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-experimental-features",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-experimental-features.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-experimental-features.png",
+      "bytes": 230754,
+      "sha256": "291292e0dee1a78a9af9dd7a0d72ee9155c1c35b1ac31581c2bf21b4d14cfdc8",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-file-store-plan-gate",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-file-store-plan-gate.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-file-store-plan-gate.png",
+      "bytes": 278266,
+      "sha256": "2ad335556df98ee42ba3bc5633e48f6ba02f623dfa49a25b1e1aad37a1b66910",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-global-search-command-menu",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-global-search-command-menu.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-global-search-command-menu.png",
+      "bytes": 235269,
+      "sha256": "6a0614908de97ae9113289e5ec809aef0a8d4a20ea63ef1a0303d3c899607b80",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-oauth-clients",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-oauth-clients.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-oauth-clients.png",
+      "bytes": 274326,
+      "sha256": "f19f0ae3f7718c64c530cf3d38b40744398f5c74720f76892c971e267ab368a4",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-project-access-plan-gate",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-project-access-plan-gate.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-project-access-plan-gate.png",
+      "bytes": 233309,
+      "sha256": "d9ec5edc28580f1a0bc2a68e47947232a524528cd27ba901380f72b3acd90066",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-project-create-menu",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-project-create-menu.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-project-create-menu.png",
+      "bytes": 224475,
+      "sha256": "e9d214b1c40be1f94de1fa3257cd41033ea32d30af3e1558b47a20bdd7404166",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-project-resources-empty",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-project-resources-empty.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-project-resources-empty.png",
+      "bytes": 220435,
+      "sha256": "a6a6030945f47541ef70eba23301beac289ca21fe34026f222bc7f49bc105038",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-project-settings-modal",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-project-settings-modal.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-project-settings-modal.png",
+      "bytes": 234813,
+      "sha256": "8e2fe9119bc21c051809ac8f1c657a52c08f83e8df5f623ac6817deed0e1e35d",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-project-variables",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-project-variables.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-project-variables.png",
+      "bytes": 271388,
+      "sha256": "bdbb5cb2661a5f14064cd54848c89392cd6971d200f6726ded1fd40d302d0683",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-projects-catalogue",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-projects-catalogue.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-projects-catalogue.png",
+      "bytes": 212158,
+      "sha256": "583ac39bef375953df0a9ebbb4f60582c76d8aac2a40d049f43e85a33c4479a5",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-settings-navigation",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-settings-navigation.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-settings-navigation.png",
+      "bytes": 233661,
+      "sha256": "585caa714da32381461623a4b7fcf0ccbdaed33eb318c3827fa8c81c4e4e4afd",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-sources-empty-filters",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-sources-empty-filters.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-sources-empty-filters.png",
+      "bytes": 211067,
+      "sha256": "945dba78835777988d80b8b3d7ab53f7dc36468bad6d12bef94c9d214cb441f4",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-string-ai-builder",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-string-ai-builder.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-string-ai-builder.png",
+      "bytes": 207040,
+      "sha256": "4b8b58dad32e6f9c023e3959a772bd3e713cb0eb608aee28890402c2f60c2963",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-user-account-security",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-user-account-security.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-user-account-security.png",
+      "bytes": 223278,
+      "sha256": "a3bc090cb421f6cbd825a687e0fd694faa82ac5b6fd06b7b07022bed42c87198",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-verified-domains",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-verified-domains.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-verified-domains.png",
+      "bytes": 273821,
+      "sha256": "17c3749c513e9ccc13953830d06c6020a7a3fba78802ac3eba8331db34773bc6",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    },
+    {
+      "component_id": "pipedream-workspace-networking",
+      "capture_type": "fictional local reconstructed preview",
+      "provider_screenshot": false,
+      "file": "UI-Component-Library/public/research/pipedream/fixtures/pipedream-workspace-networking.png",
+      "public_url": "/research/pipedream/fixtures/pipedream-workspace-networking.png",
+      "bytes": 259597,
+      "sha256": "606dc63f4dcd21623a65acf28c56cc21aa99936d7d1ead35dfb31bb1512d1259",
+      "viewport": {
+        "width": 1600,
+        "height": 1200
+      }
+    }
+  ]
+}
