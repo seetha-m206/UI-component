@@ -8,7 +8,7 @@ import { sourceRegistry } from '../sourceRegistry';
 
 describe('AsanaPreview', () => {
   it('registers every Asana record with a runtime fixture and Code-tab source', () => {
-    expect(asanaIds).toHaveLength(49);
+    expect(asanaIds).toHaveLength(65);
     for (const id of asanaIds) {
       const preview = previewRegistry[id];
       expect(preview?.type, id).toBe('reconstructed');
@@ -87,5 +87,17 @@ describe('AsanaPreview', () => {
     render(<AsanaPreview variant="project-form-builder" />);
     expect(screen.getByText(/UNPUBLISHED · ORGANIZATION ONLY/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Publish' })).toBeDisabled();
+  });
+
+  it('keeps import, export, sync and public-link actions inert', () => {
+    render(<AsanaPreview variant="project-import-export-sync" />);
+    expect(screen.getByRole('button', { name: 'Export · JSON' })).toBeInTheDocument();
+    expect(screen.getByRole('status')).toHaveTextContent('No file was uploaded, downloaded, exported, synchronized, printed, or shared.');
+  });
+
+  it('records the empty AI teammate result without implying teammate creation', () => {
+    render(<AsanaPreview variant="ai-teammate-suggestion-result" />);
+    expect(screen.getByRole('heading', { name: 'No AI Teammate suggestions found' })).toBeInTheDocument();
+    expect(screen.getByRole('status')).toHaveTextContent('No teammate was created or applied.');
   });
 });

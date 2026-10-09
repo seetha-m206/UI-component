@@ -1,6 +1,6 @@
 # Asana Component Catalogue
 
-Authenticated, observation-only research performed on 2026-10-08. Provider screenshots, workspace identity, user identity, email addresses, object IDs and exact live task content are intentionally not retained. Local previews use fictional data and do not contact Asana.
+Authenticated research performed on 2026-10-08 and 2026-10-09. Provider screenshots, workspace identity, user identity, email addresses, object IDs and exact live task content are intentionally not retained. Local previews use fictional data and do not contact Asana. The provider pass used one private disposable project and included one AI teammate suggestion analysis that returned no suggestions.
 
 | Component | Evidence boundary |
 | --- | --- |
@@ -52,10 +52,26 @@ Authenticated, observation-only research performed on 2026-10-08. Provider scree
 | [Project custom field](asana-project-custom-field.md) | OBSERVED project-only field creation |
 | [Project form builder](asana-project-form-builder.md) | OBSERVED unpublished organization-only draft |
 | [Project automation builder](asana-project-automation-builder.md) | OBSERVED blank draft builder, no publication |
+| [Project Emails](asana-project-emails.md) | OBSERVED task-intake settings, address omitted |
+| [Project Apps catalogue](asana-project-apps-catalogue.md) | OBSERVED categories and representative cards, no connection |
+| [Project task types](asana-project-task-types.md) | OBSERVED default types and Create new entry |
+| [Project Bundles](asana-project-bundles.md) | OBSERVED entitlement state, no sales contact |
+| [Project status templates](asana-project-status-templates.md) | OBSERVED creation and library choices |
+| [AI teammate suggestion result](asana-ai-teammate-suggestion-result.md) | OBSERVED provider analysis returned no suggestions |
+| [Project settings](asana-project-settings.md) | OBSERVED details, dependencies, scheduling and notifications |
+| [Project permissions](asana-project-permissions.md) | OBSERVED enterprise-gated controls |
+| [Project appearance picker](asana-project-appearance-picker.md) | OBSERVED color, icon and upload tabs |
+| [Project duplicate and template dialogs](asana-project-duplicate-template-dialogs.md) | OBSERVED reuse options, no object created |
+| [Project portfolio assignment](asana-project-portfolio-assignment.md) | OBSERVED empty selection dialog |
+| [Project import, export and sync](asana-project-import-export-sync.md) | OBSERVED formats and destinations, no transfer |
+| [Project status update](asana-project-status-update.md) | OBSERVED composer, no post or recipients |
+| [Project sharing](asana-project-sharing.md) | OBSERVED private membership controls, identity omitted |
+| [Project tab catalogue](asana-project-tab-catalogue.md) | OBSERVED popular and other tab choices |
+| [Project page actions](asana-project-page-actions.md) | OBSERVED menu, destructive actions untouched |
 | [Global More menu](asana-global-more-menu.md) | OBSERVED StackAI handoff and navigation customization entry |
 
 ## Boundary
 
 - **OBSERVED:** Visible provider UI plus bounded writes inside one clearly named private disposable research project.
 - **RECONSTRUCTION:** Fictional local previews under `src/previews/asana-shared/`.
-- **NOT OBSERVED:** Real-work mutation, invitations, external sharing, billing, exports, account integrations, automation publication, AI execution, permission changes and external delivery.
+- **NOT OBSERVED:** Real-work mutation, invitations, external sharing, billing, exports, account integrations, automation publication, successful AI suggestion or teammate execution, permission changes and external delivery.

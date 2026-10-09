@@ -50,6 +50,22 @@ export type AsanaVariant =
   | 'project-custom-field'
   | 'project-form-builder'
   | 'project-automation-builder'
+  | 'project-emails'
+  | 'project-apps-catalogue'
+  | 'project-task-types'
+  | 'project-bundles'
+  | 'project-status-templates'
+  | 'ai-teammate-suggestion-result'
+  | 'project-settings'
+  | 'project-permissions'
+  | 'project-appearance-picker'
+  | 'project-duplicate-template-dialogs'
+  | 'project-portfolio-assignment'
+  | 'project-import-export-sync'
+  | 'project-status-update'
+  | 'project-sharing'
+  | 'project-tab-catalogue'
+  | 'project-page-actions'
   | 'global-more-menu';
 
 export interface AsanaPreviewProps {
@@ -282,6 +298,30 @@ function AutomationBuilderFixture() {
   return <section className={styles.centerStage}><div className={styles.dialog}><span className={styles.caption}>DRAFT AUTOMATION</span><h2>What starts this workflow?</h2><div className={styles.featureGrid}>{['Asana event', 'Another app', 'Manual', 'Scheduled', 'Webhook'].map((item) => <button type="button" key={item}><b>{item}</b><span>Choose a trigger</span></button>)}</div><button type="button" disabled>Publish</button><GuardNotice>The observed provider draft was not published and no external app was authorized.</GuardNotice></div></section>;
 }
 
+const projectDiscoveryFixtures: Record<string, { eyebrow: string; title: string; items: string[]; notice: string }> = {
+  'project-emails': { eyebrow: 'ADD TASKS VIA EMAIL', title: 'Project email settings', items: ['Project email address', 'Send recipients task updates', 'Add email participants as collaborators', 'Manage email forwarding', 'Automate email replies'], notice: 'The provider address is omitted. No email was sent and no setting was changed.' },
+  'project-apps-catalogue': { eyebrow: 'GET STARTED WITH APPS', title: 'Apps catalogue', items: ['Featured apps', 'New & noteworthy', 'Communication', 'Reporting', 'File sharing', 'Marketing & Design', 'Product Management', 'Sales', 'Operations', 'Productivity', 'Made by Developers'], notice: 'No app was selected, connected, or authorized.' },
+  'project-task-types': { eyebrow: 'TASK TYPES AND TEMPLATES', title: 'Project task types', items: ['Task · default', 'Milestone', 'Approval', 'Create new'], notice: 'No custom task type or template was created.' },
+  'project-bundles': { eyebrow: 'ENTITLEMENT BOUNDARY', title: 'Bundles', items: ['Standardize project creation', 'Standardize project updates', 'Contact sales'], notice: 'The upgrade and sales actions remain inert.' },
+  'project-status-templates': { eyebrow: 'STATUS TEMPLATES', title: 'Get started with status templates', items: ['Create new', 'Browse library'], notice: 'No status template was created or selected.' },
+  'ai-teammate-suggestion-result': { eyebrow: 'PROVIDER AI RESULT', title: 'No AI Teammate suggestions found', items: ['Add more relevant project work', 'Try again'], notice: 'The provider analysis returned no suggestion. No teammate was created or applied.' },
+  'project-settings': { eyebrow: 'PROJECT SETTINGS', title: 'Project configuration', items: ['Project details', 'Dependencies · Consume buffer', 'Scheduling · Monday to Friday', 'Choose work hours', 'Notifications · Slack and Microsoft Teams'], notice: 'All values are fictional and unsaved. No integration was connected.' },
+  'project-permissions': { eyebrow: 'ENTERPRISE CONTROLS', title: 'Project permissions', items: ['General workflow permissions', 'Membership permissions', 'Field restrictions', 'Sharing tasks with other projects', 'Upgrade banner'], notice: 'Permission controls remain disabled and no access changed.' },
+  'project-appearance-picker': { eyebrow: 'COLOR AND ICON', title: 'Project appearance', items: ['Color palette', 'Icon library', 'Upload tab'], notice: 'No color, icon, or upload was applied.' },
+  'project-duplicate-template-dialogs': { eyebrow: 'REUSE PROJECT STRUCTURE', title: 'Duplicate or save as template', items: ['Project details', 'Project tabs', 'Task details', 'Template title', 'Team selection', 'Template access'], notice: 'Neither Duplicate project nor Create template was activated.' },
+  'project-portfolio-assignment': { eyebrow: 'ADD TO PORTFOLIO', title: 'Portfolio assignment', items: ['Search portfolios', 'No connected portfolios', 'Add'], notice: 'No portfolio was selected or changed.' },
+  'project-import-export-sync': { eyebrow: 'DATA MOVEMENT', title: 'Import, export, and sync', items: ['Import · Any file', 'Import · CSV', 'Export · Project tasks CSV/XLSX', 'Export · Time entries CSV', 'Export · JSON', 'Sync · Outlook Calendar', 'Sync · Google Calendar', 'Sync · iCal', 'Sync · Google Sheets', 'Print', 'Create a public link · unavailable'], notice: 'No file was uploaded, downloaded, exported, synchronized, printed, or shared.' },
+  'project-status-update': { eyebrow: 'STATUS UPDATE DRAFT', title: 'Create a status update', items: ['On track', 'At risk', 'Off track', 'On hold', 'Complete', 'Dropped', 'Draft update with AI', 'Summary', 'Next steps', 'Highlights'], notice: 'The composer was closed without posting, adding recipients, or running AI drafting.' },
+  'project-sharing': { eyebrow: 'PRIVATE PROJECT', title: 'Share project', items: ['Invite with email', 'Editor role', 'Notify on added tasks', 'Access settings', 'Who has access', 'Manage notifications', 'Copy project link'], notice: 'Identity is omitted. No invitation, role, notification, or access setting changed.' },
+  'project-tab-catalogue': { eyebrow: 'ADD TAB', title: 'Available project tabs', items: ['List', 'Page', 'Gantt', 'Board', 'Calendar', 'Timeline', 'Workload', 'Dashboard', 'Files', 'Embed'], notice: 'No additional tab was added or removed.' },
+  'project-page-actions': { eyebrow: 'PAGE ACTIONS', title: 'Page actions menu', items: ['Attach to', 'Duplicate page', 'Share', 'Copy link', 'Width options', 'Version history', 'Remove tab', 'Delete page'], notice: 'No page action was executed.' },
+};
+
+function ProjectDiscoveryFixture({ kind }: { kind: keyof typeof projectDiscoveryFixtures }) {
+  const fixture = projectDiscoveryFixtures[kind];
+  return <section className={styles.centerStage}><div className={styles.dialog}><span className={styles.caption}>{fixture.eyebrow}</span><h2>{fixture.title}</h2><div className={styles.featureGrid}>{fixture.items.map((item) => <button type="button" key={item}><b>{item}</b></button>)}</div><GuardNotice>{fixture.notice}</GuardNotice></div></section>;
+}
+
 export function AsanaPreview({ variant }: AsanaPreviewProps) {
   switch (variant) {
     case 'application-shell': return <Shell><div className={styles.placeholder}><h1>Reliability tracker</h1><p>Fictional workspace content</p></div></Shell>;
@@ -332,6 +372,22 @@ export function AsanaPreview({ variant }: AsanaPreviewProps) {
     case 'project-custom-field': return <CustomFieldFixture />;
     case 'project-form-builder': return <FormBuilderFixture />;
     case 'project-automation-builder': return <AutomationBuilderFixture />;
+    case 'project-emails': return <ProjectDiscoveryFixture kind="project-emails" />;
+    case 'project-apps-catalogue': return <ProjectDiscoveryFixture kind="project-apps-catalogue" />;
+    case 'project-task-types': return <ProjectDiscoveryFixture kind="project-task-types" />;
+    case 'project-bundles': return <ProjectDiscoveryFixture kind="project-bundles" />;
+    case 'project-status-templates': return <ProjectDiscoveryFixture kind="project-status-templates" />;
+    case 'ai-teammate-suggestion-result': return <ProjectDiscoveryFixture kind="ai-teammate-suggestion-result" />;
+    case 'project-settings': return <ProjectDiscoveryFixture kind="project-settings" />;
+    case 'project-permissions': return <ProjectDiscoveryFixture kind="project-permissions" />;
+    case 'project-appearance-picker': return <ProjectDiscoveryFixture kind="project-appearance-picker" />;
+    case 'project-duplicate-template-dialogs': return <ProjectDiscoveryFixture kind="project-duplicate-template-dialogs" />;
+    case 'project-portfolio-assignment': return <ProjectDiscoveryFixture kind="project-portfolio-assignment" />;
+    case 'project-import-export-sync': return <ProjectDiscoveryFixture kind="project-import-export-sync" />;
+    case 'project-status-update': return <ProjectDiscoveryFixture kind="project-status-update" />;
+    case 'project-sharing': return <ProjectDiscoveryFixture kind="project-sharing" />;
+    case 'project-tab-catalogue': return <ProjectDiscoveryFixture kind="project-tab-catalogue" />;
+    case 'project-page-actions': return <ProjectDiscoveryFixture kind="project-page-actions" />;
     case 'global-more-menu': return <GlobalMoreMenu />;
   }
 }

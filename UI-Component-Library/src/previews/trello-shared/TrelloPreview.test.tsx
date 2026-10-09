@@ -89,6 +89,10 @@ describe('TrelloPreview', () => {
       'workspace-export',
       'closed-boards',
       'account-menu',
+      'keyboard-shortcuts',
+      'workspace-boards-controls',
+      'personal-card-filters',
+      'jira-recommendation-drawer',
     ] satisfies TrelloVariant[];
     for (const variant of variants) {
       const { container } = render(<TrelloPreview variant={variant} />);
@@ -106,5 +110,35 @@ describe('TrelloPreview', () => {
     render(<TrelloPreview variant="advanced-search" />);
     expect(screen.getByText('board:keyword')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('Enter your search keyword here')).toHaveValue('');
+  });
+
+  it('shows keyboard shortcut settings without changing them', () => {
+    render(<TrelloPreview variant="keyboard-shortcuts" />);
+    expect(screen.getByRole('heading', { name: 'Keyboard shortcuts' })).toBeInTheDocument();
+    expect(screen.getByRole('checkbox', { name: 'Shortcuts enabled' })).toBeChecked();
+  });
+
+  it('opens fictional workspace board sorting locally', async () => {
+    const user = userEvent.setup();
+    render(<TrelloPreview variant="workspace-boards-controls" />);
+    await user.click(screen.getByRole('button', { name: /Most recently active/ }));
+    expect(screen.getByRole('dialog', { name: 'Workspace board sorting' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Alphabetically A-Z' })).toBeInTheDocument();
+  });
+
+  it('keeps personal card filters inside fictional fixture state', async () => {
+    const user = userEvent.setup();
+    render(<TrelloPreview variant="personal-card-filters" />);
+    expect(screen.getByRole('dialog', { name: 'Personal card filters' })).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'Sort by due date' }));
+    expect(screen.getByRole('dialog', { name: 'Personal card sorting' })).toBeInTheDocument();
+  });
+
+  it('disables Jira trial actions in the recommendation drawer', () => {
+    render(<TrelloPreview variant="jira-recommendation-drawer" />);
+    expect(screen.getByRole('dialog', { name: 'Jira recommendation' })).toBeInTheDocument();
+    for (const button of screen.getAllByRole('button', { name: 'Try it free' })) {
+      expect(button).toBeDisabled();
+    }
   });
 });

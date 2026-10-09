@@ -1,0 +1,251 @@
+{
+  "observed_at": "2026-10-09T10:33:19.149Z",
+  "product": "PandaDoc",
+  "source": "fictional local previews only",
+  "provider_screenshots_retained": false,
+  "viewport": {
+    "width": 1600,
+    "height": 1200,
+    "device_scale_factor": 1
+  },
+  "captures": [
+    {
+      "component_id": "pandadoc-application-shell",
+      "file": "fixtures/pandadoc-application-shell.png",
+      "sha256": "0e608a565af91f6b6a16368bbb0afa24db602f0016fcfdd7443a7c84bfa5daba",
+      "route": "/pandadoc/pandadoc-application-shell",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-email-verification-banner",
+      "file": "fixtures/pandadoc-email-verification-banner.png",
+      "sha256": "4778d8b0d0f8ab772e25536cb9a8149a88b0b12309a023a381554b6948283929",
+      "route": "/pandadoc/pandadoc-email-verification-banner",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-dashboard-status-tabs",
+      "file": "fixtures/pandadoc-dashboard-status-tabs.png",
+      "sha256": "d10bc77a3899814d356d8b49d6171d37b00ec830184bad57b4da918864fa31db",
+      "route": "/pandadoc/pandadoc-dashboard-status-tabs",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-dashboard-empty-state",
+      "file": "fixtures/pandadoc-dashboard-empty-state.png",
+      "sha256": "d94b68fe6d1d1d03f2906c2c8e831345cfa4e39d6b730835d91734a31a0edea4",
+      "route": "/pandadoc/pandadoc-dashboard-empty-state",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-document-creation-dialog",
+      "file": "fixtures/pandadoc-document-creation-dialog.png",
+      "sha256": "4644fb4515c030bde0343636a3effb4e4a9583d62ea34f7960df196be7715a66",
+      "route": "/pandadoc/pandadoc-document-creation-dialog",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-upload-dropzone",
+      "file": "fixtures/pandadoc-upload-dropzone.png",
+      "sha256": "206c64cb48985a8ff1e0c3868e38cff3c959c0f7fbdb5f834cebf8a2b1348ccd",
+      "route": "/pandadoc/pandadoc-upload-dropzone",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-template-picker",
+      "file": "fixtures/pandadoc-template-picker.png",
+      "sha256": "6985458da26c78b6f988a1d8ec12b8e954437c9b3db44fbd9f04d235035f0e58",
+      "route": "/pandadoc/pandadoc-template-picker",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-template-search",
+      "file": "fixtures/pandadoc-template-search.png",
+      "sha256": "07f6ec10d93a021e04a2c2e23f9edf0dc7d5f16eee0ae4d8a2e415fea0921e03",
+      "route": "/pandadoc/pandadoc-template-search",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-documents-workspace",
+      "file": "fixtures/pandadoc-documents-workspace.png",
+      "sha256": "c006e079db5e079c6935f13d76c4939bf9e2dae49b7145f0cc8b50d669c3d563",
+      "route": "/pandadoc/pandadoc-documents-workspace",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-document-filter-bar",
+      "file": "fixtures/pandadoc-document-filter-bar.png",
+      "sha256": "48b04d673c36f58aad271cff0f20ed0c46ee2b9934ae7462260fbbdbd6b18976",
+      "route": "/pandadoc/pandadoc-document-filter-bar",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-imported-documents-empty-state",
+      "file": "fixtures/pandadoc-imported-documents-empty-state.png",
+      "sha256": "0c938adbf126213d16efe58676a17f1c664d8d45f3bb1c83501cd9bd431ad461",
+      "route": "/pandadoc/pandadoc-imported-documents-empty-state",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-template-workspace-tabs",
+      "file": "fixtures/pandadoc-template-workspace-tabs.png",
+      "sha256": "f10908f7fb2f34a6085bf14a9c6c6ae224d1f0122a03e358303a4b4afe58c130",
+      "route": "/pandadoc/pandadoc-template-workspace-tabs",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-content-library-table",
+      "file": "fixtures/pandadoc-content-library-table.png",
+      "sha256": "a83427d5490890232425f6d006770e709adb3730fc423b291af9486c0e58ce32",
+      "route": "/pandadoc/pandadoc-content-library-table",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-forms-status-workspace",
+      "file": "fixtures/pandadoc-forms-status-workspace.png",
+      "sha256": "af05bad89c69a67721aa1098bb1b87e95bb1b12da48f2ef5670443496e1f550e",
+      "route": "/pandadoc/pandadoc-forms-status-workspace",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-template-gallery",
+      "file": "fixtures/pandadoc-template-gallery.png",
+      "sha256": "cc8f9270805084d5a3255809a5ceeb3465788a7e3eadab73ecb477baaeaef784",
+      "route": "/pandadoc/pandadoc-template-gallery",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-template-preview",
+      "file": "fixtures/pandadoc-template-preview.png",
+      "sha256": "2eab5bcc301eb1fa7a53c79a692b52feba9a1aefef9d96cd04369a4da4b29993",
+      "route": "/pandadoc/pandadoc-template-preview",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-contacts-table",
+      "file": "fixtures/pandadoc-contacts-table.png",
+      "sha256": "3c1b97097acb0b527fda9954c8bb82d82e8d3ebee9ce20d0e189f09f1df598a0",
+      "route": "/pandadoc/pandadoc-contacts-table",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-catalog-table",
+      "file": "fixtures/pandadoc-catalog-table.png",
+      "sha256": "3c02b22f5c63758129eba819b32fd031b1b7d144d4e148b7e889afc8c997987f",
+      "route": "/pandadoc/pandadoc-catalog-table",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-report-builder",
+      "file": "fixtures/pandadoc-report-builder.png",
+      "sha256": "e62cf70c07c30b6b4ebfe6b6389092629e71c4433a04d27f804268eaabeb15aa",
+      "route": "/pandadoc/pandadoc-report-builder",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-notification-settings",
+      "file": "fixtures/pandadoc-notification-settings.png",
+      "sha256": "df547684aa11a95efd90b63d5cc453c80898fa0bd53971a3e0526cf0e1879498",
+      "route": "/pandadoc/pandadoc-notification-settings",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-security-settings",
+      "file": "fixtures/pandadoc-security-settings.png",
+      "sha256": "335003b107148fa8067d9355a9761353332e6da03693e95cf3afcd9bb79f349f",
+      "route": "/pandadoc/pandadoc-security-settings",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-branding-settings",
+      "file": "fixtures/pandadoc-branding-settings.png",
+      "sha256": "fb973ac5a444d22ad6e45a26a0befedb80256a49e8dfc5c29739135f53f4a5a2",
+      "route": "/pandadoc/pandadoc-branding-settings",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-document-defaults",
+      "file": "fixtures/pandadoc-document-defaults.png",
+      "sha256": "bfb99b8cfbc5e65b047051a50d8bdbf611d8bff55aaa17f8a7b189d6a31af9c4",
+      "route": "/pandadoc/pandadoc-document-defaults",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-recipient-verification",
+      "file": "fixtures/pandadoc-recipient-verification.png",
+      "sha256": "42c762c004cf9308b052793f96c6aa42df937212907ca662f90049b2d453cf64",
+      "route": "/pandadoc/pandadoc-recipient-verification",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-signature-types",
+      "file": "fixtures/pandadoc-signature-types.png",
+      "sha256": "dadcf80932c53042c1550baa357893557e4208b6edb741b1b8232b6b482d19c4",
+      "route": "/pandadoc/pandadoc-signature-types",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-ai-data-privacy",
+      "file": "fixtures/pandadoc-ai-data-privacy.png",
+      "sha256": "64de8f97bfe6c10bd5a1cdf6106d9fc40ea7b116761b0eb6476721487671d6bb",
+      "route": "/pandadoc/pandadoc-ai-data-privacy",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-integrations-catalogue",
+      "file": "fixtures/pandadoc-integrations-catalogue.png",
+      "sha256": "568dd97812622183380f6534104994b27907da965031adfe2be28468d4019f80",
+      "route": "/pandadoc/pandadoc-integrations-catalogue",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-role-permission-gate",
+      "file": "fixtures/pandadoc-role-permission-gate.png",
+      "sha256": "db4a661d30deccdc38f5d4022a2f604e313174cd09c8934e517368d54d666a3a",
+      "route": "/pandadoc/pandadoc-role-permission-gate",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-sso-plan-gate",
+      "file": "fixtures/pandadoc-sso-plan-gate.png",
+      "sha256": "adc2c2feb1db58e9eb5626b198600bb4f7e8d949c21ca567b50c1cabb9647f3e",
+      "route": "/pandadoc/pandadoc-sso-plan-gate",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-billing-usage-cards",
+      "file": "fixtures/pandadoc-billing-usage-cards.png",
+      "sha256": "5b1e3caf49d773fdac10e8372fe051da4c207f5ca0fba3d3e33ddf8708765591",
+      "route": "/pandadoc/pandadoc-billing-usage-cards",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-data-fields-table",
+      "file": "fixtures/pandadoc-data-fields-table.png",
+      "sha256": "8bc33dddef863b9456a7f8f7267c30ea588529cf44dc1ae46d1fff031cba0638",
+      "route": "/pandadoc/pandadoc-data-fields-table",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-content-editor-field-palette",
+      "file": "fixtures/pandadoc-content-editor-field-palette.png",
+      "sha256": "ffadab25bf811cf3f22b5a6494418b73f1449c62f8a4edd5a09cbd90adf8dfeb",
+      "route": "/pandadoc/pandadoc-content-editor-field-palette",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-signature-date-fields",
+      "file": "fixtures/pandadoc-signature-date-fields.png",
+      "sha256": "1c94f25b4bbe6ddc8044145fc8423e1f0677aa9460b0f135a42b6996cefda819",
+      "route": "/pandadoc/pandadoc-signature-date-fields",
+      "selection_found": true
+    },
+    {
+      "component_id": "pandadoc-authorized-apps-empty-state",
+      "file": "fixtures/pandadoc-authorized-apps-empty-state.png",
+      "sha256": "02312f4a49463e63cfa80a2521427e8e32f0bb6087e321cbf40dd2d4b7711604",
+      "route": "/pandadoc/pandadoc-authorized-apps-empty-state",
+      "selection_found": true
+    }
+  ]
+}

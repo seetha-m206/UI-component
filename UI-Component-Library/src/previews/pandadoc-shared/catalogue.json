@@ -1,0 +1,667 @@
+[
+  {
+    "id": "pandadoc-application-shell",
+    "variant": "application-shell",
+    "title": "PandaDoc Application Shell",
+    "category": "Application Layout > Global Application Shell",
+    "kind": "dashboard",
+    "heading": "Agreement workspace",
+    "description": "Slim icon rail, persistent search header, plan indicator, utilities, contextual content and a guarded AI entry.",
+    "items": [
+      "Home",
+      "Documents",
+      "Templates",
+      "Contacts",
+      "Catalog",
+      "Forms",
+      "Reports",
+      "Settings"
+    ],
+    "actions": ["Open navigation group", "Search workspace", "Open utility menu"],
+    "observed": [
+      "Persistent left navigation",
+      "Route content below a compact header",
+      "Contextual sub-navigation"
+    ],
+    "not_observed": "Responsive provider behavior and authenticated keyboard focus return."
+  },
+  {
+    "id": "pandadoc-email-verification-banner",
+    "variant": "email-verification-banner",
+    "title": "Email Verification Banner",
+    "category": "Feedback & Status > Verification Banner",
+    "kind": "settings",
+    "heading": "Verify your email",
+    "description": "Persistent verification notice with a resend action and a non-destructive dismiss boundary.",
+    "items": ["Verification status", "Resend action", "Dismiss control"],
+    "actions": ["Resend verification email", "Dismiss notice"],
+    "observed": [
+      "Banner persisted across top-level routes",
+      "Action label included the account email in the provider UI",
+      "Local fixture removes all identity"
+    ],
+    "not_observed": "Email delivery and post-verification persistence."
+  },
+  {
+    "id": "pandadoc-dashboard-status-tabs",
+    "variant": "dashboard-status-tabs",
+    "title": "Document Status Tabs",
+    "category": "Navigation > Status Tabs",
+    "kind": "dashboard",
+    "heading": "Document status overview",
+    "description": "Counted tabs for drafts, action required, waiting for others, finalized and scheduled documents.",
+    "items": ["Your drafts", "Action required", "Waiting for others", "Finalized", "Scheduled"],
+    "actions": ["Select status tab", "Open tab explanation"],
+    "observed": ["Zero-count badges", "Selected-tab state", "Action-required verification message"],
+    "not_observed": "Populated document rows and cross-status transitions."
+  },
+  {
+    "id": "pandadoc-dashboard-empty-state",
+    "variant": "dashboard-empty-state",
+    "title": "Dashboard Empty State",
+    "category": "Empty States > Document Onboarding",
+    "kind": "dashboard",
+    "heading": "Start here — or pick up where you left off",
+    "description": "First-use dashboard prompt that directs the user to create a document while retaining status navigation.",
+    "items": ["Create first document", "Resume unsent work", "Ask AI"],
+    "actions": ["Open document creation", "Open AI assistant"],
+    "observed": ["Empty workspace guidance", "Primary document CTA", "Secondary AI entry"],
+    "not_observed": "Behavior after the first document is created."
+  },
+  {
+    "id": "pandadoc-document-creation-dialog",
+    "variant": "document-creation-dialog",
+    "title": "New Document Dialog",
+    "category": "Creation & Upload > Document Entry Dialog",
+    "kind": "dialog",
+    "heading": "New document",
+    "description": "Full-height creation surface combining upload, suggested templates and category tabs.",
+    "items": ["Upload a file", "Suggested", "My templates", "Shared with me", "Template gallery"],
+    "actions": ["Select creation source", "Close dialog", "Search templates"],
+    "observed": [
+      "Creation route replaced the dashboard content",
+      "Close returned to dashboard",
+      "Suggested templates were immediately visible"
+    ],
+    "not_observed": "Document creation, save and recipient delivery."
+  },
+  {
+    "id": "pandadoc-upload-dropzone",
+    "variant": "upload-dropzone",
+    "title": "Document Upload Dropzone",
+    "category": "Creation & Upload > File Dropzone",
+    "kind": "dialog",
+    "heading": "Drag and drop one or multiple files",
+    "description": "Uppy-based drop area with a select-files control and visible accepted formats.",
+    "items": ["PDF", "Word", "Excel", "PowerPoint", "JPG", "PNG"],
+    "actions": ["Open file chooser", "Drop files"],
+    "observed": [
+      "Multi-file copy",
+      "Accepted-format helper",
+      "Separate upload and template regions"
+    ],
+    "not_observed": "File chooser, upload progress, validation errors and conversion."
+  },
+  {
+    "id": "pandadoc-template-picker",
+    "variant": "template-picker",
+    "title": "Creation Template Picker",
+    "category": "Templates & Content > Template Picker",
+    "kind": "gallery",
+    "heading": "Start from a template",
+    "description": "Tabbed template selector with blank-document and suggested-template cards.",
+    "items": ["Blank document", "Business proposal", "Price quote", "Invoice"],
+    "actions": ["Change template scope", "Open template card", "Select blank document"],
+    "observed": [
+      "Suggested template cards",
+      "My templates empty panel",
+      "Shared-with-me empty panel"
+    ],
+    "not_observed": "Template instantiation and generated document persistence."
+  },
+  {
+    "id": "pandadoc-template-search",
+    "variant": "template-search",
+    "title": "Template Search State",
+    "category": "Search & Filtering > Template Search",
+    "kind": "settings",
+    "heading": "Search templates",
+    "description": "Compact search state that replaces the template-category tab row while active.",
+    "items": ["Search input", "Clear control", "Result area"],
+    "actions": ["Open search", "Enter query", "Clear search"],
+    "observed": [
+      "Search input appeared in-place",
+      "Provider accessibility tree exposed no useful label for the field",
+      "Clear restored category tabs"
+    ],
+    "not_observed": "Search results, ranking and no-result behavior."
+  },
+  {
+    "id": "pandadoc-documents-workspace",
+    "variant": "documents-workspace",
+    "title": "All Documents Workspace",
+    "category": "Lists & Tables > Document Workspace",
+    "kind": "table",
+    "heading": "All documents",
+    "description": "Document-management page with status views, view creation, filters and a first-use empty state.",
+    "items": ["All documents", "Created by me", "Recent", "Archived"],
+    "actions": ["Switch saved view", "Create view", "Open filters"],
+    "observed": ["Route-driven tabs", "New folder and create controls", "No-documents empty state"],
+    "not_observed": "Populated rows, pagination and bulk actions."
+  },
+  {
+    "id": "pandadoc-document-filter-bar",
+    "variant": "document-filter-bar",
+    "title": "Document Filter Bar",
+    "category": "Search & Filtering > Structured Filter Bar",
+    "kind": "table",
+    "heading": "Filter documents",
+    "description": "Structured filters for date, status, owner, recipients, tags, document type and additional fields.",
+    "items": ["Date", "Status", "Owner", "Recipients", "Tags", "Document type", "More filters"],
+    "actions": ["Open filter", "Save view", "Reset filters"],
+    "observed": [
+      "Save view disabled before changes",
+      "Created-by-me added contract metadata filters",
+      "Recent view removed filter controls"
+    ],
+    "not_observed": "Applied filter requests, saved-view persistence and result counts."
+  },
+  {
+    "id": "pandadoc-imported-documents-empty-state",
+    "variant": "imported-documents-empty-state",
+    "title": "Imported Documents Empty State",
+    "category": "Empty States > Contract Repository Import",
+    "kind": "gate",
+    "heading": "One home for all your agreements",
+    "description": "Import-oriented contract repository pitch with AI extraction, renewal alerts and a guarded upload boundary.",
+    "items": ["Import documents", "AI data extraction", "Renewal alerts", "Contract search"],
+    "actions": ["Import", "Learn more"],
+    "observed": ["Dedicated imported tab", "AI extraction explanation", "Single import CTA"],
+    "not_observed": "Upload, extraction accuracy, alerts, search and reporting outcomes."
+  },
+  {
+    "id": "pandadoc-template-workspace-tabs",
+    "variant": "template-workspace-tabs",
+    "title": "Template Workspace Tabs",
+    "category": "Navigation > Template Workspace Tabs",
+    "kind": "table",
+    "heading": "Document templates",
+    "description": "Workspace-level tabs for document templates, content library, forms, email templates and archived items.",
+    "items": ["Document templates", "Content library", "Forms", "Email templates", "Archived"],
+    "actions": ["Switch template type", "Create item", "Open filters"],
+    "observed": [
+      "Route-specific heading and CTA",
+      "Different empty states per tab",
+      "Archived items expire after 90 days"
+    ],
+    "not_observed": "Create, edit, share, archive and restore outcomes."
+  },
+  {
+    "id": "pandadoc-content-library-table",
+    "variant": "content-library-table",
+    "title": "Content Library Table",
+    "category": "Templates & Content > Reusable Content Library",
+    "kind": "table",
+    "heading": "Content library",
+    "description": "Reusable content inventory with folders, personalization guidance and row-level menus.",
+    "items": [
+      "Sample hero block",
+      "Pricing block",
+      "Signature block",
+      "Team block",
+      "Testimonial block"
+    ],
+    "actions": ["Open content item", "Create content item", "Open row menu"],
+    "observed": [
+      "Name and created columns",
+      "Preloaded sample rows",
+      "Personalization education card"
+    ],
+    "not_observed": "Content creation, conditional personalization and row-menu outcomes."
+  },
+  {
+    "id": "pandadoc-forms-status-workspace",
+    "variant": "forms-status-workspace",
+    "title": "Forms Status Workspace",
+    "category": "Forms > Form Inventory",
+    "kind": "table",
+    "heading": "Forms",
+    "description": "Form inventory with All, Draft, Active and Disabled scopes plus response and status columns.",
+    "items": ["All", "Draft", "Active", "Disabled"],
+    "actions": ["Filter by status", "Open form", "Create form"],
+    "observed": [
+      "Status routes",
+      "Draft rows in the preloaded workspace",
+      "Title, responses, status and modified columns"
+    ],
+    "not_observed": "Publishing, embedding, response collection and form persistence."
+  },
+  {
+    "id": "pandadoc-template-gallery",
+    "variant": "template-gallery",
+    "title": "Template Gallery",
+    "category": "Templates & Content > Gallery Cards",
+    "kind": "gallery",
+    "heading": "Template Gallery",
+    "description": "Segmented gallery with recommended and popular templates, previews and use-template boundaries.",
+    "items": [
+      "Business proposal",
+      "Price quote",
+      "Invoice",
+      "Purchase order",
+      "Service agreement",
+      "NDA"
+    ],
+    "actions": ["Preview template", "Use template", "Change business segment"],
+    "observed": [
+      "Sales, HR and general-agreement tabs",
+      "Recommended-for-you band",
+      "Hover actions on cards"
+    ],
+    "not_observed": "Template instantiation, personalization and persistence."
+  },
+  {
+    "id": "pandadoc-template-preview",
+    "variant": "template-preview",
+    "title": "Template Preview Split View",
+    "category": "Templates & Content > Template Preview",
+    "kind": "gallery",
+    "heading": "Business proposal preview",
+    "description": "Split preview with a paged document viewer, workflow steps and guarded edit/use actions.",
+    "items": ["Define roles", "Prepare quotes", "Send document", "Collect payment"],
+    "actions": ["Change page", "Zoom", "Edit template", "Use template", "Close preview"],
+    "observed": ["Document and workflow split", "Page and zoom controls", "Bookmark action"],
+    "not_observed": "Edit-template semantics, template use and payment collection."
+  },
+  {
+    "id": "pandadoc-contacts-table",
+    "variant": "contacts-table",
+    "title": "Contacts Table and Archive",
+    "category": "Contacts & CRM > Contact Inventory",
+    "kind": "table",
+    "heading": "Contacts",
+    "description": "Contact inventory with search, create, archive and row menu controls.",
+    "items": ["Name", "Email", "Contacts", "Archived"],
+    "actions": ["Search contacts", "Create contact", "Open row menu", "View archived"],
+    "observed": [
+      "Two-column contact table",
+      "Contact and archived tabs",
+      "No-archived-contacts state"
+    ],
+    "not_observed": "Contact creation, update, archive, deletion and duplicate handling."
+  },
+  {
+    "id": "pandadoc-catalog-table",
+    "variant": "catalog-table",
+    "title": "Product Catalog Table",
+    "category": "Commerce & Catalog > Product Inventory",
+    "kind": "table",
+    "heading": "Product catalog",
+    "description": "Product and pricing inventory with categories, export, onboarding and recurring-price display.",
+    "items": ["Name", "SKU", "Price", "Modified", "Category"],
+    "actions": ["Create product", "Filter category", "Export", "Open row menu"],
+    "observed": [
+      "Category sidebar",
+      "Preloaded sample products",
+      "One-time, recurring and price-range formats"
+    ],
+    "not_observed": "Product creation, quote insertion, export output and pricing calculation."
+  },
+  {
+    "id": "pandadoc-report-builder",
+    "variant": "report-builder",
+    "title": "Document Data Report",
+    "category": "Reporting & Analytics > Report Builder",
+    "kind": "report",
+    "heading": "Document data",
+    "description": "Wide contract-data report with date controls, filters, customization and an empty results state.",
+    "items": [
+      "Document name",
+      "Document type",
+      "Counterparty",
+      "Contract value",
+      "Expiration date",
+      "Governing law"
+    ],
+    "actions": ["Choose event date", "Choose date range", "Customize columns", "Create report"],
+    "observed": [
+      "Created, sent and completed date options",
+      "Preset and custom ranges",
+      "Large contract-metadata column set"
+    ],
+    "not_observed": "Report generation, saved reports, export and populated calculations."
+  },
+  {
+    "id": "pandadoc-notification-settings",
+    "variant": "notification-settings",
+    "title": "Notification Settings Matrix",
+    "category": "Notifications > Event Preferences",
+    "kind": "settings",
+    "heading": "Email me when",
+    "description": "Granular document-event preferences plus Slack and Teams integration guidance.",
+    "items": [
+      "Delivery failed",
+      "Scheduled send",
+      "First open",
+      "Every open",
+      "Recipient completed",
+      "All completed",
+      "Comment",
+      "Suggestion",
+      "Renewal reminder"
+    ],
+    "actions": ["Toggle event preference", "Open integrations", "Dismiss education card"],
+    "observed": [
+      "Independent checkboxes",
+      "Sent-on-behalf option",
+      "Collaboration integration card"
+    ],
+    "not_observed": "Email delivery, provider-side persistence and collaboration alerts."
+  },
+  {
+    "id": "pandadoc-security-settings",
+    "variant": "security-settings",
+    "title": "Personal Security Settings",
+    "category": "Authentication & Security > Account Security",
+    "kind": "settings",
+    "heading": "Security",
+    "description": "Password and two-factor-authentication education with OAuth and SSO boundary copy.",
+    "items": ["Password", "Two-factor authentication", "OAuth exception", "SSO exception"],
+    "actions": ["Change password", "Configure 2FA", "Open help"],
+    "observed": ["Password section", "2FA explanation", "SSO and OAuth note"],
+    "not_observed": "Password change, 2FA enrollment, recovery and enforcement."
+  },
+  {
+    "id": "pandadoc-branding-settings",
+    "variant": "branding-settings",
+    "title": "Workspace Branding Settings",
+    "category": "Settings & Administration > Branding",
+    "kind": "settings",
+    "heading": "Branding",
+    "description": "Logo, color, email footer, email subject and white-label controls with preview modes.",
+    "items": [
+      "Logo",
+      "Accent color",
+      "Dark color",
+      "Email footer",
+      "Subject branding",
+      "White-label email",
+      "Preview mode"
+    ],
+    "actions": ["Reset", "Save", "Request white-labeling", "Switch preview"],
+    "observed": [
+      "Disabled save before changes",
+      "Email, signing and branded-template preview modes",
+      "Account identity appeared in provider preview and was excluded"
+    ],
+    "not_observed": "Upload, save, outbound email rendering and white-label approval."
+  },
+  {
+    "id": "pandadoc-document-defaults",
+    "variant": "document-defaults",
+    "title": "Document Default Settings",
+    "category": "Settings & Administration > Document Defaults",
+    "kind": "settings",
+    "heading": "Document settings",
+    "description": "Formatting, phone, currency, date, time zone, numbering, reminders, expiration and payment defaults.",
+    "items": [
+      "Theme",
+      "Phone region",
+      "Currency",
+      "Date format",
+      "Time zone",
+      "Auto numbering",
+      "Reminders",
+      "Expiration",
+      "Payment gateway"
+    ],
+    "actions": [
+      "Change default",
+      "Add sequence",
+      "Confirm consent",
+      "Configure gateway",
+      "Save changes"
+    ],
+    "observed": [
+      "Formatting and setup sections",
+      "Default expiration input",
+      "Signing-date autofill toggle"
+    ],
+    "not_observed": "Any setting write, numbering behavior, reminders, expiration enforcement or payments."
+  },
+  {
+    "id": "pandadoc-recipient-verification",
+    "variant": "recipient-verification",
+    "title": "Recipient Verification Settings",
+    "category": "Authentication & Security > Recipient Verification",
+    "kind": "settings",
+    "heading": "Verification and signing",
+    "description": "Workspace defaults for eSign disclosure and recipient identity verification methods.",
+    "items": ["No verification", "Passcode", "Email code", "SMS code", "ID check", "KBA"],
+    "actions": ["Choose default verification", "Enable method", "Preview KBA", "Save changes"],
+    "observed": [
+      "Ask-before-opening option",
+      "KBA timing, correctness and attempt controls",
+      "Disclosure toggle"
+    ],
+    "not_observed": "Verification challenge, identity provider, pass/fail responses and persistence."
+  },
+  {
+    "id": "pandadoc-signature-types",
+    "variant": "signature-types",
+    "title": "Signature and Initials Types",
+    "category": "Document Editor & Fields > Signature Methods",
+    "kind": "settings",
+    "heading": "Available signature types",
+    "description": "Signature and initials methods with electronic and qualified-signature verification settings.",
+    "items": [
+      "Draw",
+      "Type",
+      "Upload image",
+      "Electronic signature",
+      "Qualified electronic signature"
+    ],
+    "actions": ["Enable signature method", "Enable initials method", "Save changes"],
+    "observed": [
+      "Draw and type methods",
+      "Upload-image signature only",
+      "Electronic signature locked on"
+    ],
+    "not_observed": "Signature capture, biometric behavior, QES identity verification and certificates."
+  },
+  {
+    "id": "pandadoc-ai-data-privacy",
+    "variant": "ai-data-privacy",
+    "title": "AI Data Privacy Controls",
+    "category": "AI & Governance > Workspace AI Controls",
+    "kind": "settings",
+    "heading": "Data privacy settings",
+    "description": "Layered workspace controls for AI enablement, on-premises processing, third-party providers and training.",
+    "items": ["Enable AI", "On-premises AI", "Third-party AI providers", "Third-party training"],
+    "actions": ["Toggle AI policy", "Open subprocessors", "Open privacy help"],
+    "observed": [
+      "Master AI control",
+      "On-premises OCR and classification explanation",
+      "Third-party zero-retention claim",
+      "Training disabled by default in the observed workspace"
+    ],
+    "not_observed": "Policy persistence, model calls, subprocessor requests and enforcement."
+  },
+  {
+    "id": "pandadoc-integrations-catalogue",
+    "variant": "integrations-catalogue",
+    "title": "Integrations Catalogue",
+    "category": "Integrations > Application Catalogue",
+    "kind": "gallery",
+    "heading": "Integrations",
+    "description": "Categorized integrations for CRM, HR, payment, accounting, productivity, collaboration, API and webhooks.",
+    "items": [
+      "CRM",
+      "Human resources",
+      "Payment gateways",
+      "Accounting",
+      "Productivity",
+      "Collaboration",
+      "API and Webhooks"
+    ],
+    "actions": ["Open integration", "Connect application", "Upgrade plan"],
+    "observed": [
+      "Free and upgrade-gated cards",
+      "Payment capability labels",
+      "ChatGPT and Claude productivity cards"
+    ],
+    "not_observed": "OAuth, connection, webhooks, API credentials and data synchronization."
+  },
+  {
+    "id": "pandadoc-role-permission-gate",
+    "variant": "role-permission-gate",
+    "title": "Roles and Permission Gate",
+    "category": "Access Control > Role Directory",
+    "kind": "gate",
+    "heading": "Roles",
+    "description": "System roles with permission summaries and an Enterprise gate for custom roles.",
+    "items": ["Admin", "Manager", "Member", "Collaborator", "Custom roles"],
+    "actions": ["View permissions", "Upgrade trial", "Create custom role"],
+    "observed": [
+      "Four system-role summaries",
+      "Custom roles plan gate",
+      "Permission detail entry points"
+    ],
+    "not_observed": "Permission matrices, role assignment, custom role creation and enforcement."
+  },
+  {
+    "id": "pandadoc-sso-plan-gate",
+    "variant": "sso-plan-gate",
+    "title": "Single Sign-On Plan Gate",
+    "category": "Authentication & Security > SSO Gate",
+    "kind": "gate",
+    "heading": "Single sign-on",
+    "description": "Enterprise plan gate for SAML 2.0-based login and user management.",
+    "items": ["SAML 2.0", "Enterprise plan", "Upgrade trial", "Learn more"],
+    "actions": ["Upgrade trial", "Open documentation"],
+    "observed": [
+      "SSO unavailable in the trial workspace",
+      "SAML 2.0 named as the mechanism",
+      "Upgrade CTA"
+    ],
+    "not_observed": "SAML configuration, domain verification, login and provisioning."
+  },
+  {
+    "id": "pandadoc-billing-usage-cards",
+    "variant": "billing-usage-cards",
+    "title": "Billing and Usage Cards",
+    "category": "Billing & Usage > Plan Overview",
+    "kind": "gate",
+    "heading": "Plan and usage",
+    "description": "Plan, payment, seats, extensions and usage-limit cards with purchase actions guarded.",
+    "items": [
+      "Plan",
+      "Next payment",
+      "Payment method",
+      "Standard seats",
+      "Guest seats",
+      "Usage credits",
+      "Documents",
+      "Identity verification",
+      "QES"
+    ],
+    "actions": [
+      "Activate plan",
+      "Manage plan",
+      "Add payment method",
+      "Manage seats",
+      "Contact sales"
+    ],
+    "observed": [
+      "Trial and payment summary",
+      "Metered usage cards",
+      "Progress indicators and plan actions"
+    ],
+    "not_observed": "Purchase, coupon, cancellation, payment storage and entitlement changes."
+  },
+  {
+    "id": "pandadoc-data-fields-table",
+    "variant": "data-fields-table",
+    "title": "Contract Data Fields Table",
+    "category": "Data Management > Contract Metadata",
+    "kind": "table",
+    "heading": "Data fields",
+    "description": "System and custom contract metadata used for reports and filtered search.",
+    "items": [
+      "Name",
+      "Origin",
+      "Type",
+      "Date",
+      "Short text",
+      "Long text",
+      "Dropdown",
+      "Currency",
+      "Yes/No"
+    ],
+    "actions": ["Create field", "Sort column", "View archived", "Open row menu"],
+    "observed": [
+      "Large system-field catalogue",
+      "Active and archived scopes",
+      "Document types as a separate tab"
+    ],
+    "not_observed": "Custom field creation, extraction, editing, archive and reporting results."
+  },
+  {
+    "id": "pandadoc-content-editor-field-palette",
+    "variant": "content-editor-field-palette",
+    "title": "Content Editor Field Palette",
+    "category": "Document Editor & Fields > Field Placement Palette",
+    "kind": "editor",
+    "heading": "Add fillable fields",
+    "description": "Preloaded sample editor with role context, fillable-field palette, role and variable management, and formatting toolbar.",
+    "items": [
+      "Signer role",
+      "Signature",
+      "Initials",
+      "Text field",
+      "Date",
+      "Show all",
+      "Manage roles",
+      "Manage variables"
+    ],
+    "actions": [
+      "Select role",
+      "Place field",
+      "Show all fields",
+      "Manage roles",
+      "Manage variables"
+    ],
+    "observed": ["Right-side field palette", "Top formatting toolbar", "Single-page sample canvas"],
+    "not_observed": "Dragging, field validation, autosave, undo, role persistence and recipient delivery."
+  },
+  {
+    "id": "pandadoc-signature-date-fields",
+    "variant": "signature-date-fields",
+    "title": "Signer Signature and Date Fields",
+    "category": "Document Editor & Fields > Signer Fields",
+    "kind": "editor",
+    "heading": "Signer-bound fields",
+    "description": "Existing signature and date controls assigned to a signer role inside a preloaded sample block.",
+    "items": ["Date placeholder", "Signature placeholder", "Signer role badge", "Agreement text"],
+    "actions": ["Select field", "Reassign role", "Move field", "Resize field"],
+    "observed": [
+      "Date and signature fields",
+      "Signer headings next to both fields",
+      "Field containers inside page content"
+    ],
+    "not_observed": "Field placement, signer input, validation, certificates and persistence."
+  },
+  {
+    "id": "pandadoc-authorized-apps-empty-state",
+    "variant": "authorized-apps-empty-state",
+    "title": "Authorized Apps Empty State",
+    "category": "Integrations > Authorized Applications",
+    "kind": "gate",
+    "heading": "Authorized apps",
+    "description": "Personal OAuth application inventory with a Marketplace entry when none are connected.",
+    "items": ["No authorized apps", "Go to Marketplace"],
+    "actions": ["Open Marketplace", "Revoke app"],
+    "observed": ["Empty personal app inventory", "Marketplace CTA"],
+    "not_observed": "Authorization, token scope, revocation and connected-app rows."
+  }
+]

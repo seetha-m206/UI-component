@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type CSSProperties } from 'react';
 import styles from './trello.module.css';
 
 export type TrelloVariant =
@@ -38,7 +38,11 @@ export type TrelloVariant =
   | 'workspace-power-ups'
   | 'workspace-export'
   | 'closed-boards'
-  | 'account-menu';
+  | 'account-menu'
+  | 'keyboard-shortcuts'
+  | 'workspace-boards-controls'
+  | 'personal-card-filters'
+  | 'jira-recommendation-drawer';
 
 export interface TrelloPreviewProps {
   variant: TrelloVariant;
@@ -206,6 +210,73 @@ function WorkspaceOverview() {
         </div>
       </header>
       <BoardsHome />
+    </main>
+  );
+}
+
+function WorkspaceBoardsControls() {
+  const [panel, setPanel] = useState<'sort' | 'collection' | ''>('collection');
+  return (
+    <main className={styles.settingsMain}>
+      <h1>Boards</h1>
+      <section className={styles.boardControlGrid} aria-label="Workspace board controls">
+        <label>
+          Sort by
+          <button
+            type="button"
+            aria-label="Sort workspace boards: Most recently active"
+            onClick={() => setPanel(panel === 'sort' ? '' : 'sort')}
+          >
+            Most recently active　⌄
+          </button>
+        </label>
+        <label>
+          Filter by
+          <button
+            type="button"
+            aria-label="Filter workspace boards by collection"
+            onClick={() => setPanel(panel === 'collection' ? '' : 'collection')}
+          >
+            Choose a collection　⌄
+          </button>
+        </label>
+        <label>
+          Search
+          <input aria-label="Search fictional workspace boards" placeholder="Search boards" />
+        </label>
+      </section>
+      {panel === 'sort' && (
+        <section className={styles.inlineMenu} role="dialog" aria-label="Workspace board sorting">
+          <h2>Sort boards</h2>
+          {[
+            'Most recently active',
+            'Least recently active',
+            'Alphabetically A-Z',
+            'Alphabetically Z-A',
+          ].map((item) => (
+            <button type="button" key={item} onClick={() => setPanel('')}>
+              {item}
+            </button>
+          ))}
+        </section>
+      )}
+      {panel === 'collection' && (
+        <section className={styles.inlineMenu} role="dialog" aria-label="Workspace collections">
+          <h2>Collections</h2>
+          <b>Organize your boards with collections</b>
+          <p>Group fictional boards by department, topic, team, and more.</p>
+          <button type="button" disabled>
+            Create a collection
+          </button>
+        </section>
+      )}
+      <div className={styles.boardTiles}>
+        <BoardTile />
+        <button type="button" disabled className={styles.createTile}>
+          Create new board
+        </button>
+      </div>
+      <Boundary>Sorting, filtering, collections and board data stay local.</Boundary>
     </main>
   );
 }
@@ -409,6 +480,7 @@ const personalVariants = new Set<TrelloVariant>([
   'ai-settings',
   'labs',
   'personal-cards',
+  'personal-card-filters',
   'personal-activity',
   'profile-visibility',
   'workspace-power-ups',
@@ -425,6 +497,8 @@ function SettingsScreen({ variant }: { variant: TrelloVariant }) {
     'profile-visibility': 'Profile and visibility',
     'workspace-power-ups': 'Power-Ups · PREMIUM',
     'workspace-export': 'Export · PREMIUM',
+    'personal-card-filters': 'Cards',
+    'workspace-boards-controls': 'Boards',
   };
   return (
     <>
@@ -437,6 +511,9 @@ function SettingsScreen({ variant }: { variant: TrelloVariant }) {
 }
 
 function SettingsScreenBody({ variant }: { variant: TrelloVariant }) {
+  if (variant === 'personal-card-filters') {
+    return <PersonalCardFilters />;
+  }
   if (variant === 'personal-cards') {
     return (
       <>
@@ -598,6 +675,143 @@ function SettingsScreenBody({ variant }: { variant: TrelloVariant }) {
       </label>
       <Boundary>Account preferences are displayed read-only.</Boundary>
     </>
+  );
+}
+
+function PersonalCardFilters() {
+  const [panel, setPanel] = useState<'filter' | 'sort' | ''>('filter');
+  return (
+    <>
+      <h1>Cards</h1>
+      <div className={styles.toolbar}>
+        <button type="button" onClick={() => setPanel(panel === 'sort' ? '' : 'sort')}>
+          Sort by due date
+        </button>
+        <button type="button" onClick={() => setPanel(panel === 'filter' ? '' : 'filter')}>
+          Filter cards
+        </button>
+        <button type="button" disabled>
+          Clear filters
+        </button>
+      </div>
+      {panel === 'sort' && (
+        <section className={styles.inlineMenu} role="dialog" aria-label="Personal card sorting">
+          <h2>Sort cards</h2>
+          <button type="button" onClick={() => setPanel('')}>
+            Sort by board
+          </button>
+          <button type="button" onClick={() => setPanel('')}>
+            Sort by due date
+          </button>
+        </section>
+      )}
+      {panel === 'filter' && (
+        <section className={styles.filterSheet} role="dialog" aria-label="Personal card filters">
+          <h2>Filter cards</h2>
+          <label>
+            Card
+            <input aria-label="Filter fictional cards by name" placeholder="Card name keyword" />
+          </label>
+          {[
+            ['Card status', ['Marked as complete', 'Not marked as complete']],
+            [
+              'Due date',
+              ['No dates', 'Overdue', 'Due in the next day', 'Due in the next seven days'],
+            ],
+            [
+              'Activity',
+              ['Active in the last day', 'Active in the last week', 'Active in the last month'],
+            ],
+          ].map(([title, options]) => (
+            <fieldset key={title as string}>
+              <legend>{title}</legend>
+              {(options as string[]).map((item) => (
+                <label key={item}>
+                  <input type="checkbox" /> {item}
+                </label>
+              ))}
+            </fieldset>
+          ))}
+          <label>
+            Board
+            <select aria-label="Filter fictional cards by board" defaultValue="all">
+              <option value="all">Filter by board…</option>
+              <option value="atlas">Atlas launch</option>
+            </select>
+          </label>
+        </section>
+      )}
+      <div className={styles.emptyState}>
+        <b>No visible cards</b>
+        <p>You must be added to a card for it to appear here.</p>
+      </div>
+      <Boundary>Filter and sort interactions affect only fictional fixture state.</Boundary>
+    </>
+  );
+}
+
+function KeyboardShortcuts() {
+  const groups = [
+    ['Navigate cards', '←　↓ / J　↑ / K　→'],
+    ['Copy card', '⌘ / Ctrl + C　then　⌘ / Ctrl + V'],
+    ['Move card', '⌘ / Ctrl + X　then　⌘ / Ctrl + V'],
+    ['Open board menu', ']'],
+    ['Focus search', '/'],
+    ['Open card filter', 'F'],
+    ['Close menu or cancel', 'Esc'],
+    ['Open shortcuts page', '?'],
+  ];
+  return (
+    <main className={styles.shortcutPage}>
+      <header>
+        <div>
+          <h1>Keyboard shortcuts</h1>
+          <p>Reference for navigation and board actions.</p>
+        </div>
+        <label>
+          Shortcuts enabled <input type="checkbox" checked readOnly />
+        </label>
+      </header>
+      <div className={styles.shortcutGrid}>
+        {groups.map(([title, keys]) => (
+          <article key={title}>
+            <h2>{title}</h2>
+            <kbd>{keys}</kbd>
+          </article>
+        ))}
+      </div>
+      <Boundary>The provider shortcut setting is shown read-only.</Boundary>
+    </main>
+  );
+}
+
+function JiraRecommendationDrawer() {
+  return (
+    <section className={styles.jiraDrawer} role="dialog" aria-label="Jira recommendation">
+      <header>
+        <b>▣ Jira</b>
+        <button type="button" disabled>
+          Try it free
+        </button>
+      </header>
+      <div className={styles.jiraHero}>
+        <h1>Project management for teams template</h1>
+        <p>Plan work with a timeline, project views and configurable workflows.</p>
+        <button type="button" disabled>
+          Try it free
+        </button>
+        <div className={styles.timelineMock} aria-label="Fictional Jira timeline">
+          {['Define scope', 'Review milestones', 'Prepare launch', 'Gather feedback'].map(
+            (item, index) => (
+              <span key={item} style={{ '--offset': index } as CSSProperties}>
+                {item}
+              </span>
+            )
+          )}
+        </div>
+      </div>
+      <Boundary>The cross-product trial action is disabled.</Boundary>
+    </section>
   );
 }
 
@@ -1372,6 +1586,15 @@ function BoardSwitcher({ onClose }: { onClose: () => void }) {
 }
 
 function DashboardContinuation({ variant }: { variant: TrelloVariant }) {
+  if (variant === 'keyboard-shortcuts') return <KeyboardShortcuts />;
+  if (variant === 'workspace-boards-controls') {
+    return (
+      <>
+        <SettingsSidebar active="Boards" />
+        <WorkspaceBoardsControls />
+      </>
+    );
+  }
   if (personalVariants.has(variant)) return <SettingsScreen variant={variant} />;
   if (
     variant === 'templates-gallery' ||
@@ -1401,6 +1624,7 @@ function DashboardContinuation({ variant }: { variant: TrelloVariant }) {
       <HomeSidebar active="Boards" />
       <BoardsHome />
       {overlayVariants.has(variant) && <DashboardOverlay variant={variant} />}
+      {variant === 'jira-recommendation-drawer' && <JiraRecommendationDrawer />}
     </>
   );
 }
@@ -1418,6 +1642,9 @@ export function TrelloPreview({ variant, disabled = false }: TrelloPreviewProps)
       'template-detail',
       'home-onboarding',
       'advanced-search',
+      'keyboard-shortcuts',
+      'workspace-boards-controls',
+      'jira-recommendation-drawer',
     ].includes(variant);
   return (
     <div className={styles.app} data-disabled={disabled || undefined}>

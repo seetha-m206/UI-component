@@ -14,6 +14,9 @@ describe('getProductGroup', () => {
     expect(getProductGroup('clickup')).toBe('Project Management');
     expect(getProductGroup('monday')).toBe('Project Management');
     expect(getProductGroup('trello')).toBe('Project Management');
+    expect(getProductGroup('apollo')).toBe('Sales Intelligence');
+    expect(getProductGroup('mailchimp')).toBe('Marketing');
+    expect(getProductGroup('docusign')).toBe('E-signature');
   });
 
   it('categorizes specialist HubSpot products by their product function', () => {

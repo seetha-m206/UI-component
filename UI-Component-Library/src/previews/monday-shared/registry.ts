@@ -41,7 +41,7 @@ export const mondayPreviews: PreviewRegistry = Object.fromEntries(
       label: 'Authenticated-source reconstruction',
       runtimeVerified: true,
       evidence:
-        'Authenticated monday.com observation on 2026-10-08. Workspace identity, user identity, object IDs, dates, board names, query strings, payloads and provider screenshots are omitted or fictionalized. No create, edit, delete, invite, export, publish, install, prompt submission, upload, workflow execution, recording, purchase, permission, API or security change was exercised. Opening Board Options > AI suggestions automatically generated a preview. It was canceled and no column was added or board data saved.',
+        'Authenticated monday.com observations on 2026-10-08 and 2026-10-09. Workspace identity, user identity, object IDs, dates, board names, query strings, payloads and provider screenshots are omitted or fictionalized. API-token, password, session-history, payment-detail and billing-contact screens were intentionally excluded. No create, edit, delete, invite, export, publish, install, prompt submission, upload, workflow execution, recording, purchase, permission, API or security change was exercised. Opening Board Options > AI suggestions automatically generated a preview. It was canceled and no column was added or board data saved.',
       fixtures: [{ id: 'default', title: description, props: { variant } }],
       config,
       propsSchema: [

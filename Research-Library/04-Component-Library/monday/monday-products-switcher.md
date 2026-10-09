@@ -49,7 +49,7 @@ summary: 'Products Switcher observed as a reusable component family in an authen
 ## Technical Data
 
 - **OBSERVATION:** Route and visible component labels were retained without query strings, payloads, opaque identifiers or account identity.
-- **INFERENCE:** Visual grouping suggests a reusable product component, not a verified provider API contract.
+- **INFERENCE:** This is an AI-related surface. Visible controls do not establish model behavior, provider contracts or recurring execution.
 
 ## Lessons
 

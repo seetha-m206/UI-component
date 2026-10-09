@@ -114,6 +114,16 @@ const PRODUCT_GROUP_MAP: Record<string, string> = {
   'salesforce-sales-cloud': 'CRM',
   'zoho-crm': 'CRM',
 
+  apollo: 'Sales Intelligence',
+
+  brevo: 'Marketing',
+  lemlist: 'Marketing',
+  mailchimp: 'Marketing',
+  'zoho-campaigns': 'Marketing',
+
+  docusign: 'E-signature',
+  pandadoc: 'E-signature',
+
   'freshdesk-omni': 'Support',
   freshservice: 'Support',
   asana: 'Project Management',

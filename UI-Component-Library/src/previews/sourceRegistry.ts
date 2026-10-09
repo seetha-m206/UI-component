@@ -21,6 +21,9 @@ import { mondayIds } from './monday-shared/registry';
 import { clickupIds } from './clickup-shared/registry';
 import { asanaIds } from './asana-shared/registry';
 import { trelloIds } from './trello-shared/registry';
+import { apolloIds } from './apollo-shared/registry';
+import { pandadocIds } from './pandadoc-shared/registry';
+import { docusignIds } from './docusign-shared/registry';
 // Raw source of every preview component/stylesheet, keyed by the same `id`
 // used in previewRegistry, for the Code tab. Vite's `?raw` import gives us
 // the literal file text, not the compiled module.
@@ -606,4 +609,41 @@ if (framerRemainingSource) {
         fileName: '../framer-remaining/' + file.fileName,
       })),
     };
+}
+
+// Apollo records share one privacy-sanitized fictional renderer while each
+// observed screen retains an independent record, evidence page and route.
+const apolloShared = sourceRegistry['apollo-shared'];
+if (apolloShared) {
+  for (const id of apolloIds) {
+    sourceRegistry[id] = {
+      files: apolloShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../apollo-shared/' + file.fileName })),
+    };
+  }
+}
+
+// PandaDoc records share one privacy-sanitized fictional renderer while each
+// observed screen or action pattern remains independently addressable.
+const pandadocShared = sourceRegistry['pandadoc-shared'];
+if (pandadocShared) {
+  for (const id of pandadocIds) {
+    sourceRegistry[id] = {
+      files: pandadocShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../pandadoc-shared/' + file.fileName })),
+    };
+  }
+}
+
+const docusignShared = sourceRegistry['docusign-shared'];
+if (docusignShared) {
+  for (const id of docusignIds) {
+    sourceRegistry[id] = {
+      files: docusignShared.files
+        .filter((file) => file.fileName !== 'registry.ts')
+        .map((file) => ({ ...file, fileName: '../docusign-shared/' + file.fileName })),
+    };
+  }
 }

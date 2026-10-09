@@ -73,9 +73,9 @@ describe('MondayPreview', () => {
   });
 
   it('registers every expanded leaf component exactly once', () => {
-    expect(mondayLeafEntries).toHaveLength(48);
-    expect(new Set(mondayLeafEntries.map(({ id }) => id)).size).toBe(48);
-    expect(mondayIds).toHaveLength(58);
+    expect(mondayLeafEntries).toHaveLength(100);
+    expect(new Set(mondayLeafEntries.map(({ id }) => id)).size).toBe(100);
+    expect(mondayIds).toHaveLength(110);
   });
 
   it('renders AI governance as individually selectable fictional components', async () => {

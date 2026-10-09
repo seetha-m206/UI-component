@@ -55,6 +55,22 @@ const entries: Array<[string, TrelloVariant, string]> = [
   ['trello-workspace-export', 'workspace-export', 'Premium workspace export boundary'],
   ['trello-closed-boards', 'closed-boards', 'Closed boards empty state'],
   ['trello-account-menu', 'account-menu', 'Account navigation and theme disclosure'],
+  ['trello-keyboard-shortcuts', 'keyboard-shortcuts', 'Keyboard shortcut reference'],
+  [
+    'trello-workspace-boards-controls',
+    'workspace-boards-controls',
+    'Workspace board sort, collection filter and search controls',
+  ],
+  [
+    'trello-personal-card-filters',
+    'personal-card-filters',
+    'Personal card filter and sort disclosures',
+  ],
+  [
+    'trello-jira-recommendation-drawer',
+    'jira-recommendation-drawer',
+    'Jira recommendation and trial boundary',
+  ],
 ];
 
 export const trelloIds = entries.map(([id]) => id);
@@ -68,7 +84,7 @@ export const trelloPreviews: PreviewRegistry = Object.fromEntries(
       label: 'Authenticated-source reconstruction',
       runtimeVerified: true,
       evidence:
-        'Authenticated read-only Trello observation on 2026-10-08. Workspace, member, board and card identities, object IDs, query strings, payloads, provider screenshots and account data are omitted or fictionalized. No create, edit, move, complete, comment, invite, share, connect, automate, upload, export, publish, purchase, delete, permission, billing or AI action was exercised.',
+        'Authenticated read-only Trello observation on 2026-10-08 and 2026-10-09. Workspace, member, board and card identities, object IDs, query strings, payloads, provider screenshots and account data are omitted or fictionalized. No create, edit, move, complete, comment, invite, share, connect, automate, upload, export, publish, purchase, delete, permission, billing or AI action was exercised.',
       fixtures: [{ id: 'default', title: description, props: { variant } }],
       config,
       propsSchema: [

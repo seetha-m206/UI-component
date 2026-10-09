@@ -33,6 +33,13 @@ import { mondayPreviews } from './monday-shared/registry';
 import { clickupPreviews } from './clickup-shared/registry';
 import { asanaPreviews } from './asana-shared/registry';
 import { trelloPreviews } from './trello-shared/registry';
+import { brevoPreviews } from './brevo-shared/registry';
+import { zohoCampaignsPreviews } from './zoho-campaigns-shared/registry';
+import { mailchimpPreviews } from './mailchimp-shared/registry';
+import { apolloPreviews } from './apollo-shared/registry';
+import { lemlistPreviews } from './lemlist-shared/registry';
+import { docusignPreviews } from './docusign-shared/registry';
+import { pandadocPreviews } from './pandadoc-shared/registry';
 import { ToggleRadioSwitch } from './toggle-radio-switch/ToggleRadioSwitch';
 import { YesNoToggleField } from './yes-no-toggle-field/YesNoToggleField';
 import {
@@ -1381,6 +1388,12 @@ export const previewRegistry: PreviewRegistry = {
   ...activepiecesPreviews,
   ...asanaPreviews,
   ...trelloPreviews,
+  ...brevoPreviews,
+  ...zohoCampaignsPreviews,
+  ...mailchimpPreviews,
+  ...apolloPreviews,
+  ...lemlistPreviews,
+  ...docusignPreviews,
   ...n8nPreviews,
   ...mondayPreviews,
   ...clickupPreviews,
@@ -3904,3 +3917,5 @@ Object.assign(previewRegistry, dudaPreviews);
 Object.assign(previewRegistry, framerRemainingPreviews);
 
 Object.assign(previewRegistry, tidioPreviews);
+
+Object.assign(previewRegistry, pandadocPreviews);

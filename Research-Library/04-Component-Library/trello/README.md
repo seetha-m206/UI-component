@@ -48,7 +48,13 @@ Authenticated, read-only Trello observation completed on 2026-10-08 for the Cent
 35. Workspace export
 36. Closed boards
 37. Account menu and theme disclosure
+38. Keyboard shortcuts
+39. Workspace boards controls
+40. Personal card filters
+41. Jira recommendation drawer
 
 Provider screenshots were viewed transiently but not retained. Catalogue screenshots are fictional local reconstructions.
 
 The dashboard continuation batch remained read-only. One accidental Dark-theme selection was immediately restored to the observed Match system value and is recorded in the safety evidence.
+
+The 2026-10-09 continuation added four safely observed states. The Help entry was also checked and classified as an external Atlassian Support handoff rather than a Trello product screen. No form, trial, filter, sort, collection or shortcut preference was submitted.
